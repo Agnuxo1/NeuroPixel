@@ -66,3 +66,13 @@ def test_safety_refuses_busy_gpu(monkeypatch):
     monkeypatch.setattr(s.torch.cuda, "is_available", lambda: True)
     assert choose_device("cuda", threads=2).type == "cpu"
     assert choose_device("cpu", threads=2).type == "cpu"
+
+
+def test_scanner_lens_shapes():
+    from neuropixel.scanner import lens
+    t = RoleTask(8, 8)
+    m = NeuroPixel(len(t.v), t.out_pos, steps=3).eval()
+    canvas, _ = t.sample(1)
+    fr = m(canvas, trace=True)["frames"][0]
+    word, conf = lens(m, fr)
+    assert word.shape == (4, 8, 8) and (word != 0).all() and (conf <= 1).all()
