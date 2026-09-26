@@ -27,3 +27,12 @@ Los cursos se solapan: al pasar al siguiente se sigue repasando el anterior para
   el curso 4 exige recortes cortos y pocas clases al principio.
 - El color es una pista (3,5–6,6 bits), no la identidad (17,6 bits para 200k palabras).
 - Afirmar solo lo medido: cada curso compara con una referencia fuerte del mismo tamaño.
+
+## Líneas de trabajo (decisión 2026-09-26)
+
+Se evalúan por separado, con las mismas pruebas, para medir hasta dónde llega cada una.
+
+| Línea | Qué es | Estado |
+|---|---|---|
+| **L1 pura** | Diccionario aprendido + escuela en todos los píxeles, sin colores anclados | Papeles 93–95 % (98 % con escuela) vs transformer 55 %; fotos CIFAR 16–19 % (no percibe) |
+| **L2 híbrida** | Retina (módulo de visión) que da a cada píxel un "color" rico + el mismo lienzo | Pendiente |
