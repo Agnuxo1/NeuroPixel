@@ -31,11 +31,17 @@ class NeuroPixel(nn.Module):
         nn.init.zeros_(self.f2.bias)
         self.read = nn.Linear(c, c_id)
 
-    def forward(self, canvas: torch.Tensor, trace: bool = False):
+    def lens_logits(self, s: torch.Tensor) -> torch.Tensor:
+        """Diccionario aplicado a todos los píxeles: B,C,H,W -> B,H,W,vocab."""
+        return self.read(s.permute(0, 2, 3, 1)) @ self.embed.weight.T
+
+    def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0):
         ids = self.embed(canvas).permute(0, 3, 1, 2)            # B,c_id,H,W  (color = identidad)
         s = self.seed(ids) * (canvas != 0).unsqueeze(1)         # activa solo píxeles con dato
-        frames, act = [s.detach()] if trace else None, []
-        for _ in range(self.steps):
+        frames, act, lens = [s.detach()] if trace else None, [], []
+        for t in range(1, self.steps + 1):
+            if lens_every and t % lens_every == 0:
+                lens.append(self.lens_logits(s))
             h = torch.cat([s, self.perceive(s), ids], 1)
             ds = self.f2(F.relu(self.f1(h)))
             if self.training and self.fire_rate < 1:
@@ -48,6 +54,8 @@ class NeuroPixel(nn.Module):
         logits = self.read(s[:, :, r, c]) @ self.embed.weight.T  # traducir con el diccionario
         logits[:, 0] = -1e4                                      # 'vacío' nunca es respuesta
         out = {"logits": logits, "activity": torch.stack(act).mean(), "state": s}
+        if lens:
+            out["lens"] = torch.stack(lens, 1)                    # B,L,H,W,vocab
         if trace:
             out["frames"] = torch.stack(frames, 1)               # B,T+1,C,H,W
         return out

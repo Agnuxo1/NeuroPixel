@@ -72,6 +72,8 @@ def main():
     ap.add_argument("--steps", type=int, default=16, help="pasos de dinámica del lienzo")
     ap.add_argument("--size", type=int, default=8)
     ap.add_argument("--activity-l1", type=float, default=0.0, help="penaliza actividad (energía)")
+    ap.add_argument("--lens-aux", type=float, default=0.0,
+                    help="peso de la pérdida del diccionario en todos los píxeles con dato")
     ap.add_argument("--device", default="cpu")
     ap.add_argument("--threads", type=int, default=4)
     ap.add_argument("--force-gpu", action="store_true")
@@ -101,8 +103,15 @@ def main():
     t0, best = time.time(), 0.0
     for it in range(1, a.iters + 1):
         canvas, target = task.sample(a.batch, "train", g)
-        out = model(canvas.to(device))
+        canvas = canvas.to(device)
+        use_lens = a.lens_aux > 0 and a.model == "neuropixel"
+        out = model(canvas, lens_every=4 if use_lens else 0)
         loss = F.cross_entropy(out["logits"], target.to(device)) + a.activity_l1 * out["activity"]
+        if use_lens:  # escuela: cada píxel con dato debe seguir 'diciendo' su palabra
+            L = out["lens"].shape[1]
+            mask = (canvas != 0).unsqueeze(1).expand(-1, L, -1, -1)
+            tgt = canvas.unsqueeze(1).expand(-1, L, -1, -1)
+            loss = loss + a.lens_aux * F.cross_entropy(out["lens"][mask], tgt[mask])
         opt.zero_grad(set_to_none=True)
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
