@@ -47,7 +47,8 @@ class NeuroPixel(nn.Module):
         return self.read(s.permute(0, 2, 3, 1)) @ self.dictionary().T
 
     def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0,
-                rgb: torch.Tensor | None = None, cam: torch.Tensor | None = None):
+                rgb: torch.Tensor | None = None, cam: torch.Tensor | None = None,
+                out_pos: tuple[int, int] | None = None, steps: int | None = None):
         ids = F.embedding(canvas, self.dictionary()).permute(0, 3, 1, 2)  # B,c_id,H,W (color)
         present = canvas != 0
         if rgb is not None:  # píxeles de cámara: solo el color percibido, sin palabra
@@ -56,7 +57,7 @@ class NeuroPixel(nn.Module):
             present = present | cam
         s = self.seed(ids) * present.unsqueeze(1)               # activa solo píxeles con dato
         frames, act, lens = [s.detach()] if trace else None, [], []
-        for t in range(1, self.steps + 1):
+        for t in range(1, (steps or self.steps) + 1):
             if lens_every and t % lens_every == 0:
                 lens.append(self.lens_logits(s))
             h = torch.cat([s, self.perceive(s), ids], 1)
@@ -67,7 +68,7 @@ class NeuroPixel(nn.Module):
             act.append(ds.abs().mean())
             if trace:
                 frames.append(s.detach())
-        r, c = self.out_pos
+        r, c = out_pos or self.out_pos
         logits = self.read(s[:, :, r, c]) @ self.dictionary().T  # traducir con el diccionario
         logits[:, 0] = -1e4                                      # 'vacío' nunca es respuesta
         out = {"logits": logits, "activity": torch.stack(act).mean(), "state": s}

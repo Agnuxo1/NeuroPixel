@@ -126,3 +126,21 @@ def test_camera_pixels_replace_words():
     m = NeuroPixel(len(t.v), t.out_pos, steps=2, grounded=t.v.grounded())
     out = m(c, rgb=rgb, cam=cam, trace=True)
     assert out["frames"][:, 0][cam.unsqueeze(1).expand(-1, out["frames"].shape[2], -1, -1)].abs().sum() > 0
+
+
+def test_cartilla_layout():
+    import pytest
+    root = Path(__file__).resolve().parents[1]
+    if not (root / "data" / "cifar10.npz").exists():
+        pytest.skip("sin CIFAR-10 local")
+    from neuropixel.cartilla import CartillaTask, full_vocab
+    v = full_vocab()
+    assert v.idx["perro"] == RoleTask(8, 8).v.idx["perro"]           # mismo diccionario
+    t = CartillaTask(v, root / "data" / "cifar10.npz")
+    b = t.sample(64, "test", torch.Generator().manual_seed(0), mode="nombrar")
+    assert b["cam"][:, :32, :32].all() and (b["canvas"][:, 33, 14] == 0).all()   # imagen sola
+    assert (b["target"] == b["word"]).all()
+    b = t.sample(400, "test", torch.Generator().manual_seed(1), mode="verificar")
+    yes = (b["target"] == t.yes).float().mean().item()
+    assert 0.4 < yes < 0.6
+    assert ((b["canvas"][:, 33, 14] == b["word"]) == (b["target"] == t.yes)).all()
