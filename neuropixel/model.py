@@ -87,7 +87,7 @@ class TinyTransformer(nn.Module):
         self.out_idx = out_pos[0] * w + out_pos[1]
         self.head = nn.Linear(d, vocab)
 
-    def forward(self, canvas: torch.Tensor, trace: bool = False):
+    def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0):
         x = self.tok(canvas.flatten(1)) + self.pos
         x = self.norm(self.enc(x))
         logits = self.head(x[:, self.out_idx])

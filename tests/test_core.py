@@ -89,3 +89,29 @@ def test_grounded_dictionary_fixed_colors():
     torch.nn.functional.cross_entropy(m(canvas)["logits"], target).backward()
     assert m.embed.weight.grad is not None
     assert d[0].abs().max() == 0                             # vacío sigue siendo negro
+
+
+def test_vectorized_sampler_matches_structure():
+    t = RoleTask(8, 8, seed=0)
+    c, y = t.sample(256, "test", torch.Generator().manual_seed(3))
+    names = t.v.tokens
+    from neuropixel.task import NOUNS
+    test_set = set(t.test_triples)
+    for b in range(256):
+        found = {}
+        for r in range(7):
+            for col in range(7):
+                tok = names[int(c[b, r, col])]
+                if tok in ("AGENTE", "ACCION", "PACIENTE"):
+                    found[tok] = names[int(c[b, r, col + 1])]
+        tri = (NOUNS.index(found["AGENTE"]), t.v.tokens.index(found["ACCION"]) - t.v.idx["muerde"],
+               NOUNS.index(found["PACIENTE"]))
+        assert tri in test_set                              # solo combinaciones de test
+    assert ((c != 0).sum((1, 2)) == 9).all()
+
+
+def test_both_models_accept_train_kwargs():
+    t = RoleTask(8, 8)
+    c, _ = t.sample(2)
+    for m in (NeuroPixel(len(t.v), t.out_pos, steps=2), TinyTransformer(len(t.v), 8, 8, t.out_pos)):
+        m(c, lens_every=0)

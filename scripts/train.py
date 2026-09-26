@@ -79,13 +79,14 @@ def main():
     ap.add_argument("--device", default="cpu")
     ap.add_argument("--threads", type=int, default=4)
     ap.add_argument("--force-gpu", action="store_true")
+    ap.add_argument("--vram-cap", type=float, default=3.0, help="tope de memoria de GPU en GiB")
     ap.add_argument("--eval-every", type=int, default=100)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--name", default=None)
     a = ap.parse_args()
 
     torch.manual_seed(a.seed)
-    device = choose_device(a.device, threads=a.threads, force_gpu=a.force_gpu)
+    device = choose_device(a.device, threads=a.threads, force_gpu=a.force_gpu, vram_cap_gib=a.vram_cap)
     task = RoleTask(a.size, a.size, seed=a.seed)
     if a.model == "neuropixel":
         model = NeuroPixel(len(task.v), task.out_pos, steps=a.steps,
@@ -102,11 +103,10 @@ def main():
             "train_triples": len(task.train_triples), "test_triples": len(task.test_triples)}
     print(json.dumps(info, ensure_ascii=False))
     log = open(out_dir / "log.jsonl", "w", encoding="utf-8")
-    g = torch.Generator().manual_seed(a.seed + 1)
+    g = torch.Generator(device=device).manual_seed(a.seed + 1)
     t0, best = time.time(), 0.0
     for it in range(1, a.iters + 1):
-        canvas, target = task.sample(a.batch, "train", g)
-        canvas = canvas.to(device)
+        canvas, target = task.sample(a.batch, "train", g, device)
         use_lens = a.lens_aux > 0 and a.model == "neuropixel"
         out = model(canvas, lens_every=4 if use_lens else 0)
         loss = F.cross_entropy(out["logits"], target.to(device)) + a.activity_l1 * out["activity"]
