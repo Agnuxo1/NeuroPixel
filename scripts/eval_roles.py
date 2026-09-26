@@ -20,7 +20,8 @@ def load(run: Path):
     a = json.loads((run / "result.json").read_text(encoding="utf-8"))["args"]
     t = RoleTask(a["size"], a["size"], seed=a["seed"])
     if a["model"] == "neuropixel":
-        m = NeuroPixel(len(t.v), t.out_pos, steps=a["steps"])
+        m = NeuroPixel(len(t.v), t.out_pos, steps=a["steps"],
+                       grounded=t.v.grounded() if a.get("grounded") else None)
     else:
         m = TinyTransformer(len(t.v), a["size"], a["size"], t.out_pos)
     m.load_state_dict(torch.load(run / "model.pt", map_location="cpu"))

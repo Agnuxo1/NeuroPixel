@@ -17,8 +17,7 @@ from .task import NOUNS, PLACES, ROLES, VERBS
 @torch.no_grad()
 def lens(model, frames: torch.Tensor):
     """frames: T,C,H,W -> (palabra [T,H,W], confianza [T,H,W])."""
-    h = model.read(frames.permute(0, 2, 3, 1))                 # T,H,W,c_id
-    logits = h @ model.embed.weight.T
+    logits = model.lens_logits(frames)                         # T,H,W,vocab
     logits[..., 0] = -1e4
     p = logits.softmax(-1)
     conf, word = p.max(-1)

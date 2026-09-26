@@ -23,6 +23,17 @@ VERBS = ["muerde", "empuja", "dibuja", "persigue", "saluda", "cura", "lava", "mi
 PLACES = ["casa", "bosque", "playa", "calle", "escuela", "río", "mercado", "huerto"]
 
 
+# Color perceptivo típico de cada concepto (idea de Fran: el diccionario anclado a lo que
+# se ve). Solo para conceptos con un color característico; las acciones, los papeles y
+# las personas no llevan color (evita estereotipos y colores inventados).
+GROUNDED_RGB = {
+    "perro": (139, 90, 43), "gato": (128, 128, 128), "robot": (170, 170, 180),
+    "zorro": (200, 90, 30), "lobo": (110, 110, 120), "caballo": (120, 70, 40),
+    "bosque": (34, 100, 34), "playa": (238, 214, 175), "calle": (90, 90, 90),
+    "río": (60, 110, 160), "huerto": (80, 140, 60),
+}
+
+
 @dataclass
 class Vocab:
     tokens: list[str] = field(default_factory=lambda: ["<vacío>"] + ROLES + NOUNS + VERBS + PLACES)
@@ -35,6 +46,15 @@ class Vocab:
 
     def ids(self, words):
         return [self.idx[w] for w in words]
+
+    def grounded(self):
+        """(rgb [V,3] en [-1,1], máscara [V]) con el color perceptivo de cada token."""
+        rgb = torch.zeros(len(self), 3)
+        mask = torch.zeros(len(self), dtype=torch.bool)
+        for t, c in GROUNDED_RGB.items():
+            rgb[self.idx[t]] = torch.tensor(c) / 127.5 - 1
+            mask[self.idx[t]] = True
+        return rgb, mask
 
 
 class RoleTask:

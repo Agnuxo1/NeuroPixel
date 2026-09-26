@@ -74,6 +74,8 @@ def main():
     ap.add_argument("--activity-l1", type=float, default=0.0, help="penaliza actividad (energía)")
     ap.add_argument("--lens-aux", type=float, default=0.0,
                     help="peso de la pérdida del diccionario en todos los píxeles con dato")
+    ap.add_argument("--grounded", action="store_true",
+                    help="diccionario anclado: color real fijo en 3 canales de los conceptos con color típico")
     ap.add_argument("--device", default="cpu")
     ap.add_argument("--threads", type=int, default=4)
     ap.add_argument("--force-gpu", action="store_true")
@@ -86,7 +88,8 @@ def main():
     device = choose_device(a.device, threads=a.threads, force_gpu=a.force_gpu)
     task = RoleTask(a.size, a.size, seed=a.seed)
     if a.model == "neuropixel":
-        model = NeuroPixel(len(task.v), task.out_pos, steps=a.steps)
+        model = NeuroPixel(len(task.v), task.out_pos, steps=a.steps,
+                           grounded=task.v.grounded() if a.grounded else None)
     else:
         model = TinyTransformer(len(task.v), a.size, a.size, task.out_pos)
     model.to(device)

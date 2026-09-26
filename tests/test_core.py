@@ -76,3 +76,16 @@ def test_scanner_lens_shapes():
     fr = m(canvas, trace=True)["frames"][0]
     word, conf = lens(m, fr)
     assert word.shape == (4, 8, 8) and (word != 0).all() and (conf <= 1).all()
+
+
+def test_grounded_dictionary_fixed_colors():
+    t = RoleTask(8, 8)
+    rgb, mask = t.v.grounded()
+    m = NeuroPixel(len(t.v), t.out_pos, steps=2, grounded=(rgb, mask))
+    d = m.dictionary()
+    i = t.v.idx["río"]
+    assert torch.allclose(d[i, :3], rgb[i])                 # el río es azul y no se aprende
+    canvas, target = t.sample(4)
+    torch.nn.functional.cross_entropy(m(canvas)["logits"], target).backward()
+    assert m.embed.weight.grad is not None
+    assert d[0].abs().max() == 0                             # vacío sigue siendo negro
