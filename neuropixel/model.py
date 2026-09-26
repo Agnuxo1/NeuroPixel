@@ -67,7 +67,7 @@ class NeuroPixel(nn.Module):
 
     def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0,
                 rgb: torch.Tensor | None = None, cam: torch.Tensor | None = None,
-                out_pos: tuple[int, int] | None = None, steps: int | None = None):
+                out_pos: tuple[int, int] | None = None, steps: int | None = None, hook=None):
         ids = F.embedding(canvas, self.dictionary()).permute(0, 3, 1, 2)  # B,c_id,H,W (color)
         present = canvas != 0
         if rgb is not None:  # píxeles de cámara: solo el color percibido, sin palabra
@@ -87,6 +87,8 @@ class NeuroPixel(nn.Module):
             if self.training and self.fire_rate < 1:
                 ds = ds * (torch.rand_like(ds[:, :1]) < self.fire_rate)
             s = s + ds
+            if hook is not None:          # p. ej. daño a mitad de pensar (autorreparación)
+                s = hook(t, s)
             act.append(ds.abs().mean())
             if trace:
                 frames.append(s.detach())
