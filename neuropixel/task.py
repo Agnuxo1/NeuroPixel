@@ -72,8 +72,43 @@ class RoleTask:
         self.query_pos = (h - 1, w - 2)
         self.out_pos = (h - 1, w - 1)
 
-    def sample(self, batch: int, split: str = "train", generator: torch.Generator | None = None):
-        """Devuelve (lienzo [B,H,W] de IDs, objetivo [B])."""
+    def sample(self, batch: int, split: str = "train", generator: torch.Generator | None = None,
+               device: str | torch.device = "cpu"):
+        """Versión vectorizada (misma distribución que sample_loop), puede generar en GPU.
+        Devuelve (lienzo [B,H,W] de IDs, objetivo [B])."""
+        g, dev = generator, torch.device(device)
+        if g is not None and g.device != dev:
+            g = None if dev.type != "cpu" else g
+        key = (split, str(dev))
+        if not hasattr(self, "_cache"):
+            self._cache = {}
+        if key not in self._cache:
+            trip = torch.tensor(self.train_triples if split == "train" else self.test_triples)
+            v = self.v
+            noun = torch.tensor(v.ids(NOUNS))
+            verb = torch.tensor(v.ids(VERBS))
+            place = torch.tensor(v.ids(PLACES))
+            self._cache[key] = (trip.to(dev), noun.to(dev), verb.to(dev), place.to(dev),
+                                self.role_ids.to(dev))
+        trip, noun, verb, place, role_ids = self._cache[key]
+        R = len(ROLES)
+        ti = torch.randint(len(trip), (batch,), generator=g, device=dev)
+        t3 = trip[ti]
+        fillers = torch.stack([noun[t3[:, 0]], verb[t3[:, 1]], noun[t3[:, 2]],
+                               place[torch.randint(len(PLACES), (batch,), generator=g, device=dev)]], 1)
+        rows = torch.rand(batch, self.h - 1, generator=g, device=dev).argsort(1)[:, :R]
+        cols = torch.randint(self.w - 1, (batch, R), generator=g, device=dev)
+        bi = torch.arange(batch, device=dev).unsqueeze(1).expand(-1, R)
+        canvas = torch.zeros(batch, self.h, self.w, dtype=torch.long, device=dev)
+        canvas[bi, rows, cols] = role_ids.expand(batch, -1)
+        canvas[bi, rows, cols + 1] = fillers
+        q = torch.randint(R, (batch,), generator=g, device=dev)
+        canvas[:, self.query_pos[0], self.query_pos[1]] = role_ids[q]
+        target = fillers.gather(1, q.unsqueeze(1)).squeeze(1)
+        return canvas, target
+
+    def sample_loop(self, batch: int, split: str = "train", generator: torch.Generator | None = None):
+        """Versión original con bucles (referencia)."""
         trip = self.train_triples if split == "train" else self.test_triples
         g = generator
         canvas = torch.zeros(batch, self.h, self.w, dtype=torch.long)
