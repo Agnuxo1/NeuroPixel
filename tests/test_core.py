@@ -115,3 +115,14 @@ def test_both_models_accept_train_kwargs():
     c, _ = t.sample(2)
     for m in (NeuroPixel(len(t.v), t.out_pos, steps=2), TinyTransformer(len(t.v), 8, 8, t.out_pos)):
         m(c, lens_every=0)
+
+
+def test_camera_pixels_replace_words():
+    t = RoleTask(8, 8)
+    c, y, rgb, cam = t.sample_camera(64, "test", torch.Generator().manual_seed(0), cam_roles={3: 1.0},
+                                     query_role=3, place_pool=[t.v.idx["playa"]])
+    assert cam.sum() == 64 and (c[cam] == 0).all()           # la playa ya no es palabra
+    assert (y == t.v.idx["playa"]).all()
+    m = NeuroPixel(len(t.v), t.out_pos, steps=2, grounded=t.v.grounded())
+    out = m(c, rgb=rgb, cam=cam, trace=True)
+    assert out["frames"][:, 0][cam.unsqueeze(1).expand(-1, out["frames"].shape[2], -1, -1)].abs().sum() > 0

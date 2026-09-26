@@ -21,6 +21,11 @@ CONFIGS = {
     "np": ["--model", "neuropixel"],
     "np_lens": ["--model", "neuropixel", "--lens-aux", "0.3"],
     "tf": ["--model", "transformer"],
+    # Prueba de transferencia palabra -> píxel de cámara (idea de Fran)
+    "zs_learned": ["--model", "neuropixel"],
+    "zs_grounded": ["--model", "neuropixel", "--grounded"],
+    "zs_grounded_c1": ["--model", "neuropixel", "--grounded", "--cam-animals", "0.3"],
+    "zs_learned_c1": ["--model", "neuropixel", "--cam-animals", "0.3"],
 }
 
 
@@ -34,7 +39,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--iters", type=int, default=30000)
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
-    ap.add_argument("--configs", nargs="+", default=list(CONFIGS))
+    ap.add_argument("--configs", nargs="+", default=["np", "np_lens", "tf"])
     ap.add_argument("--batch", type=int, default=512)
     ap.add_argument("--vram-cap", type=float, default=2.0)
     ap.add_argument("--max-temp", type=float, default=85)
@@ -75,7 +80,8 @@ def main():
         if f.exists():
             d = json.loads(f.read_text(encoding="utf-8"))
             summary[name] = {"final": d["final"]["acc_test_new_combos"], "best": d["best_test"],
-                             "s": d["seconds"]}
+                             "s": d["seconds"],
+                             "zeroshot": d.get("zeroshot_camera_place", {}).get("acc")}
     (ROOT / "runs" / f"{a.tag}_summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
     print(json.dumps(summary, indent=1))
 

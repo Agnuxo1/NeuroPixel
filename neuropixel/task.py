@@ -73,7 +73,8 @@ class RoleTask:
         self.out_pos = (h - 1, w - 1)
 
     def sample(self, batch: int, split: str = "train", generator: torch.Generator | None = None,
-               device: str | torch.device = "cpu"):
+               device: str | torch.device = "cpu", query_role: int | None = None,
+               place_pool: list[int] | None = None, meta: bool = False):
         """Versión vectorizada (misma distribución que sample_loop), puede generar en GPU.
         Devuelve (lienzo [B,H,W] de IDs, objetivo [B])."""
         g, dev = generator, torch.device(device)
@@ -94,8 +95,9 @@ class RoleTask:
         R = len(ROLES)
         ti = torch.randint(len(trip), (batch,), generator=g, device=dev)
         t3 = trip[ti]
+        pool = place if place_pool is None else torch.tensor(place_pool, device=dev)
         fillers = torch.stack([noun[t3[:, 0]], verb[t3[:, 1]], noun[t3[:, 2]],
-                               place[torch.randint(len(PLACES), (batch,), generator=g, device=dev)]], 1)
+                               pool[torch.randint(len(pool), (batch,), generator=g, device=dev)]], 1)
         rows = torch.rand(batch, self.h - 1, generator=g, device=dev).argsort(1)[:, :R]
         cols = torch.randint(self.w - 1, (batch, R), generator=g, device=dev)
         bi = torch.arange(batch, device=dev).unsqueeze(1).expand(-1, R)
@@ -103,9 +105,36 @@ class RoleTask:
         canvas[bi, rows, cols] = role_ids.expand(batch, -1)
         canvas[bi, rows, cols + 1] = fillers
         q = torch.randint(R, (batch,), generator=g, device=dev)
+        if query_role is not None:
+            q.fill_(query_role)
         canvas[:, self.query_pos[0], self.query_pos[1]] = role_ids[q]
         target = fillers.gather(1, q.unsqueeze(1)).squeeze(1)
+        if meta:
+            return canvas, target, {"rows": rows, "cols": cols, "fillers": fillers}
         return canvas, target
+
+    def sample_camera(self, batch: int, split: str = "train", generator: torch.Generator | None = None,
+                      device: str | torch.device = "cpu", cam_roles: dict[int, float] | None = None,
+                      noise: float = 0.1, **kw):
+        """Como sample, pero algunos rellenos llegan como PÍXEL DE CÁMARA (su color real con
+        ruido) en vez de como palabra. cam_roles = {papel: probabilidad}; solo se aplica a
+        conceptos con color típico. Devuelve (lienzo, objetivo, rgb [B,3,H,W], cam [B,H,W])."""
+        dev = torch.device(device)
+        canvas, target, m = self.sample(batch, split, generator, dev, meta=True, **kw)
+        g_rgb, g_mask = (x.to(dev) for x in self.v.grounded())
+        rgb = torch.zeros(batch, 3, self.h, self.w, device=dev)
+        cam = torch.zeros(batch, self.h, self.w, dtype=torch.bool, device=dev)
+        bi = torch.arange(batch, device=dev)
+        g = generator if generator is not None and generator.device == dev else None
+        for role, prob in (cam_roles or {}).items():
+            tok = m["fillers"][:, role]
+            use = g_mask[tok] & (torch.rand(batch, generator=g, device=dev) < prob)
+            r, c = m["rows"][:, role], m["cols"][:, role] + 1
+            col = (g_rgb[tok] + noise * torch.randn(batch, 3, generator=g, device=dev)).clamp(-1, 1)
+            rgb[bi[use], :, r[use], c[use]] = col[use]
+            cam[bi[use], r[use], c[use]] = True
+            canvas[bi[use], r[use], c[use]] = 0          # ya no hay palabra: solo el color
+        return canvas, target, rgb, cam
 
     def sample_loop(self, batch: int, split: str = "train", generator: torch.Generator | None = None):
         """Versión original con bucles (referencia)."""
