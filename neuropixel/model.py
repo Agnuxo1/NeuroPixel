@@ -17,11 +17,30 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+class Retina(nn.Module):
+    """L2 híbrida: 'ojo' que convierte cada píxel de cámara en un color rico (c_id canales)
+    mirando su entorno (convoluciones dilatadas, campo ~31 px, sin reducir resolución).
+    Su salida vive en el MISMO espacio que el diccionario de palabras."""
+
+    def __init__(self, c_id: int = 16, w: int = 32):
+        super().__init__()
+        layers, cin = [], 3
+        for d in (1, 2, 4, 8):
+            layers += [nn.Conv2d(cin, w, 3, padding=d, dilation=d), nn.ReLU()]
+            cin = w
+        layers.append(nn.Conv2d(w, c_id, 1))
+        self.net = nn.Sequential(*layers)
+
+    def forward(self, rgb):
+        return self.net(rgb)
+
+
 class NeuroPixel(nn.Module):
     def __init__(self, vocab: int, out_pos: tuple[int, int], c_id: int = 16, c: int = 48,
                  hidden: int = 128, steps: int = 16, fire_rate: float = 0.5,
-                 grounded: tuple[torch.Tensor, torch.Tensor] | None = None):
+                 grounded: tuple[torch.Tensor, torch.Tensor] | None = None, retina: bool = False):
         super().__init__()
+        self.retina = Retina(c_id) if retina else None
         self.out_pos, self.steps, self.fire_rate = out_pos, steps, fire_rate
         self.embed = nn.Embedding(vocab, c_id, padding_idx=0)
         # Diccionario anclado: los 3 primeros canales de los conceptos con color típico
@@ -53,7 +72,10 @@ class NeuroPixel(nn.Module):
         present = canvas != 0
         if rgb is not None:  # píxeles de cámara: solo el color percibido, sin palabra
             cm = cam.unsqueeze(1)
-            ids = torch.cat([torch.where(cm, rgb, ids[:, :3]), ids[:, 3:] * ~cm], 1)
+            if self.retina is not None:   # L2: la retina da el color completo del píxel
+                ids = torch.where(cm, self.retina(rgb), ids)
+            else:                          # L1: solo el color percibido, en 3 canales
+                ids = torch.cat([torch.where(cm, rgb, ids[:, :3]), ids[:, 3:] * ~cm], 1)
             present = present | cam
         s = self.seed(ids) * present.unsqueeze(1)               # activa solo píxeles con dato
         frames, act, lens = [s.detach()] if trace else None, [], []

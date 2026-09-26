@@ -108,6 +108,8 @@ def main():
     ap.add_argument("--lens-img", type=float, default=0.3, help="escuela: la imagen dice su palabra")
     ap.add_argument("--lens-role", type=float, default=0.3)
     ap.add_argument("--hidden", type=int, default=128)
+    ap.add_argument("--retina", action="store_true", help="L2 híbrida: retina antes del lienzo")
+    ap.add_argument("--cnn-width", type=int, default=24)
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--vram-cap", type=float, default=6.0)
     ap.add_argument("--threads", type=int, default=2)
@@ -125,9 +127,9 @@ def main():
     CartillaTask.out_pos_static = task.out_pos
     rtask = RoleTask(8, 8, seed=a.seed)
     if a.model == "neuropixel":
-        model = NeuroPixel(len(vocab), rtask.out_pos, hidden=a.hidden, steps=16)
+        model = NeuroPixel(len(vocab), rtask.out_pos, hidden=a.hidden, steps=16, retina=a.retina)
     else:
-        model = TinyCNN()
+        model = TinyCNN(w=a.cnn_width)
     model.to(device)
     opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=1e-4)
     sched = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=a.iters, pct_start=0.05)

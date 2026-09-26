@@ -144,3 +144,17 @@ def test_cartilla_layout():
     yes = (b["target"] == t.yes).float().mean().item()
     assert 0.4 < yes < 0.6
     assert ((b["canvas"][:, 33, 14] == b["word"]) == (b["target"] == t.yes)).all()
+
+
+def test_retina_fills_all_identity_channels():
+    t = RoleTask(8, 8)
+    m = NeuroPixel(len(t.v), t.out_pos, steps=2, retina=True)
+    c = torch.zeros(2, 8, 8, dtype=torch.long)
+    rgb = torch.rand(2, 3, 8, 8) * 2 - 1
+    cam = torch.zeros(2, 8, 8, dtype=torch.bool)
+    cam[:, :4, :4] = True
+    out = m(c, rgb=rgb, cam=cam, trace=True)
+    f0 = out["frames"][:, 0]
+    assert f0[:, :, :4, :4].abs().sum() > 0 and f0[:, :, 5:, 5:].abs().sum() == 0
+    torch.nn.functional.cross_entropy(out["logits"], torch.tensor([5, 6])).backward()
+    assert m.retina.net[0].weight.grad is not None
