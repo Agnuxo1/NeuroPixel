@@ -58,12 +58,14 @@ class Vocab:
 
 
 class RoleTask:
-    def __init__(self, h: int = 8, w: int = 8, heldout_frac: float = 0.2, seed: int = 0):
+    def __init__(self, h: int = 8, w: int = 8, heldout_frac: float = 0.2, seed: int = 0,
+                 nouns_allowed: list[int] | None = None):
         assert h >= 5 and w >= 4
         self.h, self.w, self.v = h, w, Vocab()
         g = torch.Generator().manual_seed(seed)
         triples = [(a, b, c) for a in range(len(NOUNS)) for b in range(len(VERBS))
-                   for c in range(len(NOUNS)) if a != c]
+                   for c in range(len(NOUNS)) if a != c
+                   and (nouns_allowed is None or (a in nouns_allowed and c in nouns_allowed))]
         perm = torch.randperm(len(triples), generator=g).tolist()
         n_test = int(len(triples) * heldout_frac)
         self.test_triples = [triples[i] for i in perm[:n_test]]
