@@ -146,13 +146,28 @@ def t2_new_word():
 
 
 # ----------------------------------------------------------------- T3 continuo + lienzos que crecen
-def train_role(model, task, iters, lens_aux=0.0, batch=512, lr=2e-3, seed=0):
+@torch.no_grad()
+def coherence(model, c):
+    """Cúmulos: fracción media de vecinos (8) que 'dicen' la misma palabra que cada píxel."""
+    was = model.training
+    model.eval()
+    w = model.lens_logits(model(c)["state"]).argmax(-1)             # B,H,W
+    wp = F.pad(w, (1, 1, 1, 1), value=-1)
+    H, W = w.shape[1:]
+    same = sum((wp[:, 1 + dy:1 + dy + H, 1 + dx:1 + dx + W] == w).float()
+               for dy in (-1, 0, 1) for dx in (-1, 0, 1) if (dy, dx) != (0, 0)) / 8
+    model.train(was)
+    return round(same.mean().item(), 4)
+
+
+def train_role(model, task, iters, lens_aux=0.0, batch=512, lr=2e-3, seed=0, curve=None):
     model.train()
+    probe = task.sample(256, "train", torch.Generator().manual_seed(77))[0].to(DEV)
     opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=lr, weight_decay=1e-4)
     sched = torch.optim.lr_scheduler.OneCycleLR(opt, lr, total_steps=iters, pct_start=0.1)
     g = torch.Generator(device=DEV).manual_seed(seed)
     np_ = isinstance(model, NeuroPixel)
-    for _ in range(iters):
+    for it in range(iters):
         c, y = task.sample(batch, "train", g, DEV)
         out = model(c, lens_every=4 if (np_ and lens_aux) else 0)
         loss = F.cross_entropy(out["logits"], y)
@@ -165,6 +180,8 @@ def train_role(model, task, iters, lens_aux=0.0, batch=512, lr=2e-3, seed=0):
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         opt.step()
         sched.step()
+        if curve is not None and np_ and (it + 1) % 2000 == 0:
+            curve.append({"it": it + 1, "coherencia": coherence(model, probe)})
     model.eval()
     return model
 
@@ -189,7 +206,8 @@ def t3_continual(iters):
         t0 = time.time()
         mk = (lambda: NeuroPixel(V, tA.out_pos)) if kind == "neuropixel" else (lambda: TinyTransformer(V, 8, 8, tA.out_pos))
         torch.manual_seed(0)
-        mA = train_role(mk().to(DEV), tA, iters, lens_aux=0.3 if kind == "neuropixel" else 0)
+        curve = []
+        mA = train_role(mk().to(DEV), tA, iters, lens_aux=0.3 if kind == "neuropixel" else 0, curve=curve)
         r = {"A_tras_A": acc(mA, cA, yA), "B_tras_A": acc(mA, cB, yB)}
         mB = train_role(copy.deepcopy(mA), tB, iters, lens_aux=0.3 if kind == "neuropixel" else 0, seed=1)
         r["secuencial_A_tras_B"] = acc(mB, cA, yA)          # olvido
@@ -199,8 +217,94 @@ def t3_continual(iters):
             r[f"crecer_{name}"] = round((pred == y).float().mean().item(), 4)
             r[f"crecer_{name}_elige_lienzo_correcto"] = round((pick == (0 if name == "A" else 1)).float().mean().item(), 4)
         r["segundos"] = round(time.time() - t0, 1)
+        if curve:
+            r["coherencia_curva_A"] = curve
+        torch.save(mA.state_dict(), OUT / f"t3_{kind}_A.pt")
+        torch.save(mB.state_dict(), OUT / f"t3_{kind}_B.pt")
         res[kind] = r
         print("T3", kind, json.dumps(r), flush=True)
+    return res
+
+
+# ----------------------------------------------------------------- T4 consultar todos / enrutar por escáner
+def scanner_scores(model, c):
+    """Resonancia: ¿cuánto se reconoce el lienzo en lo que ve? Media, sobre los píxeles con
+    dato, de la probabilidad que su diccionario da a la palabra escrita (no usa la respuesta)."""
+    with torch.no_grad():
+        p = model.lens_logits(model(c)["state"]).softmax(-1)          # B,H,W,V
+        own = p.gather(-1, c.unsqueeze(-1)).squeeze(-1)                # B,H,W
+        m = (c != 0).float()
+        return (own * m).sum((1, 2)) / m.sum((1, 2))
+
+
+def load_pair(kind, V, out_pos):
+    models = []
+    for part in ("A", "B"):
+        m = (NeuroPixel(V, out_pos) if kind == "neuropixel" else TinyTransformer(V, 8, 8, out_pos)).to(DEV)
+        m.load_state_dict(torch.load(OUT / f"t3_{kind}_{part}.pt", map_location=DEV))
+        models.append(m.eval())
+    return models
+
+
+def t4_all_canvases():
+    A, B = list(range(6)), list(range(6, 12))
+    tA, tB = RoleTask(8, 8, nouns_allowed=A, seed=0), RoleTask(8, 8, nouns_allowed=B, seed=0)
+    V = len(Vocab())
+    sets = {"A": test_set(tA), "B": test_set(tB)}
+    res = {}
+    for kind in ("neuropixel", "transformer"):
+        models = load_pair(kind, V, tA.out_pos)
+        r = {}
+        for name, (c, y) in sets.items():
+            right = 0 if name == "A" else 1
+            with torch.no_grad():
+                probs = torch.stack([m(c)["logits"].softmax(-1) for m in models])   # M,B,V
+            preds = probs.argmax(-1)
+            conf_pick = probs.max(-1).values.argmax(0)
+            r[f"{name}_confianza"] = round((preds.gather(0, conf_pick[None])[0] == y).float().mean().item(), 4)
+            r[f"{name}_fusion"] = round((probs.mean(0).argmax(-1) == y).float().mean().item(), 4)
+            r[f"{name}_oraculo"] = round((preds[right] == y).float().mean().item(), 4)
+            if kind == "neuropixel":
+                sc = torch.stack([scanner_scores(m, c) for m in models])
+                pick = sc.argmax(0)
+                r[f"{name}_escaner"] = round((preds.gather(0, pick[None])[0] == y).float().mean().item(), 4)
+                r[f"{name}_escaner_elige_bien"] = round((pick == right).float().mean().item(), 4)
+                r[f"{name}_coherencia_lienzoA_lienzoB"] = [coherence(models[0], c), coherence(models[1], c)]
+        res[kind] = r
+        print("T4", kind, json.dumps(r), flush=True)
+    # N lienzos a la vez en la GPU: una pasada vectorizada frente a N pasadas seguidas
+    from torch.func import functional_call, stack_module_state, vmap
+    pair = load_pair("neuropixel", V, tA.out_pos)
+    c = sets["A"][0][:512]
+    timing = {}
+    for n in (2, 8, 32):
+        npm = [pair[i % 2] for i in range(n)]
+        params, bufs = stack_module_state(npm)
+        base = copy.deepcopy(pair[0]).to("meta")
+
+        def f(p, b, x):
+            return functional_call(base, (p, b), (x,))["logits"]
+        try:
+            with torch.no_grad():
+                vf = vmap(f, in_dims=(0, 0, None))
+                vf(params, bufs, c)
+                sync = torch.cuda.synchronize if DEV.type == "cuda" else (lambda: None)
+                sync()
+                t0 = time.perf_counter()
+                for _ in range(5):
+                    vf(params, bufs, c)
+                sync()
+                tv = (time.perf_counter() - t0) / 5
+                t0 = time.perf_counter()
+                for _ in range(5):
+                    [m(c)["logits"] for m in npm]
+                sync()
+                ts = (time.perf_counter() - t0) / 5
+            timing[f"N{n}"] = {"una_pasada_ms": round(tv * 1000, 1), "N_pasadas_ms": round(ts * 1000, 1)}
+        except Exception as e:  # noqa: BLE001
+            timing[f"N{n}"] = {"error": f"{type(e).__name__}: {str(e)[:160]}"}
+    res["gpu_todos_a_la_vez"] = timing
+    print("T4 tiempos", json.dumps(timing), flush=True)
     return res
 
 
@@ -226,13 +330,16 @@ def summary(res):
         lines += ["| modelo | " + " | ".join(keys) + " |", "|" + "---|" * (len(keys) + 1)]
         for run, v in res["t3"].items():
             lines.append(f"| {run} | " + " | ".join(str(v[k]) for k in keys) + " |")
+    if "t4" in res:
+        lines += ["", "## T4 Consultar todos los lienzos / enrutar por escáner", "", "```",
+                  json.dumps(res["t4"], indent=1, ensure_ascii=False), "```"]
     return "\n".join(lines) + "\n"
 
 
 def main():
     global DEV
     ap = argparse.ArgumentParser()
-    ap.add_argument("which", choices=["t1", "t2", "t3", "all"])
+    ap.add_argument("which", choices=["t1", "t2", "t3", "t4", "all"])
     ap.add_argument("--wait-for", nargs="*", default=[])
     ap.add_argument("--t3-iters", type=int, default=15000)
     ap.add_argument("--device", default="cuda")
@@ -246,10 +353,11 @@ def main():
     f = OUT / "results.json"
     if f.exists():
         res = json.loads(f.read_text(encoding="utf-8"))
-    steps = ["t1", "t2", "t3"] if a.which == "all" else [a.which]
+    steps = ["t1", "t2", "t3", "t4"] if a.which == "all" else [a.which]
     for s in steps:
         t0 = time.time()
-        res[s] = {"t1": t1_damage, "t2": t2_new_word}[s]() if s != "t3" else t3_continual(a.t3_iters)
+        res[s] = (t3_continual(a.t3_iters) if s == "t3"
+                  else {"t1": t1_damage, "t2": t2_new_word, "t4": t4_all_canvases}[s]())
         res[s + "_segundos"] = round(time.time() - t0, 1)
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
         (OUT / "RESUMEN.md").write_text(summary(res), encoding="utf-8")
