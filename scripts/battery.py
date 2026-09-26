@@ -326,10 +326,14 @@ def summary(res):
         lines.append("")
     if "t3" in res:
         lines += ["## T3 Aprendizaje continuo y lienzos que crecen", ""]
-        keys = list(next(iter(res["t3"].values())))
+        keys = [k for k in dict.fromkeys(k for v in res["t3"].values() for k in v) if k != "coherencia_curva_A"]
         lines += ["| modelo | " + " | ".join(keys) + " |", "|" + "---|" * (len(keys) + 1)]
         for run, v in res["t3"].items():
-            lines.append(f"| {run} | " + " | ".join(str(v[k]) for k in keys) + " |")
+            lines.append(f"| {run} | " + " | ".join(str(v.get(k, "")) for k in keys) + " |")
+        for run, v in res["t3"].items():
+            if "coherencia_curva_A" in v:
+                lines.append(f"\nCoherencia de cúmulos durante el aprendizaje de A ({run}): "
+                             + ", ".join(f"{d['it']}: {d['coherencia']}" for d in v["coherencia_curva_A"]))
     if "t4" in res:
         lines += ["", "## T4 Consultar todos los lienzos / enrutar por escáner", "", "```",
                   json.dumps(res["t4"], indent=1, ensure_ascii=False), "```"]
