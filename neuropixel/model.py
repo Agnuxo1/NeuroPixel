@@ -46,9 +46,15 @@ class NeuroPixel(nn.Module):
         """Diccionario aplicado a todos los píxeles: B,C,H,W -> B,H,W,vocab."""
         return self.read(s.permute(0, 2, 3, 1)) @ self.dictionary().T
 
-    def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0):
+    def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0,
+                rgb: torch.Tensor | None = None, cam: torch.Tensor | None = None):
         ids = F.embedding(canvas, self.dictionary()).permute(0, 3, 1, 2)  # B,c_id,H,W (color)
-        s = self.seed(ids) * (canvas != 0).unsqueeze(1)         # activa solo píxeles con dato
+        present = canvas != 0
+        if rgb is not None:  # píxeles de cámara: solo el color percibido, sin palabra
+            cm = cam.unsqueeze(1)
+            ids = torch.cat([torch.where(cm, rgb, ids[:, :3]), ids[:, 3:] * ~cm], 1)
+            present = present | cam
+        s = self.seed(ids) * present.unsqueeze(1)               # activa solo píxeles con dato
         frames, act, lens = [s.detach()] if trace else None, [], []
         for t in range(1, self.steps + 1):
             if lens_every and t % lens_every == 0:

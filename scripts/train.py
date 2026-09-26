@@ -35,6 +35,27 @@ def evaluate(model, task, device, split, n=1024, seed=123):
     return (out["logits"].argmax(-1).cpu() == target).float().mean().item()
 
 
+@torch.no_grad()
+def evaluate_camera(model, task, device, n=2000, seed=321):
+    """Transferencia sin ejemplos: el LUGAR llega solo como píxel de cámara (color real con
+    ruido) y se pregunta por él. Solo lugares con color típico."""
+    from neuropixel.task import GROUNDED_RGB, PLACES
+    pool = [task.v.idx[p] for p in PLACES if p in GROUNDED_RGB]
+    g = torch.Generator().manual_seed(seed)
+    c, y, rgb, cam = task.sample_camera(n, "test", g, "cpu", cam_roles={3: 1.0},
+                                        query_role=3, place_pool=pool)
+    model.eval()
+    pred = model(c.to(device), rgb=rgb.to(device), cam=cam.to(device))["logits"].argmax(-1).cpu()
+    model.train()
+    names = task.v.tokens
+    conf = {}
+    for t_, p_ in zip(y.tolist(), pred.tolist()):
+        conf.setdefault(names[t_], {}).setdefault(names[p_], 0)
+        conf[names[t_]][names[p_]] += 1
+    return {"acc": round((pred == y).float().mean().item(), 4), "chance_places": round(1 / len(PLACES), 4),
+            "confusion": conf}
+
+
 def save_trace(model, task, device, path: Path, seed=7):
     """Guarda la evolución del lienzo como tira de imágenes (el 'escáner')."""
     from PIL import Image
@@ -76,6 +97,8 @@ def main():
                     help="peso de la pérdida del diccionario en todos los píxeles con dato")
     ap.add_argument("--grounded", action="store_true",
                     help="diccionario anclado: color real fijo en 3 canales de los conceptos con color típico")
+    ap.add_argument("--cam-animals", type=float, default=0.0,
+                    help="curso 1: prob. de dar agente/paciente con color típico como píxel de cámara")
     ap.add_argument("--device", default="cpu")
     ap.add_argument("--threads", type=int, default=4)
     ap.add_argument("--force-gpu", action="store_true")
@@ -106,9 +129,14 @@ def main():
     g = torch.Generator(device=device).manual_seed(a.seed + 1)
     t0, best = time.time(), 0.0
     for it in range(1, a.iters + 1):
-        canvas, target = task.sample(a.batch, "train", g, device)
         use_lens = a.lens_aux > 0 and a.model == "neuropixel"
-        out = model(canvas, lens_every=4 if use_lens else 0)
+        if a.cam_animals > 0:
+            canvas, target, rgb, cam = task.sample_camera(a.batch, "train", g, device,
+                                                          cam_roles={0: a.cam_animals, 2: a.cam_animals})
+            out = model(canvas, lens_every=4 if use_lens else 0, rgb=rgb, cam=cam)
+        else:
+            canvas, target = task.sample(a.batch, "train", g, device)
+            out = model(canvas, lens_every=4 if use_lens else 0)
         loss = F.cross_entropy(out["logits"], target.to(device)) + a.activity_l1 * out["activity"]
         if use_lens:  # escuela: cada píxel con dato debe seguir 'diciendo' su palabra
             L = out["lens"].shape[1]
@@ -132,6 +160,8 @@ def main():
     final = {**info, "final": rec, "best_test": best, "seconds": round(time.time() - t0, 1),
              "chance_approx": round(1 / 12, 4)}
     if a.model == "neuropixel":
+        final["zeroshot_camera_place"] = evaluate_camera(model, task, device)
+        print("ZEROSHOT", json.dumps({k: v for k, v in final["zeroshot_camera_place"].items() if k != "confusion"}))
         final["trace"] = save_trace(model, task, device, out_dir / "trace.png")
     torch.save(model.state_dict(), out_dir / "model.pt")
     (out_dir / "result.json").write_text(json.dumps(final, indent=1, ensure_ascii=False), encoding="utf-8")
