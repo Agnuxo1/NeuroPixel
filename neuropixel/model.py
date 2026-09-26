@@ -19,10 +19,16 @@ import torch.nn.functional as F
 
 class NeuroPixel(nn.Module):
     def __init__(self, vocab: int, out_pos: tuple[int, int], c_id: int = 16, c: int = 48,
-                 hidden: int = 128, steps: int = 16, fire_rate: float = 0.5):
+                 hidden: int = 128, steps: int = 16, fire_rate: float = 0.5,
+                 grounded: tuple[torch.Tensor, torch.Tensor] | None = None):
         super().__init__()
         self.out_pos, self.steps, self.fire_rate = out_pos, steps, fire_rate
         self.embed = nn.Embedding(vocab, c_id, padding_idx=0)
+        # Diccionario anclado: los 3 primeros canales de los conceptos con color típico
+        # quedan FIJOS a ese color real; el resto de canales se aprende.
+        rgb, mask = grounded if grounded is not None else (torch.zeros(vocab, 3), torch.zeros(vocab, dtype=torch.bool))
+        self.register_buffer("g_rgb", rgb.float(), persistent=False)
+        self.register_buffer("g_mask", mask.unsqueeze(-1), persistent=False)
         self.seed = nn.Conv2d(c_id, c, 1)
         self.perceive = nn.Conv2d(c, 2 * c, 3, padding=1, groups=c, bias=False)
         self.f1 = nn.Conv2d(3 * c + c_id, hidden, 1)
@@ -31,12 +37,17 @@ class NeuroPixel(nn.Module):
         nn.init.zeros_(self.f2.bias)
         self.read = nn.Linear(c, c_id)
 
+    def dictionary(self) -> torch.Tensor:
+        """Tabla completa vocab x c_id (con los colores anclados si los hay)."""
+        w = self.embed.weight
+        return torch.cat([torch.where(self.g_mask, self.g_rgb, w[:, :3]), w[:, 3:]], 1)
+
     def lens_logits(self, s: torch.Tensor) -> torch.Tensor:
         """Diccionario aplicado a todos los píxeles: B,C,H,W -> B,H,W,vocab."""
-        return self.read(s.permute(0, 2, 3, 1)) @ self.embed.weight.T
+        return self.read(s.permute(0, 2, 3, 1)) @ self.dictionary().T
 
     def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0):
-        ids = self.embed(canvas).permute(0, 3, 1, 2)            # B,c_id,H,W  (color = identidad)
+        ids = F.embedding(canvas, self.dictionary()).permute(0, 3, 1, 2)  # B,c_id,H,W (color)
         s = self.seed(ids) * (canvas != 0).unsqueeze(1)         # activa solo píxeles con dato
         frames, act, lens = [s.detach()] if trace else None, [], []
         for t in range(1, self.steps + 1):
@@ -51,7 +62,7 @@ class NeuroPixel(nn.Module):
             if trace:
                 frames.append(s.detach())
         r, c = self.out_pos
-        logits = self.read(s[:, :, r, c]) @ self.embed.weight.T  # traducir con el diccionario
+        logits = self.read(s[:, :, r, c]) @ self.dictionary().T  # traducir con el diccionario
         logits[:, 0] = -1e4                                      # 'vacío' nunca es respuesta
         out = {"logits": logits, "activity": torch.stack(act).mean(), "state": s}
         if lens:
