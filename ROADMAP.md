@@ -66,3 +66,9 @@ fotogramas pide RTX 40/50. Se reimplementan sus principios:
 4. **Lienzo multiescala / superresolución:** pensar a baja resolución y reescalar con una red aprendida; primera aplicación, los filamentos.
 
 Nota: generar píxeles ahorra cálculo, no parámetros; para multiplicar la capacidad, hiperredes.
+
+AMD FSR (código abierto, MIT, funciona en NVIDIA): portar sus algoritmos a PyTorch. FSR 1 (EASU + RCAS) como
+escalado barato del lienzo multiescala, comparado con interpolación simple y con superresolución
+aprendida. La generación de fotogramas (FSR 3 / DLSS) interpola entre estados reales, así que sirve
+para reconstruir estados intermedios del lienzo; imaginar el futuro requiere extrapolar con el
+salto temporal entrenado.
