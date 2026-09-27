@@ -227,6 +227,49 @@ def scanner_score(model, c):
         return ((own * mk).sum((1, 2)) / mk.sum((1, 2)))
 
 
+def novelty(model, c, thr=0.5):
+    """Fracción de píxeles con dato cuya palabra el lienzo NO sabe leer (prob. propia < thr)."""
+    with torch.no_grad():
+        p = model.lens_logits(model(c)["state"]).softmax(-1)
+        own = p.gather(-1, c.unsqueeze(-1)).squeeze(-1)
+        mk = c != 0
+        return ((own < thr) & mk).float().sum() / mk.float().sum()
+
+
+def t_grow2(iters, max_novel=0.1):
+    """Crecimiento por novedad (tipo ART): si todos los lienzos tienen >10 % de palabras que no
+    saben leer, se crea uno nuevo; si no, repasa el que menos novedad ve."""
+    groups = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]]
+    seq = [0, 1, 2, 0]
+    tasks = [RoleTask(8, 8, nouns_allowed=gp, seed=0) for gp in groups]
+    tests = [tset(t) for t in tasks]
+    canv, log_ = [], []
+    for step, ti in enumerate(seq):
+        probe = tasks[ti].sample(512, "train", torch.Generator().manual_seed(50 + step))[0].to(DEV)
+        nov = [round(novelty(m, probe).item(), 4) for m in canv]
+        if not canv or min(nov) > max_novel:
+            m = copy.deepcopy(canv[min(range(len(canv)), key=lambda i: nov[i])]) if canv else NeuroPixel(V, tasks[0].out_pos).to(DEV)
+            train(m, tasks[ti], iters, seed=step)
+            canv.append(m)
+            action = "lienzo nuevo"
+        else:
+            best = min(range(len(canv)), key=lambda i: nov[i])
+            train(canv[best], tasks[ti], iters // 5, seed=step, lr=5e-4)
+            action = f"repasa lienzo {best}"
+        log_.append({"tema": ti, "novedad_por_lienzo": nov, "accion": action})
+        log("grow2", log_[-1])
+    res = {"lienzos": len(canv), "registro": log_}
+    for ti, (c, y) in enumerate(tests):
+        sc = torch.stack([scanner_score(m, c) for m in canv])
+        with torch.no_grad():
+            preds = torch.stack([m(c)["logits"].argmax(-1) for m in canv])
+        pick = sc.argmax(0)
+        res[f"tema{ti}_escaner"] = round((preds.gather(0, pick[None])[0] == y).float().mean().item(), 4)
+        res[f"tema{ti}_elige_lienzo"] = pick.float().mean().item()
+    save("grow_novedad", res)
+    return res
+
+
 def t_grow(iters, mode):
     groups = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]]
     seq = [0, 1, 2, 0]                                   # el último tema es un repaso
@@ -285,7 +328,7 @@ def t_far(kind, iters, seed=0):
         extra = {"steps_range": (18, 36), "damage_p": 0.5}
     elif kind == "np_big_reposo":    # 108k parámetros + reposo
         m = NeuroPixel(V, task.out_pos, steps=24, c=96, hidden=256)
-        extra = {"steps_range": (18, 36), "damage_p": 0.5}
+        extra = {"steps_range": (18, 36), "damage_p": 0.5, "batch": 256}   # lote menor: memoria
     elif kind == "tf_small":
         m = TinyTransformer(V, 12, 12, task.out_pos)
     else:
@@ -562,6 +605,8 @@ def main():
         t_memory(a.iters, a.seeds[0])
     elif t == "grow":
         t_grow(a.iters, a.arg)
+    elif t == "grow2":
+        t_grow2(a.iters)
     elif t == "far":
         t_far(a.arg, a.iters, a.seeds[0])
     elif t == "energy":
