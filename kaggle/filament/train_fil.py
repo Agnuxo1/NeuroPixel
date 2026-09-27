@@ -18,6 +18,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parents[1]))
 import fil  # noqa: E402
+import multiscale  # noqa: E402
 from neuropixel.model import NeuroPixel, n_params  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
 
@@ -49,21 +50,21 @@ def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev):
 
 
 @torch.no_grad()
-def predict_prob(model, img_u8, steps, dev):
+def predict_prob(model, img_u8, steps, dev, fwd=None):
     x = fil.norm_img(torch.from_numpy(np.ascontiguousarray(img_u8))[None].to(dev))
     with torch.autocast("cuda", dtype=torch.bfloat16, enabled=dev.type == "cuda"):
-        lg = fil.seg_forward(model, x, steps, ckpt=False)
+        lg = (fwd or fil.seg_forward)(model, x, steps, ckpt=False)
     return lg.float().softmax(1)[0, 1].cpu().numpy()
 
 
-def evaluate(model, imgs, labs, meta, idx, steps, dev, grid=None):
+def evaluate(model, imgs, labs, meta, idx, steps, dev, grid=None, fwd=None):
     """Probabilidades por imagen única y PQ global (todas las anotaciones de validación)."""
     model.eval()
     probs = {}
     for k in idx:
         i = meta["ann"][k]["img"]
         if i not in probs:
-            probs[i] = predict_prob(model, imgs[i], steps, dev)
+            probs[i] = predict_prob(model, imgs[i], steps, dev, fwd)
     grid = grid or [(0.5, 20, 0)]
     out = {}
     for thr, mina, close in grid:
@@ -99,6 +100,10 @@ def main():
     ap.add_argument("--force-gpu", action="store_true")
     ap.add_argument("--steps-max", type=int, default=0, help=">steps activa el entrenamiento de reposo")
     ap.add_argument("--damage-p", type=float, default=0.5)
+    ap.add_argument("--init", default=None, help="continuar desde runs/<init>/best.pt")
+    ap.add_argument("--ms", choices=multiscale.MODES, default=None, help="lienzo multiescala (FIL-002)")
+    ap.add_argument("--scale", type=int, default=4)
+    ap.add_argument("--steps-fine", type=int, default=6, help="pasos del lienzo fino (--ms learned)")
     ap.add_argument("--name", default="np_ret")
     a = ap.parse_args()
     dev = choose_device("cuda", threads=4, vram_cap_gib=a.vram_cap, force_gpu=a.force_gpu)
@@ -108,11 +113,19 @@ def main():
     tr, va = fil.split(meta)
     model = NeuroPixel(len(fil.VOCAB), (0, 0), c=a.c, hidden=a.hidden, retina=not a.no_retina,
                        fire_rate=a.fire_rate).to(dev)
-    opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=1e-4)
+    if a.init:
+        model.load_state_dict(torch.load(HERE / "runs" / a.init / "best.pt", map_location=dev))
+    ms, fwd = None, fil.seg_forward
+    params = list(model.parameters())
+    if a.ms:
+        ms = multiscale.MultiScale(a.ms, c=a.c, hidden=a.hidden, scale=a.scale).to(dev)
+        params += list(ms.parameters())
+        fwd = lambda m, x, st, ckpt=True, damage=None: multiscale.ms_forward(m, ms, x, st, a.steps_fine, ckpt, damage)
+    opt = torch.optim.AdamW(params, lr=a.lr, weight_decay=1e-4)
     sch = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=a.iters, pct_start=0.05)
     out_dir = HERE / "runs" / a.name
     out_dir.mkdir(parents=True, exist_ok=True)
-    info = {"args": vars(a), "params": n_params(model), "train": len(tr), "val": len(va)}
+    info = {"args": vars(a), "params": n_params(model) + (multiscale.n_extra(ms) if ms else 0), "train": len(tr), "val": len(va)}
     print(json.dumps(info), flush=True)
     rng = np.random.default_rng(0)
     wts = torch.tensor([1.0, a.w_pos], device=dev)
@@ -126,7 +139,7 @@ def main():
                 keep = (torch.rand(x.shape[0], 1, *x.shape[2:], device=dev) >= 0.3).float()
                 dmg = (int(rng.integers(2, steps)), keep)
         with torch.autocast("cuda", dtype=torch.bfloat16, enabled=dev.type == "cuda"):
-            lg = fil.seg_forward(model, x, steps, damage=dmg)
+            lg = fwd(model, x, steps, damage=dmg)
         lg = lg.float()
         p = lg.softmax(1)[:, 1]
         yf = y.float()
@@ -138,7 +151,9 @@ def main():
         opt.step()
         sch.step()
         if it % a.eval_every == 0 or it == a.iters:
-            res, _ = evaluate(model, imgs, labs, meta, va, a.steps, dev)
+            res, _ = evaluate(model, imgs, labs, meta, va, a.steps, dev, fwd=fwd)
+            if ms:
+                ms.train()
             r = next(iter(res.values()))
             rec = {"it": it, "loss": round(loss.item(), 4), **r, "s": round(time.time() - t0)}
             log.append(rec)
@@ -146,10 +161,14 @@ def main():
             if r["PQ"] > best:
                 best = r["PQ"]
                 torch.save(model.state_dict(), out_dir / "best.pt")
+                if ms:
+                    torch.save(ms.state_dict(), out_dir / "best_ms.pt")
     # ajuste del posprocesado en validación con el mejor modelo
     model.load_state_dict(torch.load(out_dir / "best.pt", map_location=dev))
+    if ms:
+        ms.load_state_dict(torch.load(out_dir / "best_ms.pt", map_location=dev))
     grid = [(t, m, c) for t in (0.6, 0.75, 0.85, 0.95) for m in (60, 120, 200) for c in (0, 2)]
-    res, _ = evaluate(model, imgs, labs, meta, va, a.steps, dev, grid)
+    res, _ = evaluate(model, imgs, labs, meta, va, a.steps, dev, grid, fwd=fwd)
     bestcfg = max(res, key=lambda k: res[k]["PQ"])
     final = {**info, "log": log, "best_postproc": {"thr": bestcfg[0], "min_area": bestcfg[1], "close": bestcfg[2],
                                                     **res[bestcfg]}, "seconds": round(time.time() - t0)}

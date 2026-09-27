@@ -66,14 +66,17 @@ def main():
     ap.add_argument("--lr", type=float, default=2e-3)
     ap.add_argument("--threads", type=int, default=6)
     ap.add_argument("--name", default="np_pure_cpu")
+    ap.add_argument("--device", default="cpu")
+    ap.add_argument("--aug", type=int, default=0, help="desplazamiento aleatorio máximo en píxeles")
     a = ap.parse_args()
-    dev = choose_device("cpu", threads=a.threads)
+    dev = choose_device(a.device, threads=a.threads, force_gpu=a.device == "cuda", vram_cap_gib=8)
     torch.manual_seed(0)
     x, y, xt = load()
     rng = np.random.default_rng(0)
     perm = rng.permutation(len(x))
     va, tr = perm[:4000], perm[4000:]
     model = NeuroPixel(len(VOCAB), (0, 0), c=a.c, hidden=a.hidden, fire_rate=1.0).to(dev)
+    tg = lambda arr: to_rgb(arr).to(dev)
     opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=1e-4)
     sch = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=a.iters, pct_start=0.05)
     out = HERE / "runs" / a.name
@@ -83,20 +86,24 @@ def main():
     def evaluate(idx, steps):
         model.eval()
         with torch.no_grad():
-            pr = torch.cat([vote(model, to_rgb(x[idx[i:i + 500]]), steps)[0].argmax(-1) for i in range(0, len(idx), 500)])
+            pr = torch.cat([vote(model, tg(x[idx[i:i + 500]]), steps)[0].argmax(-1).cpu() for i in range(0, len(idx), 500)])
         model.train()
         return (pr.numpy() == y[idx]).mean()
 
     t0, log, best = time.time(), [], 0
     for it in range(1, a.iters + 1):
         b = rng.choice(tr, a.batch, replace=False)
-        rgb = to_rgb(x[b])
+        xb_ = x[b]
+        if a.aug:
+            dy, dx = rng.integers(-a.aug, a.aug + 1, size=2)
+            xb_ = np.roll(xb_, (int(dy), int(dx)), axis=(1, 2))
+        rgb = tg(xb_)
         steps = int(rng.integers(a.steps, a.steps_max + 1))
         dmg = None
         if rng.random() < 0.5:
-            dmg = (int(rng.integers(2, steps)), (torch.rand(len(b), 1, 28, 28) >= 0.3).float())
+            dmg = (int(rng.integers(2, steps)), (torch.rand(len(b), 1, 28, 28, device=dev) >= 0.3).float())
         mean_lg, lg = vote(model, rgb, steps, dmg)
-        yb = torch.as_tensor(y[b])
+        yb = torch.as_tensor(y[b]).to(dev)
         # escuela: cada píxel debe decir el dígito, más el voto global
         loss = F.cross_entropy(mean_lg, yb) + 0.3 * F.cross_entropy(lg.flatten(0, 2), yb.repeat_interleave(28 * 28))
         opt.zero_grad(set_to_none=True)
@@ -112,16 +119,16 @@ def main():
             if acc > best:
                 best = acc
                 torch.save(model.state_dict(), out / "best.pt")
-    model.load_state_dict(torch.load(out / "best.pt"))
+    model.load_state_dict(torch.load(out / "best.pt", map_location=dev))
     robust = {}
     model.eval()
     with torch.no_grad():                                # autorreparación: borrar el 50 % a mitad de pensar
-        xb = to_rgb(x[va[:2000]])
-        keep = (torch.rand(2000, 1, 28, 28) >= 0.5).float()
+        xb = tg(x[va[:2000]])
+        keep = (torch.rand(2000, 1, 28, 28, device=dev) >= 0.5).float()
         for k in (16, 24, 32):
-            robust[f"pasos{k}"] = round(float((vote(model, xb, k)[0].argmax(-1).numpy() == y[va[:2000]]).mean()), 4)
-            robust[f"daño50_pasos{k}"] = round(float((vote(model, xb, k, (6, keep))[0].argmax(-1).numpy() == y[va[:2000]]).mean()), 4)
-        pred = torch.cat([vote(model, to_rgb(xt[i:i + 500]), a.steps + 4)[0].argmax(-1) for i in range(0, len(xt), 500)])
+            robust[f"pasos{k}"] = round(float((vote(model, xb, k)[0].argmax(-1).cpu().numpy() == y[va[:2000]]).mean()), 4)
+            robust[f"daño50_pasos{k}"] = round(float((vote(model, xb, k, (6, keep))[0].argmax(-1).cpu().numpy() == y[va[:2000]]).mean()), 4)
+        pred = torch.cat([vote(model, tg(xt[i:i + 500]), a.steps + 4)[0].argmax(-1).cpu() for i in range(0, len(xt), 500)])
     with open(out / "submission.csv", "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["ImageId", "Label"])

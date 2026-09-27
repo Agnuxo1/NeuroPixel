@@ -75,11 +75,16 @@ def main():
     a = ap.parse_args()
     res = json.loads((K / a.comp / "runs" / a.run / "result.json").read_text(encoding="utf-8"))
     bp = res.get("best_postproc", {})
-    val = (f"PQ {bp.get('PQ')} · Dice {bp.get('Dice')}" if bp.get("PQ") is not None
-           else f"acierto {res.get('best_val_acc')}")
+    if bp.get("PQ") is not None:
+        val = f"PQ {bp.get('PQ')} · Dice {bp.get('Dice')}"
+    elif res.get("cv_EMD_neuropixel") is not None:      # soil: EMD logarítmica en CV (menor es mejor)
+        val = (f"EMD CV {res['cv_EMD_neuropixel']} (curva media {res.get('cv_EMD_curva_media')}, "
+               f"uniforme {res.get('cv_EMD_trivial_9pct')})")
+    else:
+        val = f"acierto {res.get('best_val_acc')}"
     e = {"fecha": dt.date.today().isoformat(), "concurso": a.comp, "ejecucion": a.run, "linea": a.linea,
-         "params": res.get("params"), "tiempo_min": round(res.get("seconds", 0) / 60),
-         "config": res.get("args"), "validacion": val, "posprocesado": {k: bp.get(k) for k in ("thr", "min_area", "close")},
+         "params": res.get("params"), "tiempo_min": round(res.get("seconds", res.get("segundos", 0)) / 60),
+         "config": res.get("args") or {k: v for k, v in res.items() if not k.startswith(("cv_", "log"))}, "validacion": val, "posprocesado": {k: bp.get(k) for k in ("thr", "min_area", "close")},
          "tendencia": trend(res.get("log", [])), "kaggle": a.kaggle, "envio": a.envio, "tag": a.tag,
          "commit": git("rev-parse", "--short", "HEAD"), "que": a.que, "debiles": a.debiles,
          "cambiar": a.cambiar, "decision": a.decision, "hardware": a.hardware}
