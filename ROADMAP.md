@@ -54,3 +54,15 @@ Estimaciones de coste (4 × RTX 3090 ≈ 50 TFLOPS efectivos):
 Paso previo recomendado: una prueba de ~1 día a escala pequeña para ver si el lienzo modela
 lenguaje. Mientras tanto, el prototipo práctico es híbrido: LLM pequeño + DINOv2 + lienzos
 NeuroPixel como memoria y razonamiento.
+
+## Ideas inspiradas en DLSS (Fran, 2026-09-27)
+
+No se puede usar DLSS directamente: es cerrado, espera fotogramas de juego y la generación de
+fotogramas pide RTX 40/50. Se reimplementan sus principios:
+
+1. **Salto temporal** (generación de fotogramas hacia delante): destilar 24 pasos en 6. Sirve también para "imaginar el futuro" y para el curso de vídeo.
+2. **Lienzo reversible** (hacia atrás): rebobinar estados pasados exactamente, estilo RevNet; entrenar con memoria O(1).
+3. **Cómputo disperso:** actualizar solo los píxeles activos o 1 de cada 4, e interpolar el resto con IA.
+4. **Lienzo multiescala / superresolución:** pensar a baja resolución y reescalar con una red aprendida; primera aplicación, los filamentos.
+
+Nota: generar píxeles ahorra cálculo, no parámetros; para multiplicar la capacidad, hiperredes.
