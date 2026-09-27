@@ -41,6 +41,8 @@ JOBS = [
     ("energy_0.3", ["energy", "--arg", "0.3", "--iters", "15000"], []),
     ("dream", ["dream", "--iters", "15000"], []),
     ("newword", ["newword"], ["stable_reposo"]),
+    ("far_np_reposo", ["far", "--arg", "np_reposo", "--vram-cap", "6"], []),
+    ("far_np_big_reposo", ["far", "--arg", "np_big_reposo", "--vram-cap", "8"], []),
 ]
 
 

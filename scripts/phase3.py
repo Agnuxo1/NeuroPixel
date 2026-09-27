@@ -277,16 +277,23 @@ def t_far(kind, iters, seed=0):
     task = RoleTaskFar(12, 12, seed=seed)
     c, y = tset(task)
     torch.manual_seed(seed)
+    extra = {}
     if kind == "neuropixel":
         m = NeuroPixel(V, task.out_pos, steps=24)
+    elif kind == "np_reposo":        # mismo tamaño, entrenamiento de reposo
+        m = NeuroPixel(V, task.out_pos, steps=24)
+        extra = {"steps_range": (18, 36), "damage_p": 0.5}
+    elif kind == "np_big_reposo":    # 108k parámetros + reposo
+        m = NeuroPixel(V, task.out_pos, steps=24, c=96, hidden=256)
+        extra = {"steps_range": (18, 36), "damage_p": 0.5}
     elif kind == "tf_small":
         m = TinyTransformer(V, 12, 12, task.out_pos)
     else:
         m = TinyTransformer(V, 12, 12, task.out_pos, d=96, layers=4, ff=192)
     m.to(DEV)
     t0 = time.time()
-    curve = train(m, task, iters, seed=seed, lens=0.3 if kind == "neuropixel" else 0,
-                  every=iters // 6, probe=(c, y))
+    curve = train(m, task, iters, seed=seed, lens=0.3 if isinstance(m, NeuroPixel) else 0,
+                  every=iters // 6, probe=(c, y), **extra)
     ctr, ytr = task.sample(2000, "train", torch.Generator().manual_seed(8))
     r = {"params": n_params(m), "combos_nuevas": acc_of(m, c, y),
          "entrenamiento": acc_of(m, ctr.to(DEV), ytr.to(DEV)), "curva": curve, "segundos": round(time.time() - t0)}
