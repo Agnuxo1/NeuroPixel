@@ -9,6 +9,9 @@ Una fila por entrenamiento. Para volver a una versión: `git checkout <commit>` 
 | 3 | 2026-09-27 | filament | np_pure_v2 | L1 | 29312 | 116 min | PQ 0.3619 · Dice 0.6265 | — | quizá: cerca de la meseta | 41a8275 |
 | 4 | 2026-09-27 | digits | np_pure_cpu | L1 | 15776 | 96 min | acierto 0.9825 | 0,98064 público (≈ puesto 524 de 865) | pocas validaciones para saberlo | 094edad / digits-v1 |
 | 5 | 2026-09-27 | filament | np_big_reposo | L2 | 136880 | 170 min | PQ 0.37 · Dice 0.6323 | — | sí: seguía subiendo en la última validación | 094edad |
+| 6 | 2026-09-27 | digits | np_pure_gpu_v2 | L1 | 29440 | 23 min | acierto 0.9945 | 0,99375 público | pocas validaciones para saberlo | 2b115d6 / digits-v2 |
+| 7 | 2026-09-27 | soil | np_votes | L2 | None | 228 min | EMD CV 39.195 (curva media 85.393, uniforme 100.316) | — | pocas validaciones para saberlo | 2b115d6 |
+| 8 | 2026-09-27 | soil | np_votes | L2 | 59000.0 | 26 min | EMD CV 39.195 (curva media 85.393, uniforme 100.316) | EMD 98,44 público (peor que el mejor previo de Fran, 60,8) | pocas validaciones para saberlo | 2b115d6 / soil-v1 |
 
 ## 1. filament · np_ret (2026-09-27)
 
@@ -69,3 +72,39 @@ Una fila por entrenamiento. Para volver a una versión: `git checkout <commit>` 
 - **Cambiar / quitar / mejorar:** Priorizar posprocesado y separación de instancias (espina/watershed) y contexto multiescala antes que más tamaño
 - **Decisión:** Candidato para combinar; no enviado solo
 - **Volver atrás:** `git checkout 094edad` · envío: `—`
+
+## 6. digits · np_pure_gpu_v2 (2026-09-27)
+
+- **Qué se hizo:** Lienzo puro (c=48, hidden 128) en GPU; reposo con 8-32 pasos + daño 30 %; desplazamientos de ±2 px; 8000 it, lote 128; cada píxel vota
+- **Configuración:** `{"iters": 8000, "batch": 128, "steps": 8, "steps_max": 32, "c": 48, "hidden": 128, "lr": 0.002, "threads": 6, "name": "np_pure_gpu_v2", "device": "cuda", "aug": 2}`
+- **Tiempo:** 23 min en RTX 3090 local
+- **Validación local:** acierto 0.9945 · **Kaggle:** 0,99375 público
+- **¿Mejoraría con más entrenamiento?** pocas validaciones para saberlo
+- **Puntos débiles:** Aún por debajo de las mejores CNN (≥99,6 %)
+- **Cambiar / quitar / mejorar:** Más aumentos (rotación/escala), promedio de vistas, más iteraciones
+- **Decisión:** Mejora de 0,98064 a 0,99375 corrigiendo el punto débil (rango de pasos): 50 % del estado borrado -> 99,5 %, estable 16-32 pasos
+- **Volver atrás:** `git checkout 2b115d6` · envío: `kaggle/digits/runs/np_pure_gpu_v2/submission.csv`
+
+## 7. soil · np_votes (2026-09-27)
+
+- **Qué se hizo:** Retina + lienzo (c=48, hidden 128); cada píxel vota 11 tramos de tamaño; media de votos = curva acumulada; CV 6 pliegues dejando fuera muestras enteras (24 muestras, 127 fotos); SIN espejo en entrenamiento (añadido después)
+- **Configuración:** `{"iters": 3000, "segundos": 13697}`
+- **Tiempo:** 228 min en RTX 3090 local (compartida con FIL-001)
+- **Validación local:** EMD CV 39.195 (curva media 85.393, uniforme 100.316) · **Kaggle:** sin enviar
+- **¿Mejoraría con más entrenamiento?** pocas validaciones para saberlo
+- **Puntos débiles:** Solo 24 muestras (±ruido alto por pliegue 35-49); CV aleatoria por muestra mezcla teléfonos: el test es iPhone y no se ha medido el cambio de cámara; la CV no incluye el espejo que usa el envío
+- **Cambiar / quitar / mejorar:** CV dejando fuera un teléfono; medir el espejo en CV; comparar con textura clásica/CNN pequeña; más iteraciones
+- **Decisión:** Supera con claridad la curva media (39,2 frente a 85,4, -54 %) y la uniforme (100,3): pasa el gate de CV. SOIL-002 (Codex) audita split y crea el envío
+- **Volver atrás:** `git checkout 2b115d6` · envío: `—`
+
+## 8. soil · np_votes (2026-09-27)
+
+- **Qué se hizo:** Retina + lienzo; cada píxel vota uno de 11 tamaños de grano; la media de votos es la curva acumulada; pérdida EMD logarítmica + escuela; fotos reescaladas a 6 px/mm con la tabla de ppm; rotaciones + espejo; 3000 it
+- **Configuración:** `{"iters": 3000, "test_muestras": 10, "test_sin_fotos": [], "segundos": 1573, "best_postproc": {"PQ": null}, "best_val_acc": "EMD CV 39.195 (curva media 85.393)", "params": 59000.0}`
+- **Tiempo:** 26 min en RTX 3090 local
+- **Validación local:** EMD CV 39.195 (curva media 85.393, uniforme 100.316) · **Kaggle:** EMD 98,44 público (peor que el mejor previo de Fran, 60,8)
+- **¿Mejoraría con más entrenamiento?** pocas validaciones para saberlo
+- **Puntos débiles:** No generaliza al test: CV 39,2 (mismo origen) frente a 98,4 en público. Cambio de cámara (entrenamiento Motorola/Samsung, test solo iPhone) y de procedencia de los suelos (test HPC_*); solo 24 muestras
+- **Cambiar / quitar / mejorar:** Normalizar color y nitidez por cámara, aumentos de color y desenfoque, rasgos preentrenados como retina (DINOv2 ya en disco), validación que deje fuera un teléfono entero, mezclar con la curva media
+- **Decisión:** Fallo registrado; para la clasificación final, seleccionar en Kaggle el mejor envío previo de Fran (60,8)
+- **Volver atrás:** `git checkout 2b115d6` · envío: `kaggle/soil/runs/np_votes/submission.csv`

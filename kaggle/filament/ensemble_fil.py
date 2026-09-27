@@ -59,10 +59,11 @@ def main():
             i = meta["ann"][k]["img"]
             if i not in probs:
                 probs[i] = ens_prob(models, np.ascontiguousarray(imgs[i]), dev, a.tta)[0, 0].cpu().numpy()
+        np.savez_compressed(out / "val_probs.npz", **{str(k): v.astype(np.float16) for k, v in probs.items()})
         best = None
-        for thr in (0.5, 0.6, 0.7, 0.75, 0.8, 0.85):
-            for mina in (60, 90, 120, 160, 220):
-                for close in (0, 1, 2, 3):
+        for thr in (0.6, 0.7, 0.75, 0.8, 0.85):          # zona buena ya conocida
+            for mina in (120, 160):
+                for close in (0, 2):
                     S = TP = FP = FN = 0
                     for k in va:
                         s, tp, fp, fn = fil.pq_counts(np.asarray(labs[k]), fil.instances(probs[meta["ann"][k]["img"]], thr, mina, close))
