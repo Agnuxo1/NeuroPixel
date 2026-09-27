@@ -36,3 +36,21 @@ Se evalúan por separado, con las mismas pruebas, para medir hasta dónde llega 
 |---|---|---|
 | **L1 pura** | Diccionario aprendido + escuela en todos los píxeles, sin colores anclados | Papeles 93–95 % (98 % con escuela) vs transformer 55 %; fotos CIFAR 16–19 % (no percibe) |
 | **L2 híbrida** | Retina (módulo de visión) que da a cada píxel un "color" rico + el mismo lienzo | Pendiente |
+
+## Línea futura L3: NeuroPixel como modelo completo multimodal (decisión de Fran, 2026-09-27)
+
+Montar un modelo completo tipo Qwen2.5-0.5B-Instruct (lenguaje + visión) cuyo núcleo sea el
+lienzo, porque **las habilidades emergentes solo se pueden observar a esa escala**; no se deducen
+de las tareas pequeñas.
+
+Estimaciones de coste (4 × RTX 3090 ≈ 50 TFLOPS efectivos):
+
+- Transformer de 50M como referencia: de 1 a 17 h según los datos (0,5–10B tokens).
+- NeuroPixel de 50M con un lienzo por token: ~6 años (inviable).
+- NeuroPixel de 50M con 256 tokens por lienzo, predichos en paralelo: ~9 días por cada 1B tokens.
+  Es investigación, no un resultado garantizado.
+- Visión: DINOv2-small preentrenado (ya en disco) + puente: horas.
+
+Paso previo recomendado: una prueba de ~1 día a escala pequeña para ver si el lienzo modela
+lenguaje. Mientras tanto, el prototipo práctico es híbrido: LLM pequeño + DINOv2 + lienzos
+NeuroPixel como memoria y razonamiento.
