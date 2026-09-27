@@ -119,8 +119,8 @@ def expand_vocab(model, new: int = 1):
         emb = nn.Embedding(V, old.shape[1], padding_idx=0).to(dev)
         with torch.no_grad():
             emb.weight[: old.shape[0]] = old
-            nouns = old[1:].mean(0)
-            emb.weight[old.shape[0]:] = nouns + 0.1 * old[1:].std() * torch.randn(new, old.shape[1], device=dev)
+            # inicialización aleatoria pequeña (la media de filas arranca con pérdida enorme por el diccionario atado)
+            emb.weight[old.shape[0]:] = old[1:].std() * torch.randn(new, old.shape[1], device=dev)
         m.embed = emb
         m.register_buffer("g_rgb", torch.zeros(V, 3, device=dev), persistent=False)
         m.register_buffer("g_mask", torch.zeros(V, 1, dtype=torch.bool, device=dev), persistent=False)
@@ -133,9 +133,9 @@ def expand_vocab(model, new: int = 1):
         m.head = nn.Linear(d, V).to(dev)
         with torch.no_grad():
             m.tok.weight[: old_t.shape[0]] = old_t
-            m.tok.weight[old_t.shape[0]:] = old_t[1:].mean(0)
+            m.tok.weight[old_t.shape[0]:] = old_t.std() * torch.randn(new, d, device=dev)
             m.head.weight[: old_h.shape[0]] = old_h
-            m.head.weight[old_h.shape[0]:] = old_h[1:].mean(0)
+            m.head.weight[old_h.shape[0]:] = old_h.std() * torch.randn(new, d, device=dev)
             m.head.bias[: old_b.shape[0]] = old_b
             m.head.bias[old_b.shape[0]:] = old_b.mean()
         train = [m.tok.weight, m.head.weight, m.head.bias]
