@@ -45,8 +45,8 @@ informe automático en `runs/phase3/INFORME_FASE3.md`, con la gráfica `escala.p
 
 **No extrapolable todavía:**
 - Tareas sintéticas y pequeñas. No está probado en lenguaje real ni en vocabularios grandes.
-- La mayoría de las cifras vienen de **una sola semilla** (salvo las escalas de 30 k y los
-  transformers de ayer). Toda afirmación publicable necesita 3 o más.
+- La mayoría de las cifras vienen de **una sola semilla**. Confirmado con 2 semillas: NeuroPixel
+  30 k 95,4–98,4 % frente a transformer 44 k 53,8–54,6 %. Toda afirmación publicable necesita 3 o más.
 - La composición lejana no está resuelta (74 %).
 - La memoria decae más rápido que en una GRU.
 - Un transformer con más datos, otra codificación de posición o más entrenamiento podría
