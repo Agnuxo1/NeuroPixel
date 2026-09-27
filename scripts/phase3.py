@@ -428,7 +428,7 @@ def t_scale(name, iters, seed=0):
     t0 = time.time()
     train(m, task, iters, seed=seed, lens=0.3 if name in NP_SIZES else 0)
     r = {"params": n_params(m), "combos_nuevas": acc_of(m, c, y), "segundos": round(time.time() - t0)}
-    torch.save(m.state_dict(), OUT / f"scale_{name}.pt")
+    torch.save(m.state_dict(), OUT / (f"scale_{name}" + (f"_s{seed}" if seed else "") + ".pt"))
     if name in NP_SIZES:
         r["daño50"] = acc_of(m, c, y, hook=damage_hook(4, 0.5, c.shape))
     else:
@@ -447,7 +447,7 @@ def t_scale(name, iters, seed=0):
         r["daño50"] = round(torch.cat(accs).float().mean().item(), 4)
     fs = fewshot(m, task, k=5, trials=5)
     r.update(fs)
-    save(f"scale_{name}", r)
+    save(f"scale_{name}" + (f"_s{seed}" if seed else ""), r)
     log("scale", name, r)
     return r
 
@@ -612,7 +612,7 @@ def main():
     elif t == "energy":
         t_energy(float(a.arg), a.iters)
     elif t == "scale":
-        t_scale(a.arg, a.iters)
+        t_scale(a.arg, a.iters, a.seeds[0])
     elif t == "llm":
         t_llm(int(a.arg or 200))
     elif t == "dream":
