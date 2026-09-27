@@ -77,7 +77,7 @@ def norm_img(x):
 
 
 # ------------------------------------------------------------------ modelo
-def seg_forward(model, rgb, steps, ckpt=True):
+def seg_forward(model, rgb, steps, ckpt=True, damage=None):
     """Lienzo NeuroPixel sobre la imagen; devuelve logits por píxel [B,2,H,W] (FONDO, FILAMENTO)."""
     ids = model.retina(rgb) if model.retina is not None else torch.cat(
         [rgb, rgb.new_zeros(rgb.shape[0], model.embed.embedding_dim - 3, *rgb.shape[2:])], 1)
@@ -89,8 +89,10 @@ def seg_forward(model, rgb, steps, ckpt=True):
         if model.training and model.fire_rate < 1:
             ds = ds * (torch.rand_like(ds[:, :1]) < model.fire_rate)
         return s + ds
-    for _ in range(steps):
+    for t in range(1, steps + 1):
         s = checkpoint(step, s, use_reentrant=False) if (ckpt and model.training) else step(s)
+        if damage is not None and t == damage[0]:          # reposo: daño a mitad de pensar
+            s = s * damage[1]
     w = model.dictionary()[1:3]                                    # colores de FONDO y FILAMENTO
     return torch.einsum("bchw,kc->bkhw", model.read(s.permute(0, 2, 3, 1)).permute(0, 3, 1, 2), w)
 

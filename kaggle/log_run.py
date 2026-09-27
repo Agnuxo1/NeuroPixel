@@ -75,7 +75,8 @@ def main():
     a = ap.parse_args()
     res = json.loads((K / a.comp / "runs" / a.run / "result.json").read_text(encoding="utf-8"))
     bp = res.get("best_postproc", {})
-    val = f"PQ {bp.get('PQ')} · Dice {bp.get('Dice')}" if bp else "—"
+    val = (f"PQ {bp.get('PQ')} · Dice {bp.get('Dice')}" if bp.get("PQ") is not None
+           else f"acierto {res.get('best_val_acc')}")
     e = {"fecha": dt.date.today().isoformat(), "concurso": a.comp, "ejecucion": a.run, "linea": a.linea,
          "params": res.get("params"), "tiempo_min": round(res.get("seconds", 0) / 60),
          "config": res.get("args"), "validacion": val, "posprocesado": {k: bp.get(k) for k in ("thr", "min_area", "close")},

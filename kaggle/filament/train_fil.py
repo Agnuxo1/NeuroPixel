@@ -97,6 +97,8 @@ def main():
     ap.add_argument("--vram-cap", type=float, default=10)
     ap.add_argument("--fire-rate", type=float, default=1.0, help="1.0 = entrenar como se predice")
     ap.add_argument("--force-gpu", action="store_true")
+    ap.add_argument("--steps-max", type=int, default=0, help=">steps activa el entrenamiento de reposo")
+    ap.add_argument("--damage-p", type=float, default=0.5)
     ap.add_argument("--name", default="np_ret")
     a = ap.parse_args()
     dev = choose_device("cuda", threads=4, vram_cap_gib=a.vram_cap, force_gpu=a.force_gpu)
@@ -117,8 +119,14 @@ def main():
     t0, best, log = time.time(), -1, []
     for it in range(1, a.iters + 1):
         x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev)
+        steps, dmg = a.steps, None
+        if a.steps_max > a.steps:                               # reposo: pasos variables + daño
+            steps = int(rng.integers(a.steps, a.steps_max + 1))
+            if rng.random() < a.damage_p:
+                keep = (torch.rand(x.shape[0], 1, *x.shape[2:], device=dev) >= 0.3).float()
+                dmg = (int(rng.integers(2, steps)), keep)
         with torch.autocast("cuda", dtype=torch.bfloat16, enabled=dev.type == "cuda"):
-            lg = fil.seg_forward(model, x, a.steps)
+            lg = fil.seg_forward(model, x, steps, damage=dmg)
         lg = lg.float()
         p = lg.softmax(1)[:, 1]
         yf = y.float()
