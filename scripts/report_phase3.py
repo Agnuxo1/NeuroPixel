@@ -28,12 +28,14 @@ def scale_plot(np_rows, tf_rows):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     metrics = [("combos_nuevas", "Combinaciones nuevas"), ("daño50", "Con el 50 % del estado borrado"),
-               ("palabra_nueva_k5", "Palabra nueva con 5 ejemplos")]
-    fig, axes = plt.subplots(1, 3, figsize=(13, 4), facecolor=SURF)
+               ("palabra_nueva_k5", "Palabra nueva con 5 ejemplos"), ("viejo_tras_palabra", "Lo viejo, tras aprenderla")]
+    fig, axes = plt.subplots(1, 4, figsize=(17, 4), facecolor=SURF)
     for ax, (k, title) in zip(axes, metrics):
         ax.set_facecolor(SURF)
         for rows, col, lab in ((np_rows, NP_C, "NeuroPixel"), (tf_rows, TF_C, "Transformer")):
-            pts = sorted((r["params"], r[k]) for r in rows if k in r)
+            # la palabra nueva solo vale con la medida corregida (5 intentos: trae '_min')
+            pts = sorted((r["params"], r[k]) for r in rows if k in r and
+                         (not k.startswith(("palabra", "viejo")) or "palabra_nueva_k5_min" in r))
             if not pts:
                 continue
             xs, ys = zip(*pts)
