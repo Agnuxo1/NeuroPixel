@@ -55,12 +55,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--k", type=int, default=6)
     ap.add_argument("--only", nargs="*", default=None)
+    ap.add_argument("--tag", default="")
     a = ap.parse_args()
     LOGS.mkdir(parents=True, exist_ok=True)
     jobs = [j for j in JOBS if not a.only or j[0] in a.only]
     pending, running, done, failed = list(jobs), {}, set(), set()
     t0 = time.time()
-    state_f = ROOT / "runs" / "phase3" / "night_state.json"
+    state_f = ROOT / "runs" / "phase3" / f"night_state{a.tag}.json"
     while pending or running:
         for name, p in list(running.items()):
             rc = p.poll()
@@ -84,7 +85,7 @@ def main():
                 break
             name, args, _ = ready[0]
             pending.remove(ready[0])
-            log = open(LOGS / f"{name}.log", "w", encoding="utf-8")
+            log = open(LOGS / f"{name}{a.tag}.log", "w", encoding="utf-8")
             running[name] = subprocess.Popen(P + args, stdout=log, stderr=subprocess.STDOUT, cwd=ROOT)
             print(time.strftime("%H:%M:%S"), "lanzado", name, flush=True)
             time.sleep(5)

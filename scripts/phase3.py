@@ -325,6 +325,40 @@ def t_energy(lam, iters, seed=0):
     return r
 
 
+def fewshot(m, task, k=5, trials=5, steps=300):
+    """Palabra nueva con k ejemplos, solo el diccionario; media y dispersión de 'trials' intentos
+    (cada uno con ejemplos e inicialización distintos)."""
+    news, olds = [], []
+    c_old, y_old = tset(task)
+    for tr in range(trials):
+        torch.manual_seed(1000 + tr)
+        mm, params, nid = expand_vocab(m, 1)
+        cc_, _, meta = task.sample(k, "train", torch.Generator().manual_seed(200 + tr), meta=True)
+        b = torch.arange(k)
+        role = torch.where(torch.rand(k, generator=torch.Generator().manual_seed(300 + tr)) < 0.5, 0, 2)
+        cc_[b, meta["rows"][b, role], meta["cols"][b, role] + 1] = nid
+        cc_[b, task.query_pos[0], task.query_pos[1]] = task.role_ids[role]
+        ck, yk = cc_.to(DEV), torch.full((k,), nid, device=DEV)
+        opt = torch.optim.Adam(params, lr=1e-2)
+        mm.eval()
+        for _ in range(steps):
+            loss = F.cross_entropy(mm(ck)["logits"], yk)
+            opt.zero_grad()
+            loss.backward()
+            opt.step()
+        cn, _, meta = task.sample(1000, "test", torch.Generator().manual_seed(7), meta=True)
+        b = torch.arange(1000)
+        role = torch.where(torch.rand(1000, generator=torch.Generator().manual_seed(8)) < 0.5, 0, 2)
+        cn[b, meta["rows"][b, role], meta["cols"][b, role] + 1] = nid
+        cn[b, task.query_pos[0], task.query_pos[1]] = task.role_ids[role]
+        news.append(acc_of(mm, cn.to(DEV), torch.full((1000,), nid, device=DEV)))
+        olds.append(acc_of(mm, c_old, y_old))
+    t = torch.tensor(news)
+    return {"palabra_nueva_k5": round(t.mean().item(), 4), "palabra_nueva_k5_min": round(t.min().item(), 4),
+            "palabra_nueva_k5_max": round(t.max().item(), 4),
+            "viejo_tras_palabra": round(sum(olds) / len(olds), 4)}
+
+
 # =================================================================== 9 escala
 NP_SIZES = {"np5k": (16, 48), "np14k": (32, 96), "np30k": (48, 128), "np105k": (96, 256), "np230k": (144, 384)}
 TF_SIZES = {"tf12k": (24, 2, 48), "tf44k": (48, 2, 96), "tf170k": (96, 2, 192), "tf800k": (128, 4, 512)}
@@ -344,6 +378,7 @@ def t_scale(name, iters, seed=0):
     t0 = time.time()
     train(m, task, iters, seed=seed, lens=0.3 if name in NP_SIZES else 0)
     r = {"params": n_params(m), "combos_nuevas": acc_of(m, c, y), "segundos": round(time.time() - t0)}
+    torch.save(m.state_dict(), OUT / f"scale_{name}.pt")
     if name in NP_SIZES:
         r["daño50"] = acc_of(m, c, y, hook=damage_hook(4, 0.5, c.shape))
     else:
@@ -360,28 +395,8 @@ def t_scale(name, iters, seed=0):
                 accs.append(m(c[i:i + 1000])["logits"].argmax(-1) == y[i:i + 1000])
         h.remove()
         r["daño50"] = round(torch.cat(accs).float().mean().item(), 4)
-    # palabra nueva con 5 ejemplos (solo diccionario)
-    mm, params, nid = expand_vocab(m, 1)
-    cc_, yy_, meta = task.sample(5, "train", torch.Generator().manual_seed(105), meta=True)
-    b = torch.arange(5)
-    role = torch.tensor([0, 2, 0, 2, 0])
-    cc_[b, meta["rows"][b, role], meta["cols"][b, role] + 1] = nid
-    cc_[b, task.query_pos[0], task.query_pos[1]] = task.role_ids[role]
-    ck, yk = cc_.to(DEV), torch.full((5,), nid, device=DEV)
-    opt = torch.optim.Adam(params, lr=1e-2)
-    mm.eval()
-    for _ in range(300):
-        loss = F.cross_entropy(mm(ck)["logits"], yk)
-        opt.zero_grad()
-        loss.backward()
-        opt.step()
-    cn, yn, meta = task.sample(1000, "test", torch.Generator().manual_seed(7), meta=True)
-    b = torch.arange(1000)
-    role = torch.where(torch.rand(1000, generator=torch.Generator().manual_seed(8)) < 0.5, 0, 2)
-    cn[b, meta["rows"][b, role], meta["cols"][b, role] + 1] = nid
-    cn[b, task.query_pos[0], task.query_pos[1]] = task.role_ids[role]
-    r["palabra_nueva_k5"] = acc_of(mm, cn.to(DEV), torch.full((1000,), nid, device=DEV))
-    r["viejo_tras_palabra"] = acc_of(mm, c, y)
+    fs = fewshot(m, task, k=5, trials=5)
+    r.update(fs)
     save(f"scale_{name}", r)
     log("scale", name, r)
     return r
@@ -415,36 +430,55 @@ def t_llm(n=200):
     res["neuropixel"] = {"params": n_params(m), "acierto": round((p == yg).float().mean().item(), 4),
                          "ms_por_respuesta_en_lote": round(dt / n * 1000, 5), "latencia_1_ms": round(lat * 1000, 2),
                          "flops_por_respuesta": flops_np}
+    torch.set_num_threads(4)          # mismos 4 hilos de CPU que el LLM
+    mc = copy.deepcopy(m).cpu()
+    with torch.no_grad():
+        t0 = time.perf_counter()
+        pc = mc(c)["logits"].argmax(-1)
+        dtc = time.perf_counter() - t0
+        t0 = time.perf_counter()
+        for i in range(20):
+            mc(c[i:i + 1])
+        latc = (time.perf_counter() - t0) / 20
+    res["neuropixel"].update({"cpu_ms_por_respuesta_en_lote": round(dtc / n * 1000, 3),
+                              "cpu_latencia_1_ms": round(latc * 1000, 2),
+                              "cpu_acierto": round((pc == y).float().mean().item(), 4)})
     log("llm np", res["neuropixel"])
-    # LLM local: la misma información, en texto
+    # LLM local (Qwen2 494M, el único completo en disco): la misma información, en texto,
+    # con 3 ejemplos en el prompt. Se mide en GPU si llama_cpp la usa.
     try:
         from llama_cpp import Llama
-        path = "E:/workspace/arc3-models/Qwen2.5-7B-Instruct-Q4_K_M.gguf"
-        llm = Llama(model_path=path, n_gpu_layers=-1, n_ctx=512, verbose=False)
-        ok, t_tot, toks = 0, 0.0, 0
-        for b in range(n):
-            pairs = []
-            for r_ in range(7):
-                for col in range(7):
-                    tk = names[int(c[b, r_, col])]
-                    if tk in ROLES:
-                        pairs.append(f"{tk}={names[int(c[b, r_, col + 1])]}")
-            q = names[int(c[b, task.query_pos[0], task.query_pos[1]])]
-            prompt = (f"<|im_start|>user\nHechos: {', '.join(pairs)}.\nResponde solo con una palabra: "
-                      f"¿cuál es el {q}?<|im_end|>\n<|im_start|>assistant\n")
-            t0 = time.perf_counter()
-            o = llm(prompt, max_tokens=6, temperature=0)
-            t_tot += time.perf_counter() - t0
-            toks += o["usage"]["total_tokens"]
-            ans = o["choices"][0]["text"].strip().lower().strip(".").split()
-            ok += int(bool(ans) and ans[0] == names[int(y[b])].lower())
-        res["qwen2.5_7b_q4"] = {"params": 7.6e9, "acierto": round(ok / n, 4),
-                               "ms_por_respuesta": round(t_tot / n * 1000, 1),
-                               "tokens_por_respuesta": round(toks / n, 1),
-                               "flops_por_respuesta_aprox": round(2 * 7.6e9 * toks / n)}
+        path = "E:/OpenCLAW-4/p2pclaw-v2-experiment/models/v0_base_0.5B.gguf"
+        shots = ("Hechos: AGENTE=perro, ACCION=muerde, PACIENTE=gato, LUGAR=casa. Pregunta: PACIENTE? Respuesta: gato\n"
+                 "Hechos: LUGAR=playa, AGENTE=niña, PACIENTE=robot, ACCION=mira. Pregunta: AGENTE? Respuesta: niña\n"
+                 "Hechos: ACCION=lava, PACIENTE=lobo, LUGAR=río, AGENTE=zorro. Pregunta: LUGAR? Respuesta: río\n")
+        # llama_cpp instalado sin soporte de GPU: el LLM se mide en CPU (lo anotamos en el informe)
+        for dev_name, ngl in (("cpu", 0),):
+            llm = Llama(model_path=path, n_gpu_layers=ngl, n_ctx=512, n_threads=4, verbose=False)
+            ok, t_tot, toks = 0, 0.0, 0
+            for b in range(n):
+                pairs = []
+                for r_ in range(7):
+                    for col in range(7):
+                        tk = names[int(c[b, r_, col])]
+                        if tk in ROLES:
+                            pairs.append(f"{tk}={names[int(c[b, r_, col + 1])]}")
+                q = names[int(c[b, task.query_pos[0], task.query_pos[1]])]
+                prompt = shots + f"Hechos: {', '.join(pairs)}. Pregunta: {q}? Respuesta:"
+                t0 = time.perf_counter()
+                o = llm(prompt, max_tokens=4, temperature=0)
+                t_tot += time.perf_counter() - t0
+                toks += o["usage"]["total_tokens"]
+                ans = o["choices"][0]["text"].strip().lower().replace(".", " ").split()
+                ok += int(bool(ans) and ans[0] == names[int(y[b])].lower())
+            res[f"qwen2_494m_{dev_name}"] = {"params": 494e6, "acierto": round(ok / n, 4),
+                                             "ms_por_respuesta": round(t_tot / n * 1000, 1),
+                                             "tokens_por_respuesta": round(toks / n, 1),
+                                             "flops_por_respuesta_aprox": round(2 * 494e6 * toks / n)}
+            log("llm", dev_name, res[f"qwen2_494m_{dev_name}"])
+            del llm
     except Exception as e:  # noqa: BLE001
-        res["qwen2.5_7b_q4"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
-    log("llm", res.get("qwen2.5_7b_q4"))
+        res["qwen2_494m"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
     save("llm", res)
     return res
 
