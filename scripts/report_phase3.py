@@ -64,13 +64,25 @@ def scale_plot(np_rows, tf_rows):
 def main():
     L = ["# NeuroPixel · Fase 3 «lienzo vivo» — informe", ""]
     # 9 escala
-    np_rows, tf_rows = [], []
+    np_rows, tf_rows, groups = [], [], {}
     for f in sorted(D.glob("scale_*.json")):
         r = json.loads(f.read_text(encoding="utf-8"))
-        r["modelo"] = f.stem.replace("scale_", "")
-        (np_rows if r["modelo"].startswith("np") else tf_rows).append(r)
+        base = f.stem.replace("scale_", "").split("_s")[0]
+        groups.setdefault(base, []).append(r)
+    for base, rs in groups.items():   # media entre semillas; 'semillas' indica cuántas
+        r = {"modelo": base, "semillas": len(rs), "params": rs[0]["params"]}
+        for k in ("combos_nuevas", "daño50", "segundos"):
+            r[k] = round(sum(x[k] for x in rs) / len(rs), 4)
+        ok = [x for x in rs if "palabra_nueva_k5_min" in x]
+        if ok:
+            for k in ("palabra_nueva_k5", "palabra_nueva_k5_min", "viejo_tras_palabra"):
+                r[k] = round(sum(x[k] for x in ok) / len(ok), 4)
+        if len(rs) > 1:
+            r["combos_rango"] = f"{min(x['combos_nuevas'] for x in rs)}–{max(x['combos_nuevas'] for x in rs)}"
+        (np_rows if base.startswith("np") else tf_rows).append(r)
     if np_rows or tf_rows:
-        cols = ["modelo", "params", "combos_nuevas", "daño50", "palabra_nueva_k5", "viejo_tras_palabra", "segundos"]
+        cols = ["modelo", "semillas", "params", "combos_nuevas", "combos_rango", "daño50", "palabra_nueva_k5",
+                "viejo_tras_palabra", "segundos"]
         L += ["## 9 · Curvas de escala", "", table(sorted(np_rows, key=lambda r: r["params"]) +
                                                    sorted(tf_rows, key=lambda r: r["params"]), cols), "",
               "![escala](escala.png)", ""]
