@@ -71,7 +71,9 @@ def split(meta, val_frac=0.15, seed=0):
 
 
 def norm_img(x):
-    """uint8 -> [-1,1], 3 canales iguales (la retina espera 3)."""
+    """uint8 -> [-1,1]. Gris [B,H,W] -> 3 canales iguales; filtros [B,H,W,3] (FIL-007) -> [B,3,H,W]."""
+    if x.dim() == 4:
+        return x.permute(0, 3, 1, 2).float() / 127.5 - 1
     x = x.float() / 127.5 - 1
     return x.unsqueeze(1).expand(-1, 3, -1, -1)
 

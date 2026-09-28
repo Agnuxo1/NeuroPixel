@@ -23,7 +23,7 @@ from neuropixel.model import NeuroPixel, n_params  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
 
 
-def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev):
+def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev, by_img=None):
     xs, ys = [], []
     for _ in range(B):
         k = idx[rng.integers(len(idx))]
@@ -38,6 +38,8 @@ def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev):
         y0 = int(np.clip(cy - crop // 2, 0, fil.RES - crop))
         x0 = int(np.clip(cx - crop // 2, 0, fil.RES - crop))
         a, b = img[y0:y0 + crop, x0:x0 + crop], (lab[y0:y0 + crop, x0:x0 + crop] > 0)
+        if by_img is not None:                      # consenso suave: media de los anotadores de la imagen
+            b = np.mean([labs[j][y0:y0 + crop, x0:x0 + crop] > 0 for j in by_img[meta["ann"][k]["img"]]], 0)
         r = rng.integers(4)
         a, b = np.rot90(a, r), np.rot90(b, r)
         if rng.random() < 0.5:
@@ -45,14 +47,16 @@ def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev):
         xs.append(np.ascontiguousarray(a))
         ys.append(np.ascontiguousarray(b))
     x = torch.from_numpy(np.stack(xs)).to(dev)
-    y = torch.from_numpy(np.stack(ys)).long().to(dev)
+    y = torch.from_numpy(np.stack(ys)).to(dev)
+    y = y.float() if by_img is not None else y.long()
     return fil.norm_img(x), y
 
 
 @torch.no_grad()
 def predict_prob(model, img_u8, steps, dev, fwd=None):
     x = fil.norm_img(torch.from_numpy(np.ascontiguousarray(img_u8))[None].to(dev))
-    with torch.autocast("cuda", dtype=torch.bfloat16, enabled=dev.type == "cuda"):
+    amp_dtype = torch.bfloat16 if dev.type == "cuda" and torch.cuda.is_bf16_supported() else torch.float16
+    with torch.autocast("cuda", dtype=amp_dtype, enabled=dev.type == "cuda"):
         lg = (fwd or fil.seg_forward)(model, x, steps, ckpt=False)
     return lg.float().softmax(1)[0, 1].cpu().numpy()
 
@@ -104,12 +108,21 @@ def main():
     ap.add_argument("--ms", choices=multiscale.MODES, default=None, help="lienzo multiescala (FIL-002)")
     ap.add_argument("--scale", type=int, default=4)
     ap.add_argument("--steps-fine", type=int, default=6, help="pasos del lienzo fino (--ms learned)")
+    ap.add_argument("--consensus", action="store_true", help="objetivo = media de anotadores (FIL-005)")
+    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--filters", action="store_true", help="retina con [limbo, sato, DoG] (FIL-007)")
+    ap.add_argument("--sdo", action="store_true", help="retina con [Halfa, AIA 304, HMI] reales (FIL-008)")
     ap.add_argument("--name", default="np_ret")
     a = ap.parse_args()
     dev = choose_device("cuda", threads=4, vram_cap_gib=a.vram_cap, force_gpu=a.force_gpu)
-    torch.manual_seed(0)
+    torch.manual_seed(a.seed)
     imgs, labs, meta = fil.load_cache()
-    imgs, labs = np.asarray(imgs), np.asarray(labs)      # a RAM (≈2 GB)
+    if a.sdo:                                            # canales solares reales coetaneos (mmap)
+        imgs, labs = np.load(fil.CACHE / "imgs_sdo.npy", mmap_mode="r"), np.asarray(labs)
+    elif a.filters:                                      # 3 canales filtrados, leidos de disco (mmap)
+        imgs, labs = np.load(fil.CACHE / "imgs3.npy", mmap_mode="r"), np.asarray(labs)
+    else:
+        imgs, labs = np.asarray(imgs), np.asarray(labs)  # a RAM (≈2 GB)
     tr, va = fil.split(meta)
     model = NeuroPixel(len(fil.VOCAB), (0, 0), c=a.c, hidden=a.hidden, retina=not a.no_retina,
                        fire_rate=a.fire_rate).to(dev)
@@ -121,30 +134,47 @@ def main():
         ms = multiscale.MultiScale(a.ms, c=a.c, hidden=a.hidden, scale=a.scale).to(dev)
         params += list(ms.parameters())
         fwd = lambda m, x, st, ckpt=True, damage=None: multiscale.ms_forward(m, ms, x, st, a.steps_fine, ckpt, damage)
+        if a.init and (HERE / "runs" / a.init / "best_ms.pt").exists():
+            ms.load_state_dict(torch.load(HERE / "runs" / a.init / "best_ms.pt", map_location=dev))
     opt = torch.optim.AdamW(params, lr=a.lr, weight_decay=1e-4)
     sch = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=a.iters, pct_start=0.05)
     out_dir = HERE / "runs" / a.name
     out_dir.mkdir(parents=True, exist_ok=True)
     info = {"args": vars(a), "params": n_params(model) + (multiscale.n_extra(ms) if ms else 0), "train": len(tr), "val": len(va)}
     print(json.dumps(info), flush=True)
-    rng = np.random.default_rng(0)
+    rng = np.random.default_rng(a.seed)
+    by_img = None
+    if a.consensus:
+        by_img = {}
+        for k in tr:
+            by_img.setdefault(meta["ann"][k]["img"], []).append(k)
+        first = {}
+        for k in tr:                                # una entrada por imagen: muestreo uniforme por imagen
+            first.setdefault(meta["ann"][k]["img"], k)
+        tr = list(first.values())
     wts = torch.tensor([1.0, a.w_pos], device=dev)
     t0, best, log = time.time(), -1, []
     for it in range(1, a.iters + 1):
-        x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev)
+        x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev, by_img)
         steps, dmg = a.steps, None
         if a.steps_max > a.steps:                               # reposo: pasos variables + daño
             steps = int(rng.integers(a.steps, a.steps_max + 1))
             if rng.random() < a.damage_p:
                 keep = (torch.rand(x.shape[0], 1, *x.shape[2:], device=dev) >= 0.3).float()
                 dmg = (int(rng.integers(2, steps)), keep)
-        with torch.autocast("cuda", dtype=torch.bfloat16, enabled=dev.type == "cuda"):
+        amp_dtype = torch.bfloat16 if dev.type == "cuda" and torch.cuda.is_bf16_supported() else torch.float16
+        with torch.autocast("cuda", dtype=amp_dtype, enabled=dev.type == "cuda"):
             lg = fwd(model, x, steps, damage=dmg)
         lg = lg.float()
         p = lg.softmax(1)[:, 1]
         yf = y.float()
         dice_l = 1 - (2 * (p * yf).sum() + 1) / (p.sum() + yf.sum() + 1)
-        loss = F.cross_entropy(lg, y, weight=wts) + dice_l
+        if by_img is not None:
+            lp = lg.log_softmax(1)
+            ce = -(wts[1] * yf * lp[:, 1] + wts[0] * (1 - yf) * lp[:, 0]).sum() / (wts[1] * yf + wts[0] * (1 - yf)).sum()
+        else:
+            ce = F.cross_entropy(lg, y, weight=wts)
+        loss = ce + dice_l
         opt.zero_grad(set_to_none=True)
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
