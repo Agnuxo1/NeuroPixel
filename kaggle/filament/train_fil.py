@@ -110,6 +110,7 @@ def main():
     ap.add_argument("--steps-fine", type=int, default=6, help="pasos del lienzo fino (--ms learned)")
     ap.add_argument("--consensus", action="store_true", help="objetivo = media de anotadores (FIL-005)")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--block", type=int, default=-1, help="fold 0-4 de validación por bloques temporales (FIL-013); -1 = split aleatorio")
     ap.add_argument("--filters", action="store_true", help="retina con [limbo, sato, DoG] (FIL-007)")
     ap.add_argument("--sdo", action="store_true", help="retina con [Halfa, AIA 304, HMI] reales (FIL-008)")
     ap.add_argument("--name", default="np_ret")
@@ -123,7 +124,7 @@ def main():
         imgs, labs = np.load(fil.CACHE / "imgs3.npy", mmap_mode="r"), np.asarray(labs)
     else:
         imgs, labs = np.asarray(imgs), np.asarray(labs)  # a RAM (≈2 GB)
-    tr, va = fil.split(meta)
+    tr, va = fil.split(meta) if a.block < 0 else fil.split_blocks(meta, 5, a.block)
     model = NeuroPixel(len(fil.VOCAB), (0, 0), c=a.c, hidden=a.hidden, retina=not a.no_retina,
                        fire_rate=a.fire_rate).to(dev)
     if a.init:
@@ -153,7 +154,7 @@ def main():
             first.setdefault(meta["ann"][k]["img"], k)
         tr = list(first.values())
     wts = torch.tensor([1.0, a.w_pos], device=dev)
-    t0, best, log = time.time(), -1, []
+    t0, best, log, skipped_n = time.time(), -1, [], 0
     for it in range(1, a.iters + 1):
         x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev, by_img)
         steps, dmg = a.steps, None
@@ -175,9 +176,20 @@ def main():
         else:
             ce = F.cross_entropy(lg, y, weight=wts)
         loss = ce + dice_l
+        if not torch.isfinite(loss) or loss.item() > 20:         # guarda anti-divergencia (FIL-011 exploto a 14k it)
+            skipped_n += 1
+            opt.zero_grad(set_to_none=True); sch.step()
+            if skipped_n > 50:
+                raise SystemExit("demasiados pasos rechazados (>50): entrenamiento inestable, parado")
+            continue
         opt.zero_grad(set_to_none=True)
         loss.backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        gn = torch.nn.utils.clip_grad_norm_(params, 1.0)            # TODOS los modulos (antes: solo el lienzo, sin ms)
+        if not torch.isfinite(gn):                                   # gradiente no finito: rechazar el paso
+            skipped_n += 1; opt.zero_grad(set_to_none=True); sch.step()
+            if skipped_n > 50:
+                raise SystemExit("demasiados pasos rechazados (>50): entrenamiento inestable, parado")
+            continue
         opt.step()
         sch.step()
         if it % a.eval_every == 0 or it == a.iters:
@@ -185,7 +197,7 @@ def main():
             if ms:
                 ms.train()
             r = next(iter(res.values()))
-            rec = {"it": it, "loss": round(loss.item(), 4), **r, "s": round(time.time() - t0)}
+            rec = {"it": it, "loss": round(loss.item(), 4), **r, "skipped": skipped_n, "s": round(time.time() - t0)}
             log.append(rec)
             print(json.dumps(rec), flush=True)
             if r["PQ"] > best:

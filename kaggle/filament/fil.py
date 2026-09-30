@@ -70,6 +70,26 @@ def split(meta, val_frac=0.15, seed=0):
     return tr, va
 
 
+def split_blocks(meta, k=5, fold=0, gap_days=5.0):
+    """FIL-013 (agenda Codex, punto 2): validación por BLOQUES TEMPORALES contiguos.
+
+    Las imágenes (todas las anotaciones de cada una juntas) se ordenan por fecha y se cortan en k bloques; el bloque
+    `fold` es validación y se excluyen de entrenamiento las imágenes a menos de `gap_days` de cualquiera de ellas.
+    Nota: el test del concurso está intercalado en el tiempo (mediana 1,5 d al vecino de train, frente a 2,0 d de
+    nuestro val aleatorio), así que este split es PESIMISTA respecto al test: mide robustez, no el puesto esperado."""
+    from datetime import datetime
+    files = sorted({m["file"] for m in meta["ann"]})
+    t = {f: datetime.strptime(f[:14], "%Y%m%d%H%M%S").timestamp() / 86400 for f in files}
+    order = sorted(files, key=t.get)
+    blocks = np.array_split(np.arange(len(order)), k)
+    val_f = {order[i] for i in blocks[fold]}
+    tv = np.array([t[f] for f in val_f])
+    bad = {f for f in files if f not in val_f and np.min(np.abs(tv - t[f])) < gap_days}
+    tr = [i for i, m in enumerate(meta["ann"]) if m["file"] not in val_f and m["file"] not in bad]
+    va = [i for i, m in enumerate(meta["ann"]) if m["file"] in val_f]
+    return tr, va
+
+
 def norm_img(x):
     """uint8 -> [-1,1]. Gris [B,H,W] -> 3 canales iguales; filtros [B,H,W,3] (FIL-007) -> [B,3,H,W]."""
     if x.dim() == 4:

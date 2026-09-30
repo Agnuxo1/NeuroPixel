@@ -1,6 +1,6 @@
 # Cola de trabajo compartida
 
-Actualizada: 2026-09-28 21:17 Europe/Madrid.
+Actualizada: 2026-09-28 23:18 Europe/Madrid.
 
 | ID | Prioridad | Estado | Responsable | Modelo/ruta | Esfuerzo | Reto | Recursos | Entregable / criterio de aceptacion |
 |---|---:|---|---|---|---|---|---|---|
@@ -15,15 +15,19 @@ Actualizada: 2026-09-28 21:17 Europe/Madrid.
 | FIL-006 | 5 | CERRADA A 1k / NO REANUDAR | Codex | modelo general | alto | filament | ningun runtime nuevo | 1k: PQ 0,3761, Dice 0,6586, TP 812, FP 862, FN 423, 11.055 s; no supera 0,4263 |
 | FIL-ENS-001 | 5 | HECHA / PUBLICO 0,35 | Claude | determinista | medio | filament | liberada | Val PQ 0,4293; submission generado y enviado; mejora publica 0,34 -> 0,35 |
 | FIL-007 | 6 | HECHA / NEGATIVA (PQ 0,3799) | Claude | modelo general | alto | filament | liberada | Canales limbo+sato+DoG empeoran frente a control 0,4061; no promocionar |
+| FIL-012 | 1 | HECHA parcial (Claude 30-09) | Claude | — | — | filament | — | Agenda Codex punto 1: clip de gradiente en TODOS los modulos (bug: `ms` sin clip), paso rechazado si no finito, contador `skipped`, parada >50. FIL-011c relanzado |
+| FIL-013 | 2 | CODIGO LISTO, sin entrenar | Claude | modelo general | alto | filament | GPU tras FIL-011c | Agenda punto 2: `fil.split_blocks` (5 bloques temporales + hueco 5 d) y `train_fil.py --block N`. Hallazgo: test mas cercano en el tiempo a train (mediana 1,5 d) que nuestro val aleatorio (2,0 d) -> el split por bloques es PESIMISTA; usar como control de robustez. Falta calibrar posproceso fuera del bloque |
+| FIL-014 | 3 | PENDIENTE (tras 013) | Claude | modelo general | alto | filament | GPU | Agenda puntos 3-4: objetivos de consenso (individual / suave / peso por acuerdo) y filamentos pequeños (resolucion fina, muestreo); mismo split por bloques, semillas y presupuesto |
 | FIL-011 | 1 | LISTA — PRIMERA TAREA 2026-09-29 (Fran) | Claude | modelo general | medio | filament | GPU exclusiva ~6,5 h | Consenso suave desde cero hasta 40.000 it, validacion cada 2.000 (`kaggle/filament/next_fil011.sh`): ¿sigue mejorando o se estanca? Referencias: cons 8k 0,4141; cons_cont 24k 0,4243; learned_cont 24k 0,4263 |
+| DOC-002 | 2 | LISTA (29-09) | Claude | modelo general | medio | filament | CPU | Publicar en Kaggle (cuaderno publico del concurso) el codigo NeuroPixel de filamentos enlazando el GitHub (DEC-009, regla 3.6.b); decidir con Fran si ahora o tras FIL-011 |
 | FIL-008 | 5 | HECHA / EMPATE NEGATIVO (PQ 0,4009) | Claude | modelo general | alto | filament | liberada | SDO real no supera control 0,4061; no promocionar v1 |
 | FIL-010 | 6 | PROPUESTA (Fran 28-09) | por asignar (JEV) | pendiente | pendiente | filament | red + GPU | Mas datos: miles de imagenes GONG H-alfa publicas (mismo instrumento, 2010-hoy) + sus canales SDO; etiquetas por autoentrenamiento (pseudoetiquetas de alta confianza del mejor modelo) y/o catalogo HEK de filamentos; aceptar solo si mejora val PQ |
 | DOC-001 | 4 | ACTIVA (prototipo) | Claude | modelo general | medio | filament | CPU | Informe 4 pag + GitHub con estetica cientifica (Fran 28-09): GIF escaner por canales (`docs/visual/make_scanner_gif.py`, hecho), lienzo en marcha con colores solares reales y diccionario con nombres astronomicos, desglose por filtros; informe con cifras medidas (techo humano 0,35, ablaciones) |
 | FIL-009 | 9 | PROPUESTA (Fran 28-09, final de agenda) | por asignar | pendiente | pendiente | filament | GPU | Caracteristicas previas de un coloreador de IA (como DINOv2) como canales de la retina |
 | NCA-001 | 6 | HECHA EXTERNA / REPLICA FUERTE EN COLA | Codex | modelo general | xhigh | bateria | sin recurso reservado | Run2: acc 0,9717 vs profesor 0,9625; 3,926x; repetir con profesor fuerte antes de promocionar |
 | NCA-002 | 7 | HECHA EXTERNA / VALIDADA | Codex | agente principal | alto (JEV 0,91) | bateria | Lightning T4 cerrada; cero GPU local/Kaggle | A 64 pasos: 916,08 -> 47,42 MiB (-94,82 %); reconstruccion 5,96e-7; gradiente relativo 3,82e-8 |
-| FIL-SEED-001 | 7 | ACTIVA GPU / SEMILLA 2 A 6k/8k | Claude | modelo general | alto | filament | RTX 3090 exclusiva | Semilla 1 PQ 0,4001; semilla 2 PQ crudo 0,3572 a 6k; despues ensamble de 4, enviar solo si val PQ supera 0,4293 |
-| BIO-001 | 7 | EN COLA / ESPERA ENVIO SOLAR | Codex + Claude; verifica JEV | agente principal + revision independiente | xhigh | Biohub | sin recurso reservado | Reanudar `D:\PROJECTS\biohub-codex-cognition` solo tras cerrar pruebas prioritarias y enviar la mejor version Solar Filament; preservar Biohub 0,947 y exigir gate local antes de GPU Kaggle |
+| FIL-SEED-001 | 7 | HECHA / S2 PQ 0,4100; ENS4 0,4260 | Claude | modelo general | alto | filament | liberada | Mejor version sigue ENS2, val 0,4293 y publico 0,35; no enviar ENS4 |
+| BIO-001 | 1 | ENTREGAS COMPLETADAS / PUNTUACION PENDIENTE (29-09 23:03) | Claude: E entregado; Codex: F/G entregados y recibos; JEV verifica | agente principal; pruebas deterministas | alto | Biohub | Sin GPU local; notebooks F/G COMPLETE | C 56674288 y D 56678501 COMPLETE 0,948. E 56687119, F 56687338 y G 56687538 PENDING. F/G enviados22:51 y23:03 tras auditorias;0 cupos hoy. JEV remoto provenance=jev autoriza apuestas exploratorias(1,0), no mejora demostrada. Estado en work/last-two-20260929/checkpoint.md. Solo vigilar puntuaciones hasta cierre, luego cierre factual; no nuevos experimentos ni reenviar |
 | CLOUD-001 | 8 | PAUSADA / SIN RUNTIMES NUEVOS | Codex | determinista + modelo general | alto | global | ninguno | Colab/Lightning quedan en cola; Kaggle solo ejecucion final, submission y entrega |
 
 Regla: una tarea `ACTIVA` debe tener reserva en `RECURSOS.md`. Si no actualiza evidencia durante

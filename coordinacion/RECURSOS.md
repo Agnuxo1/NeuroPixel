@@ -1,6 +1,6 @@
 # Recursos y reservas
 
-Actualizada: 2026-09-28 14:46 Europe/Madrid.
+Actualizada: 2026-09-29 10:32 Europe/Madrid.
 
 ## Inventario local
 
@@ -17,11 +17,18 @@ Actualizada: 2026-09-28 14:46 Europe/Madrid.
 |---|---|---|---|---|---|---|
 | GPU | SOIL-001 | Claude | antes de 19:04 | 6 GiB | al completar folds 4-5 | liberada 20:13 (6/6 folds; result.json) |
 | GPU | FIL-001 | Claude | antes de 17:42 | 14 GiB | al completar 6000 it | liberada 20:40 (6000/6000; result.json) |
-| GPU | FIL-005 | Claude | turno gpuq activo | tope 12 GiB | cerrar resultado y liberar | unica carga pesada local; no interrumpir; despues reposo |
-| RAM/CPU | ambas | PREEXISTENTE | — | compartido | junto con GPU | RAM ya bajo el margen objetivo |
+| GPU | FIL-005 | Claude | turno anterior | tope 12 GiB | cerrada | liberada antes de 2026-09-29; no es reserva actual |
+| GPU | BIO-001 E1 detector | proceso iniciado por Claude; supervisa Codex | 2026-09-29 09:07 | gpuq 14 GiB VRAM / 6 GiB RAM | 09:26 | liberada; 8 epocas completas, resultado interno no validado en pipeline |
+| GPU | BIO-001 D1 NP3D | proceso iniciado por Claude; supervisa Codex | 2026-09-29 09:26:30 | gpuq 6 GiB VRAM / 6 GiB RAM | 09:48:29 | liberada; AUC CV 0,75, solo diagnostica por contaminacion/negativos no verificados |
+| GPU | BIO-001 D1 puntuacion de candidatos | proceso iniciado por Claude; supervisa Codex | 2026-09-29 09:48:39 | GPU fuera de gpuq, ~1,9 GiB RAM | antes de 09:51:18 | proceso finalizado; `cand_*_scored.parquet` auditados, solo diagnostico; no promocionar |
+| GPU | BIO-001 E1 prediccion cruda | proceso iniciado por Claude; supervisa Codex | 2026-09-29 09:51:18 | gpuq 12 GiB VRAM / 6 GiB RAM | 09:58:29 | liberada; resultado raw adverso; no continuar E1 |
+| GPU | BIO-001 D1 score en cola | proceso iniciado por Claude; supervisa Codex | 2026-09-29 09:58:46 | gpuq 4 GiB VRAM / 4 GiB RAM | 10:04:19 | liberada; publico y train puntuados, solo diagnostico |
+| GPU | BIO-001 blend010 raw | Codex; JEV remoto 0,92 | 2026-09-29 10:10:13 | gpuq 12 GiB VRAM / 8 GiB RAM | 10:13:57 | liberada; delta edge micro -0,00208, no continuar |
+| GPU | BIO-001 B detector 0,955 serial | Codex; JEV remoto 1,0 | 2026-09-29 10:18:19 | gpuq 12 GiB VRAM / 8 GiB RAM | 10:29:09 | liberada; CSV completo y verificado; se cerro solo el bloqueo final de `plt.show()` tras guardar todos los artefactos |
+| RAM/CPU | descarga Biohub | proceso iniciado por Claude; supervisa Codex | antes de 09:21 | red/CPU ligera | al completar clips | activa; RAM libre 5,83 GiB a las 09:21 |
 
-Las dos reservas actuales superponen 20 GiB nominales y dejan poco margen. Se toleran solo porque
-ya estaban ejecutandose. A partir de su cierre: una sola carga GPU larga a la vez. Excepcion: una
+No hay carga GPU larga reservada a las 10:32; comprobar gpuq y uso real antes de iniciar otra.
+Se mantiene una sola carga GPU larga a la vez y el suelo de 8 GiB de RAM libre. Excepcion: una
 prueba corta de menos de 10 minutos si la suma medida queda por debajo de 20 GiB y la GPU por debajo
 de 80 C antes de empezar.
 
