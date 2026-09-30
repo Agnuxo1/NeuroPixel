@@ -23,13 +23,16 @@ from neuropixel.model import NeuroPixel, n_params  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
 
 
-def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev, by_img=None):
+def sample_batch(imgs, labs, meta, idx, B, crop, pos_frac, rng, dev, by_img=None, small=None):
     xs, ys = [], []
     for _ in range(B):
         k = idx[rng.integers(len(idx))]
         lab = labs[k]
         img = imgs[meta["ann"][k]["img"]]
-        if rng.random() < pos_frac:
+        if small is not None and rng.random() < small[1] and len(small[0].get(k, ())):   # FIL-014: objetos pequenos
+            pts = small[0][k]
+            cy, cx = pts[rng.integers(len(pts))] + rng.integers(-crop // 3, crop // 3, size=2)
+        elif rng.random() < pos_frac:
             yy, xx = np.nonzero(lab)
             j = rng.integers(len(yy))
             cy, cx = yy[j] + rng.integers(-crop // 3, crop // 3), xx[j] + rng.integers(-crop // 3, crop // 3)
@@ -110,11 +113,17 @@ def main():
     ap.add_argument("--steps-fine", type=int, default=6, help="pasos del lienzo fino (--ms learned)")
     ap.add_argument("--consensus", action="store_true", help="objetivo = media de anotadores (FIL-005)")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--consensus-w", type=float, default=0.0, help="FIL-014: peso menor donde discrepan los anotadores: w=1-L*4c(1-c) (con --consensus)")
+    ap.add_argument("--small-frac", type=float, default=0.0, help="FIL-014: fraccion de recortes centrados en objetos pequenos (<250 px)")
+    ap.add_argument("--lowmem", action="store_true", help="imagenes y etiquetas por mmap (RSS ~1 GB menos; mismos resultados)")
     ap.add_argument("--block", type=int, default=-1, help="fold 0-4 de validación por bloques temporales (FIL-013); -1 = split aleatorio")
+    ap.add_argument("--split-manifest", type=Path, help="train/calibracion/test independientes; incompatible con --block y --init")
     ap.add_argument("--filters", action="store_true", help="retina con [limbo, sato, DoG] (FIL-007)")
     ap.add_argument("--sdo", action="store_true", help="retina con [Halfa, AIA 304, HMI] reales (FIL-008)")
     ap.add_argument("--name", default="np_ret")
     a = ap.parse_args()
+    if a.split_manifest and (a.block >= 0 or a.init):
+        ap.error('--split-manifest requiere entrenamiento desde cero y sin --block')
     dev = choose_device("cuda", threads=4, vram_cap_gib=a.vram_cap, force_gpu=a.force_gpu)
     torch.manual_seed(a.seed)
     imgs, labs, meta = fil.load_cache()
@@ -123,8 +132,15 @@ def main():
     elif a.filters:                                      # 3 canales filtrados, leidos de disco (mmap)
         imgs, labs = np.load(fil.CACHE / "imgs3.npy", mmap_mode="r"), np.asarray(labs)
     else:
-        imgs, labs = np.asarray(imgs), np.asarray(labs)  # a RAM (≈2 GB)
-    tr, va = fil.split(meta) if a.block < 0 else fil.split_blocks(meta, 5, a.block)
+        if not a.lowmem:
+            imgs, labs = np.asarray(imgs), np.asarray(labs)  # a RAM (≈2 GB)
+    heldout, protocol = None, None
+    if a.split_manifest:
+        import split_protocol
+        protocol = split_protocol.load(meta, a.split_manifest)
+        tr, va, heldout = (protocol['indices'][g] for g in ('train', 'calibration', 'test'))
+    else:
+        tr, va = fil.split(meta) if a.block < 0 else fil.split_blocks(meta, 5, a.block)
     model = NeuroPixel(len(fil.VOCAB), (0, 0), c=a.c, hidden=a.hidden, retina=not a.no_retina,
                        fire_rate=a.fire_rate).to(dev)
     if a.init:
@@ -141,9 +157,23 @@ def main():
     sch = torch.optim.lr_scheduler.OneCycleLR(opt, a.lr, total_steps=a.iters, pct_start=0.05)
     out_dir = HERE / "runs" / a.name
     out_dir.mkdir(parents=True, exist_ok=True)
-    info = {"args": vars(a), "params": n_params(model) + (multiscale.n_extra(ms) if ms else 0), "train": len(tr), "val": len(va)}
+    arg_info = {k: str(v) if isinstance(v, Path) else v for k, v in vars(a).items()}
+    info = {"args": arg_info, "params": n_params(model) + (multiscale.n_extra(ms) if ms else 0), "train": len(tr), "val": len(va)}
+    if protocol:
+        info['split_protocol'] = {'metadata_sha256': protocol['metadata_sha256'], 'fold': protocol['fold'],
+                                  'selection_set': 'calibration', 'heldout_annotations': len(heldout)}
     print(json.dumps(info), flush=True)
     rng = np.random.default_rng(a.seed)
+    small = None
+    if a.small_frac > 0:
+        pts = {}
+        for k in tr:
+            lab = np.asarray(labs[k]); ids, cnt = np.unique(lab[lab > 0], return_counts=True)
+            c = [np.array(np.nonzero(lab == i)).mean(1) for i in ids[cnt < 250]]
+            if c:
+                pts[k] = np.array(c)
+        small = (pts, a.small_frac)
+        print(json.dumps({"objetos_pequenos_en_train": int(sum(len(v) for v in pts.values())), "anotaciones_con_pequenos": len(pts)}), flush=True)
     by_img = None
     if a.consensus:
         by_img = {}
@@ -156,7 +186,7 @@ def main():
     wts = torch.tensor([1.0, a.w_pos], device=dev)
     t0, best, log, skipped_n = time.time(), -1, [], 0
     for it in range(1, a.iters + 1):
-        x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev, by_img)
+        x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev, by_img, small)
         steps, dmg = a.steps, None
         if a.steps_max > a.steps:                               # reposo: pasos variables + daño
             steps = int(rng.integers(a.steps, a.steps_max + 1))
@@ -172,7 +202,8 @@ def main():
         dice_l = 1 - (2 * (p * yf).sum() + 1) / (p.sum() + yf.sum() + 1)
         if by_img is not None:
             lp = lg.log_softmax(1)
-            ce = -(wts[1] * yf * lp[:, 1] + wts[0] * (1 - yf) * lp[:, 0]).sum() / (wts[1] * yf + wts[0] * (1 - yf)).sum()
+            pw = 1 - a.consensus_w * 4 * yf * (1 - yf)           # peso por acuerdo entre anotadores (1 = todos coinciden)
+            ce = -(pw * (wts[1] * yf * lp[:, 1] + wts[0] * (1 - yf) * lp[:, 0])).sum() / (pw * (wts[1] * yf + wts[0] * (1 - yf))).sum()
         else:
             ce = F.cross_entropy(lg, y, weight=wts)
         loss = ce + dice_l
@@ -214,6 +245,11 @@ def main():
     bestcfg = max(res, key=lambda k: res[k]["PQ"])
     final = {**info, "log": log, "best_postproc": {"thr": bestcfg[0], "min_area": bestcfg[1], "close": bestcfg[2],
                                                     **res[bestcfg]}, "seconds": round(time.time() - t0)}
+    if heldout is not None:
+        test_res, _ = evaluate(model, imgs, labs, meta, heldout, a.steps, dev, [bestcfg], fwd=fwd)
+        final['heldout'] = {'selection_set': 'calibration', 'evaluation_set': 'test',
+                            'thr': bestcfg[0], 'min_area': bestcfg[1], 'close': bestcfg[2], **test_res[bestcfg]}
+        final['seconds'] = round(time.time() - t0)
     (out_dir / "result.json").write_text(json.dumps(final, indent=1), encoding="utf-8")
     print("RESULT", json.dumps(final["best_postproc"]), flush=True)
 

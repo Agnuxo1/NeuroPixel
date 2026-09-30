@@ -5,6 +5,8 @@ Actualizada: 2026-09-28 23:18 Europe/Madrid.
 | ID | Prioridad | Estado | Responsable | Modelo/ruta | Esfuerzo | Reto | Recursos | Entregable / criterio de aceptacion |
 |---|---:|---|---|---|---|---|---|---|
 | OPS-001 | 0 | REVISION | Codex | determinista | — | global | ninguno | Mantener protocolo y resolver conflictos de cola |
+| FIL-015-AUDIT | 2 | HECHA / PILOTO MODELO PENDIENTE | Codex | principal + herramientas deterministas; fallback local | medio | filament | liberada; cero GPU | Test 60% con vecino <=2dias; bloques purgados 0%; cinco manifiestos intercalados y pares listos en work/temporal-context-20260930 |
+| FIL-CV-CODEX | 1 | IMPLEMENTADA Y VERIFICADA / PILOTO GPU PENDIENTE | Codex implementa; Claude integra a su agenda | principal + herramientas deterministas; fallback local JEV no disponible | alto | filament | liberada; cero GPU | Cinco manifiestos en work/cv-protocol-20260930; --split-manifest integrado; test externo heldout sin calibracion; controles de datos PASS |
 | SOIL-001 | 1 | HECHA (20:13, EMD CV 39,195 vs media 85,393) | Claude | modelo general | medio | soil | GPU, hasta 6 GiB | Completar 6 folds; `result.json`; comparar EMD con curva media |
 | FIL-001 | 2 | HECHA (20:40, val PQ 0,3753) | Claude | modelo rapido | bajo | filament | GPU, hasta 14 GiB | Terminar 6000 it o documentar corte; mejor PQ y checkpoint |
 | SOIL-002 | 3 | EN COLA / SIN RUNTIME | Codex | modelo general | medio | soil | sin recurso reservado | Auditar split por telefono; no enviar si no supera de forma robusta la referencia 60,80 |

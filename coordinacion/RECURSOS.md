@@ -13,6 +13,8 @@ Actualizada: 2026-09-29 10:32 Europe/Madrid.
 
 ## Reservas activas
 
+Reserva Codex 2026-09-30: FIL-CV-CODEX liberada tras generar/verificar cinco manifiestos e integrar opcion de evaluacion independiente. Solo metadatos JSON/stdlib; sin cargar imagenes/modelos ni reservar GPU.
+
 | Recurso | Tarea | Responsable | Inicio conocido | Limite | Liberacion esperada | Estado |
 |---|---|---|---|---|---|---|
 | GPU | SOIL-001 | Claude | antes de 19:04 | 6 GiB | al completar folds 4-5 | liberada 20:13 (6/6 folds; result.json) |
