@@ -959,3 +959,72 @@ Cadena `kaggle/filament/night_fil_0930.sh` ya en cola detras de FIL-011c (un tic
 1-0,7·4c(1-c) segun acuerdo; `--consensus-w`) | cv0_small (30 % de recortes en objetos <250 px; `--small-frac`). ~76-95 min cada una.
 Resultados `heldout` por fold 0, checkpoint y posproceso elegidos en calibracion. Codex: no lanzar GPU de filamentos; CPU libre para FIL-015.
 Respuesta solicitada: ninguna.
+
+### 2026-10-01 06:30 Europe/Madrid — CLAUDE — FIL-011c TERMINADO: estable, con meseta
+Tipo: HECHO
+Mensaje: 40.000 it en 428 min, 0 pasos rechazados (el clip en todos los modulos funcionaba). Curva cruda (cada 2k): 0,26 → 0,36 (10k) → 0,38 (20k)
+→ 0,40 (30k) → 0,403-0,405 (34-40k): meseta desde ~34k. Con posproceso 0,4242 (TP 731, FP 409, FN 504), igual que learned_cont a 24k (0,4263) y
+cons_cont a 24k (0,4243). Conclusion: un modelo individual satura en ~0,424-0,426; mas iteraciones no ayudan. Hay que cambiar de eje (objetivo,
+resolucion fina, contexto temporal, ensamble de modelos distintos). Historial entrada 31. Cadena nocturna en marcha: cv0_base empezo 06:12 (turno inmediato al terminar FIL-011c).
+Respuesta solicitada: ninguna.
+
+### 2026-10-01 07:50 Europe/Madrid — CLAUDE — PRIMER RESULTADO DEL PROTOCOLO ESTRICTO (cv0_base)
+Tipo: HECHO
+Mensaje: fold 0, base 8k, individual, semilla 0: calibracion PQ 0,4072 (TP 885, FP 574, FN 584); **test externo PQ 0,385** (TP 1082, FP 786, FN 826,
+Dice 0,6635), posproceso fijado en calibracion (thr 0,75, area 120). Es la referencia honesta para comparar consenso, ponderado y pequeños en el mismo fold.
+cv0_cons arranco 07:45; luego consw y small. Historial entrada 32.
+Respuesta solicitada: ninguna.
+
+### 2026-10-01 08:20 Europe/Madrid — CLAUDE — ENVIO CANDIDATO: ensamble de 3 (gate val > 0,4293)
+Tipo: RESERVA GPU / ENVIO CONDICIONAL
+Mensaje: el mejor envio disponible hoy es el ya subido 56642040 (ensamble learned_cont + cons_cont, val 0,4293, publico 0,35). Candidato nuevo:
+ensamble learned_cont + cons_cont + cons_40k (`kaggle/filament/ens3_submit.sh`, ticket gpuq entre las variantes de la cadena, ~25 min GPU, 5 GiB RAM);
+solo se envia si val > 0,4293. Cupo de hoy: 0/5 usados. Respuesta solicitada: ninguna.
+
+### 2026-10-01 08:30 Europe/Madrid — CLAUDE — RES-001: DIA DE INVESTIGACION (propuesta de Fran)
+Tipo: DECISION / RESERVA
+Mensaje: Fran propone dedicar el dia a investigar recetas con base cientifica (arXiv y revistas) y ejecutar las pruebas de noche en la GPU.
+JEV (remote_decision=true): fase research, dividir en paralelo, esfuerzo alto (propuso Haiku con confianza 0,2: uso Sonnet por calidad de sintesis).
+Seis subagentes con temas disjuntos escriben en `docs/research/`: 01 SOTA de filamentos solares | 02 anotaciones ruidosas/multi-anotador |
+03 estructuras delgadas y objetos pequenos | 04 semisupervisado, contexto temporal y SDO | 05 NCA y arquitecturas ligeras |
+06 posproceso, ensamble, TTA y validacion estadistica. Exigen citas verificadas y hipotesis falsables. Sintesis y plan nocturno esta tarde.
+La cadena GPU ya en cola (cv0_cons, cv0_consw, cv0_small, ens3) sigue; no añado entrenamientos nuevos hoy hasta tener el plan.
+Codex: puede aportar ideas en THINKTANK y revisar los informes; no duplicar los 6 temas. Respuesta solicitada: ninguna.
+
+### 2026-10-01 08:45 Europe/Madrid — CLAUDE — RES-001: informes terminados y pruebas listas para la noche
+Tipo: HECHO
+Mensaje: seis informes en `docs/research/01..06_*.md` + sintesis `docs/research/00_SINTESIS_Y_PLAN_NOCTURNO.md` (12 pruebas P1-P12, con hipotesis falsables y descartes).
+Hallazgos clave: el PQ de val es muy ruidoso (medido, IC95 ±0,026; Δ ensamble 2 vs 1 = +0,003 [−0,006; +0,013]) -> decidir con varios folds y bootstrap
+emparejado; los FN pequeños son ruido de anotador; Diercke et al. avisan de FP en autoentrenamiento GONG; no usar MAGFiLO publico (posible fuga).
+Codigo nuevo en `train_fil.py` (todo desactivado por defecto): `--ema`, `--unet 11` (control U-Net ~100k params), `--skel-w` (Skeleton Recall), `--aux-w/--aux-steps`
+(perdida en pasos intermedios), `--smoke N`; `multiscale.SmallUNet`; `p1_object_filter.py` (filtro de objetos por puntuacion, CPU). Humo CPU de cada flag OK.
+Cadena nocturna propuesta (protocolo estricto de Codex, fold 0, 8k, lr 1e-3, semilla 0): cv0_ema, cv0_unet, cv0_skel, cv0_aux tras las corridas diurnas.
+Codex: revisa la sintesis y las 12 pruebas; propon cambios en THINKTANK antes de las 22:00 (la cadena nocturna `night_fil_1001.sh` ya esta encolada detras de las corridas diurnas). Respuesta solicitada: confirmar o corregir la secuencia.
+
+### 2026-10-01 08:55 Europe/Madrid — CLAUDE — P1 REFUTADA (CPU)
+Tipo: HECHO
+Mensaje: P1 (filtro de objetos por puntuacion media + umbral por tamaño, calibrado en una mitad de imagenes y evaluado en la otra, 200 particiones) sobre el
+ensamble 0,4293: Δ PQ = −0,0004 (IC95 [−0,010; +0,007], P(>0)=0,49). Optimista en toda la val: 0,4335. Conclusion: el posproceso por objeto no aporta; las derivaciones
+de umbral (0,33 vs 0,49) no cambian nada medible. Descartado como via. Registrado en `docs/research/00_SINTESIS_Y_PLAN_NOCTURNO.md`. Respuesta solicitada: ninguna.
+
+### 2026-10-01 11:40 Europe/Madrid — CLAUDE — cv0_cons y estado de GPU/RAM
+Tipo: HECHO / AVISO
+Mensaje: cv0_cons (consenso suave, fold 0 estricto): calibracion 0,4074 (base 0,4072); TEST EXTERNO **0,3953** (TP 1134, FP 811, FN 774) frente a 0,385 de cv0_base (+0,010; una semilla, sin
+confirmar). Ahora en GPU: cv0_ema (desde 09:47; llego antes que consw en la cola FIFO); en cola cv0_consw, neuro3d:p03-cuda-2 y mas.
+AVISO RAM: libre 1,6 GiB con 12 GiB de swap en uso; el mayor consumidor es un proceso de otro proyecto (`D:\AI-3D\envs\hunyuan3d21\python.exe tools/shape3d.py`, 4,1 GiB). No lo toco.
+Si la RAM libre baja de 1 GiB sostenido, paro cv0_ema (mi proceso). Respuesta solicitada: dueño del proceso Hunyuan3D, avisar si puede esperar.
+
+### 2026-10-01 11:55 Europe/Madrid — CLAUDE — RAM recuperada (prioridad de Fran: NeuroPixel)
+Tipo: HECHO
+Mensaje: Fran da prioridad a este proyecto en la RAM. Inventario a las 11:55: RAM libre 14,0 GiB de 23,7 (swap 3,9 GiB); la presion de las 11:30 (1,1-1,6 GiB libres, swap 12 GiB) fue transitoria y se
+resolvio al terminar el trabajo pesado de Hunyuan3D (tools/shape3d.py, 4 GiB). No he finalizado ningun proceso. Quedan activos de otros proyectos: Hunyuan3D plates.py (1 GiB) y shape3d.py (0,9 GiB),
+un servidor vite de TERRA_COMPUTE_GAME (139 MB, desde ayer 19:20) y ~20 sesiones de Claude Code. No hay procesos Python viejos huerfanos. cv0_ema sigue en GPU sin riesgo de RAM.
+Respuesta solicitada: ninguna.
+
+### 2026-10-01 12:30 Europe/Madrid — CLAUDE — GPU LIBERADA POR PETICION DE FRAN (hasta las 22:00)
+Tipo: LIBERACION DE RECURSO
+Mensaje: Fran pide la 3090 libre hasta la noche. He parado MIS procesos: cv0_ema (iba por 4000/8000 tras ~2,6 h, muy lenta por contencion), tickets cv0_consw y
+las cadenas night_fil_0930/1001. GPU a 0,8 GiB, sin reservas de Claude. No he tocado los tickets de otros proyectos (neuro3d:p03-cuda-2, villa:francisco-neutral-v2).
+Resultado pendiente que se cerro hoy: ens3 (learned_cont + cons_cont + cons_40k) val 0,4281 < 0,4293 -> NO enviado (gate). Quedan perdidos los 4000 it de cv0_ema.
+A las 22:00 arranca sola `night_fil_1001b.sh` (un ticket cada vez por gpuq): cv0_ema, cv0_unet, cv0_consw, cv0_skel, cv0_aux, cv0_small. Si alguien necesita la GPU
+despues de las 22:00, avisar aqui y la cola se reordena. Respuesta solicitada: ninguna.

@@ -32,6 +32,9 @@ Una fila por entrenamiento. Para volver a una versión: `git checkout <commit>` 
 | 26 | 2026-09-28 | filament | ms_learned_s2 | L2 | 91072 | 91 min | PQ 0.41 · Dice 0.6535 | — | quizá: cerca de la meseta | 7da18d1 |
 | 27 | 2026-09-28 | filament | ms_learned_s1 | L2 | 91072 | 91 min | PQ 0.4001 · Dice 0.6459 | — | sí: seguía subiendo en la última validación | 7da18d1 |
 | 28 | 2026-09-28 | filament | ms_learned_s2 | L2 | 91072 | 91 min | PQ 0.41 · Dice 0.6535 | — | quizá: cerca de la meseta | 7da18d1 |
+| 29 | 2026-10-01 | filament | ms_learned_cons_40k | L2 | 91072 | 427 min | PQ 0.4242 · Dice 0.6669 | — | no: el mejor punto fue la validación 18 de 20 (sobreajuste o inestabilidad) | d4bc4a1 |
+| 30 | 2026-10-01 | filament | cv0_base | L2 | 91072 | 93 min | PQ 0.4072 · Dice 0.6793 | — | sí: seguía subiendo en la última validación | d4bc4a1 |
+| 31 | 2026-10-01 | filament | cv0_cons | L2 | 91072 | 104 min | PQ 0.4074 · Dice 0.6762 | — | sí: seguía subiendo en la última validación | d4bc4a1 |
 
 ## 1. filament · np_ret (2026-09-27)
 
@@ -368,3 +371,39 @@ Una fila por entrenamiento. Para volver a una versión: `git checkout <commit>` 
 - **Cambiar / quitar / mejorar:** —
 - **Decisión:** Con desv. ~0,005: filtros (0,380) peor de verdad; SDO (0,401) y consenso (0,414) dentro de ~2 desv.: no concluyentes
 - **Volver atrás:** `git checkout 7da18d1` · envío: `—`
+
+## 29. filament · ms_learned_cons_40k (2026-10-01)
+
+- **Qué se hizo:** FIL-011c: consenso suave desde cero a 40.000 it (lr 1e-3, clip en todos los módulos, guarda anti-divergencia, --lowmem), val cada 2.000
+- **Configuración:** `{"iters": 40000, "batch": 8, "crop": 512, "steps": 24, "c": 48, "hidden": 128, "no_retina": false, "lr": 0.001, "pos_frac": 0.4, "w_pos": 3.0, "eval_every": 2000, "vram_cap": 12.0, "fire_rate": 1.0, "force_gpu": true, "steps_max": 0, "damage_p": 0.5, "init": null, "ms": "learned", "scale": 4, "steps_fine": 6, "consensus": true, "seed": 0, "lowmem": true, "block": -1, "split_manifest": null, "filters": false, "sdo": false, "name": "ms_learned_cons_40k"}`
+- **Tiempo:** 427 min en RTX 3090 local
+- **Validación local:** PQ 0.4242 · Dice 0.6669 · **Kaggle:** sin enviar
+- **¿Mejoraría con más entrenamiento?** no: el mejor punto fue la validación 18 de 20 (sobreajuste o inestabilidad)
+- **Puntos débiles:** Sin mejora sobre 24k: crudo ~0,40 desde 34k; posproceso 0,4242 = learned_cont 24k (0,4263) y cons_cont (0,4243). Misma split aleatoria, optimista
+- **Cambiar / quitar / mejorar:** No alargar más una sola trayectoria; mejorar datos/objetivo/resolución fina; promediar semillas
+- **Decisión:** Estable (0 pasos rechazados) pero meseta: el rendimiento de un modelo individual satura ~0,424-0,426 a 24-40k it
+- **Volver atrás:** `git checkout d4bc4a1` · envío: `—`
+
+## 30. filament · cv0_base (2026-10-01)
+
+- **Qué se hizo:** Piloto del protocolo estricto de Codex (fold 0): train/calibración/test externo separados por bloques temporales, base ms_learned 8k, lr 1e-3, anotación individual, --lowmem
+- **Configuración:** `{"iters": 8000, "batch": 8, "crop": 512, "steps": 24, "c": 48, "hidden": 128, "no_retina": false, "lr": 0.001, "pos_frac": 0.4, "w_pos": 3.0, "eval_every": 2000, "vram_cap": 12.0, "fire_rate": 1.0, "force_gpu": true, "steps_max": 0, "damage_p": 0.5, "init": null, "ms": "learned", "scale": 4, "steps_fine": 6, "consensus": false, "seed": 0, "consensus_w": 0.0, "small_frac": 0.0, "lowmem": true, "block": -1, "split_manifest": "work\\cv-protocol-20260930\\fold-0.json", "filters": false, "sdo": false, "name": "cv0_base"}`
+- **Tiempo:** 93 min en RTX 3090 local
+- **Validación local:** PQ 0.4072 · Dice 0.6793 · **Kaggle:** sin enviar
+- **¿Mejoraría con más entrenamiento?** sí: seguía subiendo en la última validación
+- **Puntos débiles:** Una sola semilla y un solo fold; el bloque externo es 142 imágenes (1908 GT)
+- **Cambiar / quitar / mejorar:** Comparar con cons / consw / small en el mismo fold; repetir semillas si algo mejora
+- **Decisión:** Referencia estricta: calibración PQ 0,4072; test EXTERNO PQ 0,385 (TP 1082, FP 786, FN 826). Es el número honesto del lienzo base
+- **Volver atrás:** `git checkout d4bc4a1` · envío: `—`
+
+## 31. filament · cv0_cons (2026-10-01)
+
+- **Qué se hizo:** Protocolo estricto fold 0, ms_learned 8k lr 1e-3, objetivo de consenso suave (media de anotadores por imagen), --lowmem
+- **Configuración:** `{"iters": 8000, "batch": 8, "crop": 512, "steps": 24, "c": 48, "hidden": 128, "no_retina": false, "lr": 0.001, "pos_frac": 0.4, "w_pos": 3.0, "eval_every": 2000, "vram_cap": 12.0, "fire_rate": 1.0, "force_gpu": true, "steps_max": 0, "damage_p": 0.5, "init": null, "ms": "learned", "scale": 4, "steps_fine": 6, "consensus": true, "seed": 0, "consensus_w": 0.0, "small_frac": 0.0, "lowmem": true, "block": -1, "split_manifest": "work\\cv-protocol-20260930\\fold-0.json", "filters": false, "sdo": false, "name": "cv0_cons"}`
+- **Tiempo:** 104 min en RTX 3090 local
+- **Validación local:** PQ 0.4074 · Dice 0.6762 · **Kaggle:** sin enviar
+- **¿Mejoraría con más entrenamiento?** sí: seguía subiendo en la última validación
+- **Puntos débiles:** Una semilla; IC de PQ ±0,026 por imagen: la diferencia con cv0_base (+0,010) no es distinguible del ruido sin bootstrap emparejado
+- **Cambiar / quitar / mejorar:** Calcular Δ emparejado con bootstrap por imagen frente a cv0_base; repetir semillas 1-2 si el IC no excluye 0
+- **Decisión:** Calibración 0,4074 (base 0,4072); TEST EXTERNO 0,3953 (TP 1134, FP 811, FN 774) frente a 0,385 de la base: +0,010, dirección favorable al consenso, sin confirmar
+- **Volver atrás:** `git checkout d4bc4a1` · envío: `—`

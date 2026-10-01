@@ -59,3 +59,20 @@ Leer al entrar en un chat nuevo, después de `CLAUDE.md` y `coordinacion/README.
 ## Git
 
 Commit local `087f0a8` sin push. El push público del 27-09 (`7da18d1`) queda cubierto por DEC-009 al publicar en Kaggle.
+
+
+## ACTUALIZACION 2026-10-01 21:05 (chat 2 de Claude)
+
+- **GPU:** Fran la liberó hasta las 22:00. A las 22:00 arranca sola `kaggle/filament/night_fil_1001b.sh` (un ticket gpuq cada vez): cv0_ema, cv0_unet (control U-Net w=11),
+  cv0_consw, cv0_skel, cv0_aux, cv0_small — protocolo estricto de Codex, fold 0, 8k, lr 1e-3, semilla 0, `--lowmem`. Cada una ~80-95 min (más si hay contención).
+  Registrar con `kaggle/log_run.py` (el resultado final del protocolo estricto está en `runs/<nombre>/result.json` -> `heldout`).
+- **Referencias estrictas (fold 0, test externo):** cv0_base PQ 0,385 (TP 1082 FP 786 FN 826); cv0_cons 0,3953 (TP 1134 FP 811 FN 774). Sin bootstrap emparejado aun (guardar probabilidades
+  del bloque externo para poder calcularlo; ver `docs/research/06_bootstrap_pq.py`).
+- **Investigación (RES-001):** `docs/research/00_SINTESIS_Y_PLAN_NOCTURNO.md` + informes 01..06; 12 pruebas P1-P12. P1 (filtro de objetos) REFUTADA. Flags nuevos en `train_fil.py`:
+  `--ema`, `--unet`, `--skel-w`, `--aux-w/--aux-steps`, `--consensus-w`, `--small-frac`, `--lowmem`, `--smoke`, `--split-manifest`, `--block`.
+- **Hallazgos para decidir:** PQ de val con IC95 ±0,026 (ensamble 2 vs 1: +0,003 [−0,006; +0,013]) -> decidir con varios folds y bootstrap emparejado; FN pequeños = ruido de anotador;
+  Diercke et al. (arXiv 2402.15407): autoentrenamiento GONG da FP; no usar MAGFiLO público (posible fuga, sin verificar).
+- **Envío vigente:** 56642040 (público 0,35; val 0,4293). Ensambles de 3 y 4 modelos (val 0,4281 y 0,426) no pasan el gate. Cupo diario de envíos: 5.
+- **Pendiente ordenado:** (1) leer resultados nocturnos y compararlos con 0,385/0,3953 por bootstrap emparejado; (2) semillas 1-2 de lo prometedor (cons, ema, lo que gane); (3) P10 PIL del magnetograma
+  (código por escribir), P9 deformación elástica, P3 TTA 8 vistas en GPU; (4) DOC-002 cuaderno público Kaggle (código completo cerca del cierre 15-nov), DOC-001 informe + GIFs; (5) contexto temporal FIL-015 (Codex).
+- **Lecciones operativas:** nunca anotar horas sin `date`; el reloj del sistema manda. Antes de lanzar GPU mirar `gpuq.py status` y el tablón (Fran cede la GPU a Neuro3D/villa). RAM: 3 GiB libres es habitual con ~20 sesiones de Claude; `--lowmem` y `--ram 2` en gpuq.

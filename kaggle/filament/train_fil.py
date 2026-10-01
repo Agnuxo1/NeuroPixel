@@ -113,6 +113,12 @@ def main():
     ap.add_argument("--steps-fine", type=int, default=6, help="pasos del lienzo fino (--ms learned)")
     ap.add_argument("--consensus", action="store_true", help="objetivo = media de anotadores (FIL-005)")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--smoke", type=int, default=0, help="prueba de humo: limita validación/heldout a N anotaciones")
+    ap.add_argument("--ema", type=float, default=0.0, help="P4: EMA de pesos (p. ej. 0,999); la validación usa los pesos EMA")
+    ap.add_argument("--unet", type=int, default=0, help="P5: control U-Net con anchura w (14 ~ 91k params); sin lienzo")
+    ap.add_argument("--skel-w", type=float, default=0.0, help="P6: Skeleton Recall (peso) sobre el esqueleto del objetivo")
+    ap.add_argument("--aux-w", type=float, default=0.0, help="P7: pérdida auxiliar en pasos intermedios del lienzo grueso (peso)")
+    ap.add_argument("--aux-steps", default="8,16", help="pasos intermedios para --aux-w")
     ap.add_argument("--consensus-w", type=float, default=0.0, help="FIL-014: peso menor donde discrepan los anotadores: w=1-L*4c(1-c) (con --consensus)")
     ap.add_argument("--small-frac", type=float, default=0.0, help="FIL-014: fraccion de recortes centrados en objetos pequenos (<250 px)")
     ap.add_argument("--lowmem", action="store_true", help="imagenes y etiquetas por mmap (RSS ~1 GB menos; mismos resultados)")
@@ -141,13 +147,19 @@ def main():
         tr, va, heldout = (protocol['indices'][g] for g in ('train', 'calibration', 'test'))
     else:
         tr, va = fil.split(meta) if a.block < 0 else fil.split_blocks(meta, 5, a.block)
+    if a.smoke:
+        va = va[:a.smoke]
+        heldout = heldout[:a.smoke] if heldout is not None else None
     model = NeuroPixel(len(fil.VOCAB), (0, 0), c=a.c, hidden=a.hidden, retina=not a.no_retina,
                        fire_rate=a.fire_rate).to(dev)
     if a.init:
         model.load_state_dict(torch.load(HERE / "runs" / a.init / "best.pt", map_location=dev))
     ms, fwd = None, fil.seg_forward
+    if a.unet:
+        model = multiscale.SmallUNet(a.unet).to(dev)
+        fwd = lambda m, x, st, ckpt=True, damage=None: m(x)
     params = list(model.parameters())
-    if a.ms:
+    if a.ms and not a.unet:
         ms = multiscale.MultiScale(a.ms, c=a.c, hidden=a.hidden, scale=a.scale).to(dev)
         params += list(ms.parameters())
         fwd = lambda m, x, st, ckpt=True, damage=None: multiscale.ms_forward(m, ms, x, st, a.steps_fine, ckpt, damage)
@@ -184,6 +196,8 @@ def main():
             first.setdefault(meta["ann"][k]["img"], k)
         tr = list(first.values())
     wts = torch.tensor([1.0, a.w_pos], device=dev)
+    ema = [q.detach().clone() for q in params] if a.ema > 0 else None
+    aux_steps = tuple(int(v) for v in a.aux_steps.split(",")) if a.aux_w > 0 and a.ms and not a.unet else None
     t0, best, log, skipped_n = time.time(), -1, [], 0
     for it in range(1, a.iters + 1):
         x, y = sample_batch(imgs, labs, meta, tr, a.batch, a.crop, a.pos_frac, rng, dev, by_img, small)
@@ -195,7 +209,10 @@ def main():
                 dmg = (int(rng.integers(2, steps)), keep)
         amp_dtype = torch.bfloat16 if dev.type == "cuda" and torch.cuda.is_bf16_supported() else torch.float16
         with torch.autocast("cuda", dtype=amp_dtype, enabled=dev.type == "cuda"):
-            lg = fwd(model, x, steps, damage=dmg)
+            if aux_steps:
+                lg, aux = multiscale.ms_forward(model, ms, x, steps, a.steps_fine, True, dmg, aux_steps=aux_steps)
+            else:
+                lg = fwd(model, x, steps, damage=dmg)
         lg = lg.float()
         p = lg.softmax(1)[:, 1]
         yf = y.float()
@@ -207,6 +224,16 @@ def main():
         else:
             ce = F.cross_entropy(lg, y, weight=wts)
         loss = ce + dice_l
+        if a.skel_w > 0:                                         # P6: Skeleton Recall (esqueleto del objetivo, tubo de 1 px)
+            from skimage.morphology import skeletonize
+            sk = np.stack([skeletonize(m) for m in (yf.detach().cpu().numpy() > 0.5)])
+            S = F.max_pool2d(torch.from_numpy(sk).float().to(dev)[:, None], 3, 1, 1)[:, 0]
+            loss = loss + a.skel_w * (1 - (p * S).sum() / (S.sum() + 1))
+        if aux_steps:                                            # P7: pérdida auxiliar en pasos intermedios (resolución gruesa)
+            tgt = F.avg_pool2d(yf[:, None], a.scale)[:, 0]
+            for ag in aux:
+                lpa = ag.float().log_softmax(1)
+                loss = loss + a.aux_w * (-(tgt * lpa[:, 1] * wts[1] + (1 - tgt) * lpa[:, 0]).mean()) / len(aux)
         if not torch.isfinite(loss) or loss.item() > 20:         # guarda anti-divergencia (FIL-011 exploto a 14k it)
             skipped_n += 1
             opt.zero_grad(set_to_none=True); sch.step()
@@ -223,7 +250,16 @@ def main():
             continue
         opt.step()
         sch.step()
+        if ema is not None:
+            with torch.no_grad():
+                for e_, q in zip(ema, params):
+                    e_.mul_(a.ema).add_(q.detach(), alpha=1 - a.ema)
         if it % a.eval_every == 0 or it == a.iters:
+            if ema is not None:                                  # evaluar y guardar con pesos EMA
+                bak = [q.detach().clone() for q in params]
+                with torch.no_grad():
+                    for q, e_ in zip(params, ema):
+                        q.copy_(e_)
             res, _ = evaluate(model, imgs, labs, meta, va, a.steps, dev, fwd=fwd)
             if ms:
                 ms.train()
@@ -236,6 +272,10 @@ def main():
                 torch.save(model.state_dict(), out_dir / "best.pt")
                 if ms:
                     torch.save(ms.state_dict(), out_dir / "best_ms.pt")
+            if ema is not None:                                  # volver a los pesos de entrenamiento
+                with torch.no_grad():
+                    for q, b_ in zip(params, bak):
+                        q.copy_(b_)
     # ajuste del posprocesado en validación con el mejor modelo
     model.load_state_dict(torch.load(out_dir / "best.pt", map_location=dev))
     if ms:
