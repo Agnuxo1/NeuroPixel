@@ -309,7 +309,7 @@ Una fila por entrenamiento. Para volver a una versión: `git checkout <commit>` 
 - **¿Mejoraría con más entrenamiento?** sí: seguía subiendo en la última validación
 - **Puntos débiles:** FN 561 (peor); el filtro por píxel no ayuda a una red que ya aprende sus filtros; Sato/DoG normalizados por imagen pueden amplificar ruido
 - **Cambiar / quitar / mejorar:** Descartar como sustituto; como mucho añadir un canal extra conservando el gris
-- **Decisión:** PEOR: 0,3799 frente a 0,4061 sin filtros. La retina ya aprende lo que dan los filtros clásicos
+- **Decisión:** PEOR: 0,3799 frente a 0,4061 sin filtros. La retina ya aprende lo que dan los filtros clásicos | NOTA 01-10: medido con geometria del disco errónea (radio ~11 % inflado en la alineación SDO/limbo); NO concluyente, se repite (cv0_sdo2)
 - **Volver atrás:** `git checkout 7da18d1` · envío: `—`
 
 ## 24. filament · ms_learned_sdo (2026-09-28)
@@ -321,7 +321,7 @@ Una fila por entrenamiento. Para volver a una versión: `git checkout <commit>` 
 - **¿Mejoraría con más entrenamiento?** quizá: cerca de la meseta
 - **Puntos débiles:** Empate: 0,4009 frente a 0,4061 (dentro del ruido probable de semilla); menos FN a mitad de curva pero más FP; 5,5 % canales ausentes
 - **Cambiar / quitar / mejorar:** Medir la varianza de semillas antes de decidir; v2: dar las líneas de inversión de polaridad (PIL) del magnetograma ya calculadas; entrenamiento largo
-- **Decisión:** Sin mejora medible a 8k; no se descarta hasta conocer la varianza de semillas
+- **Decisión:** Sin mejora medible a 8k; no se descarta hasta conocer la varianza de semillas | NOTA 01-10: medido con geometria del disco errónea (radio ~11 % inflado en la alineación SDO/limbo); NO concluyente, se repite (cv0_sdo2)
 - **Volver atrás:** `git checkout 7da18d1` · envío: `—`
 
 ## 25. filament · ms_learned_s1 (2026-09-28)

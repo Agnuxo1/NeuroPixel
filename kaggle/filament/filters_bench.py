@@ -32,11 +32,27 @@ import fil  # noqa: E402
 
 
 def disk_geometry(img):
-    m = img > max(10, np.percentile(img, 30) * 0.5)
-    ys, xs = np.nonzero(m)
-    cy, cx = ys.mean(), xs.mean()
-    r = np.sqrt(m.sum() / np.pi)
-    return cy, cx, r, m
+    """Centro y radio del disco solar en una imagen Halfa 1024 (uint8) y máscara circular.
+
+    CORREGIDO 01-10 (antes: umbral bajo que incluía el halo oscuro y daba radio ~505 px en TODAS las imágenes, ~11 % de más):
+    centro = centroide del disco (umbral 0,6 x mediana central); radio = caída más fuerte del perfil radial hacia fuera
+    en [430, 480] px (el limbo brillante), que da ~454 px."""
+    import cv2
+    img = np.asarray(img)
+    M = float(np.median(img[412:612, 412:612]))
+    m = (img > 0.6 * M).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(m, connectivity=8)
+    k = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+    ys, xs = np.nonzero(lab == k)
+    cy, cx = float(ys.mean()), float(xs.mean())
+    yy, xx = np.indices(img.shape)
+    rr = np.hypot(yy - cy, xx - cx)
+    rb = rr.astype(int)
+    prof = np.bincount(rb.ravel(), img.ravel().astype(np.float64)) / np.maximum(np.bincount(rb.ravel()), 1)
+    sm = np.convolve(prof, np.ones(3) / 3, "same")
+    g = np.diff(sm)
+    r = 430 + int(np.argmin(g[430:480])) + 1
+    return cy, cx, float(r), rr < r * 0.995
 
 
 def limb(img):

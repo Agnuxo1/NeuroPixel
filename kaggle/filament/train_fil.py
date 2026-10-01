@@ -126,6 +126,7 @@ def main():
     ap.add_argument("--split-manifest", type=Path, help="train/calibracion/test independientes; incompatible con --block y --init")
     ap.add_argument("--filters", action="store_true", help="retina con [limbo, sato, DoG] (FIL-007)")
     ap.add_argument("--sdo", action="store_true", help="retina con [Halfa, AIA 304, HMI] reales (FIL-008)")
+    ap.add_argument("--pil", action="store_true", help="P10: retina con [Halfa, PIL del magnetograma, HMI] (pil_channels.py)")
     ap.add_argument("--name", default="np_ret")
     a = ap.parse_args()
     if a.split_manifest and (a.block >= 0 or a.init):
@@ -133,7 +134,9 @@ def main():
     dev = choose_device("cuda", threads=4, vram_cap_gib=a.vram_cap, force_gpu=a.force_gpu)
     torch.manual_seed(a.seed)
     imgs, labs, meta = fil.load_cache()
-    if a.sdo:                                            # canales solares reales coetaneos (mmap)
+    if a.pil:                                            # P10: Halfa + PIL + HMI (mmap)
+        imgs, labs = np.load(fil.CACHE / "imgs_pil.npy", mmap_mode="r"), np.asarray(labs)
+    elif a.sdo:                                          # canales solares reales coetaneos (mmap)
         imgs, labs = np.load(fil.CACHE / "imgs_sdo.npy", mmap_mode="r"), np.asarray(labs)
     elif a.filters:                                      # 3 canales filtrados, leidos de disco (mmap)
         imgs, labs = np.load(fil.CACHE / "imgs3.npy", mmap_mode="r"), np.asarray(labs)
