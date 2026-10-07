@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T17:04:41+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T17:09:15+00:00",
+  "active_item": 16,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -135,7 +135,8 @@
     {
       "item": 16,
       "title": "Causal scanner and null-space analysis",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T17:09:15+00:00"
     },
     {
       "item": 17,
@@ -275,7 +276,7 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 16,
+  "next_item": 17,
   "item7": {
     "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
@@ -1068,5 +1069,16 @@
     "report": "docs/research/15_results.md",
     "report_sha256": "f56d0213e1353b2c126c5ea7bc957ef2f161fb5c90de5a11c503f68a6f77a935",
     "claim_status": "Finite dynamics measured; convergence, useful stable memory and universal stability unestablished."
+  },
+  "item16": {
+    "stage": "Source and scientific evidence audit; no numerical execution",
+    "opened_at_utc": "2026-10-07T17:09:15+00:00",
+    "opened_after_item15_closure_commit": "6db1d8d894a732131ea05175bbba1574dee872ff",
+    "scope": "Causal meaning and information limits of the scanner; pre/post-update time contracts; bounded native controls only after a prospective plan.",
+    "model_training_started": false,
+    "execution_plan_frozen": false,
+    "sequential_policy": "Items17–30 unopened until closure.",
+    "resources": "Source/review90 minutes; RAM>=8GiB, aggregateCPU<=4, bounded public CPU-only execution with archival reserve if separately frozen.",
+    "historical_H1": "closed and not supported; unchanged"
   }
 }
