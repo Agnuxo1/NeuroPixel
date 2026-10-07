@@ -412,3 +412,10 @@ Closed only item13 after source S=9618ba8aae3b83d95a2813f99dd72c9d2e1d148a, succ
 Expansion allocation/grounding/dtype and battery label faults are corrected on the isolated source branch. Constructed witnesses distinguish vocabulary capacity, softmax competition, projected-split overlap and semantic learning. Historical positive-only few-shot summaries and low-base-competence distractor retention do not establish semantic acquisition or robust high-competence binding. No historical H1 revision, external replication or Nobel-level result.
 
 All numerical stages completed and zero active Actions runs were verified. Release numerical and source/review reservations for SCI-013. Items14–30 remain unopened in this closure; item14 may open in a separate subsequent commit. Existing RAM>=8GiB, aggregateCPU<=4, bounded public CPU-only, no main merge/paid/GPU/outreach/billing/access-change constraints remain.
+
+
+## 2026-10-07T15:18:42+00:00 — SCI-014 opened after SCI-013 closure
+
+Item13 closure dd9930694e5679e0a514525840a83b4c760f2730 was published and report/progress/README hashes read back. Only item14 is now active: assisted state repair versus stored memory. Inspect input reinjection, damage hooks, state continuation and historical evidence before freezing any numerical comparison. Distinguish competence, survival and actual recovery. Preserve source-version and old-result limits; H1 remains closed/not supported. Items15–30 remain unopened.
+
+Reserve source/review work90 minutes. No numerical runner active or reserved at opening. Any later public CPU probe must have finite deadlines, RAM>=8GiB, aggregateCPU<=4, process supervision and archival time. Existing isolated-branch and no paid/GPU/main-merge/outreach/access/billing-change constraints remain. Source, evidence and primary-literature reviewers are justified parallel subtasks within item14; root integrates under the established JEV-unavailable conservative fallback.

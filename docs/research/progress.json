@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T15:17:10+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T15:18:42+00:00",
+  "active_item": 14,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -103,7 +103,8 @@
     {
       "item": 14,
       "title": "Assisted repair versus stored memory",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T15:18:42+00:00"
     },
     {
       "item": 15,
@@ -253,7 +254,7 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 14,
+  "next_item": 15,
   "item7": {
     "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
@@ -895,6 +896,19 @@
     "report_bytes": 25243,
     "peer_review": "results/research/13_validation/final_peer_reviews.json",
     "claim_status": "Implementation contracts verified after correction; learned new-token semantics and high-competence distractor robustness not established",
-    "external_independent_replication": false
+    "external_independent_replication": false,
+    "closure_commit": "dd9930694e5679e0a514525840a83b4c760f2730"
+  },
+  "item14": {
+    "stage": "Opening mechanistic, historical-evidence and primary-source audit",
+    "opened_at_utc": "2026-10-07T15:18:42+00:00",
+    "opened_after_item13_closure_commit": "dd9930694e5679e0a514525840a83b4c760f2730",
+    "scope": "Distinguish recovery of damaged recurrent state while source tokens are repeatedly available from autonomous recovery of stored content after the source is removed. Trace damage/readout/input paths, examine historical and saved damage evidence, define paired causal controls, and execute a bounded native diagnostic if interpretable.",
+    "execution_plan_frozen": false,
+    "model_training_started": false,
+    "historical_H1": "closed and not supported; unchanged",
+    "sequential_policy": "Items15–30 remain unopened until item14 feasible investigation is closed.",
+    "resources": "Source/review reservation90 minutes; no numerical runner at opening. Any CPU execution requires a frozen finite plan, RAM>=8GiB, aggregateCPU<=4 and archival reserve.",
+    "routing": "Established conservative root integration with independently justified source, evidence and primary-literature reviewers; no callable JEV capability."
   }
 }

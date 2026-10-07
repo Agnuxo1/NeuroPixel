@@ -1,0 +1,47 @@
+{
+  "item": 13,
+  "kind": "publication_transport_errors",
+  "scientific_results_changed": false,
+  "initial_commit": "dd9930694e5679e0a514525840a83b4c760f2730",
+  "attempts": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "GithubGraphQLAPIError: [{'message': 'Something went wrong while executing your query on 2026-10-07T15:17:18Z. Please include `27C0:358C89:26BD41C:268B581:6AC6627D` when reporting this issue.'}]"
+        }
+      ],
+      "structuredContent": {
+        "error": "GithubGraphQLAPIError: [{'message': 'Something went wrong while executing your query on 2026-10-07T15:17:18Z. Please include `27C0:358C89:26BD41C:268B581:6AC6627D` when reporting this issue.'}]",
+        "error_code": "UNKNOWN"
+      },
+      "isError": true
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "GithubGraphQLAPIError: [{'message': 'Something went wrong while executing your query on 2026-10-07T15:17:31Z. Please include `EEED:E4EAF:245D4BD:242F11B:6AC66289` when reporting this issue.'}]"
+        }
+      ],
+      "structuredContent": {
+        "error": "GithubGraphQLAPIError: [{'message': 'Something went wrong while executing your query on 2026-10-07T15:17:31Z. Please include `EEED:E4EAF:245D4BD:242F11B:6AC66289` when reporting this issue.'}]",
+        "error_code": "UNKNOWN"
+      },
+      "isError": true
+    }
+  ],
+  "recovery": "Verified unchanged branch head and direct commit parent. A non-forced fast-forward update without the failing GraphQL expected_sha transport succeeded. No forced update or changed head.",
+  "successful_update": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "success": true
+    },
+    "isError": false
+  }
+}
