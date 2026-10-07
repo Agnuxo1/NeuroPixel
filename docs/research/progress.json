@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T15:18:42+00:00",
+  "recorded_at": "2026-10-07T15:34:14+00:00",
   "active_item": 14,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -104,7 +104,11 @@
       "item": 14,
       "title": "Assisted repair versus stored memory",
       "status": "in_progress",
-      "opened_at_utc": "2026-10-07T15:18:42+00:00"
+      "opened_at_utc": "2026-10-07T15:18:42+00:00",
+      "probe_status": "frozen_for_first_execution",
+      "protocol": "14_probe_protocol.md",
+      "plan": "14_probe_plan.json",
+      "frozen_at_utc": "2026-10-07T15:34:14+00:00"
     },
     {
       "item": 15,
@@ -900,15 +904,25 @@
     "closure_commit": "dd9930694e5679e0a514525840a83b4c760f2730"
   },
   "item14": {
-    "stage": "Opening mechanistic, historical-evidence and primary-source audit",
+    "stage": "Frozen for bounded constructed CPU census",
     "opened_at_utc": "2026-10-07T15:18:42+00:00",
     "opened_after_item13_closure_commit": "dd9930694e5679e0a514525840a83b4c760f2730",
     "scope": "Distinguish recovery of damaged recurrent state while source tokens are repeatedly available from autonomous recovery of stored content after the source is removed. Trace damage/readout/input paths, examine historical and saved damage evidence, define paired causal controls, and execute a bounded native diagnostic if interpretable.",
-    "execution_plan_frozen": false,
+    "execution_plan_frozen": true,
     "model_training_started": false,
     "historical_H1": "closed and not supported; unchanged",
     "sequential_policy": "Items15–30 remain unopened until item14 feasible investigation is closed.",
     "resources": "Source/review reservation90 minutes; no numerical runner at opening. Any CPU execution requires a frozen finite plan, RAM>=8GiB, aggregateCPU<=4 and archival reserve.",
-    "routing": "Established conservative root integration with independently justified source, evidence and primary-literature reviewers; no callable JEV capability."
+    "routing": "Established conservative root integration with independently justified source, evidence and primary-literature reviewers; no callable JEV capability.",
+    "probe_freeze_utc": "2026-10-07T15:34:14+00:00",
+    "probe_plan_sha256": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447",
+    "probe_contract_parent_methods": 5,
+    "probe_implementation_files": 18,
+    "constructed_trajectories": 216,
+    "constructed_endpoints": 1944,
+    "summary_rows": 324,
+    "optimization_steps": 0,
+    "learned_repair_benchmark_admitted": false,
+    "raw_arrays_planned": 88
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "item": 14,
+  "stage": "before_first_execution",
+  "scientific_results_generated": false,
+  "records": [
+    {
+      "kind": "audit_evidence_completeness",
+      "description": "Retain actual direct-native traces and model weights after all planned calls, enabling independent equality checks without changing computations.",
+      "preimage_blob": "5d99ec7b2bbc27ff24cba4d2cfd649e280b8d5ce"
+    },
+    {
+      "kind": "integration_import",
+      "description": "Align import with agreed repair_trace.py module name, no rule change.",
+      "preimage_blob": "0a571b86650ea45ea3546c1376fb2896b611dca4"
+    },
+    {
+      "kind": "failure_retention",
+      "description": "Write complete trace archive before expected-outcome checks and retain only assigned completed-case outputs on earlier exceptions.",
+      "preimage_blob": "ecc138cd4e98d27364436457c0bfa048c3440ae3"
+    },
+    {
+      "kind": "metric_unit_label",
+      "description": "Rename all-model/time correct count and state denominator162; no numerical change, no independent-sample claim.",
+      "native_preimage_blob": "785b188ecea8ce7b00c2e4bbeb3fc204439f9019",
+      "audit_preimage_blob": "2558bb155d7d6d0b2c86e92dcd1873e7a0bbcedc",
+      "native_final": "ff3dc172304a31a3089fc80a1fdf828a93ff06224d6255bd9666d24835ae41c3",
+      "audit_final": "7cecfcc3d9d10cae4e9830fee3a038e3eeb2805de8d21e11e5ed264d2b81b201"
+    }
+  ]
+}

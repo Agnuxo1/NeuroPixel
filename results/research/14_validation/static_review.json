@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "item": 14,
+  "reviewed_at_utc": "2026-10-07T15:33:39+00:00",
+  "status": "static_review_complete",
+  "execution_performed": false,
+  "architecture": {
+    "helper": "3dd1b6b7ef0e184edb0125eb98e6bb5afebc3a56",
+    "tests": "5739d7fab2f15213dae50ba075b023f50bf871dd",
+    "controller": "554a2a27f39de6389b61aa69bdc81673d36cb822",
+    "worker": "0cf60c89ec48606068ce5e2b9c12fded1bffc5ea",
+    "parent_tests": 5,
+    "issues": [],
+    "scope": "Full source/API/shape/timing/process-group/budget static review. No compilation or execution."
+  },
+  "scientific": {
+    "protocol": "bd507ac8e10b36edd0ac67dad3c628cd62cae049",
+    "producer": "211c8dcd5055a7aaecef9ee3228b61e7239af48d",
+    "auditor": "2304a38b279e04f7c6d968c46cc73a391b50be1d",
+    "issues": [],
+    "unit_label_correction": "correct_count_across_models_and_times with162 repeated endpoints;1/6 bound per model/time, not162 independent trials.",
+    "interpretation": "Three constructed controls and matched timing/source/lesion comparisons; no learned competence, arbitrary-content recovery after total erasure, or long-time stability."
+  },
+  "root": {
+    "source_readback": true,
+    "files_reviewed": [
+      "helper",
+      "tests",
+      "producer",
+      "auditor",
+      "controller",
+      "worker",
+      "workflow",
+      "protocol",
+      "historical note"
+    ],
+    "issues": [],
+    "independent_json_reconstruction_prospective": "ffd5278082913ce2754239279478e02035b36c5d115b61b0ad63a0b8228f397c"
+  },
+  "external_independent_replication": false
+}
