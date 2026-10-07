@@ -1,8 +1,24 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T07:51:53.780642+00:00",
+  "created_at_utc": "2026-10-07T07:52:02.169366+00:00",
   "files": {
+    "contract_tests.log": {
+      "bytes": 49,
+      "sha256": "d1da1da0a453d6152431563efa6216a249abd78d0fb582e99b1fa732bfcff7ef"
+    },
+    "contract_tests_environment.json": {
+      "bytes": 9818,
+      "sha256": "7b4defd18b8b024c56503a45cfaadb96378a704319f5f9f82040cfb43e04927e"
+    },
+    "contract_tests_resource_monitor.json": {
+      "bytes": 891,
+      "sha256": "31abb3599eb437b5a9644dd6c16a4adbc56a12d61bd8e1474c45c212ed3f59e0"
+    },
+    "contract_tests_status.json": {
+      "bytes": 907,
+      "sha256": "bdb0d2d548c7d4b2b6510a3666b71f94da0225ba3517cb72ab20aeae6be166f3"
+    },
     "execution_plan.json": {
       "bytes": 6890,
       "sha256": "7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04"
@@ -19,9 +35,17 @@
       "bytes": 6118,
       "sha256": "3c1308c1948a69a7927e41f87ec6f387e5e287319caadfdd6be5b794dd54cd02"
     },
+    "test_collection.json": {
+      "bytes": 4296,
+      "sha256": "264d96d383b0d76412c4b61414e35123819bae5be86d122aa400a1e72e71d724"
+    },
+    "tests.xml": {
+      "bytes": 5469,
+      "sha256": "2e8def21d0627c63bae2b2a3c24d4579f12888155ed1bcdba4fc972f399cd462"
+    },
     "worker_status.json": {
-      "bytes": 948,
-      "sha256": "9b9beb4a53a54ad05bd4c6edecee4ac389ef3b9e7562bbc136976f746b432877"
+      "bytes": 2112,
+      "sha256": "0b06485563bc9b08779aa8d22a9e7fb664f2b428c97f2883687359333d836685"
     }
   },
   "final": false,
