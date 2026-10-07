@@ -1,0 +1,80 @@
+{
+  "item": 8,
+  "source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "run_id": 37584119610,
+  "provider_response": {
+    "jobs": [
+      {
+        "id": 112670244618,
+        "name": "invariant-validation",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37584119610,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Reserve bounded shutdown before the workflow timeout",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Check out the isolated item-8 source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install the declared CPU-only Torch release",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Install the fixed validation dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Validate the legacy witness and complete regression suite",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Post Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Post Check out the isolated item-8 source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          }
+        ]
+      }
+    ]
+  },
+  "retrieved_recorded_at_utc": "2026-10-07T07:07:32.363126+00:00"
+}

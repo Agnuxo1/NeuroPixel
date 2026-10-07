@@ -1,0 +1,434 @@
+{
+  "analytical_values": {
+    "answer_reinjection": {
+      "loss": 4.32656264126747,
+      "pad_after_sgd": [
+        -0.36817605234126005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pad_before": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pad_gradient": [
+        3.6817605234126005,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "probabilities": [
+        0.0,
+        0.7213991842739687,
+        0.013212886953789414,
+        0.26538792877224193
+      ]
+    },
+    "lens_readout": {
+      "loss": 0.746567269173791,
+      "pad_after_sgd": [
+        -0.01743714876403293,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pad_before": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pad_gradient": [
+        0.17437148764032928,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "probabilities": [
+        0.17437148764032928,
+        0.47399084625407806,
+        0.06414768542935739,
+        0.2874899806762354
+      ]
+    }
+  },
+  "auditor_sha256": "58f29ee137b181d13f44e6a3532591b6f8531d531a72ae89a0b5e8032f985533",
+  "comparisons": [
+    {
+      "absolute_error": 2.402022563074979e-07,
+      "allowed_absolute_error": 8.252263338599148e-06,
+      "analytical_binary64_value": 4.32656264126747,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": 0.5037406422197819,
+      "field": "loss",
+      "passed": true,
+      "relative_error": 5.551803503696192e-08,
+      "route": "answer_reinjection",
+      "saved_float32_value": 4.326562881469727
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 1,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 2,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 3,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 2.6132687569457858e-08,
+      "allowed_absolute_error": 7.022400900674058e-06,
+      "analytical_binary64_value": 3.6817605234126005,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": 0.10960843600332737,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": 7.097878149129492e-09,
+      "route": "answer_reinjection",
+      "saved_float32_value": 3.681760549545288
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 1,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 2,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 3,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 2.0494662189562973e-08,
+      "allowed_absolute_error": 7.022400900674058e-07,
+      "analytical_binary64_value": -0.36817605234126005,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": 0.6876867488026619,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": 5.566538632601395e-08,
+      "route": "answer_reinjection",
+      "saved_float32_value": -0.36817607283592224
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 1,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 2,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 3,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": null,
+      "route": "answer_reinjection",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 3.9728949463579966e-08,
+      "allowed_absolute_error": 1.423964060161192e-06,
+      "analytical_binary64_value": 0.746567269173791,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": 0.6665411666035652,
+      "field": "loss",
+      "passed": true,
+      "relative_error": 5.321549859471751e-08,
+      "route": "lens_readout",
+      "saved_float32_value": 0.7465673089027405
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 1,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 2,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 3,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_before",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 8.202604373508393e-09,
+      "allowed_absolute_error": 3.325872185522638e-07,
+      "analytical_binary64_value": 0.17437148764032928,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": 0.55046746134758,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": 4.7040972606872824e-08,
+      "route": "lens_readout",
+      "saved_float32_value": 0.17437149584293365
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 1,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 2,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 3,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_gradient",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 1.9378475248077454e-09,
+      "allowed_absolute_error": 3.3258721855226384e-08,
+      "analytical_binary64_value": -0.01743714876403293,
+      "component": 0,
+      "error_in_float32_ulps_at_expected_value": 1.0403739679604769,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": 1.1113327935842836e-07,
+      "route": "lens_readout",
+      "saved_float32_value": -0.017437150701880455
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 1,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 2,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    },
+    {
+      "absolute_error": 0.0,
+      "allowed_absolute_error": 0.0,
+      "analytical_binary64_value": 0.0,
+      "component": 3,
+      "error_in_float32_ulps_at_expected_value": null,
+      "field": "pad_after_sgd",
+      "passed": true,
+      "relative_error": null,
+      "route": "lens_readout",
+      "saved_float32_value": 0.0
+    }
+  ],
+  "completed_at_utc": "2026-10-07T07:02:39.555400+00:00",
+  "expected_source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "formulas": {
+    "answer_reinjection": "At the PAD output cell: seed=0, delta_s0=ReLU(1+x), two steps give u=2(1+x). Effective logits=(-10000,u,-u,u/2), target index2. At x=0, L=4+log(1+exp(-4)+exp(-1)); dL/dx=2*(1+p1-p2+p3/2). The masked PAD output logit has zero derivative, so this PAD gradient comes through identity reinjection.",
+    "common": "E rows are (x,0,0,0),(1,0,0,0),(-1,0,0,0),(.5,0,0,0); initially x=0. All unlisted parameters are zero; SGD learning rate is .1.",
+    "lens_readout": "Four identical positions have read-vector (1,0,0,0), logits=(x,1,-1,.5), target index1. Mean CE is L=log(1+exp(1)+exp(-1)+exp(.5))-1; dL/dx=p0=1/(1+exp(1)+exp(-1)+exp(.5)). Averaging cancels the four identical contributions. This route reaches PAD through dictionary readout.",
+    "masked_class_precision": "The answer formula neglects only the exp(-10002) term, below 10^-4000. It underflows to zero in both binary64 and float32, vastly below the stated envelope.",
+    "update": "For both routes, the PAD-row gradient is (g,0,0,0) and one SGD step gives (-.1*g,0,0,0). Grounding masks are false and the preserved dictionary does not project PAD back to zero."
+  },
+  "input": {
+    "archive_run": "37584119610-1",
+    "bytes": 1059,
+    "name": "legacy_padding.json",
+    "sha256": "3f542c4c96898475510e5f67520645a316ab729e9e7c569acd5d7042f40fea62"
+  },
+  "issues": [],
+  "item": 8,
+  "limitations": [
+    "Only two explicitly weighted legacy PAD routes are checked; no model performance, historical study result or general gradient theorem is inferred.",
+    "The correction's full regression suite is separate evidence. This audit checks the saved legacy defect numbers, not a new corrected-model execution.",
+    "Available RAM observations are sampled, not a continuous minimum or peak RSS."
+  ],
+  "maximum_absolute_error": 2.402022563074979e-07,
+  "maximum_error_float32_ulps": 1.0403739679604769,
+  "maximum_nonzero_relative_error": 1.1113327935842836e-07,
+  "observed_source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "project_or_numerical_libraries_imported": false,
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T07:02:39.553311+00:00",
+      "available_ram_gib": 9.12637710571289,
+      "provider": "/proc/meminfo:MemAvailable"
+    },
+    {
+      "at_utc": "2026-10-07T07:02:39.555314+00:00",
+      "available_ram_gib": 9.12637710571289,
+      "provider": "/proc/meminfo:MemAvailable"
+    }
+  ],
+  "runtime": {
+    "active_numerical_threads": 1,
+    "arithmetic": "Python binary64 floats and math; no project imports",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14"
+  },
+  "schema_version": 1,
+  "scope": "Post-run analytical audit of two saved fixed fixtures; not another experiment or an external independent replication.",
+  "source_sha256": {
+    "docs/research/08_cloud_validation_plan.json": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b",
+    "results/research/08_validation/padding_model_before.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "tests/test_padding_invariant.py": "3c35b37c807b69492c3ac6e76a89c2d859fe08cbd6687250445dadb3388db830"
+  },
+  "started_at_utc": "2026-10-07T07:02:39.551856+00:00",
+  "status": "verified",
+  "tolerance": {
+    "atol": 0.0,
+    "float32_epsilon": 1.1920928955078125e-07,
+    "rationale": "Six nonzero outputs follow short well-conditioned chains: three/four-term softmax and log, two positive ReLU updates, a weighted derivative sum and one scalar SGD multiplication. Sixteen float32 epsilons allow accumulated rounding and float32 exp/log/backward implementation differences relative to the binary64 algebra. This is an explicit comparison envelope, not a universal kernel error bound; no tolerance is allowed on the twenty structurally zero entries.",
+    "rtol": 1.9073486328125e-06,
+    "zero_expected_values_require_exact_zero": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "item": 8,
+  "at_utc": "2026-10-07T06:56:54.820118+00:00",
+  "source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "raw_archive_commit": "505a7098a077f90421e4a5ed0cd4c06882e98211",
+  "source_worktree": "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item8",
+  "results_worktree": "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8",
+  "status": "retrieved",
+  "initial_metadata_read_failure": {
+    "message": "FETCH_HEAD temporarily unavailable during concurrent results fetch",
+    "scope": "Root launched source FETCH_HEAD read and another fetch in the same worktree concurrently. This was an operational ordering mistake; source worktree creation had not started and no scientific artifact was changed.",
+    "correction": "Waited for fetch completion, used the explicit source SHA, then read the completed results FETCH_HEAD and created both worktrees sequentially."
+  }
+}

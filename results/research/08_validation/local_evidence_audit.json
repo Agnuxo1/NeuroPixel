@@ -1,0 +1,1831 @@
+{
+  "schema_version": 1,
+  "item": 8,
+  "status": "verified_with_documented_evidence_limits",
+  "audited_at_utc": "2026-10-07T06:53:21.676315+00:00",
+  "source_before_commit": "ef25ed6497cd3554d8eb78a0ef278f7b589e1e1f",
+  "method": "Read-only stdlib parsing and hashing of saved files; git ls-tree reads with lazy fetch disabled; exact Git blob ID from snapshot bytes. No tests, model imports, random draws, training or source mutations. Authorized later Soil-source recovery accepted only on historical SHA256 equality.",
+  "independence_scope": "Independent saved-evidence recount; reviewer authored Soil changes earlier. This is not external execution replication or independent custody.",
+  "tests_or_models_executed_by_this_audit": false,
+  "grand_total_across_attempts": null,
+  "counts_note": "Unit-test methods, direct failures and failed subtests are distinct. Classification original: 11 methods = 3 passed + 7 with failures + 1 skipped; 21 failure entries = 20 subtests + 1 direct method failure. No heterogeneous grand total is reported.",
+  "source_before_checks": [
+    {
+      "source_path": "neuropixel/model.py",
+      "snapshot": "results/research/08_validation/padding_model_before.py",
+      "bytes": 6610,
+      "sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "item7_git_blob": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "calculated_git_blob": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "matches_item7_tree": true
+    },
+    {
+      "source_path": "neuropixel/research/experiment.py",
+      "snapshot": "results/research/08_validation/classification_source_original.py",
+      "bytes": 20174,
+      "sha256": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "item7_git_blob": "17c31f0f387812161d243b995283f67629d4ca05",
+      "calculated_git_blob": "17c31f0f387812161d243b995283f67629d4ca05",
+      "matches_item7_tree": true
+    },
+    {
+      "source_path": "scripts/phase3.py",
+      "snapshot": "results/research/08_validation/routing_phase3_original.py",
+      "bytes": 28698,
+      "sha256": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+      "item7_git_blob": "f5256c03162f2d0cb4aa63e7baba32aa58266abd",
+      "calculated_git_blob": "f5256c03162f2d0cb4aa63e7baba32aa58266abd",
+      "matches_item7_tree": true
+    },
+    {
+      "source_path": "kaggle/soil/soil.py",
+      "snapshot": "results/research/08_validation/soil_source_original.py",
+      "bytes": 9621,
+      "sha256": "501ed7c643c8564c5b28efd1f6a027fa3c7f40f6d13d231f2e59cfafd83bb70f",
+      "item7_git_blob": "cd3de9a3b1c157184a0fe59d134a62ce80e5da91",
+      "calculated_git_blob": "cd3de9a3b1c157184a0fe59d134a62ce80e5da91",
+      "matches_item7_tree": true
+    },
+    {
+      "source_path": "tests/test_research_ablations.py",
+      "snapshot": "results/research/08_validation/historical_ablation_test_before.py",
+      "bytes": 20409,
+      "sha256": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+      "item7_git_blob": "03cc1907037b11b310e1c7b09e0071ce983f29f6",
+      "calculated_git_blob": "03cc1907037b11b310e1c7b09e0071ce983f29f6",
+      "matches_item7_tree": true
+    },
+    {
+      "source_path": "tests/test_research_development_data.py",
+      "snapshot": "results/research/08_validation/development_sampler_test_before.py",
+      "bytes": 3484,
+      "sha256": "698c7a7184cf12a7b6abdf0fd71d5723c84d0ce87c1221ae163e6ed3147a764e",
+      "item7_git_blob": "0b7f7da6d4def548f7ddaea74f5a84f00cebb732",
+      "calculated_git_blob": "0b7f7da6d4def548f7ddaea74f5a84f00cebb732",
+      "matches_item7_tree": true
+    }
+  ],
+  "seven_historical_anchor_checks": [
+    {
+      "path": "neuropixel/model.py",
+      "verified_bytes_from": "results/research/08_validation/padding_model_before.py",
+      "sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    },
+    {
+      "path": "neuropixel/task.py",
+      "verified_bytes_from": "neuropixel/task.py",
+      "sha256": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    },
+    {
+      "path": "neuropixel/research/models.py",
+      "verified_bytes_from": "neuropixel/research/models.py",
+      "sha256": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    },
+    {
+      "path": "neuropixel/research/data.py",
+      "verified_bytes_from": "neuropixel/research/data.py",
+      "sha256": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    },
+    {
+      "path": "neuropixel/research/experiment.py",
+      "verified_bytes_from": "results/research/08_validation/classification_source_original.py",
+      "sha256": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    },
+    {
+      "path": "scripts/research_train.py",
+      "verified_bytes_from": "scripts/research_train.py",
+      "sha256": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    },
+    {
+      "path": "docs/research/protocol.json",
+      "verified_bytes_from": "docs/research/protocol.json",
+      "sha256": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "matches_historical_map": true,
+      "matches_item7_tree": true
+    }
+  ],
+  "version_resolved_source_checks": [
+    {
+      "receipt": "results/research/08_validation/classification_initial.json",
+      "recorded_source_path": "neuropixel/research/experiment.py",
+      "expected_sha256": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "resolved_saved_version": "results/research/08_validation/classification_source_original.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/classification_source_original.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/classification_initial.json",
+      "recorded_source_path": "neuropixel/research/classification_contracts.py",
+      "expected_sha256": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "resolved_saved_version": "neuropixel/research/classification_contracts.py",
+      "matching_saved_versions": [
+        "neuropixel/research/classification_contracts.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/classification_initial.json",
+      "recorded_source_path": "tests/test_classification_contracts.py",
+      "expected_sha256": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+      "resolved_saved_version": "tests/test_classification_contracts.py",
+      "matching_saved_versions": [
+        "tests/test_classification_contracts.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/classification_corrected.json",
+      "recorded_source_path": "neuropixel/research/experiment.py",
+      "expected_sha256": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "resolved_saved_version": "neuropixel/research/experiment.py",
+      "matching_saved_versions": [
+        "neuropixel/research/experiment.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/classification_corrected.json",
+      "recorded_source_path": "neuropixel/research/classification_contracts.py",
+      "expected_sha256": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "resolved_saved_version": "neuropixel/research/classification_contracts.py",
+      "matching_saved_versions": [
+        "neuropixel/research/classification_contracts.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/classification_corrected.json",
+      "recorded_source_path": "tests/test_classification_contracts.py",
+      "expected_sha256": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+      "resolved_saved_version": "tests/test_classification_contracts.py",
+      "matching_saved_versions": [
+        "tests/test_classification_contracts.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/routing_validation.json",
+      "recorded_source_path": "docs/research/08_routing_audit.md",
+      "expected_sha256": "32c8e28b02ccd08836b2407dfd726fd52d6d601555b28154219d1ac6f4b8864c",
+      "resolved_saved_version": "docs/research/08_routing_audit.md",
+      "matching_saved_versions": [
+        "docs/research/08_routing_audit.md"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/routing_validation.json",
+      "recorded_source_path": "neuropixel/research/routing_metrics.py",
+      "expected_sha256": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8",
+      "resolved_saved_version": "neuropixel/research/routing_metrics.py",
+      "matching_saved_versions": [
+        "neuropixel/research/routing_metrics.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/routing_validation.json",
+      "recorded_source_path": "scripts/phase3.py",
+      "expected_sha256": "b07487fb641d56f922b90927974a2a1ef48b5e55f72dea21e6e7480af9ad5615",
+      "resolved_saved_version": "scripts/phase3.py",
+      "matching_saved_versions": [
+        "scripts/phase3.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/routing_validation.json",
+      "recorded_source_path": "tests/test_routing_metrics.py",
+      "expected_sha256": "364e4648b246d0d03d0bf1e20c39cc76819faddca3a54e8163855740288a8d92",
+      "resolved_saved_version": "tests/test_routing_metrics.py",
+      "matching_saved_versions": [
+        "tests/test_routing_metrics.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+      "recorded_source_path": "kaggle/soil/soil.py",
+      "expected_sha256": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+      "resolved_saved_version": "results/research/08_validation/soil_recovered_19_driver.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/soil_recovered_19_driver.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+      "recorded_source_path": "kaggle/soil/evaluation.py",
+      "expected_sha256": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+      "resolved_saved_version": "results/research/08_validation/soil_recovered_19_evaluation.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/soil_recovered_19_evaluation.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+      "recorded_source_path": "tests/test_soil_evaluation.py",
+      "expected_sha256": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+      "resolved_saved_version": "results/research/08_validation/soil_recovered_19_tests.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/soil_recovered_19_tests.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_03.json",
+      "recorded_source_path": "kaggle/soil/soil.py",
+      "expected_sha256": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+      "resolved_saved_version": "kaggle/soil/soil.py",
+      "matching_saved_versions": [
+        "kaggle/soil/soil.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_03.json",
+      "recorded_source_path": "kaggle/soil/evaluation.py",
+      "expected_sha256": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+      "resolved_saved_version": "kaggle/soil/evaluation.py",
+      "matching_saved_versions": [
+        "kaggle/soil/evaluation.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_03.json",
+      "recorded_source_path": "tests/test_soil_evaluation.py",
+      "expected_sha256": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658",
+      "resolved_saved_version": "tests/test_soil_evaluation.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/soil_review_tests_02.py",
+        "tests/test_soil_evaluation.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_initial.json",
+      "recorded_source_path": "results/research/08_validation/historical_ablation_test_before.py",
+      "expected_sha256": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+      "resolved_saved_version": "results/research/08_validation/historical_ablation_test_before.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/historical_ablation_test_before.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_initial.json",
+      "recorded_source_path": "scripts/research_ablations.py",
+      "expected_sha256": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "resolved_saved_version": "scripts/research_ablations.py",
+      "matching_saved_versions": [
+        "scripts/research_ablations.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_initial.json",
+      "recorded_source_path": "neuropixel/model.py",
+      "expected_sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "resolved_saved_version": "neuropixel/model.py",
+      "matching_saved_versions": [
+        "neuropixel/model.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_initial.json",
+      "recorded_source_path": "neuropixel/research/experiment.py",
+      "expected_sha256": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "resolved_saved_version": "neuropixel/research/experiment.py",
+      "matching_saved_versions": [
+        "neuropixel/research/experiment.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_corrected.json",
+      "recorded_source_path": "tests/test_research_ablations.py",
+      "expected_sha256": "ba4e8a471a45d57ccac6c939294038df43cdc508ba934b28f6f674b3aabfd888",
+      "resolved_saved_version": "tests/test_research_ablations.py",
+      "matching_saved_versions": [
+        "tests/test_research_ablations.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_corrected.json",
+      "recorded_source_path": "scripts/research_ablations.py",
+      "expected_sha256": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "resolved_saved_version": "scripts/research_ablations.py",
+      "matching_saved_versions": [
+        "scripts/research_ablations.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_corrected.json",
+      "recorded_source_path": "results/research/08_validation/padding_model_before.py",
+      "expected_sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "resolved_saved_version": "results/research/08_validation/padding_model_before.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/padding_model_before.py"
+      ],
+      "verified": true
+    },
+    {
+      "receipt": "results/research/08_validation/historical_fixture_corrected.json",
+      "recorded_source_path": "results/research/08_validation/classification_source_original.py",
+      "expected_sha256": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "resolved_saved_version": "results/research/08_validation/classification_source_original.py",
+      "matching_saved_versions": [
+        "results/research/08_validation/classification_source_original.py"
+      ],
+      "verified": true
+    }
+  ],
+  "transcript_audits": [
+    {
+      "receipt": "results/research/08_validation/classification_initial.json",
+      "log": "results/research/08_validation/classification_initial.log",
+      "log_sha256": "ce5f1f8976270cf72736b97f9fdf9fbff8402d8d021842f1aa0f9ee10037cd77",
+      "counts": {
+        "methods_reported": 11,
+        "methods_listed": 11,
+        "passed_methods": 3,
+        "methods_with_failure_entries": 7,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 1,
+        "failure_entries": 21,
+        "error_entries": 0,
+        "failed_subtest_entries": 20,
+        "direct_method_failure_entries": 1
+      },
+      "unittest_summary": "FAILED (failures=21, skipped=1)",
+      "reported_unittest_seconds": 0.019,
+      "process_seconds_reported_in_receipt": 0.14818654600094305,
+      "process_time_independently_remeasured": false,
+      "return_code": 1,
+      "failed_or_errored_methods": [
+        "test_interval_flag_and_counts_have_explicit_types",
+        "test_nll_must_align_with_every_prediction",
+        "test_nonfinite_or_negative_nll_is_rejected",
+        "test_noninteger_or_boolean_ids_are_rejected",
+        "test_pad_target_and_negative_prediction_are_rejected",
+        "test_unknown_role_cannot_inflate_global_denominator",
+        "test_wilson_rejects_fractional_counts_and_invalid_confidence"
+      ]
+    },
+    {
+      "receipt": "results/research/08_validation/classification_corrected.json",
+      "log": "results/research/08_validation/classification_corrected.log",
+      "log_sha256": "ff5eee876fdbab07fdddb3ea0bb3b238032489c4c6dbe1b78d14f40f334a5e3a",
+      "counts": {
+        "methods_reported": 11,
+        "methods_listed": 11,
+        "passed_methods": 10,
+        "methods_with_failure_entries": 0,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 1,
+        "failure_entries": 0,
+        "error_entries": 0,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 0
+      },
+      "unittest_summary": "OK (skipped=1)",
+      "reported_unittest_seconds": 0.018,
+      "process_seconds_reported_in_receipt": 0.14276011000038125,
+      "process_time_independently_remeasured": false,
+      "return_code": 0,
+      "failed_or_errored_methods": []
+    },
+    {
+      "receipt": "results/research/08_validation/routing_legacy_failure.json",
+      "log": "results/research/08_validation/routing_legacy_failure.log",
+      "log_sha256": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c",
+      "counts": {
+        "methods_reported": 2,
+        "methods_listed": 2,
+        "passed_methods": 1,
+        "methods_with_failure_entries": 1,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 0,
+        "failure_entries": 1,
+        "error_entries": 0,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 1
+      },
+      "unittest_summary": "FAILED (failures=1)",
+      "reported_unittest_seconds": 0.001,
+      "process_seconds_reported_in_receipt": null,
+      "process_time_independently_remeasured": false,
+      "return_code": 1,
+      "failed_or_errored_methods": [
+        "test_distinct_routing_distributions_are_distinguishable"
+      ]
+    },
+    {
+      "receipt": "results/research/08_validation/routing_corrected_run.json",
+      "log": "results/research/08_validation/routing_corrected_tests.log",
+      "log_sha256": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "counts": {
+        "methods_reported": 16,
+        "methods_listed": 16,
+        "passed_methods": 16,
+        "methods_with_failure_entries": 0,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 0,
+        "failure_entries": 0,
+        "error_entries": 0,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 0
+      },
+      "unittest_summary": "OK",
+      "reported_unittest_seconds": 0.03,
+      "process_seconds_reported_in_receipt": 0.06906436799908988,
+      "process_time_independently_remeasured": false,
+      "return_code": 0,
+      "failed_or_errored_methods": []
+    },
+    {
+      "receipt": "results/research/08_validation/soil_legacy_witness.json",
+      "log": "results/research/08_validation/soil_legacy_witness.log",
+      "log_sha256": "f6ce7ad1e9b6a362a35b94900f63a1a6d9dbadf366db3629ea9ec2889c469efd",
+      "counts": {
+        "methods_reported": 3,
+        "methods_listed": 3,
+        "passed_methods": 0,
+        "methods_with_failure_entries": 3,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 0,
+        "failure_entries": 3,
+        "error_entries": 0,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 3
+      },
+      "unittest_summary": "FAILED (failures=3)",
+      "reported_unittest_seconds": 0.029,
+      "process_seconds_reported_in_receipt": 0.1348843490013678,
+      "process_time_independently_remeasured": false,
+      "return_code": 1,
+      "failed_or_errored_methods": [
+        "test_fold_log_must_report_current_fold",
+        "test_invalid_cdf_must_not_be_silently_repaired",
+        "test_reference_must_not_depend_on_heldout_label"
+      ]
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+      "log": "results/research/08_validation/soil_corrected_tests_01.log",
+      "log_sha256": "a38ed8725559ae301a49b88f5c7cbd8eea50a8a7e177be93d751e84eaa8f8fa2",
+      "counts": {
+        "methods_reported": 19,
+        "methods_listed": 19,
+        "passed_methods": 19,
+        "methods_with_failure_entries": 0,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 0,
+        "failure_entries": 0,
+        "error_entries": 0,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 0
+      },
+      "unittest_summary": "OK",
+      "reported_unittest_seconds": 0.043,
+      "process_seconds_reported_in_receipt": 0.13535573199987994,
+      "process_time_independently_remeasured": false,
+      "return_code": 0,
+      "failed_or_errored_methods": []
+    },
+    {
+      "receipt": "results/research/08_validation/soil_review_witness_02.json",
+      "log": "results/research/08_validation/soil_review_witness_02.log",
+      "log_sha256": "4cc80fdb7123f93b375893acea4ac41842faaf26fcd97ddacf33a16d271e2313",
+      "counts": {
+        "methods_reported": 21,
+        "methods_listed": 21,
+        "passed_methods": 18,
+        "methods_with_failure_entries": 1,
+        "methods_with_error_entries": 2,
+        "skipped_methods": 0,
+        "failure_entries": 1,
+        "error_entries": 2,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 1
+      },
+      "unittest_summary": "FAILED (failures=1, errors=2)",
+      "reported_unittest_seconds": 0.052,
+      "process_seconds_reported_in_receipt": 0.14610337500198511,
+      "process_time_independently_remeasured": false,
+      "return_code": 1,
+      "failed_or_errored_methods": [
+        "test_failed_prediction_preserves_initial_plan_and_completed_sample",
+        "test_main_cv_integration_with_stubbed_training_and_predictions",
+        "test_submission_uniform_fallback_constructor_is_valid"
+      ]
+    },
+    {
+      "receipt": "results/research/08_validation/soil_corrected_tests_03.json",
+      "log": "results/research/08_validation/soil_corrected_tests_03.log",
+      "log_sha256": "fe0058d39e008263ced9c9a34b6c8d94b8091d933869ea69daf8f62febb4d32b",
+      "counts": {
+        "methods_reported": 21,
+        "methods_listed": 21,
+        "passed_methods": 21,
+        "methods_with_failure_entries": 0,
+        "methods_with_error_entries": 0,
+        "skipped_methods": 0,
+        "failure_entries": 0,
+        "error_entries": 0,
+        "failed_subtest_entries": 0,
+        "direct_method_failure_entries": 0
+      },
+      "unittest_summary": "OK",
+      "reported_unittest_seconds": 0.062,
+      "process_seconds_reported_in_receipt": 0.15808394600026077,
+      "process_time_independently_remeasured": false,
+      "return_code": 0,
+      "failed_or_errored_methods": []
+    }
+  ],
+  "late_recovery": {
+    "recorded_at_utc": "2026-10-07T06:53:21.676327+00:00",
+    "reason": "First Soil 19-test source versions were not separately snapshotted when superseded; root authorized exact-hash recovery from retained tool payloads.",
+    "files": [
+      {
+        "path": "results/research/08_validation/soil_recovered_19_driver.py",
+        "bytes": 12289,
+        "sha256": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+        "anchor_receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+        "method": "Reversed the exact retained import-only edit on soil_review_source_02.py.",
+        "identity_acceptance": "Saved only after exact equality to already-recorded SHA256; no test reexecution."
+      },
+      {
+        "path": "results/research/08_validation/soil_recovered_19_evaluation.py",
+        "bytes": 6666,
+        "sha256": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+        "anchor_receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+        "method": "Reversed the exact retained uniform-helper insertion and call edit on final evaluation.py.",
+        "identity_acceptance": "Saved only after exact equality to already-recorded SHA256; no test reexecution."
+      },
+      {
+        "path": "results/research/08_validation/soil_recovered_19_tests.py",
+        "bytes": 12507,
+        "sha256": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+        "anchor_receipt": "results/research/08_validation/soil_corrected_tests_01.json",
+        "method": "Restored the complete original main-integration test retained in the earlier tool payload, keeping the unchanged prefix.",
+        "identity_acceptance": "Saved only after exact equality to already-recorded SHA256; no test reexecution."
+      }
+    ]
+  },
+  "soil_review_snapshot_observations": {
+    "results/research/08_validation/soil_review_source_02.py": {
+      "bytes": 12573,
+      "sha256": "cda8b60c284421a89a98ffa4e4759cdd40901b57bcae5cb32de10876bdb5cccc"
+    },
+    "results/research/08_validation/soil_review_tests_02.py": {
+      "bytes": 14877,
+      "sha256": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658"
+    }
+  },
+  "historical_fixture": {
+    "initial_receipt": "results/research/08_validation/historical_fixture_initial.json",
+    "corrected_receipt": "results/research/08_validation/historical_fixture_corrected.json",
+    "source_hashes_verified": true,
+    "controller_bytes_match_item7": true,
+    "initial_error_recorded": {
+      "type": "RuntimeError",
+      "message": "an available historical source changed",
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 16, in <module>\n  File \"/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/scripts/research_ablations.py\", line 133, in source_record\n    raise RuntimeError(\"an available historical source changed\")\nRuntimeError: an available historical source changed\n"
+    },
+    "corrected_named_fixture": "test_source_record_declares_seven_files_and_rejects_a_placeholder",
+    "corrected_status_reported": "passed",
+    "fixture_invocations_reported": 1,
+    "independently_transcribed_test_count": null,
+    "initial_time_available": false,
+    "corrected_seconds_producer_reported": 0.0033963280002353713
+  },
+  "static_only": {
+    "padding_authored_methods": [
+      "test_preserved_source_reproduces_both_legacy_gradient_paths",
+      "test_actual_answer_and_lens_optimizer_steps_preserve_effective_pad",
+      "test_checkpoint_nonzero_pad_is_projected_without_rewriting_stored_weights",
+      "test_resumed_adamw_momentum_cannot_reintroduce_effective_pad",
+      "test_grounded_pad_is_zero_and_other_values_and_gradients_are_unchanged",
+      "test_nonpad_function_and_gradients_match_legacy_when_pad_has_no_objective",
+      "test_forward_lens_and_stream_use_the_same_zero_pad_boundary",
+      "test_zero_identity_and_initial_seed_do_not_imply_zero_recurrent_activity",
+      "test_camera_observation_is_not_discarded_as_padding",
+      "test_research_nca_explicit_legacy_policy_survives_core_correction"
+    ],
+    "padding_execution_claimed": false,
+    "development_sampler_before_snapshot_matches_item7": true,
+    "development_sampler_execution_recounted": false
+  },
+  "ancillary_version_notes": {
+    "protocol_review": {
+      "current_protocol_sha256": "96d3e71ea33bce22c4a9712525466455f8bfc0646979640a224da1aaf79db6d0",
+      "earlier_review_sha256": "e694340ed3afc8e21aef88334ea4ed6f652b3d1a3f5d62290b2fb04957cbd629",
+      "superseding_receipt": "results/research/08_validation/protocol_review.json",
+      "later_hash_matches_current": true,
+      "earlier_prose_bytes_available_in_audited_paths": false,
+      "interpretation": "Recorded pre-freeze wording revision; no test-run source is substituted with current prose."
+    }
+  },
+  "checks": [
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "classification_initial.json:neuropixel/research/experiment.py",
+      "expected": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "actual": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "classification_initial.json:neuropixel/research/classification_contracts.py",
+      "expected": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "actual": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "classification_initial.json:tests/test_classification_contracts.py",
+      "expected": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+      "actual": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "classification_corrected.json:neuropixel/research/experiment.py",
+      "expected": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "actual": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "classification_corrected.json:neuropixel/research/classification_contracts.py",
+      "expected": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "actual": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "classification_corrected.json:tests/test_classification_contracts.py",
+      "expected": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+      "actual": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "routing_validation.json:docs/research/08_routing_audit.md",
+      "expected": "32c8e28b02ccd08836b2407dfd726fd52d6d601555b28154219d1ac6f4b8864c",
+      "actual": "32c8e28b02ccd08836b2407dfd726fd52d6d601555b28154219d1ac6f4b8864c",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "routing_validation.json:neuropixel/research/routing_metrics.py",
+      "expected": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8",
+      "actual": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "routing_validation.json:scripts/phase3.py",
+      "expected": "b07487fb641d56f922b90927974a2a1ef48b5e55f72dea21e6e7480af9ad5615",
+      "actual": "b07487fb641d56f922b90927974a2a1ef48b5e55f72dea21e6e7480af9ad5615",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "routing_validation.json:tests/test_routing_metrics.py",
+      "expected": "364e4648b246d0d03d0bf1e20c39cc76819faddca3a54e8163855740288a8d92",
+      "actual": "364e4648b246d0d03d0bf1e20c39cc76819faddca3a54e8163855740288a8d92",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "soil_corrected_tests_01.json:kaggle/soil/soil.py",
+      "expected": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+      "actual": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "soil_corrected_tests_01.json:kaggle/soil/evaluation.py",
+      "expected": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+      "actual": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "soil_corrected_tests_01.json:tests/test_soil_evaluation.py",
+      "expected": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+      "actual": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "soil_corrected_tests_03.json:tests/test_soil_evaluation.py",
+      "expected": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658",
+      "actual": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_initial.json:results/research/08_validation/historical_ablation_test_before.py",
+      "expected": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+      "actual": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_initial.json:scripts/research_ablations.py",
+      "expected": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "actual": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_initial.json:neuropixel/model.py",
+      "expected": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "actual": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_initial.json:neuropixel/research/experiment.py",
+      "expected": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "actual": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_corrected.json:tests/test_research_ablations.py",
+      "expected": "ba4e8a471a45d57ccac6c939294038df43cdc508ba934b28f6f674b3aabfd888",
+      "actual": "ba4e8a471a45d57ccac6c939294038df43cdc508ba934b28f6f674b3aabfd888",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_corrected.json:scripts/research_ablations.py",
+      "expected": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "actual": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_corrected.json:results/research/08_validation/padding_model_before.py",
+      "expected": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "actual": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "historical_fixture_corrected.json:results/research/08_validation/classification_source_original.py",
+      "expected": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "actual": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "matches": true
+    },
+    {
+      "kind": "snapshot_git_blob_vs_item7_tree",
+      "subject": "neuropixel/model.py",
+      "expected": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "actual": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "matches": true
+    },
+    {
+      "kind": "before_source_sha256",
+      "subject": "padding_source_before.json",
+      "expected": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "actual": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "matches": true
+    },
+    {
+      "kind": "before_source_bytes",
+      "subject": "padding_source_before.json",
+      "expected": 6610,
+      "actual": 6610,
+      "matches": true
+    },
+    {
+      "kind": "historical_map_vs_snapshot",
+      "subject": "neuropixel/model.py",
+      "expected": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "actual": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "matches": true
+    },
+    {
+      "kind": "snapshot_git_blob_vs_item7_tree",
+      "subject": "neuropixel/research/experiment.py",
+      "expected": "17c31f0f387812161d243b995283f67629d4ca05",
+      "actual": "17c31f0f387812161d243b995283f67629d4ca05",
+      "matches": true
+    },
+    {
+      "kind": "before_source_sha256",
+      "subject": "classification_source_before.json",
+      "expected": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "actual": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "matches": true
+    },
+    {
+      "kind": "before_source_bytes",
+      "subject": "classification_source_before.json",
+      "expected": 20174,
+      "actual": 20174,
+      "matches": true
+    },
+    {
+      "kind": "historical_map_vs_snapshot",
+      "subject": "neuropixel/research/experiment.py",
+      "expected": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "actual": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "matches": true
+    },
+    {
+      "kind": "snapshot_git_blob_vs_item7_tree",
+      "subject": "scripts/phase3.py",
+      "expected": "f5256c03162f2d0cb4aa63e7baba32aa58266abd",
+      "actual": "f5256c03162f2d0cb4aa63e7baba32aa58266abd",
+      "matches": true
+    },
+    {
+      "kind": "before_source_sha256",
+      "subject": "routing_source_snapshot.json",
+      "expected": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+      "actual": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+      "matches": true
+    },
+    {
+      "kind": "before_source_bytes",
+      "subject": "routing_source_snapshot.json",
+      "expected": 28698,
+      "actual": 28698,
+      "matches": true
+    },
+    {
+      "kind": "snapshot_git_blob_vs_item7_tree",
+      "subject": "kaggle/soil/soil.py",
+      "expected": "cd3de9a3b1c157184a0fe59d134a62ce80e5da91",
+      "actual": "cd3de9a3b1c157184a0fe59d134a62ce80e5da91",
+      "matches": true
+    },
+    {
+      "kind": "before_source_sha256",
+      "subject": "soil_source_original.json",
+      "expected": "501ed7c643c8564c5b28efd1f6a027fa3c7f40f6d13d231f2e59cfafd83bb70f",
+      "actual": "501ed7c643c8564c5b28efd1f6a027fa3c7f40f6d13d231f2e59cfafd83bb70f",
+      "matches": true
+    },
+    {
+      "kind": "before_source_bytes",
+      "subject": "soil_source_original.json",
+      "expected": 9621,
+      "actual": 9621,
+      "matches": true
+    },
+    {
+      "kind": "snapshot_git_blob_vs_item7_tree",
+      "subject": "tests/test_research_ablations.py",
+      "expected": "03cc1907037b11b310e1c7b09e0071ce983f29f6",
+      "actual": "03cc1907037b11b310e1c7b09e0071ce983f29f6",
+      "matches": true
+    },
+    {
+      "kind": "snapshot_git_blob_vs_item7_tree",
+      "subject": "tests/test_research_development_data.py",
+      "expected": "0b7f7da6d4def548f7ddaea74f5a84f00cebb732",
+      "actual": "0b7f7da6d4def548f7ddaea74f5a84f00cebb732",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "neuropixel/model.py",
+      "expected": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "actual": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "neuropixel/model.py",
+      "expected": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "actual": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "neuropixel/task.py",
+      "expected": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "actual": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "neuropixel/task.py",
+      "expected": "3e9368c364a884f72931feb3cdc921bc3663d4fe",
+      "actual": "3e9368c364a884f72931feb3cdc921bc3663d4fe",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "neuropixel/research/models.py",
+      "expected": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "actual": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "neuropixel/research/models.py",
+      "expected": "930cb7e44f7e978c21b605d50f978852c00c47ac",
+      "actual": "930cb7e44f7e978c21b605d50f978852c00c47ac",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "neuropixel/research/data.py",
+      "expected": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "actual": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "neuropixel/research/data.py",
+      "expected": "e90005e534d8cb86eb34ee34b6309b0679368dfb",
+      "actual": "e90005e534d8cb86eb34ee34b6309b0679368dfb",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "neuropixel/research/experiment.py",
+      "expected": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "actual": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "neuropixel/research/experiment.py",
+      "expected": "17c31f0f387812161d243b995283f67629d4ca05",
+      "actual": "17c31f0f387812161d243b995283f67629d4ca05",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "scripts/research_train.py",
+      "expected": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+      "actual": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "scripts/research_train.py",
+      "expected": "b5c7d780f90cdab21b1b51403c7c9a00b70b2c24",
+      "actual": "b5c7d780f90cdab21b1b51403c7c9a00b70b2c24",
+      "matches": true
+    },
+    {
+      "kind": "seven_historical_anchors",
+      "subject": "docs/research/protocol.json",
+      "expected": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "actual": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "matches": true
+    },
+    {
+      "kind": "historical_anchor_git_blob",
+      "subject": "docs/research/protocol.json",
+      "expected": "b7e4989854af041bd0f3e1906846b09de8efe5e8",
+      "actual": "b7e4989854af041bd0f3e1906846b09de8efe5e8",
+      "matches": true
+    },
+    {
+      "kind": "historical_controller_unchanged",
+      "subject": "scripts/research_ablations.py",
+      "expected": "2b10daf71430c2a65931206a6d3850df110c3d39",
+      "actual": "2b10daf71430c2a65931206a6d3850df110c3d39",
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "classification_initial.log",
+      "expected": "ce5f1f8976270cf72736b97f9fdf9fbff8402d8d021842f1aa0f9ee10037cd77",
+      "actual": "ce5f1f8976270cf72736b97f9fdf9fbff8402d8d021842f1aa0f9ee10037cd77",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "classification_initial.log",
+      "expected": 11,
+      "actual": 11,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "classification_initial.log",
+      "expected": 11,
+      "actual": 11,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "classification_initial.log",
+      "expected": 21,
+      "actual": 21,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "classification_initial.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "classification_initial.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "classification_initial.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "classification_corrected.log",
+      "expected": "ff5eee876fdbab07fdddb3ea0bb3b238032489c4c6dbe1b78d14f40f334a5e3a",
+      "actual": "ff5eee876fdbab07fdddb3ea0bb3b238032489c4c6dbe1b78d14f40f334a5e3a",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "classification_corrected.log",
+      "expected": 11,
+      "actual": 11,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "classification_corrected.log",
+      "expected": 11,
+      "actual": 11,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "classification_corrected.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "classification_corrected.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "classification_corrected.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "classification_corrected.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "routing_legacy_failure.log",
+      "expected": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c",
+      "actual": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "routing_legacy_failure.log",
+      "expected": 2,
+      "actual": 2,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "routing_legacy_failure.log",
+      "expected": 2,
+      "actual": 2,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "routing_legacy_failure.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "routing_legacy_failure.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "routing_legacy_failure.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "routing_legacy_failure.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "routing_corrected_tests.log",
+      "expected": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "actual": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "routing_corrected_tests.log",
+      "expected": 16,
+      "actual": 16,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "routing_corrected_tests.log",
+      "expected": 16,
+      "actual": 16,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "routing_corrected_tests.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "routing_corrected_tests.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "routing_corrected_tests.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "routing_corrected_tests.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "receipt_test_count",
+      "subject": "routing_corrected_run.json",
+      "expected": 16,
+      "actual": 16,
+      "matches": true
+    },
+    {
+      "kind": "reported_test_seconds",
+      "subject": "routing_corrected_run.json",
+      "expected": 0.03,
+      "actual": 0.03,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "soil_legacy_witness.log",
+      "expected": "f6ce7ad1e9b6a362a35b94900f63a1a6d9dbadf366db3629ea9ec2889c469efd",
+      "actual": "f6ce7ad1e9b6a362a35b94900f63a1a6d9dbadf366db3629ea9ec2889c469efd",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "soil_legacy_witness.log",
+      "expected": 3,
+      "actual": 3,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "soil_legacy_witness.log",
+      "expected": 3,
+      "actual": 3,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "soil_legacy_witness.log",
+      "expected": 3,
+      "actual": 3,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "soil_legacy_witness.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "soil_legacy_witness.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "soil_legacy_witness.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": "a38ed8725559ae301a49b88f5c7cbd8eea50a8a7e177be93d751e84eaa8f8fa2",
+      "actual": "a38ed8725559ae301a49b88f5c7cbd8eea50a8a7e177be93d751e84eaa8f8fa2",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": 19,
+      "actual": 19,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": 19,
+      "actual": 19,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "soil_corrected_tests_01.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "soil_review_witness_02.log",
+      "expected": "4cc80fdb7123f93b375893acea4ac41842faaf26fcd97ddacf33a16d271e2313",
+      "actual": "4cc80fdb7123f93b375893acea4ac41842faaf26fcd97ddacf33a16d271e2313",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "soil_review_witness_02.log",
+      "expected": 21,
+      "actual": 21,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "soil_review_witness_02.log",
+      "expected": 21,
+      "actual": 21,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "soil_review_witness_02.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "soil_review_witness_02.log",
+      "expected": 2,
+      "actual": 2,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "soil_review_witness_02.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "soil_review_witness_02.log",
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    {
+      "kind": "log_sha256",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": "fe0058d39e008263ced9c9a34b6c8d94b8091d933869ea69daf8f62febb4d32b",
+      "actual": "fe0058d39e008263ced9c9a34b6c8d94b8091d933869ea69daf8f62febb4d32b",
+      "matches": true
+    },
+    {
+      "kind": "methods_listed_vs_runner",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": 21,
+      "actual": 21,
+      "matches": true
+    },
+    {
+      "kind": "method_status_partition",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": 21,
+      "actual": 21,
+      "matches": true
+    },
+    {
+      "kind": "summary_failures",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_errors",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "summary_skipped",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "exit_vs_summary",
+      "subject": "soil_corrected_tests_03.log",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_corrected_run.json",
+      "expected": 891,
+      "actual": 891,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_corrected_run.json",
+      "expected": "595de9c97a065affc51d77c3b14fc5e5805c08cf69008189f1f2c891db3754ac",
+      "actual": "595de9c97a065affc51d77c3b14fc5e5805c08cf69008189f1f2c891db3754ac",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_corrected_tests.log",
+      "expected": 2390,
+      "actual": 2390,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_corrected_tests.log",
+      "expected": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "actual": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_legacy_failure.json",
+      "expected": 386,
+      "actual": 386,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_legacy_failure.json",
+      "expected": "4fd3c6fa2385aece78b5f01fa633a5f8712ea21f28e4960c004343932cb53520",
+      "actual": "4fd3c6fa2385aece78b5f01fa633a5f8712ea21f28e4960c004343932cb53520",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_legacy_failure.log",
+      "expected": 1044,
+      "actual": 1044,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_legacy_failure.log",
+      "expected": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c",
+      "actual": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_legacy_reproduction.py",
+      "expected": 1624,
+      "actual": 1624,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_legacy_reproduction.py",
+      "expected": "e39922f8714482b24ce17fd78bc0eaaa0738211f96312a1e7c30866e0322b66d",
+      "actual": "e39922f8714482b24ce17fd78bc0eaaa0738211f96312a1e7c30866e0322b66d",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_phase3_original.py",
+      "expected": 28698,
+      "actual": 28698,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_phase3_original.py",
+      "expected": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+      "actual": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "routing_validation.json:routing_source_snapshot.json",
+      "expected": 351,
+      "actual": 351,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "routing_validation.json:routing_source_snapshot.json",
+      "expected": "cd32f1c0db3bc69e1e6cd47ef3d0847888d6fe6609d2e7e7f443871ac290fe93",
+      "actual": "cd32f1c0db3bc69e1e6cd47ef3d0847888d6fe6609d2e7e7f443871ac290fe93",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "padding_static_receipt.json:neuropixel/model.py",
+      "expected": 6895,
+      "actual": 6895,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "padding_static_receipt.json:neuropixel/model.py",
+      "expected": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "actual": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "padding_static_receipt.json:tests/test_padding_invariant.py",
+      "expected": 13574,
+      "actual": 13574,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "padding_static_receipt.json:tests/test_padding_invariant.py",
+      "expected": "3c35b37c807b69492c3ac6e76a89c2d859fe08cbd6687250445dadb3388db830",
+      "actual": "3c35b37c807b69492c3ac6e76a89c2d859fe08cbd6687250445dadb3388db830",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "padding_static_receipt.json:docs/research/08_padding_audit.md",
+      "expected": 10147,
+      "actual": 10147,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "padding_static_receipt.json:docs/research/08_padding_audit.md",
+      "expected": "1e31e4dd01f015bc5c15ecf0e27600e91bbff40c00bf4d5a4c644011367cb060",
+      "actual": "1e31e4dd01f015bc5c15ecf0e27600e91bbff40c00bf4d5a4c644011367cb060",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "padding_static_receipt.json:results/research/08_validation/padding_model_before.py",
+      "expected": 6610,
+      "actual": 6610,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "padding_static_receipt.json:results/research/08_validation/padding_model_before.py",
+      "expected": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "actual": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "padding_static_receipt.json:results/research/08_validation/padding_source_before.json",
+      "expected": 400,
+      "actual": 400,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "padding_static_receipt.json:results/research/08_validation/padding_source_before.json",
+      "expected": "fbc89571381e53b4e0b37969296ee4265076b04974a205da1dad4bdfe9a558d7",
+      "actual": "fbc89571381e53b4e0b37969296ee4265076b04974a205da1dad4bdfe9a558d7",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "soil_final_inventory.json:kaggle/soil/soil.py",
+      "expected": 13816,
+      "actual": 13816,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "soil_final_inventory.json:kaggle/soil/soil.py",
+      "expected": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+      "actual": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "soil_final_inventory.json:kaggle/soil/evaluation.py",
+      "expected": 6819,
+      "actual": 6819,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "soil_final_inventory.json:kaggle/soil/evaluation.py",
+      "expected": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+      "actual": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "soil_final_inventory.json:tests/test_soil_evaluation.py",
+      "expected": 14877,
+      "actual": 14877,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "soil_final_inventory.json:tests/test_soil_evaluation.py",
+      "expected": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658",
+      "actual": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658",
+      "matches": true
+    },
+    {
+      "kind": "inventory_bytes",
+      "subject": "soil_final_inventory.json:docs/research/08_soil_audit.md",
+      "expected": 13081,
+      "actual": 13081,
+      "matches": true
+    },
+    {
+      "kind": "inventory_sha256",
+      "subject": "soil_final_inventory.json:docs/research/08_soil_audit.md",
+      "expected": "e16a7baac989814a418677d1a7c638a108d407996a669e44efcce0e3e0ad8327",
+      "actual": "e16a7baac989814a418677d1a7c638a108d407996a669e44efcce0e3e0ad8327",
+      "matches": true
+    },
+    {
+      "kind": "legacy_witness_test_source",
+      "subject": "soil_legacy_witness_source.py",
+      "expected": "3dd038a875ebe604f89af8210ff711b949c7bece5e60a1421db390fd1bdaa032",
+      "actual": "3dd038a875ebe604f89af8210ff711b949c7bece5e60a1421db390fd1bdaa032",
+      "matches": true
+    },
+    {
+      "kind": "routing_aggregate_receipt",
+      "subject": "exit_code",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "routing_aggregate_receipt",
+      "subject": "failed",
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    {
+      "kind": "routing_aggregate_receipt",
+      "subject": "log_sha256",
+      "expected": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "actual": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+      "matches": true
+    },
+    {
+      "kind": "routing_aggregate_receipt",
+      "subject": "passed",
+      "expected": 16,
+      "actual": 16,
+      "matches": true
+    },
+    {
+      "kind": "routing_aggregate_receipt",
+      "subject": "reported_seconds",
+      "expected": 0.03,
+      "actual": 0.03,
+      "matches": true
+    },
+    {
+      "kind": "routing_aggregate_receipt",
+      "subject": "total",
+      "expected": 16,
+      "actual": 16,
+      "matches": true
+    },
+    {
+      "kind": "padding_authored_method_count",
+      "subject": "padding_static_receipt.json",
+      "expected": 10,
+      "actual": 10,
+      "matches": true
+    },
+    {
+      "kind": "late_recovery_exact_historical_hash",
+      "subject": "soil_recovered_19_driver.py",
+      "expected": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+      "actual": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+      "matches": true
+    },
+    {
+      "kind": "late_recovery_exact_historical_hash",
+      "subject": "soil_recovered_19_evaluation.py",
+      "expected": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+      "actual": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+      "matches": true
+    },
+    {
+      "kind": "late_recovery_exact_historical_hash",
+      "subject": "soil_recovered_19_tests.py",
+      "expected": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+      "actual": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "soil_corrected_tests_03.json:kaggle/soil/soil.py",
+      "expected": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+      "actual": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+      "matches": true
+    },
+    {
+      "kind": "recorded_source_sha256",
+      "subject": "soil_corrected_tests_03.json:kaggle/soil/evaluation.py",
+      "expected": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+      "actual": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+      "matches": true
+    }
+  ],
+  "contradictions": [],
+  "issues": [
+    {
+      "id": "soil_review_snapshot_binding",
+      "severity": "evidence_limit",
+      "affects_current_regression_acceptance": false,
+      "detail": "soil_review_witness_02.json binds the log but contains no contemporaneous source/test hashes. Preserved review snapshots are readable and hashed by this audit; their use in that run is not independently established by a source-hash field in the run receipt. The review test snapshot equals the final test-source hash; the review driver is cda8b60c..., not the first 19-test source."
+    },
+    {
+      "id": "historical_fixture_no_independent_transcript",
+      "severity": "evidence_limit",
+      "affects_current_regression_acceptance": false,
+      "detail": "The initial and corrected historical-fixture JSON receipts are present with matching source hashes, but no separate stdout/test-runner transcript or extraction harness is saved. Initial RuntimeError is recorded in its receipt traceback; corrected status=passed and 0.0033963280002353713 seconds are producer-reported for one named AST fixture, not independently recounted unittest/pytest totals."
+    }
+  ],
+  "excluded": [
+    "Incomplete worker implementation/artifacts and not-yet-executed cloud validation.",
+    "Interpretation or recalculation of model performance and competition outcomes.",
+    "Independent verification of wall-clock timing, RAM sampling or actual runtime beyond saved receipts."
+  ],
+  "input_sha256": {
+    "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+    "docs/research/08_padding_audit.md": "1e31e4dd01f015bc5c15ecf0e27600e91bbff40c00bf4d5a4c644011367cb060",
+    "docs/research/08_protocol.md": "96d3e71ea33bce22c4a9712525466455f8bfc0646979640a224da1aaf79db6d0",
+    "docs/research/08_routing_audit.md": "32c8e28b02ccd08836b2407dfd726fd52d6d601555b28154219d1ac6f4b8864c",
+    "docs/research/08_soil_audit.md": "e16a7baac989814a418677d1a7c638a108d407996a669e44efcce0e3e0ad8327",
+    "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+    "kaggle/soil/evaluation.py": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+    "kaggle/soil/soil.py": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/research/classification_contracts.py": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/routing_metrics.py": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "results/research/08_validation/archive_retrieval.json": "072fadfe2a77153c87463309d99916b4567725c6ecb380158be302de0b932309",
+    "results/research/08_validation/classification_corrected.json": "e10ad1d47e5da8fd3e90f2106f4cbe554f4eaf418f38699ae15ddec9f49091df",
+    "results/research/08_validation/classification_corrected.log": "ff5eee876fdbab07fdddb3ea0bb3b238032489c4c6dbe1b78d14f40f334a5e3a",
+    "results/research/08_validation/classification_initial.json": "76228127e09f87c04ccbb46fd2785beeebe6d6e7fc25b0523f0f8ca659d9fb04",
+    "results/research/08_validation/classification_initial.log": "ce5f1f8976270cf72736b97f9fdf9fbff8402d8d021842f1aa0f9ee10037cd77",
+    "results/research/08_validation/classification_source_before.json": "9db885b4d7491a2b0b2a0c8bf84ccc4bc8d8a028bd8d53ca74f297d9a2ae2eae",
+    "results/research/08_validation/classification_source_original.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "results/research/08_validation/development_sampler_test_before.py": "698c7a7184cf12a7b6abdf0fd71d5723c84d0ce87c1221ae163e6ed3147a764e",
+    "results/research/08_validation/freeze_review.json": "f747d1f5104bade4f55b03e8487f168576a4fd09572339529c30d1e51dc71815",
+    "results/research/08_validation/historical_ablation_test_before.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+    "results/research/08_validation/historical_fixture_corrected.json": "71b26104159f79f40120cb65e5f25d332db2b072f26bc5dfeb8b31591ebfbd7a",
+    "results/research/08_validation/historical_fixture_initial.json": "4361ce14a7d0cfb48c14c27db28c347de8966da40bae0bd6b2cc65eb3c7b8491",
+    "results/research/08_validation/padding_model_before.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "results/research/08_validation/padding_source_before.json": "fbc89571381e53b4e0b37969296ee4265076b04974a205da1dad4bdfe9a558d7",
+    "results/research/08_validation/padding_static_receipt.json": "bead034963d40245a7d8a327c25cfee318cf2d4a67fede0e4e55acd3f5fb34dd",
+    "results/research/08_validation/protocol_review.json": "baeae6fbc8c13446af5901c1780cd09de494fa89480a450d48c2d95f8b79071e",
+    "results/research/08_validation/root_source_review.json": "8cd3c8656a10f7b7393d7af951d5b828b3516fe05b9d6460f48138c11a4c5327",
+    "results/research/08_validation/routing_corrected_run.json": "595de9c97a065affc51d77c3b14fc5e5805c08cf69008189f1f2c891db3754ac",
+    "results/research/08_validation/routing_corrected_tests.log": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+    "results/research/08_validation/routing_legacy_failure.json": "4fd3c6fa2385aece78b5f01fa633a5f8712ea21f28e4960c004343932cb53520",
+    "results/research/08_validation/routing_legacy_failure.log": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c",
+    "results/research/08_validation/routing_legacy_reproduction.py": "e39922f8714482b24ce17fd78bc0eaaa0738211f96312a1e7c30866e0322b66d",
+    "results/research/08_validation/routing_phase3_original.py": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+    "results/research/08_validation/routing_source_snapshot.json": "cd32f1c0db3bc69e1e6cd47ef3d0847888d6fe6609d2e7e7f443871ac290fe93",
+    "results/research/08_validation/routing_validation.json": "523e3c200895eab6db7cbcf9b8e2f18840448fa4bca5ac9162a6775b301edb46",
+    "results/research/08_validation/soil_corrected_tests_01.json": "4fe7075b451d538df77726402579fc4f0b50003dacedc92c71fa09f4d9dfb010",
+    "results/research/08_validation/soil_corrected_tests_01.log": "a38ed8725559ae301a49b88f5c7cbd8eea50a8a7e177be93d751e84eaa8f8fa2",
+    "results/research/08_validation/soil_corrected_tests_03.json": "d06c93758e33d2227893956a224977c669d34bc36703c72f66cca18a016f0e32",
+    "results/research/08_validation/soil_corrected_tests_03.log": "fe0058d39e008263ced9c9a34b6c8d94b8091d933869ea69daf8f62febb4d32b",
+    "results/research/08_validation/soil_final_inventory.json": "9ab0b4c33032a0ed056146522f80d4bc16b55f9b3cbceb4c136b5ff17da4aefa",
+    "results/research/08_validation/soil_legacy_witness.json": "fd640d8314ad3c422b51aae63cf25b5f486c4ec6b18bea7e49d220aaf0519291",
+    "results/research/08_validation/soil_legacy_witness.log": "f6ce7ad1e9b6a362a35b94900f63a1a6d9dbadf366db3629ea9ec2889c469efd",
+    "results/research/08_validation/soil_legacy_witness_source.py": "3dd038a875ebe604f89af8210ff711b949c7bece5e60a1421db390fd1bdaa032",
+    "results/research/08_validation/soil_recovered_19_driver.py": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1",
+    "results/research/08_validation/soil_recovered_19_evaluation.py": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a",
+    "results/research/08_validation/soil_recovered_19_tests.py": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c",
+    "results/research/08_validation/soil_review_source_02.py": "cda8b60c284421a89a98ffa4e4759cdd40901b57bcae5cb32de10876bdb5cccc",
+    "results/research/08_validation/soil_review_tests_02.py": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658",
+    "results/research/08_validation/soil_review_witness_02.json": "8b5140a68989559384fb57087f0dd1e7b1aeee6b65ac12cd8b6c76c4bb5576b3",
+    "results/research/08_validation/soil_review_witness_02.log": "4cc80fdb7123f93b375893acea4ac41842faaf26fcd97ddacf33a16d271e2313",
+    "results/research/08_validation/soil_source_original.json": "d833642f8622abdef5d7955215c449fb2c37d62f490786181b5917e6c9f595d5",
+    "results/research/08_validation/soil_source_original.py": "501ed7c643c8564c5b28efd1f6a027fa3c7f40f6d13d231f2e59cfafd83bb70f",
+    "scripts/phase3.py": "b07487fb641d56f922b90927974a2a1ef48b5e55f72dea21e6e7480af9ad5615",
+    "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+    "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+    "tests/test_classification_contracts.py": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+    "tests/test_padding_invariant.py": "3c35b37c807b69492c3ac6e76a89c2d859fe08cbd6687250445dadb3388db830",
+    "tests/test_research_ablations.py": "ba4e8a471a45d57ccac6c939294038df43cdc508ba934b28f6f674b3aabfd888",
+    "tests/test_routing_metrics.py": "364e4648b246d0d03d0bf1e20c39cc76819faddca3a54e8163855740288a8d92",
+    "tests/test_soil_evaluation.py": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658"
+  }
+}

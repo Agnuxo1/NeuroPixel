@@ -45,3 +45,8 @@ SCI-008 is ACTIVE after the complete item-7 closure was archived and fetched as 
 ## 2026-10-07T06:52:42.874308+00:00 — SCI-008 integration recipe frozen
 
 Root freezes docs/research/08_cloud_validation_plan.json (SHA256 46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b) after four focused source audits, preserved regression failures/corrections, historical-fixture checks and independent worker review. The plan binds 95 files and 187 pytest cases across 13 files, including 58 new methods. Only the declared optional CIFAR absence may skip. The two-route legacy PAD witness and entire integration suite are admitted under the existing short CPU reservation. Ordinary failures remain archived; any post-freeze correction requires an explicit new source/plan revision. Historical controller/hash policies remain unchanged and reject modern code as a historical replay. H1 remains not supported; items 9–30 remain pending. No response is requested.
+
+
+## 2026-10-07T07:17:56.375298+00:00 — SCI-008 closed
+
+Accept the item-8 corrected contracts on the isolated research branch. Retain the historical source snapshots and strict historical-controller hash gates. Distinguish effective zero PAD identity from raw optimizer state or recurrent activity; distinguish routing-report code preservation from future numerical behavior under changed shared PAD code. Classification dtype guards apply after array conversion. Soil retains its specified trapezoidal log-diameter metric and current prediction clamp; official hidden scorer identity was not verified. H1 remains not supported, and no task-accuracy gain is inferred from passing tests.

@@ -1,0 +1,429 @@
+{
+  "archive": {
+    "all_raw_files_match_git_commit": true,
+    "files": [
+      {
+        "bytes": 12445,
+        "path": "execution_plan.json",
+        "sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b"
+      },
+      {
+        "bytes": 230,
+        "path": "full_pytest.log",
+        "sha256": "88b56a767cf9fd3ef7b17402fc74a825fac485ca91f7f2b243a431d4b7cb968b"
+      },
+      {
+        "bytes": 64006,
+        "path": "full_pytest_environment.json",
+        "sha256": "1115701d7fe82e52319fc3447b532fbf8fc5c1f92c1f7c77fe5a808ce7faa9a7"
+      },
+      {
+        "bytes": 689,
+        "path": "full_pytest_status.json",
+        "sha256": "536e51a3f5330e313fae1166c1d12719b2c5c1e6a7d93ff6e5d63c7c7b32ccdc"
+      },
+      {
+        "bytes": 1059,
+        "path": "legacy_padding.json",
+        "sha256": "3f542c4c96898475510e5f67520645a316ab729e9e7c569acd5d7042f40fea62"
+      },
+      {
+        "bytes": 707,
+        "path": "legacy_padding_demonstration.log",
+        "sha256": "e0748d4352886ab32e82bb3f95fcfa96f66a410a955682e50eca765895739fc6"
+      },
+      {
+        "bytes": 1874,
+        "path": "legacy_padding_demonstration_environment.json",
+        "sha256": "41a9fd5218206a79e494cfc0305a69ccaaef19d20670dcc247c583643305cb9e"
+      },
+      {
+        "bytes": 723,
+        "path": "legacy_padding_demonstration_status.json",
+        "sha256": "1fbae7dd386303d111b77a13e607ba5be18326514d355d86884dbd515debd188"
+      },
+      {
+        "bytes": 7661497,
+        "path": "source.zip",
+        "sha256": "0d5501f78f0e93f703448f6a5b56bd575bd10c2dde50368e314ddcc5becbd80e"
+      },
+      {
+        "bytes": 10874,
+        "path": "source_after.json",
+        "sha256": "cb9ec20658deb267c6d8f262ba59fe8d3a3d349376f08b1ea97cf2b30b3a56c5"
+      },
+      {
+        "bytes": 10874,
+        "path": "source_before.json",
+        "sha256": "26cee66bdb5255b351026d84d5c0233f6872d0c2081c853883dabea099ae2f5a"
+      },
+      {
+        "bytes": 21986,
+        "path": "test_collection.json",
+        "sha256": "107a9d8150a20be4e26cd49be96eeb5fb92b7b75616f6e496919d2b03bd02e7e"
+      },
+      {
+        "bytes": 27838,
+        "path": "tests.xml",
+        "sha256": "552837aae34155a7fcbc26d3932c3d82cb4bf4bfc4eada9a76e5448d6164a894"
+      },
+      {
+        "bytes": 4750,
+        "path": "worker_status.json",
+        "sha256": "84a64e5578882986596e2cd59c8082043ccd3e06e7964f9674ed3579b0705aed"
+      }
+    ],
+    "manifest_sha256": "a58f7738ea0359d85f3ad689e30831f7cdafd6fc7c4ef2e55a5d7128da2a954a",
+    "manifested_bytes": 7819552,
+    "manifested_files": 14,
+    "total_bytes_including_manifest": 7821952,
+    "total_files_including_manifest": 15
+  },
+  "audit_method": "Read-only stdlib recount of saved JSON/XML/ZIP and frozen Git tree; no tests, imports of project/numerical runtimes, models, task sampling or RNG execution.",
+  "checks": 1494,
+  "completed_at_utc": "2026-10-07T07:01:40.929468+00:00",
+  "execution": {
+    "gate_chronology_verified": true,
+    "minimum_sampled_available_ram_gib": 14.328044891357422,
+    "resource_samples": 15,
+    "stages": [
+      {
+        "name": "legacy_padding_demonstration",
+        "return_code": 0,
+        "seconds": 3.0012694520000025
+      },
+      {
+        "name": "full_pytest",
+        "return_code": 0,
+        "seconds": 8.002703983999993
+      }
+    ],
+    "worker_seconds_before_archive": 11.713040590000006
+  },
+  "frozen_source": "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item8",
+  "input": "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1",
+  "issues": [],
+  "item": 8,
+  "legacy_padding_witness": {
+    "device": "cpu",
+    "fixture_only": true,
+    "optimizer_steps_per_route": 1,
+    "routes": [
+      {
+        "loss": 4.326562881469727,
+        "pad_after_sgd": [
+          -0.36817607283592224,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pad_before": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pad_gradient": [
+          3.681760549545288,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "route": "answer_reinjection",
+        "zero_pad_contract_violated": true
+      },
+      {
+        "loss": 0.7465673089027405,
+        "pad_after_sgd": [
+          -0.017437150701880455,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pad_before": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pad_gradient": [
+          0.17437149584293365,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "route": "lens_readout",
+        "zero_pad_contract_violated": true
+      }
+    ],
+    "source_sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "status": "legacy_defect_reproduced",
+    "torch": "2.6.0+cpu"
+  },
+  "limitations": [
+    "Independent saved-artifact review is not an external replication or a new experimental run.",
+    "Hashes and recorded process events establish consistency, not independent custody or proof against unlogged access.",
+    "Thread values are recorded boundaries; RAM values are sampled availability, not continuous minima, utilization, energy or peak RSS.",
+    "Synthetic contracts do not establish scientific performance, real-dataset validity or the hidden competition scorer.",
+    "Only recorded successful ordinary completion is observed here; this archive does not experimentally prove all interruption or failure paths.",
+    "The separate two-route PAD demonstration is also exercised inside the suite; total optimizer fixture work exceeds the two separate CLI steps."
+  ],
+  "pytest": {
+    "cases_by_file": {
+      "tests/test_classification_contracts.py": 11,
+      "tests/test_core.py": 13,
+      "tests/test_padding_invariant.py": 10,
+      "tests/test_research_ablations.py": 16,
+      "tests/test_research_analyze_core_ablation.py": 45,
+      "tests/test_research_analyze_growth_ablation.py": 8,
+      "tests/test_research_development_data.py": 4,
+      "tests/test_research_growth_ablation.py": 22,
+      "tests/test_research_item6_worker.py": 1,
+      "tests/test_research_item6_worker_supervision.py": 3,
+      "tests/test_research_split_governance.py": 17,
+      "tests/test_routing_metrics.py": 16,
+      "tests/test_soil_evaluation.py": 21
+    },
+    "collection_count": 187,
+    "errors": 0,
+    "failures": 0,
+    "full_pytest_log_has_summary": false,
+    "junit_suite_attributes": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "runnervmmprz5",
+      "name": "pytest",
+      "skipped": "1",
+      "tests": "341",
+      "time": "6.433",
+      "timestamp": "2026-10-07T06:55:06.540347+00:00"
+    },
+    "junit_testcase_elements": 187,
+    "new_methods": 58,
+    "new_methods_by_file": {
+      "tests/test_classification_contracts.py": 11,
+      "tests/test_padding_invariant.py": 10,
+      "tests/test_routing_metrics.py": 16,
+      "tests/test_soil_evaluation.py": 21
+    },
+    "new_methods_passed_nodeids": [
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_valid_counts_and_macro_role_weighting",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_unknown_role_cannot_inflate_global_denominator",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_nll_must_align_with_every_prediction",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_nonfinite_or_negative_nll_is_rejected",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_noninteger_or_boolean_ids_are_rejected",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_pad_target_and_negative_prediction_are_rejected",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_missing_roles_and_mismatched_shapes_are_rejected",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_interval_flag_and_counts_have_explicit_types",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_wilson_rejects_fractional_counts_and_invalid_confidence",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_valid_summary_matches_preserved_original_exactly",
+      "tests/test_classification_contracts.py::ClassificationContractTests::test_real_module_integration",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_preserved_source_reproduces_both_legacy_gradient_paths",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_actual_answer_and_lens_optimizer_steps_preserve_effective_pad",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_checkpoint_nonzero_pad_is_projected_without_rewriting_stored_weights",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_resumed_adamw_momentum_cannot_reintroduce_effective_pad",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_grounded_pad_is_zero_and_other_values_and_gradients_are_unchanged",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_nonpad_function_and_gradients_match_legacy_when_pad_has_no_objective",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_forward_lens_and_stream_use_the_same_zero_pad_boundary",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_zero_identity_and_initial_seed_do_not_imply_zero_recurrent_activity",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_camera_observation_is_not_discarded_as_padding",
+      "tests/test_padding_invariant.py::PaddingInvariantTests::test_research_nca_explicit_legacy_policy_survives_core_correction",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_equal_mean_ids_have_distinct_distributions",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_empty_is_invalid_but_unused_slots_are_explicit",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_invalid_slot_inventory",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_invalid_assignment_ids",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_frequency_ties_do_not_invent_one_expert",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_known_topic_contingency",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_topics_are_never_inferred",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_invalid_or_misaligned_topics",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_mapping_must_cover_observed_topics",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_explicit_mapping_reports_agreement_only",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_slot_renaming_permutes_counts_and_preserves_mapped_agreement",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_pooled_denominator_weights_unequal_topic_sizes",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_exact_score_ties_use_original_first_maximum_rule",
+      "tests/test_routing_metrics.py::RoutingMetricsTests::test_nonfinite_bad_shape_and_inconsistent_scores_rejected",
+      "tests/test_routing_metrics.py::DriverSummaryIntegrationTests::test_both_growth_drivers_use_topic_and_pooled_count_summaries",
+      "tests/test_routing_metrics.py::DriverSummaryIntegrationTests::test_training_and_original_routing_expressions_unchanged",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_metric_identity_symmetry_and_known_extremes",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_trapezoid_is_not_discrete_wasserstein",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_matches_independent_numpy_trapezoid",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_invalid_cdf_cases_rejected_without_projection",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_terminal_tolerance_explicit_and_unmodified",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_monotonicity_and_bounds_have_no_hidden_tolerance",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_pdf_roundtrip_and_input_not_mutated",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_normalization_collisions_and_duplicates_rejected",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_valid_ids_preserve_raw_names",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_folds_cover_once_with_nonempty_training",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_invalid_fold_counts_rejected",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_duplicate_missing_unknown_overlapping_empty_folds_rejected",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_reference_never_reads_heldout_label",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_reference_invariant_under_heldout_label_change",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_reference_rejects_overlap_and_empty_train",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_per_sample_records_preserve_unrounded_values_and_group",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_pooled_mean_weights_samples_not_folds",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_summary_rejects_empty_duplicate_nonfinite_scores",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_main_cv_integration_with_stubbed_training_and_predictions",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_failed_prediction_preserves_initial_plan_and_completed_sample",
+      "tests/test_soil_evaluation.py::SoilEvaluationTests::test_submission_uniform_fallback_constructor_is_valid"
+    ],
+    "passed_testcase_elements": 186,
+    "real_classification_module_integration_passed": true,
+    "reporting_unit_discrepancy": {
+      "difference": 154,
+      "header_tests": 341,
+      "interpretation": "The187 unique testcase elements are the collected parent-case inventory;341 includes154 successful nested subTest call outcomes and is not341 independently collected tests.",
+      "limitations": [
+        "No separate per-subtest runtime event stream was saved;154 is reconstructed statically from frozen fixture loops and agrees with completed parents and header arithmetic.",
+        "The published9.1.1 source was reviewed by root; installed pytest module bytes were not separately archived. No test rerun or raw XML change was performed."
+      ],
+      "pytest_emitter_explanation": "The upstream 9.1.1 unittest adapter emits each subtest as a call report with its parent nodeid. JUnit increments passed statistics for every successful call report, while reusing one XML node per parent nodeid/worker. The suite attribute therefore counts parent outcomes plus 154 nested successful outcomes; it is not 341 independently collected cases.",
+      "source_review_provenance": {
+        "published_source_records": [
+          {
+            "bytes": 25961,
+            "retrieval": "GitHub connector exact tagged source; not copied from the installed runner distribution",
+            "sha256": "557b8978c66b8010fafc50ada4bf56333f9927f31b2b5909fe4c1a9df1a3c0f0",
+            "tag": "9.1.1",
+            "url": "https://github.com/pytest-dev/pytest/blob/9.1.1/src/_pytest/junitxml.py"
+          },
+          {
+            "bytes": 25176,
+            "retrieval": "GitHub connector exact tagged source; not copied from the installed runner distribution",
+            "sha256": "24657b6c497eacbf50a978713598b3baed4c05c29f1c01891563cfefed119224",
+            "tag": "9.1.1",
+            "url": "https://github.com/pytest-dev/pytest/blob/9.1.1/src/_pytest/unittest.py"
+          },
+          {
+            "bytes": 13507,
+            "retrieval": "GitHub connector exact tagged source; not copied from the installed runner distribution",
+            "sha256": "f514883bad06a84cec0d7ddc1dd8ce8c16e5680597f9fc5a9bd8836b878f92a4",
+            "tag": "9.1.1",
+            "url": "https://github.com/pytest-dev/pytest/blob/9.1.1/src/_pytest/subtests.py"
+          }
+        ],
+        "receipt": "results/research/08_validation/junit_reporting_audit.json",
+        "receipt_sha256": "13c486350055b95c14ef63f6e8dd76002a5db7cc13b2fd560ac7611f42ebcf87",
+        "reviewed_by": "root"
+      },
+      "static_subtest_context_counts": {
+        "tests/test_classification_contracts.py": {
+          "interval_arguments": 5,
+          "nll_alignment": 3,
+          "nonfinite_nll": 3,
+          "noninteger_ids": 4,
+          "pad_negative": 2,
+          "shape_missing": 3,
+          "wilson": 7
+        },
+        "tests/test_padding_invariant.py": {
+          "answer_and_lens_routes": 2
+        },
+        "tests/test_research_development_data.py": {
+          "equivalence": 2,
+          "explicit_generator": 2,
+          "forbidden_names": 7,
+          "inherited_routes": 8
+        },
+        "tests/test_research_split_governance.py": {
+          "artifact_drift": 3,
+          "callback_failure": 2,
+          "cross_partition_conflicts": 3,
+          "final_bytes_and_limit": 2,
+          "history": 6,
+          "invalid_json": 3,
+          "manifest_identity": 2,
+          "metric_inputs": 16,
+          "preprocessing": 3,
+          "selection_scenarios": 9,
+          "tie_breaks": 4
+        },
+        "tests/test_routing_metrics.py": {
+          "assignment_ids": 7,
+          "mapping": 5,
+          "scores": 8,
+          "slot_inventory": 5,
+          "topics": 6
+        },
+        "tests/test_soil_evaluation.py": {
+          "fold_counts": 5,
+          "invalid_cdf": 8,
+          "invalid_folds": 5,
+          "normalized_names": 4
+        }
+      },
+      "static_subtest_total": 154,
+      "status": "explained_reporting_units_no_unresolved_result_contradiction",
+      "unique_testcase_elements": 187
+    },
+    "skip_nodeids": [
+      "tests/test_core.py::test_cartilla_layout"
+    ],
+    "skipped_testcase_elements": 1,
+    "test_files": 13
+  },
+  "raw_archive_commit": "505a7098a077f90421e4a5ed0cd4c06882e98211",
+  "reporting_note_integrated_at_utc": "2026-10-07T07:02:34.691361+00:00",
+  "resource_observations": [
+    {
+      "available_bytes": 9800466432,
+      "phase": "admission"
+    },
+    {
+      "available_bytes": 9784123392,
+      "phase": "completed"
+    }
+  ],
+  "runtime": {
+    "all_cases_begin_at": [
+      1,
+      1
+    ],
+    "legacy_after_fixture_threads": [
+      1,
+      1
+    ],
+    "legacy_import_preinitialization_threads": [
+      1,
+      2
+    ],
+    "note": "Legacy import record precedes CLI control initialization. Both post-stage records are1/1; all187 actual test boundaries start1/1.",
+    "python": "3.12.8",
+    "safety_exception": {
+      "after_fixture_interop": 1,
+      "after_fixture_intra": 2,
+      "allowed_safety_fixture_exception": true,
+      "before_interop": 1,
+      "before_intra": 1,
+      "nodeid": "tests/test_core.py::test_safety_refuses_busy_gpu",
+      "restored_intra": 1
+    },
+    "thread_boundary_cases": 187,
+    "versions": {
+      "Pillow": "12.3.0",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    }
+  },
+  "schema_version": 1,
+  "source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "source_plan": {
+    "before_and_after_exact": true,
+    "bound_files": 95,
+    "freeze_utc": "2026-10-07T06:52:42.874308+00:00",
+    "plan_sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b"
+  },
+  "source_zip": {
+    "archive_bytes": 7661497,
+    "directory_entries": 33,
+    "full_file_byte_identity": true,
+    "git_tree": "03b0549f6ebb39beef4b4160aaaa66292d626059",
+    "sha256": "0d5501f78f0e93f703448f6a5b56bd575bd10c2dde50368e314ddcc5becbd80e",
+    "tracked_files": 272,
+    "uncompressed_file_bytes": 13713224
+  },
+  "started_at_utc": "2026-10-07T07:01:40.805961+00:00",
+  "status": "verified"
+}

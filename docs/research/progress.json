@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T06:52:42.874308+00:00",
-  "active_item": 8,
+  "recorded_at": "2026-10-07T07:17:56.375298+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -49,8 +49,10 @@
     {
       "item": 8,
       "title": "Metric and invariant corrections",
-      "status": "in_progress",
-      "opened_at_utc": "2026-10-07T06:27:00.782435+00:00"
+      "status": "completed",
+      "opened_at_utc": "2026-10-07T06:27:00.782435+00:00",
+      "closed_at_utc": "2026-10-07T07:17:56.375298+00:00",
+      "report": "08_results.md"
     },
     {
       "item": 9,
@@ -292,7 +294,7 @@
     "resource_release": "All owned item-7 local numerical tasks finished; GitHub job112654156161 completed successfully and released its standard runner."
   },
   "item8": {
-    "stage": "Frozen for first pinned CPU integration run",
+    "stage": "Completed investigation; corrected contracts verified; H1 unchanged",
     "opened_after_item7_closure_commit": "ef25ed6497cd3554d8eb78a0ef278f7b589e1e1f",
     "scope": "Audit and correct metric/invariant defects, including padding semantics, routing summaries and Soil CDF/fold evaluation. Preserve historical source versions and distinguish corrected metrics from new model evidence.",
     "model_training": "Only bounded deterministic regression fixtures unless a separate prospective protocol is frozen.",
@@ -301,6 +303,49 @@
     "historical_results_recomputed": false,
     "freeze_utc": "2026-10-07T06:52:42.874308+00:00",
     "cloud_plan_sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b",
-    "implementation_files": 95
+    "implementation_files": 95,
+    "closed_at_utc": "2026-10-07T07:17:56.375298+00:00",
+    "report": "08_results.md",
+    "report_sha256": "c9ae8a5dab162e7b7ca2b82255c2dfb2105dce7d01f6228b37a0e081a31070ec",
+    "source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+    "run_id": 37584119610,
+    "attempt": "37584119610-1",
+    "final_raw_archive_commit": "505a7098a077f90421e4a5ed0cd4c06882e98211",
+    "cloud_tests": {
+      "collected_cases": 187,
+      "passed": 186,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "new_methods_passed": 58,
+      "junit_header_tests": 341,
+      "reconstructed_subtests": 154
+    },
+    "cloud_archive": {
+      "files_excluding_manifest": 14,
+      "bytes_excluding_manifest": 7819552,
+      "source_zip_files": 272,
+      "audit_checks": 1494,
+      "issues": 0
+    },
+    "analytic_padding": {
+      "comparisons": 26,
+      "exact_zeros": 20,
+      "issues": 0,
+      "maximum_absolute_error": 2.402022563074979e-07
+    },
+    "local_evidence": {
+      "checks": 156,
+      "saved_transcripts": 8,
+      "contradictions": 0,
+      "status": "verified_with_documented_evidence_limits"
+    },
+    "report_review": {
+      "status": "verified",
+      "issues": 0,
+      "sha256": "cf5a473da7ca9059cabb6e1df9f62f32ef67198475ad03df4c326d27872eb60e"
+    },
+    "verdict": "Effective PAD and metric/fold contracts corrected and tested. No task-performance advantage, real Soil rescore, external replication or rescue of H1 established.",
+    "resource_release": "Owned local audits completed and GitHub job112670244618 completed successfully; no item-8 numerical task remains."
   }
 }

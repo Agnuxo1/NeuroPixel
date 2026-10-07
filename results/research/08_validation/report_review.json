@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "item": 8,
+  "status": "verified",
+  "reviewed_at_utc": "2026-10-07T07:13:25.076804+00:00",
+  "initial_report_sha256": "e13306680ebddefc693dc361c1d1b815ad12544805d36bde6f4f6b67d31cea1e",
+  "final_report_sha256": "c9ae8a5dab162e7b7ca2b82255c2dfb2105dce7d01f6228b37a0e081a31070ec",
+  "final_report_bytes": 22607,
+  "frozen_source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "raw_archive_commit": "505a7098a077f90421e4a5ed0cd4c06882e98211",
+  "method": "Independent within-team review of all report prose/tables against saved raw JSON/XML/ZIP audit receipts, local transcripts/count receipts, analytical receipt and targeted frozen-source inspection. Changed paragraphs were checked against the final report hash. No tests, model or project imports, numerical-library imports, RNG, training, new simulation or source edits. This receipt is the only written output.",
+  "confirmed": {
+    "anchor_ids_and_plan": {
+      "source": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+      "raw": "505a7098a077f90421e4a5ed0cd4c06882e98211",
+      "plan_sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b",
+      "bound_files": 95,
+      "freeze_utc": "2026-10-07T06:52:42.874308+00:00"
+    },
+    "archive_units": {
+      "manifested_files": 14,
+      "manifested_bytes": 7819552,
+      "including_manifest_files": 15,
+      "including_manifest_bytes": 7821952,
+      "zip_regular_files": 272,
+      "zip_directory_entries": 33,
+      "zip_total_entries": 305,
+      "zip_uncompressed_file_bytes": 13713224,
+      "existing_archive_audit_checks": 1494,
+      "existing_archive_audit_issues": 0
+    },
+    "case_units": {
+      "collected_and_xml_cases": 187,
+      "passed": 186,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0,
+      "files": 13,
+      "new_methods": 58,
+      "new_method_counts": {
+        "padding": 10,
+        "classification": 11,
+        "routing": 16,
+        "soil": 21
+      },
+      "prior_methods": 129,
+      "prior_passed": 128,
+      "prior_skipped": 1,
+      "sole_skip": "tests/test_core.py::test_cartilla_layout",
+      "skip_reason": "sin CIFAR-10 local",
+      "actual_classification_integration_passed": true
+    },
+    "junit_reporting_units": {
+      "suite_tests_attribute": 341,
+      "parent_cases": 187,
+      "source_reconstructed_subtests": 154,
+      "subtests_by_area": {
+        "classification": 27,
+        "padding": 2,
+        "development": 19,
+        "routing": 31,
+        "soil": 22,
+        "governance": 53
+      },
+      "status": "reporting_units_explained",
+      "separate_raw_subtest_stream_saved": false,
+      "interpretation": "Explained reporting-unit difference, not 341 independent collected test cases; no unresolved contradiction."
+    },
+    "local_attempts": {
+      "saved_transcripts": 8,
+      "existing_relationship_checks": 156,
+      "classification_before": {
+        "methods": 11,
+        "passed_methods": 3,
+        "failed_methods": 7,
+        "skipped": 1,
+        "failed_subtests": 20,
+        "direct_method_failures": 1
+      },
+      "classification_after": {
+        "passed": 10,
+        "skipped": 1
+      },
+      "routing_before": {
+        "passed": 1,
+        "expected_failure": 1
+      },
+      "routing_after": {
+        "passed": 16
+      },
+      "soil_original": {
+        "failed": 3
+      },
+      "soil_first_correction": {
+        "passed": 19
+      },
+      "soil_review": {
+        "methods": 21,
+        "passed": 18,
+        "failures": 1,
+        "errors": 2
+      },
+      "soil_final": {
+        "passed": 21
+      },
+      "contradictions": 0
+    },
+    "padding": {
+      "six_displayed_nonzero_values": "Correctly rounded representations of the saved legacy losses, first PAD gradients and post-SGD values for answer_reinjection and lens_readout.",
+      "scalar_comparisons": 26,
+      "exact_structural_zeros": 20,
+      "maximum_absolute_error": 2.402022563074979e-07,
+      "maximum_nonzero_relative_error": 1.1113327935842836e-07,
+      "maximum_float32_ulps": 1.0403739679604769,
+      "tolerance": "rtol=16*2^-23; atol=0; exact structural zeros. Practical envelope, not a universal kernel error bound.",
+      "analytic_formula_scope": "Explicit four-token deterministic fixtures; no task-performance result."
+    },
+    "classification_fixture": {
+      "correct": 4,
+      "n": 8,
+      "micro": 0.5,
+      "role_accuracies": [
+        "1/3",
+        "1",
+        "1/2",
+        "1/2"
+      ],
+      "macro": "7/12",
+      "agent_patient_macro": "5/12",
+      "mean_nll": 1.75
+    },
+    "execution": {
+      "gate_chronology_verified": true,
+      "minimum_sampled_available_ram_gib": 14.328044891357422,
+      "resource_samples": 15,
+      "stages": [
+        {
+          "name": "legacy_padding_demonstration",
+          "return_code": 0,
+          "seconds": 3.0012694520000025
+        },
+        {
+          "name": "full_pytest",
+          "return_code": 0,
+          "seconds": 8.002703983999993
+        }
+      ],
+      "worker_seconds_before_archive": 11.713040590000006
+    },
+    "runtime": {
+      "all_cases_begin_at": [
+        1,
+        1
+      ],
+      "legacy_after_fixture_threads": [
+        1,
+        1
+      ],
+      "legacy_import_preinitialization_threads": [
+        1,
+        2
+      ],
+      "note": "Legacy import record precedes CLI control initialization. Both post-stage records are1/1; all187 actual test boundaries start1/1.",
+      "python": "3.12.8",
+      "safety_exception": {
+        "after_fixture_interop": 1,
+        "after_fixture_intra": 2,
+        "allowed_safety_fixture_exception": true,
+        "before_interop": 1,
+        "before_intra": 1,
+        "nodeid": "tests/test_core.py::test_safety_refuses_busy_gpu",
+        "restored_intra": 1
+      },
+      "thread_boundary_cases": 187,
+      "versions": {
+        "Pillow": "12.3.0",
+        "numpy": "2.2.6",
+        "psutil": "7.2.2",
+        "pytest": "9.1.1",
+        "scipy": "1.15.1",
+        "torch": "2.6.0+cpu"
+      }
+    },
+    "source_compatibility_and_limits": [
+      "Effective PAD projection follows grounding; stored PAD parameters and old optimizer momentum need not be zero.",
+      "Other-row fixture equality does not claim generic equality of training trajectories. ResearchNCA retains its explicit legacy freeze_pad policy.",
+      "Zero identity/initial state does not imply zero recurrent activity or energy.",
+      "Routing reporting policy is unchanged while the global PAD source correction can affect future model trajectories.",
+      "Classification guards apply to converted array dtypes and do not preserve original mixed-list scalar types.",
+      "Soil references are train-only; trapezoid log-diameter metric is not automatically discrete Wasserstein or the uninspected hidden scorer.",
+      "Strict CDF validation does not remove the retained prediction clamp. Uniform endpoint is constructed at exactly100.",
+      "AST CV/fallback fixtures do not establish real competition data, full submission workflow, device/domain holdout or changed model accuracy.",
+      "No performance advantage, rescue of H1, external replication, independent custody, continuous utilization or physical-energy result is claimed."
+    ]
+  },
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "section": "4",
+      "initial_finding": "Largest discrepancy phrasing conflated different absolute-error and ULP maxima.",
+      "resolution": "Final text explicitly assigns maximum ULP-scaled discrepancy1.040374 to lens PAD after SGD, and maximum absolute discrepancy to answer loss at0.503741ULP.",
+      "status": "resolved"
+    },
+    {
+      "id": "R2",
+      "section": "5 routing",
+      "initial_finding": "Unqualified unchanged training could imply runtime equivalence despite the simultaneous PAD correction.",
+      "resolution": "Final text limits preservation to routing-driver calls/expressions/policy and explicitly notes unmeasured future trajectory changes caused by shared PAD correction.",
+      "status": "resolved"
+    },
+    {
+      "id": "R3",
+      "section": "5 classification",
+      "initial_finding": "Claim about rejecting boolean IDs was broader than post-conversion dtype validation.",
+      "resolution": "Final text states integer-dtype contract after np.asarray and explicitly discloses mixed boolean/integer Python-list coercion.",
+      "status": "resolved"
+    }
+  ],
+  "issues": [],
+  "input_sha256": {
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/docs/research/08_results.md": "c9ae8a5dab162e7b7ca2b82255c2dfb2105dce7d01f6228b37a0e081a31070ec",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/results/research/08_validation/cloud_archive_audit.json": "93aea729bd202efadae267423e055ba5521175b0c0cda0a34753406f6575f202",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/results/research/08_validation/local_evidence_audit.json": "5ab189b2b2e71de37c571f878642081e561d214e4f84a88b142a26a155e13318",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/results/research/08_validation/padding_analytic_recount.json": "85d360478dc8201a9cdd83ec0f98cad9c2fbd281490564ec0224d2ae85094a58",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/results/research/08_validation/junit_reporting_audit.json": "13c486350055b95c14ef63f6e8dd76002a5db7cc13b2fd560ac7611f42ebcf87",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item8/neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item8/neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item8/neuropixel/research/classification_contracts.py": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item8/tests/test_classification_contracts.py": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1/archive_manifest.json": "a58f7738ea0359d85f3ad689e30831f7cdafd6fc7c4ef2e55a5d7128da2a954a",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1/execution_plan.json": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1/legacy_padding.json": "3f542c4c96898475510e5f67520645a316ab729e9e7c569acd5d7042f40fea62",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1/test_collection.json": "107a9d8150a20be4e26cd49be96eeb5fb92b7b75616f6e496919d2b03bd02e7e",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1/tests.xml": "552837aae34155a7fcbc26d3932c3d82cb4bf4bfc4eada9a76e5448d6164a894",
+    "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item8/results/research/08_cloud_runs/37584119610-1/worker_status.json": "84a64e5578882986596e2cd59c8082043ccd3e06e7964f9674ed3579b0705aed"
+  },
+  "review_process_notes": [
+    "One read-only formatting command initially raised TypeError on len(integer check count); corrected without changing any artifact.",
+    "A guessed manifest.json filename was absent; the actual archive_manifest.json was located from the directory inventory.",
+    "A proposed receipt writer stopped at its first old-report hash assertion because root had just applied the three requested edits. It wrote nothing. Final paragraphs were then verified against the explicitly supplied final hash."
+  ],
+  "limitations": [
+    "The reviewer authored the PAD implementation earlier; this is independent report/evidence checking within the assistant team, not independent external authorship, custody or replication.",
+    "No new runtime evidence was produced. Full archive identity relies on the preserved1494-check archive audit, with targeted raw/receipt reads for this report review.",
+    "Final review adds no test count or experimental repetitions. Items9+ were not opened or executed by this review."
+  ]
+}

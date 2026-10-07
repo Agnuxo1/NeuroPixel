@@ -33,3 +33,8 @@
 ## 2026-10-07T06:27:00.782435+00:00 — SCI-008 isolated evaluation audit
 
 Root claims a read-only source audit and narrowly scoped evaluation corrections in the isolated scientific branch. Scope: CDF conversion/invariants, sample and device grouping, reference fitting and fold aggregation, with synthetic deterministic fixtures. This does not use or stop the historical competition jobs, recover unavailable result files, train on competition data or submit anything. Any score affected by a correction requires its original predictions/data before recalculation can be claimed.
+
+
+## 2026-10-07T07:17:56.375298+00:00 — SCI-008 closed
+
+SCI-008 evaluation audit is closed on the isolated research branch. Train-only fold reference, fold/pooled accounting, CDF validation, ID/group contracts and prediction/source provenance are implemented. All21 Soil regression methods passed in the pinned CPU suite. Preserved original/intermediate failures and limits are documented in docs/research/08_soil_audit.md and 08_results.md. No real competition data or submission was executed, no historical score was recomputed, and no official hidden-scorer equivalence or model-performance gain is asserted. Release the SCI-008 audit claim; historical competition tasks and reservations are unchanged.

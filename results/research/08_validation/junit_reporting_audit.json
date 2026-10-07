@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "item": 8,
+  "at_utc": "2026-10-07T07:01:52.486557+00:00",
+  "status": "reporting_units_explained",
+  "actual_collected_cases": 187,
+  "actual_xml_testcase_elements": 187,
+  "actual_xml_suite_tests_attribute": 341,
+  "passed_testcase_elements": 186,
+  "skipped_testcase_elements": 1,
+  "xml_failure_elements": 0,
+  "xml_error_elements": 0,
+  "statically_reconstructed_successful_subtests": {
+    "classification": 27,
+    "padding": 2,
+    "development_sampler": 19,
+    "routing": 31,
+    "soil": 22,
+    "split_governance": 53
+  },
+  "reconstructed_subtest_total": 154,
+  "explanation": "The upstream 9.1.1 unittest adapter emits each subtest as a call report with its parent nodeid. JUnit increments passed statistics for every successful call report, while reusing one XML node per parent nodeid/worker. The suite attribute therefore counts parent outcomes plus 154 nested successful outcomes; it is not 341 independently collected cases.",
+  "upstream_source_review": [
+    {
+      "url": "https://github.com/pytest-dev/pytest/blob/9.1.1/src/_pytest/junitxml.py",
+      "tag": "9.1.1",
+      "bytes": 25961,
+      "sha256": "557b8978c66b8010fafc50ada4bf56333f9927f31b2b5909fe4c1a9df1a3c0f0",
+      "retrieval": "GitHub connector exact tagged source; not copied from the installed runner distribution"
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest/blob/9.1.1/src/_pytest/unittest.py",
+      "tag": "9.1.1",
+      "bytes": 25176,
+      "sha256": "24657b6c497eacbf50a978713598b3baed4c05c29f1c01891563cfefed119224",
+      "retrieval": "GitHub connector exact tagged source; not copied from the installed runner distribution"
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest/blob/9.1.1/src/_pytest/subtests.py",
+      "tag": "9.1.1",
+      "bytes": 13507,
+      "sha256": "f514883bad06a84cec0d7ddc1dd8ce8c16e5680597f9fc5a9bd8836b878f92a4",
+      "retrieval": "GitHub connector exact tagged source; not copied from the installed runner distribution"
+    }
+  ],
+  "raw_input_sha256": {
+    "tests.xml": "552837aae34155a7fcbc26d3932c3d82cb4bf4bfc4eada9a76e5448d6164a894",
+    "test_collection.json": "107a9d8150a20be4e26cd49be96eeb5fb92b7b75616f6e496919d2b03bd02e7e",
+    "full_pytest_environment.json": "1115701d7fe82e52319fc3447b532fbf8fc5c1f92c1f7c77fe5a808ce7faa9a7"
+  },
+  "independent_static_recount": "architecture_audit counted each finite self.subTest loop in the frozen tests without executing them. Detailed counts are retained in cloud_archive_audit.json.",
+  "initial_audit_read_failure": {
+    "type": "FileNotFoundError",
+    "cause": "Relative Path parent was used before resolving the authoring worktree. The first read failed before receipt creation.",
+    "correction": "Resolve root before deriving the raw-archive path; no scientific output changed."
+  },
+  "limitations": [
+    "The runtime did not save a separate raw event stream for every successful subtest. 154 is a source-based reconstruction consistent with XML and completed parents.",
+    "The installed pytest module bytes were not separately archived; the published 9.1.1 source was inspected after matching the recorded installed version.",
+    "No tests/models were rerun and the original XML was not edited.",
+    "Use 187 collected cases, 186 passed and 1 skip for reporting; do not add nested assertions as independent scientific replications."
+  ]
+}
