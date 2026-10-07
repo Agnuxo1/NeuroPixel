@@ -8,7 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
-  "last_heartbeat_at_utc": "2026-10-07T03:23:58.383593+00:00",
+  "last_heartbeat_at_utc": "2026-10-07T03:29:10.089840+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -30,6 +30,42 @@
     {
       "at_utc": "2026-10-07T03:23:58.383593+00:00",
       "available_ram_gib": 14.608264923095703,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:24:10.052485+00:00",
+      "available_ram_gib": 14.607383728027344,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:25:10.058742+00:00",
+      "available_ram_gib": 14.325050354003906,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:26:10.065185+00:00",
+      "available_ram_gib": 14.330509185791016,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:27:10.071513+00:00",
+      "available_ram_gib": 14.323078155517578,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:28:10.083192+00:00",
+      "available_ram_gib": 14.302898406982422,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:29:10.089840+00:00",
+      "available_ram_gib": 14.330364227294922,
       "cpu_count_logical": 4,
       "thread_limit": 2
     }
@@ -92,6 +128,20 @@
       "returncode": 0,
       "started_at_utc": "2026-10-07T03:23:58.381766+00:00",
       "status": "completed"
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item6_worker.py",
+        "--child",
+        "core",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core"
+      ],
+      "log": "logs/core.log",
+      "name": "core",
+      "started_at_utc": "2026-10-07T03:24:10.050539+00:00",
+      "status": "running"
     }
   ]
 }

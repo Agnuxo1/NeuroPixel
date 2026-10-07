@@ -1,7 +1,75 @@
 {
-  "at_utc": "2026-10-07T03:24:08.409954+00:00",
+  "at_utc": "2026-10-07T03:29:10.109878+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
+    "core/datasets/split0_train_n512_seed61006.npz": {
+      "bytes": 8887,
+      "sha256": "a04e1310ce4a3da1565e15a74b935f87c6e481d41b5fc24a50969f79857432c6"
+    },
+    "core/datasets/split0_validation_n2048_seed61001.npz": {
+      "bytes": 32415,
+      "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f"
+    },
+    "core/events.json": {
+      "bytes": 422,
+      "sha256": "40f8d1876f631417152b6aae79d844ecf6a12169ab5518ea0bc1a9af7096129d"
+    },
+    "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6391,
+      "sha256": "52fd01f4bb7562f2371b263cf8c723c1c067b2280c51e82058ac7789f235a774"
+    },
+    "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 7916,
+      "sha256": "837fdc87a2adc952730c46df95d788e90da35098b79a9700a031f3183eca958e"
+    },
+    "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14286,
+      "sha256": "dcab8eaaa999961853fc96a9b8200c030bd418aaeb2a98689291f54c271a4174"
+    },
+    "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18782,
+      "sha256": "aaee6ba5262a5b9e77bf953498abb17cf04f8ebadcacc8a275bf6f95fe45f477"
+    },
+    "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 124981,
+      "sha256": "368a5b8fee36a4dd3e2bd4ca8976f8dfb2880a3240860d4bea85c41929e1f9d4"
+    },
+    "core/factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6390,
+      "sha256": "72a4850095f35a2576518aeaba597a4939e3101473df53410ffab0bb9f0d4025"
+    },
+    "core/factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 7918,
+      "sha256": "5195197482db129842cb70a0c9bc9bb5cffe5dfb9fa303dfea86585d2ed42349"
+    },
+    "core/factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14296,
+      "sha256": "5489e922d3decdf419f3d8457110d1dc7cf86e31d2bc514f56882be3123f8719"
+    },
+    "core/factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18959,
+      "sha256": "86a942cd360da1761b0b418de94ad981437cadb5ecdabeda4be6d361220a0f58"
+    },
+    "core/factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 124981,
+      "sha256": "ad23e1b73afa241c53c914a74d1c47839b6a35bb4788ba6b9f8ca85762e6fa8e"
+    },
+    "core/factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6393,
+      "sha256": "f2f75a2ecc6ad0363aca04c1e8d8b77800c9dc7339d08bb27cb0ec44032669cd"
+    },
+    "core/factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 6840,
+      "sha256": "f2eb337f7dfe5bb23783739352fe069562b8a24302dd71dde76ffb274e60bf46"
+    },
+    "core/run_manifest.json": {
+      "bytes": 144989,
+      "sha256": "4662bc312f2ec7b59445325ff5ac091f3bf297b315f5ecc18d686aea71492272"
+    },
+    "logs/core.log": {
+      "bytes": 7029,
+      "sha256": "cf0b1e4b474b9de2b59efebb450511dc7ec2de7554010215e34171f406f34ac6"
+    },
     "logs/source_environment.log": {
       "bytes": 2755,
       "sha256": "9840019e85ce2e8fb51459e3d4d2ece0f86d8d6b6e0874215efa8543b63dbc60"
@@ -19,8 +87,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 3932,
-      "sha256": "a84cf345b417f57e5be46ae36b579d2d54fa29337590092b1bbc40dce9b79ac7"
+      "bytes": 5387,
+      "sha256": "ee012bcee8ded52d7baa6ae5a6dd9b8ba213e6d321fff64ca4657371fd72d9cb"
     }
   },
   "run_key": "37566497890-1",
