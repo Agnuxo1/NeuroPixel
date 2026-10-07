@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "panel": "learned_retrospective",
+  "review_type": "read_only_static",
+  "review_date_utc": "2026-10-07",
+  "status": "no_concrete_blockers_found",
+  "reviewed_sources": [
+    {
+      "role": "protocol",
+      "blob_sha": "672caab9ff5296129226dce8b6f2da1293b655c7",
+      "sha256": "13147b83efbca3c56a15646794fd195970c3a829385e09a177a9a4a78ea6d3b3",
+      "scope": "Read the complete protocol."
+    },
+    {
+      "role": "component_controller",
+      "blob_sha": "c226e9918f9affcdb4e23238fbe31fdc6cd65792",
+      "sha256": "a2ee776cb859d9ffa43fff4677f5a7d9b2081fbe414af7cb1550a5dce0048e6d",
+      "scope": "Read the complete controller."
+    },
+    {
+      "role": "native_producer",
+      "blob_sha": "2210a004f2583153e72deb98c59025b137f81924",
+      "sha256": "1724762ac47a8911ae9e5463e6d6cafde7392dd827192e5fbede0a0dc883ec6a",
+      "scope": "Read the complete producer, including checkpoint reconstruction, all-five admission, state injection, observation masks, guard retention and failure persistence."
+    },
+    {
+      "role": "independent_array_auditor",
+      "blob_sha": "63d6a1b10380602fd1af76d44b0b08ebe3707636",
+      "sha256": "336c1d547a6e5e9f213d994ad9e1eb57ab155641476be4ce79e380d9fa76504a",
+      "scope": "Focused reading of input_rows, readout, metric_arrays, common_schema, gate_schema, trajectory_schema, gate_recount, perturbation, null_number, censor_recount, event_audit and run. Not a complete independent review of every IO/helper routine."
+    },
+    {
+      "role": "elementary_json_recount",
+      "blob_sha": "7c26dadc5f6605526b872ac7fec59a81b5d52787",
+      "sha256": "bf72dc010c93f0a6d922e4db19c634b1f3b44eefb480749c01bc69fcd785c831",
+      "scope": "Read the complete JavaScript source. No function invocation or numerical execution."
+    },
+    {
+      "role": "checkpoint_binding",
+      "blob_sha": "bbd48561c6bca6ba2c13f33be7ee4002aa4894d9",
+      "sha256": "7692809ad60a5967fab3b29fa42e25d4da1328ea0ec5d309f25a41e23fdf5d81",
+      "scope": "Read the native JSON/NPZ inventory, tensor comparison loop and final receipt fields to check the JavaScript inventory contract. This focused pass is not a complete binder review."
+    }
+  ],
+  "checks_by_inspection": [
+    "All five 64-row compatibility evaluations and a durable summary precede every extended trajectory. The admitted condition uses finite values, absolute tolerance 1e-4 plus relative tolerance 1e-5, and exactly matching 64 predictions. A complete negative gate retains all five checks and creates no continuation directory.",
+    "The selected four states originate from the same 64-example T16 gate forward. They are not reconstructed by a separate four-example inference or treated as historically archived hidden states.",
+    "Checkpoint configuration, architecture, source and input hash links are checked before use. Strict state-dictionary loading and reconstructed zero nonpersistent buffers match the stated grounding-free setup.",
+    "The perturbation uses the literal channel/row/column checkerboard, float64 RMS-based nominal amplitude and float32 represented initial state. Its denominator is the positive finite RMS of the actual represented difference.",
+    "Each branch installs its initial state after the first discarded native update, then retains times 0 through 256. The original canvas remains available on every subsequent update, and evaluation disables stochastic firing.",
+    "The producer preserves the first nonfinite or finite cap-crossing state before stopping that branch. Unobserved states/logits use NaN padding and explicit masks. Readout finiteness is separate from state finiteness.",
+    "State L2/RMS/maxabs, adjacent-step L2 increments, centered float64 NLL, actual perturbation and common-observed-finite pair gains are consistent between the inspected producer and auditor routines.",
+    "The censor recount includes the first finite cap crossing in the observed finite domain, excludes a nonfinite endpoint from finite metrics, and does not convert missing endpoints to zero gain. Operational failures are not certified as completed trajectories.",
+    "The fresh-process controller orders recovery, native production, checkpoint binding and NumPy audit. It preserves component logs/status, uses disjoint receipt names and enforces the shared 600-second stage admission together with component limits.",
+    "The elementary JavaScript checks JSON arithmetic and cross-file counts only. Its binding inventory of 12 or 22 JSON/NPZ files correctly excludes events.jsonl, which is covered by the separate array-auditor native-tree/event checks."
+  ],
+  "interpretation_limits": [
+    "The upper inventory is 40 trajectories and 20 directional pairs across five historical checkpoints and four correlated queries of one exposed validation scene; it is not 40 independent experiments or a new held-out generalization assay.",
+    "Compatibility concerns saved T16 outputs under a changed Python/thread runtime. It does not prove identity of historical hidden states or all subsequent states.",
+    "The fixed perturbation does not estimate an operator norm, worst-case sensitivity, Lyapunov exponent or global/infinite-time stability certificate.",
+    "The state cap and resource limits are operational guards. A cap crossing is a finite recorded event, not by itself an asymptotic-divergence proof.",
+    "The checkpoint binder checks saved parameter identity without inference; the NumPy auditor checks saved arrays, readouts and summaries without replaying recurrent dynamics. Neither is an external laboratory replication.",
+    "Low historical competence limits useful-memory interpretation but does not preclude descriptive state measurements. No claim about the cause of historical task failure is established here."
+  ],
+  "issues": [],
+  "execution": {
+    "model_runs": 0,
+    "numerical_runs": 0,
+    "test_runs": 0,
+    "binary_deserializations": 0,
+    "repository_reference_mutations": 0
+  },
+  "provenance_note": "Candidate blobs were read before the item15B execution freeze. Listed SHA-256 values are the supplied candidate anchors; this static review did not independently hash them. The only authorized write for delivery is this unreferenced UTF-8 receipt blob."
+}

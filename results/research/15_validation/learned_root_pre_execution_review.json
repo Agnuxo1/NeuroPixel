@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "panel": "retrospective_learned",
+  "at_utc": "2026-10-07T16:42:13+00:00",
+  "status": "reviewed_no_blockers",
+  "review_kind": "root_static_integration_before_any_binary_inference",
+  "source_parent": "bb737471485b435308d976b6703c86646d93b5e0",
+  "files": [
+    {
+      "path": ".github/workflows/research-item15-learned.yml",
+      "blob": "88fa62a9a3400248bd448afb0b638b90f4a00949",
+      "bytes": 3172,
+      "sha256": "00d4dfe53aef51df42380e65748e67d3087755c42e88a3af4f0c62e1fc6cbc00"
+    },
+    {
+      "path": "docs/research/15_learned_protocol.md",
+      "blob": "672caab9ff5296129226dce8b6f2da1293b655c7",
+      "bytes": 11698,
+      "sha256": "13147b83efbca3c56a15646794fd195970c3a829385e09a177a9a4a78ea6d3b3"
+    },
+    {
+      "path": "scripts/research_stability_learned_recover.py",
+      "blob": "2fdd477b5a774cc06e4c862bdd4d8eac946131aa",
+      "bytes": 7139,
+      "sha256": "39f8b87d4ecb1dfbed999416ec5c135154afe34b507e65d09a9fdd942235422b"
+    },
+    {
+      "path": "scripts/research_stability_learned_probe.py",
+      "blob": "c226e9918f9affcdb4e23238fbe31fdc6cd65792",
+      "bytes": 6977,
+      "sha256": "a2ee776cb859d9ffa43fff4677f5a7d9b2081fbe414af7cb1550a5dce0048e6d"
+    },
+    {
+      "path": "scripts/research_stability_learned_native.py",
+      "blob": "2210a004f2583153e72deb98c59025b137f81924",
+      "bytes": 29624,
+      "sha256": "1724762ac47a8911ae9e5463e6d6cafde7392dd827192e5fbede0a0dc883ec6a"
+    },
+    {
+      "path": "scripts/research_stability_learned_bind.py",
+      "blob": "bbd48561c6bca6ba2c13f33be7ee4002aa4894d9",
+      "bytes": 15058,
+      "sha256": "7692809ad60a5967fab3b29fa42e25d4da1328ea0ec5d309f25a41e23fdf5d81"
+    },
+    {
+      "path": "scripts/research_stability_learned_audit.py",
+      "blob": "63d6a1b10380602fd1af76d44b0b08ebe3707636",
+      "bytes": 47268,
+      "sha256": "336c1d547a6e5e9f213d994ad9e1eb57ab155641476be4ce79e380d9fa76504a"
+    },
+    {
+      "path": "docs/research/15_learned_inputs.json",
+      "blob": "d43905b693200b5df4a35471ababf504d35427d7",
+      "bytes": 4170,
+      "sha256": "e317fd92999a70be4f48a1f4c2de67453557b0b407795d6a9a2a93c77c4eb049"
+    },
+    {
+      "path": "scripts/research_item15_learned_root_recount.js",
+      "blob": "7c26dadc5f6605526b872ac7fec59a81b5d52787",
+      "bytes": 8719,
+      "sha256": "bf72dc010c93f0a6d922e4db19c634b1f3b44eefb480749c01bc69fcd785c831"
+    }
+  ],
+  "checks": [
+    {
+      "id": "source_identity",
+      "detail": "Native core SHA equals original item9 core, configurations and checkpoints fixed by 22-file manifest mapping."
+    },
+    {
+      "id": "recipe_identity",
+      "detail": "Native and independently authored NumPy RECIPE parsed in V8 and compared exactly; final auditor only adds deterministic endpoint summary fields."
+    },
+    {
+      "id": "loading_binding",
+      "detail": "Root-authored separate weights_only component verifies 10 parameter shapes totaling29,856 plus two zero buffers in all before/after saved snapshots, with no model inference."
+    },
+    {
+      "id": "gates_before_continuation",
+      "detail": "All five64-row T16 gates are durable before any extension; atol1e-4+rtol1e-5, all argmax exact, global failed gate admitted as a preserved negative observation with no extensions."
+    },
+    {
+      "id": "directions_and_horizon",
+      "detail": "Four related queries from one known scene, all5weights, one coordinate checkerboard with nominalRMS1e-4*max(1,RMS), actual represented delta and256 future updates."
+    },
+    {
+      "id": "guard_domain",
+      "detail": "First state guard retained, separate observed/state-finite/logit-finite masks, paired metrics only common finite prefix. Undefined logits are not successful categorical predictions."
+    },
+    {
+      "id": "component_isolation",
+      "detail": "Recovery120/native240/binding60/audit120 seconds, fresh serial child processes under shared600s stage and outer worker1020s with180s archive reserve; numerical1/interop1/RAM8."
+    },
+    {
+      "id": "worker_transport",
+      "detail": "Reused item15 worker supports preflight with contract_tests then preflight stage. PublicCPU workflow pins already used versions and finite20minute/1170second provider deadline."
+    },
+    {
+      "id": "independent_metrics",
+      "detail": "Auditor read fully, array axes39/59, metadata parser, norms, perturbation/casts, CEns via independent logaddexp and source/file/event linkage coherent. No learned recurrence replay is claimed."
+    },
+    {
+      "id": "root_json_recount",
+      "detail": "Elementary JS recount parses in V8 without data execution; checks conditional counts, summary linkage, norm arithmetic, gain profiles and censoring after immutable results arrive."
+    },
+    {
+      "id": "retrospective_limits",
+      "detail": "No original hidden states archived; runtime migration check establishes output compatibility only. No new training, held-out accuracy, useful memory, universal convergence or Nobel conclusion."
+    },
+    {
+      "id": "preimages_and_review",
+      "detail": "Retain prior native/controller/auditor/protocol source; static independent architecture and auditor receipts are preserved. A15 results remain immutable."
+    }
+  ],
+  "issues": [],
+  "scientific_execution": false,
+  "python_compilation_performed": false,
+  "js_syntax_binding_only": true,
+  "local_execution_unavailable_since_utc": "2026-10-07T09:02:53+00:00",
+  "limitations": [
+    "Pre-execution static review does not certify runtime success or future numerical outcomes.",
+    "All checks are internal; no independent external laboratory replication.",
+    "The unchanged existing hook/snapshot test is a worker gate, not another trained scientific replicate."
+  ]
+}

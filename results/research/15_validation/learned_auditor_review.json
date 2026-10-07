@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "panel": "retrospective_learned",
+  "status": "reviewed_no_blockers",
+  "review_kind": "static_independent_saved_array_auditor_contract_review",
+  "parent_review_blob": "09f480e1677746f793ce510c408546353a87746f",
+  "reviewed_sources": [
+    {
+      "path": "scripts/research_stability_learned_audit.py",
+      "blob": "63d6a1b10380602fd1af76d44b0b08ebe3707636",
+      "bytes": 47268,
+      "sha256": "336c1d547a6e5e9f213d994ad9e1eb57ab155641476be4ce79e380d9fa76504a",
+      "previous_full_read_blob": "ebd8ebd6866f8a8e6e36b04b13161a7e0781c418"
+    },
+    {
+      "path": "scripts/research_stability_learned_native.py",
+      "blob": "2210a004f2583153e72deb98c59025b137f81924",
+      "sha256": "1724762ac47a8911ae9e5463e6d6cafde7392dd827192e5fbede0a0dc883ec6a"
+    },
+    {
+      "path": "scripts/research_stability_learned_bind.py",
+      "blob": "bbd48561c6bca6ba2c13f33be7ee4002aa4894d9",
+      "sha256": "7692809ad60a5967fab3b29fa42e25d4da1328ea0ec5d309f25a41e23fdf5d81"
+    }
+  ],
+  "checks": [
+    {
+      "id": "schemas_and_axes",
+      "finding": "39 gate arrays and59 extended seed arrays,12 named tensors before/after, four-row metadata,40 conditional trajectories and257 endpoint slots agree."
+    },
+    {
+      "id": "gate_negative_branch",
+      "finding": "All five gates are independently recounted; any failure forbids every continuation but remains an auditable completed gating outcome."
+    },
+    {
+      "id": "runtime_source_inputs",
+      "finding": "Plan/source/HEAD/environment,22 original hashes, historical manifest membership/configurations and binding receipt/native hashes are checked without importing producer/model code."
+    },
+    {
+      "id": "finite_domains",
+      "finding": "Observed, finite-state and finite-readout masks remain distinct. Unobserved state/logit slots require NaN padding. Prediction/NLL are defined only on finite readouts."
+    },
+    {
+      "id": "perturbation_and_metrics",
+      "finding": "Checkerboard direction, float32 perturbed initialization and exact represented delta are reconstructed. State/pair L2-RMS metrics and float64 log-sum-exp NLL use fixed tolerances."
+    },
+    {
+      "id": "censoring",
+      "finding": "First nonfinite state or finite cap crossing must terminate its contiguous observed prefix; incomplete native-final slots stay NaN. Paired gains use shared observed finite times only."
+    },
+    {
+      "id": "readout",
+      "finding": "Saved state/output-cell axes and two affine readout stages match native source, including bias/effective PAD and scale-aware float32 allowance. No bitwise batch64-to-batch1 logit equality is imposed."
+    },
+    {
+      "id": "chronology_and_inventory",
+      "finding": "Five gate start/completion pairs and durable summary precede all conditional trajectory events; native file inventories distinguish negative and positive branches exactly."
+    },
+    {
+      "id": "final_summary_delta",
+      "finding": "Final63d6a1b changes only derived first/last/peak scalar summaries in censor_recount. Finite-time peak search and null values preserve guard interpretation and add no observations."
+    }
+  ],
+  "issues": [],
+  "limitations": [
+    "No Python, Torch, compilation, test, model inference, scientific job or outcome inspection was performed for this review.",
+    "The auditor independently recomputes saved-array metrics/readouts and provenance relationships; it does not rerun the learned recurrent state transition.",
+    "Checkpoint parameter identity depends on the separately authenticated weights_only binding component; this is internal corroboration, not external replication.",
+    "Numerical runtime/resource success and actual compatibility outcomes remain to be demonstrated by the frozen run."
+  ],
+  "check_count": 9
+}

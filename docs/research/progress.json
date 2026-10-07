@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T16:23:07+00:00",
+  "recorded_at": "2026-10-07T16:44:15+00:00",
   "active_item": 15,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -123,7 +123,11 @@
       "plan": "15_probe_plan.json",
       "frozen_at_utc": "2026-10-07T16:07:56+00:00",
       "census_report": "15_census_results.md",
-      "scope": "Constructed census verified. Item remains open for retrospective learned-checkpoint finite dynamics."
+      "scope": "Constructed census verified. Item remains open for retrospective learned-checkpoint finite dynamics.",
+      "learned_status": "frozen",
+      "learned_plan": "15_preflight_plan.json",
+      "learned_protocol": "15_learned_protocol.md",
+      "learned_frozen_at_utc": "2026-10-07T16:44:15+00:00"
     },
     {
       "item": 16,
@@ -1010,6 +1014,37 @@
     "root_report_comparison_checks": 1668,
     "root_rehashed_census_texts": 19,
     "learned_panel_execution_started": false,
-    "learned_panel_plan_frozen": false
+    "learned_panel_plan_frozen": false,
+    "learned_phase": {
+      "status": "frozen",
+      "plan": "docs/research/15_preflight_plan.json",
+      "plan_sha256": "ff561f7ca71ff76afe61d1593de9decbd1e4447140dd57fb84f4385a2473dd44",
+      "freeze_utc": "2026-10-07T16:44:15+00:00",
+      "original_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+      "original_archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+      "input_files": 22,
+      "input_bytes": 1777007,
+      "checkpoints": 5,
+      "selected_known_scenes": 1,
+      "queries_per_checkpoint": 4,
+      "maximum_trajectories": 40,
+      "maximum_retained_slots": 10280,
+      "new_training": false,
+      "scientific_execution_started": false,
+      "gate_policy": "All five archived T16 output comparisons precede every conditional extension; a negative gate is a recorded outcome with no continuations.",
+      "limits": {
+        "worker_seconds": 1020,
+        "archive_reserve_seconds": 180,
+        "workflow_minutes": 20,
+        "minimum_available_ram_gib": 8,
+        "aggregate_active_cpu_threads": 4,
+        "numerical_threads": 1,
+        "git_threads": 1,
+        "supervisor_interval_seconds": 1,
+        "heartbeat_interval_seconds": 60,
+        "archive_interval_seconds": 300,
+        "git_timeout_seconds": 60
+      }
+    }
   }
 }

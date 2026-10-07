@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "panel": "retrospective_learned",
+  "review_kind": "independent_static_source_and_contract_review",
+  "reviewed_at_utc": "2026-10-07T16:37:01+00:00",
+  "status": "reviewed_no_blockers",
+  "repository": "Agnuxo1/NeuroPixel",
+  "files": [
+    {
+      "path": "scripts/research_stability_learned_native.py",
+      "blob": "2210a004f2583153e72deb98c59025b137f81924",
+      "bytes": 29624,
+      "sha256": "1724762ac47a8911ae9e5463e6d6cafde7392dd827192e5fbede0a0dc883ec6a"
+    },
+    {
+      "path": "scripts/research_stability_learned_probe.py",
+      "blob": "c226e9918f9affcdb4e23238fbe31fdc6cd65792",
+      "bytes": 6977,
+      "sha256": "a2ee776cb859d9ffa43fff4677f5a7d9b2081fbe414af7cb1550a5dce0048e6d",
+      "path_note": "Intended integration path; immutable identity is the listed blob."
+    },
+    {
+      "path": "scripts/research_stability_learned_bind.py",
+      "blob": "bbd48561c6bca6ba2c13f33be7ee4002aa4894d9",
+      "bytes": 15058,
+      "sha256": "7692809ad60a5967fab3b29fa42e25d4da1328ea0ec5d309f25a41e23fdf5d81"
+    },
+    {
+      "path": "docs/research/15_learned_protocol.md",
+      "blob": "672caab9ff5296129226dce8b6f2da1293b655c7",
+      "bytes": 11698,
+      "sha256": "13147b83efbca3c56a15646794fd195970c3a829385e09a177a9a4a78ea6d3b3",
+      "path_note": "Intended integration path; immutable identity is the listed blob."
+    }
+  ],
+  "checks": [
+    {
+      "id": "exact_reconstruction",
+      "static_review": "consistent",
+      "detail": "The native producer requires the original 22-file map and completed manifest, archived configurations and run references; strict CPU float32 state_dict loading uses the unchanged native model and verifies 29,856 parameters plus default zero nonpersistent grounding buffers."
+    },
+    {
+      "id": "gate_before_all_extensions",
+      "static_review": "consistent",
+      "detail": "All five 64-row T16 compatibility forwards are saved before a durable gates_summary and before any extended trajectory. The same forwards supply the four initial states. Logit tolerance is atol 1e-4 plus rtol 1e-5 against saved logits, with all64 predictions exact."
+    },
+    {
+      "id": "valid_negative_gate",
+      "static_review": "consistent",
+      "detail": "Compatibility failure preserves all five gates, produces verified status/exit0 with no seeds directory, and is accepted by the controller/binder without being called compatible. Unexpected invariant/resource/source failures remain failed."
+    },
+    {
+      "id": "conditional_inventory",
+      "static_review": "consistent",
+      "detail": "Positive gate permits exactly five seeds, four fixed related validation queries and two branches:40 trajectories, each retaining time0 through at most256. The native report has five policy/integrity checks."
+    },
+    {
+      "id": "perturbation_and_time",
+      "static_review": "consistent",
+      "detail": "The direction is coordinate checkerboard parity over3840 components. Nominal amplitude is1e-4*max(1,RMS(initial)); represented perturbation is float32, actual difference/denominator float64. A single post-update1 injection installs the initial state; future source is held and no repeated state reseeding occurs."
+    },
+    {
+      "id": "guard_retention",
+      "static_review": "consistent",
+      "detail": "The first nonfinite state or maxabs>1e12 is retained with prior observations. Such per-trajectory censoring is a scientific outcome. Unobserved slots remain explicitly padded, and pairs use only shared observed finite times."
+    },
+    {
+      "id": "readout_finiteness_correction",
+      "static_review": "consistent",
+      "detail": "The final protocol now agrees with the producer: raw state/readout masks are separate; undefined readout prediction=-1 and NLL=NaN do not mean unobserved state. Final identical nonfinite readouts use equal_nan only for the logits comparison."
+    },
+    {
+      "id": "artifact_contract",
+      "static_review": "consistent",
+      "detail": "Each gate NPZ has39 named arrays and each extended seed NPZ59. Each includes all12 named parameter/buffer tensors before and after under weight__/weight_after__, plus RNG states. JSON descriptors bind path,bytes,SHA256 and array shape/dtype."
+    },
+    {
+      "id": "independent_checkpoint_binding",
+      "static_review": "consistent",
+      "detail": "The binder independently loads five original checkpoints with weights_only=True without model imports or inference; compares10 literal parameter shapes/configs/values and two zero buffers to every before/after gate/conditional seed snapshot. Native JSON/NPZ inventory is12 files if negative or22 if positive."
+    },
+    {
+      "id": "four_component_controller",
+      "static_review": "consistent",
+      "detail": "Recovery120s/native240s/binding60s/audit120s execute serially with private child processes under the outer owned process group. Each component requires zero exit and verified status; binding/audit require positive checks and zero issues. Admission uses a shared600s stage deadline and source hashes are checked before/after."
+    },
+    {
+      "id": "scope_and_cost",
+      "static_review": "consistent",
+      "detail": "The protocol distinguishes four queries of one exposed scene from independent groups, records Python/thread migration and absence of historical hidden-state arrays, and gives planned raw state payloads rather than measured compressed sizes."
+    },
+    {
+      "id": "bounded_interpretation",
+      "static_review": "consistent",
+      "detail": "The recipe/protocol make no training, useful-memory, fresh-generalization, global-Lipschitz, operator-norm, Lyapunov-exponent or infinite-time assertion. Checkpoint/readout compatibility is not proof of historical hidden-state equality."
+    }
+  ],
+  "check_count": 12,
+  "issues": [],
+  "resolved_findings": [
+    {
+      "kind": "protocol_wording",
+      "previous_blob": "2995c5eab83dd94de96e2c52ec05a7cd7a1cfdd6",
+      "final_blob": "672caab9ff5296129226dce8b6f2da1293b655c7",
+      "detail": "Single paragraph now distinguishes observed finite state from finite logits and conditional NLL/prediction."
+    }
+  ],
+  "preserved_native_preimage": {
+    "blob": "72b35cf8de21057915aab054eaa3fb9ee6b022da",
+    "bytes": 29500,
+    "sha256": "9ad40391ef8028745e1d48fcfa8b88ea1fea089eebc7026fcbbe0c3813fbc3f9",
+    "delta_to_final": "Added readout/metric tolerance recipe fields and NaN-aware exact final-logit snapshot comparison; no update rule or trajectory selection change."
+  },
+  "limitations": [
+    "Static source review only: no Python, compilation, Torch execution, model replay, new tests or scientific result inspection.",
+    "This receipt does not certify future execution, resource compliance, compatibility success or checkpoint outcomes; future immutable raw receipts and independent array audit are required.",
+    "The independent NumPy learned-dynamics auditor and recovery/worker/workflow code are not covered by this four-file review; their contracts are coordinated but their own implementation review is separate.",
+    "Checkpoint binding confirms saved tensors against historical checkpoints; it does not independently rerun the complete recurrent dynamics or provide external-laboratory replication.",
+    "One JS-only attempt to extract RECIPE failed on Python list(SEEDS); the in-memory extraction was corrected. No producer or scientific artifact was executed or altered by that metadata operation."
+  ]
+}
