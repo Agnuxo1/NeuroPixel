@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-10-07T04:39:39.730436+00:00",
+  "at_utc": "2026-10-07T04:44:41.624454+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
     "core/damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024/configuration.json": {
@@ -51,8 +51,8 @@
       "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f"
     },
     "core/events.json": {
-      "bytes": 4030,
-      "sha256": "3971bdecb5f73fb3dec28ee48405fed78d65035d7601b6f563098605b609d62b"
+      "bytes": 4197,
+      "sha256": "2b204f8f3e8573d62f37c633bdcfca1e7325e7a0112452a93c80e9abd31cf323"
     },
     "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6391,
@@ -399,8 +399,20 @@
       "sha256": "3ebae2908d97085cd8f3ffa19cf40024c86231d7d269d9d59922e9ab0352d940"
     },
     "core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192/progress.json": {
-      "bytes": 23560,
-      "sha256": "84126b82b184275b1182e040f57fe6a04a96ee14a08c6e3bf41c5af71466f136"
+      "bytes": 28284,
+      "sha256": "90bf58f526a718d6126afea6d3b375d0097169eef2263db828a800092991513e"
+    },
+    "core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192/training.json": {
+      "bytes": 34659,
+      "sha256": "6d276079076fea8bcef2d5eb18f799f1749249af6bd39dca7f6a9dc1979ec91e"
+    },
+    "core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192/validation_predictions.npz": {
+      "bytes": 18741,
+      "sha256": "93753582cc1138cbc45af446df7f90b6838025abbb56166558e3c8801e2f5985"
+    },
+    "core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192/weights.pt": {
+      "bytes": 122424,
+      "sha256": "082673c6d8294014d2fa86986a2eed23336dbb14574c214086f2741217480165"
     },
     "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/configuration.json": {
       "bytes": 6397,
@@ -421,6 +433,14 @@
     "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/weights.pt": {
       "bytes": 122424,
       "sha256": "8f9e361b4418bdf1d3fc61320ab91e391a4c770fa28ed4edce3d2f7805a23f9b"
+    },
+    "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192/configuration.json": {
+      "bytes": 6397,
+      "sha256": "285aae51ae1d8544063d3b45fbcb58dde8a5173a989c55e98d997c2195bbcae2"
+    },
+    "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192/progress.json": {
+      "bytes": 8297,
+      "sha256": "15e06c6271854ff27fd7e6f1f57e01fdf884a0f561585c07c1f86232e5108cea"
     },
     "core/recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6389,
@@ -507,8 +527,8 @@
       "sha256": "4662bc312f2ec7b59445325ff5ac091f3bf297b315f5ecc18d686aea71492272"
     },
     "logs/core.log": {
-      "bytes": 110414,
-      "sha256": "c081ca8ce5b22c4572f67ddc155ebf84913176079f128047d6c32e87ab4d6054"
+      "bytes": 117265,
+      "sha256": "c93970f0cf1b7d431ab023b127566bd9866021aa5b007f9f81eecd7f39be02f0"
     },
     "logs/source_environment.log": {
       "bytes": 2755,
@@ -527,8 +547,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 16989,
-      "sha256": "d5b04fa6a87b6face9f4530c36872eb0e56547760af6226dad9c5af97c75143e"
+      "bytes": 17817,
+      "sha256": "e5074d422a2886af02330b571cc1b63ad46455ce94dd9d7254344fe0ea81fb7e"
     }
   },
   "run_key": "37566497890-1",
