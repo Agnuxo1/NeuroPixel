@@ -1,7 +1,7 @@
 {
-  "attempt_status": "running",
+  "attempt_status": "completed",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T10:46:07.761579+00:00",
+  "created_at_utc": "2026-10-07T10:46:11.437571+00:00",
   "files": {
     "acquire.log": {
       "bytes": 198,
@@ -136,14 +136,14 @@
       "sha256": "c5067141ec9caf98b3d0207e7bb282cfef26e4ca6b6f6e91becb421fb4dabde8"
     },
     "worker_status.json": {
-      "bytes": 2738,
-      "sha256": "9e1c3cb4833db678e357e3e7cd4c731b8eee1de9fa21a6f71673adb0d05b0970"
+      "bytes": 4722,
+      "sha256": "63633c19e4ef199869fa62f5d62e07f2668e06a9d915792accb52a95e8fb7b10"
     }
   },
-  "final": false,
+  "final": true,
   "item": 10,
   "run_key": "37609533224-1-acquisition",
   "schema_version": 1,
-  "snapshot_kind": "interim_partial",
+  "snapshot_kind": "final",
   "source_commit": "99ecaeefdd00dffd3dae444a781ad009c19dff5d"
 }
