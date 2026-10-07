@@ -1,0 +1,51 @@
+{
+  "at_utc": "2026-10-07T08:34:55.532233+00:00",
+  "configuration": {
+    "batch_size": 32,
+    "family": "relative_transformer",
+    "gradient_clip": 1.0,
+    "height": 10,
+    "initialization": 40,
+    "learning_rate": 0.003,
+    "loss": "answer_cross_entropy_only",
+    "memorization": false,
+    "model": {
+      "class": "neuropixel.research.models.RelativeTransformer",
+      "d": 32,
+      "ff": 128,
+      "heads": 4,
+      "layers": 2
+    },
+    "optimizer": "AdamW",
+    "out_pos": [
+      9,
+      7
+    ],
+    "scheduled_updates": 4096,
+    "trainable_parameters": 30157,
+    "vocab": 37,
+    "weight_decay": 0.0001,
+    "width": 8
+  },
+  "context": {
+    "development_identities": {
+      "fixture_exposure.json": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699",
+      "memorization.npz": "1f822a1a0256f2a80907a01ce124a94e8f642942e2608aad6a9ebbb58bcc7442",
+      "memorization_scenarios.json.gz": "ccb76c0db01cf22d6dba76bbb53b95231021d995380d48488f59ae7ea42769e8",
+      "probe.npz": "2f46f63706e8a7b85c1d925ecd565a18d9b799ca8c89986a7e1b319e1572cb32",
+      "probe_scenarios.json.gz": "44db31b01eb512b011fe785da0a2ae2b9096745d6c6d74f1b8e48a45742f0f85",
+      "train_scenarios.json.gz": "134aff63a31e1e7cc608ff490d825cd1e468c94c9d1b2d14118075155e070b11",
+      "validation.npz": "b3c9e4cacaeb3195fce01b9929b9fefe4442364a49e5c0c4777b1803e8387376",
+      "validation_scenarios.json.gz": "697209a614d329008f93fbc9f25d227253313b0093c1dba1639577e37ef250fe"
+    },
+    "development_manifest": {
+      "bytes": 20117,
+      "path": "development_data/manifest.json",
+      "sha256": "7128baef41f6df81e3bfafff15fcf39d6406c99d78cfdf248babcae461b017f0"
+    },
+    "pilot_evidence_sha256": "a1d53e0b064e812317d93e6e8749bae4728730fecfbf359edf0249f2a72f6ee4",
+    "plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+    "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959"
+  }
+}
