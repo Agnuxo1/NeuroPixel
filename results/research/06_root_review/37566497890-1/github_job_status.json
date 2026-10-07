@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "item": 6,
+  "kind": "GitHub job status receipt",
+  "observed_at_utc": "2026-10-07 05:24:23 UTC",
+  "repository": "Agnuxo1/NeuroPixel",
+  "run_id": 37566497890,
+  "source_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+  "final_archive_commit": "15e76456bc2b4cce5faec0b08fb5288fe7844547",
+  "job_status_response": {
+    "jobs": [
+      {
+        "id": 112615307349,
+        "name": "frozen-study",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37566497890,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Check out the isolated frozen research commit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Install the declared CPU-only Torch release",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install the remaining fixed research dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Validate, execute and preserve only the frozen item-6 study",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Post Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "Post Check out the isolated frozen research commit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Connector job status confirms completion and success. Source and final-archive identities were checked separately against archived manifests; this response does not measure compute usage or provide precise job timestamps."
+}

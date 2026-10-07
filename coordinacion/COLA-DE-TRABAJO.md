@@ -31,3 +31,7 @@ SCI-006 is active in the isolated research/scientific-validation-2026-10-07-clou
 ## 2026-10-07T03:22:22Z — SCI-006 frozen study
 
 Root has closed implementation validation and approved the complete item-6 execution plan. The final cloud suite passed 107 tests with no failures and one unrelated optional CIFAR skip. SCI-006 now proceeds sequentially through 26 core trainings, the core final gate, six growth trajectories (18 stages), eight train-only gate fits, the growth final gate and both independent recounts. Both panels are frozen before the first training. Items 7–30 remain pending. The live owned attempt is recorded in worker_status.json on the separate research/scientific-validation-2026-10-07-cloud-results branch. Resource reservation and cut conditions are recorded below in RECURSOS.md.
+
+## 2026-10-07T05:32:16.665091+00:00 — SCI-006 closed
+
+SCI-006 is completed: all frozen execution, independent saved-array recounts, final archive verification and report review passed. Results are retained without configuration selection. Deliverable: docs/research/06_results.md, full tables and hash-anchored receipts. The actual completed source is 08d0d52edd05da6835e71479f3ba4399fcbeabae; raw archive 15e76456bc2b4cce5faec0b08fb5288fe7844547. Items 1–6 are completed investigations, not validated Nobel-level claims. Items 7–30 remain pending at this closure; the next action is to claim SCI-007 sequentially.

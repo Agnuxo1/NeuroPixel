@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T03:22:22Z",
-  "active_item": 6,
+  "recorded_at": "2026-10-07T05:32:16.665091+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -34,7 +34,9 @@
     {
       "item": 6,
       "title": "Component ablation and expert growth",
-      "status": "in_progress"
+      "status": "completed",
+      "closed_at_utc": "2026-10-07T05:32:16.665091+00:00",
+      "report": "06_results.md"
     },
     {
       "item": 7,
@@ -173,7 +175,7 @@
     "raw_archive_currently_available": false
   },
   "item6": {
-    "stage": "scientific and execution freeze approved; full sequential worker launch pending this commit's Actions run",
+    "stage": "completed investigation; every declared comparison retained; H1 unchanged",
     "planned_core_training_runs": 26,
     "planned_core_evaluation_cases": 34,
     "planned_growth_trajectories": 6,
@@ -191,10 +193,38 @@
     "second_ci_success": "results/research/06_ci_20261007_37564586928.json",
     "supervisor_correction": "results/research/06_local_supervision/receipt.json",
     "final_implementation_validation": "results/research/06_ci_20261007_37566204008.json",
-    "live_execution_status": "research/scientific-validation-2026-10-07-cloud-results: results/research/06_cloud_runs/{run ID}-{attempt}/worker_status.json"
+    "live_execution_status": "research/scientific-validation-2026-10-07-cloud-results: results/research/06_cloud_runs/{run ID}-{attempt}/worker_status.json",
+    "closed_at_utc": "2026-10-07T05:32:16.665091+00:00",
+    "report": "06_results.md",
+    "report_sha256": "13d277efd49ba43ff47c8478317e50bcc296470f554b4b07ef3885bba4e414f1",
+    "source_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "run_id": 37566497890,
+    "attempt": "37566497890-1",
+    "final_raw_archive_commit": "15e76456bc2b4cce5faec0b08fb5288fe7844547",
+    "archive_files": 400,
+    "archive_bytes_excluding_manifest": 32186488,
+    "core_recount": {
+      "status": "verified",
+      "input_files": 244,
+      "final_predictions": 139264,
+      "validation_predictions": 53248,
+      "sha256": "2c2ce1e5a584bd635bb6656c6f43c649d9b78ecb8836b4e0b1f0995cfe7c8c6f"
+    },
+    "growth_recount": {
+      "status": "verified",
+      "input_files": 178,
+      "routing_evaluations": 34,
+      "metric_rows": 136,
+      "contrasts": 448,
+      "sha256": "6f73d8df5b2ea98333f2c0bc5c5815104a1b3daf691faef7afc0cc1de548b948"
+    },
+    "recount_comparison": "exact agreement after explicit timestamp/NumPy metadata exclusions",
+    "verdict": "Budget sensitivity and conditional routing/retention effects observed; low absolute binding, n=2 uncertainty and capacity confounds remain. No general component advantage or high-competence adaptive growth established.",
+    "resource_release": "GitHub job112615307349 completed successfully; no study child remains on this runner."
   },
   "limitations": [
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
-  ]
+  ],
+  "next_item": 7
 }

@@ -1,0 +1,155 @@
+{
+  "confidence_intervals_drawn": false,
+  "core_attempt": "37566497890-1",
+  "core_condition_order": [
+    "factorial_tie0_school0p0_reinj0_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie0_school0p0_reinj1_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie0_school0p3_reinj0_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie0_school0p3_reinj1_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie1_school0p0_reinj0_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie1_school0p0_reinj1_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie1_school0p0_reinj1_T16_damage0_s0_iPAIRED_u1024__deploy_T1",
+    "factorial_tie1_school0p0_reinj1_T16_damage0_s0_iPAIRED_u1024__deploy_T4",
+    "factorial_tie1_school0p0_reinj1_T16_damage0_s0_iPAIRED_u1024__lesion",
+    "factorial_tie1_school0p3_reinj0_T16_damage0_s0_iPAIRED_u1024__clean",
+    "factorial_tie1_school0p3_reinj1_T16_damage0_s0_iPAIRED_u1024__clean",
+    "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_iPAIRED_u1024__clean",
+    "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_iPAIRED_u1024__clean",
+    "damage_tie1_school0p0_reinj1_T16_damage1_s0_iPAIRED_u1024__clean",
+    "damage_tie1_school0p0_reinj1_T16_damage1_s0_iPAIRED_u1024__lesion",
+    "optimization_tie1_school0p0_reinj1_T16_damage0_s0_iPAIRED_u8192__clean",
+    "optimization_tie1_school0p3_reinj1_T16_damage0_s0_iPAIRED_u8192__clean"
+  ],
+  "execution_head": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+  "generated_at_utc": "2026-10-07T05:21:09.133083+00:00",
+  "growth_attempt": "37566497890-1",
+  "growth_condition_order": [
+    {
+      "bank": "snapshots",
+      "router": "uniform"
+    },
+    {
+      "bank": "snapshots",
+      "router": "random"
+    },
+    {
+      "bank": "snapshots",
+      "router": "scanner"
+    },
+    {
+      "bank": "snapshots",
+      "router": "learned"
+    },
+    {
+      "bank": "duplicate_slots",
+      "router": "uniform"
+    },
+    {
+      "bank": "duplicate_slots",
+      "router": "random"
+    },
+    {
+      "bank": "duplicate_slots",
+      "router": "scanner"
+    },
+    {
+      "bank": "duplicate_slots",
+      "router": "learned"
+    },
+    {
+      "bank": "single_final",
+      "router": "uniform"
+    },
+    {
+      "bank": "adaptive_novelty",
+      "router": "uniform"
+    },
+    {
+      "bank": "adaptive_novelty",
+      "router": "random"
+    },
+    {
+      "bank": "adaptive_novelty",
+      "router": "scanner"
+    },
+    {
+      "bank": "adaptive_novelty",
+      "router": "learned"
+    },
+    {
+      "bank": "adaptive_resonance",
+      "router": "uniform"
+    },
+    {
+      "bank": "adaptive_resonance",
+      "router": "random"
+    },
+    {
+      "bank": "adaptive_resonance",
+      "router": "scanner"
+    },
+    {
+      "bank": "adaptive_resonance",
+      "router": "learned"
+    }
+  ],
+  "growth_topic_order": [
+    "0",
+    "1",
+    "2",
+    "all"
+  ],
+  "item": 6,
+  "kind": "post_freeze_editorial_figures",
+  "outputs": [
+    {
+      "bytes": 439569,
+      "file": "06_core_paired_scores.png",
+      "sha256": "cbd238c91ed6e1a4bdfe8631891a61a6434e27bbc42db0d923979a699ce3e8e5"
+    },
+    {
+      "bytes": 33522,
+      "file": "06_core_paired_scores.pdf",
+      "sha256": "42d6dfb58394907ecb1bd0aa860fb55badfb160927989f6b70c70fd0cd885a09"
+    },
+    {
+      "bytes": 469543,
+      "file": "06_growth_binding.png",
+      "sha256": "d539171e18fde258a57b98b0ea38c5cecf303ddfa7e6a5e07b9ee92ff2ef81d7"
+    },
+    {
+      "bytes": 61961,
+      "file": "06_growth_binding.pdf",
+      "sha256": "598e5c333e1c68c6bf736f154f7ef15b6e728b7d63a8ce4f7f1bb0f788d642f5"
+    }
+  ],
+  "plot_helper_sha256": "1d9c5afd0224e4118aba2f77a667d9e949df3691a0b80228cb034fbff1e76d3e",
+  "presentation_environment": {
+    "matplotlib": "3.10.8",
+    "python": "3.12.14"
+  },
+  "ranking_or_selection": false,
+  "reports": {
+    "core": {
+      "bytes": 1048012,
+      "path": "/workspace/scratch/61d6e3e6e688/NeuroPixel-cloud/results/research/06_root_review/37566497890-1/core/core_analysis.json",
+      "sha256": "2c2ce1e5a584bd635bb6656c6f43c649d9b78ecb8836b4e0b1f0995cfe7c8c6f"
+    },
+    "growth": {
+      "bytes": 932211,
+      "path": "/workspace/scratch/61d6e3e6e688/NeuroPixel-cloud/results/research/06_root_review/37566497890-1/growth/06_growth_analysis.json",
+      "sha256": "6f73d8df5b2ea98333f2c0bc5c5815104a1b3daf691faef7afc0cc1de548b948"
+    }
+  },
+  "run_identity_scope": "Core may identify the attempt in its recorded prediction paths. The growth report has no run-ID field; its attempt is identified from the supplied run/archive/root-review path, not inferred from scores.",
+  "schema_version": 1,
+  "scope": "Both JSON reports required verified/zero issues. Structural checks only; no source, prediction array, model, or scientific analyzer was executed.",
+  "score_limits": [
+    0,
+    1
+  ],
+  "seeds": [
+    20,
+    21
+  ]
+}

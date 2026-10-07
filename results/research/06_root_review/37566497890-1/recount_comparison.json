@@ -1,0 +1,68 @@
+{
+  "at_utc": "2026-10-07T05:18:52.530252+00:00",
+  "comparison": "Exact decoded values; no rounding or numerical tolerance. Only the named top-level audit timestamp and NumPy version are excluded and retained explicitly.",
+  "item": 6,
+  "kind": "post-freeze report comparison",
+  "panels": [
+    {
+      "differences": [],
+      "excluded_top_level_metadata": {
+        "analyzed_at_utc": {
+          "root": "2026-10-07T05:00:17.760803+00:00",
+          "worker": "2026-10-07T05:15:51.309296+00:00"
+        },
+        "numpy_version": {
+          "root": "2.3.5",
+          "worker": "2.2.6"
+        }
+      },
+      "leaves_compared": 15856,
+      "numeric_leaves_compared": 9625,
+      "panel": "core",
+      "root_report": {
+        "bytes": 1048012,
+        "path": "results/research/06_root_review/37566497890-1/core/core_analysis.json",
+        "sha256": "2c2ce1e5a584bd635bb6656c6f43c649d9b78ecb8836b4e0b1f0995cfe7c8c6f"
+      },
+      "status": "exact_match",
+      "worker_report": {
+        "bytes": 1048012,
+        "path": "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item6/results/research/06_cloud_runs/37566497890-1/reports/core/core_analysis.json",
+        "sha256": "fd04219455179f88b3bd2583d81b56d41de969a902043741963412d8b1227f36"
+      }
+    },
+    {
+      "differences": [],
+      "excluded_top_level_metadata": {
+        "audited_at_utc": {
+          "root": "2026-10-07T05:18:42.890840+00:00",
+          "worker": "2026-10-07T05:15:58.890804+00:00"
+        },
+        "numpy_version": {
+          "root": "2.3.5",
+          "worker": "2.2.6"
+        }
+      },
+      "leaves_compared": 20108,
+      "numeric_leaves_compared": 15487,
+      "panel": "growth",
+      "root_report": {
+        "bytes": 932211,
+        "path": "results/research/06_root_review/37566497890-1/growth/06_growth_analysis.json",
+        "sha256": "6f73d8df5b2ea98333f2c0bc5c5815104a1b3daf691faef7afc0cc1de548b948"
+      },
+      "status": "exact_match",
+      "worker_report": {
+        "bytes": 932211,
+        "path": "/workspace/scratch/61d6e3e6e688/NeuroPixel-results-item6/results/research/06_cloud_runs/37566497890-1/reports/growth/06_growth_analysis.json",
+        "sha256": "3c702bab4c484d33a3b713a78de253a326a667c243b9fe3dfad29a5b8eba35b1"
+      }
+    }
+  ],
+  "python": "3.12.14",
+  "schema_version": 1,
+  "scope": "Same frozen analyzer run on the same saved inputs in two environments. This is not a second scientific replication or an independent analyzer implementation.",
+  "script_sha256": "24ecfe010ead13238a7af6caa46c6aeeeef6e1451c597382ff7a30152c916cc9",
+  "source_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+  "status": "exact_match"
+}

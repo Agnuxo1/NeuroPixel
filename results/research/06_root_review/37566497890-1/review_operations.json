@@ -1,0 +1,34 @@
+{
+  "at_utc": "2026-10-07T05:24:24.764024+00:00",
+  "final_archive_commit": "15e76456bc2b4cce5faec0b08fb5288fe7844547",
+  "input_reports": {
+    "core": "2c2ce1e5a584bd635bb6656c6f43c649d9b78ecb8836b4e0b1f0995cfe7c8c6f",
+    "growth": "6f73d8df5b2ea98333f2c0bc5c5815104a1b3daf691faef7afc0cc1de548b948"
+  },
+  "item": 6,
+  "kind": "post-freeze local review operations",
+  "operations": [
+    {
+      "kind": "final archive selection",
+      "observation": "The first metadata read retained the former core-complete snapshot c3f858129f59022dabe75b4f1ebccf32436a19f2 because FETCH_HEAD is specific to a Git worktree. completed_at_utc was absent in that interim worker record.",
+      "resolution": "Selected the fetched final commit 15e76456bc2b4cce5faec0b08fb5288fe7844547 explicitly and required final/completed before growth recount or final-integrity audit. No scientific files, configuration, training or predictions changed."
+    },
+    {
+      "final_manifest_sha256": "69882fd96f4413123ab39ceaf91bfeaa63a13d422d554ff47c776f7742f7b534",
+      "final_plot_helper_sha256": "1d9c5afd0224e4118aba2f77a667d9e949df3691a0b80228cb034fbff1e76d3e",
+      "initial_manifest_sha256": "e0a21fe9f3eed956cd737af08532789113dcbdcb45c5ad457fc55b20b58ddbdb",
+      "initial_plot_helper_sha256": "70a73a9c44e9bdb8c490eefcafe81ce8d9f065886f5c55e10026c42b6cb8fd22",
+      "kind": "figure provenance caption",
+      "observation": "Initial charts rendered the correct saved values, but the path parser recognized the core attempt from recorded paths and did not recognize the root-review directory for growth.",
+      "resolution": "Extended only the provenance path expression to recognize 06_root_review; updated its scope text; rendered to a new figures_final directory. Original figures and manifest remain preserved. No scores, layout, condition order or statistical intervals changed."
+    },
+    {
+      "kind": "final report wording and local receipt availability",
+      "observation": "Focused review found that dummy frozen gate arrays were described as implemented although comparison routers fit no such coefficients; a summary also generalized the hard-selector oracle bound to all routing. Two already-committed CI success receipts were absent from the older authoring checkout.",
+      "resolution": "The final report now states the actual unmatched learned coefficients/supervision and limits the oracle claim to choosing among current expert argmax answers. The two CI receipts and excerpts were copied exactly from frozen08d0 to restore local report links. Three task-source links were pinned to08d0. No metric, scientific code, archived result or source reference was modified."
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Operational and editorial corrections after the study freeze. They are not new experiments or modifications to the scientific implementation.",
+  "source_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae"
+}
