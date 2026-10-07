@@ -56,6 +56,28 @@
       "started_at_utc": "2026-10-07T07:51:56.875229+00:00",
       "status": "completed",
       "wall_seconds_including_shutdown": 5.003549202000002
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T07:52:04.172837+00:00",
+        "available_ram_gib": 14.479351043701172,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item9_worker.py",
+        "--phase",
+        "preflight",
+        "--child",
+        "preflight",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_cloud_runs/37589908205-1-preflight"
+      ],
+      "execution_seconds_available_at_launch": 6406.308478276,
+      "name": "preflight",
+      "stage_limit_seconds": 6600,
+      "started_at_utc": "2026-10-07T07:52:04.173023+00:00",
+      "status": "running"
     }
   ],
   "started_at_utc": "2026-10-07T07:51:50.481646+00:00",
