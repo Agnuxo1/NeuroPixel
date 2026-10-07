@@ -1,4 +1,5 @@
 {
+  "completed_at_utc": "2026-10-07T04:13:09.275411+00:00",
   "config": {
     "batch_size": 64,
     "controller_source": {
@@ -516,6 +517,62 @@
       "update": 8192
     }
   ],
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": null,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "gpu_name": null,
+    "matmul_tf32": false,
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "python": "3.12.8",
+    "threads": 2,
+    "versions": {
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    }
+  },
+  "final_test_accessed": false,
+  "optimization_budget_limited": true,
+  "parameter_count": 29824,
+  "peak_cuda_allocated_bytes": null,
+  "peak_cuda_reserved_bytes": null,
+  "resolved_model": {
+    "dropout": 0.0,
+    "factory": "neuropixel.research.ablations.training_model",
+    "family": "neuropixel",
+    "h": 8,
+    "kwargs": {
+      "c": 48,
+      "c_id": 16,
+      "fire_rate": 0.5,
+      "freeze_pad": false,
+      "hidden": 128,
+      "reinject": true,
+      "tied": true
+    },
+    "out_pos": [
+      7,
+      7
+    ],
+    "parameters": 29824,
+    "primary_supervision": "answer_cross_entropy_only",
+    "recurrent_steps": 16,
+    "school_lens_every": null,
+    "school_state_times": [],
+    "school_weight": 0,
+    "steps": 16,
+    "training_damage": null,
+    "validation_intervention": "none; deterministic full firing in eval mode",
+    "vocab": 35,
+    "w": 8
+  },
   "resources": [
     {
       "at_utc": "2026-10-07T03:58:46.450581+00:00",
@@ -778,5 +835,150 @@
       "available_ram_gib": 14.30678939819336
     }
   ],
-  "status": "training"
+  "schema_version": 1,
+  "source": {
+    "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "historical_files_expected": 8,
+    "historical_files_verified": 7,
+    "provenance_implementation": "scripts/research_ablations.py:source_record",
+    "recovery_manifest": {
+      "path": "docs/research/06_recovery_manifest.json",
+      "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+    },
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    },
+    "unavailable_expected_sha256": {
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+    },
+    "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+  },
+  "started_at_utc": "2026-10-07T03:58:46.449840+00:00",
+  "status": "completed",
+  "total_wall_seconds": 862.8255697639997,
+  "train_probe": {
+    "accuracy": 0.546875,
+    "correct": 280,
+    "cross_entropy": 2.565938955241685,
+    "macro_agent_patient_accuracy": 0.30078125,
+    "macro_all_roles": 0.546875,
+    "n": 512,
+    "per_role": {
+      "ACCION": {
+        "accuracy": 0.8515625,
+        "correct": 109,
+        "n": 128,
+        "wilson_95": [
+          0.7797727087736895,
+          0.9028653688464999
+        ]
+      },
+      "AGENTE": {
+        "accuracy": 0.234375,
+        "correct": 30,
+        "n": 128,
+        "wilson_95": [
+          0.16939357691207274,
+          0.3148354311082286
+        ]
+      },
+      "LUGAR": {
+        "accuracy": 0.734375,
+        "correct": 94,
+        "n": 128,
+        "wilson_95": [
+          0.6518470619103658,
+          0.8032449898364271
+        ]
+      },
+      "PACIENTE": {
+        "accuracy": 0.3671875,
+        "correct": 47,
+        "n": 128,
+        "wilson_95": [
+          0.2886845465087532,
+          0.4534299575013975
+        ]
+      }
+    }
+  },
+  "training_probe_dataset": {
+    "bytes": 8887,
+    "content_sha256": "f74bb2ae12e99b579eeea485bf6c262805a73f3c086a94421478466fc166b564",
+    "n": 512,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core/datasets/split0_train_n512_seed61006.npz",
+    "sampling_seed": 61006,
+    "sha256": "a04e1310ce4a3da1565e15a74b935f87c6e481d41b5fc24a50969f79857432c6",
+    "split": "train",
+    "split_seed": 0
+  },
+  "training_seconds": 861.568289198,
+  "validation": {
+    "accuracy": 0.529296875,
+    "correct": 1084,
+    "cross_entropy": 2.391686427143424,
+    "macro_agent_patient_accuracy": 0.2822265625,
+    "macro_all_roles": 0.529296875,
+    "n": 2048,
+    "per_role": {
+      "ACCION": {
+        "accuracy": 0.873046875,
+        "correct": 447,
+        "n": 512,
+        "wilson_95": [
+          0.8414051435005794,
+          0.899132464456176
+        ]
+      },
+      "AGENTE": {
+        "accuracy": 0.30859375,
+        "correct": 158,
+        "n": 512,
+        "wilson_95": [
+          0.27013248750358254,
+          0.34990580789033354
+        ]
+      },
+      "LUGAR": {
+        "accuracy": 0.6796875,
+        "correct": 348,
+        "n": 512,
+        "wilson_95": [
+          0.6380617858369023,
+          0.7186369572626866
+        ]
+      },
+      "PACIENTE": {
+        "accuracy": 0.255859375,
+        "correct": 131,
+        "n": 512,
+        "wilson_95": [
+          0.2199790080840174,
+          0.29537596053067144
+        ]
+      }
+    }
+  },
+  "validation_dataset": {
+    "bytes": 32415,
+    "content_sha256": "44873b31d17df696ceef3ff7c5fd2f1878921305d19623443780a443be364e0a",
+    "n": 2048,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core/datasets/split0_validation_n2048_seed61001.npz",
+    "sampling_seed": 61001,
+    "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f",
+    "split": "validation",
+    "split_seed": 0
+  },
+  "validation_predictions": {
+    "bytes": 18270,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192/validation_predictions.npz",
+    "sha256": "c17425830b215a293401b887561eeef799a92743a567b9bad7abf7b99b63dd65"
+  },
+  "weights_sha256": "36a5084d32e0ef4c410c0b56cc35e1cd2e3b8c910b68b92fd1697cc66d49d53d"
 }
