@@ -1,0 +1,78 @@
+{
+  "checkpoint": {
+    "bytes": 122296,
+    "parameter_count": 29824,
+    "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+    "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+    "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+  },
+  "curve": [
+    {
+      "answer_cross_entropy": 1.9006669521331787,
+      "gradient_norm_before_clip": 5.570276260375977,
+      "objective": 1.9063752889633179,
+      "school_cross_entropy": 0.019027698785066605,
+      "update": 128
+    },
+    {
+      "answer_cross_entropy": 1.8166719675064087,
+      "gradient_norm_before_clip": 3.5319433212280273,
+      "objective": 1.8205561637878418,
+      "school_cross_entropy": 0.012947415933012962,
+      "update": 256
+    },
+    {
+      "answer_cross_entropy": 1.883772850036621,
+      "gradient_norm_before_clip": 3.0964248180389404,
+      "objective": 1.8862268924713135,
+      "school_cross_entropy": 0.008180172182619572,
+      "update": 384
+    },
+    {
+      "answer_cross_entropy": 1.8665624856948853,
+      "gradient_norm_before_clip": 3.492872953414917,
+      "objective": 1.8732964992523193,
+      "school_cross_entropy": 0.022446833550930023,
+      "update": 512
+    }
+  ],
+  "decision": {
+    "action": "create",
+    "parent": null,
+    "scores_used": [],
+    "target_index": 0,
+    "threshold": null
+  },
+  "diagnostic_dataset": {
+    "bytes": 7745,
+    "n": 512,
+    "path": "datasets/topic0/diagnostic_train.npz",
+    "query_role_counts": {
+      "ACCION": 112,
+      "AGENTE": 133,
+      "LUGAR": 136,
+      "PACIENTE": 131
+    },
+    "role_balance": "natural sampling; no forced role balance",
+    "sampling_seed": 62010,
+    "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+    "split": "train",
+    "targets_retained": false,
+    "topic": 0
+  },
+  "diagnostic_expert_outputs": [],
+  "experts_after_stage": 1,
+  "final_test_accessed": false,
+  "firing_seed": 9001,
+  "optimizer_updates": 512,
+  "post_stage_a_diagnostic": null,
+  "post_stage_a_mean_resonance": null,
+  "raw_novelty": [],
+  "raw_resonance": [],
+  "stage": 0,
+  "tau_after_stage": null,
+  "topic": 0,
+  "train_sample_seed": 9002,
+  "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+  "training_seconds": 56.26165119699999
+}
