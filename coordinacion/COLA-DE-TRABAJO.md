@@ -83,3 +83,8 @@ Root freezes09_preflight_plan.json, SHA256 7802ee68ae8ce19bf17e6135815e0c7962166
 ## 2026-10-07T08:22:31.852462+00:00 — SCI-009 Stage B admitted for prospective freeze
 
 The reviewed Stage-A evidence is complete: two successful 32-row memorization diagnostics and four finite development pilots, 34 collected cloud tests passed without skips, 138,074 independent scientific checks and 861 archive checks with zero issues. Admit the unchanged ten-run, 4,096-update Stage-B inventory under the separate bounded resource reservation. The frozen validation-binding priority selects NeuroPixel LR 0.001 and RelativeTransformer LR 0.003; neither lower cross-entropy at the other rate nor runtime changes this rule. The complete source-linked handoff receipt, analysis source, 19 passing analysis tests, preserved earlier analysis failure and exact offline Python/NumPy/SciPy runtime will be bound before final data exist. Items 10–30 remain pending; H1 remains closed and not supported. No response is requested.
+
+
+## 2026-10-07T08:28:04.762952+00:00 — SCI-009 frozen Stage B launched
+
+Source commit 83fe135e301f76bc0c74e30c66bb18e067ca5959 (tree a2b8319335bd6fb05de8b1c9749d537d10150218) contains the reviewed plan, SHA256 7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792, and all 83 bound files. Root verified the clean frozen checkout, all 41 changed/new Git blobs and every binding. Workflow run 37593731891, job 112701154832, was observed in progress after the source-only trigger. This records launch, not completion or scientific outcomes. The independent final analyzer and all scientific criteria remain fixed. Work stays within item 9 until complete raw archival, recount and report review; items 10–30 remain pending.
