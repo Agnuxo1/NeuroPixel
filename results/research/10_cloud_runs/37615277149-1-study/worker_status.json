@@ -1,4 +1,9 @@
 {
+  "admission": {
+    "at_utc": "2026-10-07T11:38:15.177419+00:00",
+    "available_ram_gib": 14.579540252685547,
+    "phase": "admission"
+  },
   "gpu_requested": false,
   "item": 10,
   "paid_compute": false,
@@ -19,7 +24,33 @@
   "run_key": "37615277149-1-study",
   "schema_version": 1,
   "source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
-  "stages": [],
+  "stages": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T11:38:20.200343+00:00",
+        "available_ram_gib": 14.49545669555664,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item10_worker.py",
+        "--phase",
+        "study",
+        "--child",
+        "contract_tests",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/10_cloud_runs/37615277149-1-study"
+      ],
+      "completed_at_utc": "2026-10-07T11:38:24.705226+00:00",
+      "log_sha256": "6c5c9f7612a474d7825b40ab350f9d4704a52943e6c78baf02c661544939d1bb",
+      "name": "contract_tests",
+      "return_code": 0,
+      "stage_limit_seconds": 300,
+      "started_at_utc": "2026-10-07T11:38:20.200539+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 4.503408286999985
+    }
+  ],
   "started_at_utc": "2026-10-07T11:38:15.161164+00:00",
   "status": "running"
 }
