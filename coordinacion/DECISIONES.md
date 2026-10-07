@@ -16,3 +16,7 @@ Una decision solo queda `confirmada` cuando tiene evidencia suficiente. JEV debe
 ## SCI-006-CLOUD — 2026-10-07
 
 Following the already documented JEV recovery failure, continue the existing conservative fallback for reversible scientific work within item 6. This is a local operational decision, not a JEV decision. Recover historical scientific sources by exact recorded hashes, record the missing GPU worker, and validate a separately versioned standard public GitHub CPU environment before freezing and executing the declared ablations. Keep paired comparisons in the same software environment, preserve negative findings and failed attempts, and retain the no-paid-compute constraint. No main-branch merge or external scientific submission is part of this action.
+
+## SCI-006-FREEZE — 2026-10-07T03:22:22Z
+
+Root scientific/operational review approves the complete item-6 execution plan after the passing cloud suite and independent supervisor review. This remains the documented local conservative fallback following JEV recovery failure; it is not represented as a JEV decision. Both panels are frozen together and cannot be changed between panels in response to results. Preserve failures, optimization limits and negative findings. The worker may write only its owned synthetic-study evidence to the separate results branch, using bounded waits and an unchanged scientific execution HEAD. Item 5's H1 remains not supported; the budget ablation is exploratory. Main is unchanged, and no external scientific submission or paid compute is authorized by this decision.

@@ -27,3 +27,7 @@ Politica: `single_gpu_queue`. Siguiente tras cerrar las cargas activas: `FIL-002
 ## 2026-10-07 — Scientific validation continuation
 
 SCI-006 is active in the isolated research/scientific-validation-2026-10-07-cloud branch. Root is responsible for integration and review; focused collaborators cover source recovery, implementation and independent scientific checks within item 6. Items 1–5 are completed investigations, with H1 not supported in item 5. Items 7–30 remain pending. The immediate action is a source/environment preflight with zero optimizer updates and no final-test access. See docs/research/progress.json and 06_recovery_manifest.json. This dated section does not assert that the historical September reservations above are still active.
+
+## 2026-10-07T03:22:22Z — SCI-006 frozen study
+
+Root has closed implementation validation and approved the complete item-6 execution plan. The final cloud suite passed 107 tests with no failures and one unrelated optional CIFAR skip. SCI-006 now proceeds sequentially through 26 core trainings, the core final gate, six growth trajectories (18 stages), eight train-only gate fits, the growth final gate and both independent recounts. Both panels are frozen before the first training. Items 7–30 remain pending. The live owned attempt is recorded in worker_status.json on the separate research/scientific-validation-2026-10-07-cloud-results branch. Resource reservation and cut conditions are recorded below in RECURSOS.md.

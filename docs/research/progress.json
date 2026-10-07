@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07 03:19:19 UTC",
+  "recorded_at": "2026-10-07T03:22:22Z",
   "active_item": 6,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -173,18 +173,25 @@
     "raw_archive_currently_available": false
   },
   "item6": {
-    "stage": "complete cloud suite passed 104 tests (one optional CIFAR skip); independent supervisor correction passed four local process checks; complete cloud revalidation pending before study freeze",
+    "stage": "scientific and execution freeze approved; full sequential worker launch pending this commit's Actions run",
     "planned_core_training_runs": 26,
     "planned_core_evaluation_cases": 34,
     "planned_growth_trajectories": 6,
     "planned_growth_stages": 18,
     "planned_gate_fits": 8,
-    "protocol_freeze": "pending completed code review and passing preflight",
+    "protocol_freeze": {
+      "path": "06_execution_plan.json",
+      "at_utc": "2026-10-07T03:22:22Z",
+      "sha256": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+      "implementation_files": 37
+    },
     "evidence_manifest": "06_recovery_manifest.json",
     "preflight_receipt": "results/research/06_cloud_preflight.json",
     "first_ci_failure": "results/research/06_ci_20261007_37563992665.json",
     "second_ci_success": "results/research/06_ci_20261007_37564586928.json",
-    "supervisor_correction": "results/research/06_local_supervision/receipt.json"
+    "supervisor_correction": "results/research/06_local_supervision/receipt.json",
+    "final_implementation_validation": "results/research/06_ci_20261007_37566204008.json",
+    "live_execution_status": "research/scientific-validation-2026-10-07-cloud-results: results/research/06_cloud_runs/{run ID}-{attempt}/worker_status.json"
   },
   "limitations": [
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",

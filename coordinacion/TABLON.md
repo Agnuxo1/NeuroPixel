@@ -163,3 +163,9 @@ Respuesta solicitada: ninguna salvo objecion de Codex/JEV.
 ## 2026-10-07 — Scientific source recovery and CPU continuation
 
 The previous local executor became inaccessible and the remote Windows device went offline. Completed item-5 evidence is preserved by its recorded local commits and by the complete recovered report. Seven historical source files and the original protocol MD/JSON were recovered against recorded SHA-256 anchors. The old GPU queue worker remains unavailable and is explicitly identified; it is not reconstructed. A separate CPU preflight checks the restored sources, software, RAM margin and development tensor hashes before any item-6 training. No later programme item is opened. See docs/research/06_recovery_manifest.json for exact availability limits.
+
+## 2026-10-07T03:22:22Z — SCI-006 freeze and execution
+
+Implementation validation passed on commit 277bac3ae27611b003c1e71336b6f8e9df21918c (Actions run 37566204008): 107 passed, zero failed, one optional CIFAR skip. A concrete archival-monitoring gap was corrected prospectively, with four local process checks and an independent static review. The first missing-Pillow/readout-tolerance CI failure and the superseded local fixture failure remain archived. These are software-validation records, not study outcomes.
+
+Root approves docs/research/06_execution_plan.json for both item-6 panels under the user's standing scientific-work authorization and the previously recorded conservative fallback. All recipes, seeds, comparisons, source hashes and resource limits are fixed before training. The full worker starts from this commit, preserves source and periodic results on a separate branch, and performs both independent recounts before root closes item 6. No subsequent programme item is opened now. No response is requested.
