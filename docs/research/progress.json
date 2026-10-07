@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T12:25:26+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T12:26:57+00:00",
+  "active_item": 11,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -73,7 +73,8 @@
     {
       "item": 11,
       "title": "Durable memory and interference",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T12:26:57+00:00"
     },
     {
       "item": 12,
@@ -238,7 +239,7 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 11,
+  "next_item": 12,
   "item7": {
     "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
@@ -667,6 +668,19 @@
     "report_sha256": "ac14d3a4c5125e0e420f441f2c27ac373e10379a6ca90eaaf2a76ea1cbb8d5c8",
     "report_bytes": 33748,
     "report_review_status": "reviewed_no_material_blockers; RAM sampling scope clarified in one documented edit",
-    "report_review_sha256": "84b707e0b70bbb810bb733e986f23704b793c3fa454b35548fb86d51e3cf6ab6"
+    "report_review_sha256": "84b707e0b70bbb810bb733e986f23704b793c3fa454b35548fb86d51e3cf6ab6",
+    "closure_commit": "4411de991098ac592a42b408e266061786396395"
+  },
+  "item11": {
+    "stage": "opened; source and prior-art investigation before protocol or execution",
+    "opened_after_item10_closure_commit": "4411de991098ac592a42b408e266061786396395",
+    "scope": "Distinguish durable parameter/expert storage, within-call recurrent activation, across-call episodic memory, and externally reintroduced inputs. Audit current public paths and historical memory claims; derive necessary conditions and execute bounded counterfactual/integrity checks under a frozen protocol where feasible. Record interference only with a specified stored object and retrieval criterion.",
+    "model_training_started": false,
+    "scientific_scoring_started": false,
+    "execution_plan_frozen": false,
+    "historical_H1": "closed; not supported; unchanged",
+    "sequential_policy": "Do not open item12 or later before closing this feasible investigation.",
+    "infrastructure": "Local executor unavailable; read-only preparation and later authorized bounded standard public CPU workflow if needed. No active numerical job at opening.",
+    "routing": "No JEV callable capability found in current tool inventory. Retain the already established conservative fallback: root handles integration; architecture/evidence/primary-literature reviews are justified parallel subtasks within item11."
   }
 }

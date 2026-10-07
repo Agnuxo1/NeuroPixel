@@ -168,3 +168,12 @@ All-official mean accuracies are NeuroPixel 50.40% and Transformer 88.66%; NP mi
 Close item 10 and release its analysis/resource reservation. Items 11–30 remain unopened at this closure; item 11 (durable memory and interference) is next and requires its own scoped opening. Closure records completion of the feasible investigation, not achievement of its scientific capability. No main merge, paid/GPU compute, outreach, deployment or access/billing changes occurred.
 
 One final editorial observation was resolved: the report distinguishes the audit-stage monitor minimum RAM (14.464985 GiB) from a later pre-archive worker boundary (14.460808 GiB). Original report, exact correction receipt and final independent review are preserved; results and admission are unchanged.
+
+
+## 2026-10-07T12:26:57+00:00 — Item 11 opened after verified item-10 closure
+
+Claim item 11 (durable memory and interference) on isolated source branch at parent 4411de991098ac592a42b408e266061786396395. Item 10 report/ledger and branch identity have been read back and verified. All previous runners are released. No contest-specific Kaggle work is affected.
+
+Scope: distinguish parameter/expert storage, recurrent state within one call, activation carried between calls, and information reintroduced with current input. Read the actual model/phase3 memory paths and historical evidence, derive counterfactual requirements, then freeze a bounded diagnostic protocol before execution. Default-call reset, returned state, weights, RNG, hooks and deliberate optimizer updates must be distinguished. A finite-horizon activity trace or a saved parameter checkpoint is not automatically durable episodic memory. No item-10 retuning or historical-H1 replacement.
+
+Reserve source/report preparation for root with independent architecture, evidence and primary-literature review subtasks, justified by avoiding conflation of memory mechanisms. Reservation renews within 90 minutes. No numerical runner is admitted yet; any execution requires its frozen scope, available RAM at least 8 GiB, aggregate threads at most 4, explicit deadlines and retained failures. Local executor remains unavailable. No JEV callable capability appears in the current tool inventory; continue the previously established conservative fallback and record decisions. Items 12–30 remain unopened.
