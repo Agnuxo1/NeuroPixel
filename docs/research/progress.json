@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T14:20:46+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T14:21:44+00:00",
+  "active_item": 13,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -89,7 +89,8 @@
     {
       "item": 13,
       "title": "New tokens and distractors",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T14:21:44+00:00"
     },
     {
       "item": 14,
@@ -244,7 +245,7 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 13,
+  "next_item": 14,
   "item7": {
     "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
@@ -841,6 +842,21 @@
     "report_review_sha256": "aa06c6ac80f89c4a0da9b86f3d8fda3f25e1fd87d45326eededd95e4e67077ec",
     "closed_at_utc": "2026-10-07T14:20:46+00:00",
     "completion_receipt": "results/research/12_validation/probe_completion_receipt.json",
-    "completion_receipt_sha256": "c115f47360fd767795083d9d6e3d94db1e5e34aa50ececb0896dcc4a693152ca"
+    "completion_receipt_sha256": "c115f47360fd767795083d9d6e3d94db1e5e34aa50ececb0896dcc4a693152ca",
+    "closure_commit": "a1436a203f90a61428d2beb4277d2bddcb6dfc7d"
+  },
+  "item13": {
+    "stage": "Opening source, historical-evidence and primary-literature audit",
+    "opened_at_utc": "2026-10-07T14:21:44+00:00",
+    "opened_after_item12_closure_commit": "a1436a203f90a61428d2beb4277d2bddcb6dfc7d",
+    "scope": "Distinguish vocabulary-capacity expansion, preserved old token semantics and outputs, acquisition of unseen token meanings, lexical renaming, and irrelevant-input robustness. Audit the actual expansion path and distractor evaluation, derive necessary contracts, fix concrete faults where authorized, and execute bounded prospective checks that separate implementation integrity from learned generalization.",
+    "execution_plan_frozen": false,
+    "model_training_started": false,
+    "scientific_scoring_started": false,
+    "historical_H1": "closed and not supported; unchanged",
+    "dependency": "Retain prior low binding acquisition and source-version distinctions. Stored item6/9/10 results are previously observed evidence.",
+    "sequential_policy": "Do not open item14 or later until the item13 feasible investigation is closed.",
+    "resources": "No numerical runner at opening. Reserve source/review work90 minutes. Any later public CPU execution requires finite deadline, RAM>=8GiB, aggregateCPU<=4, and an archival reserve.",
+    "routing": "No callable JEV capability in the established inventory; conservative root integration with justified independent source, evidence and primary-literature reviews."
   }
 }
