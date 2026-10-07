@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "source_commit": "071be375dce45d0d7fabce3d095bd1003d53ed36",
+  "facts": {
+    "official_train_rows": 1000,
+    "unique_ordered_inputs": 919,
+    "optimization_train_rows": 895,
+    "validation_rows": 105,
+    "answer_labels": 6,
+    "vocabulary": 18,
+    "grid_height": 4,
+    "grid_width": 8,
+    "maximum_chebyshev_distance": 7,
+    "neuropixel_updates_per_forward": 16,
+    "neuropixel_identity_channels": 16,
+    "neuropixel_state_channels": 48,
+    "neuropixel_parameters": 29552,
+    "relative_transformer_parameters": 29562
+  },
+  "derived": {
+    "parameter_count_difference": 10,
+    "parameter_difference_fraction_of_neuropixel": 0.00033838657282079046,
+    "pilot_training_presentations": 32768,
+    "planned_primary_training_presentations": 131072,
+    "pilot_presentation_to_population_ratio": 36.61229050279329,
+    "planned_primary_presentation_to_population_ratio": 146.44916201117317
+  },
+  "interpretation": [
+    "Zero raw/encoded label conflicts, no TRAIN input OOV/overflow and a correct raw grammar control show that the retained TRAIN information supports a deterministic answer; this is not a neural learnability theorem.",
+    "Six answer labels and geometrical reachability do not impose an immediate answer-information or hard receptive-field exclusion. Rank/locality observations alone cannot identify the cause of any optimization failure.",
+    "Presentation/population ratios are aggregate exposures under sampling with replacement, not completed shuffled epochs. Actual unique sampled records must be read from preserved indices.",
+    "Parameter matching does not match FLOPs, wall time, memory, energy or inductive bias."
+  ]
+}

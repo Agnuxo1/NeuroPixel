@@ -160,3 +160,15 @@ Public CPU run37609533224/job112753126084 completed successfully; final raw comm
 ## 2026-10-07T11:12:59+00:00 — SCI-010 bounded neural CPU reservation
 
 Reserve one standard public ubuntu-24.04 CPU job, Python3.12.14/Torch2.6.0+cpu/NumPy2.2.6/SciPy1.15.1, numericalthreads2/inter-op1/Git1, aggregate activeCPU at most4, availableRAM at least8GiB. Worker2400seconds TOTAL including180 final-archive reserve; sharedexecution2220s, contracts300s and neuralpreflight1800s within it. Workflow50minutes and2970s fromfirststep; earlierdeadline alwayswins. RAMsupervision1s/archive300s. No GPU, paid compute, billing/access change, main merge, outreach or unrelated-process control. Acquisition runner released; local executor unavailable. Preserve failures before stopping any blocked phase.
+
+
+## 2026-10-07T11:31:58+00:00 — SCI-010 completed neural preflight; independent audit frozen
+
+Public CPU run 37612623870/job 112763295080 completed successfully and released its runner. Archive 707be7d4c1df58bde0706d965e6678c0be6a2cfa retains all 90 files/14,645,751 bytes excluding manifest, all six runs and all 19 memorization snapshots. All 32 parent test methods and 87 subtests passed. Both small-set criteria passed under the frozen consecutive-check rule; selected DEV rates are 0.003 for both families. DEV correct counts are 36/105 (NeuroPixel) and 79/105 (Transformer). These are development scores, not final evidence. All full-TRAIN probes remain below 95%.
+
+The separate JSON review passed 125 checks with zero issues and 25 text files rehashed. Full saved-array and archive verification now has a frozen operational plan (SHA-256 8272b44b2cfec01659121584e5c4a888ea520d693593d35ba366a12abe963061), wrapping the unchanged scientific auditor d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949. No neural execution, TEST extraction or reselection belongs to the audit. Main admission is pending its actual success. Item 10 remains active; items 11–30 unopened; historical H1 unchanged.
+
+
+## 2026-10-07T11:31:58+00:00 — SCI-010 bounded offline audit reservation
+
+The completed neural runner is released. Reserve one standard public ubuntu-24.04 CPU audit job, Python 3.12.14/NumPy 2.3.5/SciPy 1.17.0/psutil 7.2.2, numerical threads 1/Git 1 and aggregate CPU cap 4, available RAM at least 8 GiB. Worker 1,500 seconds TOTAL including 180 seconds final-archive reserve; audit stage at most 1,200 seconds; workflow 30 minutes and first-step deadline 1,770 seconds. Parent RAM supervision every second and archive at 300-second intervals. Earlier shared deadlines always win. Renew the read-only/source coordination reservation for 90 minutes from this timestamp; no local numerical process is assumed available. No GPU, paid compute, access/billing change, main merge, outreach or unrelated-process control.

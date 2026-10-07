@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "stage": "conditional_main_cost_review",
+  "source_commit": "071be375dce45d0d7fabce3d095bd1003d53ed36",
+  "preflight_archive_commit": "707be7d4c1df58bde0706d965e6678c0be6a2cfa",
+  "pilot_source": "allfourpilot timing records; worst observed within each family; independent of final accuracy",
+  "per_family": [
+    {
+      "family": "neuropixel",
+      "max_mean_update_seconds": 0.05423231384570351,
+      "max_pilot_training_seconds": 55.70544006700001,
+      "max_pilot_nontraining_seconds": 0.6983369489999802,
+      "primary_bare_updates_seconds_per_run": 222.13555751200158,
+      "primary_total_seconds_per_run": 223.52009721700003
+    },
+    {
+      "family": "relative_transformer",
+      "max_mean_update_seconds": 0.008282275145507945,
+      "max_pilot_training_seconds": 8.599309817999995,
+      "max_pilot_nontraining_seconds": 0.10467617199992674,
+      "primary_bare_updates_seconds_per_run": 33.92419899600054,
+      "primary_total_seconds_per_run": 34.501915443999906
+    }
+  ],
+  "ten_run_bare_update_projection_seconds": 1280.2987825400105,
+  "ten_run_training_and_perrun_overhead_projection_seconds": 1290.1100633049998,
+  "safety_multiplier": 2,
+  "train_stage_recovery_and_selection_allowance_seconds": 60,
+  "train_stage_admission_projection_seconds": 2640.2201266099996,
+  "proposed_stage_seconds": {
+    "contract_tests": 300,
+    "train": 2700,
+    "final": 300
+  },
+  "proposed_worker_seconds": 3600,
+  "proposed_archive_reserve_seconds": 180,
+  "proposed_workflow_minutes": 70,
+  "within_train_stage": true,
+  "within_worker_sum": true,
+  "main_admitted": false,
+  "pending": "Independent NPZ/NPY/raw archive recount must verify preflight before main admission.",
+  "limits": [
+    "Operational point projections and reserve choices are not statistical confidence limits.",
+    "Recorded training_seconds includes logging, RAM checks and any within-phase work; update seconds exclude some of that work.",
+    "Shared hardware and IO variation may change wall time. A partial/failed attempt cannot unlock final scoring.",
+    "No inference latency, FLOPs, peak RSS, physical energy or cost superiority is estimated here."
+  ]
+}

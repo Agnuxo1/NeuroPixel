@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "read_at_utc": "2026-10-07 11:17:19 UTC",
+  "scope": "Contextual literature review after recipe freeze; no source, data, architecture, optimizer, selection or threshold change.",
+  "source": {
+    "title": "End-To-End Memory Networks",
+    "authors": [
+      "Sainbayar Sukhbaatar",
+      "Arthur Szlam",
+      "Jason Weston",
+      "Rob Fergus"
+    ],
+    "url": "https://arxiv.org/html/1503.08895v5",
+    "version": "v5, 24 November2015",
+    "ref": "turn158view0",
+    "relevant_sections": [
+      "4 Synthetic Question and Answering Experiments",
+      "4.1 Model Details",
+      "4.2 Training Details",
+      "4.4 Results, Table1"
+    ]
+  },
+  "observed": {
+    "dataset_version_stated": "1.1",
+    "ours_archive_version": "1-2",
+    "support_fact_supervision": false,
+    "qa4_table1_error_percent": {
+      "memn2n_bow": 32,
+      "memn2n_position_encoding": 3.8,
+      "memn2n_position_encoding_linear_start_random_noise": 2.8
+    },
+    "selection": "Paper states10 initializations and selects lowest training error; ours reports five predetermined main seeds without best-seed selection."
+  },
+  "interpretation": "Historical context only: original-task order sensitivity and established synthetic QA capability. Different versions, architecture, initialization selection and training recipe prevent a direct matched replication or superiority inference.",
+  "exposure_limit": "Search snippets and article examples are public bibliographic exposure, not additions to the frozen invented-test or model-training inputs. The strict novelty mask is limited to its declared official-TRAIN/fixture ledger and does not claim complete human/model prior-exposure blinding."
+}
