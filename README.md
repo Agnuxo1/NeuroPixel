@@ -37,7 +37,7 @@ output pixel, and the output pixel ends up saying **girl** — the right answer.
 
 | Ingredient | What it does |
 |---|---|
-| **Colour dictionary** | Each token gets a learned 16-channel "colour". The same table is used to write the input and to read the output (tied weights). Empty pixels are black and carry no activity. |
+| **Colour dictionary** | Each token gets a learned 16-channel "colour". The same table is used to write the input and to read the output (tied weights). PAD has zero effective identity. Empty non-camera cells start at zero; recurrent updates can activate them. |
 | **Canvas dynamics** | A single shared 3×3 rule (depthwise perception + 1×1 MLP, residual, stochastic updates) runs for *T* steps. No attention, no global pooling. |
 | **School loss** | Every input pixel must keep "saying" its own word through the dictionary. The canvas stays legible and learns faster. |
 | **Training with variable steps and state damage** | Samples update counts and erases state during training. Historical damage tests retain the source tokens; the repair audit separates preservation, reconstruction and input dependence. |
@@ -101,7 +101,13 @@ The memory row quotes the archived [single-run summary](results/phase3/memory.js
 - Vision: the pure canvas does not perceive CIFAR-10 objects (16–19 %). With a small "retina" front-end it reaches
   42–62 %, against 72–76 % for a CNN. Beating CNNs is *not* the goal.
 - Anchoring dictionary colours to real perceptual colours did not transfer zero-shot. The memory decays faster
-  than a GRU's. The canvas never returns fully to black (energy savings are partial: −51 % updates, −0.8 pt accuracy).
+  than a GRU's in the reported long-delay curve.
+- The historical T16 activity panel reports every final pixel above a chosen state threshold. This finite observation
+  does not establish activity for all future time. Its roughly 51% reduction concerns thresholded update activity
+  between two regularized configurations, with a 0.8 percentage-point accuracy difference; it is not a physical energy measurement.
+- A separate five-checkpoint diagnostic retained all 40 trajectories through 256 further updates. All states remained
+  finite, while the prescribed small perturbations were amplified by 1.56–6.06 times. These finite observations do not
+  certify convergence or universal stability; see the [full stability investigation](docs/research/15_results.md).
 - A few runs were repeated after fixing bugs; the invalid numbers are excluded and documented in the conclusions.
 
 </details>

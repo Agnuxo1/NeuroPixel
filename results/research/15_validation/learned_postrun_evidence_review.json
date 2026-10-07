@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "kind": "internal_independent_postrun_readonly_review_summary",
+  "status": "reviewed_no_discrepancies",
+  "reported_at_utc": "2026-10-07T16:57:19+00:00",
+  "source_commit": "771975b4833bfcf20e06f848253912c699b2152e",
+  "archive_commit": "205507b71e2f7abb00ce97aa1dbec8321fc0af26",
+  "reviewer": "evidence_tests",
+  "source": "Summary faithfully transcribed from the reviewer's completed report in the shared work session.",
+  "claims": {
+    "archive_texts_read_and_rehashed": 15,
+    "archive_texts_compared_to_manifest": 14,
+    "manifest_hashed": true,
+    "additional_source_files_read": [
+      "scripts/research_stability_learned_audit.py",
+      "docs/research/15_preflight_plan.json"
+    ],
+    "json_v8_checks": 20,
+    "issues": [],
+    "source_bindings": 25,
+    "original_files": 22,
+    "native_files_including_events": 23,
+    "native_events": 91,
+    "all_gates_complete_at_utc": "2026-10-07T16:45:08.594659+00:00",
+    "first_extension_at_utc": "2026-10-07T16:45:08.600374+00:00",
+    "compatibility_prediction_changes": 0,
+    "trajectories": 40,
+    "pairs": 20,
+    "states": 10280,
+    "guarded": 0,
+    "preflight_ram_samples": 13,
+    "preflight_minimum_available_ram_gib": 14.066123962402344
+  },
+  "preserved_reviewer_error": "An extra parenthesis caused a V8 SyntaxError before its comparison block executed. Corrected without changes to scientific source/data/outcomes.",
+  "scope_limits": [
+    "No NPZ deserialization, model replay, training, Python or new job in this post-run review.",
+    "Known correlated validation scene and held input, not a new generalization assay.",
+    "Source/model inference remains authenticated by the existing frozen run; this review is not external replication."
+  ]
+}

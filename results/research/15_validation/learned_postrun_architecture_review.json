@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "panel": "retrospective_learned",
+  "review_kind": "JSON-level artifact contract and interpretation review",
+  "status": "verified_within_declared_scope",
+  "source_commit": "771975b4833bfcf20e06f848253912c699b2152e",
+  "archive_commit": "205507b71e2f7abb00ce97aa1dbec8321fc0af26",
+  "archive_path": "results/research/15_cloud_runs/37654405152-1-preflight",
+  "plan_sha256": "ff561f7ca71ff76afe61d1593de9decbd1e4447140dd57fb84f4385a2473dd44",
+  "checks": [
+    {
+      "name": "68 manifest entries and exact regular tree inventory",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash execution_plan.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/report.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/gates_summary.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/events.jsonl",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash audit/audit.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash binding/checkpoint_binding.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash stability_learned_status.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash worker_status.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/seeds/seed40.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/seeds/seed41.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/seeds/seed42.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/seeds/seed43.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/seeds/seed44.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/gates/seed40.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/gates/seed41.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/gates/seed42.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/gates/seed43.json",
+      "passed": true
+    },
+    {
+      "name": "read text byte hash native/gates/seed44.json",
+      "passed": true
+    },
+    {
+      "name": "source and plan report identities",
+      "passed": true
+    },
+    {
+      "name": "frozen recipe and all bound source hashes",
+      "passed": true
+    },
+    {
+      "name": "reviewed native,binder,auditor and protocol hashes",
+      "passed": true
+    },
+    {
+      "name": "verified native binder audit and expected check counts",
+      "passed": true
+    },
+    {
+      "name": "binder 22 native hashes anchored to archive",
+      "passed": true
+    },
+    {
+      "name": "auditor native maps and binding receipt anchored",
+      "passed": true
+    },
+    {
+      "name": "old22inputs maps agree",
+      "passed": true
+    },
+    {
+      "name": "positive global gate policy",
+      "passed": true
+    },
+    {
+      "name": "40 full trajectories10280states20pairs",
+      "passed": true
+    },
+    {
+      "name": "seed40 schema39/59 and endpoint geometry",
+      "passed": true
+    },
+    {
+      "name": "seed40 descriptor maps",
+      "passed": true
+    },
+    {
+      "name": "seed40 gates and invariants",
+      "passed": true
+    },
+    {
+      "name": "seed40 producer auditor trajectories",
+      "passed": true
+    },
+    {
+      "name": "seed41 schema39/59 and endpoint geometry",
+      "passed": true
+    },
+    {
+      "name": "seed41 descriptor maps",
+      "passed": true
+    },
+    {
+      "name": "seed41 gates and invariants",
+      "passed": true
+    },
+    {
+      "name": "seed41 producer auditor trajectories",
+      "passed": true
+    },
+    {
+      "name": "seed42 schema39/59 and endpoint geometry",
+      "passed": true
+    },
+    {
+      "name": "seed42 descriptor maps",
+      "passed": true
+    },
+    {
+      "name": "seed42 gates and invariants",
+      "passed": true
+    },
+    {
+      "name": "seed42 producer auditor trajectories",
+      "passed": true
+    },
+    {
+      "name": "seed43 schema39/59 and endpoint geometry",
+      "passed": true
+    },
+    {
+      "name": "seed43 descriptor maps",
+      "passed": true
+    },
+    {
+      "name": "seed43 gates and invariants",
+      "passed": true
+    },
+    {
+      "name": "seed43 producer auditor trajectories",
+      "passed": true
+    },
+    {
+      "name": "seed44 schema39/59 and endpoint geometry",
+      "passed": true
+    },
+    {
+      "name": "seed44 descriptor maps",
+      "passed": true
+    },
+    {
+      "name": "seed44 gates and invariants",
+      "passed": true
+    },
+    {
+      "name": "seed44 producer auditor trajectories",
+      "passed": true
+    },
+    {
+      "name": "all20 saved gain summaries recounted",
+      "passed": true
+    },
+    {
+      "name": "91 sequential events and gate before extension",
+      "passed": true
+    },
+    {
+      "name": "monotonic chronology and durable summary before firsttrajectory",
+      "passed": true
+    },
+    {
+      "name": "worker controller completed bounded components",
+      "passed": true
+    },
+    {
+      "name": "source clean and no training",
+      "passed": true
+    }
+  ],
+  "check_count": 53,
+  "issues": [],
+  "text_receipts": [
+    {
+      "name": "archive_manifest.json",
+      "blob": "82faba4f69ef8ff12a7222570f8f531748d7f672",
+      "bytes": 10879,
+      "sha256": "a7fc7460987028d3074b0985a232288c71236dbf80310d94429899ac57ebca01"
+    },
+    {
+      "name": "execution_plan.json",
+      "blob": "420d41776667dc7fc7acd79f45cfbf8baa1e9a62",
+      "bytes": 11152,
+      "sha256": "ff561f7ca71ff76afe61d1593de9decbd1e4447140dd57fb84f4385a2473dd44"
+    },
+    {
+      "name": "native/report.json",
+      "blob": "8842e7ec7408dbabb49ee5d9a9cb47388a77ac67",
+      "bytes": 8437,
+      "sha256": "8ade909f1a90e197339552a8b4036884f1e59e245e03d176e78b5bf3bb6e4723"
+    },
+    {
+      "name": "native/gates_summary.json",
+      "blob": "f7342ebd6b0461ef4894b113ebe75cd61528eeb9",
+      "bytes": 1332,
+      "sha256": "d831c138046ac92e51a0fc9464d3faa62795d715818573ebd41fb37b53c1d705"
+    },
+    {
+      "name": "native/events.jsonl",
+      "blob": "14fd3f3a055e023510973172d5abc9daa667ef66",
+      "bytes": 15355,
+      "sha256": "51206056b28fb253c43c9016df9313d972477e3cc48877cd71d20f624fb6f241"
+    },
+    {
+      "name": "audit/audit.json",
+      "blob": "81c1c7a0916d6137e20f986eaed1a8a14d59fdd4",
+      "bytes": 235154,
+      "sha256": "519a1e329ffbb5638c387b3d8644680430144223c49ecd83fb88159907a9e3c5"
+    },
+    {
+      "name": "binding/checkpoint_binding.json",
+      "blob": "27f07c82d874fbd033a5ecfb959471e0ca0a2d2f",
+      "bytes": 8089,
+      "sha256": "64686a77c9938cf30a3521815c9e1d4f9bf3a5ccb18f0410521d45bda269b268"
+    },
+    {
+      "name": "stability_learned_status.json",
+      "blob": "28e7330fe3de68e0b53363dc6965031105bf3833",
+      "bytes": 5186,
+      "sha256": "d5998d92366e25d7c290352e9aae895aa3dc66ea946a9b930d52abc467311e05"
+    },
+    {
+      "name": "worker_status.json",
+      "blob": "f710d569fddff0d6dca82fdcdc4edff7538c545e",
+      "bytes": 6479,
+      "sha256": "68ce50ef977712c7113f3988e15b99a08ff1849f98b3a5c344ef4207e8cf1855"
+    },
+    {
+      "name": "native/seeds/seed40.json",
+      "blob": "c5fb66cf7a047d1bc2df18368802922e3437e1c6",
+      "bytes": 8460,
+      "sha256": "8fbfb5fb83aacf97f5c9a28a2040ca8ceb6e41695d409683b1019b5ddfcecf0f"
+    },
+    {
+      "name": "native/seeds/seed41.json",
+      "blob": "7f085aeb81175776b336dc1d3c9ea14f3bcf1b63",
+      "bytes": 8460,
+      "sha256": "3f3b7a397b0cd909c8b412141dc65da50b6e3ebb189859f2c05779b2262b1ee0"
+    },
+    {
+      "name": "native/seeds/seed42.json",
+      "blob": "bbe3475b1f23b0f2a3f38366613ad6c3400d394b",
+      "bytes": 8460,
+      "sha256": "a49aceb2dd3377fe551e3681b20eec69f2fe25fa43a076a94022474aee952279"
+    },
+    {
+      "name": "native/seeds/seed43.json",
+      "blob": "e969036977e0e3fc0dd1a7109ded288e5a79148c",
+      "bytes": 8460,
+      "sha256": "093e139baa890c826aedc275cd29b72320a888ab13ef1a9444b6bff268bfd216"
+    },
+    {
+      "name": "native/seeds/seed44.json",
+      "blob": "aea0d425b59a7be7107d702af7943bbe0144bbc8",
+      "bytes": 8460,
+      "sha256": "37901a8664263a2e83560266cdddd9024c232d15ce7eb06f5bdfca58fd5a7629"
+    },
+    {
+      "name": "native/gates/seed40.json",
+      "blob": "c597d4f89a991f68c44eb1fac26fcbc20cf89477",
+      "bytes": 4781,
+      "sha256": "a36287e03a5d8029837f8e0498e626d4908db1fed9c380301b1f69439e777e5a"
+    },
+    {
+      "name": "native/gates/seed41.json",
+      "blob": "ddda4fc38a69a0187740823ec1316215f82711b8",
+      "bytes": 4784,
+      "sha256": "8e577845a2da70adc6532741729e11963c123755cdd4422c8614c408d3e3e666"
+    },
+    {
+      "name": "native/gates/seed42.json",
+      "blob": "4550db68fd0c33d64c3d73527ed976fd5600304b",
+      "bytes": 4782,
+      "sha256": "d370ab3ad921b3305b49a0e36b6c58c47149f0f76b976d9bd3670f041013c038"
+    },
+    {
+      "name": "native/gates/seed43.json",
+      "blob": "606cb0ec858266c5580f74043601595f135f999c",
+      "bytes": 4781,
+      "sha256": "32b9f801e59f4a77b70a45753ab16782930b297d1e6f17b08265367d0953d589"
+    },
+    {
+      "name": "native/gates/seed44.json",
+      "blob": "b38143f0442088b1e4bed832fbf94ed65f8bb31a",
+      "bytes": 4784,
+      "sha256": "d5c16a3bd68105cb36eb143b320ec6753f81e7ae1d8ad81cb454304e184d5f44"
+    }
+  ],
+  "confirmed": {
+    "native_checks": 5,
+    "binding_checks": 429,
+    "numpy_audit_checks": 5761,
+    "binding_issues": 0,
+    "numpy_audit_issues": 0,
+    "all_five_compatibility_gates_passed": true,
+    "compatible_predictions": 320,
+    "prediction_mismatches": 0,
+    "maximum_absolute_gate_logit_error": 0.000002384185791015625,
+    "maximum_gate_tolerance_ratio": 0.016986706537718128,
+    "checkpoint_seeds": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "parameter_count_each": 29856,
+    "nonpersistent_buffers_per_checkpoint": 2,
+    "checkpoint_binding_deserializations": 5,
+    "checkpoint_binding_inference_calls": 0,
+    "completed_trajectories": 40,
+    "guarded_trajectories": 0,
+    "observed_states": 10280,
+    "paired_trajectories": 20,
+    "maximum_continuation_time": 256,
+    "corresponding_total_update": 272,
+    "native_events": 91,
+    "durable_gate_summary_utc": "2026-10-07T16:45:08.594128+00:00",
+    "first_extended_trajectory_utc": "2026-10-07T16:45:08.600374+00:00",
+    "native_internal_seconds": 8.159339863999989,
+    "binding_internal_seconds": 0.8902090329999908,
+    "auditor_internal_seconds": 1.0788992110000066,
+    "archive_manifest_entries": 68,
+    "manifest_referenced_bytes": 164161748
+  },
+  "numerical_summary": {
+    "base_initial_rms_range": [
+      0.4266672705273925,
+      0.5731566326437838
+    ],
+    "base_last_rms_range": [
+      2.459269732851865,
+      9.589061149972014
+    ],
+    "base_endpoint_rms_ratio_range": [
+      4.292552814754944,
+      18.430841393939517
+    ],
+    "paired_final_gain_range": [
+      1.556726149116686,
+      6.058957512860499
+    ],
+    "all20_pair_gain_peaks_at256": true,
+    "pair_gain_series_with_any_intermediate_decrease": 19,
+    "all40_observed_state_rms_peaks_at256": true,
+    "base_last_observed_step_l2_range": [
+      0.5728833736650105,
+      3.984878101129431
+    ]
+  },
+  "interpretation": [
+    "All five prespecified output-compatibility gates passed before any extension. This supports the declared output compatibility under the migrated runtime, not identity of historical hidden states.",
+    "All40 trajectories were retained through256 continuation steps without the declared state guard firing. This is finite observed behavior below the cap, not an all-time boundedness or convergence certificate.",
+    "The20 final directional gains exceed1 and the base-state RMS values increase over the observed window. These are finite perturbation amplification and state growth for fixed checkpoints, one scene, four related queries and one perturbation direction.",
+    "All20 gain peaks occur at the final observed endpoint, but19/20 series contain an intermediate decrease. Peak-at-end must not be reported as monotone growth or as a peak beyond the measured horizon.",
+    "The last step norm measures ||s256-s255||. The endpoint residual ||F(s256)-s256|| was not measured, so nonzero last-step norms cannot establish that s256 is not a fixed point.",
+    "Input identities remain available at every recurrence step. These traces do not establish source-absent stored-memory retention, useful task competence, generalization, chaos, a Lyapunov exponent, an operator norm or universal instability."
+  ],
+  "review_corrections": [
+    {
+      "initial_check_count": 53,
+      "initial_false_count": 1,
+      "cause": "Reviewer JS compared worker.resource_policy to nonexistent plan.resource_policy; actual frozen plan names the field limits.",
+      "correction": "Compare worker.resource_policy with plan.limits; all component/stage status and duration conditions unchanged.",
+      "scientific_artifacts_changed": false
+    },
+    {
+      "kind": "interpretation",
+      "initial_statement": "Nonzero last-step norms were briefly described as showing no fixed point reached within the horizon.",
+      "corrected_statement": "They demonstrate change during the last observed transition only; the endpoint may be a fixed point because its residual was not evaluated.",
+      "source_of_correction": "Root methodological review before final report",
+      "scientific_artifacts_changed": false
+    }
+  ],
+  "limits": [
+    "Only Git text blobs, immutable tree metadata and JS arithmetic on saved JSON were read here. No Python, Torch, model inference, new job, training, or binary NPZ/PT decoding was performed by this reviewer.",
+    "19 complete text blobs were independently byte-hashed; the manifest has68 referenced files. Binary-file hashes and full array values were cross-linked through immutable descriptors and the separately executed NumPy/binding receipts, not independently rehashed or decoded in this review.",
+    "The original checkpoint tensor contents were checked by the separate429-check Torch binder; learned recurrence was not independently replayed by the NumPy auditor.",
+    "Runtime and source identities agree across plan and receipts. Provider completion, source ZIP validation and the full archive rehash are handled separately by root; they are not newly certified here.",
+    "Correlated queries and fixed checkpoints are not independent new training replications. No additional confidence interval or population-level accuracy claim is derived."
+  ]
+}

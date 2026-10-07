@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T16:44:15+00:00",
-  "active_item": 15,
+  "recorded_at": "2026-10-07T17:04:41+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -116,18 +116,21 @@
     {
       "item": 15,
       "title": "Dynamical stability",
-      "status": "in_progress",
+      "status": "completed",
       "opened_at_utc": "2026-10-07T15:43:57+00:00",
       "probe_status": "completed",
       "protocol": "15_probe_protocol.md",
       "plan": "15_probe_plan.json",
       "frozen_at_utc": "2026-10-07T16:07:56+00:00",
       "census_report": "15_census_results.md",
-      "scope": "Constructed census verified. Item remains open for retrospective learned-checkpoint finite dynamics.",
-      "learned_status": "frozen",
+      "scope": "Constructed census and separately frozen retrospective learned dynamics verified.",
+      "learned_status": "completed",
       "learned_plan": "15_preflight_plan.json",
       "learned_protocol": "15_learned_protocol.md",
-      "learned_frozen_at_utc": "2026-10-07T16:44:15+00:00"
+      "learned_frozen_at_utc": "2026-10-07T16:44:15+00:00",
+      "closed_at_utc": "2026-10-07T17:04:41+00:00",
+      "report": "15_results.md",
+      "claim_status": "Finite dynamics measured; convergence, useful stable memory and universal stability unestablished."
     },
     {
       "item": 16,
@@ -1016,7 +1019,7 @@
     "learned_panel_execution_started": false,
     "learned_panel_plan_frozen": false,
     "learned_phase": {
-      "status": "frozen",
+      "status": "completed",
       "plan": "docs/research/15_preflight_plan.json",
       "plan_sha256": "ff561f7ca71ff76afe61d1593de9decbd1e4447140dd57fb84f4385a2473dd44",
       "freeze_utc": "2026-10-07T16:44:15+00:00",
@@ -1030,7 +1033,7 @@
       "maximum_trajectories": 40,
       "maximum_retained_slots": 10280,
       "new_training": false,
-      "scientific_execution_started": false,
+      "scientific_execution_started": true,
       "gate_policy": "All five archived T16 output comparisons precede every conditional extension; a negative gate is a recorded outcome with no continuations.",
       "limits": {
         "worker_seconds": 1020,
@@ -1044,7 +1047,26 @@
         "heartbeat_interval_seconds": 60,
         "archive_interval_seconds": 300,
         "git_timeout_seconds": 60
-      }
-    }
+      },
+      "source_commit": "771975b4833bfcf20e06f848253912c699b2152e",
+      "archive_commit": "205507b71e2f7abb00ce97aa1dbec8321fc0af26",
+      "run_id": 37654405152,
+      "job_id": 112905734552,
+      "gate_passed": true,
+      "trajectories": 40,
+      "observed_states": 10280,
+      "guarded": 0,
+      "native_checks": 5,
+      "binder_checks": 429,
+      "numpy_checks": 5761,
+      "root_js_checks": 994,
+      "issues": [],
+      "resources_released": true
+    },
+    "status": "completed",
+    "closed_at_utc": "2026-10-07T17:04:41+00:00",
+    "report": "docs/research/15_results.md",
+    "report_sha256": "f56d0213e1353b2c126c5ea7bc957ef2f161fb5c90de5a11c503f68a6f77a935",
+    "claim_status": "Finite dynamics measured; convergence, useful stable memory and universal stability unestablished."
   }
 }
