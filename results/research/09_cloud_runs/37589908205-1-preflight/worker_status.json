@@ -1,0 +1,31 @@
+{
+  "gpu_requested": false,
+  "initial_budget_seconds": 6600.0,
+  "item": 9,
+  "paid_compute": false,
+  "phase": "preflight",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "contract_test_seconds": 900,
+    "final_archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "interop_threads": 1,
+    "minimum_available_ram_gib": 8,
+    "minimum_stage_start_seconds": 60,
+    "numerical_threads": 2,
+    "stage_seconds": 6600,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 6600,
+    "workflow_minutes": 120
+  },
+  "results_branch": "research/scientific-validation-2026-10-07-cloud-results",
+  "run_key": "37589908205-1-preflight",
+  "schema_version": 1,
+  "source_commit": "e63764ccb924ab23d65c2deb94b477387d102c82",
+  "stages": [],
+  "started_at_utc": "2026-10-07T07:51:50.481646+00:00",
+  "status": "running"
+}
