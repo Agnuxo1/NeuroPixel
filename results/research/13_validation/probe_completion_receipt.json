@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "status": "verified",
+  "freeze_utc": "2026-10-07T14:55:04+00:00",
+  "source_commit": "9618ba8aae3b83d95a2813f99dd72c9d2e1d148a",
+  "plan_sha256": "60278a7580dabaaa1fb338a0276819d0c653a9052ed33c51d5793a14edd627da",
+  "run_id": 37640756510,
+  "job_id": 112858763837,
+  "archive_commit": "e16d0ab07a5aff93c66c4057a6509cc31b744160",
+  "archive_path": "results/research/13_cloud_runs/37640756510-1-probe",
+  "manifest": {
+    "blob": "1e0df9a4e14396af4820605e631c0ad4e37af00c",
+    "bytes": 4356,
+    "sha256": "425234cd242d2c2aac53d1ea149a5d2e76ffec7ee381d3977028337f7209c1c3"
+  },
+  "archive_files_excluding_manifest": 27,
+  "archive_bytes_excluding_manifest": 10981004,
+  "original_selected_input_files": 12,
+  "original_selected_input_bytes": 23928770,
+  "text_rehash_records": [
+    {
+      "path": "contract_tests.log",
+      "blob": "8529731b981f6df598e9838152ea3ee3d0bd42ec",
+      "bytes": 6169,
+      "sha256": "4f0eaa989a9f22da73f5c0663c7e000c37072e2c296309ad74b007fa855e1b06"
+    },
+    {
+      "path": "contract_tests_environment.json",
+      "blob": "6ab27d2c4b53c85c303508578c99cd3e755255de",
+      "bytes": 565,
+      "sha256": "ae55dde647e2ea854f1c7e25f33b00d305fd7d86d6e21fb97c7ee403ef98332c"
+    },
+    {
+      "path": "contract_tests_resource_monitor.json",
+      "blob": "af304729b523d6b4412b1453509c519134188123",
+      "bytes": 748,
+      "sha256": "449cf4c215544ea48b0ce1c4a5ee74882571791d8f92196c7f97ccb57caf4806"
+    },
+    {
+      "path": "contract_tests_status.json",
+      "blob": "d3e207b8df0566b7a447586484741b78b0db87bb",
+      "bytes": 840,
+      "sha256": "da3894e4ebb7d5574c286a9738a3f5df19843e533fbe26af64f5a2762560ab41"
+    },
+    {
+      "path": "execution_plan.json",
+      "blob": "0d059c920fafa2982d164cdc08735518e0f5a6c4",
+      "bytes": 7948,
+      "sha256": "60278a7580dabaaa1fb338a0276819d0c653a9052ed33c51d5793a14edd627da"
+    },
+    {
+      "path": "input_recovery/distractor.json",
+      "blob": "2a034eb5a4dec55aaa7ed966ee907426d416d230",
+      "bytes": 2282,
+      "sha256": "cdfe1a635f622103abea15923eb49617e52d299b7d6ef55032541f613cdc23a1"
+    },
+    {
+      "path": "input_recovery/distractor_started.json",
+      "blob": "a4c535e60846d9aab931bfefc3df969d1e42c6df",
+      "bytes": 2080,
+      "sha256": "b131bd3a96105406d82cd7a7768f2414782d8830152b40cfc9be8871629445f8"
+    },
+    {
+      "path": "native/report.json",
+      "blob": "9b5b830891d587f0b004c0e041021e5c60244a4e",
+      "bytes": 1256974,
+      "sha256": "b4b429df98ee123cbd65f6ccea2e7d273ade856a5f1f1248014506bb6530af1f"
+    },
+    {
+      "path": "probe.log",
+      "blob": "0be3ce56c0e5b9d24f33630b48e5b0187e22d0e0",
+      "bytes": 121,
+      "sha256": "052f4ee21b83a68a1ec22546716a06200cb5cdd18dc105b900aa2e2156e10d89"
+    },
+    {
+      "path": "probe_environment.json",
+      "blob": "215a40c9c9bde469b73cf78e38758a9ad6073383",
+      "bytes": 565,
+      "sha256": "c9df7d46410fff72f83a254892141b83f47bc003c184da63e1a3800547549bf0"
+    },
+    {
+      "path": "probe_resource_monitor.json",
+      "blob": "1d7ba613ccb7d647f14e23e51d9b20584dc61ee1",
+      "bytes": 1117,
+      "sha256": "c219067b87b3245eaefb2384f5b281e862c37c805526e4b0058c3bce4df63add"
+    },
+    {
+      "path": "probe_status.json",
+      "blob": "2849c6059d0b313730b6b2d693247b6ab028a152",
+      "bytes": 821,
+      "sha256": "89fe13ba2602592e4b766ad5fb5114dd217c32b1b77800136b267f59a88d2360"
+    },
+    {
+      "path": "secondary/artifact_manifest.json",
+      "blob": "af1456785add2c6e35bb50a734d9dd6010a880aa",
+      "bytes": 470,
+      "sha256": "ebe98bb2dae39ccb524ccf4ad5441639910b9c198df85b47faa60b1ead2f9f35"
+    },
+    {
+      "path": "secondary/report.json",
+      "blob": "b7a7368bbb8d54515b47106d115f01da99073f8b",
+      "bytes": 111136,
+      "sha256": "cc436eb78825b099a0d13304717345355bd454af2dd65d359a924e928ff438dc"
+    },
+    {
+      "path": "secondary/transitions.csv",
+      "blob": "85e2fa9e1f55612b592900c20f45adbafbe9f3c7",
+      "bytes": 12277,
+      "sha256": "114b4571cdeb17aef5ca4fb6f467d29578224579265faa834450c8deebb20fce"
+    },
+    {
+      "path": "secondary_audit/audit.json",
+      "blob": "05c712f9f968d26ac6ce5d5d3d6e9aac41894ef1",
+      "bytes": 119253,
+      "sha256": "4706d6521ace33b0e053f88eec48e0d8987bfe73d96d551ef8f94dd268d59677"
+    },
+    {
+      "path": "source_before.json",
+      "blob": "a203371fe1c4c9e6da102e9ac9c485718643aa0d",
+      "bytes": 3715,
+      "sha256": "ab5641d79e0c1d9bc7b99ef4fccf0bb3fa7e8fc81311f25cafc3b41d45da2926"
+    },
+    {
+      "path": "test_collection.json",
+      "blob": "543d7b9e36b49cf2425e0f61b4fe68d545cf986e",
+      "bytes": 1650,
+      "sha256": "a466cb1f289a2f6413cd542767a2a74df8eb3cfa16a9e991d56353f43fa7425d"
+    },
+    {
+      "path": "test_results.json",
+      "blob": "6d82e3502ee906096cb28315ecc272aae5667bb8",
+      "bytes": 13239,
+      "sha256": "4ce3f71ee95a5a4ef1ccdfb0479a8fcfdb2b8100f9c8f98570ff622f9f6c1fb4"
+    },
+    {
+      "path": "tests.xml",
+      "blob": "afb1da7c25a4634a55d152d25190876b0dc7a501",
+      "bytes": 2223,
+      "sha256": "8c92e90877704f070d28b0b5571a798b03322b18ee873d91d6b7ea31aba8c480"
+    },
+    {
+      "path": "vocab_probe_status.json",
+      "blob": "61e310afbdcb749ec749b02844712bfbfb0ec3ac",
+      "bytes": 12178,
+      "sha256": "9d2d73d93f398b63d76b3fe9cc472388af92523881540874fc8ce328c8889edd"
+    },
+    {
+      "path": "vocab_subprocesses/native.log",
+      "blob": "3bcf854ab3f580db4631b7717d1f84d624ea6f49",
+      "bytes": 36,
+      "sha256": "e7c5436ee0e9dfe8db5fb5a6c51e838788766e7a1f743a7e8e37f2f4c67e4693"
+    },
+    {
+      "path": "vocab_subprocesses/secondary.log",
+      "blob": "b25b79bfc4f5bdd8ac5ebcf5663eaf44463f0308",
+      "bytes": 36,
+      "sha256": "f0b64cc945683159b52d1e8b2641c8579fa908fcab12d3c954d7ab0a4af8aeef"
+    },
+    {
+      "path": "vocab_subprocesses/secondary_audit.log",
+      "blob": "70863a113c07109e887c679f1ff5632555b97023",
+      "bytes": 53,
+      "sha256": "a86992af72b6f4503093086aab9390126cb46582d5cbdb40412fec0f42f00049"
+    },
+    {
+      "path": "worker_status.json",
+      "blob": "4fa6a3d2540c217c4d38d50b5d3a1812693813ee",
+      "bytes": 6797,
+      "sha256": "1e4a6c085b5e88ad93569e8f93190dfa82217ce35545a522caa5390b8eb7a140"
+    }
+  ],
+  "binary_descriptors": {
+    "secondary/paired_outcomes.npz": {
+      "bytes": 120795,
+      "sha256": "8591bda792c9c21aa1e05abcb35ce76467397082becf3ad8479b6bdba5090f18"
+    },
+    "source.zip": {
+      "bytes": 9296916,
+      "sha256": "897b15a4ef902c7cbfdf561dc1c6f802e4a26bfba94e51e5d284375bcd937275"
+    }
+  },
+  "tree_verified": {
+    "tree": "0b3603d106eb495aee36f37df02b50c54ac1fc7a",
+    "complete_tree_entries": 1594,
+    "run_file_count": 28,
+    "mode": "100644",
+    "manifest_sizes_match": true
+  },
+  "tests": {
+    "parent_methods": 12,
+    "additional_subtest_calls": 20,
+    "total_call_reports": 32,
+    "failed": 0,
+    "skipped": 0,
+    "junit_time_seconds": 1.131
+  },
+  "native_checks": 8,
+  "independent_npz_audit_checks": 32954,
+  "maximum_audit_selected_nll_error": 2.220446049250313e-15,
+  "root_native": {
+    "schema_version": 1,
+    "item": 13,
+    "status": "verified",
+    "checks": 13215,
+    "numericComparisons": 88,
+    "maxAbsoluteDifference": 2.6645352591003757e-15,
+    "issues": [],
+    "label_counts": [
+      {
+        "condition": "base",
+        "subset": "all",
+        "n": 128,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 128,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "base",
+        "subset": "binding",
+        "n": 64,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 64,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "base",
+        "subset": "new_target",
+        "n": 0,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 0
+      },
+      {
+        "condition": "base",
+        "subset": "old_target",
+        "n": 128,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 128,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "new_agent",
+        "subset": "all",
+        "n": 128,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "new_agent",
+        "subset": "binding",
+        "n": 64,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "new_agent",
+        "subset": "new_target",
+        "n": 32,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 32
+      },
+      {
+        "condition": "new_agent",
+        "subset": "old_target",
+        "n": 96,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 96
+      },
+      {
+        "condition": "new_patient",
+        "subset": "all",
+        "n": 128,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "new_patient",
+        "subset": "binding",
+        "n": 64,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "new_patient",
+        "subset": "new_target",
+        "n": 32,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 32
+      },
+      {
+        "condition": "new_patient",
+        "subset": "old_target",
+        "n": 96,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 96
+      },
+      {
+        "condition": "two_new",
+        "subset": "all",
+        "n": 128,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "two_new",
+        "subset": "binding",
+        "n": 64,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "two_new",
+        "subset": "new_target",
+        "n": 64,
+        "constant_35_correct": 32,
+        "presence_gate_with_symbolic_fallback_correct": 32,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "two_new",
+        "subset": "old_target",
+        "n": 64,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "irrelevant_old",
+        "subset": "all",
+        "n": 128,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 128,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "irrelevant_old",
+        "subset": "binding",
+        "n": 64,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 64,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "irrelevant_old",
+        "subset": "new_target",
+        "n": 0,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 0
+      },
+      {
+        "condition": "irrelevant_old",
+        "subset": "old_target",
+        "n": 128,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 128,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "irrelevant_new",
+        "subset": "all",
+        "n": 128,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 128
+      },
+      {
+        "condition": "irrelevant_new",
+        "subset": "binding",
+        "n": 64,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 64
+      },
+      {
+        "condition": "irrelevant_new",
+        "subset": "new_target",
+        "n": 0,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 0
+      },
+      {
+        "condition": "irrelevant_new",
+        "subset": "old_target",
+        "n": 128,
+        "constant_35_correct": 0,
+        "presence_gate_with_symbolic_fallback_correct": 0,
+        "symbolic_correct": 128
+      }
+    ],
+    "projected_split_counts": [
+      {
+        "replacement": "agent",
+        "train_unique": 120,
+        "test_unique": 104,
+        "shared_unique": 104
+      },
+      {
+        "replacement": "patient",
+        "train_unique": 120,
+        "test_unique": 110,
+        "shared_unique": 110
+      },
+      {
+        "replacement": "both",
+        "train_unique": 10,
+        "test_unique": 10,
+        "shared_unique": 10
+      }
+    ],
+    "limitation": "Recounts saved JSON and checks representation-aligned outputs. Does not rerun Torch inference or establish trained competence."
+  },
+  "root_secondary": {
+    "schema_version": 1,
+    "item": 13,
+    "status": "verified",
+    "checks": 2641,
+    "numericComparisons": 2257,
+    "maxAbsoluteDifference": 0,
+    "issues": [],
+    "prior_projection_sha256": "97d5e1c348343e7a08856d46a5bd67baa5858cdfd27e70e155988cbb869fee89",
+    "scope": "Independent root arithmetic from the previously verified item9 projection compared with the newly rerun raw-NPZ producer and auditor. No extra confidence interval or model inference."
+  },
+  "logical_checks": [
+    {
+      "name": "one_final_successful_run",
+      "passed": true
+    },
+    {
+      "name": "archive_final_identity",
+      "passed": true
+    },
+    {
+      "name": "all_25_texts_rehashed",
+      "passed": true
+    },
+    {
+      "name": "worker_stages_completed",
+      "passed": true
+    },
+    {
+      "name": "source_before_after_frozen",
+      "passed": true
+    },
+    {
+      "name": "test_counts_no_skips",
+      "passed": true
+    },
+    {
+      "name": "three_completed_fresh_components",
+      "passed": true
+    },
+    {
+      "name": "native_eight_checks",
+      "passed": true
+    },
+    {
+      "name": "secondary_audit",
+      "passed": true
+    },
+    {
+      "name": "root_native_audit",
+      "passed": true
+    },
+    {
+      "name": "root_secondary_audit",
+      "passed": true
+    },
+    {
+      "name": "resource_samples",
+      "passed": true
+    },
+    {
+      "name": "no_training_program",
+      "passed": true
+    },
+    {
+      "name": "unchanged_inputs",
+      "passed": true
+    }
+  ],
+  "execution": {
+    "worker_wall_seconds_before_final_archive": 20.74881701000001,
+    "probe_wall_seconds": 4.74119417,
+    "components": [
+      {
+        "name": "secondary",
+        "wall_seconds": 1.068145453999989,
+        "limit_seconds": 120,
+        "return_code": 0
+      },
+      {
+        "name": "native",
+        "wall_seconds": 1.6765916340000047,
+        "limit_seconds": 120,
+        "return_code": 0
+      },
+      {
+        "name": "secondary_audit",
+        "wall_seconds": 1.1693773990000125,
+        "limit_seconds": 120,
+        "return_code": 0
+      }
+    ],
+    "supervisor_samples": 11,
+    "minimum_sampled_available_ram_gib": 14.216365814208984,
+    "threads": 1,
+    "interop_threads": 1,
+    "aggregate_cpu_limit": 4,
+    "paid_compute": false,
+    "gpu_requested": false
+  },
+  "scope_limits": [
+    "The NPZ auditor verified the two selected conditions and saved argmax arrays; this does not repeat the entire old archive custody audit.",
+    "Root rehashed all25 current textual files and matched binary Git descriptors, but did not independently unzip source.zip or open the binary NPZ in its V8 runtime.",
+    "Native JSON and mathematics were recounted independently in JavaScript; Torch inference was not separately reimplemented.",
+    "Untrained fixtures, saved-output recount and code regression tests establish no new semantic acquisition, external replication or Nobel-level discovery."
+  ]
+}

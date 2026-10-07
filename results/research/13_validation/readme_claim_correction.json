@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "parent_readme_blob": "e738990e69a316083e1495e97db6b73853a8a573",
+  "changes": [
+    {
+      "before": "All numbers are on **combinations never seen during training** (synthetic role-binding task). Raw data is in\n[`results/`](results) and the full write-up (Spanish) in [`docs/FASE3_CONCLUSIONES.md`](docs/FASE3_CONCLUSIONES.md).",
+      "after": "The historical tables summarize reports on the synthetic role-binding tasks. Raw summaries are in\n[`results/`](results) and the original write-up (Spanish) in [`docs/FASE3_CONCLUSIONES.md`](docs/FASE3_CONCLUSIONES.md).\nThe research audits below specify which claims each evaluation can support; transforming a task, such as replacing a noun with an added token, requires checking the resulting split again."
+    },
+    {
+      "before": "| New word from 5 examples (one dictionary row trained) | up to 98.6 % new, 92.6 % old kept | Transformer 50–61 % |",
+      "after": "| Added-token adaptation from 5 examples (historical report) | Selected norm-constrained condition: 98.6 % new, 92.6 % old (97.95 % before) | Plain adaptation on one 44 k Transformer base: 61.22 % new; a different method |"
+    },
+    {
+      "before": "The memory row quotes the archived",
+      "after": "The added-token row comes from [newword.json](results/phase3/newword.json); its Transformer figure comes from the different plain adaptation procedure in [scale_tf44k.json](results/phase3/scale_tf44k.json). Every target in the historical new-token panel is the inserted token, so a presence shortcut solves that panel. These aggregates do not establish new semantic binding or a matched advantage. See the [vocabulary and distractor audit](docs/research/13_results.md) for corrected allocation/label code, controls, transformed-split checks and the separate saved-output distractor recount.\n\nThe memory row quotes the archived"
+    },
+    {
+      "before": "- **Biological-style properties come for free.** Self-repair, arbitrary thinking time, learning a word from a\n  handful of examples, and growing new canvases instead of overwriting old knowledge.",
+      "after": "- **Properties explored in the prototype.** Self-repair, variable update counts, adapting appended token rows,\n  and growing separate canvases. The linked audits distinguish implemented mechanisms from demonstrated task capabilities."
+    }
+  ],
+  "scope": "Qualify the historical added-token claim and mismatched comparator; explain transformed-partition limitation and distinguish explored properties from established task capabilities.",
+  "numerical_results_changed": false
+}

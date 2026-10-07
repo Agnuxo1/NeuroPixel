@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "reviewed_at_utc": "2026-10-07T15:17:10+00:00",
+  "report": "docs/research/13_results.md",
+  "report_blob": "26a5b0b8e01a06ce53c9e19f11799180525520bc",
+  "report_sha256": "7459bdec8ddc3bc1853b4f28f1d7b2508f0d24dd3d7a595db5526ddd0616272a",
+  "external_independent_replication": false,
+  "architecture": {
+    "reviewer": "architecture_audit",
+    "status": "verified",
+    "checks": 17,
+    "issues": [],
+    "scope": "Six archived contract/status/resource texts; independent JS document checks, no numerical rerun.",
+    "findings": {
+      "parent_methods": 12,
+      "additional_subcalls": 20,
+      "successful_call_reports": 32,
+      "setup_events": 12,
+      "teardown_events": 12,
+      "total_events": 56,
+      "junit_parent_elements": 12,
+      "junit_aggregate_tests": 32,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "grounding_before": 2,
+      "grounding_legacy_after": 0,
+      "legacy_max_dictionary_change": 2.4441168308258057,
+      "battery_legacy_wrong": [
+        0,
+        6
+      ],
+      "battery_corrected_wrong": 0,
+      "supervisor_samples": 11,
+      "minimum_sampled_available_ram_gib": 14.216365814208984
+    },
+    "limitations": [
+      "Expected legacy errors run under the current core; not job failures or whole historical replay.",
+      "Twelve methods with subcases, not32 independent experiments.",
+      "CPU and stated dtypes only; half fixture is gradient-only.",
+      "No learned semantics or generic optimizer-state preservation."
+    ]
+  },
+  "evidence": {
+    "reviewer": "evidence_tests",
+    "status": "verified",
+    "checks": 410,
+    "issues": [],
+    "maximum_mean_recount_difference": 2.220446049250313e-16,
+    "scope": "Review of final report and archived secondary/audit JSON: four means rows, ten binding count rows, sixty transition rows and twelve five-seed summaries. No Python, models, NPZ or jobs.",
+    "ratio_definition": "Mean of per-seed conditional ratios, not pooled numerator/denominator",
+    "archived_independent_audit_checks": 32954,
+    "archived_maximum_nll_error": 2.220446049250313e-15
+  },
+  "scientific": {
+    "reviewer": "scientific_prior_art",
+    "status": "reviewed_no_material_blocker",
+    "issues": [],
+    "scope": "Final report and exact readback of independent-auditor correction; no numerical rerun.",
+    "qualifications_confirmed": [
+      "Full-pool projected triple overlap does not establish actual historical five-shot canvas leakage.",
+      "Two-of-eight manual label errors concern the ask_new=False branch, not contamination of historical forced-query scores.",
+      "Grounding loss is not attributed to historical models that had no grounding.",
+      "Constant and presence controls are constructed witnesses, not identified trained-model mechanisms.",
+      "Joint renaming uses two tiny untrained models and manually activated NeuroPixel updates.",
+      "High conditional retention is accompanied by weak base binding and many stably wrong predictions.",
+      "The distractor recount uses five previously observed shared-bag realizations, with no new inference or external replication."
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T14:55:04+00:00",
-  "active_item": 13,
+  "recorded_at": "2026-10-07T15:17:10+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -89,13 +89,16 @@
     {
       "item": 13,
       "title": "New tokens and distractors",
-      "status": "in_progress",
+      "status": "completed",
       "opened_at_utc": "2026-10-07T14:21:44+00:00",
-      "probe_status": "frozen_for_first_execution",
+      "probe_status": "completed",
       "protocol": "13_probe_protocol.md",
       "plan": "13_probe_plan.json",
       "frozen_at_utc": "2026-10-07T14:55:04+00:00",
-      "scope": "Twelve regression contracts, retrospective item9 irrelevant-event recount, independent saved-array audit and constructed vocabulary/label witnesses. No new learning study."
+      "scope": "Twelve regression contracts, retrospective item9 irrelevant-event recount, independent saved-array audit and constructed vocabulary/label witnesses. No new learning study.",
+      "closed_at_utc": "2026-10-07T15:17:10+00:00",
+      "report": "13_results.md",
+      "claim_status": "Implementation contracts verified after correction; learned new-token semantics and high-competence distractor robustness not established"
     },
     {
       "item": 14,
@@ -851,17 +854,47 @@
     "closure_commit": "a1436a203f90a61428d2beb4277d2bddcb6dfc7d"
   },
   "item13": {
-    "stage": "Opening source, historical-evidence and primary-literature audit",
+    "stage": "Completed feasible investigation and independent internal reviews",
     "opened_at_utc": "2026-10-07T14:21:44+00:00",
     "opened_after_item12_closure_commit": "a1436a203f90a61428d2beb4277d2bddcb6dfc7d",
     "scope": "Distinguish vocabulary-capacity expansion, preserved old token semantics and outputs, acquisition of unseen token meanings, lexical renaming, and irrelevant-input robustness. Audit the actual expansion path and distractor evaluation, derive necessary contracts, fix concrete faults where authorized, and execute bounded prospective checks that separate implementation integrity from learned generalization.",
-    "execution_plan_frozen": false,
-    "model_training_started": false,
-    "scientific_scoring_started": false,
+    "execution_plan_frozen": true,
+    "model_training_started": true,
+    "scientific_scoring_started": true,
     "historical_H1": "closed and not supported; unchanged",
     "dependency": "Retain prior low binding acquisition and source-version distinctions. Stored item6/9/10 results are previously observed evidence.",
     "sequential_policy": "Do not open item14 or later until the item13 feasible investigation is closed.",
     "resources": "No numerical runner at opening. Reserve source/review work90 minutes. Any later public CPU execution requires finite deadline, RAM>=8GiB, aggregateCPU<=4, and an archival reserve.",
-    "routing": "No callable JEV capability in the established inventory; conservative root integration with justified independent source, evidence and primary-literature reviews."
+    "routing": "No callable JEV capability in the established inventory; conservative root integration with justified independent source, evidence and primary-literature reviews.",
+    "closed_at_utc": "2026-10-07T15:17:10+00:00",
+    "probe_freeze_utc": "2026-10-07T14:55:04+00:00",
+    "probe_plan_sha256": "60278a7580dabaaa1fb338a0276819d0c653a9052ed33c51d5793a14edd627da",
+    "model_training_scope": "Three one-step native optimizer contract updates; no learned vocabulary study or new checkpoint inference",
+    "probe_source_commit": "9618ba8aae3b83d95a2813f99dd72c9d2e1d148a",
+    "probe_run_id": 37640756510,
+    "probe_job_id": 112858763837,
+    "probe_archive_commit": "e16d0ab07a5aff93c66c4057a6509cc31b744160",
+    "probe_archive_path": "results/research/13_cloud_runs/37640756510-1-probe",
+    "probe_status": "completed",
+    "probe_runner_released": true,
+    "tests": {
+      "parent_methods": 12,
+      "additional_subtest_calls": 20,
+      "total_call_reports": 32,
+      "failed": 0,
+      "skipped": 0,
+      "junit_time_seconds": 1.131
+    },
+    "native_checks": 8,
+    "independent_npz_audit_checks": 32954,
+    "root_review_checks": 15870,
+    "root_review_issues": 0,
+    "root_rehashed_texts": 25,
+    "report": "docs/research/13_results.md",
+    "report_sha256": "7459bdec8ddc3bc1853b4f28f1d7b2508f0d24dd3d7a595db5526ddd0616272a",
+    "report_bytes": 25243,
+    "peer_review": "results/research/13_validation/final_peer_reviews.json",
+    "claim_status": "Implementation contracts verified after correction; learned new-token semantics and high-competence distractor robustness not established",
+    "external_independent_replication": false
   }
 }

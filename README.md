@@ -45,8 +45,9 @@ output pixel, and the output pixel ends up saying **girl** — the right answer.
 
 ## Key results
 
-All numbers are on **combinations never seen during training** (synthetic role-binding task). Raw data is in
-[`results/`](results) and the full write-up (Spanish) in [`docs/FASE3_CONCLUSIONES.md`](docs/FASE3_CONCLUSIONES.md).
+The historical tables summarize reports on the synthetic role-binding tasks. Raw summaries are in
+[`results/`](results) and the original write-up (Spanish) in [`docs/FASE3_CONCLUSIONES.md`](docs/FASE3_CONCLUSIONES.md).
+The research audits below specify which claims each evaluation can support; transforming a task, such as replacing a noun with an added token, requires checking the resulting split again.
 
 <p align="center">
   <img src="docs/img/scaling_en.png" alt="Scaling curves: NeuroPixel vs transformer" width="100%">
@@ -66,11 +67,13 @@ gap *widens* with size, and so does robustness to damage.
 | Unseen combinations (scaling) | 49 % → **99.7 %** (5 k → 236 k params) | Transformer **54 %** flat (13 k → 811 k) |
 | Self-repair: 50 % of the state erased mid-thought | **99.4 %** with rest-state training; stable from 8 to 64 steps | Transformer 25–33 % |
 | Cost per answer (CPU, same 200 questions) | **56 MFLOP · 5.7 ms · 99.5 %** | Qwen2-494M (3-shot): 158 GFLOP · 279 ms · 94 % |
-| New word from 5 examples (one dictionary row trained) | up to 98.6 % new, 92.6 % old kept | Transformer 50–61 % |
+| Added-token adaptation from 5 examples (historical report) | Selected norm-constrained condition: 98.6 % new, 92.6 % old (97.95 % before) | Plain adaptation on one 44 k Transformer base: 61.22 % new; a different method |
 | Continual learning, 3 topics in a row | growing canvases **93 %** average | single canvas 66 % (forgets) |
 | Recurrent memory within one stream (historical report) | 99.2 % at 0 blank frames; **96.5 % at 8** | GRU 77.0 % at 0; 78.5 % at 8 (slower decline in the reported long-delay curve) |
 | Non-local binding (role and word far apart) | 66 % → 74 % with size + rest-state | Transformer 56 % — **not solved yet** |
 | Imagination (fill a masked word) | 100 % plausible category, diverse, not copied | — |
+
+The added-token row comes from [newword.json](results/phase3/newword.json); its Transformer figure comes from the different plain adaptation procedure in [scale_tf44k.json](results/phase3/scale_tf44k.json). Every target in the historical new-token panel is the inserted token, so a presence shortcut solves that panel. These aggregates do not establish new semantic binding or a matched advantage. See the [vocabulary and distractor audit](docs/research/13_results.md) for corrected allocation/label code, controls, transformed-split checks and the separate saved-output distractor recount.
 
 The memory row quotes the archived [single-run summary](results/phase3/memory.json), which contains no raw predictions, checkpoints, or complete run configuration. It describes activation carried between frames of one `np_stream` call; a new call resets that state. See the [historical memory audit](docs/research/11_historical_memory_audit.md) for source and comparison limits.
 
@@ -78,8 +81,8 @@ The memory row quotes the archived [single-run summary](results/phase3/memory.js
 
 - **Tiny specialists instead of cannons for flies.** About 2 800× less compute than a small LLM on a bounded task,
   with higher accuracy and a fixed-cost, deterministic answer.
-- **Biological-style properties come for free.** Self-repair, arbitrary thinking time, learning a word from a
-  handful of examples, and growing new canvases instead of overwriting old knowledge.
+- **Properties explored in the prototype.** Self-repair, variable update counts, adapting appended token rows,
+  and growing separate canvases. The linked audits distinguish implemented mechanisms from demonstrated task capabilities.
 - **Interpretable by construction.** The scanner is the model's own read-out, applied everywhere, not a post-hoc probe.
 
 <details>
