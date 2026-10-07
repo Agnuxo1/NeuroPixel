@@ -1,0 +1,425 @@
+﻿2026-10-07T11:37:36.3156645Z Current runner version: '2.337.0'
+2026-10-07T11:37:36.3182878Z ##[group]Runner Image Provisioner
+2026-10-07T11:37:36.3183765Z Hosted Compute Agent
+2026-10-07T11:37:36.3184506Z Version: 20261002.596
+2026-10-07T11:37:36.3185256Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-07T11:37:36.3186024Z Build Date: 2026-10-02T22:28:27Z
+2026-10-07T11:37:36.3186791Z Worker ID: {5510eb3e-3074-4c2a-897d-bfc4eb22fb81}
+2026-10-07T11:37:36.3187503Z Region: eastus2
+2026-10-07T11:37:36.3188073Z Cloud: Azure
+2026-10-07T11:37:36.3188704Z ##[endgroup]
+2026-10-07T11:37:36.3190675Z ##[group]Operating System
+2026-10-07T11:37:36.3191445Z Ubuntu
+2026-10-07T11:37:36.3191971Z 24.04.5
+2026-10-07T11:37:36.3192569Z LTS
+2026-10-07T11:37:36.3193146Z ##[endgroup]
+2026-10-07T11:37:36.3193767Z ##[group]Runner Image
+2026-10-07T11:37:36.3194494Z Image: ubuntu-24.04
+2026-10-07T11:37:36.3195061Z Version: 20261004.327.1
+2026-10-07T11:37:36.3196438Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-07T11:37:36.3198007Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-07T11:37:36.3199286Z ##[endgroup]
+2026-10-07T11:37:36.3200448Z ##[group]GITHUB_TOKEN Permissions
+2026-10-07T11:37:36.3202668Z Contents: write
+2026-10-07T11:37:36.3203372Z Metadata: read
+2026-10-07T11:37:36.3204071Z ##[endgroup]
+2026-10-07T11:37:36.3206326Z Secret source: Actions
+2026-10-07T11:37:36.3207270Z Cache mode: write
+2026-10-07T11:37:36.3208116Z Prepare workflow directory
+2026-10-07T11:37:36.3636014Z Prepare all required actions
+2026-10-07T11:37:36.3688208Z Getting action download info
+2026-10-07T11:37:36.6382436Z Download action repository 'actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-10-07T11:37:36.7291225Z Download action repository 'actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-10-07T11:37:36.9081666Z Complete job name: primary-study
+2026-10-07T11:37:36.9759607Z ##[group]Run python -c 'import os,time; f=open(os.environ["GITHUB_ENV"],"a"); f.write("ITEM10_JOB_DEADLINE_UNIX="+str(time.time()+4170)+"\n"); f.close()'
+2026-10-07T11:37:36.9761447Z [36;1mpython -c 'import os,time; f=open(os.environ["GITHUB_ENV"],"a"); f.write("ITEM10_JOB_DEADLINE_UNIX="+str(time.time()+4170)+"\n"); f.close()'[0m
+2026-10-07T11:37:37.0020687Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T11:37:37.0022007Z env:
+2026-10-07T11:37:37.0022579Z   OMP_NUM_THREADS: 2
+2026-10-07T11:37:37.0023197Z   MKL_NUM_THREADS: 2
+2026-10-07T11:37:37.0023816Z   OPENBLAS_NUM_THREADS: 2
+2026-10-07T11:37:37.0024423Z   NUMEXPR_NUM_THREADS: 2
+2026-10-07T11:37:37.0024977Z   VECLIB_MAXIMUM_THREADS: 2
+2026-10-07T11:37:37.0025532Z   BLIS_NUM_THREADS: 2
+2026-10-07T11:37:37.0026048Z   PYTHONHASHSEED: 0
+2026-10-07T11:37:37.0026573Z   PYTHONUTF8: 1
+2026-10-07T11:37:37.0027075Z   PYTHONUNBUFFERED: 1
+2026-10-07T11:37:37.0027619Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-10-07T11:37:37.0028296Z   CUDA_VISIBLE_DEVICES: 
+2026-10-07T11:37:37.0028847Z   GIT_TERMINAL_PROMPT: 0
+2026-10-07T11:37:37.0029581Z ##[endgroup]
+2026-10-07T11:37:37.0597280Z ##[group]Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+2026-10-07T11:37:37.0598081Z with:
+2026-10-07T11:37:37.0598494Z   fetch-depth: 0
+2026-10-07T11:37:37.0599311Z   repository: Agnuxo1/NeuroPixel
+2026-10-07T11:37:37.0603180Z   token: ***
+2026-10-07T11:37:37.0603632Z   ssh-strict: true
+2026-10-07T11:37:37.0604084Z   ssh-user: git
+2026-10-07T11:37:37.0604526Z   persist-credentials: true
+2026-10-07T11:37:37.0605021Z   clean: true
+2026-10-07T11:37:37.0605468Z   sparse-checkout-cone-mode: true
+2026-10-07T11:37:37.0606000Z   fetch-tags: false
+2026-10-07T11:37:37.0606450Z   show-progress: true
+2026-10-07T11:37:37.0606899Z   lfs: false
+2026-10-07T11:37:37.0607305Z   submodules: false
+2026-10-07T11:37:37.0607752Z   set-safe-directory: true
+2026-10-07T11:37:37.0608397Z   allow-unsafe-pr-checkout: false
+2026-10-07T11:37:37.0609409Z env:
+2026-10-07T11:37:37.0609815Z   OMP_NUM_THREADS: 2
+2026-10-07T11:37:37.0610264Z   MKL_NUM_THREADS: 2
+2026-10-07T11:37:37.0610763Z   OPENBLAS_NUM_THREADS: 2
+2026-10-07T11:37:37.0611241Z   NUMEXPR_NUM_THREADS: 2
+2026-10-07T11:37:37.0611716Z   VECLIB_MAXIMUM_THREADS: 2
+2026-10-07T11:37:37.0612191Z   BLIS_NUM_THREADS: 2
+2026-10-07T11:37:37.0612636Z   PYTHONHASHSEED: 0
+2026-10-07T11:37:37.0613068Z   PYTHONUTF8: 1
+2026-10-07T11:37:37.0613502Z   PYTHONUNBUFFERED: 1
+2026-10-07T11:37:37.0613977Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-10-07T11:37:37.0614513Z   CUDA_VISIBLE_DEVICES: 
+2026-10-07T11:37:37.0614993Z   GIT_TERMINAL_PROMPT: 0
+2026-10-07T11:37:37.0615499Z   ITEM10_JOB_DEADLINE_UNIX: 1791377227.0321283
+2026-10-07T11:37:37.0616066Z ##[endgroup]
+2026-10-07T11:37:37.1606654Z Syncing repository: Agnuxo1/NeuroPixel
+2026-10-07T11:37:37.1609643Z ##[group]Getting Git version info
+2026-10-07T11:37:37.1610872Z Working directory is '/home/runner/work/NeuroPixel/NeuroPixel'
+2026-10-07T11:37:37.1612638Z [command]/usr/bin/git version
+2026-10-07T11:37:37.1654843Z git version 2.55.0
+2026-10-07T11:37:37.1682536Z ##[endgroup]
+2026-10-07T11:37:37.1700748Z Temporarily overriding HOME='/home/runner/work/_temp/11ef12a5-2f37-43ea-935c-9533bbfa1a11' before making global git config changes
+2026-10-07T11:37:37.1704191Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T11:37:37.1709196Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/NeuroPixel/NeuroPixel
+2026-10-07T11:37:37.1773255Z Deleting the contents of '/home/runner/work/NeuroPixel/NeuroPixel'
+2026-10-07T11:37:37.1777613Z ##[group]Determining repository object format
+2026-10-07T11:37:37.1780020Z ##[endgroup]
+2026-10-07T11:37:37.1781174Z ##[group]Initializing the repository
+2026-10-07T11:37:37.1786285Z [command]/usr/bin/git init /home/runner/work/NeuroPixel/NeuroPixel
+2026-10-07T11:37:37.1897890Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-07T11:37:37.1901656Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-07T11:37:37.1903291Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-07T11:37:37.1904553Z hint: call:
+2026-10-07T11:37:37.1905182Z hint:
+2026-10-07T11:37:37.1906014Z hint: 	git config --global init.defaultBranch <name>
+2026-10-07T11:37:37.1907066Z hint:
+2026-10-07T11:37:37.1908126Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-07T11:37:37.1909891Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-07T11:37:37.1911091Z hint:
+2026-10-07T11:37:37.1911744Z hint: 	git branch -m <name>
+2026-10-07T11:37:37.1912584Z hint:
+2026-10-07T11:37:37.1913687Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-07T11:37:37.1915449Z Initialized empty Git repository in /home/runner/work/NeuroPixel/NeuroPixel/.git/
+2026-10-07T11:37:37.1917950Z [command]/usr/bin/git remote add origin https://github.com/Agnuxo1/NeuroPixel
+2026-10-07T11:37:37.1971035Z ##[endgroup]
+2026-10-07T11:37:37.1972065Z ##[group]Disabling automatic garbage collection
+2026-10-07T11:37:37.1975769Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-07T11:37:37.2012708Z ##[endgroup]
+2026-10-07T11:37:37.2014275Z ##[group]Setting up auth
+2026-10-07T11:37:37.2015129Z Removing SSH command configuration
+2026-10-07T11:37:37.2021611Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T11:37:37.2056742Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T11:37:37.2436325Z Removing HTTP extra header
+2026-10-07T11:37:37.2445155Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T11:37:37.2515747Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T11:37:37.2756941Z Removing includeIf entries pointing to credentials config files
+2026-10-07T11:37:37.2764526Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T11:37:37.2804003Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T11:37:37.3062333Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-07T11:37:37.3112411Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git.path /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:37:37.3157044Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:37:37.3210117Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:37:37.3260090Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:37:37.3310635Z ##[endgroup]
+2026-10-07T11:37:37.3311481Z ##[group]Fetching the repository
+2026-10-07T11:37:37.3325094Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-07T11:37:39.0950184Z From https://github.com/Agnuxo1/NeuroPixel
+2026-10-07T11:37:39.0951291Z  * [new branch]      main        -> origin/main
+2026-10-07T11:37:39.0953131Z  * [new branch]      research/scientific-validation-2026-10-07-cloud -> origin/research/scientific-validation-2026-10-07-cloud
+2026-10-07T11:37:39.0955468Z  * [new branch]      research/scientific-validation-2026-10-07-cloud-results -> origin/research/scientific-validation-2026-10-07-cloud-results
+2026-10-07T11:37:39.0957476Z  * [new branch]      research/scientific-validation-2026-10-07-continuation -> origin/research/scientific-validation-2026-10-07-continuation
+2026-10-07T11:37:39.0958824Z  * [new tag]         digits-v1   -> digits-v1
+2026-10-07T11:37:39.0960146Z  * [new tag]         digits-v2   -> digits-v2
+2026-10-07T11:37:39.0961347Z  * [new tag]         filament-v2 -> filament-v2
+2026-10-07T11:37:39.0962555Z  * [new tag]         soil-v1     -> soil-v1
+2026-10-07T11:37:39.0965337Z [command]/usr/bin/git branch --list --remote origin/research/scientific-validation-2026-10-07-cloud
+2026-10-07T11:37:39.0990419Z   origin/research/scientific-validation-2026-10-07-cloud
+2026-10-07T11:37:39.1001096Z [command]/usr/bin/git rev-parse refs/remotes/origin/research/scientific-validation-2026-10-07-cloud
+2026-10-07T11:37:39.1026357Z f619ac2150960ff658a797e3ac8594f49c8d96c1
+2026-10-07T11:37:39.1031785Z ##[endgroup]
+2026-10-07T11:37:39.1033222Z ##[group]Determining the checkout info
+2026-10-07T11:37:39.1034799Z ##[endgroup]
+2026-10-07T11:37:39.1036139Z [command]/usr/bin/git sparse-checkout disable
+2026-10-07T11:37:39.1088658Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-07T11:37:39.1120310Z ##[group]Checking out the ref
+2026-10-07T11:37:39.1124415Z [command]/usr/bin/git checkout --progress --force -B research/scientific-validation-2026-10-07-cloud refs/remotes/origin/research/scientific-validation-2026-10-07-cloud
+2026-10-07T11:37:39.1910963Z Switched to a new branch 'research/scientific-validation-2026-10-07-cloud'
+2026-10-07T11:37:39.1915844Z branch 'research/scientific-validation-2026-10-07-cloud' set up to track 'origin/research/scientific-validation-2026-10-07-cloud'.
+2026-10-07T11:37:39.1927164Z ##[endgroup]
+2026-10-07T11:37:39.1979775Z [command]/usr/bin/git log -1 --format=%H
+2026-10-07T11:37:39.2011574Z f619ac2150960ff658a797e3ac8594f49c8d96c1
+2026-10-07T11:37:39.2365448Z ##[group]Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+2026-10-07T11:37:39.2366468Z with:
+2026-10-07T11:37:39.2366912Z   python-version: 3.12.14
+2026-10-07T11:37:39.2367457Z   check-latest: false
+2026-10-07T11:37:39.2372784Z   token: ***
+2026-10-07T11:37:39.2373310Z   update-environment: true
+2026-10-07T11:37:39.2373897Z   allow-prereleases: false
+2026-10-07T11:37:39.2374448Z   freethreaded: false
+2026-10-07T11:37:39.2374927Z env:
+2026-10-07T11:37:39.2375329Z   OMP_NUM_THREADS: 2
+2026-10-07T11:37:39.2375825Z   MKL_NUM_THREADS: 2
+2026-10-07T11:37:39.2376318Z   OPENBLAS_NUM_THREADS: 2
+2026-10-07T11:37:39.2376869Z   NUMEXPR_NUM_THREADS: 2
+2026-10-07T11:37:39.2377393Z   VECLIB_MAXIMUM_THREADS: 2
+2026-10-07T11:37:39.2377940Z   BLIS_NUM_THREADS: 2
+2026-10-07T11:37:39.2378437Z   PYTHONHASHSEED: 0
+2026-10-07T11:37:39.2379145Z   PYTHONUTF8: 1
+2026-10-07T11:37:39.2379739Z   PYTHONUNBUFFERED: 1
+2026-10-07T11:37:39.2380280Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-10-07T11:37:39.2380952Z   CUDA_VISIBLE_DEVICES: 
+2026-10-07T11:37:39.2381501Z   GIT_TERMINAL_PROMPT: 0
+2026-10-07T11:37:39.2382083Z   ITEM10_JOB_DEADLINE_UNIX: 1791377227.0321283
+2026-10-07T11:37:39.2382761Z ##[endgroup]
+2026-10-07T11:37:39.3703031Z ##[group]Installed versions
+2026-10-07T11:37:39.3724574Z Version 3.12.14 was not found in the local cache
+2026-10-07T11:37:39.9991102Z Version 3.12.14 is available for downloading
+2026-10-07T11:37:39.9993768Z Download from "https://github.com/actions/python-versions/releases/download/3.12.14-31661455385/python-3.12.14-linux-24.04-x64.tar.gz"
+2026-10-07T11:37:40.5997197Z Extract downloaded archive
+2026-10-07T11:37:40.6112961Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/dbb6aebc-a95a-44c2-9faa-081e09a378fb -f /home/runner/work/_temp/91f90130-28f0-4498-b5a4-8c1915c08c4d
+2026-10-07T11:37:42.5299934Z Execute installation script
+2026-10-07T11:37:42.5390260Z Check if Python hostedtoolcache folder exist...
+2026-10-07T11:37:42.5391348Z Create Python 3.12.14 folder
+2026-10-07T11:37:42.5404292Z Copy Python binaries to hostedtoolcache folder
+2026-10-07T11:37:43.0142396Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-07T11:37:43.0185375Z Upgrading pip...
+2026-10-07T11:37:44.7014421Z Collecting pip
+2026-10-07T11:37:44.7419800Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-10-07T11:37:44.7532226Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-10-07T11:37:44.8497071Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 21.9 MB/s eta 0:00:00
+2026-10-07T11:37:44.8513946Z 
+2026-10-07T11:37:44.8689438Z Installing collected packages: pip
+2026-10-07T11:37:44.8690968Z Attempting uninstall: pip
+2026-10-07T11:37:44.8714144Z Found existing installation: pip 25.0.1
+2026-10-07T11:37:44.9067850Z Uninstalling pip-25.0.1:
+2026-10-07T11:37:44.9123692Z Successfully uninstalled pip-25.0.1
+2026-10-07T11:37:45.8106408Z Successfully installed pip-26.2.1
+2026-10-07T11:37:45.8586892Z Create complete file
+2026-10-07T11:37:45.8629776Z Successfully set up CPython (3.12.14)
+2026-10-07T11:37:45.8631292Z ##[endgroup]
+2026-10-07T11:37:45.8775397Z ##[group]Run python -m pip install --disable-pip-version-check --no-input --no-cache-dir --only-binary=:all: numpy==2.2.6 scipy==1.15.1 Pillow==12.3.0 psutil==7.2.2 pytest==9.1.1
+2026-10-07T11:37:45.8776645Z [36;1mpython -m pip install --disable-pip-version-check --no-input --no-cache-dir --only-binary=:all: numpy==2.2.6 scipy==1.15.1 Pillow==12.3.0 psutil==7.2.2 pytest==9.1.1[0m
+2026-10-07T11:37:45.8777829Z [36;1mpython -m pip install --disable-pip-version-check --no-input --no-cache-dir --only-binary=:all: --index-url https://download.pytorch.org/whl/cpu torch==2.6.0+cpu[0m
+2026-10-07T11:37:45.8846281Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T11:37:45.8846698Z env:
+2026-10-07T11:37:45.8847142Z   OMP_NUM_THREADS: 2
+2026-10-07T11:37:45.8847367Z   MKL_NUM_THREADS: 2
+2026-10-07T11:37:45.8847606Z   OPENBLAS_NUM_THREADS: 2
+2026-10-07T11:37:45.8847846Z   NUMEXPR_NUM_THREADS: 2
+2026-10-07T11:37:45.8848090Z   VECLIB_MAXIMUM_THREADS: 2
+2026-10-07T11:37:45.8848356Z   BLIS_NUM_THREADS: 2
+2026-10-07T11:37:45.8848584Z   PYTHONHASHSEED: 0
+2026-10-07T11:37:45.8848797Z   PYTHONUTF8: 1
+2026-10-07T11:37:45.8849309Z   PYTHONUNBUFFERED: 1
+2026-10-07T11:37:45.8849548Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-10-07T11:37:45.8849821Z   CUDA_VISIBLE_DEVICES: 
+2026-10-07T11:37:45.8850059Z   GIT_TERMINAL_PROMPT: 0
+2026-10-07T11:37:45.8850321Z   ITEM10_JOB_DEADLINE_UNIX: 1791377227.0321283
+2026-10-07T11:37:45.8850685Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:37:45.8851132Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-07T11:37:45.8851579Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:37:45.8851968Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:37:45.8852366Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:37:45.8852758Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-07T11:37:45.8853085Z ##[endgroup]
+2026-10-07T11:37:46.4893892Z Collecting numpy==2.2.6
+2026-10-07T11:37:46.5471604Z   Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-10-07T11:37:46.6890480Z Collecting scipy==1.15.1
+2026-10-07T11:37:46.6976538Z   Downloading scipy-1.15.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+2026-10-07T11:37:46.8695170Z Collecting Pillow==12.3.0
+2026-10-07T11:37:46.8768402Z   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-10-07T11:37:46.9404123Z Collecting psutil==7.2.2
+2026-10-07T11:37:46.9477995Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-10-07T11:37:46.9733104Z Collecting pytest==9.1.1
+2026-10-07T11:37:46.9804056Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-07T11:37:46.9938851Z Collecting iniconfig>=1.0.1 (from pytest==9.1.1)
+2026-10-07T11:37:47.0007856Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-07T11:37:47.0141624Z Collecting packaging>=22 (from pytest==9.1.1)
+2026-10-07T11:37:47.0213007Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-07T11:37:47.0320003Z Collecting pluggy<2,>=1.5 (from pytest==9.1.1)
+2026-10-07T11:37:47.0389421Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-07T11:37:47.0554154Z Collecting pygments>=2.7.2 (from pytest==9.1.1)
+2026-10-07T11:37:47.0627934Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-07T11:37:47.0744249Z Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+2026-10-07T11:37:47.3748203Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 58.6 MB/s  0:00:00
+2026-10-07T11:37:47.3935525Z Downloading scipy-1.15.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.2 MB)
+2026-10-07T11:37:47.5630466Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.2/40.2 MB 240.3 MB/s  0:00:00
+2026-10-07T11:37:47.5704270Z Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+2026-10-07T11:37:47.5877728Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 449.2 MB/s  0:00:00
+2026-10-07T11:37:47.5954380Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-10-07T11:37:47.6029725Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-07T11:37:47.6106298Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-07T11:37:47.6179435Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-07T11:37:47.6249326Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-07T11:37:47.6334777Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-07T11:37:47.6374089Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 786.7 MB/s  0:00:00
+2026-10-07T11:37:47.8015129Z Installing collected packages: pygments, psutil, pluggy, Pillow, packaging, numpy, iniconfig, scipy, pytest
+2026-10-07T11:37:55.0927444Z 
+2026-10-07T11:37:55.0944499Z Successfully installed Pillow-12.3.0 iniconfig-2.3.1 numpy-2.2.6 packaging-26.3 pluggy-1.6.0 psutil-7.2.2 pygments-2.21.0 pytest-9.1.1 scipy-1.15.1
+2026-10-07T11:37:55.4649687Z Looking in indexes: https://download.pytorch.org/whl/cpu
+2026-10-07T11:37:55.7568022Z Collecting torch==2.6.0+cpu
+2026-10-07T11:37:55.8244094Z   Downloading torch-2.6.0%2Bcpu-cp312-cp312-linux_x86_64.whl.metadata (26 kB)
+2026-10-07T11:37:55.8523451Z Collecting filelock (from torch==2.6.0+cpu)
+2026-10-07T11:37:55.9093984Z   Downloading filelock-3.32.3-py3-none-any.whl.metadata (2.0 kB)
+2026-10-07T11:37:55.9271156Z Collecting typing-extensions>=4.10.0 (from torch==2.6.0+cpu)
+2026-10-07T11:37:55.9339964Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-07T11:37:55.9562997Z Collecting networkx (from torch==2.6.0+cpu)
+2026-10-07T11:37:55.9632707Z   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+2026-10-07T11:37:55.9775872Z Collecting jinja2 (from torch==2.6.0+cpu)
+2026-10-07T11:37:55.9854867Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-10-07T11:37:56.0072726Z Collecting fsspec (from torch==2.6.0+cpu)
+2026-10-07T11:37:56.0143123Z   Downloading fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+2026-10-07T11:37:56.0411399Z Collecting setuptools (from torch==2.6.0+cpu)
+2026-10-07T11:37:56.0492057Z   Downloading setuptools-78.1.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-07T11:37:56.0715001Z Collecting sympy==1.13.1 (from torch==2.6.0+cpu)
+2026-10-07T11:37:56.0784233Z   Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+2026-10-07T11:37:56.1050080Z Collecting mpmath<1.4,>=1.1.0 (from sympy==1.13.1->torch==2.6.0+cpu)
+2026-10-07T11:37:56.1119181Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-10-07T11:37:56.1345234Z Collecting MarkupSafe>=2.0 (from jinja2->torch==2.6.0+cpu)
+2026-10-07T11:37:56.1424251Z   Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-10-07T11:37:56.1565720Z Downloading torch-2.6.0%2Bcpu-cp312-cp312-linux_x86_64.whl (178.6 MB)
+2026-10-07T11:37:56.5213395Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.6/178.6 MB 508.4 MB/s  0:00:00
+2026-10-07T11:37:56.5281985Z Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+2026-10-07T11:37:56.5866358Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 146.6 MB/s  0:00:00
+2026-10-07T11:37:56.5941707Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-10-07T11:37:56.5966601Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 535.8 MB/s  0:00:00
+2026-10-07T11:37:56.6044459Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-07T11:37:56.6114950Z Downloading filelock-3.32.3-py3-none-any.whl (98 kB)
+2026-10-07T11:37:56.6184604Z Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+2026-10-07T11:37:56.6282596Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-10-07T11:37:56.6367018Z Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-10-07T11:37:56.6441662Z Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-10-07T11:37:56.6495873Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 517.3 MB/s  0:00:00
+2026-10-07T11:37:56.6584017Z Downloading setuptools-78.1.0-py3-none-any.whl (1.3 MB)
+2026-10-07T11:37:56.6773673Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 65.0 MB/s  0:00:00
+2026-10-07T11:37:57.0274001Z Installing collected packages: mpmath, typing-extensions, sympy, setuptools, networkx, MarkupSafe, fsspec, filelock, jinja2, torch
+2026-10-07T11:38:14.9401301Z 
+2026-10-07T11:38:14.9424335Z Successfully installed MarkupSafe-3.0.3 filelock-3.32.3 fsspec-2026.7.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.6.1 setuptools-78.1.0 sympy-1.13.1 torch-2.6.0+cpu typing-extensions-4.16.0
+2026-10-07T11:38:15.0175296Z ##[group]Run python scripts/research_item10_worker.py --phase study
+2026-10-07T11:38:15.0176127Z [36;1mpython scripts/research_item10_worker.py --phase study[0m
+2026-10-07T11:38:15.0254431Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T11:38:15.0254774Z env:
+2026-10-07T11:38:15.0254972Z   OMP_NUM_THREADS: 2
+2026-10-07T11:38:15.0255295Z   MKL_NUM_THREADS: 2
+2026-10-07T11:38:15.0255589Z   OPENBLAS_NUM_THREADS: 2
+2026-10-07T11:38:15.0255823Z   NUMEXPR_NUM_THREADS: 2
+2026-10-07T11:38:15.0256050Z   VECLIB_MAXIMUM_THREADS: 2
+2026-10-07T11:38:15.0256286Z   BLIS_NUM_THREADS: 2
+2026-10-07T11:38:15.0256504Z   PYTHONHASHSEED: 0
+2026-10-07T11:38:15.0256708Z   PYTHONUTF8: 1
+2026-10-07T11:38:15.0256904Z   PYTHONUNBUFFERED: 1
+2026-10-07T11:38:15.0257129Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-10-07T11:38:15.0257389Z   CUDA_VISIBLE_DEVICES: 
+2026-10-07T11:38:15.0257620Z   GIT_TERMINAL_PROMPT: 0
+2026-10-07T11:38:15.0257900Z   ITEM10_JOB_DEADLINE_UNIX: 1791377227.0321283
+2026-10-07T11:38:15.0258252Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:38:15.0258686Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-07T11:38:15.0259385Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:38:15.0259769Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:38:15.0260153Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:38:15.0260532Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-07T11:38:15.0260858Z ##[endgroup]
+2026-10-07T11:38:20.1144391Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:38:20.114149+00:00", "archive_commit": "af4a387719d14092236f57cd55bb1892f740e7e5", "snapshot_kind": "interim_partial", "files": 4}
+2026-10-07T11:38:20.2035119Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:38:20.202437+00:00", "phase": "contract_tests", "available_ram_gib": 14.49545669555664}
+2026-10-07T11:38:26.2774736Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:38:26.277200+00:00", "archive_commit": "67a7fcbfff4d7addcf36206aab8a69a58dd8bdbc", "snapshot_kind": "interim_partial", "files": 11}
+2026-10-07T11:38:26.3657762Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:38:26.364701+00:00", "phase": "train", "available_ram_gib": 14.558704376220703}
+2026-10-07T11:39:26.3887134Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:39:26.384911+00:00", "phase": "train", "available_ram_gib": 14.393913269042969}
+2026-10-07T11:40:26.4121944Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:40:26.408961+00:00", "phase": "train", "available_ram_gib": 14.419586181640625}
+2026-10-07T11:41:26.4381809Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:41:26.434782+00:00", "phase": "train", "available_ram_gib": 14.415641784667969}
+2026-10-07T11:42:26.4608560Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:42:26.457472+00:00", "phase": "train", "available_ram_gib": 14.426200866699219}
+2026-10-07T11:43:26.4886793Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:43:26.482004+00:00", "phase": "train", "available_ram_gib": 14.408775329589844}
+2026-10-07T11:43:29.2274279Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:43:29.227098+00:00", "archive_commit": "4163f371ec088a6720771cd5fdd96c173904b5e5", "snapshot_kind": "interim_partial", "files": 41}
+2026-10-07T11:44:26.5158153Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:44:26.511077+00:00", "phase": "train", "available_ram_gib": 14.415107727050781}
+2026-10-07T11:45:26.5418007Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:45:26.536723+00:00", "phase": "train", "available_ram_gib": 14.411209106445312}
+2026-10-07T11:46:26.5675527Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:46:26.562081+00:00", "phase": "train", "available_ram_gib": 14.409889221191406}
+2026-10-07T11:47:26.5959346Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:47:26.589255+00:00", "phase": "train", "available_ram_gib": 14.41086196899414}
+2026-10-07T11:48:26.6230547Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:48:26.616467+00:00", "phase": "train", "available_ram_gib": 14.424293518066406}
+2026-10-07T11:48:28.9956567Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:48:28.995366+00:00", "archive_commit": "8205b5118e9c97fb9bf3cfd809c1771d4550e052", "snapshot_kind": "interim_partial", "files": 57}
+2026-10-07T11:49:26.6510459Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:49:26.643744+00:00", "phase": "train", "available_ram_gib": 14.406753540039062}
+2026-10-07T11:50:26.6794472Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:50:26.672058+00:00", "phase": "train", "available_ram_gib": 14.410057067871094}
+2026-10-07T11:51:26.7070613Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:51:26.699299+00:00", "phase": "train", "available_ram_gib": 14.41387939453125}
+2026-10-07T11:52:26.7364505Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:52:26.728234+00:00", "phase": "train", "available_ram_gib": 14.409919738769531}
+2026-10-07T11:53:26.7652499Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:53:26.756438+00:00", "phase": "train", "available_ram_gib": 14.414493560791016}
+2026-10-07T11:53:29.2314596Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:53:29.231147+00:00", "archive_commit": "37866cdeabf9c16c7c39af2c978998fc987cc90a", "snapshot_kind": "interim_partial", "files": 73}
+2026-10-07T11:54:26.7936409Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:54:26.784644+00:00", "phase": "train", "available_ram_gib": 14.398242950439453}
+2026-10-07T11:55:26.8248064Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:55:26.814603+00:00", "phase": "train", "available_ram_gib": 14.398540496826172}
+2026-10-07T11:56:26.8599393Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:56:26.848921+00:00", "phase": "train", "available_ram_gib": 14.406036376953125}
+2026-10-07T11:57:26.8944264Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:57:26.882931+00:00", "phase": "train", "available_ram_gib": 14.404563903808594}
+2026-10-07T11:58:26.9289332Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:58:26.917183+00:00", "phase": "train", "available_ram_gib": 14.397930145263672}
+2026-10-07T11:58:29.7309868Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:58:29.730660+00:00", "archive_commit": "7dbbc9224cd390d8a85d682d513e1244419db477", "snapshot_kind": "interim_partial", "files": 89}
+2026-10-07T11:59:26.9618384Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:59:26.951348+00:00", "phase": "train", "available_ram_gib": 14.39664077758789}
+2026-10-07T11:59:30.2125604Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:59:30.212256+00:00", "archive_commit": "e8f5cb4913574fd0e27ca52f986da9153bd6996d", "snapshot_kind": "interim_partial", "files": 104}
+2026-10-07T11:59:30.2422203Z {"event": "resource_heartbeat", "at_utc": "2026-10-07T11:59:30.241167+00:00", "phase": "final", "available_ram_gib": 14.618793487548828}
+2026-10-07T11:59:39.3953420Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:59:39.395031+00:00", "archive_commit": "49fa50c4530348e109be7d6d1e28e56fe659d856", "snapshot_kind": "interim_partial", "files": 141}
+2026-10-07T11:59:41.8144078Z {"event": "evidence_archived", "at_utc": "2026-10-07T11:59:41.814116+00:00", "archive_commit": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b", "snapshot_kind": "final", "files": 141}
+2026-10-07T11:59:41.8146232Z {"event": "item10_worker_complete", "status": "completed", "run_key": "37615277149-1-study", "stage_status": {"contract_tests": "completed", "train": "completed", "final": "completed"}}
+2026-10-07T11:59:41.8353948Z ##[group]Run /usr/bin/python3 -c 'import json,os,datetime; print(json.dumps({"event":"item10_study_bootstrap_outcome","at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"run_id":os.environ["GITHUB_RUN_ID"],"attempt":os.environ["GITHUB_RUN_ATTEMPT"],"outcomes":{k:os.environ[k] for k in ("CHECKOUT_OUTCOME","SETUP_OUTCOME","INSTALL_OUTCOME","WORKER_OUTCOME")},"scope":"Pre-worker failures are preserved by complete Actions logs and provider status; no dataset or scientific execution is claimed when the worker did not start."}))'
+2026-10-07T11:59:41.8357706Z [36;1m/usr/bin/python3 -c 'import json,os,datetime; print(json.dumps({"event":"item10_study_bootstrap_outcome","at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"run_id":os.environ["GITHUB_RUN_ID"],"attempt":os.environ["GITHUB_RUN_ATTEMPT"],"outcomes":{k:os.environ[k] for k in ("CHECKOUT_OUTCOME","SETUP_OUTCOME","INSTALL_OUTCOME","WORKER_OUTCOME")},"scope":"Pre-worker failures are preserved by complete Actions logs and provider status; no dataset or scientific execution is claimed when the worker did not start."}))'[0m
+2026-10-07T11:59:41.8422408Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T11:59:41.8422746Z env:
+2026-10-07T11:59:41.8422936Z   OMP_NUM_THREADS: 2
+2026-10-07T11:59:41.8423149Z   MKL_NUM_THREADS: 2
+2026-10-07T11:59:41.8423365Z   OPENBLAS_NUM_THREADS: 2
+2026-10-07T11:59:41.8423586Z   NUMEXPR_NUM_THREADS: 2
+2026-10-07T11:59:41.8423806Z   VECLIB_MAXIMUM_THREADS: 2
+2026-10-07T11:59:41.8424029Z   BLIS_NUM_THREADS: 2
+2026-10-07T11:59:41.8424237Z   PYTHONHASHSEED: 0
+2026-10-07T11:59:41.8424437Z   PYTHONUTF8: 1
+2026-10-07T11:59:41.8424635Z   PYTHONUNBUFFERED: 1
+2026-10-07T11:59:41.8424856Z   PYTEST_DISABLE_PLUGIN_AUTOLOAD: 1
+2026-10-07T11:59:41.8425112Z   CUDA_VISIBLE_DEVICES: 
+2026-10-07T11:59:41.8425335Z   GIT_TERMINAL_PROMPT: 0
+2026-10-07T11:59:41.8425578Z   ITEM10_JOB_DEADLINE_UNIX: 1791377227.0321283
+2026-10-07T11:59:41.8425923Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:59:41.8426343Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-07T11:59:41.8426761Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:59:41.8427141Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:59:41.8427521Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-07T11:59:41.8427906Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-07T11:59:41.8428239Z   CHECKOUT_OUTCOME: success
+2026-10-07T11:59:41.8428462Z   SETUP_OUTCOME: success
+2026-10-07T11:59:41.8428680Z   INSTALL_OUTCOME: success
+2026-10-07T11:59:41.8429050Z   WORKER_OUTCOME: success
+2026-10-07T11:59:41.8429281Z ##[endgroup]
+2026-10-07T11:59:41.8711920Z {"event": "item10_study_bootstrap_outcome", "at_utc": "2026-10-07T11:59:41.870731+00:00", "run_id": "37615277149", "attempt": "1", "outcomes": {"CHECKOUT_OUTCOME": "success", "SETUP_OUTCOME": "success", "INSTALL_OUTCOME": "success", "WORKER_OUTCOME": "success"}, "scope": "Pre-worker failures are preserved by complete Actions logs and provider status; no dataset or scientific execution is claimed when the worker did not start."}
+2026-10-07T11:59:41.8854642Z Post job cleanup.
+2026-10-07T11:59:42.0377073Z Post job cleanup.
+2026-10-07T11:59:42.1415415Z [command]/usr/bin/git version
+2026-10-07T11:59:42.1477421Z git version 2.55.0
+2026-10-07T11:59:42.1532265Z Temporarily overriding HOME='/home/runner/work/_temp/adbfa25a-4488-4c52-a91f-5b5fd3d1f420' before making global git config changes
+2026-10-07T11:59:42.1546313Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T11:59:42.1548246Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/NeuroPixel/NeuroPixel
+2026-10-07T11:59:42.1578844Z Removing SSH command configuration
+2026-10-07T11:59:42.1587156Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T11:59:42.1729450Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T11:59:42.1919950Z Removing HTTP extra header
+2026-10-07T11:59:42.1926601Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T11:59:42.1967402Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T11:59:42.2285226Z Removing includeIf entries pointing to credentials config files
+2026-10-07T11:59:42.2297073Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T11:59:42.2331637Z includeif.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git.path
+2026-10-07T11:59:42.2332467Z includeif.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git/worktrees/*.path
+2026-10-07T11:59:42.2333068Z includeif.gitdir:/github/workspace/.git.path
+2026-10-07T11:59:42.2333563Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-07T11:59:42.2342270Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git.path
+2026-10-07T11:59:42.2371139Z /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2388114Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git.path /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2433871Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git/worktrees/*.path
+2026-10-07T11:59:42.2464893Z /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2477810Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/NeuroPixel/NeuroPixel/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2526996Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-07T11:59:42.2557320Z /github/runner_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2567887Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2614008Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-07T11:59:42.2642384Z /github/runner_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2654725Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config
+2026-10-07T11:59:42.2705030Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T11:59:42.2936332Z Removing credentials config '/home/runner/work/_temp/git-credentials-8bcc4157-bbaa-41a8-beab-585a389d7b54.config'
+2026-10-07T11:59:42.3096524Z Cleaning up orphan processes

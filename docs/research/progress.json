@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T11:36:23+00:00",
+  "recorded_at": "2026-10-07T12:02:19+00:00",
   "active_item": 10,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -500,7 +500,7 @@
     "closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e"
   },
   "item10": {
-    "stage": "Preflight independently verified; ten-run primary study frozen",
+    "stage": "All ten main runs and one final evaluation completed; independent study audit frozen",
     "opened_after_item9_closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e",
     "scope": "Investigate generalization beyond the project's task generator, distinguish externally authored benchmarks from same-generator perturbations, establish input/output and label validity, and execute feasible bounded checks under a prospectively fixed protocol. Retain the weak item9 competence result and all external-validation limits.",
     "scientific_scoring_started": true,
@@ -538,7 +538,7 @@
       8
     ],
     "vocabulary": 18,
-    "test_payload_parsed": false,
+    "test_payload_parsed": true,
     "preflight_freeze_utc": "2026-10-07T11:12:59+00:00",
     "preflight_plan_sha256": "f01846c1c6685328d49a5cdcb6d5c399222f99b8f160e37ccff62ee5e0418993",
     "recipe_sha256": "8492892f58a4065a92df99dbbbf30f0bd7340111c853cf5533a7102109fe8d19",
@@ -598,6 +598,25 @@
     },
     "main_worker_seconds": 3600,
     "main_workflow_minutes": 70,
-    "main_scientific_scoring_started": false
+    "main_scientific_scoring_started": false,
+    "main_source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+    "main_run_id": 37615277149,
+    "main_job_id": 112771993909,
+    "main_final_archive_commit": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b",
+    "main_gate_archive_commit": "e8f5cb4913574fd0e27ca52f986da9153bd6996d",
+    "main_runner_released": true,
+    "main_status": "completed",
+    "main_final_scoring_completed": true,
+    "main_final_rows": 1000,
+    "main_novel_subset_rows": {
+      "all_official": 1000,
+      "novel_vs_optimization_train": 886,
+      "strict_novel_vs_full_exposure": 866
+    },
+    "main_worker_seconds_observed": 1284.266404426,
+    "main_independent_audit_status": "frozen; execution pending",
+    "main_audit_freeze_utc": "2026-10-07T12:02:19+00:00",
+    "main_audit_plan_sha256": "670c1999a60a4a0d213ca430a633613d43b10f4aa36db7192760ba578e5244bc",
+    "main_scientific_conclusions": "pending independent audit"
   }
 }

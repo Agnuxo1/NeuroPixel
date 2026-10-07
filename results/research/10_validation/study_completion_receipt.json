@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "stage": "main_execution_completion_before_independent_audit",
+  "recorded_at_utc": "2026-10-07T12:02:19+00:00",
+  "status": "completed execution; independent final array/archive audit pending",
+  "source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+  "plan_sha256": "571dd747cb9649bc435ffb006afc6558132b82e0d1c40e7b251827c51821b6f0",
+  "recipe_sha256": "8492892f58a4065a92df99dbbbf30f0bd7340111c853cf5533a7102109fe8d19",
+  "run_id": 37615277149,
+  "job_id": 112771993909,
+  "provider_status": "completed",
+  "provider_conclusion": "success",
+  "provider_completed_updated_at_utc": "2026-10-07T11:59:45Z",
+  "archive_commit": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b",
+  "archive_path": "results/research/10_cloud_runs/37615277149-1-study",
+  "files_excluding_manifest": 141,
+  "bytes_excluding_manifest": 30293136,
+  "archive_manifest_sha256": "b08e21840f2e47204bb7ff6804c5f2ff91c951fd42a908fcc10ac84db93a99fe",
+  "source_zip": {
+    "bytes": 8754733,
+    "sha256": "0adfdfc43403da4c976bb83027a71e37972c6f975f646782ff8391af4e0c5e5d"
+  },
+  "actual_pre_final_training_archive_commit": "e8f5cb4913574fd0e27ca52f986da9153bd6996d",
+  "gate_snapshot_at_utc": "2026-10-07T11:59:27.843932+00:00",
+  "gate_archive_confirmed_at_utc": "2026-10-07T11:59:30.212256+00:00",
+  "pre_final_receipt": {
+    "at_utc": "2026-10-07T11:59:30.213019+00:00",
+    "claim": "Internal fast-forward Git archive confirmation; not independent custody.",
+    "item": 10,
+    "run_key": "37615277149-1-study",
+    "schema_version": 1,
+    "source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+    "training_archive_commit": "e8f5cb4913574fd0e27ca52f986da9153bd6996d",
+    "training_manifest_sha256": "5152d71f9f0e527d4c4eae921649db7ba7addf8975103125d8693177e62be078"
+  },
+  "final_access_status": "consumed",
+  "final_access_consumed_at_utc": "2026-10-07T11:59:31.895875+00:00",
+  "main_inventory": [
+    "train_neuropixel_s60",
+    "train_relative_transformer_s60",
+    "train_neuropixel_s61",
+    "train_relative_transformer_s61",
+    "train_neuropixel_s62",
+    "train_relative_transformer_s62",
+    "train_neuropixel_s63",
+    "train_relative_transformer_s63",
+    "train_neuropixel_s64",
+    "train_relative_transformer_s64"
+  ],
+  "all_main_runs_completed": true,
+  "planned_updates_per_run": 4096,
+  "contract_tests": {
+    "parent_methods": 32,
+    "passed_parent_methods": 32,
+    "passed_subtests": 87,
+    "passed_call_reports": 119,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0
+  },
+  "source_verified_before_after": true,
+  "implementation_bindings": 26,
+  "population_before_independent_audit": {
+    "rows": 1000,
+    "subset_counts": {
+      "all_official": 1000,
+      "novel_vs_optimization_train": 886,
+      "strict_novel_vs_full_exposure": 866
+    },
+    "unencodable_count": 0,
+    "unsupported_gold_count": 0,
+    "fixture_encoded_overflow_records": 6
+  },
+  "timings": {
+    "worker_started_at_utc": "2026-10-07T11:38:15.161164+00:00",
+    "worker_completed_before_final_archive_at_utc": "2026-10-07T11:59:39.425331+00:00",
+    "worker_seconds_before_final_archive": 1284.266404426,
+    "stages": [
+      {
+        "name": "contract_tests",
+        "started_at_utc": "2026-10-07T11:38:20.200539+00:00",
+        "completed_at_utc": "2026-10-07T11:38:24.705226+00:00",
+        "wall_seconds_including_shutdown": 4.503408286999985,
+        "stage_limit_seconds": 300,
+        "status": "completed",
+        "return_code": 0
+      },
+      {
+        "name": "train",
+        "started_at_utc": "2026-10-07T11:38:26.363125+00:00",
+        "completed_at_utc": "2026-10-07T11:59:27.753325+00:00",
+        "wall_seconds_including_shutdown": 1261.389099963,
+        "stage_limit_seconds": 2700,
+        "status": "completed",
+        "return_code": 0
+      },
+      {
+        "name": "final",
+        "started_at_utc": "2026-10-07T11:59:30.239680+00:00",
+        "completed_at_utc": "2026-10-07T11:59:36.744380+00:00",
+        "wall_seconds_including_shutdown": 6.503731041000037,
+        "stage_limit_seconds": 300,
+        "status": "completed",
+        "return_code": 0
+      }
+    ],
+    "scientific_train_seconds": 1259.143942235,
+    "scientific_final_seconds": 4.770527241000082,
+    "final_archive_confirmed_at_utc": "2026-10-07T11:59:41.814116+00:00"
+  },
+  "resources": {
+    "worker_admission_available_ram_gib": 14.579540252685547,
+    "worker_final_available_ram_gib": 14.475261688232422,
+    "contract_supervisor_samples": 5,
+    "train_supervisor_samples": 1261,
+    "final_supervisor_samples": 7,
+    "train_minimum_sampled_available_ram_gib": 14.273090362548828,
+    "final_minimum_sampled_available_ram_gib": 14.450592041015625,
+    "numerical_threads": 2,
+    "interop_threads": 1,
+    "git_threads": 1,
+    "aggregate_cap": 4,
+    "minimum_required_available_ram_gib": 8,
+    "runner_released": true,
+    "paid_compute": false,
+    "gpu_requested": false
+  },
+  "root_rehashed_files": [
+    {
+      "path": "worker_status.json",
+      "bytes": 7257,
+      "sha256": "7e76027e8111634a33545653e1999f8e6547dac9779b8661b9a55b0e682865f8"
+    },
+    {
+      "path": "pre_final_archive_receipt.json",
+      "bytes": 445,
+      "sha256": "9c3e92cc571a607d566d2e0ed96ee75fe5ed5ed4db130537a0ee6019937aa2a3"
+    },
+    {
+      "path": "final_metrics.json",
+      "bytes": 118044,
+      "sha256": "2e6a57e7b80ac425245ad6d2a08a61a29dd5740d4ac00c7804a46ae4b03671fa"
+    },
+    {
+      "path": "training_manifest.json",
+      "bytes": 723593,
+      "sha256": "5152d71f9f0e527d4c4eae921649db7ba7addf8975103125d8693177e62be078"
+    },
+    {
+      "path": "final_data/population_manifest.json",
+      "bytes": 38405,
+      "sha256": "38f4310bd107a5a3538fd9d0f4a5caa7c5d01b90ab647f1daae07288f30e366c"
+    },
+    {
+      "path": "study_final_status.json",
+      "bytes": 6760,
+      "sha256": "56fa5c458edca81ca12755dd9bbd5a9b7b8b1a7d3037182e480dbed123041cfa"
+    },
+    {
+      "path": "final_access.json",
+      "bytes": 3760,
+      "sha256": "bb35a1c614bc33148cc76369e037b317d4d56147c4b0896b78a8a0a6bb2ede17"
+    },
+    {
+      "path": "train_resource_monitor.json",
+      "bytes": 170088,
+      "sha256": "1bd19b06047274ded4f651591f0fb6d4eb5485735080feef63f98a9273540c1f"
+    },
+    {
+      "path": "final_resource_monitor.json",
+      "bytes": 1116,
+      "sha256": "af2209f969e116ff4a24b0458b3375f8cf315d0630057fb7f8934a5f218937e6"
+    },
+    {
+      "path": "study_train_status.json",
+      "bytes": 6756,
+      "sha256": "d981d31753822d5d37e358b69fcede5361c53e0867ed3d2b6b8ca8a8890ce8a3"
+    }
+  ],
+  "operational_metadata_lookup_issue": {
+    "at_utc": "2026-10-07T11:38:30+00:00",
+    "type": "GitHub contents lookup returned404 for expected main path at observed branch head",
+    "ref": "67a7fcbfff4d7addcf36206aab8a69a58dd8bdbc",
+    "expected_root": "results/research/10_cloud_runs/37615277149-1-study",
+    "paths": [
+      "archive_manifest.json",
+      "worker_status.json",
+      "test_collection.json",
+      "test_results.json",
+      "contract_tests_resource_monitor.json"
+    ],
+    "note": "No numerical failure inferred. Recover actual commit/tree identity before adaptive lookup; all five requests were read-only.",
+    "resolution": "Actual snapshot is interim_partial and uses interim_manifest.json. Exact Git tree recovered; four contract files retrieved by observed full blob IDs and rehashed against the interim manifest.",
+    "resolved": true,
+    "numerical_failure": false
+  },
+  "provider_log": {
+    "path": "results/research/10_validation/study_actions.log",
+    "bytes": 40740,
+    "sha256": "5e433e81c37cee9ef681464b8b546c544cac2289ba92d40951e22e79ac14ca98",
+    "scope": "Complete provider-decoded job text re-encoded as UTF-8."
+  },
+  "conclusions_pending": "Independent fresh-process recount of all predictions, primary five-seed statistics, novelty/controls and actual full Git G-to-F/source archive verification. Execution success alone is not scientific validation.",
+  "later_items_opened": false,
+  "historical_H1": "closed; not supported; unchanged"
+}
