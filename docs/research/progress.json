@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T12:26:57+00:00",
+  "recorded_at": "2026-10-07T12:55:25+00:00",
   "active_item": 11,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -672,15 +672,23 @@
     "closure_commit": "4411de991098ac592a42b408e266061786396395"
   },
   "item11": {
-    "stage": "opened; source and prior-art investigation before protocol or execution",
+    "stage": "Historical/source audit reviewed; untrained diagnostic protocol frozen before first execution",
     "opened_after_item10_closure_commit": "4411de991098ac592a42b408e266061786396395",
     "scope": "Distinguish durable parameter/expert storage, within-call recurrent activation, across-call episodic memory, and externally reintroduced inputs. Audit current public paths and historical memory claims; derive necessary conditions and execute bounded counterfactual/integrity checks under a frozen protocol where feasible. Record interference only with a specified stored object and retrieval criterion.",
     "model_training_started": false,
     "scientific_scoring_started": false,
-    "execution_plan_frozen": false,
+    "execution_plan_frozen": true,
     "historical_H1": "closed; not supported; unchanged",
     "sequential_policy": "Do not open item12 or later before closing this feasible investigation.",
     "infrastructure": "Local executor unavailable; read-only preparation and later authorized bounded standard public CPU workflow if needed. No active numerical job at opening.",
-    "routing": "No JEV callable capability found in current tool inventory. Retain the already established conservative fallback: root handles integration; architecture/evidence/primary-literature reviews are justified parallel subtasks within item11."
+    "routing": "No JEV callable capability found in current tool inventory. Retain the already established conservative fallback: root handles integration; architecture/evidence/primary-literature reviews are justified parallel subtasks within item11.",
+    "probe_freeze_utc": "2026-10-07T12:55:25+00:00",
+    "probe_plan_sha256": "e93c42d0a6c62f4870f26d360dbdc9d877fe0d5196e5d207db86ce1b65db8bc5",
+    "probe_recipe_sha256": "5335fb058124b2e1137904a931554c17837814282264e6dfdd7a7b42b70a64af",
+    "probe_contract_methods": 8,
+    "probe_implementation_files": 13,
+    "probe_execution_completed": false,
+    "learned_memory_recipe_prepared": true,
+    "learned_preflight_admitted": false
   }
 }

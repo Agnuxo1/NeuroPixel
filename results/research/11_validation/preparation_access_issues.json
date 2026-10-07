@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "web": {
+    "recorded_at": "2026-10-07T12:29:19+00:00",
+    "requests": [
+      {
+        "url": "https://web.stanford.edu/class/psych209/Readings/GravesWayne16DNC.pdf",
+        "result": "web open400 Timeout fetching",
+        "scientific_execution": false
+      },
+      {
+        "url": "https://www.nature.com/articles/nature20101",
+        "result": "web open500 non-retryable identity redirect",
+        "scientific_execution": false
+      }
+    ],
+    "recovery": "Primary-paper PDF located using system1 search at gwern.net; primary bibliographic publication verified through Nature search result. No login or browser fallback."
+  },
+  "orchestration": {
+    "kind": "unexecuted orchestration syntax error",
+    "message": "SyntaxError: Unexpected token ')'",
+    "stage": "parallel read preparation",
+    "network_calls_executed": false,
+    "model_or_test_execution": false,
+    "resolution": "Corrected the JavaScript object/parenthesis layout and repeated only the intended read-only calls."
+  },
+  "scope": "Preserved preparation/access issues; no numerical/model execution occurred."
+}

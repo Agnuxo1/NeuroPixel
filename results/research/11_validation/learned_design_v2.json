@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "status": "prospective choices agreed before execution; code and final freeze pending",
+  "models": {
+    "neuropixel": {
+      "class": "NeuroPixel",
+      "vocab": 8,
+      "out_pos": [
+        2,
+        2
+      ],
+      "c_id": 16,
+      "c": 48,
+      "hidden": 128,
+      "steps": 16,
+      "fire_rate": 0.5,
+      "expected_parameters": 29392
+    },
+    "frame_gru": {
+      "class": "FrameGRU",
+      "vocab": 8,
+      "h": 3,
+      "w": 3,
+      "e": 8,
+      "d": 48,
+      "hid": 70,
+      "expected_parameters": 29336
+    }
+  },
+  "task": {
+    "grid": [
+      3,
+      3
+    ],
+    "pad": 0,
+    "query": 1,
+    "answer_labels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cue_positions": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "output_position": [
+      2,
+      2
+    ],
+    "cue_frame_updates": 3,
+    "gap_frame_updates": 3,
+    "query_frame_updates": 10,
+    "train_delays": [
+      0,
+      1,
+      2
+    ],
+    "validation_delays": [
+      3,
+      4
+    ],
+    "final_delays": [
+      0,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "population": "Complete census of six labels by eight positions per delay; no novel content/generalization claim.",
+    "query_has_cue": false,
+    "blank_gap_has_cue": false,
+    "optimization_sampling": "Private paired draws with replacement over48label-positionpairs; one uniformdelay in0,1,2 perbatch. Batch32neednotbe balanced; census48is balanced.",
+    "query_position": [
+      2,
+      1
+    ],
+    "census_order": "target label outer ascending, cue position inner row-major"
+  },
+  "optimization": {
+    "main_seeds": [
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "main_updates": 2048,
+    "batch_size": 32,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "gradient_clip": 1,
+    "answer_cross_entropy_only": true,
+    "pilot_seed": 69,
+    "pilot_updates": 1024,
+    "learning_rates": [
+      0.001,
+      0.003
+    ],
+    "selection": "Mean DEV accuracy over delays3 and4 descending, then mean CE ascending, then LRascending.",
+    "preflight_admission": "Both DEV-selected family pilots must reach at least0.95accuracy atdelay2 on the48-row census. If either fails, retain complete negative preflight and do not run main. No extra tinyfit, rescue or automaticbudget escalation.",
+    "design_amendment": "Pilotupdates increased prospectively from512to1024 before any code execution or outcomes; main2048unchanged."
+  },
+  "interventions": {
+    "state_boundary": "After cue and all gap frames, immediately before addition/processing of identical query",
+    "zero": "Zero retained state or GRU hidden state; preserve query, weights, delay and all tensor/runtime settings.",
+    "swap": "Cyclic donor label within same cue position; record original target and donor target. Both natural stored states.",
+    "interference": {
+      "delay": 8,
+      "replace_gap_index_zero_based": 0,
+      "replace_not_append": true,
+      "distractor_labels": "All six answers independently crossed with target and cue position",
+      "rows_per_condition": 288,
+      "conditions": [
+        "same cue position",
+        "next of eight cue positions cyclically"
+      ],
+      "strata": {
+        "same_label": 48,
+        "different_label": 240
+      },
+      "np_total_updates": 37,
+      "gru_total_frame_transitions": 10,
+      "blank_control": "Same48label-positionpredictions repeated across6independentdistractors or equivalently labelledbalancedcensus",
+      "stratum_interpretation": {
+        "same_label": "Re-exposure of target; not conflicting interference.",
+        "different_label": "Conflicting distractor; 240rows and target-vs-intruder accuracy reported."
+      }
+    },
+    "cases": "normal at7delays; cueerased/zero/swap atdelays2and8; blankrepeated/samepos/nextpos atdelay8;16cases percheckpoint.",
+    "swap_donor_row": "(recipient_row+8)%48; donor label changes cyclically, cueposition fixed."
+  },
+  "estimands": {
+    "near_training_competence": "accuracy>=.95atdelay2 perseed/family",
+    "retention_screen": "accuracy>=.95atdelay8inall5seeds; separate from H1",
+    "primary": "NPminusGRUaccuracyatdelay8; fivepairedfreshtrainingrealizations; Studentt95df4",
+    "within_family": "delay8-minus-delay2 pairedaccuracy; descriptive unless explicitly frozen as secondary",
+    "intervention_interpretation": "Require intact competence before treating a drop as evidence of lost retrievable content. A failed model cannot establish robust forgetting/repair.",
+    "no_row_independent_sampling": true,
+    "no_causal_architecture_superiority": true,
+    "current_only_bound": "With six balanced targets and identical cue-free suffix, fixed deterministicweights/state cannot exceed1/6censusaccuracy; nonanswerpredictioncan yield0. This is a logical bound, not an empirical measurement."
+  },
+  "resource_policy": {
+    "available_ram_floor_gib": 8,
+    "numerical_threads": 2,
+    "interop_threads": 1,
+    "aggregate_cap": 4,
+    "paid_compute": false,
+    "gpu": false
+  },
+  "historical_H1": "closed; not supported; unchanged",
+  "version": 2,
+  "memory_allocation": {
+    "neuropixel": {
+      "shape_per_example": [
+        48,
+        3,
+        3
+      ],
+      "float32_values": 432,
+      "raw_state_bytes": 1728
+    },
+    "frame_gru": {
+      "shape_per_example": [
+        70
+      ],
+      "float32_values": 70,
+      "raw_state_bytes": 280
+    },
+    "scope": "Tensor payload sizes only; parameter matching does not match state allocation, measured information capacity, peak process memory or energy."
+  }
+}

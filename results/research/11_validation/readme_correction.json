@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "preimage_blob": "cc6b86440a032e1f6f51e50a8841e50c9fa42a2a",
+  "preimage_sha256": "456062aaf3d655ebf12a83366263d4b3def48a82397bb9d3b16d49a562ab7697",
+  "corrected_sha256": "fbb1b6a62f6617f50be0e91b58d46354cdcc53b6c217e56bd7b7df8e66361a08",
+  "old_row": "| Persistent memory (facts seen one by one) | **99 %** up to 8 blank frames | GRU 77 % (but decays more slowly) |",
+  "corrected_row": "| Recurrent memory within one stream (historical report) | 99.2 % at 0 blank frames; **96.5 % at 8** | GRU 77.0 % at 0; 78.5 % at 8 (slower decline in the reported long-delay curve) |",
+  "why": "The declared eight-blank-frame 99% claim conflicts with the archived96.5% figure; within-stream retention is not automatic persistence across calls.",
+  "historical_data_changed": false,
+  "new_experimental_results_claimed": false,
+  "other_changes": [
+    "Qualify single-run/traceability status and link source audit.",
+    "Label the legacy command as within-stream memory."
+  ]
+}

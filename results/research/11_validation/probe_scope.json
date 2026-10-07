@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "status": "prospective probe scope agreed; executable plan not frozen",
+  "vocabulary": 8,
+  "shape": [
+    3,
+    3
+  ],
+  "cue_pos": [
+    0,
+    0
+  ],
+  "query_pos": [
+    2,
+    1
+  ],
+  "out_pos": [
+    2,
+    2
+  ],
+  "cue_steps": 3,
+  "gap_steps": 3,
+  "query_steps": 10,
+  "delays": [
+    0,
+    4,
+    16,
+    32
+  ],
+  "init_seed": 110001,
+  "active_f2_seed": 110002,
+  "active_f2_std": 0.01,
+  "answer_labels": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "query_token": 1,
+  "pad_token": 0,
+  "numerical_threads": 1,
+  "interop_threads": 1,
+  "expectations": "Default forward history invariance; native np_stream retains a within-call path; strict baseline/chunked explicit continuation matches; zero/swap boundary tensors verified. Nonzero diagnostic final layer prevents trivial inactive dynamics. No learned performance claim.",
+  "grounded_checkpoint_witness": "Compare parameter-only restoration with full ground buffer/config restoration on isolated clones.",
+  "resource": {
+    "worker_seconds": 600,
+    "archive_reserve_seconds": 180,
+    "contract_seconds": 120,
+    "probe_seconds": 120,
+    "workflow_minutes": 20,
+    "first_step_deadline_seconds": 1170,
+    "available_ram_floor_gib": 8,
+    "aggregate_threads_cap": 4
+  },
+  "model_training": false
+}

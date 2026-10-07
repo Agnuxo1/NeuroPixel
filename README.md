@@ -68,9 +68,11 @@ gap *widens* with size, and so does robustness to damage.
 | Cost per answer (CPU, same 200 questions) | **56 MFLOP · 5.7 ms · 99.5 %** | Qwen2-494M (3-shot): 158 GFLOP · 279 ms · 94 % |
 | New word from 5 examples (one dictionary row trained) | up to 98.6 % new, 92.6 % old kept | Transformer 50–61 % |
 | Continual learning, 3 topics in a row | growing canvases **93 %** average | single canvas 66 % (forgets) |
-| Persistent memory (facts seen one by one) | **99 %** up to 8 blank frames | GRU 77 % (but decays more slowly) |
+| Recurrent memory within one stream (historical report) | 99.2 % at 0 blank frames; **96.5 % at 8** | GRU 77.0 % at 0; 78.5 % at 8 (slower decline in the reported long-delay curve) |
 | Non-local binding (role and word far apart) | 66 % → 74 % with size + rest-state | Transformer 56 % — **not solved yet** |
 | Imagination (fill a masked word) | 100 % plausible category, diverse, not copied | — |
+
+The memory row quotes the archived [single-run summary](results/phase3/memory.json), which contains no raw predictions, checkpoints, or complete run configuration. It describes activation carried between frames of one `np_stream` call; a new call resets that state. See the [historical memory audit](docs/research/11_historical_memory_audit.md) for source and comparison limits.
 
 ### Why it matters
 
@@ -113,7 +115,7 @@ python scripts/scan.py runs/<run_name>                  # dictionary scanner ima
 python scripts/phase3.py stable --arg reposo      # rest-state training + damage tests
 python scripts/phase3.py scale  --arg np30k       # one point of the scaling curve (GPU)
 python scripts/phase3.py far    --arg neuropixel  # non-local binding
-python scripts/phase3.py memory                   # persistent memory vs GRU
+python scripts/phase3.py memory                   # within-stream memory vs GRU
 python scripts/phase3.py grow2                    # growing canvases by novelty
 python scripts/phase3.py llm                      # cost vs a local GGUF LLM (llama-cpp-python)
 python scripts/night.py --k 6                     # whole battery as a GPU queue with a temperature watchdog
