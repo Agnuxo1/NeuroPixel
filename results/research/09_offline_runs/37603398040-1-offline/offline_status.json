@@ -90,6 +90,35 @@
       "status": "completed",
       "supervision_failure": null,
       "wall_seconds_including_shutdown": 1.2037034959999886
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T09:51:19.745165+00:00",
+        "available_ram_gib": 14.604812622070312,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/scientific-source/scripts/research_complex_binding_audit.py",
+        "--input",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/complete-raw-archive/results/research/09_cloud_runs/37593731891-1-study/study",
+        "--recipe",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/scientific-source/docs/research/09_experiment_recipe.json",
+        "--source-root",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/scientific-source",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_offline_runs/37603398040-1-offline/scientific_audit_01.json"
+      ],
+      "completed_at_utc": "2026-10-07T09:51:31.278738+00:00",
+      "log_sha256": "d27b4135d4aadabc88768c2cd394fb01727880d0cace43d4cfe26254264bc85a",
+      "maximum_seconds": 900,
+      "name": "scientific_audit",
+      "receipt_sha256": "2ffcd15900dd583f796f158bac6de9dee1761ba74cf7f4d9ae9ca700d217316e",
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T09:51:19.825243+00:00",
+      "status": "completed",
+      "supervision_failure": null,
+      "wall_seconds_including_shutdown": 11.452072082000015
     }
   ],
   "started_at_utc": "2026-10-07T09:51:09.801483+00:00",
