@@ -1,4 +1,4 @@
-name: NeuroPixel item 6 source preflight
+name: NeuroPixel item 6 implementation checks
 
 on:
   push:
@@ -7,7 +7,9 @@ on:
     paths:
       - '.github/workflows/research-item6.yml'
       - 'neuropixel/research/**'
-      - 'scripts/research_cloud_preflight.py'
+      - 'scripts/research_*.py'
+      - 'tests/test_research_*.py'
+      - 'docs/research/06_*inventory.json'
       - 'requirements/research-cloud.txt'
       - 'docs/research/06_recovery_manifest.json'
 
@@ -19,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  source-preflight:
+  implementation-checks:
     if: github.repository == 'Agnuxo1/NeuroPixel' && github.event.repository.private == false
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -48,3 +50,16 @@ jobs:
         run: python -m pip install --no-cache-dir -r requirements/research-cloud.txt
       - name: Verify recovered bytes and development tensors without training
         run: python scripts/research_cloud_preflight.py
+      - name: Check actual inventories without a numerical runtime
+        run: python scripts/research_check_item6_inventory.py
+      - name: Compile the new scientific and operational Python modules
+        run: python -m compileall -q neuropixel/research scripts tests
+      - name: Run implementation tests with explicit CPU thread limits
+        run: |
+          python - <<'PY'
+          import pytest
+          import torch
+          torch.set_num_threads(2)
+          torch.set_num_interop_threads(1)
+          raise SystemExit(pytest.main(["tests", "-q", "-rA"]))
+          PY

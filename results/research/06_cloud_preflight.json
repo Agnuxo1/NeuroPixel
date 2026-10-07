@@ -1,0 +1,72 @@
+{
+  "at_utc": "2026-10-07T02:36:41.882148+00:00",
+  "cpu_count_logical": 4,
+  "development_tensor_sha256": {
+    "train": "f74bb2ae12e99b579eeea485bf6c262805a73f3c086a94421478466fc166b564",
+    "validation": "44873b31d17df696ceef3ff7c5fd2f1878921305d19623443780a443be364e0a"
+  },
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": null,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "gpu_name": null,
+    "matmul_tf32": false,
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "python": "3.12.8",
+    "threads": 2,
+    "versions": {
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    }
+  },
+  "final_test_accessed": false,
+  "git_commit": "9c09a558fddba748cbb18040ff09b1fe9d8ee633",
+  "initial_available_ram_gib": 14.599929809570312,
+  "item": 6,
+  "optimizer_updates": 0,
+  "parameter_counts": {
+    "convgru": 27835,
+    "neuropixel": 29824,
+    "relative_transformer": 29547,
+    "standard_nca": 30384
+  },
+  "recovery_manifest_sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+  "resources": {
+    "at_utc": "2026-10-07T02:36:41.881985+00:00",
+    "available_ram_gib": 14.485836029052734
+  },
+  "schema_version": 1,
+  "status": "preflight_passed",
+  "torch_interop_threads": 1,
+  "torch_threads": 2,
+  "unavailable_historical_sha256": {
+    "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+  },
+  "verified_sha256": {
+    "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+    "docs/research/05_results_recovered_20261007.md": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+    "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+  },
+  "observation_provenance": {
+    "kind": "JSON stdout extracted from completed GitHub Actions job logs",
+    "run_id": 37562740705,
+    "job_id": 112603483111,
+    "url": "https://github.com/Agnuxo1/NeuroPixel/actions/runs/37562740705",
+    "complete_log_utf8_sha256": "e854f3401b3e781262223e54391c3f968fd1b6bc3a5bf23733079f59a1f7ad1d",
+    "job_conclusion": "success",
+    "raw_final_dataset_accessed": false
+  }
+}

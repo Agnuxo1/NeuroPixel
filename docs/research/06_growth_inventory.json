@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "panel": "growth",
+  "analysis": "exploratory",
+  "planned_trajectories": 6,
+  "planned_training_stages": 18,
+  "planned_optimizer_updates": 9216,
+  "planned_gate_fits": 8,
+  "planned_routing_evaluations": 34,
+  "planned_preallocation_checks": 2,
+  "trajectories": [
+    {
+      "trajectory_id": "fixed_sequential_i20",
+      "policy": "fixed_sequential",
+      "init_seed": 20,
+      "split_seed": 0,
+      "topics": [
+        0,
+        1,
+        2
+      ],
+      "stage_updates": 512,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1,
+      "school_weight": 0.3,
+      "steps": 16,
+      "tying": true,
+      "reinjection": true,
+      "optimizer_reset_each_stage": true
+    },
+    {
+      "trajectory_id": "adaptive_novelty_i20",
+      "policy": "adaptive_novelty",
+      "init_seed": 20,
+      "split_seed": 0,
+      "topics": [
+        0,
+        1,
+        2
+      ],
+      "stage_updates": 512,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1,
+      "school_weight": 0.3,
+      "steps": 16,
+      "tying": true,
+      "reinjection": true,
+      "optimizer_reset_each_stage": true
+    },
+    {
+      "trajectory_id": "adaptive_resonance_i20",
+      "policy": "adaptive_resonance",
+      "init_seed": 20,
+      "split_seed": 0,
+      "topics": [
+        0,
+        1,
+        2
+      ],
+      "stage_updates": 512,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1,
+      "school_weight": 0.3,
+      "steps": 16,
+      "tying": true,
+      "reinjection": true,
+      "optimizer_reset_each_stage": true
+    },
+    {
+      "trajectory_id": "fixed_sequential_i21",
+      "policy": "fixed_sequential",
+      "init_seed": 21,
+      "split_seed": 0,
+      "topics": [
+        0,
+        1,
+        2
+      ],
+      "stage_updates": 512,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1,
+      "school_weight": 0.3,
+      "steps": 16,
+      "tying": true,
+      "reinjection": true,
+      "optimizer_reset_each_stage": true
+    },
+    {
+      "trajectory_id": "adaptive_novelty_i21",
+      "policy": "adaptive_novelty",
+      "init_seed": 21,
+      "split_seed": 0,
+      "topics": [
+        0,
+        1,
+        2
+      ],
+      "stage_updates": 512,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1,
+      "school_weight": 0.3,
+      "steps": 16,
+      "tying": true,
+      "reinjection": true,
+      "optimizer_reset_each_stage": true
+    },
+    {
+      "trajectory_id": "adaptive_resonance_i21",
+      "policy": "adaptive_resonance",
+      "init_seed": 21,
+      "split_seed": 0,
+      "topics": [
+        0,
+        1,
+        2
+      ],
+      "stage_updates": 512,
+      "batch_size": 64,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1,
+      "school_weight": 0.3,
+      "steps": 16,
+      "tying": true,
+      "reinjection": true,
+      "optimizer_reset_each_stage": true
+    }
+  ],
+  "topics": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11
+    ]
+  ],
+  "partition_rule": "filter original research pools; never reshuffle or rebalance triple membership",
+  "stages": [
+    {
+      "topic": 0,
+      "train_sample_seed": 9002,
+      "firing_seed": 9001,
+      "diagnostic_n": 512,
+      "diagnostic_seed": 62010,
+      "gate_fit_n": 512,
+      "gate_fit_seed": 62011,
+      "test_n": 1024,
+      "test_seed": 62012
+    },
+    {
+      "topic": 1,
+      "train_sample_seed": 9102,
+      "firing_seed": 9101,
+      "diagnostic_n": 512,
+      "diagnostic_seed": 62110,
+      "gate_fit_n": 512,
+      "gate_fit_seed": 62111,
+      "test_n": 1024,
+      "test_seed": 62112
+    },
+    {
+      "topic": 2,
+      "train_sample_seed": 9202,
+      "firing_seed": 9201,
+      "diagnostic_n": 512,
+      "diagnostic_seed": 62210,
+      "gate_fit_n": 512,
+      "gate_fit_seed": 62211,
+      "test_n": 1024,
+      "test_seed": 62212
+    }
+  ],
+  "novelty": {
+    "own_token_probability_threshold": 0.5,
+    "creation_threshold": 0.1,
+    "aggregation": "occupied-cell fraction over the entire diagnostic batch",
+    "score_round_decimals": 4,
+    "comparison": "strictly greater",
+    "parent": "argmin",
+    "tie_break": "lowest existing expert index"
+  },
+  "resonance": {
+    "aggregation": "mean of per-example occupied-cell mean probability",
+    "score_round_decimals": 4,
+    "comparison": "strictly less",
+    "threshold": "0.75 times unrounded post-stage-A mean on the same stage-A diagnostic batch",
+    "parent": "argmax",
+    "tie_break": "lowest existing expert index"
+  },
+  "maximum_experts": 3,
+  "maximum_experts_reason": "at most one creation in each of three stages",
+  "gate": {
+    "features": "binary visible-token bag of 35 IDs, query one-hot of 4 roles, bias",
+    "feature_count": 40,
+    "initialization": "zeros",
+    "updates": 128,
+    "learning_rate": 0.1,
+    "l2": 0.0001,
+    "optimizer": "deterministic full-batch gradient descent",
+    "objective": "mean negative log likelihood of expert probability mixture plus 0.5*l2*sum(W**2), including bias",
+    "expert_weights_frozen": true
+  },
+  "routers": [
+    "uniform",
+    "random",
+    "scanner",
+    "learned"
+  ],
+  "random_router_seed": 62013,
+  "fixed_banks": {
+    "single_final": [
+      2
+    ],
+    "snapshots": [
+      0,
+      1,
+      2
+    ],
+    "duplicate_slots": [
+      0,
+      1,
+      1
+    ],
+    "preallocated_equivalent": [
+      0,
+      1,
+      2
+    ]
+  },
+  "adaptive_bank": "all final experts retained by the respective heuristic",
+  "parameter_accounting": "report slots, unique checkpoints, nominal expert parameters and learned gate parameters separately",
+  "hard_selection_oracle_scope": "upper bound for hard expert selection only; not for probability mixtures",
+  "h1_eligible": false,
+  "diagnostic_role_balance": "natural sampling; no forced role balance",
+  "diagnostic_recount_atol": 0.000001
+}
