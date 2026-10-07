@@ -1,0 +1,14 @@
+{
+  "count": 8,
+  "expected_count": 8,
+  "nodeids": [
+    "tests/test_stream_memory.py::StreamMemoryTests::test_forward_reset_and_grounding_checkpoint_contract",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_gru_native_and_chunk_paths_match_with_backward",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_invalid_frame_and_update_inventories_rejected",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_invalid_state_and_interventions_rejected",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_np_chunk_continuation_retains_graph_and_caller_state",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_np_native_baseline_and_firing_stream_match",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_swap_donor_direction_and_snapshot_no_alias",
+    "tests/test_stream_memory.py::StreamMemoryTests::test_zero_boundary_snapshots_and_query_only_reset"
+  ]
+}
