@@ -8,6 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
+  "last_heartbeat_at_utc": "2026-10-07T03:23:51.721211+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -19,7 +20,14 @@
     "minimum_ram_gib": 8,
     "supervisor_interval_seconds": 1.0
   },
-  "resources": [],
+  "resources": [
+    {
+      "at_utc": "2026-10-07T03:23:51.721211+00:00",
+      "available_ram_gib": 14.576507568359375,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    }
+  ],
   "run_key": "37566497890-1",
   "schema_version": 1,
   "source": {
@@ -47,5 +55,19 @@
   },
   "started_at_utc": "2026-10-07T03:23:48.980290+00:00",
   "status": "running",
-  "steps": []
+  "steps": [
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_cloud_preflight.py"
+      ],
+      "completed_at_utc": "2026-10-07T03:23:56.722191+00:00",
+      "log": "logs/source_environment.log",
+      "log_sha256": "9840019e85ce2e8fb51459e3d4d2ece0f86d8d6b6e0874215efa8543b63dbc60",
+      "name": "source_environment",
+      "returncode": 0,
+      "started_at_utc": "2026-10-07T03:23:51.708927+00:00",
+      "status": "completed"
+    }
+  ]
 }
