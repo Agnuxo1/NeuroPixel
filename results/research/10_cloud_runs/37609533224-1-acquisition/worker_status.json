@@ -1,0 +1,25 @@
+{
+  "gpu_requested": false,
+  "item": 10,
+  "paid_compute": false,
+  "phase": "acquisition",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 1200,
+    "workflow_minutes": 25
+  },
+  "run_key": "37609533224-1-acquisition",
+  "schema_version": 1,
+  "source_commit": "99ecaeefdd00dffd3dae444a781ad009c19dff5d",
+  "stages": [],
+  "started_at_utc": "2026-10-07T10:45:58.985293+00:00",
+  "status": "running"
+}

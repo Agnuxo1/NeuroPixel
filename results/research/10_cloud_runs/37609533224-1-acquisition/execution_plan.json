@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "phase": "acquisition",
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T10:44:50+00:00",
+  "freeze_parent_commit": "a88276ec0038914f078fc51b1612d997677b6321",
+  "scope": "24 contract methods and original bAbI QA4 TRAIN-only acquisition/audit; no neural training or TEST-payload parsing/scoring.",
+  "runtime": {
+    "python": "3.12.14",
+    "packages": {
+      "psutil": "7.2.2",
+      "pytest": "9.1.1"
+    },
+    "threads": 1,
+    "interop_threads": 1
+  },
+  "limits": {
+    "worker_seconds": 1200,
+    "archive_reserve_seconds": 180,
+    "workflow_minutes": 25,
+    "minimum_available_ram_gib": 8,
+    "aggregate_active_cpu_threads": 4,
+    "numerical_threads": 1,
+    "git_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "heartbeat_interval_seconds": 60,
+    "archive_interval_seconds": 300,
+    "git_timeout_seconds": 60
+  },
+  "stages": [
+    {
+      "name": "contract_tests",
+      "seconds": 300,
+      "files": [
+        "tests/test_babi_qa.py"
+      ],
+      "expected_count": 24
+    },
+    {
+      "name": "acquire",
+      "seconds": 720,
+      "script": "scripts/research_babi_acquire.py"
+    }
+  ],
+  "acquisition": {
+    "sources": [
+      {
+        "id": "author_original",
+        "url": "http://www.thespermwhale.com/jaseweston/babi/tasks_1-20_v1-2.tar.gz",
+        "role": "original-author endpoint documented by published facebook/babi_qa loader"
+      },
+      {
+        "id": "documented_https_mirror",
+        "url": "https://s3.amazonaws.com/text-datasets/babi_tasks_1-20_v1-2.tar.gz",
+        "role": "documented HTTPS mirror; no original-host byte authentication presumed"
+      }
+    ],
+    "archive_byte_cap": 33554432,
+    "download_seconds_each": 120,
+    "train_member": "tasks_1-20_v1-2/en/qa4_two-arg-relations_train.txt",
+    "train_member_byte_cap": 2097152,
+    "development_salt": "neuropixel-item10-dev-v1",
+    "development_fraction": 0.1,
+    "layout_policy": {
+      "max_height": 8,
+      "max_width": 16,
+      "overflow": "error",
+      "input_oov": "unk",
+      "lowercase": true,
+      "preserve_punctuation": true
+    },
+    "attribution": {
+      "paper": "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks",
+      "authors": [
+        "Jason Weston",
+        "Antoine Bordes",
+        "Sumit Chopra",
+        "Alexander M. Rush",
+        "Bart van Merriënboer",
+        "Armand Joulin",
+        "Tomas Mikolov"
+      ],
+      "paper_url": "https://arxiv.org/abs/1502.05698",
+      "dataset_license_declared": "CC BY 3.0",
+      "license_declaration_url": "https://huggingface.co/datasets/facebook/babi_qa/blob/main/README.md",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "embedded_archive_license_inspected": false
+    },
+    "test_payload_access": false,
+    "neural_training": false
+  },
+  "implementation_sha256": {
+    ".github/workflows/research-item10-acquisition.yml": "fe6de5fabec311d88b809ee3f9f32310cb763b367bba8c35d8e84d40073d34df",
+    "docs/research/10_acquisition_protocol.md": "a8ca55e7edc0a947406fca6c432b45f2e2d4d67e38ca66f6467b715d25a4ae4a",
+    "docs/research/10_acquisition_static_review.md": "bd028d4167c291f186c9e29b284b86453ddbfd52d8d3b27d75ff1e782a28cf0a",
+    "docs/research/10_babi_provenance.md": "ca71802677febd93b762d6fb751082ff5d4f4dc482726d9e651db6d2c0a01636",
+    "docs/research/10_data_contract_review.md": "f35ee56aa181f9cf0436d71c9ff827f2d427663541e90acd40b443bc42f7d615",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/research/babi_qa.py": "bea3b511b63a8107ae8eb6b6e0bf2d12cf9f76dd80083aae2aa967e42fe7c649",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "scripts/research_babi_acquire.py": "cc0db28c7091078ec4c3bb57e048c287fed14db4fc111558edbe81f5afae0a8e",
+    "scripts/research_item10_worker.py": "6256f5f90cfa945c05829e23c30f4f24b05b0d92f0d7f4ac8830feac0e184537",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "tests/test_babi_qa.py": "4be2108204e1c2fa207836c4f17d03bc6c91dae26c345d3a97dce8b23141a288"
+  }
+}
