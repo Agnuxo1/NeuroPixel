@@ -4,6 +4,7 @@
     "available_ram_gib": 14.62960433959961,
     "phase": "admission"
   },
+  "completed_at_utc": "2026-10-07T09:51:37.603666+00:00",
   "gpu_requested": false,
   "item": 9,
   "operation": "unchanged offline audit host fallback",
@@ -23,6 +24,14 @@
   "run_key": "37603398040-1-offline",
   "schema_version": 1,
   "scientific_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "source_after": {
+    "at_utc": "2026-10-07T09:51:37.603581+00:00",
+    "commit": "87e1f1c0b388190474e8190952c148c0501c8abf",
+    "owned_output_prefix": "results/research/09_offline_runs/37603398040-1-offline/",
+    "plan_sha256": "7cc8b995ebc388089d1668820a60174fa228de4e5bba1285b14e3fb35d4b6eb3",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
   "source_commit": "87e1f1c0b388190474e8190952c148c0501c8abf",
   "stages": [
     {
@@ -149,5 +158,6 @@
     }
   ],
   "started_at_utc": "2026-10-07T09:51:09.801483+00:00",
-  "status": "running"
+  "status": "completed",
+  "wall_seconds_before_final_archive": 27.802332284000016
 }

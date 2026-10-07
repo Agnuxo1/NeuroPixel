@@ -1,7 +1,7 @@
 {
-  "attempt_status": "running",
+  "attempt_status": "completed",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T09:51:36.007872+00:00",
+  "created_at_utc": "2026-10-07T09:51:37.644996+00:00",
   "files": {
     "driver_source.zip": {
       "bytes": 8189685,
@@ -80,8 +80,8 @@
       "sha256": "7cc8b995ebc388089d1668820a60174fa228de4e5bba1285b14e3fb35d4b6eb3"
     },
     "offline_status.json": {
-      "bytes": 6595,
-      "sha256": "42bbb9027bd0b367ff19f248ecabf035f5c18fd17bd0a7e2c9d9aca507d4d0a7"
+      "bytes": 7091,
+      "sha256": "d2f8c071dea72640bac1be8e47ffa555d05986d76dd877131fea23bf51c346bd"
     },
     "operational_costs.json": {
       "bytes": 4729,
@@ -136,10 +136,10 @@
       "sha256": "340b74f9322b20c682d8791ce2fa0e92f26badff92dcc21aa7cd7e3757257749"
     }
   },
-  "final": false,
+  "final": true,
   "item": 9,
   "run_key": "37603398040-1-offline",
   "schema_version": 1,
-  "snapshot_kind": "interim_partial",
+  "snapshot_kind": "final",
   "source_commit": "87e1f1c0b388190474e8190952c148c0501c8abf"
 }
