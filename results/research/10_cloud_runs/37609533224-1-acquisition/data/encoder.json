@@ -1,0 +1,80 @@
+{
+  "answer_counts": {
+    "bathroom": 139,
+    "bedroom": 150,
+    "garden": 147,
+    "hallway": 145,
+    "kitchen": 161,
+    "office": 153
+  },
+  "answer_tokens": [
+    "bathroom",
+    "bedroom",
+    "garden",
+    "hallway",
+    "kitchen",
+    "office"
+  ],
+  "height": 4,
+  "max_facts": 2,
+  "out_pos": [
+    3,
+    7
+  ],
+  "policy": {
+    "input_oov": "unk",
+    "lowercase": true,
+    "max_height": 8,
+    "max_width": 16,
+    "overflow": "error",
+    "preserve_punctuation": true
+  },
+  "query_pos": [
+    2,
+    0
+  ],
+  "schema_version": 1,
+  "token_to_id": {
+    ".": 2,
+    "<PAD>": 0,
+    "<UNK>": 1,
+    "?": 3,
+    "bathroom": 4,
+    "bedroom": 5,
+    "east": 6,
+    "garden": 7,
+    "hallway": 8,
+    "is": 9,
+    "kitchen": 10,
+    "north": 11,
+    "of": 12,
+    "office": 13,
+    "south": 14,
+    "the": 15,
+    "west": 16,
+    "what": 17
+  },
+  "tokenizer": "lowercase_word_punctuation_v1",
+  "training_record_ids_sha256": "66e0b3b9fefd73a902163abff705c12ba4492d99bc43075cb05e0cee8c47087c",
+  "vocabulary": [
+    "<PAD>",
+    "<UNK>",
+    ".",
+    "?",
+    "bathroom",
+    "bedroom",
+    "east",
+    "garden",
+    "hallway",
+    "is",
+    "kitchen",
+    "north",
+    "of",
+    "office",
+    "south",
+    "the",
+    "west",
+    "what"
+  ],
+  "width": 8
+}

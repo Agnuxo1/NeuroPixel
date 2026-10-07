@@ -1,0 +1,4610 @@
+{
+  "alpha": 1.0,
+  "answer_counts": {
+    "bathroom": 139,
+    "bedroom": 150,
+    "garden": 147,
+    "hallway": 145,
+    "kitchen": 161,
+    "office": 153
+  },
+  "answer_tokens": [
+    "bathroom",
+    "bedroom",
+    "garden",
+    "hallway",
+    "kitchen",
+    "office"
+  ],
+  "bow_class_tokens": {
+    "bathroom": {
+      ".": 278,
+      "?": 139,
+      "bathroom": 201,
+      "bedroom": 98,
+      "east": 86,
+      "garden": 110,
+      "hallway": 102,
+      "is": 417,
+      "kitchen": 94,
+      "north": 119,
+      "of": 417,
+      "office": 90,
+      "south": 118,
+      "the": 695,
+      "west": 94,
+      "what": 139
+    },
+    "bedroom": {
+      ".": 300,
+      "?": 150,
+      "bathroom": 118,
+      "bedroom": 194,
+      "east": 130,
+      "garden": 94,
+      "hallway": 116,
+      "is": 450,
+      "kitchen": 110,
+      "north": 102,
+      "of": 450,
+      "office": 118,
+      "south": 99,
+      "the": 750,
+      "west": 119,
+      "what": 150
+    },
+    "garden": {
+      ".": 294,
+      "?": 147,
+      "bathroom": 113,
+      "bedroom": 94,
+      "east": 110,
+      "garden": 201,
+      "hallway": 101,
+      "is": 441,
+      "kitchen": 106,
+      "north": 88,
+      "of": 441,
+      "office": 120,
+      "south": 110,
+      "the": 735,
+      "west": 133,
+      "what": 147
+    },
+    "hallway": {
+      ".": 290,
+      "?": 145,
+      "bathroom": 105,
+      "bedroom": 112,
+      "east": 105,
+      "garden": 98,
+      "hallway": 197,
+      "is": 435,
+      "kitchen": 108,
+      "north": 99,
+      "of": 435,
+      "office": 105,
+      "south": 117,
+      "the": 725,
+      "west": 114,
+      "what": 145
+    },
+    "kitchen": {
+      ".": 322,
+      "?": 161,
+      "bathroom": 100,
+      "bedroom": 110,
+      "east": 110,
+      "garden": 128,
+      "hallway": 123,
+      "is": 483,
+      "kitchen": 206,
+      "north": 124,
+      "of": 483,
+      "office": 138,
+      "south": 140,
+      "the": 805,
+      "west": 109,
+      "what": 161
+    },
+    "office": {
+      ".": 306,
+      "?": 153,
+      "bathroom": 115,
+      "bedroom": 121,
+      "east": 138,
+      "garden": 122,
+      "hallway": 93,
+      "is": 459,
+      "kitchen": 105,
+      "north": 106,
+      "of": 459,
+      "office": 209,
+      "south": 104,
+      "the": 765,
+      "west": 111,
+      "what": 153
+    }
+  },
+  "bow_memory_counts": {
+    "00e2ffc222ac73fc59aad7cce285769fe36f21e13d02307c5089d8b86841a657": {
+      "bathroom": 2,
+      "office": 1
+    },
+    "00fc544debee36fdb24cdf41ad2c600b390d53361e9a9a568b2f2c7d7e51009b": {
+      "bathroom": 1
+    },
+    "0115bc45e7e8ed794d11898c35b6a6af5950f12aa5be54fd0b539fc4a7ca8f04": {
+      "kitchen": 1
+    },
+    "018daced5b877cc30ca2718743d14c4363a3a827752a4282d90d22ffc80ab675": {
+      "office": 4
+    },
+    "01d8f6bd04eb6e54d405091c4399d2e22640446cfe43580486ae9f9c11dc8d01": {
+      "bedroom": 1
+    },
+    "021a0f7c2db008c292923181fd512ea935254237cfb385b26a960472329613b5": {
+      "kitchen": 2,
+      "office": 1
+    },
+    "0230c1b5ca87a94bfb05d88f8cce444a624f14f40b1fa45cb330378c054357cf": {
+      "hallway": 1
+    },
+    "0383f42a9773419901dc4b6e39af817c4b3e4f5873b2f2b03be6c7ebb5738947": {
+      "bathroom": 3,
+      "hallway": 1
+    },
+    "0488108f561fa53e843493ff81e2d90bb3f05dd0d173f55063d5f30a248ca20b": {
+      "bathroom": 1,
+      "bedroom": 3
+    },
+    "06709721937fbfa04b9fcde8f72e585ddbf0367027c4f8a0e21e71cec5764ad0": {
+      "bedroom": 2,
+      "kitchen": 1
+    },
+    "06a2d38389765da3a7b5ee6fbd240a7b716e52c027d18b4a27dd45fc0152c69e": {
+      "bedroom": 1
+    },
+    "0754019f4877cfb705ac3f628c14294b8e08a718156a21ef224c39c22d4aa454": {
+      "kitchen": 1
+    },
+    "07680df63c0aacb26946ea7875b8b213840acd18966e84462d6a3e7791ec0324": {
+      "bedroom": 1,
+      "hallway": 3
+    },
+    "07c49329f42d3fff5cb03bc0e4376c77431ac62dabaa92a0fb4f54fc5ecd713f": {
+      "bathroom": 1,
+      "kitchen": 2
+    },
+    "07d12c752439d85b99b15f44351f0a82de9da8db5ddf00ec6cc02dc6a873889c": {
+      "bedroom": 1
+    },
+    "08681d96ebb7a043b8aa7f0bf99a88cc6c90fc138d3a10f1215b09a818e5ceb5": {
+      "bedroom": 1,
+      "garden": 2
+    },
+    "0921a80e316d6d52c37b9a9482a7ca22db1f8523953cd04493b6418b2c64a20e": {
+      "bedroom": 1
+    },
+    "0a1a5e583104197a7877e7dcd790a083d5597fb9ce72b231994bc4e6c483e8e8": {
+      "bathroom": 1
+    },
+    "0affc233a2170fed8cf37f29f748ffda583e271c9e8c73e7da27d9e97468a4b7": {
+      "garden": 2
+    },
+    "0c4825319990cb810292401716be16676b80d3460f5883fd1b5e265be6df5350": {
+      "office": 1
+    },
+    "0c6baf3aad0d144e1d4ff795d7de9a66c44445d25045eadb7aa7203abe2e8c35": {
+      "garden": 1,
+      "kitchen": 2
+    },
+    "0da78084941e402a89f6e047e8a5ad563dda7ab3d5f7a2380eee4fd0c0ce4022": {
+      "bedroom": 1,
+      "kitchen": 1
+    },
+    "0dceb73f12031b2aab2a8e0214c1ef6197c3bf25d23e86a6123bf7071ebc1365": {
+      "bedroom": 1
+    },
+    "0e43b3408c2e36efb8628c791759b0dbe48762e29ee3574bc512fff3b541a4c7": {
+      "bedroom": 1
+    },
+    "0ec8267f6047f87c03707ff8dd2301dfd62fd8c1acbe56146825e337245e7699": {
+      "bedroom": 1
+    },
+    "0eeb43c7d8ebf567c472e077bf43327ab86abdc71a0605b9ad65432f0a0a57f7": {
+      "bathroom": 1
+    },
+    "0f303784c74b6246be1478f68d75698bf262a157a4b34e75524d5176e695dad4": {
+      "kitchen": 1
+    },
+    "0f85ed5135a9f942c21d1cbbdd72c5b2adbb084b5cb4da14181ed1f194686bbf": {
+      "bathroom": 2
+    },
+    "10778640a2340d6e0209a25d53c95ca106f72bfaada8b1e258bbf3ecc314148d": {
+      "bathroom": 1
+    },
+    "10bba0bc4317abdb9f431b373058a674989874742cdbb44769c8c8da598c4246": {
+      "office": 1
+    },
+    "10cadbd3781b9aa5806e6582e2b45903b05a7b39170115da4aa914ef436aaeda": {
+      "office": 1
+    },
+    "128c36dde3f25a1984ed1847a4953479278248b68132a81dcf932d250aef6846": {
+      "bedroom": 1,
+      "office": 1
+    },
+    "129d9d74b34277d5028bd0247945d5f060039abf67dbe8d32a98035a7868a370": {
+      "hallway": 2,
+      "kitchen": 1
+    },
+    "137e1324c6870297de500d3a33caf114052c936ee5987096f0055e2e921370f1": {
+      "hallway": 1
+    },
+    "14f0ac55dbb6c86c4e322b62d2bc27e031ccddd556877a5fe0e5ccd389b69766": {
+      "kitchen": 1
+    },
+    "163661d82a4f14139db1e3c653f94ab679cefff337b71042bc51903e3a3e4862": {
+      "bedroom": 1
+    },
+    "16e719ddf9b7f571d56ae58abdb4503e261a8e8101f6dd50565ef1653b9486a6": {
+      "hallway": 1,
+      "kitchen": 1
+    },
+    "16ef3577216afe7e5efdf34e8c7c4d74816cfbd9acc614c45051b133bdc1c65b": {
+      "kitchen": 1
+    },
+    "18e1ff61e56c60f91da304339e423d0523f4a1a274ed427747a7ebc44eeb44dc": {
+      "bedroom": 2
+    },
+    "1909c33aed59c3bcfa27fd51f54d16e3f2de98c48ac7b5894d25a07cec3c6187": {
+      "bedroom": 1
+    },
+    "1a07e267ee747a96d9c4fa7c6cb30a635f85d78d2b91e96b6001a2da497bf29a": {
+      "bedroom": 2
+    },
+    "1a4bab75f01afb7a03bb60335829132587edd676555e2b4cb19e09546f681396": {
+      "bathroom": 2,
+      "bedroom": 4
+    },
+    "1a7a2d1e1ecb582642cc79d65d8713a7c2bba15ba11590b17a427a8d23f30ced": {
+      "garden": 1
+    },
+    "1a88fb565533ca3bf9606037c891045c694d0e9d76fd667aec94feedac57021d": {
+      "kitchen": 1
+    },
+    "1ca5d92c27fcfd38bfa81af51e3d21f9ecb93b599b518f22fa0d547ae7261707": {
+      "garden": 1
+    },
+    "1ccafed57e171e2a3298bab1d8f592af64ba6bf85ae44cb32d41566b8c501cd6": {
+      "bedroom": 1,
+      "garden": 2
+    },
+    "1e2360793f206f03078eecc40c5b99d9dffca4230c32f98fbbe489edc54c2889": {
+      "office": 1
+    },
+    "1e2da7b578896dc9fc5b43dbb9acf4ec5769facfc03354b3f8ac28ce26a2f8f5": {
+      "bathroom": 2,
+      "bedroom": 3
+    },
+    "1e7c60ced7cdd976e325a206cd94e9ca53432bdd0f3e0b9463dd6f8323edf339": {
+      "office": 2
+    },
+    "1eead031cc2c0b0312bf6e9668da8841406572e7e88a1b713da131f7840ecda6": {
+      "garden": 1
+    },
+    "1fdfa1f3144813e60c6b4001604cf40e63da05f89aea661eab24d1270111446f": {
+      "garden": 1,
+      "kitchen": 2
+    },
+    "1ffe2499065e83d1502292a3c971a2910cf78d2ae128488769b63bc099192320": {
+      "kitchen": 1
+    },
+    "20111456b266807d93b82b2121016da86ea6fcdca97e591b88b1a6c48f21ed37": {
+      "garden": 1
+    },
+    "222d267b620ab209278b1f059d7dc81abe5d20a2fc1787f32a1225a139624aa8": {
+      "office": 1
+    },
+    "2271a2b54f3739cf8b074471182f14118e503efc6a1ec669b1fc39e8ff3c4cc6": {
+      "kitchen": 1
+    },
+    "231947189af7ffae71db17235e35404971379aaf7042b461190337841bd5c584": {
+      "hallway": 1,
+      "kitchen": 1
+    },
+    "23f4c02612ae75d8ebb4d888f6c010e0dc73c4f4a8ea835e53d4dc3b4cbf0477": {
+      "bedroom": 1
+    },
+    "24911f30bec030e6593e69c227b5ee09c35ef8354879eeb840cad4c2100ab96c": {
+      "office": 2
+    },
+    "2496baf5b381ddd98c6b0cc1f38ce6b72e82f1794abed9b1bbddcfc35a5dd096": {
+      "hallway": 1
+    },
+    "249d2bf88c7bc99360ab5c77d7fc83f08af2c86ccd5f766c4730a4242c402d02": {
+      "garden": 1,
+      "hallway": 1
+    },
+    "2631723b2c28ccb63ea9281a8b4444fbe85a7de517f1d97e3fafd08ecfeae0dd": {
+      "bathroom": 1,
+      "office": 1
+    },
+    "2705a3e96d44b7e75c599bf2abd0aea039d43c508c1a69982a9f4de485f10f6b": {
+      "bathroom": 1,
+      "kitchen": 1
+    },
+    "2792f7dff92c2eb2dc9e2452b26986ca7e3ec9c04d9732ad7651874037f16ccb": {
+      "bathroom": 2
+    },
+    "29e2f29ca8859108dd9da12456e79077c14e4eae50da430cac38c41571f94a9b": {
+      "office": 1
+    },
+    "29ff8f4a004aad7f1ec77c6e68bf0376153bfdbe989be184921e4164dc7ddac0": {
+      "garden": 1
+    },
+    "2a49c1e30fc20a8611ff17da30599d5a1951c8e387b6a6aea150d101aed32cf4": {
+      "bedroom": 1
+    },
+    "2bdc03313432e9d8a3ba7c6294df8b4a9ba46b3808dcff5586f5989ce170aef7": {
+      "garden": 1,
+      "office": 1
+    },
+    "2dbf62d2330e8fd93ba85f16cc9b2885a6655465213df46a065b1a9fc58a95c5": {
+      "bedroom": 3,
+      "garden": 6
+    },
+    "2deae227fd267f2a26a329131463f1c9b262ad33ff5c66dc223e9c0033736e81": {
+      "bathroom": 2,
+      "kitchen": 1
+    },
+    "2e00b1437945a10d5deab67898daeaa875d2816fc3c9371bb6ccb123fdd60140": {
+      "hallway": 1
+    },
+    "2e5f948d064f475d4821d219c5a3fc6b903080f0bf99b67a8f52037bd00ac234": {
+      "garden": 2,
+      "office": 1
+    },
+    "2f2fb4208b465125efdd41cb2fe0bc9f57bc6238a6f467e96c920b4272329bb7": {
+      "garden": 1
+    },
+    "2f4936c7b26bb0ff066ea272ae4be3d19082b61a8c19d1ef31450a21c65c8d8b": {
+      "hallway": 2
+    },
+    "2faec921bdd32649704c9b8df2e920962294d4b5351a59cc6ac8832edcb3ab87": {
+      "bedroom": 1
+    },
+    "2fb47d640c9f212074cac5f34b380ba1bbf98c9b88f0b591cf4a34c8a55cee60": {
+      "office": 1
+    },
+    "30107fd76be8426de6c1d573ab314ee28ee54080811c80556f3dea20a6aef002": {
+      "office": 1
+    },
+    "3060e93b5e983cf8fd7703637654dc3e1f0d5864b6f726a2bbb08bc2faf3d71e": {
+      "garden": 1
+    },
+    "30d259733bbe2bb8dd285f09cbab510f01ac2d72290d283490d7a6aea5132e9e": {
+      "bedroom": 1
+    },
+    "3114e2be471073c967049cca64c4df3c24c975d790931f9e583e3fe6d36724a9": {
+      "kitchen": 1,
+      "office": 2
+    },
+    "312b706da713faaf31352e289fc2b9048cafeb6e269658985405b46019312975": {
+      "office": 1
+    },
+    "31be038411faa3aab7648baa6db0b805ba38360f533040e0fbad42d5853d6e22": {
+      "hallway": 2,
+      "kitchen": 3
+    },
+    "32200f08484d4ed45ef44fb775cc3a5e808b7f2dd343182ea53cabb32d5c0b6a": {
+      "office": 2
+    },
+    "3245044aaee6ab57d699997087eca2539ccc0add77025975f12f6c07119b570d": {
+      "office": 2
+    },
+    "32b4d63590cb1246ef38008f02002ed8b44fd5f07d66089cf1a1d4b62c7e6d24": {
+      "bathroom": 1
+    },
+    "332f25b50a8a202b67cccfc3aa598b92b4a3cc3b9c3c2189544adabbf00a9c01": {
+      "garden": 1
+    },
+    "346c9f14da44af2251181284668399424c909055f6c712c3340ba6e19ac45b2d": {
+      "garden": 1,
+      "kitchen": 2
+    },
+    "347c7684adb679d6d72e8cb45b6efcb74089901edae7f47b7d8968c74e37b070": {
+      "bedroom": 1,
+      "office": 1
+    },
+    "3554829d87c0d4c7b351c0a501982ede543c3b5941f35e107e09deb5159701d3": {
+      "bedroom": 1
+    },
+    "3567567e6caf566e22d7fd6847b948264b8fa1fb06060ed9745660524a7647e7": {
+      "bathroom": 1
+    },
+    "35f000c7b421f5c715ec5986be4441505ccd292b73f0db0defd3f97f9505f990": {
+      "garden": 2
+    },
+    "367365e61e2b93d93b09a9af45fbcc13ae45c6f60d6610942b71815e8c37702a": {
+      "garden": 1
+    },
+    "36ace002bb2adf0bbf42855483ea82ce4ede711071ff4e78ca4ee83bf5d0ddb2": {
+      "kitchen": 1
+    },
+    "36c606a2a589cb53daa8a94df8b1d5133cdc601b17aff00290fe24f7c57a8598": {
+      "bathroom": 1
+    },
+    "3736d5fdc22434ee831951f74bd33bcf829c39f7ff59b37df798b30cb0f1cc05": {
+      "kitchen": 2,
+      "office": 1
+    },
+    "379e926e73fcc43b2395954e60ea870c91e5058ec6777897bf231f828ab6e551": {
+      "kitchen": 1
+    },
+    "3911fe89c26a1883a71492d54c61f9a3617065c562b330dfbeb23c96d673583e": {
+      "garden": 1
+    },
+    "39ccbe4a523ddcf477448450f360b74b32f6f8408fe03ae7399b4445e3b3d78f": {
+      "garden": 1,
+      "kitchen": 2
+    },
+    "3a1557abc0a7b5fa6f4c3bfaaa159c71939a3ba75368c39d6a5c95b5e6efe97e": {
+      "garden": 1
+    },
+    "3a505d4857809eb61cd85c7e9b7e1b10053546cdcca5fc344c4a42ee62387011": {
+      "bedroom": 1
+    },
+    "3a6e3cdc57913f5c8ebe7d94c045873e8a428f187985434a301ed29eb72cce45": {
+      "bathroom": 3,
+      "bedroom": 1
+    },
+    "3a99b8da6cdd9f9167a1dc985508f8a2af07de5bc6d60ef1402702a5c65a8cf6": {
+      "kitchen": 1
+    },
+    "3adf7534851324952c090d051c31f150116a3292735384bd03d8b15a78fcc3b6": {
+      "bathroom": 1,
+      "bedroom": 1
+    },
+    "3b4e91f27a66038ed799ea83e8513e77a997f59f2d0a688df592e196f336701f": {
+      "bathroom": 2,
+      "hallway": 1
+    },
+    "3bc109fffe3dc15fb1a9aa44e184f45f67ed3ea75a7062d6d557c8653b52d1e3": {
+      "kitchen": 2
+    },
+    "3c859d29cb2fc16ba3c14a83d5f3826926fde31ce86cc49cb6a887f01a4b032d": {
+      "bathroom": 1
+    },
+    "3c95910d19179900f2af66da5896050690453dc5759b60618f11ca79a722fcce": {
+      "garden": 1
+    },
+    "3ebde4e476dbd7525f2ec604dc51392aab6d983408a35d3d5577518151836dd7": {
+      "bedroom": 1
+    },
+    "400bb714b8250acfb50270bfce40dc8337f17e03e4987424353daa9fbcd38c5b": {
+      "garden": 1,
+      "hallway": 2
+    },
+    "40cc192bdc828c5cb1b9c3c89db7f94e2688bfc0c0a17ce2e9c0595bb39d09e6": {
+      "hallway": 1,
+      "office": 2
+    },
+    "418b741b8e83999d97c8b08d01e1d4baab18fee83e06908a3a83c8dc87ea638d": {
+      "bathroom": 2
+    },
+    "41ba0dde6fe830147471022cc8795ba95d4af1852f7982b0ddbccec6cd26afad": {
+      "garden": 1
+    },
+    "4293c55be925c599999bdb9b825f0ad3d26aef66ba85fbf6cf36df5348ec39b0": {
+      "garden": 1
+    },
+    "42b98a141d6047347f912312d20690b5ea77eeda8291c03acd56a3298b158788": {
+      "office": 2
+    },
+    "433aa6fb51621dbd7350aee78661fb6a4604b81b907bcfe8e54c8625c4133b35": {
+      "bathroom": 1
+    },
+    "438f063670349683c0ab5773187d87729e1bf3998f97911d2ac2dc4e6d728547": {
+      "garden": 1,
+      "office": 1
+    },
+    "44da26c8bcb979073e67a3dbab4ddc4531d691e51e2dcfe0b433fb01381d4979": {
+      "hallway": 3
+    },
+    "451d23e4bc4c5efcf659501f73cf17320110b1e0f62775cd2dcc762f08154678": {
+      "hallway": 1
+    },
+    "45c48628aefb5e5a73c429e049f005943b51b306e856deac82128fa5502a0847": {
+      "hallway": 1
+    },
+    "46018b4ee1eaca57bdb734513ee9aae8b9a3a87803c3abe7237c135b57a20753": {
+      "kitchen": 1
+    },
+    "474dcc16b0794e736e19edda2fb49992cefae835285f60df186b6e99c36d0c84": {
+      "bathroom": 1
+    },
+    "481a13718f7e87bd02c388708eb073893a87bae7c694a82acdf787dc1abe4321": {
+      "hallway": 1,
+      "office": 1
+    },
+    "48a262e9ec01824c1e96f2d84a37d4ddcb8b5598f806102be311b55776d92f47": {
+      "bedroom": 1
+    },
+    "48be987e101522ee3d95df38dfe0ddaae4e8afbe26a80f952e8867f654df7e51": {
+      "garden": 1,
+      "office": 3
+    },
+    "48db11d01b82541444f87ae273c49f0071f56de615f2252f94c9d39db848a357": {
+      "bedroom": 1,
+      "kitchen": 1
+    },
+    "49d58dd8820db6608af06fa53fd33fe880444cc94351149b35c2657ebb19a7e8": {
+      "bedroom": 1
+    },
+    "49dd9b9f1cde427fd5029696fb4f652bf6ec37acdf1b721ea10f3bece6f54ae2": {
+      "hallway": 1
+    },
+    "49f34fb7be4738c1c883d3c1bbf532aad2a5cf70ea9102443a1af91e0b2c6fc0": {
+      "office": 1
+    },
+    "4a3fefa6e8b864c022d0cb07905269e4a76e0fe12f0511e5069fb1a0e57ba338": {
+      "bedroom": 1
+    },
+    "4a7134c2ea54dc9a9d2cb4a6dead39ac68057439eb07fbae82a9372d38a108d2": {
+      "kitchen": 1
+    },
+    "4ad1bbbe05006313331011432d302cc165f15747adc3a605d052505c024949f3": {
+      "bathroom": 1,
+      "hallway": 1
+    },
+    "4c1f0ec743f2d25c3141a0c9d000c149f019ca45beee99a6686014d27bc23173": {
+      "bedroom": 1
+    },
+    "4d24c58bacd3aa5379b65c0459db86b28c7f43f78e11060de0f34080053660fb": {
+      "garden": 1
+    },
+    "4d6cf7903d3c9f2349435c0af5aef20a7f59c7838c983295dea2695ad3405bb2": {
+      "garden": 1
+    },
+    "4dffb2a2e5518904e3f4cb4dbc13f808b6a820d2849a8f89cf92001f3497ef9c": {
+      "garden": 1
+    },
+    "4e03b7200d398b07a8ff8ba43d7abea4a7f420cee66494ff7a48d93a1f62cc00": {
+      "office": 1
+    },
+    "4e82a0ceed7b974c84735005bd71475bfb2d75247497a195b0807253c89b9145": {
+      "office": 1
+    },
+    "4ec966e8740221981741f73777183755047277ab469cd5e31e1b74ae4f725b7f": {
+      "hallway": 1
+    },
+    "50b0ffa9e3795181b97af3bb888a3b570f74cdb2bb74f7735c12bc2db1f24cf7": {
+      "bathroom": 1
+    },
+    "50ecdf4f105d857461e3a82430bd5f4387de1e3c60d6b93e9276cc748f754170": {
+      "kitchen": 1,
+      "office": 1
+    },
+    "524cea85f4aee52bb8c852a3d80fdce6a577b7558eef6017b7a3ff1ed62e25e6": {
+      "bedroom": 1
+    },
+    "525eda9f36de881add93c3cc04c2d604a221f56b2319bffbabe7ff7d42a1523a": {
+      "garden": 1
+    },
+    "5271a443b83ce18136562121ff731bfc8b782ceadf67d30c777001390d1fb197": {
+      "garden": 2
+    },
+    "53cfaddcd1166e273c4ac95179df2a1a1c38952edbe24774530960d85abefd76": {
+      "bathroom": 1,
+      "bedroom": 1
+    },
+    "551177ab8dff10ab95577e8f4b1ae7c39cd03b284b86c8b9980d6da4d88673a8": {
+      "bedroom": 1
+    },
+    "55441e52052e81fab2898ac823e0e74ce01de3f799b983357c864cd2c3ffdc4b": {
+      "kitchen": 1
+    },
+    "558115bb6ced07cdcb4df57a9e498aa5cf392000949308f61a9f2e55f89522cd": {
+      "hallway": 2
+    },
+    "55f0da2732ea8759369855755817e5c673cb8ce2d9b3f6eafdcfa8333c5b9e0b": {
+      "garden": 2
+    },
+    "5641a2c01fc21ce842141b431b72cca04df7131ada4c34e86c7ea13f8374956f": {
+      "bedroom": 1,
+      "garden": 1
+    },
+    "5646727a54323b58bec1bac5ab5d7d8ea853766b4743ec65388de72fb6582a98": {
+      "bedroom": 1,
+      "office": 1
+    },
+    "566b33c08b4cabbb19678fbb57e6088ed03eaaf373acfd1859bc3471118d0081": {
+      "garden": 1
+    },
+    "570f176c21780a55f2b1921810ea755d47570c13a0e3d87dc773cd1e6fbbdbbc": {
+      "office": 2
+    },
+    "5734ba48933de61be46a5acdce0d0ceea9bc105fde211b26ce2cf24e4343a3d8": {
+      "hallway": 1
+    },
+    "5753759a0c2ab70a0101241c87dec9bb0391ddb9379ae1e9852ae3bdbe8fa066": {
+      "garden": 1
+    },
+    "5859c2ec652b3494bdd097c042958141f622e9b3bad701114b12b2a9c8c3fc5b": {
+      "kitchen": 1
+    },
+    "587458f672fcb94381b6d5d366400147f37b7dadcbeed5ffc67596c95b3b96c9": {
+      "garden": 2,
+      "office": 1
+    },
+    "5b1f4514b66bdbb4cf3b9ff273bf4a9a0a96fc74053ab638b796438a644f6fac": {
+      "office": 1
+    },
+    "5ba5775f14c72fbb7a3762e56802c6a9ec2269c694feef2d9afe6c95f600e4fa": {
+      "office": 2
+    },
+    "5dc6566061ce29e3648c8a1f5a3abb4779d16474e3fccf1994dcc572d4865149": {
+      "bedroom": 1
+    },
+    "5e23a35756795f5d29f29462fc68362d10a08eb9b580add9b43dc65448caeade": {
+      "kitchen": 1
+    },
+    "5f5a76f936f27901ac24226cb04fe0f19d7bb4ae156fc1a737bd6c6cfb6a993d": {
+      "bedroom": 3,
+      "office": 2
+    },
+    "5fcbfaf81a2724c7bbfd17f3d99ccd9906b61cbd1635dd124a883c05d4672e58": {
+      "kitchen": 1,
+      "office": 2
+    },
+    "60723977e6bb113fc0b34fbf6b4b8977f27b36cdd6cc79b118e716c1b93a2e09": {
+      "bathroom": 1,
+      "kitchen": 1
+    },
+    "608e0cc214653150c6080027347d846ee328ebf0b63f39694ab9ae0efd26ede9": {
+      "bathroom": 2,
+      "bedroom": 2
+    },
+    "60957ae792fd111e7d23b79e07d383192a535d2a73a53f78027322156ff5e828": {
+      "hallway": 1
+    },
+    "60e4bd340c5f22648d82c8e0e39bca32a15b065080c5f5e5a9c6d5601301a7af": {
+      "bedroom": 2,
+      "office": 2
+    },
+    "6130b8ca58b5a57490cf1d645e9e9e88151754981365f8f0a7b864ec809842d5": {
+      "bathroom": 1
+    },
+    "6138f92e082c78344d2c874d8276c485d3bb21adb6dabe65e0b3700199ec7821": {
+      "garden": 1
+    },
+    "61cfcc2447f36deb569b716ae553c6a4a2f04a3596387753a65b4894e3910546": {
+      "garden": 1
+    },
+    "61f6fe190c9c372bd1e420d2402f8609f4f082cca2e327a7196a9944d36d5a0e": {
+      "hallway": 2
+    },
+    "6206db4726a03749a9959f9d33d6bcb0169a136d08c80d0a2466c54c76b893f2": {
+      "kitchen": 2,
+      "office": 1
+    },
+    "62eb73d0d3e2ca6305bc8d8bfea822fa5317c9e232481723f4a538015551fa0b": {
+      "garden": 1
+    },
+    "64204d4cce42ecb6043960038c2d19b59c9ef6d46587497b4b77b1a160845633": {
+      "kitchen": 2
+    },
+    "65363d86aa3f2e0a4a397f573f0200253af68ba31306a03b80c2a024fb4c559b": {
+      "office": 1
+    },
+    "655c883dd8cbbdd7a4fe7ea09b50439701578aec693e9e6afb9a60cdd6c16688": {
+      "kitchen": 3
+    },
+    "658281bc380b4238b63a260b2f1ac98e2dcd339745a02c890e6c2bee86f3dae4": {
+      "office": 1
+    },
+    "66c34f50095101029f24f7fb041dd8bd7f30e753fdbb29852e76c555ea645d6e": {
+      "bathroom": 2,
+      "office": 1
+    },
+    "67243fa9749c871b0246e21d99b05fd004e6a1855f2e201b0d79e30e0d74ef9a": {
+      "office": 1
+    },
+    "6821fc46bc34e3ccf9dbc9ba9fc1a588908a4d34d18546491dccb9727a0f7639": {
+      "bedroom": 1
+    },
+    "684172bfaeecbd2ae6e26f2cdc6825a12265b034e953594c8ed151e3ddb1e66f": {
+      "bedroom": 1
+    },
+    "68d732d577e05b63ae8aa4051e025ba3e228babbccbaad6993057e4f5e47a30a": {
+      "bathroom": 1
+    },
+    "69149e5b0c7952fe8acbdef29312701aa1060fea373972808b79ccd8d5cda451": {
+      "kitchen": 1
+    },
+    "693ecbbc4ea5c799699b17f2c056221f055a7573f288909928336b65e05bc875": {
+      "bedroom": 1,
+      "garden": 1
+    },
+    "69451c597b2fbf5d753d03864b99c7f07e6238852108b7b18ed18b5326059e32": {
+      "bedroom": 2
+    },
+    "69af57b7ef324d447e647bf2c5a92f177d8908dc8f7e75a9d06537f92a83d1b1": {
+      "garden": 2,
+      "hallway": 2
+    },
+    "6a100337e0d25c2ea0560b23080cd95022bcb02299f17e881b0de8db2b15200b": {
+      "hallway": 1
+    },
+    "6a2374c26c4cc257c44753598ba3ba5aa4bc08da28ed11d8f10e93a51a2223d2": {
+      "bedroom": 2,
+      "office": 1
+    },
+    "6a8c3fe38771312fe2d7a5d4f47ca562466b9bb953221c671cc2813a210a86e7": {
+      "bedroom": 1,
+      "hallway": 1
+    },
+    "6af20825ef6011aeef58d81d466028106df712f18df551f20edc81ec29562a88": {
+      "bedroom": 1,
+      "hallway": 2
+    },
+    "6b8ede150d04be72d03c8f827a199b3c97b928ef3995a93cbf4cecea5ffabf87": {
+      "office": 1
+    },
+    "6bfdd59dccf9a2e1e006110717637eaad82e653d0596e8ada0b648d4cfb6d7e0": {
+      "office": 2
+    },
+    "6c5aa308134ab6d18ba5fba2c6d73cd1eb0488300b365cb6b89976bb2d6a5eb8": {
+      "kitchen": 2
+    },
+    "6cec88607c79071b787953f8b196967afe7d39ed6c0da9a1fa5a1b51da472d73": {
+      "hallway": 1,
+      "kitchen": 1
+    },
+    "6e413d55d5eb909baaff32de11f3f7466b33d2e4e3da2bab017f78c6957cc0d9": {
+      "bathroom": 3
+    },
+    "6e8976dbfccd00b7a5d0a0f0eac494708addfa0676322157e156da0d321d8e54": {
+      "bedroom": 2,
+      "hallway": 2
+    },
+    "6ea68983f994e6bb6bc2539f46efbc794d69dc904731ccec94cb0ede4be684e1": {
+      "garden": 1
+    },
+    "6f1bcac7050371cf3d3187a058ed9e333ec188364a2c53022b91af9090ee3da7": {
+      "garden": 1
+    },
+    "6fc02ee1498392a2bbe71990bebad7dc5643888a03abc000f29d3fd3cb1ff657": {
+      "office": 2
+    },
+    "701752b37b203e4b0a156a69a363013ba7d84f354029fe5864ab92ee47370b01": {
+      "bathroom": 2
+    },
+    "7046cb05663b2baf30ec2fecb72a31bffd6ec8c5cc61820b86af47852ab6e823": {
+      "kitchen": 1
+    },
+    "71089b7da3cb22e8724a307e4471436596b7b0d0b02f86f395546025b46bec70": {
+      "garden": 1,
+      "office": 2
+    },
+    "718f04ef3b5a0d156c773ffc550c1f01941c977fb652e67361c0b2108e6f59f6": {
+      "bathroom": 2
+    },
+    "71a3d73e2021762b6adb688b5d55f1d97235f9523f3ac6529f312ad342cbef59": {
+      "bathroom": 1
+    },
+    "71b6a874a148369789c733b70000eaf422b353c645a59b3900c2d5fdb46c8011": {
+      "hallway": 1
+    },
+    "71cd267da2993cbaa28c8a99c2c8e013f9628829c21f34685f188184f14b1589": {
+      "garden": 1
+    },
+    "726119adcd36c23e55586eff3d26bbd73b7cf4f7fe177a37fe8bcbba0e9cbaa2": {
+      "bathroom": 1
+    },
+    "729836ccbc9bb5879150860d376c048d7149244eb3f73542ad0b26fe3424db39": {
+      "garden": 1,
+      "hallway": 1
+    },
+    "73e7556e1b813cd85e597063949fa3002d83ead4dedc43db3d6f1ba305b0568d": {
+      "office": 1
+    },
+    "759d97dd2a04c11b31cb08d836bed00c5ca667cb8d8d6d2271ea487e2b828351": {
+      "bathroom": 1
+    },
+    "76d0dc668a8ebf4ca3f4d2a623e2c536d7873638987d8844946193872c5aa90c": {
+      "bedroom": 3
+    },
+    "7715fef005aaaee625b6d48b781229699820b382a2b76c1fd7e064e94780e5aa": {
+      "garden": 1
+    },
+    "774535b8bf9282f49006b994edfd3c83424eb76b45f9758b193657be60e46bb0": {
+      "garden": 1
+    },
+    "775119a3093d851808b3b387fe05b3fe8f110a529e79dd2076f3c666d7ba7a3f": {
+      "bathroom": 2
+    },
+    "77784aa3164fa4a21e0f4034954bcfad940190e8915f05389298277b3f585075": {
+      "hallway": 1,
+      "office": 1
+    },
+    "77bda5f264da5080955c23a8b1b9add41bde8922f8351235789f5289fe6b8242": {
+      "bathroom": 2,
+      "bedroom": 1
+    },
+    "77fc2ec501ebb2cbcd8d27a10b212ca996cecd3a30abef52c3a7166c6920b584": {
+      "bathroom": 1
+    },
+    "796d4f6e4a9eb26d66ee391b757892648c40d698ada216f81d83be61950a8351": {
+      "hallway": 1,
+      "kitchen": 2
+    },
+    "79efaecd60c81549bf1e81fe252aa3426c39426d50cda834bfd40eaae4c48998": {
+      "kitchen": 2
+    },
+    "7acc9185c0691dad292a80322ad4c01787bc9e4f2f6323dd67141558864d33c4": {
+      "garden": 1
+    },
+    "7b539bf5af7d2ac90fa94c0b975e5575bba143a0457d9f8e7d3c1c69adc6349b": {
+      "bedroom": 1
+    },
+    "7c796ec57aedbc664b970bc9ff714150179411f456c98e25c5b5cb845af53026": {
+      "office": 1
+    },
+    "7cd13b01248b3a834f246459cdfd162d6747133d64e67bce4f8dc9b6c48472a8": {
+      "bathroom": 1
+    },
+    "7d44e3b5cb74f4128cbed8503684aa1c3638d20fcc3eb98d05df04a778353158": {
+      "hallway": 1
+    },
+    "7e3f77a53e2c0986618824839a9c686efe063e19ba45fa0783ff8546e484dc51": {
+      "hallway": 2,
+      "kitchen": 2
+    },
+    "7e4165bd70c5be507515f0e066b6a47efc03a9b50461d421239805f8f8ec4a1b": {
+      "kitchen": 1
+    },
+    "7eac32364766c3804feb3c3d454d6e1bbdfc2ac5b41010ff47784b084db8d2d2": {
+      "garden": 1
+    },
+    "7f8bbeaac5c9343708260ad1a515116465f038d82660dedc419a13663ffdc224": {
+      "kitchen": 1
+    },
+    "7fa11812db87d62247c9cdb86fd81bcdbe7ed84cb5c7af4d950a70f36ec57df0": {
+      "hallway": 1
+    },
+    "7fb9d0952f1f637480d3d8bbe6091fc8c1a4ba7f76df0262c9b1f5610d3fe636": {
+      "bedroom": 1
+    },
+    "7fc310c65250b068526244b379a145830630502159fe8efd56c98f5daa24fed2": {
+      "hallway": 2,
+      "office": 3
+    },
+    "80fa7bbb1ea7aebfa5e0fbfa7fcc33e1e300abeeda081e63ddfa55f3636280ef": {
+      "kitchen": 1
+    },
+    "812a753f9ce91bb84c3357f30326463f4d4b0a105d08751b241a0f449c6f0f71": {
+      "hallway": 1
+    },
+    "8148e4af80a5a348d3eeb7110e624025bc81316d4ba308301ec6ec66d976e742": {
+      "office": 1
+    },
+    "81b49fd53efac230c02fbda9e4771281ec9e6dcc63cb5d94e1260ac10b2b8b03": {
+      "garden": 1
+    },
+    "81b5090cc45922927eec9b5d70ea0ffe78c46d707c2f798073234c9846c8b549": {
+      "office": 1
+    },
+    "81fffaf8e2e0feb59b7681a4e890f0cb5158e20635d5faa07f31e75d58354636": {
+      "bedroom": 1
+    },
+    "82485eb52ac07bcb41af22bc5b85f9612d66c0c427e591773602da1ee8163abe": {
+      "office": 1
+    },
+    "82ee5ce4e942496d99617932eda9c4ba654cd868d87a9b26d86045ab8d08a53f": {
+      "kitchen": 1
+    },
+    "8333f17d9206cd1bc8baf4f4ed94a342f974867529852ad7802b752b4d396e79": {
+      "kitchen": 1
+    },
+    "83f95fc69b47967796e62e3b31141e83a7248e97d7e9f3eb1898ba200e3bffbc": {
+      "bathroom": 1
+    },
+    "84a4025edb9b5a20e5a0cf38992a51a925a1f50379aaadb819658e81598d8ccd": {
+      "kitchen": 1
+    },
+    "84cc3ac7e7e74834828f88850ffa8d677bf1fe834f0b9d51dc91b6ac0f3ff2e4": {
+      "office": 2
+    },
+    "862b6c902cc09b8c03a814bb4c20e1a72e176c863e18f369b9198527aefc4f31": {
+      "hallway": 1,
+      "kitchen": 1
+    },
+    "863031d6508a68b667ef7d776843b4a24c3680affdb8c0c8d306269080979d45": {
+      "bathroom": 1,
+      "garden": 2
+    },
+    "86477c2ce92e488f312c1e66af399e43fb6b0966c84a751e6f161481e751e645": {
+      "bathroom": 4,
+      "bedroom": 1
+    },
+    "86988b36cc0c89bfa3e60954b900d9fa1f7bb213beec1f6a6ba9dc82def37eb8": {
+      "bedroom": 1
+    },
+    "869ce34308e07dc01e55e307d2f202ed683fc6705256fc8b35a860b7cee20fe0": {
+      "hallway": 1
+    },
+    "86cdda7d486dd82953e026c1fc882d3fd34810a47a79466a76d07340fd03c051": {
+      "hallway": 2
+    },
+    "86d8f206bff8019c3a11704cdf41f27a41334eaa5eaf8b81ee9914988f4cb16f": {
+      "office": 1
+    },
+    "87036238fccaffb1904c4f61e4e8a13848d5e3b31b220a785a6c9e2b91a10b5b": {
+      "kitchen": 2
+    },
+    "8728f3f9fc8cb820dc3cc5e3c6528d28518ebdbb64a03a3eda0abada5814dadf": {
+      "bedroom": 1
+    },
+    "889f57e28b17c07c98d39953360464b4b7089917343ad9b7e3d5524f8a33fd54": {
+      "garden": 2
+    },
+    "88b00513c55b32ce65f614d5ebab75c29f69a3139e057a5c50e936b42357c98b": {
+      "garden": 1
+    },
+    "88cd719ecbf263b541c3f1c51809c79258f6c7270c8afa9c92543c72b3dc82ff": {
+      "bathroom": 1
+    },
+    "8a1fc009020426734bc41c5b012408c9ebe07d0201f28ad6d7646a88806922d1": {
+      "garden": 2
+    },
+    "8b40aba75cedc9969220b8129234de2e7fdbced1bee974c1ebfde173b5def448": {
+      "hallway": 1
+    },
+    "8b55aeeeae8c5f2774be851e54c859335479da10fbcbc5e266bf93fe70538fa9": {
+      "bathroom": 1,
+      "garden": 2
+    },
+    "8ca6140df3a8e83bc17ac36b2c4635fa9b2033dfdf2b3cd49808337763bd0813": {
+      "bathroom": 2,
+      "hallway": 1
+    },
+    "8d26e68507be3147f78ab3adf6bbbb159f9d7372b5b42adbddda91470b772f21": {
+      "bedroom": 2
+    },
+    "8e734aa98635a71b9e4208b5c4a4e0e97940ee6ece173538fa6f0dd076d30c3f": {
+      "office": 1
+    },
+    "8eb098a3f41691a0b104a6532d7cc6b74debb8f9a475e311eb726149dffd1837": {
+      "hallway": 1
+    },
+    "8ed53bc7dc176ede7e06e74660905a2f80761dfd8616f02eb908a9c75d3f766d": {
+      "bedroom": 1
+    },
+    "8f6ce08af6d1c7f34ec4d3ab92010b6c660c8195aa59859875005c0eb3cdf54f": {
+      "bathroom": 1,
+      "office": 1
+    },
+    "8f91ef5f7ced37a401f380356e223167d3b15bc8599180aa566ae7357a1a7708": {
+      "office": 2
+    },
+    "8fb08fea196f26ceb34fd80caf6d7c00705da08db04fdf9efa51128b03e1c79e": {
+      "bathroom": 1,
+      "kitchen": 3
+    },
+    "8fedba80ceb26e587e40b13c0ee905aaf01047f785b50355dadc2aff984d410c": {
+      "garden": 2
+    },
+    "8ffccea2c30503d0435b0cb8d28a300dfd17e3fec1710a533cc8d47107878e97": {
+      "bathroom": 1,
+      "kitchen": 1
+    },
+    "90137a12b93e67cb22f60898d84a6f85c8b04e07361160a474b1b0cccd34eced": {
+      "hallway": 1
+    },
+    "9088bc3773ce05b294532e5f7f3c9820e6fd04a70aa5177e94f3b02692c33232": {
+      "garden": 1,
+      "hallway": 1
+    },
+    "90b72c63b7dc6a7f591e286c088d9040f4840cd182f0c3145eb41bebe7b5425d": {
+      "office": 1
+    },
+    "91c67d3ce45aa674524023ee95ab811925cd9bf51508bcf85609cc39490a6e8e": {
+      "hallway": 2
+    },
+    "9239ffa4fc92f801ae5d79d594f59453e5b08da60805b69c0734f8fd55d45505": {
+      "hallway": 1
+    },
+    "925ffdc71ed483793b8ab28888ff15cf65b9cddd7ea9f38dcc1277a57ce4b678": {
+      "garden": 1,
+      "hallway": 1
+    },
+    "926f66b3e34a800385092a34a3c8caa00d2a22e3b50161b592a7c7f971b89900": {
+      "kitchen": 1
+    },
+    "92e7641a475f6f00371292ed195f3658eee3c3a3533e2d85a18230fc3678db73": {
+      "garden": 1
+    },
+    "936656e650bd5628f52df5cb55a241c478bc420b689aa1e4dae95349b7e80084": {
+      "garden": 1
+    },
+    "942cac8182bdf70d2a5af901da02c483be76af875479d399450bf19737972de4": {
+      "hallway": 1
+    },
+    "9598fa233fbdb64bb5cdda37d0f1a8693a7a7721f2c3faab448c5cb7981fd70c": {
+      "bedroom": 1
+    },
+    "959f91aa7bd0ea12b9a9d086dbb52c463b9a339e291066a03160719fc680228b": {
+      "bathroom": 1,
+      "hallway": 1
+    },
+    "95af9e5ee0f36b499c3f096c1a9201726b73ee4f8abd727825abde3b4287f97f": {
+      "bathroom": 1,
+      "office": 1
+    },
+    "96131b70a3e33da10ab498cc89a77df054de5f42a3748bac15e8afcc3865d8bd": {
+      "garden": 1
+    },
+    "9644a30cc2798753b92796db738a5380179efb65839168bb58b5097777fc7ce6": {
+      "bathroom": 1,
+      "hallway": 1
+    },
+    "96625703817db8d83c031a0b7985048d3dd151b776b78a2831437ee5366be15f": {
+      "garden": 2
+    },
+    "968b66d97b071ad41a1b1f387e65bfbcb8b609037f5650d51844e269a25f6278": {
+      "office": 1
+    },
+    "96b2171e87cf93d7569513d0c76f0f6f1ca55efcf4f60c372aecfdbac207925b": {
+      "bedroom": 1
+    },
+    "96dcd8ac3fa7a3341cf1bb7fb1e9d7905e67ab11e2313ea91cbc694ca72ab9e6": {
+      "office": 1
+    },
+    "976b265f95efa847fd3b5e4b8d801a77891efcdde5aeffc81eaf4393730e94df": {
+      "bedroom": 1
+    },
+    "97c09ce284b69db668f4128934d43e5f213cccbb555ae252d5348d65dee6a8c6": {
+      "garden": 1
+    },
+    "97f7edb8a310b4cb4a9bddb401bcc024a8e22689fcf15f7b2cc102767c50df3b": {
+      "bathroom": 1,
+      "hallway": 1
+    },
+    "9850e9169b4975cd7104d0e234b7d29ddd817802736c8aa08e825d0492e34ab2": {
+      "bedroom": 2
+    },
+    "991a1a63ed915489fcf9895c9ef4d757fe7b8d2d60ebf5569d348cf4d23bb840": {
+      "garden": 1
+    },
+    "9936aef61f754adc40f4c8ecfdf5516d876c8bed0f9f015dd793af45cfddc170": {
+      "hallway": 2,
+      "office": 2
+    },
+    "9a61e8869efbb97c3a5531633bb4e05c2e76b44a006b8c030a8369a5e9b4d9c5": {
+      "bathroom": 1
+    },
+    "9a6a799d4ed4bfb07b46685123e8dd2bc62f234e549e8d43aec5b7baff69999a": {
+      "garden": 1,
+      "kitchen": 3
+    },
+    "9a9b8986e34af2a0cc6461a60bb059d8def60c4eafde3e2c445f926b1f383079": {
+      "bathroom": 1
+    },
+    "9ac3acc9237b50dd27cecaa8c93650323285127eefc6fc1809ab2d1aa3ded690": {
+      "office": 1
+    },
+    "9adebc3828418c850d2d8ae7e11b3b9bff724eee157e970d34a222137de9a033": {
+      "hallway": 1
+    },
+    "9bc608954b20860baf038a3336d1f068f7a7d9ef108f00553348abcd99a1d771": {
+      "kitchen": 1
+    },
+    "9c14da101ecb02a878ad78dd1bddfcc7bc841852f6dc3c4864c9f476a9788ade": {
+      "hallway": 1
+    },
+    "9c653520fd144255f28deb5b63457612928917087d1d1d01b1e88cc757ca7523": {
+      "bathroom": 1,
+      "kitchen": 1
+    },
+    "9d3cab334a6cce4f64efe44109aba235c32b2cbe3b2887c8310ea8d865b4ddae": {
+      "bathroom": 1
+    },
+    "9d95b4fc98a6df1944cbe16e0cf9d66a30c458f4b1d4ad621739b3c291e03afc": {
+      "bathroom": 1
+    },
+    "9e5ef018756e9f80a117ab1a185f999cc14bed49211ecfdec69da8d09111bda8": {
+      "hallway": 1
+    },
+    "9e71e8d1a00a8542fac03641ed37afb311e08eb77cc0ac5e97f12c2a5beac196": {
+      "bedroom": 1,
+      "kitchen": 2
+    },
+    "9fe93620b1755fc1e25ef65aa0f209294e09e6723394068a26b0f80e68218b8f": {
+      "bedroom": 1
+    },
+    "9ff5375d6726c88fe75d882a1bdedf7c5f507a48ae196eee011dde8e5234cd77": {
+      "bathroom": 1,
+      "office": 2
+    },
+    "9ffaec906771351252e9c13f860c149429798a2bd272a9cf233423a2bda4372e": {
+      "hallway": 2
+    },
+    "a0340c9c6d3f869873b64a34edb124fadac36ff3a936bf0cacc3a1e5f18c59b5": {
+      "office": 1
+    },
+    "a0ee8f81ad602c612b8e64b7365a82cc211b1cc90d9835542f7e28d3c9e30d0d": {
+      "bathroom": 1
+    },
+    "a113cc50cd87b46f1106888e79696fe86a45f84e85af298e80bb9521cd81457e": {
+      "hallway": 2,
+      "office": 3
+    },
+    "a115909ba995446949bdd6d1c103558994929c8f842d36acb593c7379f606238": {
+      "hallway": 1
+    },
+    "a1f7e7619696492e6b1f2b7b11d9e5cc6b818fd85b00cf252134815cc0959cf2": {
+      "bedroom": 2,
+      "hallway": 1
+    },
+    "a278b8b594e4f2f1e3927edc17330c13df4bb4f98dcf4a67fadccf272362a33b": {
+      "kitchen": 3
+    },
+    "a2961782691489a210ce33d37cddc79dddb45f043952b5e3e6edcebb7a4f0b15": {
+      "bedroom": 1,
+      "kitchen": 1
+    },
+    "a3cd8f729ea138fe025ceb6f494f0fab0c5158fb12c45e73243b8231107a1b52": {
+      "kitchen": 1
+    },
+    "a409eaba78db44470d3c773d49c0797e653627378c4da42bd2b99e69e1dd6295": {
+      "bedroom": 1,
+      "kitchen": 2
+    },
+    "a49072ec06a4cc4b250c434a707f0d7d77dd1872b055b736a3a7d4333c2e363c": {
+      "bathroom": 1,
+      "kitchen": 1
+    },
+    "a525e9f412ac2a502b63ec146087b3178006a6e15412c5684e0c9e3acce93dd9": {
+      "bathroom": 1
+    },
+    "a5cc07ad24afa15da64d9805cdfcfbb8b8b7324b7f856648b2a22f369c513263": {
+      "bedroom": 1
+    },
+    "a60851b77581da625c3af37e78776d943d79ba032228e1b21e10c1a22ee64d69": {
+      "kitchen": 2,
+      "office": 1
+    },
+    "a640b04d7116b15ca8718fee34d7c24914afad7837e6cacaa7c269194b489852": {
+      "office": 2
+    },
+    "a653babdb23064f367ce4e25cf296c39a9300404cbb93a3b1e8b285a3ae3a8f2": {
+      "bathroom": 2
+    },
+    "a6842e499c200fb07f3629c843757601d37583e53b67f09400b8c574cd10e6ab": {
+      "garden": 1
+    },
+    "a6e25f444eff09389fdeda5d546b0fc9b4038cab41f3504b123cfbbf506980e6": {
+      "hallway": 2
+    },
+    "a78da7ac9de3024c93409cd3dca5083a70495ad7a35610dc353a7ba4785ab14f": {
+      "bedroom": 1
+    },
+    "a7cc912d4e982c28311342946d7093176989052218c1430bb0dc939855b1278e": {
+      "kitchen": 1
+    },
+    "a8b24f9cb6531c62dd6a5f99af4f1242d3dff2dc47745eb3218d6a01ce6f2e70": {
+      "garden": 2
+    },
+    "aa60e015c0bc820975bd641c13689da8f88a6646fb6a7ff075180bcfef7f9931": {
+      "bathroom": 1,
+      "kitchen": 2
+    },
+    "aaf5f34462b513c818fb1d8f82adc3e0084167259634c70e47c8d53949e3794c": {
+      "bathroom": 2,
+      "office": 4
+    },
+    "ab32b5e7863f84b1e1f40cef4d7b2b1bed57603680c54322de871bbf7f6dfeef": {
+      "garden": 1
+    },
+    "ab3884546ad8c970ca1dd0ff1cf0b4f888a5680fe2b7119ce13483752f5d0af5": {
+      "bedroom": 1
+    },
+    "ac88ed9850d05a7e7e36cfc25dee5ce4a90b4d1c1184844c19d2cbcb88541807": {
+      "garden": 1
+    },
+    "ac95735f2af56d77e816e22aa8129e0ebb70ab3b63f4e64db142a8679e61b948": {
+      "bathroom": 2,
+      "hallway": 2
+    },
+    "acd121e01cb5483db6bb9a387c6bd878ff4322889de19121553a1bf3ceac3a58": {
+      "office": 1
+    },
+    "ad964e45098545e24d6f9b18d8a07420d610ded611b32ec9387d4349bb525578": {
+      "hallway": 1
+    },
+    "adb0ab2a2a739c2de6ccfd73bf845124c59cc18d48fa69b1467751717d7e05e5": {
+      "kitchen": 1
+    },
+    "ade4493747c4c81e9c9c256c767a08e012481d342c5c7bb811f73c594565eede": {
+      "kitchen": 1
+    },
+    "ae54922e71e0dac8735933745361c34bdcf55972838855b2148235d5a6d5956c": {
+      "bedroom": 2,
+      "garden": 2
+    },
+    "ae88b604ada5b3a4587591e4dcc9cf9ae6ea254955ae94dabb92f38e717fd977": {
+      "hallway": 1
+    },
+    "aed63f64851d803944d9d9f5bfe80ee39b2491591ae31b3e4173915816e6ca05": {
+      "garden": 1,
+      "kitchen": 2
+    },
+    "aed99ac7e3b06b5df029f8c817878d6cdf8bdca26336282a610a566e27fa11a5": {
+      "hallway": 1
+    },
+    "af11050d772a40dbf2ed9c71cfb34d0fb4c09988c899056d66cede3d170759bd": {
+      "hallway": 2
+    },
+    "af4505e93941b77e18708860cd274390e014483b05ef605edeb6bdf9fa25d9d5": {
+      "kitchen": 1
+    },
+    "b07d85235c0b7dcbf2c35dd21bb3c69a08bd7c21e86199fc443cd88b157a1564": {
+      "bathroom": 1
+    },
+    "b1973226d070f6d3f35e6987922b6c00527c9a879d887ef97c58a0f321af8960": {
+      "hallway": 3
+    },
+    "b1c77494e6b290b07ce5cf961fc99b8a1ef650274906751b6085ae882e5a7dcf": {
+      "bathroom": 1
+    },
+    "b28b383fa63eb4f6c49afd7fb7c06374a3d85ddf97bf1574b1964cdca2d9ff03": {
+      "bedroom": 1,
+      "garden": 1
+    },
+    "b33a073ae58091cd47a95ba94a14537999e5f0307b6bc5557574e7e355e167cb": {
+      "garden": 1
+    },
+    "b3ee0735a6829305d686d4c4a112941f87c8a434b26d74f726ec4a3b639fcdb1": {
+      "garden": 1
+    },
+    "b4763d85ad58c74502df1fcb37ce39be8e88106fc637f00f594c29b39427d5e8": {
+      "bathroom": 1
+    },
+    "b543cbf2a690f6b49b3f82f99f6b4e04128cf2ba0801c02e42bcafedbe87d621": {
+      "garden": 1,
+      "hallway": 2
+    },
+    "b6062a94ab33261d44965a1f913fa22d5935f0036d9ac02234132e402f7bae9a": {
+      "office": 2
+    },
+    "b62c380484a156ce136bc16d1e8acf50ca88d1240731950894973db14c181e4c": {
+      "office": 1
+    },
+    "b62ce7b07efd1149f9571ef28b245059899eb1d643a6f5e46c62b6308d2bb3ab": {
+      "bathroom": 2,
+      "kitchen": 1
+    },
+    "b64fa32a26adde70589d3dd2bf7f9fdee5ab1606b79c64fa0010ae02fda55fa9": {
+      "bathroom": 1
+    },
+    "b69dfedede89f5065ff459c3fb0b1577ffb99830b676de4f71c13e00eda0e23a": {
+      "bedroom": 1,
+      "garden": 2
+    },
+    "b6ca3c4a1485dc5eaaddf6ba4728ff8db83a56bcec7932ba1ebfbb27418df72e": {
+      "office": 1
+    },
+    "b6d8844ee74f5a8dd6f3bad55f1e28411f150413eaf03d2cf7dd4d3cf291e890": {
+      "hallway": 1
+    },
+    "b73a579b55bd50085f6a63b17443e005bfcd7a9747fa386b771e6878636f65e6": {
+      "bedroom": 2
+    },
+    "b84914cf74bb372286b6281f7c6d30cd7eb94b1046e67eb9c436f8ee6e8a440c": {
+      "garden": 1,
+      "kitchen": 1
+    },
+    "b892868f1e8c0cba1bae4685a47d794197a43138f7fcc3eca631fe7981d86079": {
+      "hallway": 3
+    },
+    "b8cc68fa7a2c6ac38f64c84bd1951cbab10162f73f3cdc2ddde5ff93337db61a": {
+      "garden": 1
+    },
+    "b956e3a214b0f396749fb985e6175da9ae682283ad680ae639f94dbe8f1e3a98": {
+      "office": 2
+    },
+    "b9903b4337e8b206eb88cf1edc2560e25bb5748e9c9c556003e77b77638fc867": {
+      "garden": 2
+    },
+    "b9dc1f0a8156ed2e8d4e72c68a02f0d3d46bec7ff1decb88d99cf341ab62dfec": {
+      "bedroom": 1,
+      "office": 1
+    },
+    "ba67ad715753db9f058f33694beb536c9416e8af655098fc3c81d27460a27388": {
+      "bathroom": 2,
+      "hallway": 1
+    },
+    "bb29c7dfda114f56b83b8d0348e2c9fb56b577419e50c196d148f2596a9beef9": {
+      "kitchen": 2,
+      "office": 1
+    },
+    "bb4f9735e3720e8c2e3f194c9b9a86d652b6e36f41e3273c524e9c78e3d7686c": {
+      "bathroom": 1
+    },
+    "bb7abbfbe1bde3adc6feb80cc7f871438d77d826b362c2b8db61963a12abd487": {
+      "garden": 1
+    },
+    "bc2ddde0c993ed90f803bc98135a2f6efade2e5f5b9ba574bc717cefcd8f5ea5": {
+      "garden": 2,
+      "hallway": 2
+    },
+    "bc832bf96830841431ef2fe5e6d14153fb94dbd5712fa801bdfa0d9766da945e": {
+      "kitchen": 2,
+      "office": 1
+    },
+    "bc8d6cf5c4866a117c9112e059ad959ecc84a0808bd841b4d9d4ed7df170d1b5": {
+      "garden": 1
+    },
+    "bcb503d32d0b2f0151704056e8e6ce97d60042588d9cfd53a312ac3c26ffc645": {
+      "bedroom": 2
+    },
+    "bdbfb6c96c3771684e6b891978f7b480c8b54116e24013b1b6092d4118c69cab": {
+      "bedroom": 1
+    },
+    "be4b82fa9cba4c998e74d90cabb5191063a677c2428f897b8ede61b649d456a7": {
+      "hallway": 4
+    },
+    "bebdd4b96ce833c3b991c40a0ad7cc2247a3c4cbe070faf7691f8f01753ee1b4": {
+      "hallway": 1
+    },
+    "bf20c1a8954940a69d7587a0772943b3585244b64b1607bce7367ad1480eaa60": {
+      "garden": 1
+    },
+    "c05539f98ad2dec09282c988fcabcc54de4882f0330460666c949c38cca53b93": {
+      "garden": 1,
+      "hallway": 1
+    },
+    "c1135ea2a14c0bd804ee8cb697a8cdfbbc3ba3314bbb1671947631409dbfcf4f": {
+      "hallway": 1,
+      "kitchen": 3
+    },
+    "c1a314b71c52c4044ead94559e001566f76c0ea35ef5d3b88b7f1bdcd2cb9c1a": {
+      "hallway": 2,
+      "kitchen": 2
+    },
+    "c2a9c86d20aba3b125154e93c3c47f2e8c55ab72d0ec7ba464c17a820082fc97": {
+      "garden": 2
+    },
+    "c334e41f1ef06dccd6b194939d64344414b78c587bbf2526123a749ec67fa492": {
+      "kitchen": 1
+    },
+    "c3a1b51f44879f562830eb3b800ca663f84a32b97b6d2a9f84f17fa1f3721932": {
+      "garden": 1
+    },
+    "c3e11e169d1eda0a3e275ea99f66652c218cb4101248a8b0e07d2a6a17401a18": {
+      "kitchen": 1
+    },
+    "c4721c13b2613240a29dbe3e421aca5864f45e1f145a5a61a61be4725223308c": {
+      "bedroom": 2,
+      "hallway": 2
+    },
+    "c47dfe651eb10754c2299b0653dea18100d5cc864f3cd4a2f13278f6160eae31": {
+      "bathroom": 1
+    },
+    "c4fe87e505ccb0f795c5ff1f3f8f27ccd737ca9cfcdac176fb3430d56303471c": {
+      "garden": 1
+    },
+    "c5c258abcd369b55bd4b07742b99aaf77997813e169cd4ffa0ad452107bf931e": {
+      "bathroom": 1
+    },
+    "c5ec01fb6e63a091c278fbb79b0f237927c9f2886f195fc2fdd940eca521e297": {
+      "hallway": 1
+    },
+    "c629075bc2a79c241f20157f23f93da366169db70b597b410239345e50665fda": {
+      "bathroom": 1
+    },
+    "c678fb38c451b3443f8ca3e34c23ba352c30712b5346afac49b7b0fef641e9dc": {
+      "hallway": 1
+    },
+    "c6bcce32206b1dbd13c0b5d37e8a9b99baada0727a87ecff357f979b76bcc7e9": {
+      "bathroom": 1
+    },
+    "c725310e327f0ed80e9b19bb8f1d4eb25729237c551ab833e89fe7844fae0215": {
+      "bathroom": 1
+    },
+    "c78530608b2b832f5c01176bbd89c663de9ce2a180e40f94b074fde057197cc1": {
+      "hallway": 1,
+      "kitchen": 1
+    },
+    "c7a68b89c42d339c4550588a16a61a816f85479491a820550a7cde7eb2a062b3": {
+      "office": 3
+    },
+    "c7c058ebc3f6346212b56a05df085249bfabf145c3a8ec4dce8099a6f7239647": {
+      "hallway": 1,
+      "office": 1
+    },
+    "c80bb8dd6faf4990145298b224e47c49dcea24bb410043aef85a701598c99b8a": {
+      "bathroom": 2,
+      "hallway": 2
+    },
+    "c8203234c22fb73239355529f84ad02791fcbdf02454512847e6628e243c269b": {
+      "office": 1
+    },
+    "cb154ccc0b37a68c283e72d9535a6b70e7b2a5d8e5a8d965bc55eceb04ab257a": {
+      "hallway": 1
+    },
+    "cc242136c019e32ae7f96a3c24abfa85b1429b727f2fa96f5cd987ebf4c6122a": {
+      "bathroom": 2
+    },
+    "cd44b7ec617739b575fd17cda929a3f93fadce0f9e2d19c122d772e315808c6c": {
+      "bathroom": 1,
+      "hallway": 1
+    },
+    "ce7556c6f5ae7045701c1cdb9b4226921fe11c3bc07c08d0edb05544a7255fd6": {
+      "garden": 1
+    },
+    "ce82dd2f1479c59b8c1219667b15ff9c50207f2410db3f2525806bb478e7b484": {
+      "bedroom": 1
+    },
+    "cf195a3895caf0e1d92543cfb2e485b985241d145c379d7dd00d815aca90d4de": {
+      "office": 3
+    },
+    "cf1a72e7452034faa0379edf252265f10858be577639217e4f9040abf95aa1c0": {
+      "office": 2
+    },
+    "cfdbe0da1f28b25146f64878f3de312af596f1fd85243c121c0473f38e6e1335": {
+      "garden": 1
+    },
+    "cfdbf0cdfc3eec7d2ffb05ae6ad51ab4aba5d12e012f97d513b68e9031d83225": {
+      "garden": 1
+    },
+    "d00d2e327233592966e116696d94465bc1ed51ef29de2f8dbeb8fa55a1bc019a": {
+      "bedroom": 1,
+      "garden": 1
+    },
+    "d0287962c29551107f9e7c340dd6449ad83ec73578146d04053a0cb6acd3944f": {
+      "bedroom": 1,
+      "hallway": 1
+    },
+    "d03bb02f7b61a1cc5b9378d5277ef8445b5ca1f77cdb17a45fc80a6a5b5b7a21": {
+      "office": 1
+    },
+    "d0cdba2b018b61cd081dced6919530c65c21db0c19dcc91d30d0f3936481ddc1": {
+      "office": 1
+    },
+    "d18af1a6f96c9d1c7237a942e46818fc5a43567464713860c174c29add091a3a": {
+      "bedroom": 3,
+      "garden": 2
+    },
+    "d1df753292b0bbd1e6a9a4273aea5a880d3ad3aa4b62f6dcb7f61c7c01c6c398": {
+      "hallway": 1
+    },
+    "d251df24882eb22c12c4cb04b6a804b874ceee5ba4408cf27dfa5f9381458aca": {
+      "hallway": 1
+    },
+    "d26e58c2bde9611d4e79212e071161096b7f5b783aad0a4fcc816bb0988b6d19": {
+      "bedroom": 1
+    },
+    "d2c88337e8af73156950f0066b32a36a9bed4cdac5d5fcdec4cafe21e12a7d10": {
+      "kitchen": 1
+    },
+    "d338b05279be235b34d2298638235312c8f9667bb12cc8900957b76a02beee66": {
+      "bedroom": 3,
+      "office": 1
+    },
+    "d37c21bc78121fa5cb782bf19bfb5c811515f8e0c8c3f4c3079c2f81cd197048": {
+      "bathroom": 1,
+      "kitchen": 2
+    },
+    "d429273ed03e3e314966f99a77e2e870f107a66a7b711541c06f6b00845c8e32": {
+      "office": 2
+    },
+    "d51757b6f62770966a9b33998d740f50dd14e926bae0e0f67f55a55b3bb0ed24": {
+      "bedroom": 1
+    },
+    "d5645332bbc3d9d1ca0b6bac1ccb46240eeb54ce3a1baf98d234e328660a4f44": {
+      "hallway": 2
+    },
+    "d5c60e96338d527d7a89ed4a7ae0bdfe1d1ffaebdcd3cef9df341fab234a88b5": {
+      "garden": 1
+    },
+    "d6f08fde4ebb14ab9f3127a70aeb714abfa3adc23b7e8804be53c498c827bd92": {
+      "bedroom": 1
+    },
+    "d70d172421679496e44ec65441ec4946f6a7f40f3a26c8119c53499e3109377a": {
+      "hallway": 1
+    },
+    "d7a0ffaae12728af4d082cce0569c3daefba8e02c24344d73c71afb526dedaa8": {
+      "kitchen": 2
+    },
+    "d7d72a2b4dca24d5af6570b2754887ba9b8ec825647b686b7bc8f384f66084d3": {
+      "bedroom": 1,
+      "kitchen": 1
+    },
+    "d83598b3f9c0169e8a97d8e3c99677e78ac2d2e222f6549b20fc05da50595800": {
+      "bathroom": 1
+    },
+    "d87b74f2df8337a454284b43a1cd2609cbcf74373640180af5a885b1a76fc811": {
+      "hallway": 1
+    },
+    "da1caee124adbead998f5fa0d5301a6ec8aedc0f8605ee7ad641cc09a03f9f46": {
+      "bedroom": 1,
+      "office": 2
+    },
+    "da2769327396642eb04619bdb968372de4060e7916b8111a3f3854835426d0f4": {
+      "bedroom": 1
+    },
+    "da842872331aefa63e97c57e8c9c7ad667f55c566c899004ea64aa061335f277": {
+      "office": 2
+    },
+    "daea4cdac84182477261645d2578864e3bd5fe97271aa0f74c900a44a680e9a1": {
+      "bedroom": 1,
+      "kitchen": 1
+    },
+    "db17cc67b82b1cdd2c9e85600f31d43ff4f58568c3cb11ba6a206ec9831d92ec": {
+      "bathroom": 2
+    },
+    "db707127cec4183270fb6fc20c1f4df1235c8b38a046179b231a23474c282f84": {
+      "kitchen": 1
+    },
+    "dbac21b57f132ac1fe99fafabe436336b8500808a954705121e217bd5fcca8f9": {
+      "bathroom": 1
+    },
+    "dc33b72fc75c07057c9a5c8eb738163c0ac84115e8f81655900857b1774a0203": {
+      "garden": 1
+    },
+    "dc3f62dc756ab0ef87212337c783d8c57cd2df39596c63e3928fe59ac4446652": {
+      "bathroom": 1
+    },
+    "de5808863c697249f7ad56ba01a54c5fc2419b423c8218a1460f719546424999": {
+      "office": 1
+    },
+    "debaba7ac5193385a32baf7fbfa193c10ca33369b000076895a514c992d4ca55": {
+      "bathroom": 2,
+      "bedroom": 4
+    },
+    "df561892409b793adf354031ab30d8368f58c52ca57a56ecccd93b3dde0b9fbd": {
+      "kitchen": 1
+    },
+    "df9425e8de76871b6a5c23683c2d5401f34a7c1a169c361c6ec9e6eb1056e521": {
+      "kitchen": 1
+    },
+    "dfb8b22a41ff7432ee20cd5c06ff5e3b28b28706899703b896a6a82f6c5e7dc7": {
+      "kitchen": 1
+    },
+    "e0402e9aabb91bbe97f14d7869e53c20be26416b12403afdc408375b749b3663": {
+      "bedroom": 2,
+      "garden": 1
+    },
+    "e05f31a9caee8008c27846900f625299c961b97cf9b021e053ed2681485db926": {
+      "garden": 1
+    },
+    "e101426cf8cd6880059a4b696af7c33a24a377cef5fadd245bfd63dfbf9ff37d": {
+      "garden": 1
+    },
+    "e2831c33661a842f0042151659c0ed5a706e9fa3247e5d12dafb33d3ed30d805": {
+      "hallway": 1
+    },
+    "e2bb1f4af661d8fbfda94a4c30d21c7456c967885299eedcbca85f55c5b1180b": {
+      "bedroom": 1,
+      "garden": 1
+    },
+    "e555ce79d21fe6a47c3c546a199b65729fda025ea0b08abfe7e2f20d86166804": {
+      "hallway": 1
+    },
+    "e64158fbd8393efd9c04ba7962c50719b3747ad06870fdd09e0d998a606a2c97": {
+      "hallway": 1
+    },
+    "e6784f46fa9b2cb1cadab77214135b3e4b710f277ae09a0828c24b665a6f5cf7": {
+      "kitchen": 2
+    },
+    "e6b6b87c418cd7b2579b1c2cc4d9be072a94ead6de9db5d4ee62320bf67b0a81": {
+      "bedroom": 1
+    },
+    "e795fa9aa7b05ef0d6017293b5d230494915a40e697c7c0c5aeccc3f5968d23c": {
+      "garden": 1
+    },
+    "e79d47c5a582952683c88b351bd40b931f9e01ac92cfd03b7ee4bb18c26b3d4b": {
+      "garden": 1,
+      "hallway": 1
+    },
+    "e7a67d632d80deff891834aaa93e8e0a8d02540f43f5611e0088fec82d7a8512": {
+      "bedroom": 1
+    },
+    "e8583bad6be20d7c0620b04caac905649a2b2190d7e63916b383db689be55d5a": {
+      "kitchen": 1
+    },
+    "e8ad1567dd8d2d3a66e439e8d1f1029e2c491f4b472571d07eee7a0334cd016e": {
+      "kitchen": 1
+    },
+    "e93328df9b7a76d36330e2e2b62ce7d0d69559e5ffb4858914b0dbe54b8322f3": {
+      "bedroom": 1
+    },
+    "ea0dd6a780d11b77450da6f60b143eab070f5b5ff3f9f635811daef50816d97e": {
+      "bedroom": 2,
+      "kitchen": 3
+    },
+    "ebab669dd7eabfb47b9fb5cf450b5eb0d3a3b2de033c0cfbad7a21a55c7d0ee1": {
+      "bedroom": 2
+    },
+    "ec09cba077fdf74290782cae6c8aa5a11875eccdee380dcca63626ce6f843316": {
+      "garden": 1,
+      "kitchen": 2
+    },
+    "ec9f606faffe90355840cb6510217136793d680b000d9828e7198535afa6b4c0": {
+      "bedroom": 1,
+      "garden": 1
+    },
+    "ecb348b4a04038cc946d81ba3344d23ec0101fcd704d0ce1ee4600089e6a1b22": {
+      "office": 1
+    },
+    "ed33c132ddd3b68e705cf7a70c1693b8a39a1c6bff1b4959dcad87b74ddbd7c7": {
+      "bedroom": 1
+    },
+    "ef1cb684a232396824fd34518636a5233ce0ab7bbe3c004d474e8dab2057800f": {
+      "bathroom": 1
+    },
+    "ef5f1e42a6ff77c1970e430b904ee25cbf03b34b54211b1319b662b23acd6948": {
+      "kitchen": 1
+    },
+    "efacbc8e3b2820d3318d24f74226163d09588b2765d05c4cc9343b427062fcef": {
+      "bathroom": 2
+    },
+    "f00fdeb60fafc51842eccd397c50f9af75604bb3b87dc598468be8ba05fcac37": {
+      "garden": 1
+    },
+    "f026a84f1bafd7de841c30a671458bdea4785f756a536e7f044f9cc2aa61846f": {
+      "garden": 2
+    },
+    "f0413becd3f23a56c565d70dae021ca717703a01cee1c89c652da0f975842886": {
+      "kitchen": 1
+    },
+    "f048c0fa046e3452f72a43eea328d208de3eb861895bfe8816dada605d424dfc": {
+      "bathroom": 1
+    },
+    "f0dddc543aea0e29daea28e736fdaaa467c1e883b09cda80ec54f2872538dc59": {
+      "kitchen": 2,
+      "office": 2
+    },
+    "f11a1b8e2c7ff79b619eef42071a0e03c989b98cb4764850275e3e18ad1e5689": {
+      "garden": 3
+    },
+    "f141e83ec41e5975948bc412fd6ad5b9fc833097c37a757f6853fe95d4676111": {
+      "bathroom": 1
+    },
+    "f1e84f9f5210ddd5d04e253686dfda9cbb1e17acf01a29f047a841b874a029c9": {
+      "bathroom": 1
+    },
+    "f2e203e7d7c14a1a6321dc4e444ac7fa6d1d4da92c07d4620b0ec18a03b28cc8": {
+      "hallway": 2
+    },
+    "f3742764d9137711c73475e0db5c5838845e593657a06f78e718e1c8a53c69dc": {
+      "bathroom": 1,
+      "bedroom": 1
+    },
+    "f37af265cab643739b9c6cff2cf5b12d863b487508ec645f6eb7491ce8b885fe": {
+      "kitchen": 1
+    },
+    "f467d02bd772769854c008498c105dfd4f688e877072c8fd1d481b7b908263dc": {
+      "hallway": 1,
+      "office": 1
+    },
+    "f4bf74724a023eb6281b46a29dbf0b8d4d9e77d2b553ab5b21fa6450faa8e2e9": {
+      "bathroom": 1
+    },
+    "f4dd4ea2a8b7999d73ca35f648552dd4a890436db7f49068eeae2c159579e072": {
+      "garden": 2
+    },
+    "f55bebb7bedbabc489c75863e2378dbf62eb29c71b614551829dbc2d68003745": {
+      "hallway": 1
+    },
+    "f6add4a3580d40b650d5c628d6e7d360b7f3a1555e5dc3caca8ade4dd7a47bf0": {
+      "hallway": 1
+    },
+    "f6d13d70aba0141174f276e25139e80e11ca53680065b63467658b21c99ea015": {
+      "bathroom": 3,
+      "office": 1
+    },
+    "f74432071e866f502e54ca7a2dfe2bb48ed25af9892900a8e235b2bcbad17f4c": {
+      "bedroom": 1
+    },
+    "f7d3d93b0cdcf9375b7525602e86717721b0e1c3a1e2c934c5decbedd729c60a": {
+      "office": 2
+    },
+    "f851a06f1d7323b8b5a7b7e16166ec6ed020b7cf66085b0e235e495cd7fda70f": {
+      "kitchen": 2
+    },
+    "f8908e5eb77968305084abfa4d7ceea2615e09a243c8000626c9043ac2d3cebd": {
+      "office": 1
+    },
+    "f967febbaaf7a599ce1934a1d3ba6c02381850497ea0619ad0e7eca355091021": {
+      "bathroom": 1,
+      "bedroom": 1
+    },
+    "f9df712bd9066ec763ebfc39db582445e3a6a22148f84b1b34f79738e9812ec1": {
+      "bathroom": 2
+    },
+    "fa358dc3cc83cae702bca1dd87a6652cac2b741e2b38ad92eb635763d86c0b18": {
+      "hallway": 3
+    },
+    "fae20a8945aa161c29bdc3c50ce235e38e19b58171692ad4246d3d9b469e2aac": {
+      "office": 2
+    },
+    "fb0aedf09e4dc3d8b90573260bcfff85d22779652f6fe1e9a044141601c30036": {
+      "office": 1
+    },
+    "fb31dee01de2642b420f4e799ec57176eb573d9d181e4dc07d40964a0b8b6441": {
+      "kitchen": 4
+    },
+    "fb64a4b5f3dcdfe854389dcf6baed0b8f7fe3910e90cd4564faef92cb6273366": {
+      "office": 1
+    },
+    "fb689ecf8657ccb3699dda2fa3cf5402681c7b2cc6c4ef2e5d63f5dca6fe0c7d": {
+      "bedroom": 1
+    },
+    "fc3f3036b5b689f1a17a9cc88e355ddeec63fb3420b2559434be1b019bf441e4": {
+      "garden": 2
+    },
+    "fc5327f7573226123f47fa0ccb375a657a3dc329ad40dfbfaf8846e454fad507": {
+      "kitchen": 1
+    },
+    "fca29bb4f1bc3c5fd18f116cfa7cf82bebe2f6a625910363df2c8bb1a91135d1": {
+      "garden": 1,
+      "kitchen": 4
+    },
+    "fcb2d3719223fd0f93de39a62845a089cd3129adc6f07e3d245396ffed557519": {
+      "bathroom": 1
+    },
+    "fcba3f52b4ddbba6e4ae5f40b4401e0f4474ee30b256a192271d2e4b8011707a": {
+      "garden": 2
+    },
+    "fce6861d59f369539a58ea14e9d25de29d7d85f016496784a551080383b393a1": {
+      "bedroom": 2
+    },
+    "fd53f4bb841cc6268059d3a1a6f7e9371deb6e9a9a06936b9b2849098d08951f": {
+      "bathroom": 1
+    },
+    "fd5638af562be29302631a8da318dc96b300c9697b8f6736b02dbcde3fdb8313": {
+      "garden": 1,
+      "kitchen": 3
+    },
+    "fd81670072cdd2a47afec9e3ad482c5455b84dfd3fdb8bed0aeaa1f2caf7483c": {
+      "kitchen": 1,
+      "office": 2
+    },
+    "fec76ded7431332566cd5966740be6da2434aab40a910aa63183b7bb3acbf55d": {
+      "office": 1
+    },
+    "fef080a42a7fcaf394ff9e6e121d07daf8bc86c72a03156e54d557840fda28fb": {
+      "bedroom": 1
+    },
+    "ff1bfa14f6ad84a7171dc94d22d1f182d0c6434eb1af6f46b0911a73a9cc666b": {
+      "kitchen": 2
+    },
+    "ffa9fd94900f443d0f6efa6cc358a4d72c406b44df0c42c0deac2b3f10282984": {
+      "kitchen": 1
+    },
+    "fffbdc902d1f1fcdd795522ea528cef1094b9f340d559c9bcfdfacd4c1bf0304": {
+      "hallway": 2,
+      "office": 2
+    }
+  },
+  "bow_vocabulary": [
+    ".",
+    "?",
+    "bathroom",
+    "bedroom",
+    "east",
+    "garden",
+    "hallway",
+    "is",
+    "kitchen",
+    "north",
+    "of",
+    "office",
+    "south",
+    "the",
+    "west",
+    "what"
+  ],
+  "exact_counts": {
+    "002bcbad3bd7bdca52bd7e03a9488fe00f27b875642e27654f530ba28e479346": {
+      "bathroom": 1
+    },
+    "004f3ec2b4860862800033f259fe4b9a106ea25f9db76d5d2f502bba5776bb1b": {
+      "hallway": 1
+    },
+    "00802e8b278250647cb097ec3455a43f653efe6d10ca582ff48d75ab257979db": {
+      "kitchen": 2
+    },
+    "009b5599badbb3697677ebb1a974463380e4dc36b7d844014766ff936ddd23ad": {
+      "bathroom": 1
+    },
+    "00bcc9ff77b33bd82098f196f4559354e17d3fc782c73aad66f08ec1b7fdfbe4": {
+      "bedroom": 2
+    },
+    "00ed0ec15c53ca0ca6b4c5a47d138654be602fb9e0c6d196630df01d05b558aa": {
+      "bedroom": 1
+    },
+    "014d42548b4147aa6aa8ef7421b56a2b960bb8c82c9a120f7b4e4bb44557c7f4": {
+      "bathroom": 1
+    },
+    "016d8f7da2e30c214abfd1d8d927a3549940d1f93f5c0d1aff7c4c74744cdc5e": {
+      "hallway": 1
+    },
+    "01a2a94c67c888377509e7faff37015a8530e95c967f1615b46ea966a9277f06": {
+      "kitchen": 1
+    },
+    "01d9c104b01e2992bcbde61e2a6a95b670cf4b099ca5deee9507fab87c92a55c": {
+      "bathroom": 1
+    },
+    "01dca172856cf5e75a22c9f967aa1846cdb923d73277012c16e72da9dec7021f": {
+      "office": 1
+    },
+    "01e5916da8acaf6ceb7a8ae5c7d101a377f170130a9aaaf737801b6bd8534c23": {
+      "bathroom": 1
+    },
+    "021f120493816504cf6533ca12661203ae34ba88cc47ed7684338535fdb9b6a1": {
+      "office": 1
+    },
+    "02835d76845f3cb61a2957ab77bb7cec691953b47bc01482156209792820abaa": {
+      "bathroom": 1
+    },
+    "028ce4dc6238bb1c16d53910b32eff215bee3a4148cc76b2a6ab88b0ac5c3618": {
+      "bedroom": 1
+    },
+    "02be2c7a708e8615499657b86baf7c736d56d46c65ebdb8066bcba08d73b392e": {
+      "garden": 1
+    },
+    "02dd2c1c5710d0aa891467aae28401ed472b115de0a09cee63f3eea2b44f66b3": {
+      "office": 1
+    },
+    "0323977300d9e39c5759078324fbc61a56ac3d58ddbecbb5c6f3e381bd883140": {
+      "hallway": 1
+    },
+    "04caa50f306ae365c4364902cc08a95a22d9da5d3779cfad1ee61cc1cd54e241": {
+      "bathroom": 1
+    },
+    "04cba5b3c082bd9a7f96314cf4703dedcddbb783735224fdd2fbc6b7794adf44": {
+      "office": 1
+    },
+    "04d62cece8007774d04dea292fbe246086b38570b31094251cafd17fd1fdb1c2": {
+      "garden": 1
+    },
+    "05f6d4881f08c6d8cdba0ffd855aef81c6de0369ea0a842598b8bc067bfe39ae": {
+      "kitchen": 1
+    },
+    "0635e0a33b5904204137bc83fc55542a281e2115222913f046acfc027f23f1ea": {
+      "garden": 1
+    },
+    "063c8ebb5b3859e972e745873d6c7d7339ede78a26db0de589b142aaa8a2d609": {
+      "office": 1
+    },
+    "0673a8cc92cb2b22a13414080b0df4da7eba015e469459a767dd52450bed69b5": {
+      "garden": 1
+    },
+    "0685d1884a8ee58af473fadd738743251db59d5820c671f28c9e601440e51c96": {
+      "hallway": 1
+    },
+    "068fcd77b2547b34a5e36ca5a50920beb1fb384bd7d8a706b07802b7fbdaa2b1": {
+      "kitchen": 1
+    },
+    "069b5cea8d081249993f7a68bef2dce4413bc632c840d6081529a572f08b50d5": {
+      "bedroom": 1
+    },
+    "0734fe3225c1326892e14572fba93da9479ba51028b05846234599ec2c02285f": {
+      "bathroom": 2
+    },
+    "079bf0ac0167740eee2473aacdfd9b4ca05838f4f0fb106746a2b2a8216389c1": {
+      "hallway": 1
+    },
+    "07b5942b37b78a0d46de03bd5c9f883574d13466c775aedb1c92f239479e4354": {
+      "kitchen": 1
+    },
+    "092588141855acbfcb73816626663bbe20cb716b42a2ca0aaccd522977270e05": {
+      "garden": 1
+    },
+    "093059cd89636f9221300e70c703e605071972a3ce2cfe8b6c2bc1245e09a3b3": {
+      "bedroom": 1
+    },
+    "09ac715bfa0ef60f1375921a438847e8f107f9b9f891f064f67626995f36cb51": {
+      "office": 3
+    },
+    "0b1c7f36e62ad858d9d9d3df16ad4da9f56856f22145c2ae130c33d7a7c4c1cd": {
+      "bathroom": 1
+    },
+    "0b34dba40103f1e603a40d08fe35b12afb0b6ea8d3c9e1115541c2ba09e4c241": {
+      "office": 1
+    },
+    "0c1dcd9e26efa9f6cafd7169896a1803eee8cda4f188fbea5887a02a670e7509": {
+      "kitchen": 1
+    },
+    "0c794825d7c5429529eb2927b9c8c4884ef8de7c31e03e37ebd89911c4e886b8": {
+      "kitchen": 1
+    },
+    "0c82194709d5936de818f94d9d9c2e33bef0bf6687a0a100c076d87ccfa5fc4e": {
+      "hallway": 1
+    },
+    "0dc2d72fe19b755d6f107df5a22289e560cc4a69be16e70421f8f1ab73d3daef": {
+      "bathroom": 1
+    },
+    "0dd5096fd065d11d7858b0ebdfcd948b1e16d6ecb4fd3e88f6f436953ec159c8": {
+      "office": 1
+    },
+    "0dd8de20c69259ea79e4868d90e680dc94fe4cae31b51b52b9d56d4e155504b6": {
+      "office": 2
+    },
+    "0df8c4c3ffc230923b4ee1def9f60e0bbe8e8832f77354e1cfc00f49a448d2a5": {
+      "office": 1
+    },
+    "0ecd506a154cc49d98d94f0a5d20381a1a0ee972dbab886f004067e118164f30": {
+      "bedroom": 1
+    },
+    "0fe78fd509536fb8b5216bfd99c5622d524dd6229dc9535b455cfb526420076d": {
+      "bathroom": 1
+    },
+    "101ca1b3f1b161b2584949d14e2817a6d97f4b9c09790f1824cf9e5eb0ce810f": {
+      "office": 1
+    },
+    "104f3ac23c3c2d65b84a9422a5a17c06e8824f4ba9876eb8cca9f08948ba5ecd": {
+      "kitchen": 1
+    },
+    "10e3f06a2403780e40c08e02b34f0bbaa2dc859597296ce1d5031156d4e7caac": {
+      "bedroom": 2
+    },
+    "10ec4f8cb9118d5656fd2682bbf05a986f17918de5efa5621b698b79f121aca9": {
+      "bathroom": 2
+    },
+    "10f5f4527047c6b305bd84f5da05cdc13cb68900f9022b68338a124e2425cbdf": {
+      "office": 1
+    },
+    "11233e72477012712794d58e7cb729b0c33de66e2fbd56eba9c4548cb16c421f": {
+      "bathroom": 1
+    },
+    "1126eee5d79f221175fa336866f98700da7ebc3744995e0189149a8dddb18b44": {
+      "office": 1
+    },
+    "118f069d5fd34259913bad12d1ea7e378a4fe5c9e9ac9562169f1476486bd5e1": {
+      "kitchen": 3
+    },
+    "11a0f5ba55df85f8ee444fc00815e98d593a71b710254fce6695f85fc0a7fbf2": {
+      "bathroom": 1
+    },
+    "11cd98bc604d26ddfc63bc7ac9d66a45f613d1233f7ca3d12d1f508dce18d5a6": {
+      "garden": 1
+    },
+    "120db726cc6988e1d82462214f87c9a27b73e79b2b43086709f8edda9107f0db": {
+      "office": 1
+    },
+    "120de27e458424afec4aea3d0cb9501e22cfddf0b8e9089b74a17d19bd433bfe": {
+      "bedroom": 1
+    },
+    "12bf862ac752bcfeb7764b4d29ac91218d2893447b54410769ec4f85aeb53e8f": {
+      "office": 2
+    },
+    "12d796ae130e6295e342829910aa25e8feb30b785c4cb95d94724928f56502b6": {
+      "hallway": 1
+    },
+    "13b14c7bce08ce039e17e0eebdda3749889ad3e76bb9410708ad95d021939d86": {
+      "kitchen": 1
+    },
+    "13ddba6def6cac3dd506d30d731d6ab51afc6c7ff3b9388c64c1d7cd018ddd21": {
+      "kitchen": 1
+    },
+    "13f227a94f20495a88e0e4c1e3d5a2eb52ffc220072ae44b5c433f87002132bb": {
+      "office": 2
+    },
+    "140d5e83c4dbbc74415c73d20f8246fe6c11b6da4576b5bfed596d54147634d4": {
+      "bathroom": 1
+    },
+    "1435b40af31ea1a46ec507d98f224497ed5e68c3879739a9ec5718a2f12fd418": {
+      "kitchen": 1
+    },
+    "14f986015e4f3f5b8ec5eb00cfbee2a87a9be08475793ace32a87f70fcee7353": {
+      "bathroom": 1
+    },
+    "15552270eb33d6f0b7bce7a0521a77207aaf4a837471c0072f96a4230d1ab2d0": {
+      "garden": 1
+    },
+    "15959d944154e5f47cc415b84eab782d5adcb3809779238700917e64368acd4d": {
+      "bedroom": 1
+    },
+    "15c145a7dd94d45e78e012726dcaf84133902da447626272fe83f6927f110cc5": {
+      "kitchen": 1
+    },
+    "15c361f8c0e14455bb4543a544753b1fa0903fac3acc9bd7b8079a135133c97e": {
+      "bathroom": 2
+    },
+    "16f5352e0e6534fd9016486965a55dc16c9e9b0763ca1564b9cd757476c779d9": {
+      "office": 1
+    },
+    "177607834e554801da3ef4a9a0633121d0fc4438b31add5a1686aaa448d1261a": {
+      "kitchen": 1
+    },
+    "17adfc9b8e92841aaea8d45f58b0f43f6154872714bb95738fd6c67ae6acc171": {
+      "bathroom": 1
+    },
+    "187b5c612c748788f1d731c6eccc4c6d4f7f0ada226142f23f267b52f0a44954": {
+      "office": 1
+    },
+    "18d79fca886b5f74ae823fbaa902e5fe7b8f07acac412d7f628ef5880a6c2ff4": {
+      "bedroom": 1
+    },
+    "1a8bc32db6ffa743bff76b2957a125550aa83fb90c540df5ce3139e119477d3b": {
+      "bathroom": 1
+    },
+    "1a9fe84c3b167d397465c05843a9f0d4c70856241359cb8884a7ff4b5edb0c65": {
+      "bathroom": 1
+    },
+    "1ae6559f70669e1c734c7dcb4ce687d6751bd843492be948ed85012a3f6bb4da": {
+      "kitchen": 1
+    },
+    "1b31269d7a08245112fda2351548fa05fd35b7fbc13673bb54b86dc695afce35": {
+      "kitchen": 1
+    },
+    "1b68608fe111c08d1f804a9074f5ee8b1005a00f2b74fe35b0f30fe067dee863": {
+      "hallway": 1
+    },
+    "1bab06d2ea3769f83a0ba39c7a6464174562f959e7181cbfbe1963a0fafd3580": {
+      "kitchen": 1
+    },
+    "1bacdc1809da5a2e75c34cb2c81d50a0800f29a85a37b30e1704ac2d57939840": {
+      "kitchen": 1
+    },
+    "1bdba72571c20a0f61c5ed53c1f2ab8aeabed02f4609b57171c2491ced6601c9": {
+      "kitchen": 1
+    },
+    "1bdeca28971724bd5943ba60e0ebf9e0c2a39ce535dbdc6541391a0b1f5f9a9b": {
+      "garden": 1
+    },
+    "1bf3ac33fd4bf10806e69a7962133098413964afadbe2b56f130a341822fad80": {
+      "bedroom": 1
+    },
+    "1c2d799d0eb6ee22ae22ec52d511bfb7560a73f54ba28db0b61f9d4f4ecee98a": {
+      "garden": 1
+    },
+    "1c6c72a091634681b0a3293656b279a2a504ac99ae2f90ae4e4f455c0ae5e8b0": {
+      "kitchen": 1
+    },
+    "1c92e0879b9530b08df5610cfc32bcd7d449930e3869725b4679446ade5397c6": {
+      "office": 1
+    },
+    "1c940bb1fcc84f213b2ab776d82a8802ac469347331f0618c05425b077059fe8": {
+      "kitchen": 2
+    },
+    "1cb71e38924d45164834d370298bccc34ee41287735e3f69e8a2deac9a1ec337": {
+      "office": 1
+    },
+    "1cb8b2054a8365352558c06554c83b4262d63dfe9f9615617144975ed4ec28fd": {
+      "office": 1
+    },
+    "1cd8f14069432dfd6dee4a41ee5b8e45c88200005a4e5a9dc5db4f7336755d1c": {
+      "hallway": 1
+    },
+    "1d6810ee27f4fd4de43103f225ab6e822545dac5756661c3f2676dd56ac1618e": {
+      "office": 1
+    },
+    "1d8d9545a6b3bded1020e737a956b2e02e58763210bad3dd2642a5775fc489d1": {
+      "office": 1
+    },
+    "1db0c97d6f66662983f07b3744bfff351a145db4a546efc8eacac0d79948eed2": {
+      "garden": 1
+    },
+    "1de76c4f6e7cb2a3679f8d5a5d900d5ed8658bd040ae9dc95d40c62c39604e02": {
+      "bedroom": 1
+    },
+    "1e2b8d27d3c2a4cab90926da8d42179496a705d06c6a99b3b8c87fe3fa0bd68b": {
+      "bathroom": 1
+    },
+    "1eb6b2f4386910353f31d83aa7f38cd22b3a30308334161be5bbb20ad7aa54ba": {
+      "garden": 1
+    },
+    "1ebcd7ee6f68768181723143c0b7ceafb1cf62f47efc5dd537a1a3193921b6f9": {
+      "garden": 1
+    },
+    "1ee42b274a7039014383b23763e63afaf849188a986f74070dc17cf792bd7a80": {
+      "kitchen": 2
+    },
+    "1f98a4bac918767e6c745cc61f48f780f8f44f2a05e3fdd590e4aff216bf4e8f": {
+      "garden": 2
+    },
+    "1fad2648dd9a842356921386dc22771552672d2a7bd35ebe857e5034bfb91371": {
+      "kitchen": 1
+    },
+    "2124cee90c1b25a5e46cc002d9eb0266d29bf049b03fae86b0b05895fd9bf0bd": {
+      "garden": 1
+    },
+    "21b12513f443f438fc5ee5dd9624e3d0a288ac25109db19c3941e13635406716": {
+      "bedroom": 1
+    },
+    "21ff9de460ca99e1eb866d91771b09b9d2ddcfe5a6cc183e399a974ae44ec4f3": {
+      "office": 1
+    },
+    "2226a9011b81ba98421f7dc90ecb521add5c7e2075e236678458f7bc562097a4": {
+      "hallway": 1
+    },
+    "2231ef8458d9daaf11ba5b6c5d000665418210e308078514ac8b8b49550123eb": {
+      "garden": 1
+    },
+    "229c377b29176cfa9952c3331841d227431e42204922bed3efe36c3e9f092e96": {
+      "hallway": 1
+    },
+    "229cdcc224766319ead3353d19e4e12f9b203fcbe6f75067e517cce9c6a664bb": {
+      "office": 1
+    },
+    "22bed5a9c8ce8748c77dd711a8ad09c2cf626387e10bc91caf5386ce5b916f7c": {
+      "office": 1
+    },
+    "22e362ab85d83f02b392812e2696afb61936d188918ff8c85d904ace00bb212f": {
+      "bedroom": 1
+    },
+    "2354d6ae6c6bb199b046eed4504caec03f54a2ce93fafc6d511b224233b8a975": {
+      "hallway": 1
+    },
+    "23bc8a5738256ed2dab3d93e770da8f668b458a83630e5ed548545958efcc949": {
+      "hallway": 1
+    },
+    "23bca61b1c46a3421cc918fc61158b337e372d0b3d3363fec4967c6b7b520663": {
+      "bedroom": 1
+    },
+    "23e4c449df9a5d82268a517454a9c51eb055b5b3ce17fa71edf37843f1adea54": {
+      "bedroom": 1
+    },
+    "243f3b39ed56eb336214a6ec8881ea64b6cb721c76713db0f906950a8eb204f7": {
+      "kitchen": 1
+    },
+    "2484ba243556e2f8de665dafdfa6ba0b96e4c9789239e8dd99b665cbb56fd07e": {
+      "bedroom": 2
+    },
+    "2646e49b35cc8f218da6e3d417ff4f443c0eed26573dec4eb0663d943dd242e3": {
+      "garden": 1
+    },
+    "26d7123bb8acc75f3cac44a0e0d600b49c1c4001a7a0d2a2be7b6642cdc93676": {
+      "bedroom": 1
+    },
+    "27129de7b5cd99c80a4aafa42d7070ff3f19351dec6a3d4c9abc52c3bccc6203": {
+      "bathroom": 1
+    },
+    "27b7f273d8225d19f9e2a8dc5e30b89c4f389188f991eebe62f838c76f4cca67": {
+      "garden": 1
+    },
+    "27d96c1c04e6543a25d7645485ef2e05c91f1c8d1aede048cb31155f6b9c867a": {
+      "office": 1
+    },
+    "282b6830bea6253bc4843165ece17a44e6c384cb49fc5691808361a323a30b8f": {
+      "bathroom": 1
+    },
+    "28f891a269858bef27960b7b7c704532e731e69dc7ba5c524b7bab0f6213ec4d": {
+      "bathroom": 1
+    },
+    "29289c2e42ee067452713f29b6c0cf368898f6b0dd274e44a795b4f3c58daf65": {
+      "hallway": 1
+    },
+    "292d3c30b2bd9e96e6a34bb6ad3e61ff9b0835b2e23feb1c53c4e65d6564993f": {
+      "kitchen": 1
+    },
+    "293afe0e43362ba9a2980234664dec0a3f69399df7af627eb4c3da4639d8021b": {
+      "bathroom": 1
+    },
+    "295618ecc12e356186c1d79bc2492a55a1ab4cac411503b3644c42d0c167ed92": {
+      "bathroom": 1
+    },
+    "2966fecbe6bde51e3e7f6338123d59901507be5a794db30de3281e043f506248": {
+      "bathroom": 1
+    },
+    "29daf49d0934660e3f6865c3a91a8ce9281f1d516c8f91e9a1a84657a31b519a": {
+      "garden": 1
+    },
+    "2a9d2b5d4f0378ae84b5c23fe64b9c9bb66de6187ea5c552e44f615ce57bf5b7": {
+      "hallway": 1
+    },
+    "2aab6c25e6943059b0393d94fde2181f5640f0a66a2071a6231e81fefae9fa07": {
+      "office": 1
+    },
+    "2b73327c7603ccf85f075a176dbc0dbd3a6b7d7caa09ca072fbf2696cd8041d1": {
+      "garden": 1
+    },
+    "2bc1adbafdca299de6f4181c26e36892825bda5c2d859544ef8a1849efff8d68": {
+      "office": 1
+    },
+    "2c7853440c5056d159538a2df4d23ee6f3b9a45b1a01449cdd8fc2599ea722f2": {
+      "office": 2
+    },
+    "2cd90721bf400bceeb94c13412ca994fe6c2b23d46e86deb3d46c83d693c81ce": {
+      "bedroom": 1
+    },
+    "2dcba141b42f9b132c271359ef13f348fd9600bd30911116c8f13d288e64d837": {
+      "bedroom": 1
+    },
+    "2e448b6c2fa8abee4ae6f0e71c6dab8946ce6a87cee17a3865bdc08989fb52af": {
+      "office": 1
+    },
+    "2e4f587a1b2402cabd9e1b2b1b537508223f19c37f1f18923d7983de89e8e847": {
+      "office": 1
+    },
+    "2e644b16bb2d7193a834e7520dac2c32ca080895a74a050be7505c2c6608c13b": {
+      "hallway": 1
+    },
+    "2e67aef8cf20811625c1873a073995eb308f3719e9f6f7e7ad998013ed5a6768": {
+      "office": 1
+    },
+    "2e92fafbb24c1e29b9097e6aef0ede44e0efca96ec139dde4c48ae622858c377": {
+      "hallway": 1
+    },
+    "2eb1090d69e5ffcc3762be3849b37c050a8995b02c0376b517ac75f1aef55870": {
+      "office": 1
+    },
+    "2f1729228c671091ecb6207a6e9151aa402fbd5b880785fc392a878506524fcf": {
+      "office": 1
+    },
+    "2f873750c6b325b93b291084b42a01aa422bede706f03e4e034adf3839a52fb7": {
+      "garden": 1
+    },
+    "30301da4b4e1670dd8d88636fadb422e8fc8a578be7f137e0dd44e8dcef8d31a": {
+      "hallway": 1
+    },
+    "3060460a0c4900749e5ed3ba381edb62cdaec9273d52d3655b3b5607a8002f5e": {
+      "garden": 1
+    },
+    "30cdfa0285671e6ed61401552045e89c4f77ab7a08493ede19c51ae1db369fcf": {
+      "office": 1
+    },
+    "30dae6e86fe9684cfc3cb9a698b565bafe046a59d11fd4c895009ea453ab09fd": {
+      "kitchen": 1
+    },
+    "312e3346e69c1c39fe056772fe58641fefa6b45e7ce9a46afeb33367af3b1bc3": {
+      "office": 1
+    },
+    "31873944653c19f424889ced78835f10dc39b6fe0cdcff9f557bc7515ddb284a": {
+      "garden": 1
+    },
+    "31be35f04b19965bf0832dfac61304f8a6f5d28b2ad2a1471bdcd48a2f597109": {
+      "kitchen": 1
+    },
+    "31e2040bd96b2b16cd049fbfb7a0dbfbca44ea315f72f150a636cd93080f083e": {
+      "kitchen": 1
+    },
+    "324c5be2285eae904b17008636f85c767a151cc1763e539d01d198a1f7f06820": {
+      "bedroom": 1
+    },
+    "328aa000a32e252584b5d1f7e0fb13ef4f8f41c6ce7b8788a31f8fc0d3d50dda": {
+      "kitchen": 1
+    },
+    "328eec5bbaede010103e8241e53cb39e4732a4513b05bdb143065d4fd69685eb": {
+      "bathroom": 2
+    },
+    "33377491330793a2183536bf432c3948ca5f85ec3a0c009066fdf67713612733": {
+      "office": 1
+    },
+    "3427bf727f3966a2581491c709c2d5155c19dbaa0835bcea7526f2d62990f274": {
+      "kitchen": 1
+    },
+    "3499b3c6cd1284a1a6ad7be960b00ca4adf71e282af8bef582eee8f5a133e08f": {
+      "bedroom": 1
+    },
+    "34a2a6d1beed0b1ff6bcfb7932298533ea8a082fcc08caf525efde3ad26196ac": {
+      "kitchen": 1
+    },
+    "34f31dc54afc4a89660ddde81024fd59fd475ab1fe4877a2c3217bd353316fce": {
+      "bathroom": 1
+    },
+    "35b9a1ca362e4a86d142f1dc60aaf38f288feecdcc674b45cdbb6dc4e0ff316f": {
+      "kitchen": 1
+    },
+    "3664ad313132a0dde7334c74d970b6dad7754c2ceb4529818a21d9d922b0c426": {
+      "office": 1
+    },
+    "3675044ae7285badafe0b3706548024a4e59cc6d1c4edc9dac1fa296d2f12a8c": {
+      "hallway": 1
+    },
+    "367bb546f2bddc2cb060b046871ebaa1442df4914bd6a070fe74513bc8603c21": {
+      "office": 1
+    },
+    "369728f4692649774e0961e1004a65a02f5e1a4cf4b74ecae7148f94fbc21388": {
+      "office": 1
+    },
+    "377b8dd68712db8222ea3dbc55031b403cc34dd18f1ab0f9527d5cef0458a6a9": {
+      "bedroom": 1
+    },
+    "37e2e08e0d695348aff095925f061d112016d6802b85556bc910ae079d9419d9": {
+      "garden": 1
+    },
+    "37ec2faea160be7b4b7888189fbb32df0f0f7d265258f8896f7a3b1f807435fe": {
+      "hallway": 1
+    },
+    "3877098c984804cd30b85727320e8f4e45acc2c66f6b501ac42c98a4bd397535": {
+      "bedroom": 3
+    },
+    "38785e06cf2fb861d907948de49e614d31a1db6ac62fd785d304eb8d67f6eeae": {
+      "garden": 1
+    },
+    "388e4f6fa763fb79ef10d76d98c58e97938bf2aff015386b2b2fa04e27ea2f35": {
+      "garden": 1
+    },
+    "3920c2e28a480dec1109a08704e72331ca36d717218f7447959acfcacf33f64f": {
+      "bedroom": 1
+    },
+    "396a7768df9d0b060b3dbfe9ce6ffc4117f628d70ebcea36f53fc53f25cc061c": {
+      "hallway": 1
+    },
+    "398a3e4b6180b37e00cc042606cee4f3e99c925a921bfd58c7989866d40e44e6": {
+      "kitchen": 1
+    },
+    "3a192af4daea1ceddeeb5dd1abcba2bc02a760a89856105cd0d0e9ca74671957": {
+      "bedroom": 1
+    },
+    "3a23c4b80698a615f43e96c15ef596cf5e03973ac2d3bd684173d6f575835be0": {
+      "office": 1
+    },
+    "3a2706351eca547736d005efa37d9765208bc20f572ffe5b63cef6553edf3a80": {
+      "office": 2
+    },
+    "3aab45cd80aeba421303b98ceebd8bd7f360781d0ae26fd938a5f2a2e5c4a12b": {
+      "garden": 1
+    },
+    "3ac009bd8ed64a929bb5941100aac4f3d82378de2f2ebd6f4826e7b5925c5979": {
+      "office": 1
+    },
+    "3b465b6c2326c663b869d912b04ab4669770c720bb05f1b38276b105a238c0dd": {
+      "hallway": 1
+    },
+    "3b54e8cffb783cb0ae674b7515516e24bfab2012078a490d00db37898f6afc85": {
+      "garden": 1
+    },
+    "3b8ff1339f1bba3785bd5688d2e44aef75b92b40b247d8e88565a1211cc12aa2": {
+      "office": 1
+    },
+    "3c1d9feb3fad4122a355b33e5b32ce474337fe011dbf6a11b835884739aa5fef": {
+      "kitchen": 1
+    },
+    "3c7b679eba77a7156deebce9cd3e428d096ba582cb9a779440c2058ea29ab03e": {
+      "kitchen": 1
+    },
+    "3d2053b5bd6386fbc5896eaa5309ba60e5bfb65497c2683fa2626d6ef8def958": {
+      "bathroom": 1
+    },
+    "3e2c20ccd884a83067c48a69d2a5e3b45457a1886408892e0dd94a169692682e": {
+      "garden": 2
+    },
+    "3e8fd7b30bd999f284e5bacae6390a0273a57629e452a7bd65b2b63a87fec585": {
+      "bedroom": 1
+    },
+    "3ec1e2f6cd6eae65eb50bf6a00d53a92105df6be424b99c540eb7ec66020f84a": {
+      "kitchen": 1
+    },
+    "3f03ef367af1b8c7c4b8ef47aae547b772ba774f4aba743a4eeb9f49d7bb0ee2": {
+      "garden": 1
+    },
+    "3fe2efa4178a4be1356ff44768d62f2cbc46628482111a286bb1e26e0c3b1573": {
+      "bathroom": 1
+    },
+    "400cdfe76b920330449efe8e09e60ccba92d9698a897293e338a01196878128a": {
+      "bathroom": 1
+    },
+    "40134ed7104f3b6d03212cdf6685ce84aebfea13520fe3cc064e989687defbdf": {
+      "garden": 1
+    },
+    "402c8049925f552a2fafe9a0e7f149457723d9542381c5a3e952024e340dd07a": {
+      "bedroom": 1
+    },
+    "4049157bf15ba234074154417012a8392f545fe0791b67532000db6415fa0b84": {
+      "hallway": 1
+    },
+    "4178119b8d2c93c5614c6aab91a5bef5bfe412a20806116063d4443d23379bc7": {
+      "hallway": 1
+    },
+    "4181e48b4bb113873567291dcf97fd73063fb5422e7fdd943ed981a99dfb70bc": {
+      "hallway": 1
+    },
+    "4228a0e3c4541e37b3a50b96e23f2aaf83beab57639756ad4bfee0fb34f344a3": {
+      "office": 1
+    },
+    "42f464c18f99b8a8fd0c9edf33ff9a2427b1fe557374ef9d2f25c7877033853e": {
+      "garden": 1
+    },
+    "4379c489f5e897aaa9530b9e8af2e2304ef4b70b5dd08b8e853fa256d035074a": {
+      "bedroom": 1
+    },
+    "4393b9314645da8526b9550d23634721a625de05fb0e026390380164bd3a42cf": {
+      "bedroom": 1
+    },
+    "43b01c2494ba14fe730056451d1b1b9d8c145ccfc0c95b620a923e7aba33efac": {
+      "garden": 1
+    },
+    "44219dab05f6a7cde6bb7570006afc5d967b7cc592af1c89c6457d68751e5780": {
+      "bathroom": 1
+    },
+    "445841ebd71b56b4611e124656df6056bb606a60b0906cf56f91f29c7c23bbd8": {
+      "garden": 1
+    },
+    "446f6aa5fb97a12200d5ee5ae5b2bb48baaae78266b90ea235b47ba6effce5b7": {
+      "office": 1
+    },
+    "448f7d0b7cfa387178b833d9036b704d5c2beabff9795c9bc020c4912a99f3b2": {
+      "office": 1
+    },
+    "44cb6846313ba87f80f40f6652a314d4ce5c138a3113bc587754b506553733c2": {
+      "hallway": 1
+    },
+    "44e5f3b620fcc6f7f8e1d9c83bb9f7d1781a0e85eaea22a46a397594d79b9a76": {
+      "kitchen": 1
+    },
+    "44f5f211937ed8ca3e70296816978346edd68bb829d4411b4d8af471bfe0e40c": {
+      "bathroom": 1
+    },
+    "44fe80791102ae4c40e5fa6ed9fce8253721b3401d6084b28e1bdfd7c4d04d90": {
+      "hallway": 1
+    },
+    "4544de3888b1c89e0849008336009d5e421bccd399260a4d373daa3e69e0aba2": {
+      "bathroom": 1
+    },
+    "4571f9428654f43f93224992745d018fbb3d7fc095b9d65310344058ddc5c95a": {
+      "hallway": 1
+    },
+    "45c8cb6ef48b98519d5f5323d6b9a241106495572ad8b07558783bdde3fd5f3d": {
+      "bathroom": 1
+    },
+    "4674b1d4a32082a56b65dafd3a3a6a63fc985354a5cf311ff6483a348e69d7e1": {
+      "bedroom": 1
+    },
+    "46c2a1014c45f0a13179f0e38167d9ab6013e86e1061ba91dc2c5d47500419bc": {
+      "hallway": 1
+    },
+    "46d672b9cee949b7f024b698cd56684a8fac3b90349c83fff5cf9c95ccaae9f6": {
+      "hallway": 1
+    },
+    "4706f262a041bfab8904d94fe455c8129e4bc425b6aff721ac3dd1b74cdda530": {
+      "office": 1
+    },
+    "470bcd92773fa834a2fce0d131dadea705616049d74e466c3d4f069f9b1810d2": {
+      "bathroom": 1
+    },
+    "47f3e335a0a3156b90b2a5e42e35922b204d42e80648438d5739eef26a272569": {
+      "garden": 1
+    },
+    "48184c8ea93bf179d109223dd1cc494148091988ebcae8ef59012dd092f0443e": {
+      "bedroom": 2
+    },
+    "481ddc640d323ac5c4f3ac62831fc4f2fd2131ffd6115b83205d424554498dd8": {
+      "office": 1
+    },
+    "494e3056b635cc6ba96351bbec9355e98be2b0af942c55cf1b34e0002b088dfa": {
+      "bathroom": 1
+    },
+    "4a78af7c756e904f9af46efebe4cae1e4d2756dd214d35ce735250eba5a0bbc1": {
+      "bathroom": 1
+    },
+    "4a998e4485d05911bcb861aa19662f406b13850d337a41c64008941c27bae883": {
+      "kitchen": 1
+    },
+    "4b0ea70046911130506b5c2f3cba6d0315fba0f41198dc4a174760b669200d4a": {
+      "bathroom": 1
+    },
+    "4bf923649356f94ff94495563bfdb0f658cadb6672d86eb22c732acf8b94e381": {
+      "bedroom": 2
+    },
+    "4c0cecb0736ad42a2d5f59efbbb50d72d0514c5e9b412ea166f5209a1a5767cb": {
+      "kitchen": 1
+    },
+    "4c1948da3ed5630fa5552ccb2cca13634c348d35b692ba139b7bfbe366c54261": {
+      "office": 1
+    },
+    "4c26fcefa13f4c585cfd227629c64e0dab0d7ea5968572284b6a5a049b7ea91a": {
+      "bathroom": 1
+    },
+    "4c50196403cb8a565de0237a6e4498c556f451e77745f7c9e6a7902a62d00f24": {
+      "garden": 1
+    },
+    "4c825a9f7859b37bea69a3171fbddef29d9a2606514892cf1d90afc6635284a1": {
+      "garden": 1
+    },
+    "4c93d31be78ea7846a76c3b067a40a20c9516853da4bd710d13fb9bfb1db1150": {
+      "bedroom": 1
+    },
+    "4ca567bdc63d7513f27d3218479173f6a6763db16360e626828ab76fdd60e1d1": {
+      "hallway": 1
+    },
+    "4ca6708244cfab51fe10bedad604486f2a4484d491d50e544e12a974e4bd138a": {
+      "garden": 1
+    },
+    "4cb364a8ec200a3d231da3420be6a94d5e5d2dac8c312f3075b4e45401e900d9": {
+      "bedroom": 1
+    },
+    "4dcc74111e4e615d776aeed0be2491847d583c3703ebc61a9ca58b53e8984969": {
+      "bathroom": 1
+    },
+    "4e4967fbf440bda725ace4145acfff58a320b477a100d0ad2440225214073ffb": {
+      "garden": 1
+    },
+    "4ec218d12e1231022ad2995894afddd507d4d98ef057567c4e5ff482b1b64736": {
+      "kitchen": 2
+    },
+    "4f2fce1223a0704ddbb9fa4e415e2b750fefddef64da4503c07ab47c9baceb82": {
+      "garden": 1
+    },
+    "5015907723ce5f4ce22f94f65fa9df24e5d045f869387bbbfc07a6c030566d1a": {
+      "bedroom": 1
+    },
+    "50c004587392049328dcdd3451cea04609f6acf1c0399b7d168530fc53702516": {
+      "bedroom": 1
+    },
+    "50c1f506971ea51c820dbea48796a4867bd393c0619f98b1d5e9a9c4e76ce70b": {
+      "hallway": 1
+    },
+    "50c3bf6e8f28870cf45a217bd04d2e80bf477567511cdbbe9a62733f6e909c4b": {
+      "garden": 1
+    },
+    "517c1192848af1777252c48a8d2fc8bef97161cc3cab89be07781c523c0ca34b": {
+      "kitchen": 1
+    },
+    "51d73e43b53aa7da25dc639849db17f9e3a4273ccf8c58a8a4df7c913583a013": {
+      "office": 1
+    },
+    "51f4e6c22c32a361229c23f91f943e139f9004ed323b201cac0db82897eaf835": {
+      "bedroom": 1
+    },
+    "5232f214185c5bbc4660a1fc98d56b133404e20754d7aae611ff1c82645569fc": {
+      "bedroom": 1
+    },
+    "5312ad111877d11a4b76bbba554ad3a12b8f2e8dd23617a97976c77e75e8793b": {
+      "office": 1
+    },
+    "5341555e117793168653444181b4d90b540a2f410a0c4672dc721ad011c3a782": {
+      "garden": 1
+    },
+    "539c3e8f76dcb110cd3ec8d293ea5646c6c2344fe185a9013aa2478928d77289": {
+      "bedroom": 1
+    },
+    "53e48cc3dac4b19ccd204711c7cd346df2714a9e4a6730860fe371b2469bd5a8": {
+      "garden": 1
+    },
+    "53ee6c7497bb8bd38b018a70421881628416cd36ed2b54e1c19b8dd14cb4bad9": {
+      "office": 1
+    },
+    "543d6c05274ce018d8acf7fd266c578be6d190fb6eb30805b9ff7192faef7e12": {
+      "bedroom": 1
+    },
+    "549014bf3aceef805277978dce9dd2435d939c251f1ad166d0dd3653262d28f5": {
+      "hallway": 1
+    },
+    "54968bb0f2fd45274300ac88f39294b1c21d48694cb0fc41c18647c9e60399ef": {
+      "bathroom": 1
+    },
+    "549b41dd7a15e067323bb6f0fd3057e2e43705374e3b06a0bf13d5b163706ccb": {
+      "kitchen": 1
+    },
+    "549eafe743659097de3f43ef37d07c54081d20ec65720279a4959611ef4c0b61": {
+      "kitchen": 1
+    },
+    "54e104b2f85d991d362f36e87cfabee645cdff74f757f84439904504fb6fcab4": {
+      "office": 1
+    },
+    "54f32d92274ef5350fb7aa5e79e5f495c298ab43fe4c3c65b84312b70973c07d": {
+      "bedroom": 1
+    },
+    "553b0d8fe66347c2b628b74b4ea939c225c3d7cb7f4fb0af87482150a9fd7163": {
+      "kitchen": 1
+    },
+    "560de9e1ce89455fb2bd85c8825794cfd55bf898c50c79f4023c58760f60435e": {
+      "bedroom": 1
+    },
+    "56ee08c1fb8ac53738af0282ffc0e3db3a12659b6742ccfe6e39103441fe4c5b": {
+      "bathroom": 1
+    },
+    "5759ea623bb20e810d3ce19f7ed858299fba53c328e23cda4956cd54c1f1c02f": {
+      "kitchen": 1
+    },
+    "57703a817504560a8c9c109534ec4d52149486693f2770f9c6b283dee3663d16": {
+      "hallway": 1
+    },
+    "57840ef3ef892332ccc7d7d56cea50b3344f962175014457656f7a778b87a4e9": {
+      "kitchen": 1
+    },
+    "579a8d299d7382cd849d4abd998f0996d83b3f3928ccd2caa413af45ca7db295": {
+      "hallway": 1
+    },
+    "57c3021fc8e1f381b4d8f72c20dc5d936ae0c2cb850f515579e93989f3ced5ef": {
+      "kitchen": 1
+    },
+    "57dbf65347192a427bdbaa4a8764b6d98c469c5d1cb8004eedbad3849bd4a53b": {
+      "kitchen": 2
+    },
+    "581cda71e7c53e5033e36a82b08250acdf44c53e349868b847f71914d7ae61c5": {
+      "office": 1
+    },
+    "583719021c449c69614443cc8923f2ffaf0aa11225f8540bdeeef971d6cb73c9": {
+      "bedroom": 1
+    },
+    "5847392dad9168563782034b4abc6f34c477d31e5ff6c98b4c16d79b11b06cc3": {
+      "kitchen": 1
+    },
+    "589ff0ec2e4b248360dc079b00b6421c89119339ff325edb93f78410e26b24c8": {
+      "bathroom": 1
+    },
+    "58a01f892cb327e509afff818c19f7e8bb5d1ff0b64fe65375748f994d7a1d94": {
+      "garden": 1
+    },
+    "58a2e4bd2759cf03a014da321f481a4dd46797478f6d187ef5d1f82b07bcd026": {
+      "hallway": 1
+    },
+    "58f8df1d8587f209ed7660ee1d1ce468bccf47c59d2986a3dca3e38bb52ac901": {
+      "hallway": 1
+    },
+    "590408590f8072f37ab6d836dbef11529a1a634aeb3ed532dae4ebf92b56b572": {
+      "hallway": 1
+    },
+    "5936df861554d2f9bfb64f4c5206aa9ee478261c367ab5ab3388a98da2863885": {
+      "bedroom": 1
+    },
+    "59d426d4a97eb6196fb3caaaae5fc3f6292ce863ce0e3f43eda1b30f49c70e3f": {
+      "office": 1
+    },
+    "59dcf71dcf96bed6302c6b95150c4e18bc31c55ba5a5dc4f50572ac1806fad1c": {
+      "bathroom": 1
+    },
+    "5a9b087f47d38d2b169627964d6fba0a94ff3693345ceadbeb553b4221ead7a4": {
+      "bathroom": 2
+    },
+    "5ad580abba0f2a146db96dbe95ce75de5b383d85acbaf99c2b4aa91d86fc8598": {
+      "hallway": 1
+    },
+    "5b620ea8c88f9871f29493fd36a749d476d5381202a6d5ac0651d27735765b11": {
+      "garden": 1
+    },
+    "5c2960d316a4a13455f6ab8426532ccd3b966aeae0081dfceff93dbfa395b911": {
+      "hallway": 1
+    },
+    "5c30dfd0e23964a88b080e603e02a3b34e7fdf11cfa2dac837c132d95c2888ed": {
+      "bedroom": 1
+    },
+    "5c785d5d22eee93d40d2d2e5cb389f5b078b886664cf1df3a16b2056f8af2cc2": {
+      "office": 1
+    },
+    "5c859fb94c62cd39344243f5c1d63ad08289033274fd52556c582b05fbf74f71": {
+      "kitchen": 1
+    },
+    "5c9c258a43699c716377b7c6a60def8cdbe425de9991f48a888dde421774833f": {
+      "bathroom": 1
+    },
+    "5cb67e0044839950f3114bd0dddec1b7b748b13bb17914776c3f904429645663": {
+      "garden": 1
+    },
+    "5d195bc8aed74204c964d4f4ea705c58ce01366f19f57bebb96f535106519204": {
+      "hallway": 1
+    },
+    "5da8a73c684e13b01e4de32ea0da651943d85537ed018deba29fe04b5f6eb6b2": {
+      "office": 1
+    },
+    "5dbfdec487f9dfb8549bbfa91bb278ca0c0235c0b3125cfb3374546db28dcd49": {
+      "hallway": 1
+    },
+    "5de8be8d4d93bb1dd8b4b6ca7ed0ab60c0051303d4759ae03b23c20432846e78": {
+      "hallway": 2
+    },
+    "5df6326da6c3c9f1783da82b3bd848ee521d041262781979d5e7af1d7294e70a": {
+      "bedroom": 1
+    },
+    "5e659b68070fdfb6d34f3b328ba587dde72163be3f187ac86b0054979a6265a5": {
+      "bathroom": 1
+    },
+    "5ecfe64a6dfac285ff14518bf576c9fda1d139ae025cccc72761e872b42ee02a": {
+      "hallway": 1
+    },
+    "5f6e8ee9662a6d40471c351c21069fc5db8ccbd3fba6cdd2ffe006dd106bca26": {
+      "bathroom": 1
+    },
+    "602203f60e57974c971c23b929172cd98cbc646c29c71e5df51548030b7fe2ee": {
+      "kitchen": 1
+    },
+    "602d070064ace7ccf70d0c4f4da5c5ebfc147a0d0c42e2aee955fd51d17e2d2e": {
+      "kitchen": 1
+    },
+    "607a01783f15615591c700b20ca6e75d860ed8cae60c2e1246c0f1a7b8332828": {
+      "bedroom": 1
+    },
+    "6080473a7dd2649cb43db52170132d631eed410d04a111c8ed21aa5b501c4f31": {
+      "bedroom": 2
+    },
+    "609ed53584e26866ed9b599c6f9ebf1c1e25b3cd0c286f95895150e15c55e78c": {
+      "bedroom": 1
+    },
+    "60a40582d5569d47c59981b8b9b541e720c4ed422bf80e132f6142ed86e99aa8": {
+      "office": 1
+    },
+    "613bd526cd1e244c48352945c62493f9ba055856340fd50c7531b29394e7a018": {
+      "hallway": 1
+    },
+    "6168e19fce96660aa87580e730788faaaa72b5294f89e06dfec1350ea4272fd0": {
+      "bedroom": 1
+    },
+    "61e42262bcc7211e55b4695f2ca2c20fcdc19918cd76fd160cbaff7853d6e57d": {
+      "kitchen": 1
+    },
+    "624ad934b3f5ee8436e93688df2ae82903e97221bece1cd222a9272a6e622df6": {
+      "garden": 1
+    },
+    "625135ea6fa8416a17e54a431958c0debb567849cac710c9f2de53bd93143758": {
+      "garden": 1
+    },
+    "62a0a26812635410c28a711d5a4df6185982cadf024ed988c2a5363360e1fef1": {
+      "bedroom": 1
+    },
+    "62f186c74e3b646dc158656fee26eb9afd00fad227d0bb9cfcdf750e5e032d43": {
+      "garden": 1
+    },
+    "62f832a6375b6dc044c3e07ac945fce5bd3d8c31110efa7ec218fed16c2d8a12": {
+      "bathroom": 1
+    },
+    "63254f7a4f35c1c40fbb6ee8f4768f9f761fcfc26e5333d1b718eccb9fb1750a": {
+      "kitchen": 1
+    },
+    "6381a75f0d04f889604179807bd4e8b74b51859ddbce39942716b2745f80a982": {
+      "garden": 1
+    },
+    "6399e133f5c5fb31b4f4569bebf7709f7d3c0d339bd91da51cbd736078296d8e": {
+      "bathroom": 1
+    },
+    "63b4e127c152956a614d80836ce604815f171509faa0ba9ee50cb76f2037c140": {
+      "bathroom": 2
+    },
+    "63c52e430fbf7564c2323a396bf60a8fd00ef6a235a4097f9667cd304771d46c": {
+      "bedroom": 1
+    },
+    "63d71f72eda1f38dbea5a715fcfe03eeb5f512c98cf3c0231de7f660ce4b2445": {
+      "bedroom": 1
+    },
+    "63e84c0c438f67b4e0d6cfe8c6766788e1c8b3b582ae8cab35197c48ad56efc2": {
+      "garden": 1
+    },
+    "64004cfe3e8508b581a7cfd59b34160be6aa4b0bb3773b5e97fea5604504e5e8": {
+      "hallway": 1
+    },
+    "642c046c25f1c0f534c8face4cef8c96f1bd806804eb02170a28769ab62b8c10": {
+      "garden": 1
+    },
+    "6447af9ada3cb0d64e7247cecc8ad9d22678412a9959e38e7dd53805b7bd218b": {
+      "bathroom": 1
+    },
+    "6512c73587f0915307b9e990494f1f458d81e5a27e41cee4f14973e72ecb6b33": {
+      "garden": 1
+    },
+    "65237b92cfc8d53d519b22f2cd6228ae79798f12c69387850496e00dd278bd2e": {
+      "bedroom": 1
+    },
+    "65c2eb2fe7679d912bdf51028ad1c84a07b1e57eb329e1fe3313ff0003023e84": {
+      "bathroom": 2
+    },
+    "662b7ced06a8fb687453c39753fc6675e4cd63b5069605b5f9c59a5d23a9308a": {
+      "bedroom": 1
+    },
+    "66354233136cb0a224d20d82b08321eddd6b3dd622dd09143f49a07a70babb02": {
+      "office": 1
+    },
+    "668ea410128c9923bdaa2aae5c0b6d2f659bc430795fa97952e3f9a8288b67a5": {
+      "bathroom": 1
+    },
+    "66bd292579ccf195bd6f9096d7890a7357a08afa249b8b9deb9d71fc75f867a2": {
+      "office": 1
+    },
+    "66d0f7bd19c8f94d1467bcf50796af8c27e0e79abbfda689314ec2082a9f7178": {
+      "kitchen": 1
+    },
+    "66ffd484c9bb4b4c75733d3b0290d232f3f3b271a492d8454e3e40fc7f1a3e27": {
+      "hallway": 1
+    },
+    "67286309c0c1a46769c488031ddf551ef80e294eed5b6d008fbb2959f6a314df": {
+      "garden": 1
+    },
+    "67570c1e92d08843cd8ac3e7d60ca0eca78d998b10d642e401d0daf71760ac28": {
+      "garden": 1
+    },
+    "678b727dbdd58c3a898e9e1737bcf982749a7823b0b519e284991fd8b870c014": {
+      "office": 1
+    },
+    "67d9d3e87d76e8afcbc4785f5ce9e17810fb11a0c04f056506f3bc2a2e25837e": {
+      "garden": 1
+    },
+    "67e11c4772cf907862c8e9cf6cf4684a09fddb8b714e6cb9c56fc1b23193d5a0": {
+      "bathroom": 1
+    },
+    "6830cd30b1acaf3609451c3a026ce3fbe4c1a223323e8bb8127fcb52376df4c6": {
+      "bedroom": 1
+    },
+    "68755b240ef29be50f43b94367df4ecf8a0767326caf96f107a93cd71658eb3f": {
+      "office": 1
+    },
+    "68a5988fa3be9d2301f35ba09c89dc0ec87fc360c222a01ba193e0c16cfba7ee": {
+      "office": 1
+    },
+    "694ba7276b15699eea47121a519d972fccb8265cbb86c981cb90097417dbfda8": {
+      "bedroom": 1
+    },
+    "696d49fffbf4e9a683d9815af0c63d129d138b76f729f0295ec104ad1eb61585": {
+      "hallway": 1
+    },
+    "697885c5c587370cf031a4de0c3a68b81c89cc5cba0f63a2175b610d6f140a71": {
+      "office": 1
+    },
+    "69a427cdd7d58d7eea52078111893258968af2678321713c468e063b95624357": {
+      "kitchen": 1
+    },
+    "69cf9e41d0f890d0a6878a51bcd94c56b29f1837854dc2361e11379e72529fab": {
+      "bedroom": 1
+    },
+    "69eef7f57c0a73b80ab78770e3a032e3babb69a807016e83293463beefc8bd86": {
+      "kitchen": 1
+    },
+    "6a12ea20cadccbc82cf27dced7254e668020c8f6c3d9350530a332d96e7f8f86": {
+      "hallway": 1
+    },
+    "6a1cfb084d4485aa553795edbb0c413229fffe5be6122ae62b1c948a4a0744c7": {
+      "bathroom": 1
+    },
+    "6a4a77ec82dd077d0c9abf6458855839ebf86ffd8ecaef4f1fb53e69f49744aa": {
+      "bathroom": 2
+    },
+    "6a605ef43691c42f20531e56522f782fad02e6e24008035e00c60c6dcb975235": {
+      "hallway": 1
+    },
+    "6a8c99286009a67ae62d6cc50a1abde5d4e3df1d1a3c1c4a2483ef9372edf99c": {
+      "hallway": 1
+    },
+    "6a8daf54a182c6743c95877d315ccb1476c8de617e5d8041bf5c4f7fa80f92da": {
+      "garden": 1
+    },
+    "6a977b24c20ce6e3712f6e6e72b30ee132bb1df76c545612d6ecbcd265a61460": {
+      "office": 1
+    },
+    "6ac1f133e7d0b5a6a17bbd811e9ba08dd99249daf062425000ec13663449c435": {
+      "kitchen": 1
+    },
+    "6ae7b89078908015b9add038b02f50f82af1e16cc79b494ded07430273e78290": {
+      "bathroom": 1
+    },
+    "6c370cd5a785caba416ffde0db678ffe23c707db02aa459f4166b32903def81b": {
+      "bathroom": 1
+    },
+    "6ca268d11b0302372c9fccf5674bff7f80f4b5d3d0a28d3c89ffde2050e09072": {
+      "office": 1
+    },
+    "6ced4c4a841cc60bbd876cbf7d344f4422465189714a64421fe55042b2bd3745": {
+      "hallway": 1
+    },
+    "6d291f2cd27672ec75c1f930baa388dbf4119a992e775bf9d469d6fe937680de": {
+      "hallway": 2
+    },
+    "6e688351873391bca9dbd3972e4acc021b268108587e841cd020fd425d98f1f5": {
+      "hallway": 1
+    },
+    "6e92df0fd0bce7a346cf1d6b912779511e8e3aa0f9a2d96b3f1edbf2f62252b4": {
+      "garden": 1
+    },
+    "6ea155ed8f158930864548252ec68dcd6b1c40daaa5a9ec695682d28b1d69963": {
+      "garden": 1
+    },
+    "6eb1cb4d404e7ac121e9a3a02fc86008d7a7ab2617c77e546607f6b7eee45af0": {
+      "office": 1
+    },
+    "6ed7b7caa469c3c1616571ce860fced6407beef72e847ae8921bcaec55249c61": {
+      "office": 1
+    },
+    "6fd9d011fcfa0d825ea641adcb728a71035cb60e3e0c20b9496326dc1a444428": {
+      "kitchen": 1
+    },
+    "6fdc5fc42db102758947a949152f64dd25f9363303b59ea5ba04e2b899b8b32f": {
+      "bathroom": 1
+    },
+    "70092f8f2d6fb736656af65fce3d959b176e3f0cf7ebdd4f93c1676c757fdfda": {
+      "kitchen": 1
+    },
+    "7018f3fbcc311ddc2d1530edb74933e89c5de0588509a9b81f98e2fbaf5ca2bb": {
+      "bathroom": 1
+    },
+    "7060d29a93264a0426ff850cd4ad7e4fe8c285eee3c38d10dc238c18d1d6ff8a": {
+      "bedroom": 1
+    },
+    "708f50233d48e418adf17b36d25c132de62bd90699bc11fad2cbf91f1d4a8d7d": {
+      "office": 1
+    },
+    "70be2ee87f8a7800294157637e43e5261545f14acebb9df30001fb1d39609438": {
+      "garden": 1
+    },
+    "70ec44d1b6fd4cb5d77c111af9969342c81894e87929c79a4c4d03af4502d887": {
+      "hallway": 1
+    },
+    "70f116770372b1c51b66bd2de5e27429dc94aeccbeb045b2d2fb87e655b37b10": {
+      "bathroom": 1
+    },
+    "712d62adc7d4f1a3188d5c57c604f479c7ac0a082b2ade8228b45fb3d28e598f": {
+      "office": 2
+    },
+    "714979e7c925435e2022109822bc54bc8ad51adf68e2e5e745235dba823930b6": {
+      "kitchen": 1
+    },
+    "71808011a34ff6b8f3a6d68e85fe5d1d3e1eea968031b4989dec7b5344f1cefb": {
+      "garden": 1
+    },
+    "71941b565a46cea6bc9c90d814005cf1be7d3834e3c017c1bcc410f7d54887ee": {
+      "hallway": 1
+    },
+    "71a45837d89aa543bd80d1df9da4628825cfbda01715e53c3daea84327fc741c": {
+      "bathroom": 1
+    },
+    "71a705a2678818ed8c556a8dfebac88e8d4b7d758e72aecd92fa76e140b59a55": {
+      "kitchen": 1
+    },
+    "71be31231a5ec3aef9a80521d933d77ed04e5fbdd6b39e54c2670d38d69a6423": {
+      "hallway": 1
+    },
+    "71cc57b923ce677519e889f3229061f0cb640e3d209c136553667d1025dc6d40": {
+      "hallway": 2
+    },
+    "725bd8a0268187a1699e11356695edbdd34abab177a167f62ba3228ef510a87a": {
+      "garden": 1
+    },
+    "72c75bf10eab9c6983432ea48fb9d77d628a057afce3aec6dfee5c1574545b9c": {
+      "hallway": 1
+    },
+    "733cdfab7fa2b565bdcb9b017980b8dee0846cae7ff357920c5a55b980658044": {
+      "garden": 1
+    },
+    "7345554bb240df58977aef01e6495bc9f0e3bf275f1293c9474a7e7839de4597": {
+      "garden": 3
+    },
+    "739c7e042fd642eab361b199a40ae0f761a1105d874bf9d9a95b404c13c3be0e": {
+      "office": 1
+    },
+    "7422bc9f33c3d999aaf5693fe05e5274fcb988f16fa6e4aca58e7dd1924df7bf": {
+      "bedroom": 1
+    },
+    "74f1df6afe936f1600732e4af0c59704c6a497bd0590e1731162cdeffd733d10": {
+      "kitchen": 1
+    },
+    "7506ce59e1f1cf29e6af1ce76b0dbe22984367a084cb0e9842dbb46f6ca2ac5e": {
+      "bathroom": 1
+    },
+    "757aaf529094165c212e52d3341a4c43db9e4878d5d843e62a1338859d29cc6c": {
+      "garden": 1
+    },
+    "757bca2d9f12add0a6743d6d7aa672ccbf6cf4a9a859935610b78787cf329a45": {
+      "garden": 1
+    },
+    "7665d24412254b4b7525c03c153c4bad007364b9808adb8f5c21496903e190f1": {
+      "bedroom": 1
+    },
+    "76e3e73bd5c91de9aaabee4f58f106072315040f3e9d5f1723950ba281493102": {
+      "kitchen": 1
+    },
+    "76e89a705d1101a03624d259ee49374699c5b393c33f692bb3841de9103b0789": {
+      "office": 2
+    },
+    "76fbfe6fec2525c132be2589e48b5acf7da1fe924ffefc1753072d35e7a337f7": {
+      "kitchen": 1
+    },
+    "780f67b6c72193e2f35a2deecd9026b0182e55702b917340db38cfe631791edf": {
+      "kitchen": 1
+    },
+    "78731fe7cb6d602d6785a9d94dee71b44dc60c6a03936f6f416d534fd9eb17a0": {
+      "hallway": 1
+    },
+    "79184f2777bfdf3e50ffee87ba59d71911d8f7cc8ffa0869bbc9a9db37a82d65": {
+      "office": 1
+    },
+    "793387d9dd74141be3059afa767ed53aad83ccfdc58e7686cb7c7276570891dd": {
+      "hallway": 1
+    },
+    "7a61ba474b171fc528110958b9d0ba52d80e1c1a7e17a7f5b6d20ad57d9b8f6a": {
+      "kitchen": 1
+    },
+    "7adc619fee11ee59ecc6b55f46694a61111c67848588e455f336d6ed04813606": {
+      "garden": 1
+    },
+    "7ae2d87be11a6078f3a3d848f0ccd865f0d31a7f258bc09ca169ced716864d18": {
+      "office": 1
+    },
+    "7b15c19fd7d702b10b63444f67ebb1b555a56a27d31c3d4146fe182330474686": {
+      "bedroom": 2
+    },
+    "7b8045dd3a4831005a6f43c3cca6717c5e19b498949387a5e73196250d47cd0c": {
+      "kitchen": 1
+    },
+    "7c08e4248c55b6294c82b479ed98d904e0916db800e350b6ab7dc816eee94daf": {
+      "office": 1
+    },
+    "7c2e44359e0a3db8f50080ef06fe0c81a07d1f3f1dd0e613f387455c3a54c827": {
+      "hallway": 1
+    },
+    "7c809a24fa1fa69850d9ce9188e5b9565aa28b20be2838711efa2ab3d9c6fe97": {
+      "hallway": 1
+    },
+    "7ca4ee8116fb65a81635938a4c989767e93b8c1eb721c753e759ffecb61c544d": {
+      "bedroom": 1
+    },
+    "7cfd36cd0f11343aa322ead87e45871578149d3de60b78093996749edef32ea1": {
+      "kitchen": 1
+    },
+    "7d05caeb1e9544511f909bbdf6947bb78233d8dc34ab06a1e41c6b62a85bb9fd": {
+      "garden": 1
+    },
+    "7d70cd5eebbccae4f2b310532f7a5cf52e57b22bc67dfc47e1c5748903ad3e1e": {
+      "bedroom": 1
+    },
+    "7d7c7533271157171fb07d95cef4f035d18127e0a03f736456ebec8e84c4a4b5": {
+      "hallway": 1
+    },
+    "7e77ccfb99fbb0f4ccf25e267a491fb5772c96ad6af78fafe35813efdac94947": {
+      "kitchen": 1
+    },
+    "7e86d96c0c05139ac2c8719c41339f3a9045662e8668497844a6ca90708d1ef3": {
+      "office": 1
+    },
+    "7f0273379d1a689c3dcfe28d419cd88eecfcb2cfaf3d533aaf70e0e78f48a711": {
+      "kitchen": 1
+    },
+    "7f065b88ce167842500a1556e3831143ae88a287ea319d7aa2a389cd6b4a229c": {
+      "bathroom": 1
+    },
+    "7f0d5216ab1b6c64b563bf8cbb96b7acf4c973d25f80e62b28a0f9303ecae6aa": {
+      "garden": 1
+    },
+    "7f446d7472464e20602dce5f92b34bc3bda12892372e90f357506045b4f001c0": {
+      "office": 1
+    },
+    "7f54ed3c73d93ec74e0728d44b411effe1501902c91691273998427b6422863a": {
+      "office": 1
+    },
+    "7f6bf94ac19377e4e115753a644e32e554809d2b3d5f2a4ae4556730df7e6040": {
+      "office": 1
+    },
+    "7f7d4f46733dc0eea6cd5c9d5408040b390dd7bd9d77fad50dc7d68ef0f4bb6c": {
+      "bedroom": 1
+    },
+    "7ff0f1db0bc940933452b52ea4aa7c92f04e5d353fb309dac011356b3e7a8c98": {
+      "kitchen": 2
+    },
+    "804af2d0f557ef46fde1677931dc509b5bd6491fbc6af3dea92644e2d8c3a75a": {
+      "garden": 1
+    },
+    "80651693a4003a04eb89a9231b5aba864fceeee4890c744624a67a2bd6cbcaa8": {
+      "garden": 1
+    },
+    "80d996002da6b74e8206255cdd34556abe830dc867de92806de173aa0fa9ea6a": {
+      "hallway": 1
+    },
+    "813def42dcb45f8f824cf085040480f05a3bdb80c5ec0ae12269e9136ca962d1": {
+      "bedroom": 1
+    },
+    "8172daa4e04498baf1bba3884115690ace9b6c77090e5c88bd6fd3e71e6fa267": {
+      "kitchen": 1
+    },
+    "81c4dabb914115178aaa764010352f5e87b4868c103e5f44d7be354683fb4df8": {
+      "hallway": 1
+    },
+    "8284d5f750288edb0d28b78288b3f3147480595e494664adbf20a573b6fd6cd6": {
+      "garden": 1
+    },
+    "82bf3dd66c545e624e4c287a0ae71724fa9cfb969fe4c1df98bc9d6b009a303d": {
+      "hallway": 1
+    },
+    "82e253431f09cbfb78c6ea29b8313fc66d731c71c54171556b37c3a093917b67": {
+      "hallway": 1
+    },
+    "83778db002d4870a00f0acbc59a9d8a161b51ece94a1ca4c96b78b7983c61920": {
+      "bathroom": 1
+    },
+    "83abc8616a33a7b71d04f2bad977402b7375ae0648f85079fd77fc698b095499": {
+      "bathroom": 1
+    },
+    "83c4cd4168aa9c827dc498eb666609db0396556ac13ccf7b874b1a6b0854e25a": {
+      "garden": 1
+    },
+    "843ce783fef397e5f41a45c53daf2bfc9af5f7f36a1665a30dbde3d2b4e312a1": {
+      "kitchen": 1
+    },
+    "84978b1f06de65202045ee34b9003c956e966f5a02e1e32e951a3a2bba74af2f": {
+      "kitchen": 1
+    },
+    "84aab67cbec0bbe03a18e4dd1abe8a6f9e3c44ded65c90bded7fc3caa87385c2": {
+      "bedroom": 1
+    },
+    "853af89ccb1fc7aa5ce59109df8184ed33e3698e05f13015bde1bb5e4db2c9ef": {
+      "garden": 1
+    },
+    "85566209733b788f1e5a061a6b66a0d653c0ec854b5c24ccab61dfbf45174d54": {
+      "hallway": 1
+    },
+    "8582e53d221c17082e41b80658fd743e6cff02553f106fc5ad7e62bf3eda5a6b": {
+      "bathroom": 1
+    },
+    "85b8ecfcee36f8e73c6ab5b438d7523b1c600e31f84f59ce5dfbb1e040ce5eb5": {
+      "office": 1
+    },
+    "85d7b31bd54a145d23e55f616a177afa10a80ac34184eac244ee1c5e4e774408": {
+      "bedroom": 1
+    },
+    "863f92014f537aa387a5fcc58e6f41a47ca83c1fb74bd82d59a917b11e8e3eff": {
+      "hallway": 1
+    },
+    "87183c4f2dc75b991e8e52d5686fe772bce5b7b900a89b4617f921c3d9cb9049": {
+      "bathroom": 1
+    },
+    "873b02f7219c67d529c8edc9c43ea1f7b5247ac72c3f67443d842876698e0958": {
+      "hallway": 1
+    },
+    "87bcdbb0c193087394d1f2f97cb21a7c5c3e631e5d05ad224eb76ea94296b055": {
+      "hallway": 1
+    },
+    "88069af44babe7135d4cd4f9a0ca538f758d699e999b20906e5f65aec3fe2bde": {
+      "bathroom": 1
+    },
+    "882d78c9bb5598d5a7b436497ba3ed408934dbb9db5022c6ca7cb689dae5d293": {
+      "garden": 2
+    },
+    "8856c7dec1f0ddd936e4e4cf1737e54357a9f8746252e5e5f1c36854408b845c": {
+      "kitchen": 1
+    },
+    "88bc150013b495ba31f8666dfac9ff03b44010a40f60a1a0f6af627b172d7fad": {
+      "office": 1
+    },
+    "88ca7ccf3bbe886bf7bf9deaec211faf66c25871894b47ab9dabbc6d1afd4bc4": {
+      "garden": 1
+    },
+    "8928f87cfc74c3b9aac3e3ba483853fc9eddb7b27f721ef5c5b8d2a09410cd84": {
+      "bathroom": 1
+    },
+    "8a7ecd0b6341c106fdabd57737554d1dde0a08c1e7c7922e22c66a40a11237ab": {
+      "garden": 1
+    },
+    "8ae935766da504a9a1c883de35f668c86ac1f4b4eefe62c9b94735a5d5c060c9": {
+      "bedroom": 1
+    },
+    "8afb8543f52374975af912283c8fdeaace2b598500232083a2d61c34a41081a8": {
+      "kitchen": 1
+    },
+    "8b1a01ee96dbb9c260716e4d731cb73f5b8264b258a2ab6f6b5fdf6c3cd429d0": {
+      "kitchen": 1
+    },
+    "8b3d4b58318724d990b796cc51d211d60df92697ed86b0fed4e292ce3ee78c08": {
+      "kitchen": 1
+    },
+    "8b823ba4a5090d278b59c43a81c27310c232547f923e2ab115bac3f542016a7f": {
+      "kitchen": 1
+    },
+    "8b9f0e22bd1da2eb40636b5cad77e591173c96e1ddaa663bcabe1ba38670c46d": {
+      "kitchen": 1
+    },
+    "8b9f93ef53b93eb907cfca4f133d1bb4b62498886e88c14902574f48c5e1ed40": {
+      "bedroom": 1
+    },
+    "8c4884ac3e5d6e8ec101c4e3e8770bddb19de04cc461b424e2b648775d0e2a6c": {
+      "kitchen": 1
+    },
+    "8c52ecd6f366b85c2b9934287744057b49b4c99a4f4baa7770d2f4cb1d6cfc8b": {
+      "hallway": 1
+    },
+    "8cb87a2fc37d95d7cfd4580cd30a7e220e68d504e091b48090d3721558334d5f": {
+      "kitchen": 1
+    },
+    "8cdb2feaf7f6632362711d26f2107cf18298e0eefe6cb020dbddb2415d9a3c46": {
+      "office": 1
+    },
+    "8d0aabdd91fb50b9eae4398ed12468b9d70e4bca02c1500bef293af89f8fa4d3": {
+      "bathroom": 1
+    },
+    "8d2f6216858dbfe6b31a206df2ad579b8c0e41eb09a44f7bc54d455d8506b5b1": {
+      "garden": 1
+    },
+    "8da02d9c001f98bb016236a6ca3c4f97b376e3bc59dfdc80dd37050832798f94": {
+      "bedroom": 1
+    },
+    "8db654d3f015d65ae33c6250b8eaa933b513af12572dca078932faa68faedd04": {
+      "bedroom": 1
+    },
+    "8e4142eabdde8e9e4891b0ecde70f3a959273acbf7f6f6f1c3879dff537b562e": {
+      "garden": 1
+    },
+    "8e8a52f77942a63140a73273b931c59c836396d56c6e96bcef69dc629ea215fe": {
+      "hallway": 1
+    },
+    "8e8b8e635ae23b1a2f225a817a49ff0d152b79aeadeef395e63ac3e45e487081": {
+      "hallway": 1
+    },
+    "8ed1b59e4cd3c45d01779890b95edb06fc9f8514c532bef426e3507d7992f3c2": {
+      "bathroom": 1
+    },
+    "8efc02aab711313aca8a7a104b64f89f0ceaa125dad980596ce4dac8f0578d66": {
+      "hallway": 1
+    },
+    "8f8ff0f0480f20c492e8f3cec96f0a14ec47242949b0659406c0f9a31defd41e": {
+      "hallway": 1
+    },
+    "9035eb8f6848c2a6c1fc2aa4fb1ab73a7c28bebeab3bfc65c9e64fbd92f3484c": {
+      "office": 2
+    },
+    "904ed84bfe6628d18c5bfb99765659270c4c75c8967c8ed45154396f8dfb9a8a": {
+      "garden": 1
+    },
+    "91315898b0bfe4326a7401a02c83598e8c79128e475be821253462341774b6a0": {
+      "kitchen": 1
+    },
+    "918ceb50c0091cf7d36e4a1d52a141116130021878e1b5819bac1674077ee840": {
+      "kitchen": 2
+    },
+    "91dc08d0afb5d53bdbfc756556a150705847565824b5074d32a763c3d945229b": {
+      "bedroom": 1
+    },
+    "91e25383621149ca57b37cde39935edc44b2d2128e676a0c8cd8379f92a94fb9": {
+      "kitchen": 1
+    },
+    "91fc53572ee864a53d07c8b5fd3c4df83f54bcc88f1f73d3b01a21dc13035d6b": {
+      "hallway": 1
+    },
+    "92493a57e84ba4ef45aeb0e20cc565c2cf6a4ed714c09df6457b483a7a346c9a": {
+      "office": 1
+    },
+    "924981ef2224f73a3f9c6cafc77b61e0ca385be456c84f57d9025e73506ce507": {
+      "kitchen": 1
+    },
+    "93035cdeda1152180e336a6c1d8482a3c254b6fe8b480fdf489b7f0f361f699e": {
+      "bathroom": 1
+    },
+    "93399fabcf13bf9dfcfb9c4fb85e031b1a4acea9398d6c097d353692ce97e93a": {
+      "kitchen": 1
+    },
+    "93812d806d406994b31c407e36c2c9152d4cdbb8404686fac3ae330591d0be9f": {
+      "garden": 1
+    },
+    "9387a689fd1cc401a1740a3718863ed09df4f82f4ba116e361f385b449f04218": {
+      "bathroom": 1
+    },
+    "93b126c701f9411a87514ed12395af4702dde89db3bbcad4d53ffaf9eaeb542b": {
+      "garden": 1
+    },
+    "94ab429e5b95fb7ca8a6bf48e3322286f2a86102691188aa2bc82bf1f52a10e3": {
+      "hallway": 1
+    },
+    "950c8f1971cad847cb688c1afcbfd3a5c183f05b07cb59589339b8f1cfb2252c": {
+      "bathroom": 1
+    },
+    "952b34c7f4f393ee86df1093c909da256c46c7e5527a3f54bdf8d25b6517b675": {
+      "office": 1
+    },
+    "9674a13fbefe6f4214e7d7015d0c8f0dcee4ee9fd277ca033af6d400a6601243": {
+      "hallway": 1
+    },
+    "96916dfffebd4cb05179e5b324110677f57b08f674089f538b3ff7d6fa969d8a": {
+      "bedroom": 1
+    },
+    "969d2fe5836cfda113a9e875fb0dfbd84b01bcf76123a47d5c5a4a79ee6eff79": {
+      "hallway": 1
+    },
+    "96b3f3358a3f2510fef7e797dda53732bfbb9ff630508966339767e04e53ed83": {
+      "bathroom": 1
+    },
+    "96f99b64ac6d6c55c6fbbc51661c508ef8c2c53c9a543e21fa72255cfc594fa8": {
+      "bedroom": 1
+    },
+    "970aae9fa34a7030f966adb462b9a20949c8ad36d5aa55190f5dc1646f363906": {
+      "hallway": 1
+    },
+    "97a57d62ef2415b20cee8ee4fb1458fbb43d1740be2aae6206ead10d57e9a042": {
+      "garden": 1
+    },
+    "97e038ce5d8422a7a2c32ec1d29bcc9a3d39207e4c608db9bf45906188fa237d": {
+      "hallway": 1
+    },
+    "97e80dda076685dfc3d4a8c9905988aa2e71a93f995414e6ea71db114350e723": {
+      "hallway": 1
+    },
+    "989ad10c340a016f4ab13ebf9eecbc0e0915fd04a6760ff40c29e32cbc5f10c8": {
+      "garden": 1
+    },
+    "98e4e2498661fef32128808babb26a995a8f678b7a093afc6f6a2bd04b88ec00": {
+      "garden": 1
+    },
+    "991c6a59325668745666b2e64aa5e484902753b9bd0bfaf38d538d0bb1d1f269": {
+      "hallway": 2
+    },
+    "99d196fe9df628bee0eb9752292a6ef78c0c792f756637b4560239fc219d03ca": {
+      "hallway": 1
+    },
+    "9a9a86297ad8d69d072334c1b3b8275ba4e848ed0473e343756c7e80f291c647": {
+      "office": 1
+    },
+    "9a9b3eaec523596a97486654f6ed556f4ef3ca28bd512c863eb00f582aaf4991": {
+      "kitchen": 1
+    },
+    "9b522b717fa16b7020f8e4e2d1248fa6815cd05387f1cc4e267fc9f1f2fcac26": {
+      "bathroom": 1
+    },
+    "9be98ecc4269b56ef97879eadd60fabfde00e5b0d8a21755514643b826c085da": {
+      "garden": 1
+    },
+    "9c09be4eb43620ae7c52fa6e89ddae21d283905dc6bb0cd67994c9c39a216239": {
+      "garden": 1
+    },
+    "9c39b9c4b6e66ea547991314003fa82e5e422dd2ba038b7a728625b44d8752d0": {
+      "bedroom": 2
+    },
+    "9c422f1a6c25a9945ffd7201b6b6c1765bd84cedcd2ee940822f7f39b55648c4": {
+      "garden": 1
+    },
+    "9c5635da2cfb6524b808dc7bb2060f7034cc3c6d98ced262da9c14e9e549a66c": {
+      "kitchen": 3
+    },
+    "9c9448597b7a977c71e9211472edf229ff418a984c931799f13967044539720b": {
+      "kitchen": 2
+    },
+    "9d40b957f3129518a75fd1c436d00c515010caf5d13b2090da57cbba9718c754": {
+      "hallway": 1
+    },
+    "9d4ca0f2a9198e2aa6ce1dd47662633be183568e680c20024ad9e41113a8ade2": {
+      "hallway": 1
+    },
+    "9d6356e07349b300540bf4945fb9b12a6a20f748bb3e7a8ba93ee1e19dce812e": {
+      "bedroom": 1
+    },
+    "9d6769042249e09b584dd0bb28df22713941972713bf2afb7afb0dffe04a5f16": {
+      "office": 2
+    },
+    "9e65fef5ea90010fd20492c0673f9a2bcbee6dc90aee4431e3ea868b297a833c": {
+      "garden": 1
+    },
+    "9e7789f503d4979a43e08b4af6256ca337e848454d0c8c201854c226eacf7f37": {
+      "bathroom": 1
+    },
+    "9e937c3398d702a7fe513f271b4b7ff6f48dc88cc12b15dcbe3dfb472adb12ba": {
+      "kitchen": 1
+    },
+    "9f034e764bd0760fa8fbab632b562f6d44f206217dfbba9f70f4fb99b7492866": {
+      "garden": 1
+    },
+    "9f11addb2c58d18ce0cbb5e5bd60fb8821e739b2483959bff8dbe88a8c210496": {
+      "hallway": 1
+    },
+    "9f365c616939f16d20b247262d403f8c34825d6c8f0ffda9f525cda7ce6f4f8c": {
+      "office": 1
+    },
+    "9f5fee143cc185d6960b625566a4c4b81b7c74abeed10f543f81d73141c365cf": {
+      "garden": 1
+    },
+    "9f771759e318347762a4a6a42fe51d182189d2435e03dd0ba1c38cccbbeb84c8": {
+      "hallway": 1
+    },
+    "a0c8a15630f0ffba8df89fecf874a98680881229e75341589af2aed3e5e87e46": {
+      "bathroom": 2
+    },
+    "a0dbc5e897c482ed44bd50d152b6f75f072a21e70277edf8b735a5a93d151805": {
+      "garden": 1
+    },
+    "a10980a6f1e4d27e3a6fbcc38a20bb5f97112f166b7adcfdbf4bc63117ec3942": {
+      "kitchen": 1
+    },
+    "a13a1ba401f547db44bbc359fdd1b7246595578d3c6d0fa37e56cce6392ba360": {
+      "kitchen": 1
+    },
+    "a140919affc852fbe48c10cb52aad9095f148c2e4dc1cb8c51f7c165ac121ffd": {
+      "bedroom": 1
+    },
+    "a140e71ef38e4c9bf2f162aa25b33448813456fef2bf1f51f8d03349dde853b8": {
+      "bathroom": 1
+    },
+    "a2fdf5d31a938d45df1d314ef8ad69eed15adc551723898999b5184fdb06756a": {
+      "bedroom": 1
+    },
+    "a34dfa3b0d5e65af893e912b20c97b7f7d8411a021a3701be5ccdcfc1345d09f": {
+      "hallway": 1
+    },
+    "a3506a8e59da1ab1c10f37e2bd5a8f2c9719d7a31df4801935c18546b5273ceb": {
+      "garden": 1
+    },
+    "a3e8126cf15bb87371842b0891b2cf9c9009c12fdce2e3d3abedf0b4a47d5728": {
+      "bedroom": 1
+    },
+    "a4566b800bace613f54a192bb4b99b1595b8b81c8acc78b764d96a9a4dda7f05": {
+      "bathroom": 2
+    },
+    "a5117cee1581adc2fdd0c13bafe950083252e0b070396bdd59115717b62744d9": {
+      "bedroom": 1
+    },
+    "a5c3a8572fd48248e2872a3f14238d7b19367396bd9a65129a5c155a944a18c3": {
+      "bedroom": 1
+    },
+    "a5c6f472209db5625797efdbc2cc47f33f93b154f21a7d19a0e6dc861e8c650a": {
+      "bathroom": 1
+    },
+    "a64e33288522fadbb472788583bd6c1678d75114df911a95aaa3d894fa345ce9": {
+      "office": 2
+    },
+    "a6c88090296d6fae1b73f49dbacfd0220b1bd82bd6d080abf42bb52921a847ab": {
+      "bathroom": 1
+    },
+    "a6ffe16cbd30a0986fb6a5be284870473a9fb97225fbdcf82f45f0c6195baf8d": {
+      "garden": 1
+    },
+    "a70c4b2171eac63d3ea460a5ccea5eac0b496ea7e1e9239a9edb0be64348b792": {
+      "hallway": 1
+    },
+    "a7adb69dd021b12a311ef2bb6ec273f9f305d5022d36856e183462addfef5607": {
+      "garden": 1
+    },
+    "a819bb11925f986eb56400d2c33aead70d633d3af900393fc12b36ee19cd8798": {
+      "bathroom": 1
+    },
+    "a876da220cb9586832abc2d229922e925f1228bd398f49dfe85c09f9212af0fc": {
+      "bedroom": 1
+    },
+    "a8ed2452901c459ed88f46ecf15058a7f2cc56a8cc8d72e013025f359eeccd93": {
+      "office": 1
+    },
+    "aa3b59785ed72d4b8f2b337cf3a0122448ec5c4595479e8707e8e07138cc12d3": {
+      "bathroom": 1
+    },
+    "aa5d355ab98c491bca18c689c8e9e4cc35e8f031acc15852aba0752535b8a22a": {
+      "kitchen": 1
+    },
+    "aa69d947847726517fd9a5ad15ede2a9d9bc544c02f62e2f43d7cdfba5b72c17": {
+      "hallway": 1
+    },
+    "aa8ebf8b0c2c98b85bca6cf7e3f463bcf36ed7a42d0870a8bfd2f8a5ef456d95": {
+      "kitchen": 1
+    },
+    "aa9d18764747bd05e2e4929e9c9fcb75fa90436c0e6b63db95c2470c55ef1457": {
+      "hallway": 1
+    },
+    "ab57c4cb5f671c3ab59fd4cbcc715c13b7bfbde4187192aa0d13dd28c4e5f37f": {
+      "office": 1
+    },
+    "ab60158ef867f21c7417fcc66366f7ac0525dd888595d82add8358e95311295d": {
+      "garden": 1
+    },
+    "ab660d471908bec592b38fed0121f8404eb4e6e7c76a4efa28e2c703004377d0": {
+      "kitchen": 1
+    },
+    "abd872065a23d8b6110587cdcb7a29762666a5346c21c500d3c6d6ae440d952f": {
+      "office": 1
+    },
+    "abfd7e66546208140c10bcf1965a9c8537b06acce4ecae3694e621f0e6388f91": {
+      "bedroom": 2
+    },
+    "ac00c077c17d0d7b789f51f9b9eb1f33c51fd7c38cfbba53234c792b529f889e": {
+      "office": 2
+    },
+    "ac15c693b044e9c6345cb1b6170d6d30e4feea7021daf804792a76ca86c2aadc": {
+      "office": 1
+    },
+    "acb293a0dc9425644362a4c092c65c271fcbf57efe1eef516679b333d6e02ef7": {
+      "kitchen": 2
+    },
+    "ad92eaacb985021b2fab74bbd63210b5e7fbd41f8566ea780357cf5742c8510b": {
+      "office": 1
+    },
+    "ada96389946f930ed29f55dab804a54d91fde2788ba8ce6c17755361d5c42fb9": {
+      "hallway": 1
+    },
+    "ae0c1c881b8c9bc9fba2d2c59d9291637dbd921477ee09ead92dcf20ec6ceb7d": {
+      "bathroom": 1
+    },
+    "af26ecb9f0dcded7f4f83d4c6322560adde947e377281af8747a0631793603db": {
+      "bedroom": 1
+    },
+    "af2a7e3f86ec75bac8ecd66cc05cf7b86b8017c43e1b05c41a8ae67a70b31067": {
+      "bathroom": 1
+    },
+    "af835063d91f3dd675848c0fa1e4bbccc649c828e2a326a2dddb7f19c033dd6a": {
+      "garden": 1
+    },
+    "b018641f6a98bdab77cff70e73670234906ae11401b93884a4360fc4a2c9a05a": {
+      "bathroom": 2
+    },
+    "b023678bf8e55e6c8447a9e39cc458c0dbe9a2fc82a009c377e35de30d2b882e": {
+      "hallway": 1
+    },
+    "b04844d0e841b0caa9af43c9f46cbe66d011bb14bc31c292b96d2098f89b91fe": {
+      "bathroom": 1
+    },
+    "b102a223bb590f640c0db1dd0b498fdaf585ae7aab134f61436aa9110e35667c": {
+      "bedroom": 1
+    },
+    "b1bfdb0a8cf43fd097b8330f23a93420e5e852521c3c73782e27213b4814c46d": {
+      "kitchen": 1
+    },
+    "b1c01ffdfb91bbe5f46e7863d4d439485941e3175d590dfdd4b6b8149b57963b": {
+      "garden": 1
+    },
+    "b254da852f5dda1e34b6ac143bfd31d8f6ae180d0bfb4143286d8e8cb8a0766f": {
+      "bathroom": 1
+    },
+    "b35d7f1822b219ed238c0d89068e87d093a4bdbdf1199f42df4e7bcf1d25d1de": {
+      "hallway": 1
+    },
+    "b46c6f542a68e5917de75e8559a08ab0c977f07ca3d44fc2d6c8cb1de13b83f7": {
+      "bedroom": 1
+    },
+    "b4af73ed7ab26a41e9e7a89cc5bd849a88cd485f06216a2e79d6bebc3f369137": {
+      "hallway": 1
+    },
+    "b4d21da25cddb4cf611f3c06f5245b9bfd7016381d9f29b7f79f3714a888aa7f": {
+      "bedroom": 1
+    },
+    "b5504e1ae7cbdcf0e5977ac6d101a79b2067ded027029b67650fff8344e14c9d": {
+      "bathroom": 1
+    },
+    "b582ea6d3d49520a43de65a937be5e07116719d1d003df310203810cafdce480": {
+      "hallway": 1
+    },
+    "b6d7d5449c7543b5c9f7e369c3a8e40215ba5dad56f59aa8e12d68307f18b6c6": {
+      "garden": 1
+    },
+    "b707584ed050ec12bf33676127039bf2764aad0669447d1dfa0efacc2cd86ba8": {
+      "hallway": 1
+    },
+    "b7cfffadb16bdcf53971cc0344b03ec9a9c6e1863fe0d92ee3de1b5b963b4370": {
+      "bathroom": 1
+    },
+    "b7f5a3793d4721c7d538445e35c8a33f6d6c53daea9891fe6bbebb20f1a75ece": {
+      "bathroom": 1
+    },
+    "b80088c5ff0eabcc5d4728cd60042693f2093a13f69a1a62c4ac9e25145178a0": {
+      "office": 1
+    },
+    "b8166e63d107dc256014d721183b2fb88f445b868378c1b289bc832dfcd22d51": {
+      "bathroom": 1
+    },
+    "b81f708f9e7056a75401cfae9652d2ecda67a7e88ee09965a6a98b3fe05d1367": {
+      "bedroom": 1
+    },
+    "b8e2428994cf86f85ca53af26808eeb05b2bc07f9f8f1dc3b417c0dfc5697ac8": {
+      "kitchen": 1
+    },
+    "b9093e51ec2e7ee5fd9dfda67fdb31b605f2496ce94ab486d4fe5fb1ec136f45": {
+      "garden": 1
+    },
+    "b918e6fc22800d5ad94529403794bccd6d8cc7314989b8958216b58e178f4ace": {
+      "bedroom": 1
+    },
+    "b9dca759c99f9947cc00fddfa08d86113364803db2b9891134de929498d789f6": {
+      "bathroom": 1
+    },
+    "babf49438454626997e268a95642816ea0452b99c17da692b9c851adc08bda83": {
+      "garden": 1
+    },
+    "bb0922abcf0563b162d321570ce4141ba304c34e32e11ff48466a4d6e3328409": {
+      "kitchen": 2
+    },
+    "bb0a04bc79c53c8e7b6209a8e89db47a55bbff5426ae8749d7e934826d1c808c": {
+      "garden": 1
+    },
+    "bb1f77b14e5e646339a7dc54734b09daaf2c1f63a80767d00d554bbd8934670d": {
+      "garden": 1
+    },
+    "bb5862f387005a8917520fd358b2d6974e7f2b68b363104a262b9900e5b81fa1": {
+      "garden": 1
+    },
+    "bc782b94c44c50e40a469f147bef95dde605d599d04c2ca38df15c35890dbd18": {
+      "kitchen": 1
+    },
+    "bcb26c17ae0b52133973ee091f4153d5f065b27b12c4e313ab88985a54fb855e": {
+      "office": 1
+    },
+    "bcfcaf03dc0d0061c6f52f04301b15604c8359b316880e06dcf450732780fd1c": {
+      "kitchen": 1
+    },
+    "bd98e93b946b8e2506dba2073a4f1dbc1a7f7821d10ae5d481ad2df042965f42": {
+      "office": 1
+    },
+    "bdbb036b21c6a97b842bc923c9c7da2712103842f7f46a1c41ded9eccd12ded1": {
+      "hallway": 2
+    },
+    "bdcbeb6310d50430ef1c9e48dbc8f3c17b1cb574ca3e2ec541c5caf75e949cee": {
+      "office": 1
+    },
+    "be1f84695ce8be48ffcaf6855063c882a03fab4072119016b6954ea119f1c083": {
+      "bedroom": 1
+    },
+    "be4cbc5952142ebf538c7645044c3b2311daed58f3314b94f18c25803a6c3b0e": {
+      "office": 1
+    },
+    "be6841e6023c9fdf5928af9406158250379d938978ba8ebd248d0a23621496de": {
+      "garden": 1
+    },
+    "bedef94b068610bd7962e0d1204482d37ae62aa2d4686e194aaa0f493abf7fc6": {
+      "bathroom": 1
+    },
+    "bf2e819b9b1fd4246aeb026caeafbd9e00342f670bd87ef10409ca8ddd9dd597": {
+      "hallway": 1
+    },
+    "bf35f2696c860e49b1a0541f159e29893690b02474fb61fda42e9f03c6d49d66": {
+      "bedroom": 1
+    },
+    "bfd31d5b7e09091f3bad87d68f4b4be6bae0154fd8732edb3683e0a496664b38": {
+      "bedroom": 1
+    },
+    "c02fb9651c5a58c5241015088e49ffb1537455047f7e855fca3aa13092aa9c3a": {
+      "bathroom": 1
+    },
+    "c0534aad5370aa540e3a843846b33813e794c33b37e26c095b8696193540e26d": {
+      "bedroom": 1
+    },
+    "c0c04c079793695b0fe7412fabf7be2703fdb9049b52089f5ec5958badb3ff92": {
+      "office": 1
+    },
+    "c0c57406040f4ecb59c0efa41ce40a7366157d977a7a37f2e88d84f561b77ce3": {
+      "hallway": 1
+    },
+    "c0d62022bbf64807342b3eed0d5971e7608f317daf5fbb1fd637427095af1be7": {
+      "kitchen": 1
+    },
+    "c1c8331c6d36ed031754c68f25c42ce5c9fdd5b28f6ed21c7451fb3b572d474b": {
+      "office": 1
+    },
+    "c1d890159e7150c5de82e7af5e96c078df5d5ac492a7891038c1a4b16ae49795": {
+      "bedroom": 2
+    },
+    "c1de008c38b6f999cb913fa6ea1e4a134a3c933429dcfcdca47ab32f0d5b1b99": {
+      "bedroom": 1
+    },
+    "c236585f876d41263d44549986a8a021ad61d75c81c4bc0a53b6ef4bdb3252c8": {
+      "kitchen": 1
+    },
+    "c2e00c6b03c63ead8ea01aa55bcbd1000fdf0ef8684ae4e420f19d000b3580b0": {
+      "kitchen": 1
+    },
+    "c318c786f10a6d11e3814e49053b324119d2602cddc7a89e6a422cb2adac5e7d": {
+      "bedroom": 1
+    },
+    "c3206e837e25cd256024a5eef7cdc48abbde3d948278fcd9985e6129695ca3a6": {
+      "hallway": 1
+    },
+    "c344d50a8d29e3c6add2dc2ee2fc0d6b172d53669026f66211171e22fb122be0": {
+      "office": 2
+    },
+    "c396620fc1a4a304cbd5345d3b305d456de92ff70704832d6c2e073e987757cc": {
+      "garden": 1
+    },
+    "c3aff239a8f9756f79402d3819223b2f73584d3b5a14c5afa204b96e9cd657a7": {
+      "office": 1
+    },
+    "c3d040eeb1b74aa1c3ae496cab4bff635148908e69ab76132bfe260657146fb2": {
+      "office": 1
+    },
+    "c43f4a59651f74366898429176ef88d8f9dcafdd18a19c298f004c77b2986b0a": {
+      "bathroom": 1
+    },
+    "c48649473bf4f9d6e67e4978d3ea629de704ebdd6ff9210fd8384ad3ec65e685": {
+      "bathroom": 1
+    },
+    "c4a2e9db4abd9a76122d3d9f686f8b15b5fe4fc7caa4de646ee6d279ad1c778b": {
+      "kitchen": 2
+    },
+    "c52abb30c98f82e40ca7012f3efe792d18dfeda434545b6e9665d1e54f6762ca": {
+      "kitchen": 1
+    },
+    "c5a9876ffefef82a564eef9062b9275ba832231d587398505edff8b46841b920": {
+      "garden": 1
+    },
+    "c604ab300d45584bd5e433fbc69647ed5c78e0f4ce589c190916ce5f49d4024c": {
+      "kitchen": 1
+    },
+    "c61f501d1edf1b4543cbe4b3ecab50354cac1a4babe2c57a307e1be2d9512370": {
+      "kitchen": 3
+    },
+    "c64b142848edafff177e2ecfbcd0cebfa1b12e0c458b5770903ea92f309ae82b": {
+      "bedroom": 1
+    },
+    "c6adeee765a2e211139236ed5d97dfdd94199301bd447a8b5f48a6b033c9830c": {
+      "office": 1
+    },
+    "c6c4f807dc063df1c90ac85433e8585b6f4988135b9409d479c94b685d0522cb": {
+      "garden": 1
+    },
+    "c6fdc22c8c9e68fc4062a08e4b131abd23c90043da625d9c3037265c33a7751a": {
+      "garden": 1
+    },
+    "c7026ba71c9f0c5cc0dca401f7dc003d2ec8ec532ddf62d6d88f366ae1ad02b8": {
+      "bedroom": 1
+    },
+    "c71d35bfdabe34dd77af76719159c6aa407574721a12ab682ccdfe00e6f6549f": {
+      "bedroom": 1
+    },
+    "c8555ab58d6798d5ae867309d1a0bdd0ffca7f34c253f720ddffc4aec809eb86": {
+      "kitchen": 1
+    },
+    "c874840c3c217bffd3a0dbfd2d1df2abfa2d2469b5be8423eef256aa2c484aaa": {
+      "office": 1
+    },
+    "c8d005b9f79635190a7085474248487c7904cdd5014203287496b8814999a3b9": {
+      "hallway": 1
+    },
+    "c950980f688a3dcb68bd6e536f25cce21d3349623e7fc96ff58d129243b32ee5": {
+      "garden": 1
+    },
+    "c98f20e7771a07eaa268d9b90a818f16649327950acc7eff6d628ce13d2edeb2": {
+      "bedroom": 1
+    },
+    "cad1e206473a8cb27d81ccd52b4e42c0a5d23af5adffd0650fda9c149c47e45e": {
+      "bedroom": 1
+    },
+    "cc9f3a3220705be595cc31975b26148fdcc5f1306d46d0d756a7a702ae060884": {
+      "hallway": 1
+    },
+    "cca0b2ce9eea77ecb82b3897e9001e9d7abe6fe64a4377c7a69eff30bc2aea50": {
+      "bathroom": 2
+    },
+    "cd6432d46cec1885e187e82acc5f0f706d3cbdc108e8b24e1df6a8301721119d": {
+      "office": 2
+    },
+    "cdb4089ef33466877b6cb6acafa7a226252be1d1bfcb4761be0201ac844345b3": {
+      "bedroom": 1
+    },
+    "cdc5bf7cb054aea94861175a7a2d2e7ca472389193164bcd0e030d6df98a8186": {
+      "bedroom": 1
+    },
+    "cdf8aa3f4e9b41db39e2ffbb33cf54445856d2cdae433de40c48f44867ff3ef9": {
+      "bedroom": 1
+    },
+    "ce670d68531ddfa4e0467c743361f4cc144497a18587bd35481aa48657b7fafd": {
+      "kitchen": 2
+    },
+    "cf0cc12c745f60f16852092ed93134f101b0c150e5fb8f9084b00efd264d21a7": {
+      "office": 1
+    },
+    "cf1f2438720d8dd28719ceff1e76b7c44fe977cbb8d70f56688e051693fc7b4b": {
+      "office": 1
+    },
+    "cf2cc94e83142bdd33f7d74f7c892263de1012714b37d471845ceef61ed50fe0": {
+      "garden": 1
+    },
+    "cf3943ff35f828fbba7b396ba91b8e35128f946b8eefa79064e58e9903a55102": {
+      "garden": 1
+    },
+    "d0280903590b4ea790bf40e157b5b8611ab0f5f137aee9023526ebba53e1cd32": {
+      "hallway": 1
+    },
+    "d0db5bcf0eddf92406e7b4cc314403bbf11dd7947601bab31db07932394e35e3": {
+      "hallway": 1
+    },
+    "d10d1b3f926da204df6709ad85488ebc184c88121e710d254dbd64af5c55b2fe": {
+      "office": 1
+    },
+    "d1559a22194fd981021a145cd9fb8da0c8ab71fa43758f21081d388008e70d42": {
+      "bathroom": 1
+    },
+    "d1626f5337033cc9313fd3c33a7de90507c78e61f5c370144efa758d82539440": {
+      "bathroom": 1
+    },
+    "d184bcdb7887810bc2f3902476895b595df6dfabda066c19783cfd1953e58bf1": {
+      "kitchen": 2
+    },
+    "d1a5a0d532963930cfa565ae23659b5bc97c9a2a2c1afaf79c2c6f1ef8584d89": {
+      "garden": 1
+    },
+    "d1d8977343b20ea4188faed6945ec829a66ba12180042b6680fdea9733f1443d": {
+      "garden": 1
+    },
+    "d22addda6d53dd8c4864254d6246ed67393d0a645064cb9f0c121026c31c505a": {
+      "bathroom": 2
+    },
+    "d296389e2aa896a0b29d5ac4f95ab5941f86c0ef81e7721c5852cd63106ddcbc": {
+      "garden": 1
+    },
+    "d2d2492efbe2e7adecf4462580ba6eff2425aa352d3ca3fc1139ee665348792c": {
+      "garden": 2
+    },
+    "d2ece7cd5ba2c83206630766628f1c3272b5a9d896a094418af99539446568d9": {
+      "hallway": 1
+    },
+    "d3de8ef2d1ef00475f0156daf64f36aee6e1b0e3fbc2298c3ef0e0af545b09cf": {
+      "kitchen": 1
+    },
+    "d3e9eb2fc379d95139dd09d5de06a51104b616c1e0e60ac3ada7e4c52b1207d5": {
+      "kitchen": 1
+    },
+    "d40287da6f239f41513185ce67082ddf167926eb2fd89a5f7754c0051e6013cc": {
+      "garden": 1
+    },
+    "d4275ac8568b5a6f80bc1599f886177fea77113c61efc6fcbbaa7f91bc8e9494": {
+      "office": 1
+    },
+    "d4360a6f078633b999402658103f44aba72cff5474900c4df6ece718766c1eca": {
+      "garden": 1
+    },
+    "d445b44608ad3aeedef376449297c3ce0706dfa6a4e358e5ff5b05cfbb778af5": {
+      "hallway": 1
+    },
+    "d483a0a6432bcf012ce69da4ab6727ed8f526617e468574ee6275f2c8e762bdd": {
+      "bathroom": 1
+    },
+    "d486f5dbfce2c1955c5b604b3071653b4cea13c2432503d9a4fc613200c34d18": {
+      "hallway": 2
+    },
+    "d4b77aed1c43103d26d56ca9509b3dd9de55c0fee3a2c9b8372d177ab2379c0a": {
+      "office": 2
+    },
+    "d514725d1499549689d284620ecc7bf885a54f83608a2b9437f1766d0927eeac": {
+      "garden": 1
+    },
+    "d51b46aac245336d91e28afbc17242b8ecaadc8f87fac5db6d707f64c13be675": {
+      "bathroom": 1
+    },
+    "d55eb3308985a278e47e4531a21aa9977be19e4f8f0bd19114453f243b2cf0ed": {
+      "garden": 1
+    },
+    "d5de43bf6120be5db14765b807653f32268804a011fb709087257b52f14ff13e": {
+      "kitchen": 1
+    },
+    "d601b8fbcfd0c5c0eee6930cc7c5f999bf8558f65c9dc32c15d2b7d50c706f39": {
+      "kitchen": 2
+    },
+    "d6368803d07cb1601eae95ab66c6918e2df3cea825d3e069741056091a03d382": {
+      "bathroom": 1
+    },
+    "d68748751a2a2da28d99c6ea6f8b5b69b0d45d44d1630a862e17c0feaa12ae02": {
+      "bathroom": 1
+    },
+    "d6e778e4a6710a6b14b75226b4fc3f579215e02a9728dc7b9cc6de3739a8c4c9": {
+      "hallway": 1
+    },
+    "d72d993ddc965d7c283638c0a78b9c75d7bbcff5c799c6446ec354789fef51f4": {
+      "office": 1
+    },
+    "d76096501e2e71ece1d7306d23e88e6fe1e3e7472db90136578793a54a0cd64e": {
+      "office": 1
+    },
+    "d79ebffdf2cd2342fcfcd9b214c54751218353cc768c6ab0bac432bd6c90b848": {
+      "bedroom": 1
+    },
+    "d88775fcdfdb910b31e687912a7486c223a361e37a612af7d15e3c92bdf7e60e": {
+      "office": 1
+    },
+    "d8f8902d8193727777b8fa16beac2388e323c0413bf587744e9398e2363dfc12": {
+      "bathroom": 1
+    },
+    "d94dee4c1115173ba8005df451e7932cbe689e1792a84f6178a07bc77fbd0c00": {
+      "garden": 1
+    },
+    "d972059cf0a6128d0cb44f8079b620b7228d792236ab67105e8d255a69920c88": {
+      "bedroom": 1
+    },
+    "d9d86f10f2cb058b1a0692ed97d3234bdabf83adbbc105ac49ba357284ff2f5a": {
+      "kitchen": 1
+    },
+    "da04c6de21395ad8b5af459af38754b4a9a7806e0e82d3cb46372bb57fcefb18": {
+      "bedroom": 1
+    },
+    "da47f4de16cfe6ff2b99c233d29efe80efefe27ce83e443bd8e324b1e5bd473f": {
+      "hallway": 1
+    },
+    "dac1efb24777af109d5ee3b19bd7ae7a232475c005e9d7a59a72b6ead09c9466": {
+      "garden": 1
+    },
+    "dae276ca30dc6ae3b9c0dd86782f1604d3e8ba1230f5e4c429cf4a2d0c3cf71d": {
+      "bedroom": 1
+    },
+    "db4949680ef1d1eb4b6aba8838de32a33337ea5aa4a604f48fdbbe918ef2a795": {
+      "office": 1
+    },
+    "db5d31f460d81780ad326810ebbd84d03b065603ee384e982b7ecbef997b3cda": {
+      "bedroom": 1
+    },
+    "db82ba65d361433be64c2bd93172459f7692eba2be2661ac77f3227bf73ace41": {
+      "bedroom": 1
+    },
+    "dc07a83bd6cd377d5066ca4aa98b40e9baee4d045960f71112ff5e4b20f7d8f6": {
+      "bedroom": 1
+    },
+    "dcb8bfb30a196001ad3557b95075cc416c46a154b65e713a3b98e2b708052e22": {
+      "kitchen": 1
+    },
+    "dcbf6258371c533a3aad9de004f8f96cec57e8f1a367ab181dbc235ecdb83069": {
+      "hallway": 1
+    },
+    "dcc469f2dafd1104f07b3ca6d460bc829729bd6b93e5c1018bd8266c51abfb82": {
+      "hallway": 1
+    },
+    "dcdc5fe5914b3dc51f18f4115e7283b15bd92bd5be433cf2ca9e1118901a4a1a": {
+      "hallway": 1
+    },
+    "dd9f5123758d5ff321d1d7b43e4036b650707c8c72386e2b82116ce01590cde5": {
+      "hallway": 1
+    },
+    "de1e60bf48925cccc0b607863244c1b64ae43edd824930a55fae76ccfd4e921c": {
+      "kitchen": 1
+    },
+    "df0d7bc847a4c26db13ba4594ccc018c7bb14b67f54323a129b80ed1c5f8d058": {
+      "office": 1
+    },
+    "dfe977d350176400d964d88353eb65e117bd399f238a039178cc8591c37edb14": {
+      "kitchen": 1
+    },
+    "dfed3df3f761d2db4ef4e3a96d43d7a7d19ef1a8724ae206dae551ec7fffa0bc": {
+      "garden": 1
+    },
+    "e0b1b8a99245f68e66f75857fc97bca4c1e1faeb5dde5905edb9e0e5026415dd": {
+      "bedroom": 1
+    },
+    "e0b5ae13666d6544e5c0e8b69e108cf9b41092af082f7e3e6bc6f3be230071ee": {
+      "hallway": 1
+    },
+    "e0cfb26e2b79e568c52eed29d84069776ba1cc0447401e1dddfb3a01401e9e6d": {
+      "bedroom": 1
+    },
+    "e103d532b0f4368add3118e31830f30e4302d691473e3e6157e8b65b6be9124b": {
+      "kitchen": 1
+    },
+    "e17a83689beb0f09d2ad7b958dabf29689e339af77e8cb873fb0b2274c3debb0": {
+      "garden": 1
+    },
+    "e1907a4a633c9970eb98c80c8182ae6d8da8743fd636828902419e2e7a824fc8": {
+      "hallway": 1
+    },
+    "e19c18488e6fa20e1e90974bbd2d7abb7564c609fae19c3a4d9dc21b8232d1ef": {
+      "hallway": 1
+    },
+    "e1b3ea3e79f9fedeee7e0df6783ed22bc8f2d00c672a5baff3ea1a44b2b89868": {
+      "garden": 1
+    },
+    "e1bd3effbfd850a35c53d8e4adbc9023fbb2cfcd35e9e7624d8475fba799a0e0": {
+      "hallway": 1
+    },
+    "e1f6c5ab8c24d4d6d85cddbde40201f584e5283d80d0e3fd2a1f5e3cbb5f49db": {
+      "office": 1
+    },
+    "e27a2e68048a1c5760bb6893d32fdec1c5bdcf6ca1c4ca4be2c1a2b834ad8ff7": {
+      "bathroom": 1
+    },
+    "e2bd2a0366207c601d6ea0327eb481f7dcd8ce2533865c9c6b19125020759da6": {
+      "office": 1
+    },
+    "e2e07bd7cbfcb56d4a228b4157e31fa2d4f4c74a5b7af5ccb3b1ae28a74f11fe": {
+      "bedroom": 1
+    },
+    "e2eb146d60a06450a31e5bf527132f4d7a166e39075b778cdb43611a4cf3efa1": {
+      "garden": 1
+    },
+    "e33f3b0cab44e59cc9b75a6ac4cbe3b31bfa9d3b9565f7528897b908d8cef28f": {
+      "bedroom": 1
+    },
+    "e377b02649bd4d2481080aba2b301be0e7ed76cedc5ba9e0c76e10f66502504a": {
+      "kitchen": 1
+    },
+    "e37ea2855cff413abe3e246ef656505612cde46cb3316a849b405a8cdadf73d1": {
+      "office": 1
+    },
+    "e3919506e5f679192b407648dc529ce82c17c6be71c6ee5d8c54ede4a39e84fc": {
+      "hallway": 1
+    },
+    "e40beb3114c1a15aef0ece42f20ac7c76ba9aed4ef373ef321d03b112cd3e230": {
+      "bedroom": 1
+    },
+    "e41e4ccd4c8aeac58f1da22ee9130db2ffb1d8ff105abf2b275d4c0169acc9fa": {
+      "kitchen": 1
+    },
+    "e45ac68c43b0db7207f0cc307a60a28e33a4f55004a818779014b02f38d0d142": {
+      "office": 1
+    },
+    "e4dd540315cc78f9fcab8e8118d6f262a89948a53712f2fe6a542b8d200e3d8a": {
+      "hallway": 1
+    },
+    "e5bec0282428febf366d51b0f01862fc556a4a460140b5ca0896bad7f8066157": {
+      "kitchen": 1
+    },
+    "e68548a87443d71abf42866fdb5ecbdccf58070c932f7d73dcde5eed66652317": {
+      "office": 1
+    },
+    "e6d8ab72ebd5d935773ad1a27aa3bea3d761302bf63e8efd81e5af531a872e80": {
+      "hallway": 1
+    },
+    "e7072a0324a5599e547761c3630bc306e278b0f51b1e69665ddca45100d7d34c": {
+      "hallway": 1
+    },
+    "e72c7a907f74f0b43cd09c552475d7fcd007100f99522ebe86d88fe1199a11e5": {
+      "garden": 1
+    },
+    "e730a8ee0dcf26e606290f5b2166acc666f8069f713b15674c216de700ea7f29": {
+      "bedroom": 1
+    },
+    "e7c34c320215bb36bc43a7873932c3eb2533243d5b722778342c96e03607bf98": {
+      "bathroom": 1
+    },
+    "e8119638db7aa9f5749e661bb73a33d5a5b4f30a3e84001362df7a5965888c4a": {
+      "garden": 1
+    },
+    "e863757e4c372fb67733e9f4d77011bd162a441b003b41fa70acf2b843c8e11c": {
+      "kitchen": 1
+    },
+    "e8a7adb95fc7e66fb2fbe31fe0fc4fc5f9536c7801ccb77735245cf164754e66": {
+      "bedroom": 1
+    },
+    "e8c69790f623f5c9e01d4beb2a4969bb2dc259a0ec41575e353951d751e7eee3": {
+      "bathroom": 1
+    },
+    "e960803407f8ab1797ffef65908e744ff6355a7f57df469674c87c8051fb1e8e": {
+      "hallway": 1
+    },
+    "e9689aa7052b9d633696f7a8820c124051da7d8cac6f951551d86144e8c9756c": {
+      "hallway": 1
+    },
+    "e9e380df86276b7b2d68226d28ea041af6f4ed5e9106b67b96c11f8167524b04": {
+      "office": 2
+    },
+    "ea6c2f44cb628fddcdee75083ea500288f2ba8d50f5f90381e22ed441753e079": {
+      "bedroom": 1
+    },
+    "eaeb153bc5aa1fb4d458f96ec17ca45812b86140321ea28aef22bed9565c315f": {
+      "hallway": 1
+    },
+    "eb3a7697437b17f6cc6a73f2d0e5b8809c97345916c7d97cc0a9907cc909bca9": {
+      "garden": 1
+    },
+    "eb3e0ac8016320bc99bb1a55cb9115ff698ef3b7164b6d57390e20651efeb9e0": {
+      "kitchen": 1
+    },
+    "eb9534336a14f4753f65a4e8affe09ea3289e4ff783ca7561ad1be83ee2e6c09": {
+      "bathroom": 1
+    },
+    "ebf2d169902011110928506ff7dbf82ca86f2eca3880d5e42859e0b68688cd06": {
+      "garden": 1
+    },
+    "ec6374cc94907672535f4ccb0026029d5c68abaefc3e29c0e742cd64ad943da3": {
+      "office": 1
+    },
+    "ecccbb8da8e755c1e99f974cd3313729cd361fc6f0629208affbd4b2c2475b5d": {
+      "office": 1
+    },
+    "ed7e701a076d1d3f322f74e0d32aa32a1c5b6a0773ff5a089bef6f59d20a4c88": {
+      "hallway": 1
+    },
+    "edaa0d0906c7815e5da2eaee581fda859fe753461f8138e5f3d9722d47844292": {
+      "bedroom": 1
+    },
+    "edda752ea5f8cb1aaba4fef254ead53d40a740549c0ed987f9c4b549103e0d49": {
+      "hallway": 1
+    },
+    "ede72a50aca009f360ed131221847d345eb6c12740da5281b18724209730f72d": {
+      "bedroom": 2
+    },
+    "edfcaf1de72d71e954a23ad0f989f8d53497c7d08995cf5e9cc74d24d8488210": {
+      "bathroom": 1
+    },
+    "ee73518412c6f052d0ca0bd2a3bf6910505441dfee9b7cadeeb5bef8e8d95eab": {
+      "garden": 1
+    },
+    "ee93868e945e1938f51653fa0a6259bc1eb4ade7fafae6f360ec1483bba20d0a": {
+      "garden": 1
+    },
+    "ef0f063626d81cc0b8b1aad025564c1e5b148b1eeba71498bb3088a085c6a72c": {
+      "office": 1
+    },
+    "ef55bc5881d25826a1885d3fded0eb2f3a42a082e406c45aff07cf269983f05c": {
+      "bedroom": 1
+    },
+    "f034fd6bb6078bf2bfe9d16bfd5511c3bcb2ec3b7fb7c790caf709c75ec68909": {
+      "hallway": 1
+    },
+    "f06b592cd7b24f0860739c735d71f186562b4cd1c7daab98b96482a38245a084": {
+      "kitchen": 1
+    },
+    "f0adda1e4ba2c4f8c54346d05e3fce753636b09110d233dfabda447bc1b1584d": {
+      "kitchen": 1
+    },
+    "f0b862f2c32b76877f965ee4ecce3295d4a7ffe3434364b728defcf382ce45c2": {
+      "hallway": 1
+    },
+    "f1076241bcda8dee30cf5095189d17ba5b1bdbfeb48551a4895099519f30ab07": {
+      "bedroom": 1
+    },
+    "f14597e507e491d9d28bb40eaf2be01ad3bfb018c05d3c38b1645824382cdbf0": {
+      "kitchen": 1
+    },
+    "f1614c7048c7bed2a0bf1ccba012d505a7d18146e6b005429180ece704c91ee4": {
+      "bathroom": 1
+    },
+    "f1764b74f1367e1d7f4e4e69a102e5078dfb69dc61d83d498a7a068ac58fe87d": {
+      "kitchen": 1
+    },
+    "f1ac8fbf1c179078a525904d84ceebd3fd609dc6ac2465fe2ab867e3847e79bd": {
+      "kitchen": 1
+    },
+    "f2017eb13b0bb8a1df9581d7237fbd1ff887b5526c3427c090280c6c0c0103c6": {
+      "garden": 1
+    },
+    "f27031c6d92efd43ac078483de4f05e7468e32ad5729059b81d5c07e79cb46c2": {
+      "hallway": 1
+    },
+    "f27c7a190e616e913b6825c19d8c9614949bb59e1cb8f958ee83eea64c97d454": {
+      "garden": 1
+    },
+    "f288fd5ce18ab4bca52afca4e0436f6b28342bd70f71e7ef6e0e781d62b813bb": {
+      "hallway": 1
+    },
+    "f290c859e24f7dc967608a4215257b1dce952b71c71ec1c7427ce4928fff2e2c": {
+      "bathroom": 1
+    },
+    "f2ab6be09183ff0c2d2bd93caa631e84330b5e8415b4031bdcbb2fb9953c789a": {
+      "office": 1
+    },
+    "f2d36ebcc7dd7a7921260b23fc95d7829fdf61e4edbd4cf7f8c36c6c17a7ea9d": {
+      "bathroom": 1
+    },
+    "f3d6ecca2658b349e486c61225c92329746bfc4653245442264fb49b8543d0b6": {
+      "kitchen": 1
+    },
+    "f43b153b8264057d9a203854a4447dbddc644d52dcc427a0d186a19bc198c453": {
+      "bathroom": 1
+    },
+    "f4c3d1ce0860eda4f53563f2ca1b89518a0572d47fa8deda82cf5693eb3f8f4a": {
+      "office": 1
+    },
+    "f4e3c681cbd79f1c2d53ec0d00743804a9355fcbbcc7d0c359261c8ec672f2d3": {
+      "bedroom": 1
+    },
+    "f53036b83b6b8959bf26e34ec4abc234c19786d044227d7aef5b39d6741a1f8a": {
+      "bedroom": 1
+    },
+    "f53cc9edaeea3057ceecbf3a56bbf90c491e58a1d11b007cd5fa03fdd2613efe": {
+      "bathroom": 1
+    },
+    "f56d3414b26b39dc8f93019aa0e8acd70f7ae932f1ccaa6dc6b1013be4b4a523": {
+      "kitchen": 1
+    },
+    "f5d849412dab3ab1a0d43cfec364963f08f933c4205d30031b83197f8d69e35d": {
+      "office": 1
+    },
+    "f5dc64743f11b1000b5963c9237143decf4f9f9cb33a24a800b2e4415091629a": {
+      "bedroom": 1
+    },
+    "f5f000d07531268da901b5e42280e1d48bb4451d3f20bfe014dcd5447518edb7": {
+      "office": 1
+    },
+    "f6146b333011be93db128d4848d8fce4ac2e7c94dec48b2dd51cfad31e740d19": {
+      "bedroom": 1
+    },
+    "f618c312bcbab772d694494384264b74286fa420b58308aa39c703bc97b8ee0f": {
+      "garden": 1
+    },
+    "f65a3052308d5623baa6ecf4a6e1d4e78f5293fe875c0382c450b1413252054c": {
+      "kitchen": 1
+    },
+    "f6cc69ed879323acf1aad1a6b029d4a941a2f3e8af216b2455571906ecb54626": {
+      "kitchen": 1
+    },
+    "f73f5e05ca639d86689d63ea21c6d9a997045ffb003224e2d4656f00d197eeb7": {
+      "kitchen": 1
+    },
+    "f7426ee468a6fd52736ac6a3f884cf4a0db324a4603ebd2d4224db71dd02a931": {
+      "bedroom": 1
+    },
+    "f770c193ff64dcff2a0509cc3f847972765b4f1bebd5faf8978e134569eb9e58": {
+      "office": 1
+    },
+    "f7a5c0682f035c0ab643ab2a3e33d957481207dba2b783a2a8d94a129cee19e7": {
+      "bedroom": 1
+    },
+    "f7d7f8a2998b33aae9a313b5a9b45066f56988ac5afba7f6fc685070f0e50621": {
+      "garden": 1
+    },
+    "f8377b2f0b84318f248d4311686fb4fcf2173cdccc6774da9d8fa5771a179e8c": {
+      "garden": 1
+    },
+    "f861438dcb2026a881c50674776c012859346e1f3920f909696bede96bae49fd": {
+      "hallway": 1
+    },
+    "f8748f776d5cf9bfc2565c5b588cd19751e2379c763dc0fd834439ab7aae203f": {
+      "bathroom": 1
+    },
+    "f8b1d3de3657fa306686ef365f8722e37f51ddd38cdcb06ca2d865c20a901c5d": {
+      "kitchen": 1
+    },
+    "f8b34b011fe9b3b6be7b0be7dd3981773d7becb1a49d12f6fcf5ff0b4cebaa05": {
+      "kitchen": 1
+    },
+    "f8c360462eed7477b7e71f7734d83913e9b66fb360433ecf334d748b930b8af3": {
+      "bedroom": 1
+    },
+    "f8d1ee4f093afb565e319b7cf6b451fd16d5b6fb1e54c0286f920cfa16055cfc": {
+      "garden": 1
+    },
+    "f9acd5bd9cdc81c05f9c83cf112dfc95783ecdc42f31308a9d5cdbefdc796f90": {
+      "hallway": 1
+    },
+    "fa18be9c7e3eb3e500cb763765e819411f16380c2965b1974df0ce6a024855c9": {
+      "hallway": 1
+    },
+    "fa3efd1e43db0f502ac00c5c13ae09d8e81787a4b207843a82f309c018fbf48d": {
+      "bathroom": 1
+    },
+    "fb187e35fc739a77b2c1ebd38cd492120c5d41f4df9006d19a23c390fa611bf9": {
+      "kitchen": 1
+    },
+    "fb39d8512d61b730251bf3aa63c41ce38d6a6858c3e10f74e7f176826761d507": {
+      "garden": 1
+    },
+    "fbe5ed449460c866b4eb5d6be9c4cee6771e7e8ca59972cde714aaa530b8e75e": {
+      "garden": 1
+    },
+    "fbfe32ebe9a6348bfafb3d7825b8bf61d3c6da4f78d5aecb91f82cb9d7eaa80a": {
+      "bedroom": 1
+    },
+    "fbfe6f7870aa40cad638ecb8fd629173a2a4870e0fc9dee458eb176e923a6132": {
+      "bedroom": 1
+    },
+    "fc15805d0c8d597bc1b9f91132a2e10c56fc69b17086106ec3d50b224bd8f94a": {
+      "office": 1
+    },
+    "fc2f867fcafa82645e6754f81fc70d47edaf3462cbcca032f2577f1f58eea10b": {
+      "bedroom": 1
+    },
+    "fd08a47d1ee4903485933c978709d282e870b60781ed2ccf59b0018f67220bcd": {
+      "kitchen": 1
+    },
+    "fd31530764f70367e7f1590c31d1e8c28db96ae41f53f7d0761be09c28bb9c1c": {
+      "hallway": 1
+    },
+    "fdb189d23e9a5696b692c3055679266b78552a47f17aadd05b059a389eb5b9be": {
+      "hallway": 1
+    },
+    "fdc637dca7bf83ac01020a721281836edaf89dcf508693d98b242d1175f4215e": {
+      "bedroom": 1
+    },
+    "fdfda782d129fe9caece7310fde3a9b8580ed20862894541c487d9ef8d3c5dac": {
+      "office": 1
+    },
+    "fe0d909e1375d700ab0a2c4bcd2019c3fda2d36a20898075b0462d3113ce9097": {
+      "bedroom": 1
+    },
+    "fe4b0a6d6598699fec05f122e2c114a66f46a480e92ee75ae0e774d91ebc908c": {
+      "bathroom": 1
+    },
+    "fe6d53e0148676e6dd39ce6dc42a121990abd59455096126da4f7d1509d65ed0": {
+      "bathroom": 1
+    },
+    "fe765b2b44b827f0385720d1881f1b8cf814368b993e709ed92a288008839553": {
+      "bathroom": 1
+    },
+    "fe9d1e3b06c6d2ed2e87b2190fa2e81348bc61141027f99e5e8b238957edb1d8": {
+      "garden": 1
+    },
+    "ff62d1255a57dc105ad5e6617d5c5c49e1ab445727b4e1f414841e23f5143bc3": {
+      "garden": 1
+    }
+  },
+  "majority": "kitchen",
+  "question_counts": {
+    "01d4b53af9e3f48b4e4654241eca3c303fd9f24d57c4a61dcbb789dceb697206": {
+      "bathroom": 2,
+      "hallway": 5,
+      "kitchen": 3,
+      "office": 4
+    },
+    "0d9a9a53b947ea557d31b39d4aa82bb566eae11f492ce55bd7d2e45500928f5a": {
+      "bedroom": 2,
+      "garden": 4,
+      "hallway": 1,
+      "kitchen": 3,
+      "office": 4
+    },
+    "0ee25c9a6fe9c685c52fa311e0cff4a5f24c7ff25e015f4e37978b7f5dbf9e21": {
+      "bedroom": 4,
+      "garden": 5,
+      "hallway": 3,
+      "office": 4
+    },
+    "0f6e5083b3016b4826d2b1c6b18b754435413ceb8d86554380182760c12454b8": {
+      "bedroom": 4,
+      "garden": 3,
+      "kitchen": 5,
+      "office": 4
+    },
+    "16053681a15ce86f679e62a25309c635738f8d42c32fe0122255de01fcf19025": {
+      "bathroom": 6,
+      "garden": 4,
+      "hallway": 1,
+      "kitchen": 7,
+      "office": 4
+    },
+    "1bee48ab3787a0488432550279e7f0cf84f30958cdccdb327ac669893c00d62e": {
+      "bathroom": 1,
+      "garden": 3,
+      "hallway": 5,
+      "office": 6
+    },
+    "2091dcc3489718ed1b9e49777b58e442fe0fd608206669caab73eb7f91337de1": {
+      "bedroom": 3,
+      "garden": 2,
+      "hallway": 3,
+      "kitchen": 3,
+      "office": 2
+    },
+    "21c48a75208adc918a2a51e43bcfcf91a4cded9a51506beecb20891ea4016822": {
+      "bathroom": 1,
+      "garden": 1,
+      "hallway": 4,
+      "kitchen": 3,
+      "office": 4
+    },
+    "2291566752812c07489506e09c00ba04d67b91a8285bdb1c9e4abb725c1e5e10": {
+      "bathroom": 7,
+      "bedroom": 1,
+      "hallway": 4,
+      "kitchen": 4,
+      "office": 4
+    },
+    "24eda3eb5e3861fa4b253a36b88b9b510b94f93d4f8a8ae6bebd3dbf3c756229": {
+      "bathroom": 3,
+      "bedroom": 3,
+      "garden": 4,
+      "hallway": 2,
+      "kitchen": 4
+    },
+    "26cfc07eb64d7072211282c9d4f70046abeb96167f6bd26ad74c9ad2a4ea2d03": {
+      "bathroom": 5,
+      "bedroom": 4,
+      "hallway": 4,
+      "kitchen": 3,
+      "office": 6
+    },
+    "2883bc857f1fcd964d0c66bbb2a3985bce28b081a0a7d174b2d86dd01007952d": {
+      "bathroom": 2,
+      "garden": 4,
+      "hallway": 3,
+      "kitchen": 4,
+      "office": 3
+    },
+    "28c1739ff52ad6daa0ca546852ac6f441d14cced1c7f40cfba56eed9210cbc89": {
+      "bathroom": 5,
+      "bedroom": 2,
+      "garden": 3,
+      "kitchen": 3,
+      "office": 4
+    },
+    "28d3395e8c013fced86c8130e9411cc4d2e631334754aba0578fa0ea03a79b24": {
+      "bathroom": 4,
+      "bedroom": 1,
+      "garden": 4,
+      "hallway": 10,
+      "office": 7
+    },
+    "2e547a4e286633f4829bb664386e4315436bd30367141f6d2f0ec83fe6961bbb": {
+      "bathroom": 4,
+      "bedroom": 4,
+      "hallway": 4,
+      "kitchen": 2,
+      "office": 4
+    },
+    "30f47436728ad4aaecedd3da6ec1fab2a442196e4e77806ee052356ce12bc9ed": {
+      "bathroom": 3,
+      "bedroom": 6,
+      "garden": 6,
+      "kitchen": 1,
+      "office": 3
+    },
+    "3570bf7b124f58b29e7ad7b2bdf6bd80272a4b94925dcdc65ec0720098836993": {
+      "bathroom": 2,
+      "bedroom": 1,
+      "garden": 5,
+      "kitchen": 7,
+      "office": 4
+    },
+    "35cddd1d8c0abfbaf78cb15f939652d7038687045985012c3855d3c1accf0bd2": {
+      "bedroom": 4,
+      "garden": 1,
+      "hallway": 9,
+      "kitchen": 6,
+      "office": 4
+    },
+    "36de6816366ccf9d4107a81d1f2aa4838fecd4a77c6bdd5f6bf4c17cdd481957": {
+      "bedroom": 5,
+      "garden": 4,
+      "hallway": 5,
+      "kitchen": 5,
+      "office": 2
+    },
+    "3cab64b0ddadb1c2329a49afdfc4870ef76d54dc3ef00f163d234905b273e9b1": {
+      "bathroom": 3,
+      "bedroom": 9,
+      "garden": 6,
+      "hallway": 6,
+      "kitchen": 4
+    },
+    "3d1ad50f262bb7e9251bc11c5edcd48e4046b90ffed47f80b9e6ab68de6c9a07": {
+      "bathroom": 4,
+      "bedroom": 9,
+      "garden": 3,
+      "hallway": 2,
+      "office": 1
+    },
+    "417201db7fd57b96b3ec98bc823223e568672e6ee42bc3a57419825e3439088e": {
+      "bathroom": 3,
+      "bedroom": 8,
+      "garden": 8,
+      "hallway": 3,
+      "kitchen": 2
+    },
+    "4567b6f406c0304f207ebebbb2504314ac2a0f9130e693106748f32b0d19b7db": {
+      "bathroom": 3,
+      "garden": 1,
+      "hallway": 6,
+      "kitchen": 2,
+      "office": 2
+    },
+    "46f7b0ccb974f86fd667121c84d78f85ac69376be51dd6ac09301ed61c03d92c": {
+      "bathroom": 3,
+      "bedroom": 3,
+      "hallway": 2,
+      "kitchen": 5,
+      "office": 1
+    },
+    "511d290190c4b6ca8699e653e863451ddb7a76ba9d7f213bbcc724a6da7e1776": {
+      "bathroom": 4,
+      "bedroom": 2,
+      "garden": 2,
+      "hallway": 2,
+      "kitchen": 3
+    },
+    "62c5cfdb159cb7840d518db1768db688d1aa2421c4602a14a8451ee9626ccb88": {
+      "bathroom": 5,
+      "bedroom": 4,
+      "hallway": 4,
+      "kitchen": 5,
+      "office": 6
+    },
+    "67e11950ae00c5890c7b64f606d50a410cb058341c1879abeab93693aedfd2a2": {
+      "bathroom": 5,
+      "bedroom": 5,
+      "garden": 2,
+      "office": 3
+    },
+    "6f8df5f1df2fbb600dfea46356d986c05c0c3effbf58c91ba8ede88371fd8129": {
+      "bathroom": 3,
+      "bedroom": 4,
+      "garden": 3,
+      "hallway": 2,
+      "office": 4
+    },
+    "7e7388d54ebb7fee3abe20798a854828e772a2dabac18b5bb4a0f42a4fb93ba7": {
+      "bathroom": 5,
+      "bedroom": 3,
+      "garden": 2,
+      "kitchen": 3,
+      "office": 5
+    },
+    "8802ab818f83653ca5314399e4713c66d74e5cd65ce0ec25fe0353065bb24ee5": {
+      "bathroom": 2,
+      "bedroom": 2,
+      "garden": 6,
+      "hallway": 4,
+      "office": 4
+    },
+    "9536b068d2d0f3efdf43358ca9f17c19eadc58504a2b8a3860278890cfb6519e": {
+      "bedroom": 3,
+      "garden": 2,
+      "hallway": 3,
+      "kitchen": 5
+    },
+    "9fdbc8e3deb702c5e48594e17287394db92c1e6ead2d91d1047866579b7ab054": {
+      "bathroom": 2,
+      "bedroom": 9,
+      "garden": 2,
+      "kitchen": 1,
+      "office": 1
+    },
+    "b89583ceca219a3c967e992b3eff5b9eea1a8b67b248c221ad407d8ec4ec7db1": {
+      "bedroom": 5,
+      "garden": 8,
+      "hallway": 5,
+      "kitchen": 4,
+      "office": 4
+    },
+    "c30f2864912685a4b8dbeee81e669dc5518eaf69f787bbe150d5d2799239e634": {
+      "bathroom": 4,
+      "garden": 5,
+      "hallway": 8,
+      "kitchen": 6
+    },
+    "c34798ea9cce479d1f7c0efde65a7983239a0b55eb35c647b78599cfa7fc330b": {
+      "bathroom": 3,
+      "bedroom": 6,
+      "garden": 2,
+      "kitchen": 4,
+      "office": 3
+    },
+    "cb1f0ae04aa45fa3c4fb1dae0148a345e8c549276990f96cd469c8c7f862c66b": {
+      "bathroom": 2,
+      "bedroom": 4,
+      "hallway": 3,
+      "kitchen": 4,
+      "office": 6
+    },
+    "cb9dad56c193f4600accb9e9b0fa8669fe845f8c3d82f97f7e35fb40468ae1b7": {
+      "bathroom": 3,
+      "bedroom": 3,
+      "hallway": 3,
+      "kitchen": 9,
+      "office": 4
+    },
+    "d026d15d45a55dae238e237f1bc4355001c864839772c3a42d6e434fb0660fe7": {
+      "bathroom": 3,
+      "bedroom": 2,
+      "garden": 3,
+      "kitchen": 5,
+      "office": 2
+    },
+    "e006604dc6aa6bece6bd698017f9f84150e886fa8c6dc763592e5c7d2a685cdb": {
+      "bathroom": 4,
+      "garden": 6,
+      "hallway": 3,
+      "kitchen": 6,
+      "office": 6
+    },
+    "e8d22a7817dc86c56a5a7dd8a543c245305e5f70aa624f1009d4a22af63889b5": {
+      "bathroom": 5,
+      "bedroom": 5,
+      "garden": 4,
+      "hallway": 4,
+      "kitchen": 5
+    },
+    "ebfaea429c3abefaee92c0c61e2d3e60e0c1a568d89003324e9e037e0ec2f5f9": {
+      "bathroom": 5,
+      "bedroom": 2,
+      "garden": 5,
+      "kitchen": 7,
+      "office": 2
+    },
+    "ed4ca00d36ee454de8be98a6b52d71270083b6b63e2aee6c0dd2d8c801fb8683": {
+      "bathroom": 5,
+      "bedroom": 2,
+      "garden": 4,
+      "hallway": 3,
+      "office": 5
+    },
+    "ed8a59fee98f16b1bccb441d68a787dddce0b21b3d9a8764e4df48f05c9c51f1": {
+      "bathroom": 1,
+      "bedroom": 6,
+      "garden": 4,
+      "hallway": 2,
+      "office": 4
+    },
+    "edf8b0105fe7199880417644e73505f8a98c839810e14271df3bfa7b87065828": {
+      "bathroom": 3,
+      "bedroom": 2,
+      "garden": 4,
+      "hallway": 4,
+      "office": 1
+    },
+    "f36a7146eefedcd3149b6eba5afef84b262be8932cde50454fe502931ad9dfb1": {
+      "bathroom": 4,
+      "garden": 3,
+      "hallway": 4,
+      "kitchen": 3,
+      "office": 3
+    },
+    "f4157ea5bef20236fcdc27fbca61c20e5f5d36ef60c50bf3abcf83d4f4ff0db1": {
+      "bathroom": 5,
+      "bedroom": 3,
+      "garden": 5,
+      "hallway": 2,
+      "kitchen": 8
+    },
+    "f594d1e0bf6e9b35403612e7b56a8a2019858e25ea7f50a41d600f6e7550a43c": {
+      "bedroom": 3,
+      "garden": 4,
+      "hallway": 3,
+      "kitchen": 3,
+      "office": 6
+    },
+    "fa4ad1fc89f8dc9526dcc4d1940f369e087f5e78615115b174f17ef20a60c904": {
+      "bathroom": 5,
+      "bedroom": 2,
+      "hallway": 4,
+      "kitchen": 4,
+      "office": 7
+    }
+  },
+  "schema_version": 1,
+  "tie_rule": "lexical_ascending",
+  "tokenizer": "lowercase_word_punctuation_v1",
+  "training_record_ids_sha256": "66e0b3b9fefd73a902163abff705c12ba4492d99bc43075cb05e0cee8c47087c"
+}

@@ -1,0 +1,23 @@
+{
+  "archive_filename": "documented_https_mirror.tar.gz",
+  "between_read_deadline_seconds": 120,
+  "bytes": 11745123,
+  "completed_at_utc": "2026-10-07T10:46:06.909619+00:00",
+  "content_length_header": "11745123",
+  "content_type": "application/x-gzip",
+  "final_url": "https://s3.amazonaws.com/text-datasets/babi_tasks_1-20_v1-2.tar.gz",
+  "http_status": 200,
+  "maximum_bytes": 33554432,
+  "per_socket_timeout_seconds": 30,
+  "redirects": [],
+  "sha256": "84f5296ab9a1ad0dc9464e08c491d65cd08830fca3acae9ab86f75e0fb81573c",
+  "source": {
+    "id": "documented_https_mirror",
+    "role": "documented HTTPS mirror; no original-host byte authentication presumed",
+    "url": "https://s3.amazonaws.com/text-datasets/babi_tasks_1-20_v1-2.tar.gz"
+  },
+  "started_at_utc": "2026-10-07T10:46:06.614582+00:00",
+  "status": "downloaded",
+  "time_limit_scope": "Deadline checked between reads; blocking I/O may add up to its socket timeout. Owned-child stage supervisor provides the hard outer bound.",
+  "wall_seconds": 0.29506099799999674
+}
