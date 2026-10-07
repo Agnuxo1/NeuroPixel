@@ -1,7 +1,7 @@
 {
-  "attempt_status": "running",
+  "attempt_status": "completed",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T13:19:03.711434+00:00",
+  "created_at_utc": "2026-10-07T13:19:05.718235+00:00",
   "files": {
     "analysis/recounted_metrics.csv": {
       "bytes": 21154,
@@ -96,14 +96,14 @@
       "sha256": "b288d5b8898909d96251f9187e54fd9dd54b59a36841fe060cb94b278046cd4a"
     },
     "worker_status.json": {
-      "bytes": 1759,
-      "sha256": "a95ae71bb5be0020a58fbb2602a3f0365efb5ebff9aa16cfcb218ae5ca450ccf"
+      "bytes": 3693,
+      "sha256": "e842318baddfff20e6a1b2d87a875ef5615cedd7e2ad6651dbd13ce0bf1bd1c8"
     }
   },
-  "final": false,
+  "final": true,
   "item": 11,
   "run_key": "37627489876-1-audit",
   "schema_version": 1,
-  "snapshot_kind": "interim_partial",
+  "snapshot_kind": "final",
   "source_commit": "f50ef0e55397ce4fb8e85360f5be8c12003bd6ee"
 }
