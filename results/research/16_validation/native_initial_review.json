@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "item": 16,
+  "record_type": "Root pre-execution producer review",
+  "native_candidate_sha256": "e787cd2e253a7941c508bc6ac0c0a70f6d1393b3913393ff1ab269f98a7c8a24",
+  "recipe_literal_equal": true,
+  "findings": [
+    {
+      "id": "input_spec_metadata_keys",
+      "severity": "blocking_before_execution",
+      "statement": "The producer exact five-key input spec conflicts with the frozen-input draft's nine keys, which includes descriptive scope and original item9 lineage. A corrected schema and source/archive linkage are requested before execution."
+    },
+    {
+      "id": "svd_implementation_independence",
+      "severity": "method_improvement_before_execution",
+      "statement": "Use Torch SVD in the producer and NumPy SVD in the separately implemented auditor; compare projectors rather than basis vectors."
+    }
+  ],
+  "retained_native_preimage_blob": "5e1a5570758100b9b121bb1add373e2af20dc863",
+  "numerical_execution_started": false
+}

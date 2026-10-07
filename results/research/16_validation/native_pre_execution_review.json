@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "item": 16,
+  "scope": "Internal static producer review before numerical execution",
+  "reviewer": "root",
+  "native_sha256": "2567691812ee90f8d34cfe4fc457651d78789df027fc0d1fbf5272bec9b0947b",
+  "earlier_candidate_sha256": "e787cd2e253a7941c508bc6ac0c0a70f6d1393b3913393ff1ab269f98a7c8a24",
+  "checks": [
+    {
+      "name": "literal_recipe_matches_agreed_plan_draft",
+      "passed": true
+    },
+    {
+      "name": "published_nine_key_input_spec_accepted",
+      "passed": true
+    },
+    {
+      "name": "original_item9_lineage_matches_prior_binder",
+      "passed": true
+    },
+    {
+      "name": "gate_json_and_npz_hash_links_exist_in_prior_binder",
+      "passed": true
+    },
+    {
+      "name": "assigned_native_hidden_coupling_and_unused_control_match_equations",
+      "passed": true
+    },
+    {
+      "name": "native_preupdate_and_posthook_frame_indices_explicit",
+      "passed": true
+    },
+    {
+      "name": "PAD_policy_and_top_pair_compression_are_separate_controls",
+      "passed": true
+    },
+    {
+      "name": "parameter_buffer_and_rng_before_after_witnesses_saved",
+      "passed": true
+    },
+    {
+      "name": "learned_source_arrays_are_read_only_with_pickle_disabled",
+      "passed": true
+    },
+    {
+      "name": "producer_uses_Torch_SVD_for_separate_NumPy_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "raw_arrays_preserved_before_final_assertions",
+      "passed": true
+    },
+    {
+      "name": "learned_forward_and_optimization_not_called",
+      "passed": true
+    }
+  ],
+  "corrections_before_execution": [
+    "Expanded exact input-schema keys to include the four published metadata/lineage fields; verified original lineage against prior receipt.",
+    "Producer matrix decomposition changed from NumPy to Torch SVD; numerical tolerance and scientific recipe unchanged."
+  ],
+  "native_check_inventory": [
+    "source_and_inputs_unchanged",
+    "parameter_buffer_and_rng_invariants",
+    "identical_immediate_full_projections",
+    "hidden_to_visible_causal_witness",
+    "unused_hidden_negative_control",
+    "native_preupdate_lens_and_posthook_frames",
+    "finite_pad_policy_and_legacy_difference",
+    "top_label_confidence_compression",
+    "learned_rank_dimension_bounds",
+    "learned_kernel_projector_witnesses"
+  ],
+  "numerical_execution_performed": false,
+  "external_replication": false
+}
