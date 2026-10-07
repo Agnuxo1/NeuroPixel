@@ -23,9 +23,10 @@ def test_owned_archive_preserves_source_head_and_excludes_unrelated_files(tmp_pa
     subprocess.run(["git", "init", str(source)], check=True, capture_output=True)
     (source / "README.md").write_text("Synthetic source tree\n", encoding="utf-8")
 
-    def local_git(*arguments, cwd=None):
-        return subprocess.check_output(["git", *map(str, arguments)], cwd=cwd or source,
-                                       text=True, stderr=subprocess.STDOUT).strip()
+    bounded_git = WORKER.git
+
+    def local_git(*arguments, cwd=None, deadline=None):
+        return bounded_git(*arguments, cwd=source if cwd is None else cwd, deadline=deadline)
 
     local_git("add", "README.md")
     local_git("-c", "user.name=Test", "-c", "user.email=test@example.invalid",

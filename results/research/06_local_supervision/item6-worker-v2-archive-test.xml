@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.071" timestamp="2026-10-07T05:17:04.616683+02:00" hostname="5ea958777ae7"><testcase classname="tests.test_research_item6_worker" name="test_owned_archive_preserves_source_head_and_excludes_unrelated_files" time="0.038"><failure message="TypeError: test_owned_archive_preserves_source_head_and_excludes_unrelated_files.&lt;locals&gt;.local_git() got an unexpected keyword argument 'deadline'">tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_owned_archive_preserves_s0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7f374431b7d0&gt;
+
+    def test_owned_archive_preserves_source_head_and_excludes_unrelated_files(tmp_path, monkeypatch):
+        remote, source = tmp_path / "remote.git", tmp_path / "source"
+        subprocess.run(["git", "init", "--bare", str(remote)], check=True, capture_output=True)
+        subprocess.run(["git", "init", str(source)], check=True, capture_output=True)
+        (source / "README.md").write_text("Synthetic source tree\n", encoding="utf-8")
+    
+        def local_git(*arguments, cwd=None):
+            return subprocess.check_output(["git", *map(str, arguments)], cwd=cwd or source,
+                                           text=True, stderr=subprocess.STDOUT).strip()
+    
+        local_git("add", "README.md")
+        local_git("-c", "user.name=Test", "-c", "user.email=test@example.invalid",
+                  "commit", "-m", "Synthetic source")
+        local_git("remote", "add", "origin", remote)
+        head = local_git("rev-parse", "HEAD")
+        local_git("push", "origin", head + ":refs/heads/test-source")
+        monkeypatch.setattr(WORKER, "git", local_git)
+        monkeypatch.setattr(WORKER, "ROOT", source)
+        output = source / "runs/item6/synthetic-attempt"
+        output.mkdir(parents=True)
+        (source / "unrelated_work.txt").write_text("Must stay outside the owned archive\n", encoding="utf-8")
+        (output / "unrelated_link.txt").symlink_to(source / "unrelated_work.txt")
+        (output / ".unfinished.tmp").write_text("incomplete write", encoding="utf-8")
+        WORKER.save_json(output / "worker_status.json", {"status": "running"})
+&gt;       archive = WORKER.Archive(output, "synthetic-attempt", head)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_research_item6_worker.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;item6_worker_test.Archive object at 0x7f3744336390&gt;
+output = PosixPath('/tmp/pytest-of-root/pytest-0/test_owned_archive_preserves_s0/source/runs/item6/synthetic-attempt')
+run_key = 'synthetic-attempt'
+source_head = '212077fd836d5dc655c2490d391ce22eba835ed9', deadline = None
+
+    def __init__(self, output, run_key, source_head, deadline=None):
+        self.output, self.run_key, self.source_head = output, run_key, source_head
+        self.deadline = deadline
+        self.worktree = Path(tempfile.mkdtemp(prefix="neuropixel-item6-archive-"))
+        # git worktree requires a nonexistent or empty destination; this directory is ours.
+&gt;       remote = git("ls-remote", "--heads", "origin", "refs/heads/" + RESULTS_BRANCH, deadline=deadline)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: test_owned_archive_preserves_source_head_and_excludes_unrelated_files.&lt;locals&gt;.local_git() got an unexpected keyword argument 'deadline'
+
+scripts/research_item6_worker.py:262: TypeError</failure></testcase></testsuite></testsuites>

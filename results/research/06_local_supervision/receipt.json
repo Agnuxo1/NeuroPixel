@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "item": 6,
+  "at_utc": "2026-10-07T03:18:50.797843+00:00",
+  "record_type": "operational supervisor correction and local validation",
+  "base_source_commit": "a6cbe90dc2cff8128da67ee5a9626648a23bb0c8",
+  "implementation_sha256": {
+    "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+    "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+    "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+  },
+  "python": "3.12.14",
+  "pytest": "9.1.1",
+  "psutil": "7.2.2",
+  "initial_available_ram_gib": 9.129547119140625,
+  "study_runtime_changed": false,
+  "scientific_recipe_changed": false,
+  "study_optimizer_updates": 0,
+  "study_final_test_accessed": false,
+  "torch_used": false,
+  "independent_static_review": "architecture: no concrete blocker in worker aba8d3ff6038b4c90b11266feaee3963772f8e0f",
+  "correction": "Independent child supervision every second, finite owned Git process-group timeout, admission immediately before every child, bounded final archival after the child stops.",
+  "verification": [
+    "low RAM stops the owned child while publication holds the main thread",
+    "expired deadline prevents a later Popen",
+    "timed-out synthetic Git also stops its transport descendant",
+    "archive commits only owned files without changing source HEAD"
+  ],
+  "checks": [
+    {
+      "path": "results/research/06_local_supervision/item6-worker-v2-archive-test.xml",
+      "sha256": "44daf10e9988c4cde8129f2fe50aa557d99a3eb2a98364d99777cff2b17743cf",
+      "bytes": 3666,
+      "scope": "first attempt with old test fixture; expected retained TypeError failure",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "path": "results/research/06_local_supervision/item6-worker-supervision-first.xml",
+      "sha256": "76a4c7b90d46b05d33a28cb21ceff6bed9d9e47fc95588c5843ec763eb88a09b",
+      "bytes": 711,
+      "scope": "three new operational process checks",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "path": "results/research/06_local_supervision/item6-worker-v2-archive-corrected.xml",
+      "sha256": "c71e3292248fd9ecd417311ffb4aca5659db8620cc23d092baf88a68902603cb",
+      "bytes": 395,
+      "scope": "corrected archive fixture and real bounded Git helper",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "final_result": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  },
+  "retained_failure": "The previous archive fixture lacked the new deadline keyword; its failure is preserved above. The corrected fixture delegates to the real bounded Git helper.",
+  "next_gate": "Repeat the complete implementation suite in the declared GitHub CPU environment before freezing and launching the study."
+}
