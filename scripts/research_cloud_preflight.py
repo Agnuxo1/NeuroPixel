@@ -46,9 +46,9 @@ def main():
     if (ROOT / "source_snapshot.json").exists():
         raise RuntimeError("a stale root source snapshot would conceal actual Git HEAD")
     packages = {name: importlib.metadata.version(name)
-                for name in ("torch", "numpy", "scipy", "pytest", "psutil")}
+                for name in ("torch", "numpy", "scipy", "pytest", "psutil", "Pillow")}
     required = {"torch": "2.6.0+cpu", "numpy": "2.2.6", "scipy": "1.15.1",
-                "pytest": "9.1.1", "psutil": "7.2.2"}
+                "pytest": "9.1.1", "psutil": "7.2.2", "Pillow": "12.3.0"}
     if packages != required or platform.python_version() != "3.12.8":
         raise RuntimeError(f"declared CPU software differs: {packages}, Python {platform.python_version()}")
     import torch
@@ -84,6 +84,7 @@ def main():
         "verified_sha256": verified,
         "unavailable_historical_sha256": manifest["unavailable_historical_sha256"],
         "environment": environment_record(device),
+        "validated_package_versions": packages,
         "resources": resource,
         "initial_available_ram_gib": available,
         "cpu_count_logical": psutil.cpu_count(),

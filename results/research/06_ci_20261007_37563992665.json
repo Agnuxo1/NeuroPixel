@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "item": 6,
+  "record_type": "implementation_validation_failure",
+  "recorded_at_utc": "2026-10-07 02:58:47 UTC",
+  "source_commit": "df244fc738a4fa4aceb0cb9d2f32f638ee53d9a5",
+  "run_id": 37563992665,
+  "job_id": 112607430774,
+  "url": "https://github.com/Agnuxo1/NeuroPixel/actions/runs/37563992665",
+  "counts": {
+    "collected": 97,
+    "passed": 94,
+    "failed": 2,
+    "skipped": 1
+  },
+  "passed_gates": [
+    "historical source/document hashes",
+    "fixed CPU environment",
+    "validation/probe tensor hashes",
+    "core and growth inventory constructor equality",
+    "Python compilation",
+    "growth final-data gate and finite-difference gate gradient",
+    "independent core synthetic numerical/scoring checks",
+    "owned archive append-only local-bare-Git test with unchanged source HEAD"
+  ],
+  "failures": [
+    {
+      "test": "tests/test_core.py::test_codec_roundtrip_png",
+      "cause": "Missing Pillow dependency (ModuleNotFoundError: PIL)",
+      "correction": "Add Pillow==12.3.0, compatible with Python 3.12, to fixed research requirements and exact package preflight. No codec code changes.",
+      "sources": [
+        "https://pillow.readthedocs.io/en/stable/installation/python-support.html",
+        "https://pillow.readthedocs.io/en/stable/releasenotes/index.html"
+      ]
+    },
+    {
+      "test": "tests/test_research_ablations.py::test_evaluation_lesion_is_indexed_by_example_not_batch",
+      "observed": {
+        "mismatched_logits": 4,
+        "total_logits": 175,
+        "maximum_absolute_difference": 4.470348358154297e-7,
+        "maximum_relative_difference": 0.000005202704414841719,
+        "exact_state_and_mask_checks": "passed"
+      },
+      "cause": "The new test used a tighter float32 readout tolerance than observed CPU batch-shape accumulation differences.",
+      "correction": "Change only the readout comparison to atol=1e-6, rtol=1e-5. Preserve exact state, mask, RNG and offset checks. No scientific implementation changes.",
+      "source": "https://docs.pytorch.org/docs/2.6/notes/numerical_accuracy.html"
+    }
+  ],
+  "skipped": {
+    "test": "tests/test_core.py:135",
+    "reason": "CIFAR-10 is not present locally; unrelated optional visual-data test."
+  },
+  "raw_job_log_sha256": "c00e5727149d15ba37643536d1006ce976057963242d108c98e51689fdcfdf61",
+  "retained_log_excerpt": {
+    "path": "results/research/06_ci_20261007_37563992665_excerpt.log",
+    "sha256": "645eceed2d242d3a09e6abfd51f45f23ea59373f39115ecdd4ed178b5437a0e9",
+    "bytes": 19931
+  },
+  "study_optimizer_updates": 0,
+  "study_final_test_accessed": false,
+  "scope": "Implementation tests use synthetic fixtures. This validation did not run the item-6 study or evaluate its frozen final data.",
+  "next_gate": "Repeat required implementation checks, including the completed independent growth analyzer, before freezing and running the study."
+}

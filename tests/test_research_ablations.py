@@ -231,9 +231,11 @@ def test_evaluation_lesion_is_indexed_by_example_not_batch(cpu_torch):
     assert full.offset == chunked.offset == 5
     assert torch.equal(complete["state"], expected_state)
     assert torch.equal(torch.cat([part["state"] for part in parts]), expected_state)
+    # Float32 readout matrix products can round differently for different batch
+    # shapes. State/mask equivalence above remains exact; allow only readout noise.
     torch.testing.assert_close(
         torch.cat([part["logits"] for part in parts]), complete["logits"],
-        rtol=1e-6, atol=1e-7)
+        rtol=1e-5, atol=1e-6)
     with pytest.raises(ValueError, match="mask inventory"):
         chunked(canvas[:1])
 

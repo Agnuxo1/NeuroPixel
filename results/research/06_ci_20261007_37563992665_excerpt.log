@@ -1,0 +1,179 @@
+=================================== FAILURES ===================================
+2026-10-07T02:52:34.7965734Z ___________________________ test_codec_roundtrip_png ___________________________
+2026-10-07T02:52:34.7966438Z 
+2026-10-07T02:52:34.7966716Z     def test_codec_roundtrip_png():
+2026-10-07T02:52:34.7967467Z         ids = np.array([0, 1, 255, 256, 65535, 2**24 - 1, 199_997])
+2026-10-07T02:52:34.7968307Z         assert (codec.rgb_to_ids(codec.ids_to_rgb(ids)) == ids).all()
+2026-10-07T02:52:34.7969069Z         img = codec.pack_image(ids)
+2026-10-07T02:52:34.7969816Z >       assert (codec.from_png(codec.to_png(img), ids.size) == ids).all()
+2026-10-07T02:52:34.7970631Z                                ^^^^^^^^^^^^^^^^^
+2026-10-07T02:52:34.7971013Z 
+2026-10-07T02:52:34.7971172Z tests/test_core.py:18: 
+2026-10-07T02:52:34.7972110Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-10-07T02:52:34.7972553Z 
+2026-10-07T02:52:34.7972683Z img = array([[[  0,   0,   0],
+2026-10-07T02:52:34.7973010Z         [  0,   0,   1],
+2026-10-07T02:52:34.7973308Z         [  0,   0, 255]],
+2026-10-07T02:52:34.7973495Z 
+2026-10-07T02:52:34.7973625Z        [[  0,   1,   0],
+2026-10-07T02:52:34.7973912Z         [  0, 25...],
+2026-10-07T02:52:34.7974189Z         [255, 255, 255]],
+2026-10-07T02:52:34.7974383Z 
+2026-10-07T02:52:34.7974488Z        [[  3,  13,  61],
+2026-10-07T02:52:34.7974775Z         [  0,   0,   0],
+2026-10-07T02:52:34.7975541Z         [  0,   0,   0]]], dtype=uint8)
+2026-10-07T02:52:34.7975973Z 
+2026-10-07T02:52:34.7976262Z     def to_png(img: np.ndarray) -> bytes:
+2026-10-07T02:52:34.7976875Z >       from PIL import Image
+2026-10-07T02:52:34.7977497Z E       ModuleNotFoundError: No module named 'PIL'
+2026-10-07T02:52:34.7977860Z 
+2026-10-07T02:52:34.7978024Z neuropixel/codec.py:38: ModuleNotFoundError
+2026-10-07T02:52:34.7978656Z ____________ test_evaluation_lesion_is_indexed_by_example_not_batch ____________
+2026-10-07T02:52:34.7979100Z 
+2026-10-07T02:52:34.7979618Z cpu_torch = <module 'torch' from '/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/torch/__init__.py'>
+2026-10-07T02:52:34.7980292Z 
+2026-10-07T02:52:34.7980893Z     def test_evaluation_lesion_is_indexed_by_example_not_batch(cpu_torch):
+2026-10-07T02:52:34.7981301Z         torch = cpu_torch
+2026-10-07T02:52:34.7981533Z         config = _config()
+2026-10-07T02:52:34.7981766Z         torch.manual_seed(123)
+2026-10-07T02:52:34.7982041Z         model = OPS.training_model(config).eval()
+2026-10-07T02:52:34.7982343Z         with torch.no_grad():
+2026-10-07T02:52:34.7982593Z             model.f2.weight.zero_()
+2026-10-07T02:52:34.7982855Z             model.f2.bias.zero_()
+2026-10-07T02:52:34.7983109Z         canvas = _canvas(torch, n=5)
+2026-10-07T02:52:34.7983466Z         case = {"steps_override": None, "damage": deepcopy(OPS.EVAL_DAMAGE)}
+2026-10-07T02:52:34.7983891Z         keep = OPS.evaluation_keep_mask(5, 8, 8, case["damage"])
+2026-10-07T02:52:34.7984241Z         global_rng = torch.get_rng_state().clone()
+2026-10-07T02:52:34.7984642Z         assert torch.equal(keep, OPS.evaluation_keep_mask(5, 8, 8, case["damage"]))
+2026-10-07T02:52:34.7985314Z         assert torch.equal(global_rng, torch.get_rng_state())
+2026-10-07T02:52:34.7985704Z         full = OPS.evaluation_view(model, config, case, keep).eval()
+2026-10-07T02:52:34.7986120Z         chunked = OPS.evaluation_view(model, config, case, keep).eval()
+2026-10-07T02:52:34.7986465Z         with torch.no_grad():
+2026-10-07T02:52:34.7986737Z             expected_state = model(canvas)["state"] * keep
+2026-10-07T02:52:34.7987051Z             complete = full(canvas)
+2026-10-07T02:52:34.7987340Z             parts = [chunked(canvas[:2]), chunked(canvas[2:])]
+2026-10-07T02:52:34.7987669Z         assert full.offset == chunked.offset == 5
+2026-10-07T02:52:34.7988016Z         assert torch.equal(complete["state"], expected_state)
+2026-10-07T02:52:34.7988499Z         assert torch.equal(torch.cat([part["state"] for part in parts]), expected_state)
+2026-10-07T02:52:34.7988928Z >       torch.testing.assert_close(
+2026-10-07T02:52:34.7989298Z             torch.cat([part["logits"] for part in parts]), complete["logits"],
+2026-10-07T02:52:34.7989671Z             rtol=1e-6, atol=1e-7)
+2026-10-07T02:52:34.7989952Z E       AssertionError: Tensor-likes are not close!
+2026-10-07T02:52:34.7990241Z E       
+2026-10-07T02:52:34.7990450Z E       Mismatched elements: 4 / 175 (2.3%)
+2026-10-07T02:52:34.7990896Z E       Greatest absolute difference: 4.470348358154297e-07 at index (1, 19) (up to 1e-07 allowed)
+2026-10-07T02:52:34.7991488Z E       Greatest relative difference: 5.202704414841719e-06 at index (1, 28) (up to 1e-06 allowed)
+2026-10-07T02:52:34.7991837Z 
+2026-10-07T02:52:34.7991973Z tests/test_research_ablations.py:234: AssertionError
+2026-10-07T02:52:34.7992330Z ==================================== PASSES ====================================
+2026-10-07T02:52:34.7992907Z _________________________ test_safety_refuses_busy_gpu _________________________
+2026-10-07T02:52:34.7993345Z ----------------------------- Captured stdout call -----------------------------
+2026-10-07T02:52:34.7993758Z [safety] GPU ocupada (uso 98 %, libre 7.7 GiB) -> CPU
+2026-10-07T02:52:34.7994181Z ____ test_owned_archive_preserves_source_head_and_excludes_unrelated_files _____
+2026-10-07T02:52:34.7994646Z ----------------------------- Captured stdout call -----------------------------
+2026-10-07T02:52:34.7995557Z {"event": "evidence_archived", "at_utc": "2026-10-07T02:52:34.733698+00:00", "archive_commit": "61051c6c5644898fea609ca375f6ec71f51b123a", "files": 1, "final": false}
+2026-10-07T02:52:34.7996551Z {"event": "evidence_archived", "at_utc": "2026-10-07T02:52:34.782315+00:00", "archive_commit": "f16bf884bed34d48c5b2c8bc81aed12d2cff1d81", "files": 1, "final": true}
+2026-10-07T02:52:34.7997241Z =========================== short test summary info ============================
+2026-10-07T02:52:34.7997665Z PASSED tests/test_core.py::test_hrr_bind_unbind_and_order
+2026-10-07T02:52:34.7998069Z PASSED tests/test_core.py::test_task_heldout_disjoint_and_valid
+2026-10-07T02:52:34.7998464Z PASSED tests/test_core.py::test_models_forward_backward
+2026-10-07T02:52:34.7998973Z PASSED tests/test_core.py::test_empty_canvas_is_black
+2026-10-07T02:52:34.7999336Z PASSED tests/test_core.py::test_safety_refuses_busy_gpu
+2026-10-07T02:52:34.7999683Z PASSED tests/test_core.py::test_scanner_lens_shapes
+2026-10-07T02:52:34.8000068Z PASSED tests/test_core.py::test_grounded_dictionary_fixed_colors
+2026-10-07T02:52:34.8000514Z PASSED tests/test_core.py::test_vectorized_sampler_matches_structure
+2026-10-07T02:52:34.8000947Z PASSED tests/test_core.py::test_both_models_accept_train_kwargs
+2026-10-07T02:52:34.8001345Z PASSED tests/test_core.py::test_camera_pixels_replace_words
+2026-10-07T02:52:34.8001751Z PASSED tests/test_core.py::test_retina_fills_all_identity_channels
+2026-10-07T02:52:34.8002292Z PASSED tests/test_research_ablations.py::test_inventory_and_low_ram_admission_do_not_import_torch
+2026-10-07T02:52:34.8002885Z PASSED tests/test_research_ablations.py::test_exact_inventory_and_checkpoint_reuse
+2026-10-07T02:52:34.8003470Z PASSED tests/test_research_ablations.py::test_zero_damage_is_exact_legacy_factory[True-True]
+2026-10-07T02:52:34.8004077Z PASSED tests/test_research_ablations.py::test_zero_damage_is_exact_legacy_factory[False-False]
+2026-10-07T02:52:34.8004747Z PASSED tests/test_research_ablations.py::test_active_damage_preserves_initialization_and_global_firing_rng
+2026-10-07T02:52:34.8005525Z PASSED tests/test_research_ablations.py::test_damage_path_has_finite_nonzero_backward
+2026-10-07T02:52:34.8006081Z PASSED tests/test_research_ablations.py::test_deployment_truncation_uses_same_weights
+2026-10-07T02:52:34.8006665Z PASSED tests/test_research_ablations.py::test_adapter_reports_school_and_restores_after_failure
+2026-10-07T02:52:34.8007282Z PASSED tests/test_research_ablations.py::test_plan_refuses_unfrozen_status_without_runtime
+2026-10-07T02:52:34.8007860Z PASSED tests/test_research_ablations.py::test_plan_refuses_implementation_hash_drift
+2026-10-07T02:52:34.8008449Z PASSED tests/test_research_ablations.py::test_twenty_five_complete_runs_never_open_final_data
+2026-10-07T02:52:34.8009082Z PASSED tests/test_research_ablations.py::test_missing_old_freeze_requires_explicit_recovery_record
+2026-10-07T02:52:34.8009752Z PASSED tests/test_research_ablations.py::test_source_record_declares_seven_files_and_rejects_a_placeholder
+2026-10-07T02:52:34.8010424Z PASSED tests/test_research_ablations.py::test_source_adapter_restores_original_function_on_failure
+2026-10-07T02:52:34.8011050Z PASSED tests/test_research_ablations.py::test_original_evaluator_sets_deployment_model_to_eval
+2026-10-07T02:52:34.8011725Z PASSED tests/test_research_analyze_core_ablation.py::test_inventory_has_only_approved_26_runs_and_34_evaluations
+2026-10-07T02:52:34.8012663Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying-0.037]
+2026-10-07T02:52:34.8013518Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[school-0.057]
+2026-10-07T02:52:34.8015072Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[reinjection-0.052]
+2026-10-07T02:52:34.8016717Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying_by_school-0.024]
+2026-10-07T02:52:34.8018411Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying_by_reinjection--0.006]
+2026-10-07T02:52:34.8020012Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[school_by_reinjection-0.014]
+2026-10-07T02:52:34.8021049Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying_by_school_by_reinjection-0.008]
+2026-10-07T02:52:34.8022052Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying__school0_reinjection0-0.03]
+2026-10-07T02:52:34.8023232Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying__school1_reinjection1-0.048]
+2026-10-07T02:52:34.8024216Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying_by_school__reinjection0-0.02]
+2026-10-07T02:52:34.8025412Z PASSED tests/test_research_analyze_core_ablation.py::test_factorial_raw_differences_have_declared_sign_and_scale[tying_by_school__reinjection1-0.028]
+2026-10-07T02:52:34.8026252Z PASSED tests/test_research_analyze_core_ablation.py::test_all_factorial_conditionals_are_present
+2026-10-07T02:52:34.8027045Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[trained_T1_minus_trained_T16--0.07]
+2026-10-07T02:52:34.8027980Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[trained_T4_minus_trained_T16--0.03]
+2026-10-07T02:52:34.8028943Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[same_T16_weights_eval_T1_minus_eval_T16--0.11]
+2026-10-07T02:52:34.9084490Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[same_T16_weights_eval_T4_minus_eval_T16--0.05]
+2026-10-07T02:52:34.9087354Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[damage_training_minus_clean_training__eval_lesion0--0.02]
+2026-10-07T02:52:34.9089695Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[damage_training_minus_clean_training__eval_lesion1-0.09]
+2026-10-07T02:52:34.9092070Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[eval_lesion_minus_clean__training_damage0--0.15]
+2026-10-07T02:52:34.9093543Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[eval_lesion_minus_clean__training_damage1--0.04]
+2026-10-07T02:52:34.9095119Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[training_damage_by_eval_lesion-0.11]
+2026-10-07T02:52:34.9096393Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[updates8192_minus1024__school0-0.08]
+2026-10-07T02:52:34.9097640Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[updates8192_minus1024__school1-0.04]
+2026-10-07T02:52:34.9098840Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[budget_by_school--0.04]
+2026-10-07T02:52:34.9100418Z PASSED tests/test_research_analyze_core_ablation.py::test_secondary_panels_do_not_conflate_interventions[school03_minus0__updates8192-0.038]
+2026-10-07T02:52:34.9101461Z PASSED tests/test_research_analyze_core_ablation.py::test_all_four_damage_cells_are_preserved
+2026-10-07T02:52:34.9102405Z PASSED tests/test_research_analyze_core_ablation.py::test_t_interval_uses_two_seed_units_ddof_one_and_is_not_clipped
+2026-10-07T02:52:34.9103220Z PASSED tests/test_research_analyze_core_ablation.py::test_zero_variance_interval_and_exact_pairing
+2026-10-07T02:52:34.9103922Z PASSED tests/test_research_analyze_core_ablation.py::test_missing_or_duplicate_cells_do_not_become_complete_pairs
+2026-10-07T02:52:34.9104644Z PASSED tests/test_research_analyze_core_ablation.py::test_scoring_recounts_roles_binding_nll_and_saved_metrics
+2026-10-07T02:52:34.9105558Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[target-target alignment]
+2026-10-07T02:52:34.9106309Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[role-role alignment]
+2026-10-07T02:52:34.9107122Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[prediction-prediction out of vocabulary]
+2026-10-07T02:52:34.9108178Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[confidence_nan-nonfinite confidence]
+2026-10-07T02:52:34.9108991Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[nll_inf-nonfinite nll]
+2026-10-07T02:52:34.9110485Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[confidence_low-maximum probability below uniform]
+2026-10-07T02:52:34.9112147Z PASSED tests/test_research_analyze_core_ablation.py::test_prediction_corruption_is_rejected[nll_inconsistent-true-label probability exceeds]
+2026-10-07T02:52:34.9113611Z PASSED tests/test_research_analyze_core_ablation.py::test_role_or_scalar_metric_corruption_is_rejected
+2026-10-07T02:52:34.9114789Z PASSED tests/test_research_analyze_core_ablation.py::test_probe_flags_have_counts_only_scope
+2026-10-07T02:52:34.9116289Z PASSED tests/test_research_analyze_core_ablation.py::test_final_npz_gate_precedes_any_file_read
+2026-10-07T02:52:34.9117566Z PASSED tests/test_research_analyze_core_ablation.py::test_reader_prevents_escape_and_detects_digest_change
+2026-10-07T02:52:34.9118819Z PASSED tests/test_research_analyze_core_ablation.py::test_no_torch_or_project_imports_are_in_analyzer
+2026-10-07T02:52:34.9120022Z PASSED tests/test_research_analyze_core_ablation.py::test_atomic_failure_report_and_output_hashes
+2026-10-07T02:52:34.9121276Z PASSED tests/test_research_analyze_core_ablation.py::test_training_gate_failure_precedes_final_result_json
+2026-10-07T02:52:34.9122543Z PASSED tests/test_research_growth_ablation.py::test_exact_growth_inventory_has_six_paired_trajectories
+2026-10-07T02:52:34.9123810Z PASSED tests/test_research_growth_ablation.py::test_empty_bank_creates_only_the_first_expert[fixed_sequential]
+2026-10-07T02:52:34.9125502Z PASSED tests/test_research_growth_ablation.py::test_empty_bank_creates_only_the_first_expert[adaptive_novelty]
+2026-10-07T02:52:34.9126485Z PASSED tests/test_research_growth_ablation.py::test_empty_bank_creates_only_the_first_expert[adaptive_resonance]
+2026-10-07T02:52:34.9127203Z PASSED tests/test_research_growth_ablation.py::test_novelty_rounding_strict_threshold_and_parent_tie
+2026-10-07T02:52:34.9127889Z PASSED tests/test_research_growth_ablation.py::test_resonance_preserves_unrounded_tau_and_separate_criterion
+2026-10-07T02:52:34.9128549Z PASSED tests/test_research_growth_ablation.py::test_fixed_lineage_copies_latest_snapshot
+2026-10-07T02:52:34.9129283Z PASSED tests/test_research_growth_ablation.py::test_visible_features_are_binary_and_have_no_label_or_topic_argument
+2026-10-07T02:52:34.9130000Z PASSED tests/test_research_growth_ablation.py::test_scanner_is_unrounded_hard_selection_with_first_tie
+2026-10-07T02:52:34.9130744Z PASSED tests/test_research_growth_ablation.py::test_seeded_random_selector_is_reproducible_without_global_rng_mutation
+2026-10-07T02:52:34.9131726Z PASSED tests/test_research_growth_ablation.py::test_probability_mixture_can_exceed_hard_selection_oracle
+2026-10-07T02:52:34.9132428Z PASSED tests/test_research_growth_ablation.py::test_gate_gradient_agrees_with_independent_finite_difference
+2026-10-07T02:52:34.9133158Z PASSED tests/test_research_growth_ablation.py::test_gate_fit_is_fixed_deterministic_and_does_not_modify_experts
+2026-10-07T02:52:34.9133855Z PASSED tests/test_research_growth_ablation.py::test_partition_manifest_detects_overlap_without_models
+2026-10-07T02:52:34.9134531Z PASSED tests/test_research_growth_ablation.py::test_topic_tasks_preserve_original_partition_membership
+2026-10-07T02:52:34.9135447Z PASSED tests/test_research_growth_ablation.py::test_complete_growth_gate_authorizes_before_the_final_callback
+2026-10-07T02:52:34.9136193Z PASSED tests/test_research_growth_ablation.py::test_incomplete_growth_never_authorizes_or_opens_test[training_stage]
+2026-10-07T02:52:34.9136947Z PASSED tests/test_research_growth_ablation.py::test_incomplete_growth_never_authorizes_or_opens_test[fitted_gate]
+2026-10-07T02:52:34.9137637Z PASSED tests/test_research_growth_ablation.py::test_source_or_hash_drift_blocks_final_data[source]
+2026-10-07T02:52:34.9138480Z PASSED tests/test_research_growth_ablation.py::test_source_or_hash_drift_blocks_final_data[implementation_hash]
+2026-10-07T02:52:34.9139236Z PASSED tests/test_research_growth_ablation.py::test_preadmission_paths_never_import_torch_in_a_fresh_process[describe]
+2026-10-07T02:52:34.9140016Z PASSED tests/test_research_growth_ablation.py::test_preadmission_paths_never_import_torch_in_a_fresh_process[low_ram]
+2026-10-07T02:52:34.9140757Z PASSED tests/test_research_item6_worker.py::test_owned_archive_preserves_source_head_and_excludes_unrelated_files
+2026-10-07T02:52:34.9141315Z SKIPPED [1] tests/test_core.py:135: sin CIFAR-10 local
+2026-10-07T02:52:34.9141815Z FAILED tests/test_core.py::test_codec_roundtrip_png - ModuleNotFoundError: No module named 'PIL'
+2026-10-07T02:52:34.9142611Z FAILED tests/test_research_ablations.py::test_evaluation_lesion_is_indexed_by_example_not_batch - AssertionError: Tensor-likes are not close!
+2026-10-07T02:52:34.9143132Z 
+2026-10-07T02:52:34.9143230Z Mismatched elements: 4 / 175 (2.3%)
+2026-10-07T02:52:34.9143640Z Greatest absolute difference: 4.470348358154297e-07 at index (1, 19) (up to 1e-07 allowed)
+2026-10-07T02:52:34.9144213Z Greatest relative difference: 5.202704414841719e-06 at index (1, 28) (up to 1e-06 allowed)
+2026-10-07T02:52:35.2635895Z ##[error]Process completed with exit code 1.
+2026-10-07T02:52:35.2784122Z 

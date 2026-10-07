@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07 02:34:47 UTC",
+  "recorded_at": "2026-10-07 02:58:47 UTC",
   "active_item": 6,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -173,14 +173,16 @@
     "raw_archive_currently_available": false
   },
   "item6": {
-    "stage": "source/environment preflight; no training or final-data access yet",
+    "stage": "implementation validation: first run 94 passed, 2 failed, 1 skipped; two concrete corrections and growth analyzer queued for repeat checks; no study training or final-data access",
     "planned_core_training_runs": 26,
     "planned_core_evaluation_cases": 34,
     "planned_growth_trajectories": 6,
     "planned_growth_stages": 18,
     "planned_gate_fits": 8,
     "protocol_freeze": "pending completed code review and passing preflight",
-    "evidence_manifest": "06_recovery_manifest.json"
+    "evidence_manifest": "06_recovery_manifest.json",
+    "preflight_receipt": "results/research/06_cloud_preflight.json",
+    "first_ci_failure": "results/research/06_ci_20261007_37563992665.json"
   },
   "limitations": [
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
