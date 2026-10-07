@@ -1,0 +1,25 @@
+{
+  "gpu_requested": false,
+  "item": 12,
+  "paid_compute": false,
+  "phase": "probe",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 900,
+    "workflow_minutes": 20
+  },
+  "run_key": "37633696345-1-probe",
+  "schema_version": 1,
+  "source_commit": "aada1037271a621ac651c94c68feaba51143be05",
+  "stages": [],
+  "started_at_utc": "2026-10-07T14:05:24.635351+00:00",
+  "status": "running"
+}
