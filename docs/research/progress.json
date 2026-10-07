@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T09:50:38+00:00",
-  "active_item": 9,
+  "recorded_at": "2026-10-07T10:09:16+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -57,8 +57,10 @@
     {
       "item": 9,
       "title": "Complex role binding",
-      "status": "in_progress",
-      "opened_at_utc": "2026-10-07T07:19:16.323499+00:00"
+      "status": "completed",
+      "opened_at_utc": "2026-10-07T07:19:16.323499+00:00",
+      "closed_at_utc": "2026-10-07T10:09:16+00:00",
+      "report": "09_results.md"
     },
     {
       "item": 10,
@@ -350,7 +352,7 @@
     "resource_release": "Owned local audits completed and GitHub job112670244618 completed successfully; no item-8 numerical task remains."
   },
   "item9": {
-    "stage": "Stage B completed; unchanged offline audits frozen for a bounded host fallback",
+    "stage": "Completed feasible investigation; complex-binding competence not demonstrated; H1 unchanged",
     "opened_after_item8_closure_commit": "6b2f2554b56c3ac2d7811ea4f6732befd7a93817",
     "scope": "Complex role binding with explicit queries, multiple competing events and controlled transformations. Audit representational feasibility and shortcuts, implement bounded diagnostics, freeze study before performance results, retain all conditions and limits.",
     "historical_H1": "Closed; not supported; no retrospective replacement.",
@@ -423,7 +425,7 @@
     "stage_b_runner_released": true,
     "stage_b_final_manifest_files": 134,
     "stage_b_final_manifest_bytes_excluding_manifest": 56105745,
-    "stage_b_final_scientific_audit_status": "pending",
+    "stage_b_final_scientific_audit_status": "verified",
     "offline_operational_candidate_commit": "d58aeebd9877326002eac9be5edf8799728bd9db",
     "offline_configuration_failures_before_jobs": [
       37599727642,
@@ -433,6 +435,66 @@
     ],
     "offline_operation_scope": "Run unchanged frozen audits and figure helper; no training, data regeneration, reselection or scientific source changes.",
     "offline_freeze_utc": "2026-10-07T09:50:38+00:00",
-    "offline_plan_sha256": "7cc8b995ebc388089d1668820a60174fa228de4e5bba1285b14e3fb35d4b6eb3"
+    "offline_plan_sha256": "7cc8b995ebc388089d1668820a60174fa228de4e5bba1285b14e3fb35d4b6eb3",
+    "closed_at_utc": "2026-10-07T10:09:16+00:00",
+    "report": "09_results.md",
+    "report_sha256": "f1dec259b08fd4c0ec6593c1eae1f64bed5ab606d58a62d6678bfc3158a65ee2",
+    "offline_source_commit": "87e1f1c0b388190474e8190952c148c0501c8abf",
+    "offline_run_id": 37603398040,
+    "offline_job_id": 112732965039,
+    "offline_final_archive_commit": "2b8203f15ec5f6fe190876c80bf29232034603ce",
+    "offline_runner_released": true,
+    "archive_audit": {
+      "checks": 1100,
+      "issues": 0,
+      "status": "verified"
+    },
+    "gate_audit": {
+      "checks": 690,
+      "issues": 0,
+      "status": "verified"
+    },
+    "scientific_audit": {
+      "issues": 0,
+      "status": "verified",
+      "full_report_sha256": "2ffcd15900dd583f796f158bac6de9dee1761ba74cf7f4d9ae9ca700d217316e"
+    },
+    "report_arithmetic_review": {
+      "checks": 462,
+      "issues": 0
+    },
+    "report_document_review": {
+      "checks": 393,
+      "issues": 0
+    },
+    "figure_visual_review": {
+      "status": "reviewed",
+      "issues": 0
+    },
+    "final_data": {
+      "bags": 256,
+      "nominal_rows_per_checkpoint": 12288,
+      "unique_canvases_per_checkpoint": 10240,
+      "duplicate_input_comparisons_per_checkpoint": 2048
+    },
+    "primary_mean_binding_neuropixel": 0.0962890625,
+    "primary_mean_binding_reference": 0.4935546875,
+    "mean_paired_difference": -0.397265625,
+    "paired_t95": [
+      -0.4125410251515038,
+      -0.3819902248484962
+    ],
+    "primary_training_realizations": 5,
+    "competence_screen_met": false,
+    "verdict": "NeuroPixel failed the prespecified operational competence screen and was below the Transformer on all five paired base binding contrasts under this fixed recipe. The Transformer also lacked reliable agent/patient discrimination. Small-fixture memorization does not resolve optimization, representation or generalization causes. No broad architecture superiority or external replication is established.",
+    "limitations": [
+      "Queries, conditions and duplicate inputs are correlated within 256 bags.",
+      "Paired t uncertainty concerns five training realizations, conditional on fixed data and selected rates.",
+      "Bag bootstrap conditions on fixed checkpoints; zero all-eight intervals do not prove zero population success.",
+      "Swapped all-eight bundles contain query-conditioned cases from two transformed fact grids.",
+      "TRAIN-bag probe uses fresh views and is not exact-minibatch memorization.",
+      "Local executor interruption and four zero-job workflow configuration failures are preserved; only one offline audit execution ran.",
+      "No model retraining, final-data regeneration or historical H1 replacement occurred in the offline continuation."
+    ]
   }
 }

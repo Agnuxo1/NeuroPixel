@@ -1,0 +1,1751 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "status": "verified",
+  "source_report_sha256": "f1dec259b08fd4c0ec6593c1eae1f64bed5ab606d58a62d6678bfc3158a65ee2",
+  "checks_count": 393,
+  "issues": [],
+  "checks": [
+    {
+      "name": "memory/neuropixel/seed",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/lr",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/consecutive_steps",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/updates",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/correct",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/n",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/ce",
+      "passed": true
+    },
+    {
+      "name": "memory/neuropixel/wall",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/seed",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/lr",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/consecutive_steps",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/updates",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/correct",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/n",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/ce",
+      "passed": true
+    },
+    {
+      "name": "memory/relative_transformer/wall",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/role0",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/role1",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/role2",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/role3",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p001/selected",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/role0",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/role1",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/role2",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/role3",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_neuropixel_lr0p003/selected",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/role0",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/role1",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/role2",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/role3",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p001/selected",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/role0",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/role1",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/role2",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/role3",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-dev/pilot_relative_transformer_lr0p003/selected",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p001/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p001/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p001/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p001/wall",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p003/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p003/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p003/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_neuropixel_lr0p003/wall",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p001/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p001/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p001/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p001/wall",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p003/global",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p003/binding",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p003/ce",
+      "passed": true
+    },
+    {
+      "name": "pilot-probe/pilot_relative_transformer_lr0p003/wall",
+      "passed": true
+    },
+    {
+      "name": "primary/40/left",
+      "passed": true
+    },
+    {
+      "name": "primary/40/right",
+      "passed": true
+    },
+    {
+      "name": "primary/40/delta",
+      "passed": true
+    },
+    {
+      "name": "primary/41/left",
+      "passed": true
+    },
+    {
+      "name": "primary/41/right",
+      "passed": true
+    },
+    {
+      "name": "primary/41/delta",
+      "passed": true
+    },
+    {
+      "name": "primary/42/left",
+      "passed": true
+    },
+    {
+      "name": "primary/42/right",
+      "passed": true
+    },
+    {
+      "name": "primary/42/delta",
+      "passed": true
+    },
+    {
+      "name": "primary/43/left",
+      "passed": true
+    },
+    {
+      "name": "primary/43/right",
+      "passed": true
+    },
+    {
+      "name": "primary/43/delta",
+      "passed": true
+    },
+    {
+      "name": "primary/44/left",
+      "passed": true
+    },
+    {
+      "name": "primary/44/right",
+      "passed": true
+    },
+    {
+      "name": "primary/44/delta",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed40/ce",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed40/ce",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed41/ce",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed41/ce",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed42/ce",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed42/ce",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed43/ce",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed43/ce",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/neuropixel_seed44/ce",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/global_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/binding_pct",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/bag_ci0",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/bag_ci1",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/all_eight_num",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/all_eight_denom",
+      "passed": true
+    },
+    {
+      "name": "base/relative_transformer_seed44/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/global",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/base/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/global",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/base/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/global",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_queried_agent_patient/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/global",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_queried_agent_patient/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/global",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/swap_other_agent_patient/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/global",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/swap_other_agent_patient/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/global",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/relabel_events/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/global",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/relabel_events/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/global",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/query_switch/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/global",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/query_switch/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/global",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/neuropixel/layout_permutation/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/global",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/binding",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/sd",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/range0",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/range1",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/ce",
+      "passed": true
+    },
+    {
+      "name": "condition/relative_transformer/layout_permutation/all_eight_counts",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/neuropixel/base",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/relative_transformer/base",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/neuropixel/swap_queried_agent_patient",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/relative_transformer/swap_queried_agent_patient",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/neuropixel/swap_other_agent_patient",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/relative_transformer/swap_other_agent_patient",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/neuropixel/relabel_events",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/relative_transformer/relabel_events",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/neuropixel/query_switch",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/relative_transformer/query_switch",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/neuropixel/layout_permutation",
+      "passed": true
+    },
+    {
+      "name": "all-sixty/relative_transformer/layout_permutation",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/base/0",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/base/1",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/base/2",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/base/3",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/base/0",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/base/1",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/base/2",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/base/3",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_queried_agent_patient/0",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_queried_agent_patient/1",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_queried_agent_patient/2",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_queried_agent_patient/3",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_queried_agent_patient/0",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_queried_agent_patient/1",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_queried_agent_patient/2",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_queried_agent_patient/3",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_other_agent_patient/0",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_other_agent_patient/1",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_other_agent_patient/2",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/swap_other_agent_patient/3",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_other_agent_patient/0",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_other_agent_patient/1",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_other_agent_patient/2",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/swap_other_agent_patient/3",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/relabel_events/0",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/relabel_events/1",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/relabel_events/2",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/relabel_events/3",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/relabel_events/0",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/relabel_events/1",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/relabel_events/2",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/relabel_events/3",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/query_switch/0",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/query_switch/1",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/query_switch/2",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/query_switch/3",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/query_switch/0",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/query_switch/1",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/query_switch/2",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/query_switch/3",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/layout_permutation/0",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/layout_permutation/1",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/layout_permutation/2",
+      "passed": true
+    },
+    {
+      "name": "roles/neuropixel/layout_permutation/3",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/layout_permutation/0",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/layout_permutation/1",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/layout_permutation/2",
+      "passed": true
+    },
+    {
+      "name": "roles/relative_transformer/layout_permutation/3",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_queried_agent_patient/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_queried_agent_patient/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_queried_agent_patient/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_queried_agent_patient/changed_prediction_different",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_queried_agent_patient/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_queried_agent_patient/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_queried_agent_patient/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_queried_agent_patient/changed_prediction_different",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_other_agent_patient/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_other_agent_patient/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_other_agent_patient/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/swap_other_agent_patient/changed_prediction_different/null",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_other_agent_patient/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_other_agent_patient/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_other_agent_patient/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/swap_other_agent_patient/changed_prediction_different/null",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/relabel_events/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/relabel_events/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/relabel_events/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/relabel_events/changed_prediction_different/null",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/relabel_events/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/relabel_events/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/relabel_events/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/relabel_events/changed_prediction_different/null",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/query_switch/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/query_switch/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/query_switch/invariant_prediction_equal/null",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/query_switch/changed_prediction_different",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/query_switch/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/query_switch/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/query_switch/invariant_prediction_equal/null",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/query_switch/changed_prediction_different",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/layout_permutation/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/layout_permutation/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/layout_permutation/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/neuropixel/layout_permutation/changed_prediction_different/null",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/layout_permutation/all_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/layout_permutation/binding_joint",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/layout_permutation/invariant_prediction_equal",
+      "passed": true
+    },
+    {
+      "name": "cf/relative_transformer/layout_permutation/changed_prediction_different/null",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed40/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed40/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed40/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed40/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed40/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed40/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed40/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed40/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed40/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed40/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed41/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed41/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed41/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed41/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed41/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed41/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed41/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed41/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed41/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed41/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed42/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed42/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed42/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed42/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed42/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed42/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed42/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed42/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed42/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed42/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed43/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed43/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed43/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed43/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed43/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed43/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed43/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed43/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed43/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed43/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed44/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed44/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed44/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed44/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/neuropixel_seed44/final_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed44/dev",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed44/probe",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed44/flag",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed44/run_wall",
+      "passed": true
+    },
+    {
+      "name": "dev-final/relative_transformer_seed44/final_wall",
+      "passed": true
+    },
+    {
+      "name": "artifact/Data/metric audit",
+      "passed": true
+    },
+    {
+      "name": "artifact/Archive audit 03",
+      "passed": true
+    },
+    {
+      "name": "artifact/Stage-A evidence receipt",
+      "passed": true
+    },
+    {
+      "name": "artifact/Cost projection",
+      "passed": true
+    },
+    {
+      "name": "analysis-artifact/0/bytes",
+      "passed": true
+    },
+    {
+      "name": "analysis-artifact/0/sha",
+      "passed": true
+    },
+    {
+      "name": "analysis-artifact/1/bytes",
+      "passed": true
+    },
+    {
+      "name": "analysis-artifact/1/sha",
+      "passed": true
+    },
+    {
+      "name": "analysis-artifact/2/bytes",
+      "passed": true
+    },
+    {
+      "name": "analysis-artifact/2/sha",
+      "passed": true
+    }
+  ],
+  "method": "Root parses every numeric study table in the report, compares displayed values to frozen Stage-A receipts and verified Stage-B analysis/costs, and checks declared decimal rounding. Descriptive role/counterfactual means are recalculated from all five saved checkpoint values. No training, sampling, checkpoint inference or new scientific uncertainty estimate.",
+  "display_tolerances": {
+    "three_decimal_percent_absolute": 0.00050001,
+    "six_decimal_value_absolute": 5.0001e-7,
+    "exact_proportions_absolute": 1e-12,
+    "nine_decimal_seconds_absolute": 1e-9
+  },
+  "other_review": [
+    {
+      "label": "report_status",
+      "old": "This report is prepared for independent editorial review and archival closure of item 9; it does not initiate item 10.",
+      "replacement": "This report records the completed feasible investigation for item 9, with internal evidence and editorial reviews retained separately. Completion of the investigation is not completion of the claimed capability."
+    },
+    {
+      "label": "probe_scope",
+      "old": "A 64-training-bag probe supplies 512 queries.",
+      "replacement": "A 64-training-bag probe supplies 512 queries with independently generated assignments and layouts. These are fresh views of training bags, not a replay of the actual training minibatches and not an exact-minibatch memorization test."
+    },
+    {
+      "label": "pad_semantics",
+      "old": "PAD state is zeroed as specified.",
+      "replacement": "The effective PAD dictionary row and the initial symbolic PAD state are zero; recurrent state at PAD cells can become nonzero. Answer logits suppress PAD at -10,000."
+    },
+    {
+      "label": "worker_timestamp",
+      "old": "from 08:26:51.997378 to 09:17:53.632580 UTC.",
+      "replacement": "from 08:26:51.996346 to 09:17:53.632580 UTC."
+    },
+    {
+      "label": "gate_inventory_scope",
+      "old": "The intermediate archive manifests 99 files, with its manifest as a 100th Git file, and no final artifacts.",
+      "replacement": "The intermediate archive manifests 99 files, with its manifest as a 100th Git file. It includes the permitted `final_inventory.json` but no generated final data, predictions, consumed final-access record or gate receipt."
+    },
+    {
+      "label": "executor_chronology",
+      "old": "The local executor became unavailable after collection. Analysis moved to a separate CPU host using the unchanged frozen scientific analyzer and its declared analysis runtime.",
+      "replacement": "The local executor stopped responding during Stage B, after 09:02:53 UTC; the original cloud study continued to completion. The subsequent saved-array analysis moved to a separate CPU host using the unchanged frozen scientific analyzer and its declared analysis runtime."
+    },
+    {
+      "label": "completed_screen_language",
+      "old": "- A competence-screen failure would bound performance under this recipe, not establish universal inability. A pass would support this explicit task and its declared interventions, not a general theory of cognition or a verified internal mechanism.",
+      "replacement": "- The observed competence-screen failure bounds achieved performance under this recipe and does not establish universal inability. Even success on this explicit task and its declared interventions would not establish a general theory of cognition or a verified internal mechanism."
+    },
+    {
+      "label": "later_item_scope",
+      "old": "- The audits independently recount this project's saved evidence. They are not external laboratory replications. No item-5 H1 decision is reopened, and no later programme item follows from this draft.",
+      "replacement": "- The audits independently recount this project's saved evidence. They are not external laboratory replications. No item-5 H1 decision is reopened, and these results do not establish capabilities assigned to later programme items."
+    },
+    {
+      "label": "recent_primary_precedent",
+      "old": "\nThe following limits constrain the completed results:\n",
+      "replacement": "\n\nThe separately preserved [recent-binding addendum](09_recent_binding_addendum.md) discusses Wu, Geiger and Millière (2025), *How Do Transformers Learn Variable Binding in Symbolic Programs?* ([ICML primary proceedings](https://proceedings.mlr.press/v267/wu25j.html)). Their dereferencing task, larger Transformer and internal interventions differ from this experiment. That work is a relevant methodological precedent; it supplies no NeuroPixel result and prevents treating this small reference as a test of the entire Transformer family. No headline accuracy is transferred between studies.\n\nThe following limits constrain the completed results:\n"
+    },
+    {
+      "label": "cross_branch_result_links",
+      "replacements": 7,
+      "reason": "Operational outputs are archived only in pinned results commit O; relative links on the source branch would be broken."
+    }
+  ],
+  "links": {
+    "local": [
+      {
+        "target": "09_interpretation_guide.md",
+        "path": "docs/research/09_interpretation_guide.md",
+        "exists": true
+      },
+      {
+        "target": "09_protocol.md",
+        "path": "docs/research/09_protocol.md",
+        "exists": true
+      },
+      {
+        "target": "09_experiment_recipe.json",
+        "path": "docs/research/09_experiment_recipe.json",
+        "exists": true
+      },
+      {
+        "target": "09_stage_b_admission_review.md",
+        "path": "docs/research/09_stage_b_admission_review.md",
+        "exists": true
+      },
+      {
+        "target": "09_interpretation_guide.md",
+        "path": "docs/research/09_interpretation_guide.md",
+        "exists": true
+      },
+      {
+        "target": "09_preflight_results.md",
+        "path": "docs/research/09_preflight_results.md",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/preflight_audit_01.json",
+        "path": "results/research/09_validation/preflight_audit_01.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/preflight_archive_audit_03.json",
+        "path": "results/research/09_validation/preflight_archive_audit_03.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/stage_a_evidence_receipt.json",
+        "path": "results/research/09_validation/stage_a_evidence_receipt.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/stage_b_cost_projection.json",
+        "path": "results/research/09_validation/stage_b_cost_projection.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/stage_b_report_values.json",
+        "path": "results/research/09_validation/stage_b_report_values.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/stage_b_full_report_projection_review.json",
+        "path": "results/research/09_validation/stage_b_full_report_projection_review.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/stage_b_figure_visual_review.json",
+        "path": "results/research/09_validation/stage_b_figure_visual_review.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/offline_completion_receipt.json",
+        "path": "results/research/09_validation/offline_completion_receipt.json",
+        "exists": true
+      },
+      {
+        "target": "../../results/research/09_validation/stage_b_report_values.json",
+        "path": "results/research/09_validation/stage_b_report_values.json",
+        "exists": true
+      },
+      {
+        "target": "09_methodological_evidence.md",
+        "path": "docs/research/09_methodological_evidence.md",
+        "exists": true
+      },
+      {
+        "target": "09_recent_binding_addendum.md",
+        "path": "docs/research/09_recent_binding_addendum.md",
+        "exists": true
+      }
+    ],
+    "offline_links_pinned_to": "2b8203f15ec5f6fe190876c80bf29232034603ce",
+    "offline_replacements": 7
+  },
+  "prose_verification": {
+    "worker_start_matches_completed_worker": true,
+    "run_wall_seconds_total": 2945.1900032210006,
+    "reported_run_wall_seconds_total": 2945.1900032210006,
+    "run_wall_total_matches": true,
+    "final_evaluation_seconds_total": 84.36103189800042,
+    "reported_final_evaluation_seconds_total": 84.36103189800042,
+    "final_evaluation_total_matches": true,
+    "scientific_source_input_identities": 104,
+    "full_archive_checks": 1100,
+    "gate_archive_checks": 690,
+    "root_report_values_checks": 462,
+    "raw_artifact_count": 134,
+    "offline_artifact_count": 33,
+    "review_scope": "Root also read the complete report, source PAD implementation, actual worker timestamps, primary-literature addendum, exposure/probe semantics and cross-branch links."
+  },
+  "completed_at_utc": "2026-10-07T10:08:04+00:00",
+  "final_report_bytes": 48265,
+  "final_report_sha256": "f1dec259b08fd4c0ec6593c1eae1f64bed5ab606d58a62d6678bfc3158a65ee2"
+}
