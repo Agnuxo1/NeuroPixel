@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "item": 12,
+  "status": "static_review_completed",
+  "reviewed_at_utc": "2026-10-07T14:04:24+00:00",
+  "source_parent_commit": "bb9ac26a926a9ca2023145f0166e82a4f5e174de",
+  "execution_before_freeze": false,
+  "compiled_before_freeze": false,
+  "numerical_execution_before_freeze": false,
+  "scope": "Source contracts and scientific interpretation; not a runtime pass.",
+  "reviews": [
+    {
+      "reviewer": "architecture_audit",
+      "findings": "No concrete static blocker in native isolation producer and four contracts, independent isolation array auditor, matrix auditor and namespace-derived worker/input/workflow. RNG witness added before execution with preserved preimage.",
+      "blobs": [
+        "ca6ccb1a79faa6ddf0ebe1fa2fdfc48c9227ed25",
+        "7404397df7b04210b1a0b4f2257c66011b32de02",
+        "62abce9a6842540c4e8f4bb8e36bf7e5407eb826",
+        "919fbebbee845d6a5a7269fae71ca23c5fbc0910",
+        "f55537412ea9911f43ec053083d2c18a2be77519",
+        "e2607ada6b6d16e4cac260d4d59852bea8c00130",
+        "e7d3270139ee578d16165217546156e05480ea8a"
+      ]
+    },
+    {
+      "reviewer": "evidence_tests",
+      "findings": "No concrete blocker in matrix helper, four contracts, producer/raw metadata/auditor alignment or serial fresh-process orchestrator. Directly checked all four CLI/receipt contracts and existing ops helper signatures. CSV identity preserved; JSON numerical values independently recounted.",
+      "blobs": [
+        "f141b05b11ce7d4c30c00d13a67afa834e62b64d",
+        "68dfc1a6a94e7fb8884b06c22aa309233c60766f",
+        "79c9d2daa07d867dd0763548963f8f2be2d67079",
+        "919fbebbee845d6a5a7269fae71ca23c5fbc0910",
+        "bfe6f257c3d9edf0a390959e5589a404de063d30"
+      ]
+    },
+    {
+      "reviewer": "scientific_prior_art",
+      "findings": "Full protocol read: no necessary correction. Retrospective status, two-seed limits, BWT and signed maxima, missing FWT baseline, low acquisition, one-fixture eight copies, literal routing counterexample and same-runner independence correctly scoped.",
+      "blob": "1b406e03b745f5011b904f0573e0dfefdfd08578"
+    },
+    {
+      "reviewer": "root",
+      "findings": "Read implementation and auditors, validated helper signatures, original growth metadata and oracle values; independently rehashed fourteen candidate blobs on Git readback. No current numerical execution. All later items remain unopened."
+    }
+  ],
+  "readback": [
+    {
+      "path": "neuropixel/research/continual_metrics.py",
+      "blob": "f141b05b11ce7d4c30c00d13a67afa834e62b64d",
+      "bytes": 5932,
+      "sha256": "17fa886a8261bde59b7ee1b1bcdedf8e73532f87b9ec4cf704e01d2352e57a72",
+      "readback_matches": true
+    },
+    {
+      "path": "tests/test_continual_metrics.py",
+      "blob": "68dfc1a6a94e7fb8884b06c22aa309233c60766f",
+      "bytes": 2827,
+      "sha256": "2f486c58606487f7df2a9d7fe2f6fcf921195b54b83a94cff0e4e850f0457a3e",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_continual_matrix.py",
+      "blob": "79c9d2daa07d867dd0763548963f8f2be2d67079",
+      "bytes": 13427,
+      "sha256": "e0a50440d87a7d73d1563e9826e0f505e93e307077eab67fff3d9f8333a53b7c",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_continual_matrix_audit.py",
+      "blob": "919fbebbee845d6a5a7269fae71ca23c5fbc0910",
+      "bytes": 19495,
+      "sha256": "a30d2f13e8e02e93bf39c742f0972994094d88545d21ab4035bbdc537108db6a",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_continual_isolation.py",
+      "blob": "ca6ccb1a79faa6ddf0ebe1fa2fdfc48c9227ed25",
+      "bytes": 13289,
+      "sha256": "3b6c30b954fea42a469cd6358723dc323f0bfbbddea4f0586da058037b04766a",
+      "readback_matches": true
+    },
+    {
+      "path": "tests/test_continual_isolation.py",
+      "blob": "7404397df7b04210b1a0b4f2257c66011b32de02",
+      "bytes": 4731,
+      "sha256": "0064f7bc12debb572c501447646e533ff084a7848f72186357e690e3e2524ce1",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_continual_isolation_audit.py",
+      "blob": "62abce9a6842540c4e8f4bb8e36bf7e5407eb826",
+      "bytes": 13177,
+      "sha256": "5523b9c58743c9364f455fb0b345b86690774f337cd43ed5bb8fa91a27ab5843",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_item12_worker.py",
+      "blob": "f55537412ea9911f43ec053083d2c18a2be77519",
+      "bytes": 21282,
+      "sha256": "36ddb9972eaabbde034aa6ffcfd83f83487e2c59f36a8d813e92d8d23e781f08",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_item12_inputs.py",
+      "blob": "e2607ada6b6d16e4cac260d4d59852bea8c00130",
+      "bytes": 4774,
+      "sha256": "b6aa6f6c1ae26078fda8997652794b60d97dc7866c539e6f6fa7661386562431",
+      "readback_matches": true
+    },
+    {
+      "path": ".github/workflows/research-item12-probe.yml",
+      "blob": "e7d3270139ee578d16165217546156e05480ea8a",
+      "bytes": 3160,
+      "sha256": "9339df6463d627b615a3147f19b35b2970a64ff85a3d932c6e052f553da86f5b",
+      "readback_matches": true
+    },
+    {
+      "path": "scripts/research_continual_probe.py",
+      "blob": "bfe6f257c3d9edf0a390959e5589a404de063d30",
+      "bytes": 11219,
+      "sha256": "896ae3b1afcac004d2116f714f2a0230393abe2b702becc047b243c1e584fe88",
+      "readback_matches": true
+    },
+    {
+      "path": "docs/research/12_probe_protocol.md",
+      "blob": "1b406e03b745f5011b904f0573e0dfefdfd08578",
+      "bytes": 14883,
+      "sha256": "7a7c5e5c0301296620df4bb5c437a8b824be7bdc9f3146ae93e1ed6c255ef2c6",
+      "readback_matches": true
+    },
+    {
+      "path": "results/research/12_validation/isolation_fixture_correction.json",
+      "blob": "55479b398b3b5a60b55774f012257839cde7e915",
+      "bytes": 996,
+      "sha256": "19bc8c99d017dfb9c2576caf0896177fc73c16004cb75cb6b67f3f39581d5f2b",
+      "readback_matches": true
+    },
+    {
+      "path": "results/research/12_validation/isolation_rng_witness_correction.json",
+      "blob": "acf7e808a54e6773380a068abe8d0b1b8d74be3e",
+      "bytes": 867,
+      "sha256": "f681aff31d09cfa480eac661da73467cc6b8aa154379e84b45042a14b0e9770e",
+      "readback_matches": true
+    }
+  ],
+  "prior_input_files": 15,
+  "contract_parent_methods": 8,
+  "corrections": [
+    "isolation_fixture_correction.json",
+    "isolation_rng_witness_correction.json"
+  ],
+  "preserved_preimage": {
+    "path": "results/research/12_validation/isolation_before_rng_witness.py",
+    "sha256": "8ee2a68282b9053957b2c80b4bae7acc197d9b07a4c11fef0e36c3dbe5e1d85c",
+    "blob": "5476c7b1f2c76c105a559be2ee8946a724a24a76"
+  },
+  "issues": []
+}

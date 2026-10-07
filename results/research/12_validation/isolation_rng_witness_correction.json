@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "item": 12,
+  "status": "pre_execution_evidence_extension",
+  "path": "scripts/research_continual_isolation.py",
+  "preimage": {
+    "blob": "5476c7b1f2c76c105a559be2ee8946a724a24a76",
+    "bytes": 12898,
+    "sha256": "8ee2a68282b9053957b2c80b4bae7acc197d9b07a4c11fef0e36c3dbe5e1d85c"
+  },
+  "replacement": {
+    "blob": "ca6ccb1a79faa6ddf0ebe1fa2fdfc48c9227ed25",
+    "bytes": 13289,
+    "sha256": "3b6c30b954fea42a469cd6358723dc323f0bfbbddea4f0586da058037b04766a"
+  },
+  "change": "Save rng.npz initial/final CPU Torch RNG uint8 arrays and report.rng path/bytes/sha256, making the pre-existing unchanged-RNG boolean independently recountable.",
+  "unchanged": "Fixture, model, optimizer, eight stages, three updates per expert, alias control, test inventory and interpretation are unchanged.",
+  "executed": false,
+  "compiled": false
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "item": 12,
+  "source_worker": "scripts/research_item11_worker.py",
+  "source_worker_sha256": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+  "new_worker_sha256": "36ddb9972eaabbde034aa6ffcfd83f83487e2c59f36a8d813e92d8d23e781f08",
+  "edits": [
+    "Item namespace 11→12 for plans, archives, environment deadlines, events and item IDs.",
+    "Docstring narrows admitted item12 scope; inherited train/final code remains unused."
+  ],
+  "input_helper_scope": "Only exact archived item6 root results/research/06_cloud_runs/37566497890-1 admitted; selected file identities remain frozen by plan",
+  "remaining_old_namespace_lines": [],
+  "no_execution_before_freeze": true,
+  "source_worker_blob": "0e0f65bffaf6bc927b9a674a8f86587413398e2c",
+  "new_worker_blob": "f55537412ea9911f43ec053083d2c18a2be77519",
+  "source_input_helper_sha256": "a947dbfb7d6ea0a677a83b2cbd4dc8b1b58cf1e803d8b1a0e8cca2857d021e6b",
+  "new_input_helper_sha256": "b6aa6f6c1ae26078fda8997652794b60d97dc7866c539e6f6fa7661386562431",
+  "workflow_sha256": "9339df6463d627b615a3147f19b35b2970a64ff85a3d932c6e052f553da86f5b",
+  "reviewed_by": "architecture_audit",
+  "review_scope": "Static comparison, source contracts and bounded probe-only admission; not execution"
+}

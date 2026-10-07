@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "item": 12,
+  "status": "pre_execution_fixture_correction",
+  "initial_proposal": {
+    "cue_target_ids": [
+      1,
+      12
+    ],
+    "query_token": 31
+  },
+  "corrected": {
+    "cue_target_ids": [
+      5,
+      16
+    ],
+    "query_token": 1
+  },
+  "reason": "The initial IDs were in range but mixed existing semantic categories. Current RoleTask vocabulary uses roles1..4 and nouns5..16; the correction uses the twelve existing nouns and a role query token.",
+  "unchanged": [
+    "V35,3x3,cue(0,0),query(2,1),readout(2,2),steps4",
+    "Eight native deep-copied experts,three SGD updates per expert,eval mode with gradients enabled",
+    "Separate shared-reference control; no task competence or accuracy gate"
+  ],
+  "executed_before_correction": false,
+  "source_modified": false,
+  "new_probe": {
+    "blob": "5476c7b1f2c76c105a559be2ee8946a724a24a76",
+    "bytes": 12898,
+    "sha256": "8ee2a68282b9053957b2c80b4bae7acc197d9b07a4c11fef0e36c3dbe5e1d85c"
+  }
+}
