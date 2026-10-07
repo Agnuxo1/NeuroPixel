@@ -1,7 +1,7 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T08:27:01.741591+00:00",
+  "created_at_utc": "2026-10-07T08:32:03.503144+00:00",
   "files": {
     "contract_tests.log": {
       "bytes": 49,
@@ -35,6 +35,62 @@
       "bytes": 10544,
       "sha256": "b3269673c0fd653e6bceb310bb7c2a853edb5b3e9e2a19219b01c431bd6b0dbc"
     },
+    "study/context.json": {
+      "bytes": 1319,
+      "sha256": "ea129b2dd668a236d4df66081f1481c8ddd43bb65630936c2c42a16664622c12"
+    },
+    "study/development_data/fixture_exposure.json": {
+      "bytes": 21807,
+      "sha256": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699"
+    },
+    "study/development_data/manifest.json": {
+      "bytes": 20117,
+      "sha256": "7128baef41f6df81e3bfafff15fcf39d6406c99d78cfdf248babcae461b017f0"
+    },
+    "study/development_data/memorization.npz": {
+      "bytes": 6835,
+      "sha256": "6da493aec5c5d5da1bd80d1cab59b3c51800ff4ecf7087e7116df170e7e3cb63"
+    },
+    "study/development_data/memorization_scenarios.json.gz": {
+      "bytes": 761,
+      "sha256": "ccb76c0db01cf22d6dba76bbb53b95231021d995380d48488f59ae7ea42769e8"
+    },
+    "study/development_data/probe.npz": {
+      "bytes": 64707,
+      "sha256": "38d201b273ebb723197e6c65bb901483aa9a35a5418cc814dbfe02105ad0e753"
+    },
+    "study/development_data/probe_scenarios.json.gz": {
+      "bytes": 6765,
+      "sha256": "44db31b01eb512b011fe785da0a2ae2b9096745d6c6d74f1b8e48a45742f0f85"
+    },
+    "study/development_data/train_scenarios.json.gz": {
+      "bytes": 196925,
+      "sha256": "134aff63a31e1e7cc608ff490d825cd1e468c94c9d1b2d14118075155e070b11"
+    },
+    "study/development_data/validation.npz": {
+      "bytes": 125965,
+      "sha256": "9107f7b2fe0f818e37b3850b2811788028da0c4f7d9e4ff9b0372ee7e610416d"
+    },
+    "study/development_data/validation_scenarios.json.gz": {
+      "bytes": 12882,
+      "sha256": "697209a614d329008f93fbc9f25d227253313b0093c1dba1639577e37ef250fe"
+    },
+    "study/runs/neuropixel_seed40/configuration.json": {
+      "bytes": 568,
+      "sha256": "ffd63543364ed69d1deaebdd42cae4292062ad0611bf6c1f2e4fe01048825603"
+    },
+    "study/runs/neuropixel_seed40/started.json": {
+      "bytes": 2070,
+      "sha256": "4d24a828987e23ecec8c6efc8dd7fb1f14695ba1b251fef52f44c2279c4f2d3f"
+    },
+    "study/runs/neuropixel_seed40/training.jsonl": {
+      "bytes": 1076807,
+      "sha256": "3415c07068fe09518bd6d0992b84f78c7559bde1cc1abece33d2c7f0b3054a95"
+    },
+    "study/train_started.json": {
+      "bytes": 882,
+      "sha256": "9fe28a6890252dcaa2599f7207200033c4e9e39639fbfbfb5e9115d1708ac75f"
+    },
     "test_collection.json": {
       "bytes": 4296,
       "sha256": "264d96d383b0d76412c4b61414e35123819bae5be86d122aa400a1e72e71d724"
@@ -43,9 +99,17 @@
       "bytes": 5469,
       "sha256": "7dad38a9e544b9daa974c227dd730874321cc64bcc8b488c48586c74aff19ba9"
     },
+    "train.log": {
+      "bytes": 8812,
+      "sha256": "5984c491640a68b4b2be64d93dc78b4c26eccb77725b5878f66ab837a7f2493a"
+    },
+    "train_resource_monitor.json": {
+      "bytes": 32644,
+      "sha256": "fed045d60c30fd8c7fca9db5a8efb173553c5746b4d273f99cc8c611481f5b73"
+    },
     "worker_status.json": {
-      "bytes": 2094,
-      "sha256": "ab286216943bcebdc23b43bedd9f3990c18feff37b256a5c6797ffe8407f9a99"
+      "bytes": 2844,
+      "sha256": "6d12d79344b5ce40977fd18908bb06479adb5734e0ebdda0c2320a58fbb2a1c7"
     }
   },
   "final": false,

@@ -56,6 +56,28 @@
       "started_at_utc": "2026-10-07T08:26:57.715764+00:00",
       "status": "completed",
       "wall_seconds_including_shutdown": 4.003126691999995
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T08:27:03.380370+00:00",
+        "available_ram_gib": 14.445960998535156,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item9_worker.py",
+        "--phase",
+        "study",
+        "--child",
+        "train",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_cloud_runs/37593731891-1-study"
+      ],
+      "execution_seconds_available_at_launch": 13608.615560363,
+      "name": "train",
+      "stage_limit_seconds": 13800,
+      "started_at_utc": "2026-10-07T08:27:03.380586+00:00",
+      "status": "running"
     }
   ],
   "started_at_utc": "2026-10-07T08:26:51.996346+00:00",
