@@ -8,7 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
-  "last_heartbeat_at_utc": "2026-10-07T04:54:45.461037+00:00",
+  "last_heartbeat_at_utc": "2026-10-07T04:57:48.147609+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -578,6 +578,24 @@
       "available_ram_gib": 14.299919128417969,
       "cpu_count_logical": 4,
       "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T04:55:48.133446+00:00",
+      "available_ram_gib": 14.293464660644531,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T04:56:48.140465+00:00",
+      "available_ram_gib": 14.294471740722656,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T04:57:48.147609+00:00",
+      "available_ram_gib": 14.313190460205078,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
     }
   ],
   "run_key": "37566497890-1",
@@ -648,10 +666,13 @@
         "--output",
         "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core"
       ],
+      "completed_at_utc": "2026-10-07T04:58:23.152950+00:00",
       "log": "logs/core.log",
+      "log_sha256": "e5f7355f5228cd13058976c6e3646455c60748fa6d73ca57830eb46aea2496b7",
       "name": "core",
+      "returncode": 0,
       "started_at_utc": "2026-10-07T03:24:10.050539+00:00",
-      "status": "running"
+      "status": "completed"
     }
   ]
 }
