@@ -1,7 +1,7 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T14:56:14.205138+00:00",
+  "created_at_utc": "2026-10-07T14:56:22.766528+00:00",
   "files": {
     "contract_tests.log": {
       "bytes": 6169,
@@ -23,6 +23,54 @@
       "bytes": 7948,
       "sha256": "60278a7580dabaaa1fb338a0276819d0c653a9052ed33c51d5793a14edd627da"
     },
+    "input_recovery/distractor.json": {
+      "bytes": 2282,
+      "sha256": "cdfe1a635f622103abea15923eb49617e52d299b7d6ef55032541f613cdc23a1"
+    },
+    "input_recovery/distractor_started.json": {
+      "bytes": 2080,
+      "sha256": "b131bd3a96105406d82cd7a7768f2414782d8830152b40cfc9be8871629445f8"
+    },
+    "native/report.json": {
+      "bytes": 1256974,
+      "sha256": "b4b429df98ee123cbd65f6ccea2e7d273ade856a5f1f1248014506bb6530af1f"
+    },
+    "probe.log": {
+      "bytes": 121,
+      "sha256": "052f4ee21b83a68a1ec22546716a06200cb5cdd18dc105b900aa2e2156e10d89"
+    },
+    "probe_environment.json": {
+      "bytes": 565,
+      "sha256": "c9df7d46410fff72f83a254892141b83f47bc003c184da63e1a3800547549bf0"
+    },
+    "probe_resource_monitor.json": {
+      "bytes": 1117,
+      "sha256": "c219067b87b3245eaefb2384f5b281e862c37c805526e4b0058c3bce4df63add"
+    },
+    "probe_status.json": {
+      "bytes": 821,
+      "sha256": "89fe13ba2602592e4b766ad5fb5114dd217c32b1b77800136b267f59a88d2360"
+    },
+    "secondary/artifact_manifest.json": {
+      "bytes": 470,
+      "sha256": "ebe98bb2dae39ccb524ccf4ad5441639910b9c198df85b47faa60b1ead2f9f35"
+    },
+    "secondary/paired_outcomes.npz": {
+      "bytes": 120795,
+      "sha256": "8591bda792c9c21aa1e05abcb35ce76467397082becf3ad8479b6bdba5090f18"
+    },
+    "secondary/report.json": {
+      "bytes": 111136,
+      "sha256": "cc436eb78825b099a0d13304717345355bd454af2dd65d359a924e928ff438dc"
+    },
+    "secondary/transitions.csv": {
+      "bytes": 12277,
+      "sha256": "114b4571cdeb17aef5ca4fb6f467d29578224579265faa834450c8deebb20fce"
+    },
+    "secondary_audit/audit.json": {
+      "bytes": 119253,
+      "sha256": "4706d6521ace33b0e053f88eec48e0d8987bfe73d96d551ef8f94dd268d59677"
+    },
     "source.zip": {
       "bytes": 9296916,
       "sha256": "897b15a4ef902c7cbfdf561dc1c6f802e4a26bfba94e51e5d284375bcd937275"
@@ -43,9 +91,25 @@
       "bytes": 2223,
       "sha256": "8c92e90877704f070d28b0b5571a798b03322b18ee873d91d6b7ea31aba8c480"
     },
+    "vocab_probe_status.json": {
+      "bytes": 12178,
+      "sha256": "9d2d73d93f398b63d76b3fe9cc472388af92523881540874fc8ce328c8889edd"
+    },
+    "vocab_subprocesses/native.log": {
+      "bytes": 36,
+      "sha256": "e7c5436ee0e9dfe8db5fb5a6c51e838788766e7a1f743a7e8e37f2f4c67e4693"
+    },
+    "vocab_subprocesses/secondary.log": {
+      "bytes": 36,
+      "sha256": "f0b64cc945683159b52d1e8b2641c8579fa908fcab12d3c954d7ab0a4af8aeef"
+    },
+    "vocab_subprocesses/secondary_audit.log": {
+      "bytes": 53,
+      "sha256": "a86992af72b6f4503093086aab9390126cb46582d5cbdb40412fec0f42f00049"
+    },
     "worker_status.json": {
-      "bytes": 1777,
-      "sha256": "f1067d22eb5b033ff98ca97c8712532d769d5739e0638c3ec676ae26520fd5f2"
+      "bytes": 2699,
+      "sha256": "dcf277918a725bf44ddddde791897e7fd2cd00b0d9b82cbee448608fd1863403"
     }
   },
   "final": false,
