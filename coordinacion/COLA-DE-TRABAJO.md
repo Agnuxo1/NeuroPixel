@@ -117,3 +117,8 @@ Keep all operational failures, original frozen sources, data, checkpoint records
 SCI-010 is ACTIVE after closure e6a3a5dffa602cd9731076390e9b20b6c738958e and independent publication read-back of the complete item-9 report. Root retains sequential ownership under the user's standing scientific-work authorization. Review externally authored benchmark sources and the model's actual input/output contracts before defining any transfer score. Distinguish same-generator perturbation, a separately implemented renderer, an external synthetic benchmark and real-world generalization. A semantic adapter must not copy the target into the input or use gold labels to construct the answer-bearing representation.
 
 The weak item-9 competence and unresolved optimization/representation causes remain explicit. Do useful source, analytic and controlled-fixture work, and admit a bounded scientific evaluation only after its exact source, data identity, selection and estimand are reviewable and frozen. Do not add labels or change task semantics to make a claimed external benchmark fit. Physical or genuinely external validation may remain a dependency. H1 stays closed; items11–30 remain pending until this feasible investigation is completed.
+
+
+## 2026-10-07T10:44:50+00:00 — SCI-010 next concrete action
+
+Run24 frozen data contracts, then the bounded TRAIN-only provenance, duplicate and shortcut audit if all pass. Review raw bytes, actual geometry/vocabulary, grouping, controls and failures before admitting neural preflight. No item11 or later work is opened. A neural recipe is being prepared but is not part of this acquisition plan.

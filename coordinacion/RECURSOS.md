@@ -145,3 +145,8 @@ Release all owned SCI-009 local and standard public CPU reservations after repor
 ## 2026-10-07T10:11:14+00:00 — SCI-010 source and bounded-analysis reservation
 
 Reserve one-thread source/provenance work and brief deterministic checks for90 minutes before renewal, aggregate active CPU at most4 and available RAM at least8 GiB for numerical execution. The local shell executor remains unavailable; do not assume it has recovered or launch repeated blind probes. No scientific job is active. A separately frozen bounded standard public CPU continuation can be reserved when its concrete protocol is reviewed. No GPU, paid service, new billing/access changes, outreach or changes to historical Windows/unrelated processes. Public benchmark metadata may be researched; any actual dataset and scoring plan must be identified and preserved prospectively.
+
+
+## 2026-10-07T10:44:50+00:00 — SCI-010 bounded acquisition reservation
+
+Reserve one standard public ubuntu-24.04 CPU job, Python3.12.14, psutil7.2.2 and pytest9.1.1. Numerical thread environment1, Git1, aggregate active CPU at most4, available RAM at least8 GiB. Worker1200 seconds TOTAL including180 final-archive reserve; workflow25 minutes; tests300 and acquisition720 within the shared deadline. No GPU, paid service, billing/access change, outreach or unrelated-process control. Local shell remains unavailable. No neural training or TEST payload parsing/scoring belongs to this reservation.

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T10:11:14+00:00",
+  "recorded_at": "2026-10-07T10:44:50+00:00",
   "active_item": 10,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -500,12 +500,16 @@
     "closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e"
   },
   "item10": {
-    "stage": "External-task/source and representation feasibility review; no new scientific scoring begun",
+    "stage": "Frozen TRAIN-only acquisition; cloud execution pending",
     "opened_after_item9_closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e",
     "scope": "Investigate generalization beyond the project's task generator, distinguish externally authored benchmarks from same-generator perturbations, establish input/output and label validity, and execute feasible bounded checks under a prospectively fixed protocol. Retain the weak item9 competence result and all external-validation limits.",
     "scientific_scoring_started": false,
     "external_dataset_consumed": false,
     "model_training_started": false,
-    "historical_H1": "closed; not supported; unchanged"
+    "historical_H1": "closed; not supported; unchanged",
+    "acquisition_freeze_utc": "2026-10-07T10:44:50+00:00",
+    "acquisition_plan_sha256": "87260de70352c99906e51745cd284c4ad2a8ff069013b78e1bd062e0b6a602c8",
+    "acquisition_contract_methods": 24,
+    "acquisition_implementation_files": 12
   }
 }
