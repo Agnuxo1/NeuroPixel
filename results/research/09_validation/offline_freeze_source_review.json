@@ -1,0 +1,748 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "recorded_at_utc": "2026-10-07T09:45:38+00:00",
+  "candidate_commit": "d58aeebd9877326002eac9be5edf8799728bd9db",
+  "scientific_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "method": "Root compares complete non-truncated Git trees by path, blob, type and mode; standard JS SHA256 checks known text identities. This is source identity and static configuration review, not audit execution.",
+  "scientific_bindings": [
+    {
+      "path": ".github/workflows/research-item9-preflight.yml",
+      "sha256": "af5d60a9c6bf5385a88d71620ab6507c18c336040e46a3d3a6b9d4e9bca482de",
+      "scientific_git_blob": "7640d843072ae218ca8e177517f26b0d88f69e52",
+      "candidate_git_blob": "7640d843072ae218ca8e177517f26b0d88f69e52",
+      "unchanged": true
+    },
+    {
+      "path": ".github/workflows/research-item9-study.yml",
+      "sha256": "0215d2256f97b55abbe4c4d0bd90614db91a76d31e8677f68db147f2fd6cd8ac",
+      "scientific_git_blob": "6f835e36de190ddba305890b0a2d2d265c62312e",
+      "candidate_git_blob": "6f835e36de190ddba305890b0a2d2d265c62312e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_analysis_implementation.md",
+      "sha256": "c601a08f03bf3a6208b67bf2676d896f93b8bc365c2a38717dece8649e73f462",
+      "scientific_git_blob": "234d050a4b17e08a32295f005012bae8a0317aa8",
+      "candidate_git_blob": "234d050a4b17e08a32295f005012bae8a0317aa8",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_analytical_addendum.md",
+      "sha256": "8e30a299c9f850ca5be59c247094f7b79b02c02ac7e1de00100e5d786854c36e",
+      "scientific_git_blob": "84ff72c8e27b29f992b07732beee2b4c390aea8f",
+      "candidate_git_blob": "84ff72c8e27b29f992b07732beee2b4c390aea8f",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_archive_verifier_review.md",
+      "sha256": "9964d3ffae2e5dafe26d2c7ef5009c58bec4731e5722107a921eddeef8b7cd01",
+      "scientific_git_blob": "59e75b07db04e19934884767829e4f7276ff2f83",
+      "candidate_git_blob": "59e75b07db04e19934884767829e4f7276ff2f83",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_data_contract.md",
+      "sha256": "f9f1e1dbb03879c44eaff28c646e60c9db7e76c5948bd01dad57a84bd2535fd0",
+      "scientific_git_blob": "57e3bac769e1b92bcb2f845057ce3b16e3eff1a7",
+      "candidate_git_blob": "57e3bac769e1b92bcb2f845057ce3b16e3eff1a7",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_execution_design.md",
+      "sha256": "cb95db528aa352da0d99392900eb1df952c014047c383fa8f77cb94367701c11",
+      "scientific_git_blob": "23c408c8454cd563ce135f12ea47acbaa412a573",
+      "candidate_git_blob": "23c408c8454cd563ce135f12ea47acbaa412a573",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_experiment_recipe.json",
+      "sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+      "scientific_git_blob": "1cf525292d157af8272a78f27042de6a14d9e8b3",
+      "candidate_git_blob": "1cf525292d157af8272a78f27042de6a14d9e8b3",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_methodological_evidence.md",
+      "sha256": "1e3d8e97549512401e10089863a13bd4fb5c0c289ce56f0141ecf3844c92f86f",
+      "scientific_git_blob": "c80f0d31c5f85724aa6cf119e72a6cae85b9d672",
+      "candidate_git_blob": "c80f0d31c5f85724aa6cf119e72a6cae85b9d672",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_preflight_audit_design.md",
+      "sha256": "afea1308d84e967c6c2f4169b13460a0a0116449d1ddce2d0080bfaa231bae73",
+      "scientific_git_blob": "f69942d866cc66a693844cc99e6d299eb90d6f5e",
+      "candidate_git_blob": "f69942d866cc66a693844cc99e6d299eb90d6f5e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_preflight_plan.json",
+      "sha256": "7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04",
+      "scientific_git_blob": "adfb8b34dd3cf69a5bab1126025b736ee33a6344",
+      "candidate_git_blob": "adfb8b34dd3cf69a5bab1126025b736ee33a6344",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_preflight_results.md",
+      "sha256": "d8cd7c386911b5305a38a24448e00f6f6e476be16ad470021d316ca17fe99392",
+      "scientific_git_blob": "d37f8953d2e8039b278d7d19b686ef16f9c90dcd",
+      "candidate_git_blob": "d37f8953d2e8039b278d7d19b686ef16f9c90dcd",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_protocol.md",
+      "sha256": "d47689aab66101cc479fdee5f60dae59ec1941ea489a5e32b04659a8b70577d8",
+      "scientific_git_blob": "4ff9eb7558005b47c140a085c434c6a85ea09182",
+      "candidate_git_blob": "4ff9eb7558005b47c140a085c434c6a85ea09182",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_representation_audit.md",
+      "sha256": "40fe39097a87d1e4ff61bf3cbbec36a1ba31dd9112110e6ff25600db2d3b5ed5",
+      "scientific_git_blob": "86c71039c4d261c0f5c34aeca28b9123e96a2398",
+      "candidate_git_blob": "86c71039c4d261c0f5c34aeca28b9123e96a2398",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_stage_b_admission_review.md",
+      "sha256": "c6608dba1f529f77dddf5d60b767f910a3bdcec3429530d9673b0f760a87c34c",
+      "scientific_git_blob": "6a98c82464759f6d8db916c8d3e258bb51c12723",
+      "candidate_git_blob": "6a98c82464759f6d8db916c8d3e258bb51c12723",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_trainer_review.md",
+      "sha256": "4dfa56dd7a531870e97c12c99e3414657eaf14fef8e95e62a0b24475e30464b2",
+      "scientific_git_blob": "f5d4dac3d8348abf628809d54cdcc30654ab7705",
+      "candidate_git_blob": "f5d4dac3d8348abf628809d54cdcc30654ab7705",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_worker_audit.md",
+      "sha256": "fe723f0aba0ea6c4a11eeebbb2ce517e285c8a1a75db9f3172879f0d364458f5",
+      "scientific_git_blob": "0f262ccc9d56f14ad6b9f1515ae7a37659df0bb2",
+      "candidate_git_blob": "0f262ccc9d56f14ad6b9f1515ae7a37659df0bb2",
+      "unchanged": true
+    },
+    {
+      "path": "docs/research/09_worker_review.md",
+      "sha256": "b21c4991c70957f330abbd380d6cba50db83098b37e12bef373a863fb5526a9e",
+      "scientific_git_blob": "6fd976c999d0f7134eb9f0dc998c760cfe5561aa",
+      "candidate_git_blob": "6fd976c999d0f7134eb9f0dc998c760cfe5561aa",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scientific_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "candidate_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/cartilla.py",
+      "sha256": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+      "scientific_git_blob": "a8a595c168b1e32a9447df27b8fcaa7f178118f5",
+      "candidate_git_blob": "a8a595c168b1e32a9447df27b8fcaa7f178118f5",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/codec.py",
+      "sha256": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+      "scientific_git_blob": "04cfa5fbd7d6618d3829f76718309975e6263e32",
+      "candidate_git_blob": "04cfa5fbd7d6618d3829f76718309975e6263e32",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/hrr.py",
+      "sha256": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+      "scientific_git_blob": "4747dad764529995685f5d932c00a2a642f6f97e",
+      "candidate_git_blob": "4747dad764529995685f5d932c00a2a642f6f97e",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/model.py",
+      "sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "scientific_git_blob": "b66e2f575c6ae937d8cad807b4dd0e48531850f7",
+      "candidate_git_blob": "b66e2f575c6ae937d8cad807b4dd0e48531850f7",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/phase3.py",
+      "sha256": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "scientific_git_blob": "b826869ad1816f43a182fbcdbcbc47ea2a123dd5",
+      "candidate_git_blob": "b826869ad1816f43a182fbcdbcbc47ea2a123dd5",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/ablations.py",
+      "sha256": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+      "scientific_git_blob": "5c718a868262a9e4395bad6aa21784a7fd46f0ed",
+      "candidate_git_blob": "5c718a868262a9e4395bad6aa21784a7fd46f0ed",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/classification_contracts.py",
+      "sha256": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+      "scientific_git_blob": "fb7b2b53c51c2219c11aad8af73c1e5bb52e3241",
+      "candidate_git_blob": "fb7b2b53c51c2219c11aad8af73c1e5bb52e3241",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/complex_binding_data.py",
+      "sha256": "67a5b2649acbd612458706796fdbd110a54cfa74a82e107cdfbc5777d6a0b1b6",
+      "scientific_git_blob": "60afc4a7d47b90e88433e1eb3c2ea81bc754208d",
+      "candidate_git_blob": "60afc4a7d47b90e88433e1eb3c2ea81bc754208d",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/complex_binding_metrics.py",
+      "sha256": "70116cebe7279f61b74a3e7299ec57faf7c4d2d117a0be1d5a263f4dbf73c8e5",
+      "scientific_git_blob": "c301701c5a61b6c5284943679687a047d16e1098",
+      "candidate_git_blob": "c301701c5a61b6c5284943679687a047d16e1098",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/complex_binding_protocol.py",
+      "sha256": "7c8a23d2c867702f627c9da14984bc62fa736c8bebd2403f0ac704e1a09769c2",
+      "scientific_git_blob": "d2e2003828de434db8482d2fa9a3d37b3c8aea34",
+      "candidate_git_blob": "d2e2003828de434db8482d2fa9a3d37b3c8aea34",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/data.py",
+      "sha256": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "scientific_git_blob": "e90005e534d8cb86eb34ee34b6309b0679368dfb",
+      "candidate_git_blob": "e90005e534d8cb86eb34ee34b6309b0679368dfb",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/development_data.py",
+      "sha256": "47a52774638248531dad7e09d2ba46417e0d0a0b05e630f634c17a31359b873a",
+      "scientific_git_blob": "b9453621344c48f47ab34fadfe5f2e11b9864de9",
+      "candidate_git_blob": "b9453621344c48f47ab34fadfe5f2e11b9864de9",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/experiment.py",
+      "sha256": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f",
+      "scientific_git_blob": "78d8228301e293fe674d154730ac48941f1af38b",
+      "candidate_git_blob": "78d8228301e293fe674d154730ac48941f1af38b",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/growth_ablation.py",
+      "sha256": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+      "scientific_git_blob": "640733c74c858ae404ec2fe56de7db18880d1c0f",
+      "candidate_git_blob": "640733c74c858ae404ec2fe56de7db18880d1c0f",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/models.py",
+      "sha256": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "scientific_git_blob": "930cb7e44f7e978c21b605d50f978852c00c47ac",
+      "candidate_git_blob": "930cb7e44f7e978c21b605d50f978852c00c47ac",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/routing_metrics.py",
+      "sha256": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8",
+      "scientific_git_blob": "47faa789fe2310a9fb2886a980e717dbe75fe0e4",
+      "candidate_git_blob": "47faa789fe2310a9fb2886a980e717dbe75fe0e4",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/research/split_governance.py",
+      "sha256": "133219c26303c03eb31d18faf7bbc2ed83da8a8ce47a8f953a2f9776cfcb595c",
+      "scientific_git_blob": "a1ca1cdeb83825201e353b0238b720d104281ae3",
+      "candidate_git_blob": "a1ca1cdeb83825201e353b0238b720d104281ae3",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/safety.py",
+      "sha256": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+      "scientific_git_blob": "1f5d0555ada5c6d8c059f02817b9395ac362dec2",
+      "candidate_git_blob": "1f5d0555ada5c6d8c059f02817b9395ac362dec2",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/scanner.py",
+      "sha256": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+      "scientific_git_blob": "dde9631fbd8dee0895c63be8bd6ad9e4c36f7bea",
+      "candidate_git_blob": "dde9631fbd8dee0895c63be8bd6ad9e4c36f7bea",
+      "unchanged": true
+    },
+    {
+      "path": "neuropixel/task.py",
+      "sha256": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scientific_git_blob": "3e9368c364a884f72931feb3cdc921bc3663d4fe",
+      "candidate_git_blob": "3e9368c364a884f72931feb3cdc921bc3663d4fe",
+      "unchanged": true
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "scientific_git_blob": "19bad9b1cf61abd41262ca959265a02c96630f79",
+      "candidate_git_blob": "19bad9b1cf61abd41262ca959265a02c96630f79",
+      "unchanged": true
+    },
+    {
+      "path": "requirements/research-cloud.txt",
+      "sha256": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+      "scientific_git_blob": "9f034747b188aaf1f654b28acb6edf14be842937",
+      "candidate_git_blob": "9f034747b188aaf1f654b28acb6edf14be842937",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_before_float64_tolerance.py",
+      "sha256": "22836e59dfa5d77dbfb2d1611213f9e6b817fa1ddc220df6fed97ed3fdb88e5d",
+      "scientific_git_blob": "bb7360b9fee1bffbfad58e726c2488b55008d929",
+      "candidate_git_blob": "bb7360b9fee1bffbfad58e726c2488b55008d929",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_evidence_linkage_audit.json",
+      "sha256": "3999161c27117272b0a984969510a977c02e66a8fc96677062267c916dea157a",
+      "scientific_git_blob": "12192f0ee671311e33ac230f3d47faac71a4f682",
+      "candidate_git_blob": "12192f0ee671311e33ac230f3d47faac71a4f682",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_source_attempt03.py",
+      "sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+      "scientific_git_blob": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+      "candidate_git_blob": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_attempt01.json",
+      "sha256": "04c42d920bd290ed58c1c0ba183b1606937b6624dfa843e68ba39a3f7205eca1",
+      "scientific_git_blob": "a2bb95eb984044375fdee4a8fb7960e25110be40",
+      "candidate_git_blob": "a2bb95eb984044375fdee4a8fb7960e25110be40",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_attempt01.log",
+      "sha256": "ab12acbcaa9b63eb0289f97b8db22743e66d5222e0647c790ab60d755fed0b91",
+      "scientific_git_blob": "1bdcbb6f9017303cb412a4909c8e88873ef95e4f",
+      "candidate_git_blob": "1bdcbb6f9017303cb412a4909c8e88873ef95e4f",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_attempt02.json",
+      "sha256": "998d05c0511d65cfb4edb529273f33e16017fc5047f0035d862ba5dda3286d01",
+      "scientific_git_blob": "1f03e437d3eff379b5f4a52232f60b2f735ef5f3",
+      "candidate_git_blob": "1f03e437d3eff379b5f4a52232f60b2f735ef5f3",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_attempt02.log",
+      "sha256": "3828b1f7316e301b7e91ec7b919ed100a730fdfabac66baf743611f588e8f3d3",
+      "scientific_git_blob": "b88240a731378af71414be45c2e4994ed4ec35e9",
+      "candidate_git_blob": "b88240a731378af71414be45c2e4994ed4ec35e9",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_attempt03.json",
+      "sha256": "af4a257c3b4ddc2dabbfd2160ea156444215c1f4f5e6c92d9e1fb93e0975b43e",
+      "scientific_git_blob": "89ece11845a220a3f94f1ea3cc385af2f8230543",
+      "candidate_git_blob": "89ece11845a220a3f94f1ea3cc385af2f8230543",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_attempt03.log",
+      "sha256": "54a24a88b0e910961b17fbae5219e15ad90d78690d1468c7ff9abf9353829204",
+      "scientific_git_blob": "47aafa510ce7c7c3fe77545e1b77ccedcf734264",
+      "candidate_git_blob": "47aafa510ce7c7c3fe77545e1b77ccedcf734264",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_test_source_manifest.json",
+      "sha256": "857050efdd827c4ebe33b3c4c685173e40c478678f09dadc669c6cfad869c42c",
+      "scientific_git_blob": "d0794e7ccabfcb0716ad5689b51339ba79a2157a",
+      "candidate_git_blob": "d0794e7ccabfcb0716ad5689b51339ba79a2157a",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_tests_attempt01.py",
+      "sha256": "03a779e28c8912399f77931770e3877ec0f3440490ad7060ad025203a8dab653",
+      "scientific_git_blob": "5a203c4afe4d7abd295a2ef50434404c89bf5c35",
+      "candidate_git_blob": "5a203c4afe4d7abd295a2ef50434404c89bf5c35",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analysis_tests_attempt02_03.py",
+      "sha256": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99",
+      "scientific_git_blob": "a61771bd97740e8c5ceb36d75fc0895564c2eba1",
+      "candidate_git_blob": "a61771bd97740e8c5ceb36d75fc0895564c2eba1",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/analytical_design_expectations.json",
+      "sha256": "db72b4cc4786ceb3f9c4c060cb82039aeeb5d97b780eb61ec4fd067031abd877",
+      "scientific_git_blob": "5677f8ae4f6e8a0dc2723102f00208cf60a160af",
+      "candidate_git_blob": "5677f8ae4f6e8a0dc2723102f00208cf60a160af",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/archive_verifier_attempt01.py",
+      "sha256": "5dbed8a643d578667de234e18df3fa16fd5adf380322c778e9fcf3aac9e32ece",
+      "scientific_git_blob": "6d3f7c071bd326c355e7f6a029582d08480a398b",
+      "candidate_git_blob": "6d3f7c071bd326c355e7f6a029582d08480a398b",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/archive_verifier_attempt02.py",
+      "sha256": "db383542069ed66570acb2589129bc828e2cc8060ac2fc50c02ebc0822b883db",
+      "scientific_git_blob": "1cd5938b1900d912e5046d9d0eb38f2e1f8e45e2",
+      "candidate_git_blob": "1cd5938b1900d912e5046d9d0eb38f2e1f8e45e2",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_data_test_01.json",
+      "sha256": "7c652fd64d6ddf189e6f8b46bec5bd88bd4fda20e32bb7b5d5a0917153f4cdf1",
+      "scientific_git_blob": "4bacaa78602b3a51fb7cc277c4568d436704457a",
+      "candidate_git_blob": "4bacaa78602b3a51fb7cc277c4568d436704457a",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_data_test_01.log",
+      "sha256": "8b78b6106207968c62c05ba66b0561fbb59307126aea96e34bb1544b41df2cad",
+      "scientific_git_blob": "74b68a35356832a4e0d6e5d38689c538ee99abb8",
+      "candidate_git_blob": "74b68a35356832a4e0d6e5d38689c538ee99abb8",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_fixture_exposure.json",
+      "sha256": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699",
+      "scientific_git_blob": "be9c6961e7cca857ab7ded95b6ab9c68ded4dbe9",
+      "candidate_git_blob": "be9c6961e7cca857ab7ded95b6ab9c68ded4dbe9",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_protocol_test_01.json",
+      "sha256": "db84fd15cd07d5fa0b1198bd89a5a27f1de8ff48acc40bd8049c97efc136315e",
+      "scientific_git_blob": "3361c206ea6ffc6cb05ba3db9f103230b967aae4",
+      "candidate_git_blob": "3361c206ea6ffc6cb05ba3db9f103230b967aae4",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_protocol_test_01.log",
+      "sha256": "10ef015e5607bc68ff8342c949cf77fbdfd5b3bb0fe02c6442ee1a78965200fb",
+      "scientific_git_blob": "0169fc202eba7b1d3e0288a3a3612531fa5e3fff",
+      "candidate_git_blob": "0169fc202eba7b1d3e0288a3a3612531fa5e3fff",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_protocol_test_02.json",
+      "sha256": "defc58ce97a9df24131b8619cc83427257059f0c28786d457e8e41d4e6f7eb46",
+      "scientific_git_blob": "c5a756545cc864caadf3838b6c656fee3671d5c7",
+      "candidate_git_blob": "c5a756545cc864caadf3838b6c656fee3671d5c7",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/complex_binding_protocol_test_02.log",
+      "sha256": "ab5713b058b7a8083e5b254e467be3d23f4df6770ad1e9d69c5c01349873d12f",
+      "scientific_git_blob": "47cbea5e7e7af7db14a0af2ebae31b971288f220",
+      "candidate_git_blob": "47cbea5e7e7af7db14a0af2ebae31b971288f220",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/preflight_archive_audit_01.json",
+      "sha256": "62ae849232a51a67ca39c0b273b8b6e3772d4499b1aaff40640f4b8d6c10f9e7",
+      "scientific_git_blob": "f1524876fd55edd425e13aac46621e3a74a8472a",
+      "candidate_git_blob": "f1524876fd55edd425e13aac46621e3a74a8472a",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/preflight_archive_audit_02.json",
+      "sha256": "fb900e72724345540ea233b774458f681879331975483ae2e677b4edca9bfc87",
+      "scientific_git_blob": "5b582dd2d756b4e152fd1f6520d0591ff247fad2",
+      "candidate_git_blob": "5b582dd2d756b4e152fd1f6520d0591ff247fad2",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/preflight_archive_audit_03.json",
+      "sha256": "2113accdce1cf74e01b638b03c865d5a64f4386ff7b2c48fdc2b1a758ce61d2a",
+      "scientific_git_blob": "2e90eccfdc5fd409812038e028c088334cd25d79",
+      "candidate_git_blob": "2e90eccfdc5fd409812038e028c088334cd25d79",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/preflight_audit_01.json",
+      "sha256": "1ee4f118ed846d767dae6a7ed58910f15412946611ebd196a31141c01f3d7974",
+      "scientific_git_blob": "61de39f3b44085fc52431441083e8017e7ba7621",
+      "candidate_git_blob": "61de39f3b44085fc52431441083e8017e7ba7621",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/preflight_jobs_receipt.json",
+      "sha256": "3a0456f0c7298f36e4617ae55ed214450cecab6c08d0aa451870fda9373758b9",
+      "scientific_git_blob": "c7242020b779e9f9bc39838857ccf1dc6b28041b",
+      "candidate_git_blob": "c7242020b779e9f9bc39838857ccf1dc6b28041b",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/preflight_source_publication_audit.json",
+      "sha256": "0791a9a61c63093e8145226ee01e5abda75f0c484897e49096d809a5a0062b96",
+      "scientific_git_blob": "10f276c386cd8969f6721507a1e3f9f8becc408e",
+      "candidate_git_blob": "10f276c386cd8969f6721507a1e3f9f8becc408e",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/protocol_attempt01_source_recovery.json",
+      "sha256": "5c8071006cfcb6466a653c19edb369c67621be6d73b3dc93a6b150294e0e7963",
+      "scientific_git_blob": "41471d357db38c55ed29248080dfd5a347aa4a17",
+      "candidate_git_blob": "41471d357db38c55ed29248080dfd5a347aa4a17",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/protocol_gate_attempt01.py",
+      "sha256": "6b0e3087eca7f6019372cd8818d04cd555c3349696eff806a51faa64ff9d9ff0",
+      "scientific_git_blob": "155ea3a5cc2c4ec079893de59fa2d4c564901087",
+      "candidate_git_blob": "155ea3a5cc2c4ec079893de59fa2d4c564901087",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/protocol_tests_attempt01.py",
+      "sha256": "62f01403bd1f37cd3eb49252c4ed8e0e60a4f41035d37116dd405f9de7dc65d8",
+      "scientific_git_blob": "60074e405cce3c35bd078ec1d792dbff745b63ed",
+      "candidate_git_blob": "60074e405cce3c35bd078ec1d792dbff745b63ed",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/stage_a_evidence_receipt.json",
+      "sha256": "a1d53e0b064e812317d93e6e8749bae4728730fecfbf359edf0249f2a72f6ee4",
+      "scientific_git_blob": "609eb4de5446b07722d76002284dbaf1fb4258d5",
+      "candidate_git_blob": "609eb4de5446b07722d76002284dbaf1fb4258d5",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/stage_b_cost_projection.json",
+      "sha256": "27d74fa8b9738f27cf758b366655e9f70b55c879a9dca9611740d2b0eebf3a09",
+      "scientific_git_blob": "8febff02a1e7daa1ad07aeffffe1a9382c7bca35",
+      "candidate_git_blob": "8febff02a1e7daa1ad07aeffffe1a9382c7bca35",
+      "unchanged": true
+    },
+    {
+      "path": "results/research/09_validation/trainer_attempt01.py",
+      "sha256": "abd171a1ca082c96cdf90f3162bab48a52a3c275e569d2d6b939068c4f4953fc",
+      "scientific_git_blob": "ca448900b3adeede92276ec94bb2ff1c92982614",
+      "candidate_git_blob": "ca448900b3adeede92276ec94bb2ff1c92982614",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/research_complex_binding.py",
+      "sha256": "e76ce37640c70a0c3632cf4a2078371a94fdde229cff4aa9bc0f5daf36e7ee05",
+      "scientific_git_blob": "60749c4417752559f0aba7e2affd38572c344198",
+      "candidate_git_blob": "60749c4417752559f0aba7e2affd38572c344198",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/research_complex_binding_audit.py",
+      "sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+      "scientific_git_blob": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+      "candidate_git_blob": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/research_item9_preflight_audit.py",
+      "sha256": "b3660de29835270d47f95e00db3657029a720d684cdadd072d39cb88a3e9a483",
+      "scientific_git_blob": "833afba494bdae9f20db956ab62063140d53b68c",
+      "candidate_git_blob": "833afba494bdae9f20db956ab62063140d53b68c",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/research_item9_worker.py",
+      "sha256": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scientific_git_blob": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+      "candidate_git_blob": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/research_verify_item9_archive.py",
+      "sha256": "2e83c184304ebaf15e9a7f13c1a081af9ca9551864fabca4dbd515af22ba5352",
+      "scientific_git_blob": "301ece0ef51b2f50edd01151d156598c5d12cf3b",
+      "candidate_git_blob": "301ece0ef51b2f50edd01151d156598c5d12cf3b",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_complex_binding_audit.py",
+      "sha256": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99",
+      "scientific_git_blob": "a61771bd97740e8c5ceb36d75fc0895564c2eba1",
+      "candidate_git_blob": "a61771bd97740e8c5ceb36d75fc0895564c2eba1",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_complex_binding_data.py",
+      "sha256": "4bd206ed35407d05607df4a958b117fa92bc3e14e7d5c497b3625542631ce296",
+      "scientific_git_blob": "0bdb8271652daefa6749c3342fe48fc0e5754cd0",
+      "candidate_git_blob": "0bdb8271652daefa6749c3342fe48fc0e5754cd0",
+      "unchanged": true
+    },
+    {
+      "path": "tests/test_complex_binding_protocol.py",
+      "sha256": "32bcfc789a12ae46b2ceb376649c6fb9864372f01ab5864058f2928c53d83307",
+      "scientific_git_blob": "4e101d8b0d5f77ba1a3980e9e51554550b87f949",
+      "candidate_git_blob": "4e101d8b0d5f77ba1a3980e9e51554550b87f949",
+      "unchanged": true
+    }
+  ],
+  "operational_bindings": [
+    {
+      "path": "scripts/research_item9_offline_worker.py",
+      "expected_git_blob": "bb044ffa7849407906af35f893482723b18703b9",
+      "actual_git_blob": "bb044ffa7849407906af35f893482723b18703b9",
+      "matched": true
+    },
+    {
+      "path": ".github/workflows/research-item9-offline-audit.yml",
+      "expected_git_blob": "d0c6da8e42c14f1a8367965f718f0bf4476edc5c",
+      "actual_git_blob": "d0c6da8e42c14f1a8367965f718f0bf4476edc5c",
+      "matched": true
+    },
+    {
+      "path": "scripts/research_item9_worker.py",
+      "expected_git_blob": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+      "actual_git_blob": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+      "matched": true
+    },
+    {
+      "path": "scripts/research_item9_gate_archive_audit.py",
+      "expected_git_blob": "421929f076d2123bfcd8a724ed589181c4444790",
+      "actual_git_blob": "421929f076d2123bfcd8a724ed589181c4444790",
+      "matched": true
+    },
+    {
+      "path": "scripts/research_item9_figures.py",
+      "expected_git_blob": "8f6c5ced79ce5e2be35e992fecff7079aa455d16",
+      "actual_git_blob": "8f6c5ced79ce5e2be35e992fecff7079aa455d16",
+      "matched": true
+    },
+    {
+      "path": "scripts/research_verify_item9_archive.py",
+      "expected_git_blob": "301ece0ef51b2f50edd01151d156598c5d12cf3b",
+      "actual_git_blob": "301ece0ef51b2f50edd01151d156598c5d12cf3b",
+      "matched": true
+    },
+    {
+      "path": "scripts/research_complex_binding_audit.py",
+      "expected_git_blob": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+      "actual_git_blob": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+      "matched": true
+    },
+    {
+      "path": "docs/research/09_study_plan.json",
+      "expected_git_blob": "7adf6620d4c00ba387e54a670ba82d187ac7576d",
+      "actual_git_blob": "7adf6620d4c00ba387e54a670ba82d187ac7576d",
+      "matched": true
+    },
+    {
+      "path": "docs/research/09_experiment_recipe.json",
+      "expected_git_blob": "1cf525292d157af8272a78f27042de6a14d9e8b3",
+      "actual_git_blob": "1cf525292d157af8272a78f27042de6a14d9e8b3",
+      "matched": true
+    },
+    {
+      "path": "docs/research/09_offline_execution_design.md",
+      "expected_git_blob": "812b62c52868d67b4a60eeb6008e1ab78b27347f",
+      "actual_git_blob": "812b62c52868d67b4a60eeb6008e1ab78b27347f",
+      "matched": true
+    },
+    {
+      "path": "docs/research/09_offline_candidate_review.md",
+      "expected_git_blob": "6ee17d91ce5d8d8c439c5c13be89f016c9ad680f",
+      "actual_git_blob": "6ee17d91ce5d8d8c439c5c13be89f016c9ad680f",
+      "matched": true
+    },
+    {
+      "path": "docs/research/09_interpretation_guide.md",
+      "expected_git_blob": "a44847c0d66216ebcfa910ba1ae90f078c5f1363",
+      "actual_git_blob": "a44847c0d66216ebcfa910ba1ae90f078c5f1363",
+      "matched": true
+    },
+    {
+      "path": "results/research/09_validation/study_actions_job_112701154832.log",
+      "expected_git_blob": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
+      "actual_git_blob": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
+      "matched": true
+    },
+    {
+      "path": "results/research/09_validation/study_remote_recovery_01.json",
+      "expected_git_blob": "fb3cc7912e5f8efb159592830e40b434e973bdbf",
+      "actual_git_blob": "fb3cc7912e5f8efb159592830e40b434e973bdbf",
+      "matched": true
+    },
+    {
+      "path": "results/research/09_validation/offline_workflow_validation_failures.json",
+      "expected_git_blob": "dadf6d3d1bf69826c6ecec08c9f4d1fe9e1f1233",
+      "actual_git_blob": "dadf6d3d1bf69826c6ecec08c9f4d1fe9e1f1233",
+      "matched": true
+    },
+    {
+      "path": "results/research/09_validation/offline_workflow_context_failure_04.json",
+      "expected_git_blob": "fe1c5fe2cc3cbe9436c7c8dd8690a89a3138a351",
+      "actual_git_blob": "fe1c5fe2cc3cbe9436c7c8dd8690a89a3138a351",
+      "matched": true
+    }
+  ],
+  "text_identity_checks": [
+    {
+      "name": "frozen_analyzer",
+      "sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+      "expected_sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+      "matched": true
+    },
+    {
+      "name": "recovered_guide",
+      "sha256": "2a6c5bc207bce8ec26dfb4f705f94ad3bb76d66815ddff17ddf4ffb4f54eddc9",
+      "expected_sha256": "2a6c5bc207bce8ec26dfb4f705f94ad3bb76d66815ddff17ddf4ffb4f54eddc9",
+      "matched": true
+    },
+    {
+      "name": "complete_job_log",
+      "sha256": "340b74f9322b20c682d8791ce2fa0e92f26badff92dcc21aa7cd7e3757257749",
+      "expected_sha256": "340b74f9322b20c682d8791ce2fa0e92f26badff92dcc21aa7cd7e3757257749",
+      "matched": true
+    }
+  ],
+  "workflow_review": {
+    "yaml_command": "Pip command is a literal block to preserve colon-space.",
+    "context": "runner.temp is scoped only to offline step env, allowed by official context availability.",
+    "official_source": "https://docs.github.com/en/actions/reference/workflows-and-actions/contexts",
+    "candidate_trigger_plan_present": false,
+    "latest_actions_observation": {
+      "received_by_utc": "2026-10-07 09:46:24 UTC",
+      "latest_run_ids": [
+        37601447941,
+        37601029823,
+        37600603127,
+        37599727642,
+        37593731891
+      ],
+      "candidate_run_found": false,
+      "qualification": "No run for the candidate was present in this latest-five branch response. The candidate intentionally has no triggering plan; this observation is not a completed platform job."
+    }
+  },
+  "issues": [],
+  "status": "source_identities_verified_static_configuration_reviewed",
+  "limits": [
+    "No local compiler, YAML parser or audit execution is claimed; local executor unavailable.",
+    "Scientific final outputs have not yet been inspected.",
+    "Four earlier zero-job configuration failures remain in separate receipts.",
+    "Frozen plan will change candidate status and freeze timestamp only; original scientific definitions remain unchanged."
+  ],
+  "freeze": {
+    "at_utc": "2026-10-07T09:50:38+00:00",
+    "plan_path": "docs/research/09_offline_plan.json",
+    "plan_sha256": "7cc8b995ebc388089d1668820a60174fa228de4e5bba1285b14e3fb35d4b6eb3",
+    "candidate_plan_path": "docs/research/09_offline_plan_candidate.json",
+    "delta": [
+      "status: candidate -> frozen",
+      "freeze_utc: null -> recorded timestamp"
+    ],
+    "root_review": "The root source/context review found no unresolved blocker for the bounded audit-only launch. Two focused agent reviews were requested; their final replies had not yet arrived at this freeze. No completed agent review or platform execution is claimed by this receipt.",
+    "model_or_dataset_execution": false,
+    "final_scientific_outcomes_inspected": false
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T08:28:04.762952+00:00",
+  "recorded_at": "2026-10-07T09:50:38+00:00",
   "active_item": 9,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -333,7 +333,7 @@
       "comparisons": 26,
       "exact_zeros": 20,
       "issues": 0,
-      "maximum_absolute_error": 2.402022563074979e-07
+      "maximum_absolute_error": 2.402022563074979e-7
     },
     "local_evidence": {
       "checks": 156,
@@ -350,7 +350,7 @@
     "resource_release": "Owned local audits completed and GitHub job112670244618 completed successfully; no item-8 numerical task remains."
   },
   "item9": {
-    "stage": "Frozen Stage B is executing; final results and independent recount pending",
+    "stage": "Stage B completed; unchanged offline audits frozen for a bounded host fallback",
     "opened_after_item8_closure_commit": "6b2f2554b56c3ac2d7811ea4f6732befd7a93817",
     "scope": "Complex role binding with explicit queries, multiple competing events and controlled transformations. Audit representational feasibility and shortcuts, implement bounded diagnostics, freeze study before performance results, retain all conditions and limits.",
     "historical_H1": "Closed; not supported; no retrospective replacement.",
@@ -408,11 +408,31 @@
     },
     "stage_b_expected_runs": 10,
     "stage_b_updates_per_run": 4096,
-    "stage_b_final_performance_generated": false,
+    "stage_b_final_performance_generated": true,
     "stage_b_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
     "stage_b_source_tree": "a2b8319335bd6fb05de8b1c9749d537d10150218",
     "stage_b_run_id": 37593731891,
     "stage_b_job_id": 112701154832,
-    "stage_b_source_publication_verified": true
+    "stage_b_source_publication_verified": true,
+    "stage_b_observed_status": "completed",
+    "stage_b_observed_conclusion": "success",
+    "stage_b_final_raw_archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+    "stage_b_gate_archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+    "stage_b_observed_results_head": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+    "stage_b_worker_seconds": 3061.636433142,
+    "stage_b_runner_released": true,
+    "stage_b_final_manifest_files": 134,
+    "stage_b_final_manifest_bytes_excluding_manifest": 56105745,
+    "stage_b_final_scientific_audit_status": "pending",
+    "offline_operational_candidate_commit": "d58aeebd9877326002eac9be5edf8799728bd9db",
+    "offline_configuration_failures_before_jobs": [
+      37599727642,
+      37600603127,
+      37601029823,
+      37601447941
+    ],
+    "offline_operation_scope": "Run unchanged frozen audits and figure helper; no training, data regeneration, reselection or scientific source changes.",
+    "offline_freeze_utc": "2026-10-07T09:50:38+00:00",
+    "offline_plan_sha256": "7cc8b995ebc388089d1668820a60174fa228de4e5bba1285b14e3fb35d4b6eb3"
   }
 }

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T09:50:38+00:00",
+  "operation": "Execute unchanged frozen offline audits on a standard public CPU runner after local-executor interruption",
+  "scientific_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "scientific_study_plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+  "scientific_analyzer_sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+  "auxiliary_source_commit": "21097fa8937a2bdcd358816558e5ebe0ae7ca886",
+  "corrected_operational_candidate_commit": "13d11461c3829d03427c6058b1d89e1e227521b7",
+  "study_run_key": "37593731891-1-study",
+  "study_run_id": 37593731891,
+  "study_job_id": 112701154832,
+  "study_observed_status": "completed",
+  "study_observed_conclusion": "success",
+  "final_archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "observed_remote_head": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "intermediate_archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+  "offline_analysis_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "auxiliary_runtime": {
+    "matplotlib": "3.10.8",
+    "psutil": "7.2.2"
+  },
+  "operational_file_git_blobs": {
+    "scripts/research_item9_offline_worker.py": "bb044ffa7849407906af35f893482723b18703b9",
+    ".github/workflows/research-item9-offline-audit.yml": "d0c6da8e42c14f1a8367965f718f0bf4476edc5c",
+    "scripts/research_item9_worker.py": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+    "scripts/research_item9_gate_archive_audit.py": "421929f076d2123bfcd8a724ed589181c4444790",
+    "scripts/research_item9_figures.py": "8f6c5ced79ce5e2be35e992fecff7079aa455d16",
+    "scripts/research_verify_item9_archive.py": "301ece0ef51b2f50edd01151d156598c5d12cf3b",
+    "scripts/research_complex_binding_audit.py": "57951450cb4415e86f26505ec5d6f17d8dc8afe9",
+    "docs/research/09_study_plan.json": "7adf6620d4c00ba387e54a670ba82d187ac7576d",
+    "docs/research/09_experiment_recipe.json": "1cf525292d157af8272a78f27042de6a14d9e8b3",
+    "docs/research/09_offline_execution_design.md": "812b62c52868d67b4a60eeb6008e1ab78b27347f",
+    "docs/research/09_offline_candidate_review.md": "6ee17d91ce5d8d8c439c5c13be89f016c9ad680f",
+    "docs/research/09_interpretation_guide.md": "a44847c0d66216ebcfa910ba1ae90f078c5f1363",
+    "results/research/09_validation/study_actions_job_112701154832.log": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
+    "results/research/09_validation/study_remote_recovery_01.json": "fb3cc7912e5f8efb159592830e40b434e973bdbf",
+    "results/research/09_validation/offline_workflow_validation_failures.json": "dadf6d3d1bf69826c6ecec08c9f4d1fe9e1f1233",
+    "results/research/09_validation/offline_workflow_context_failure_04.json": "fe1c5fe2cc3cbe9436c7c8dd8690a89a3138a351"
+  },
+  "job_log_path": "results/research/09_validation/study_actions_job_112701154832.log",
+  "job_log_git_blob": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
+  "job_log_sha256": "340b74f9322b20c682d8791ce2fa0e92f26badff92dcc21aa7cd7e3757257749",
+  "remote_receipt_paths": [
+    "results/research/09_validation/study_remote_recovery_01.json",
+    "results/research/09_validation/offline_workflow_validation_failures.json",
+    "results/research/09_validation/offline_workflow_context_failure_04.json"
+  ],
+  "stages": [
+    "full_archive_audit",
+    "gate_archive_audit",
+    "scientific_audit",
+    "figures"
+  ],
+  "resource_policy": {
+    "workflow_minutes": 30,
+    "worker_seconds": 1380,
+    "final_archive_reserve_seconds": 180,
+    "minimum_stage_start_seconds": 60,
+    "numerical_threads": 1,
+    "git_threads": 1,
+    "aggregate_active_cpu_threads": 4,
+    "minimum_available_ram_gib": 8,
+    "supervisor_interval_seconds": 1,
+    "heartbeat_interval_seconds": 60,
+    "archive_interval_seconds": 300,
+    "stage_caps_seconds": {
+      "full_archive_audit": 600,
+      "gate_archive_audit": 600,
+      "scientific_audit": 900,
+      "figures": 300
+    },
+    "bootstrap_caps_minutes": {
+      "deadline": 1,
+      "checkout": 3,
+      "setup": 4,
+      "install": 4
+    },
+    "public_repository_required": true,
+    "gpu": false,
+    "paid_compute": false,
+    "cache": false,
+    "actions_artifact_storage": false
+  },
+  "preservation_policy": {
+    "outputs": "new run/attempt directory outside both audited worktrees",
+    "stage_failure": "stop dependent stages, retain first receipt/log, ordinary fast-forward final archive",
+    "bootstrap_failure": "complete Actions job log and provider status recovered by root; always-step record when platform permits; no worker archive promised before worker starts",
+    "full_scientific_report": "complete unchanged original and lossless gzip",
+    "display_projection": "only bootstrap.indices omitted; original hash and shape retained; all other values unchanged",
+    "figures": "rendered only after three verified audits; root visual inspection remains pending"
+  },
+  "scientific_constraints": [
+    "All 83 scientific bindings and every original criterion remain fixed.",
+    "No model execution, retraining, checkpoint replacement, final-data regeneration or new scientific examples.",
+    "The only analytical RNG draws are the already-frozen 2000 by 256 bag-bootstrap indices using PCG64 seed94001.",
+    "Host relocation is operational continuation under shared custody, not external replication or blinding.",
+    "Historical H1 remains closed and not supported."
+  ],
+  "recovered_interpretation_guide": {
+    "sha256": "2a6c5bc207bce8ec26dfb4f705f94ad3bb76d66815ddff17ddf4ffb4f54eddc9",
+    "bytes": 13491,
+    "method": "Original committed bytes plus exact retained patch paragraph; client digest reproduced the previously recorded hash before publication.",
+    "timing": "Clarification authored after launch and before outcomes were provided to or inspected by its reviewer."
+  },
+  "operational_validation_failures_preserved": [
+    37599727642,
+    37600603127,
+    37601029823,
+    37601447941
+  ]
+}
