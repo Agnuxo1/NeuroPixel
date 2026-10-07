@@ -1,0 +1,778 @@
+{
+  "artifacts": {
+    "checkpoint": {
+      "bytes": 123192,
+      "path": "runs/neuropixel_seed42/checkpoint.pt",
+      "sha256": "04c534d742ea0c9a3528dac9146d4a04007821c89cc875546bd36e3d4dc66a9c"
+    },
+    "probe_predictions": {
+      "bytes": 78995,
+      "path": "runs/neuropixel_seed42/probe_predictions.npz",
+      "sha256": "184d90bdc0a479ce59271a8b6b5a3db91fcab346a76402e8ccc997dd53c6b16f"
+    },
+    "training_log": {
+      "bytes": 1700339,
+      "path": "runs/neuropixel_seed42/training.jsonl",
+      "sha256": "e4e37245ada894225fa3b910c2f074c8548f7b89501f06ca6fc172309407c1b3"
+    },
+    "validation_predictions": {
+      "bytes": 155168,
+      "path": "runs/neuropixel_seed42/validation_predictions.npz",
+      "sha256": "98be11528f33c0a662c3f21f65c271fb8e649b8c306a864df7c95bb4dcbeb37d"
+    }
+  },
+  "configuration": {
+    "batch_size": 32,
+    "family": "neuropixel",
+    "gradient_clip": 1.0,
+    "height": 10,
+    "initialization": 42,
+    "learning_rate": 0.001,
+    "loss": "answer_cross_entropy_only",
+    "memorization": false,
+    "model": {
+      "c": 48,
+      "c_id": 16,
+      "class": "neuropixel.model.NeuroPixel",
+      "fire_rate": 0.5,
+      "grounded": null,
+      "hidden": 128,
+      "retina": false,
+      "steps": 16
+    },
+    "optimizer": "AdamW",
+    "out_pos": [
+      9,
+      7
+    ],
+    "scheduled_updates": 4096,
+    "trainable_parameters": 29856,
+    "vocab": 37,
+    "weight_decay": 0.0001,
+    "width": 8
+  },
+  "context": {
+    "development_identities": {
+      "fixture_exposure.json": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699",
+      "memorization.npz": "1f822a1a0256f2a80907a01ce124a94e8f642942e2608aad6a9ebbb58bcc7442",
+      "memorization_scenarios.json.gz": "ccb76c0db01cf22d6dba76bbb53b95231021d995380d48488f59ae7ea42769e8",
+      "probe.npz": "2f46f63706e8a7b85c1d925ecd565a18d9b799ca8c89986a7e1b319e1572cb32",
+      "probe_scenarios.json.gz": "44db31b01eb512b011fe785da0a2ae2b9096745d6c6d74f1b8e48a45742f0f85",
+      "train_scenarios.json.gz": "134aff63a31e1e7cc608ff490d825cd1e468c94c9d1b2d14118075155e070b11",
+      "validation.npz": "b3c9e4cacaeb3195fce01b9929b9fefe4442364a49e5c0c4777b1803e8387376",
+      "validation_scenarios.json.gz": "697209a614d329008f93fbc9f25d227253313b0093c1dba1639577e37ef250fe"
+    },
+    "development_manifest": {
+      "bytes": 20117,
+      "path": "development_data/manifest.json",
+      "sha256": "7128baef41f6df81e3bfafff15fcf39d6406c99d78cfdf248babcae461b017f0"
+    },
+    "pilot_evidence_sha256": "a1d53e0b064e812317d93e6e8749bae4728730fecfbf359edf0249f2a72f6ee4",
+    "plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+    "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959"
+  },
+  "family": "neuropixel",
+  "initialization": 42,
+  "item": 9,
+  "learning_rate": 0.001,
+  "memorization_checks": [],
+  "memorization_criterion_reached": null,
+  "phase": "primary",
+  "probe": {
+    "all_eight": 0.0,
+    "binding": 0.09765625,
+    "correct": 57,
+    "cross_entropy": 2.3725665146174943,
+    "global": 0.111328125,
+    "groups": 64,
+    "macro": 0.111328125,
+    "n": 512,
+    "per_role": [
+      0.078125,
+      0.1015625,
+      0.1171875,
+      0.1484375
+    ]
+  },
+  "probe_below_95_percent_binding": true,
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T08:46:47.307176+00:00",
+      "available_ram_gib": 14.376949310302734,
+      "phase": "run_admission"
+    },
+    {
+      "at_utc": "2026-10-07T08:46:47.310879+00:00",
+      "available_ram_gib": 14.376968383789062,
+      "phase": "step_1"
+    },
+    {
+      "at_utc": "2026-10-07T08:46:50.864196+00:00",
+      "available_ram_gib": 14.358528137207031,
+      "phase": "step_32"
+    },
+    {
+      "at_utc": "2026-10-07T08:46:54.478772+00:00",
+      "available_ram_gib": 14.358535766601562,
+      "phase": "step_64"
+    },
+    {
+      "at_utc": "2026-10-07T08:46:58.116906+00:00",
+      "available_ram_gib": 14.353912353515625,
+      "phase": "step_96"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:01.749474+00:00",
+      "available_ram_gib": 14.361576080322266,
+      "phase": "step_128"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:05.609229+00:00",
+      "available_ram_gib": 14.334636688232422,
+      "phase": "step_160"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:09.261827+00:00",
+      "available_ram_gib": 14.338249206542969,
+      "phase": "step_192"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:12.974465+00:00",
+      "available_ram_gib": 14.338504791259766,
+      "phase": "step_224"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:16.619914+00:00",
+      "available_ram_gib": 14.349254608154297,
+      "phase": "step_256"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:20.254185+00:00",
+      "available_ram_gib": 14.349655151367188,
+      "phase": "step_288"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:23.903915+00:00",
+      "available_ram_gib": 14.339424133300781,
+      "phase": "step_320"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:27.522464+00:00",
+      "available_ram_gib": 14.334609985351562,
+      "phase": "step_352"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:31.150346+00:00",
+      "available_ram_gib": 14.345596313476562,
+      "phase": "step_384"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:34.836117+00:00",
+      "available_ram_gib": 14.344024658203125,
+      "phase": "step_416"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:38.499051+00:00",
+      "available_ram_gib": 14.364360809326172,
+      "phase": "step_448"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:42.144015+00:00",
+      "available_ram_gib": 14.349315643310547,
+      "phase": "step_480"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:45.781051+00:00",
+      "available_ram_gib": 14.347274780273438,
+      "phase": "step_512"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:49.416763+00:00",
+      "available_ram_gib": 14.355037689208984,
+      "phase": "step_544"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:53.037995+00:00",
+      "available_ram_gib": 14.357673645019531,
+      "phase": "step_576"
+    },
+    {
+      "at_utc": "2026-10-07T08:47:56.702501+00:00",
+      "available_ram_gib": 14.363719940185547,
+      "phase": "step_608"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:00.352965+00:00",
+      "available_ram_gib": 14.363975524902344,
+      "phase": "step_640"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:03.988298+00:00",
+      "available_ram_gib": 14.364028930664062,
+      "phase": "step_672"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:07.606771+00:00",
+      "available_ram_gib": 14.364330291748047,
+      "phase": "step_704"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:11.246745+00:00",
+      "available_ram_gib": 14.37200927734375,
+      "phase": "step_736"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:14.858057+00:00",
+      "available_ram_gib": 14.363636016845703,
+      "phase": "step_768"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:18.456509+00:00",
+      "available_ram_gib": 14.363338470458984,
+      "phase": "step_800"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:22.083631+00:00",
+      "available_ram_gib": 14.358627319335938,
+      "phase": "step_832"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:25.687070+00:00",
+      "available_ram_gib": 14.358394622802734,
+      "phase": "step_864"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:29.307589+00:00",
+      "available_ram_gib": 14.363662719726562,
+      "phase": "step_896"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:32.906895+00:00",
+      "available_ram_gib": 14.360340118408203,
+      "phase": "step_928"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:36.506387+00:00",
+      "available_ram_gib": 14.357242584228516,
+      "phase": "step_960"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:40.148345+00:00",
+      "available_ram_gib": 14.361038208007812,
+      "phase": "step_992"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:43.779728+00:00",
+      "available_ram_gib": 14.352714538574219,
+      "phase": "step_1024"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:47.397820+00:00",
+      "available_ram_gib": 14.359626770019531,
+      "phase": "step_1056"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:51.012432+00:00",
+      "available_ram_gib": 14.354560852050781,
+      "phase": "step_1088"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:54.619553+00:00",
+      "available_ram_gib": 14.363651275634766,
+      "phase": "step_1120"
+    },
+    {
+      "at_utc": "2026-10-07T08:48:58.223855+00:00",
+      "available_ram_gib": 14.360183715820312,
+      "phase": "step_1152"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:01.829822+00:00",
+      "available_ram_gib": 14.359344482421875,
+      "phase": "step_1184"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:05.432010+00:00",
+      "available_ram_gib": 14.359272003173828,
+      "phase": "step_1216"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:09.025290+00:00",
+      "available_ram_gib": 14.365108489990234,
+      "phase": "step_1248"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:12.723270+00:00",
+      "available_ram_gib": 14.349815368652344,
+      "phase": "step_1280"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:16.325927+00:00",
+      "available_ram_gib": 14.357109069824219,
+      "phase": "step_1312"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:19.941464+00:00",
+      "available_ram_gib": 14.357757568359375,
+      "phase": "step_1344"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:23.539188+00:00",
+      "available_ram_gib": 14.354194641113281,
+      "phase": "step_1376"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:27.143263+00:00",
+      "available_ram_gib": 14.354690551757812,
+      "phase": "step_1408"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:30.742290+00:00",
+      "available_ram_gib": 14.361881256103516,
+      "phase": "step_1440"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:34.332048+00:00",
+      "available_ram_gib": 14.354228973388672,
+      "phase": "step_1472"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:37.947991+00:00",
+      "available_ram_gib": 14.354011535644531,
+      "phase": "step_1504"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:41.578469+00:00",
+      "available_ram_gib": 14.354022979736328,
+      "phase": "step_1536"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:45.194081+00:00",
+      "available_ram_gib": 14.346832275390625,
+      "phase": "step_1568"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:48.818873+00:00",
+      "available_ram_gib": 14.354534149169922,
+      "phase": "step_1600"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:52.439065+00:00",
+      "available_ram_gib": 14.349288940429688,
+      "phase": "step_1632"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:56.054749+00:00",
+      "available_ram_gib": 14.356033325195312,
+      "phase": "step_1664"
+    },
+    {
+      "at_utc": "2026-10-07T08:49:59.682344+00:00",
+      "available_ram_gib": 14.342361450195312,
+      "phase": "step_1696"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:03.329403+00:00",
+      "available_ram_gib": 14.357048034667969,
+      "phase": "step_1728"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:06.947266+00:00",
+      "available_ram_gib": 14.352069854736328,
+      "phase": "step_1760"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:10.617151+00:00",
+      "available_ram_gib": 14.351947784423828,
+      "phase": "step_1792"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:14.259951+00:00",
+      "available_ram_gib": 14.352378845214844,
+      "phase": "step_1824"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:17.886316+00:00",
+      "available_ram_gib": 14.35263442993164,
+      "phase": "step_1856"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:21.507492+00:00",
+      "available_ram_gib": 14.352893829345703,
+      "phase": "step_1888"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:25.158529+00:00",
+      "available_ram_gib": 14.3529052734375,
+      "phase": "step_1920"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:28.795752+00:00",
+      "available_ram_gib": 14.352008819580078,
+      "phase": "step_1952"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:32.421368+00:00",
+      "available_ram_gib": 14.352291107177734,
+      "phase": "step_1984"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:36.063629+00:00",
+      "available_ram_gib": 14.344852447509766,
+      "phase": "step_2016"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:39.687919+00:00",
+      "available_ram_gib": 14.352195739746094,
+      "phase": "step_2048"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:43.324411+00:00",
+      "available_ram_gib": 14.352508544921875,
+      "phase": "step_2080"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:46.962431+00:00",
+      "available_ram_gib": 14.345020294189453,
+      "phase": "step_2112"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:50.578213+00:00",
+      "available_ram_gib": 14.359046936035156,
+      "phase": "step_2144"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:54.206886+00:00",
+      "available_ram_gib": 14.34820556640625,
+      "phase": "step_2176"
+    },
+    {
+      "at_utc": "2026-10-07T08:50:57.820462+00:00",
+      "available_ram_gib": 14.347965240478516,
+      "phase": "step_2208"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:01.425997+00:00",
+      "available_ram_gib": 14.359424591064453,
+      "phase": "step_2240"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:05.045489+00:00",
+      "available_ram_gib": 14.358039855957031,
+      "phase": "step_2272"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:08.681198+00:00",
+      "available_ram_gib": 14.35662841796875,
+      "phase": "step_2304"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:12.334413+00:00",
+      "available_ram_gib": 14.364311218261719,
+      "phase": "step_2336"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:15.965723+00:00",
+      "available_ram_gib": 14.35714340209961,
+      "phase": "step_2368"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:19.575874+00:00",
+      "available_ram_gib": 14.355781555175781,
+      "phase": "step_2400"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:23.201411+00:00",
+      "available_ram_gib": 14.3564453125,
+      "phase": "step_2432"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:26.827188+00:00",
+      "available_ram_gib": 14.356697082519531,
+      "phase": "step_2464"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:30.465549+00:00",
+      "available_ram_gib": 14.356529235839844,
+      "phase": "step_2496"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:34.070107+00:00",
+      "available_ram_gib": 14.356548309326172,
+      "phase": "step_2528"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:37.670018+00:00",
+      "available_ram_gib": 14.356555938720703,
+      "phase": "step_2560"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:41.283229+00:00",
+      "available_ram_gib": 14.35513687133789,
+      "phase": "step_2592"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:44.903226+00:00",
+      "available_ram_gib": 14.352500915527344,
+      "phase": "step_2624"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:48.502667+00:00",
+      "available_ram_gib": 14.360206604003906,
+      "phase": "step_2656"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:52.112005+00:00",
+      "available_ram_gib": 14.3597412109375,
+      "phase": "step_2688"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:55.712802+00:00",
+      "available_ram_gib": 14.35662841796875,
+      "phase": "step_2720"
+    },
+    {
+      "at_utc": "2026-10-07T08:51:59.325030+00:00",
+      "available_ram_gib": 14.372215270996094,
+      "phase": "step_2752"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:02.930294+00:00",
+      "available_ram_gib": 14.349403381347656,
+      "phase": "step_2784"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:06.725837+00:00",
+      "available_ram_gib": 14.344284057617188,
+      "phase": "step_2816"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:10.375059+00:00",
+      "available_ram_gib": 14.349853515625,
+      "phase": "step_2848"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:13.976333+00:00",
+      "available_ram_gib": 14.361637115478516,
+      "phase": "step_2880"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:17.613686+00:00",
+      "available_ram_gib": 14.353347778320312,
+      "phase": "step_2912"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:21.215860+00:00",
+      "available_ram_gib": 14.35360336303711,
+      "phase": "step_2944"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:24.812747+00:00",
+      "available_ram_gib": 14.353607177734375,
+      "phase": "step_2976"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:28.408083+00:00",
+      "available_ram_gib": 14.357734680175781,
+      "phase": "step_3008"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:32.012225+00:00",
+      "available_ram_gib": 14.356529235839844,
+      "phase": "step_3040"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:35.613049+00:00",
+      "available_ram_gib": 14.353900909423828,
+      "phase": "step_3072"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:39.199055+00:00",
+      "available_ram_gib": 14.355545043945312,
+      "phase": "step_3104"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:42.805294+00:00",
+      "available_ram_gib": 14.360427856445312,
+      "phase": "step_3136"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:46.400129+00:00",
+      "available_ram_gib": 14.35549545288086,
+      "phase": "step_3168"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:49.987891+00:00",
+      "available_ram_gib": 14.35550308227539,
+      "phase": "step_3200"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:53.585929+00:00",
+      "available_ram_gib": 14.346393585205078,
+      "phase": "step_3232"
+    },
+    {
+      "at_utc": "2026-10-07T08:52:57.190516+00:00",
+      "available_ram_gib": 14.346683502197266,
+      "phase": "step_3264"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:00.792176+00:00",
+      "available_ram_gib": 14.352962493896484,
+      "phase": "step_3296"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:04.395049+00:00",
+      "available_ram_gib": 14.351871490478516,
+      "phase": "step_3328"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:08.002168+00:00",
+      "available_ram_gib": 14.351821899414062,
+      "phase": "step_3360"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:11.647106+00:00",
+      "available_ram_gib": 14.352069854736328,
+      "phase": "step_3392"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:15.283754+00:00",
+      "available_ram_gib": 14.363353729248047,
+      "phase": "step_3424"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:18.925989+00:00",
+      "available_ram_gib": 14.352245330810547,
+      "phase": "step_3456"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:22.546187+00:00",
+      "available_ram_gib": 14.344959259033203,
+      "phase": "step_3488"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:26.143179+00:00",
+      "available_ram_gib": 14.337997436523438,
+      "phase": "step_3520"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:29.764885+00:00",
+      "available_ram_gib": 14.341712951660156,
+      "phase": "step_3552"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:33.385568+00:00",
+      "available_ram_gib": 14.342449188232422,
+      "phase": "step_3584"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:36.991425+00:00",
+      "available_ram_gib": 14.34079360961914,
+      "phase": "step_3616"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:40.600280+00:00",
+      "available_ram_gib": 14.347549438476562,
+      "phase": "step_3648"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:44.215469+00:00",
+      "available_ram_gib": 14.349922180175781,
+      "phase": "step_3680"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:47.827045+00:00",
+      "available_ram_gib": 14.355083465576172,
+      "phase": "step_3712"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:51.430038+00:00",
+      "available_ram_gib": 14.355094909667969,
+      "phase": "step_3744"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:55.052772+00:00",
+      "available_ram_gib": 14.359283447265625,
+      "phase": "step_3776"
+    },
+    {
+      "at_utc": "2026-10-07T08:53:58.660920+00:00",
+      "available_ram_gib": 14.35263442993164,
+      "phase": "step_3808"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:02.262374+00:00",
+      "available_ram_gib": 14.35959243774414,
+      "phase": "step_3840"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:05.892986+00:00",
+      "available_ram_gib": 14.348358154296875,
+      "phase": "step_3872"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:09.508450+00:00",
+      "available_ram_gib": 14.350482940673828,
+      "phase": "step_3904"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:13.150500+00:00",
+      "available_ram_gib": 14.350273132324219,
+      "phase": "step_3936"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:16.765480+00:00",
+      "available_ram_gib": 14.344932556152344,
+      "phase": "step_3968"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:20.375585+00:00",
+      "available_ram_gib": 14.353622436523438,
+      "phase": "step_4000"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:23.990576+00:00",
+      "available_ram_gib": 14.352550506591797,
+      "phase": "step_4032"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:27.607616+00:00",
+      "available_ram_gib": 14.35079574584961,
+      "phase": "step_4064"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:31.219172+00:00",
+      "available_ram_gib": 14.364051818847656,
+      "phase": "step_4096"
+    },
+    {
+      "at_utc": "2026-10-07T08:54:33.038925+00:00",
+      "available_ram_gib": 14.35675048828125,
+      "phase": "run_completion"
+    }
+  ],
+  "run_id": "neuropixel_seed42",
+  "schema_version": 1,
+  "status": "completed",
+  "training_input_sequence_sha256": "39c5456bc32ca9522117fbf8404cefdbdc3c0848868830440c867488ce0b12f5",
+  "updates_completed": 4096,
+  "validation": {
+    "all_eight": 0.0,
+    "binding": 0.0859375,
+    "correct": 96,
+    "cross_entropy": 2.3843434011735054,
+    "global": 0.09375,
+    "groups": 128,
+    "macro": 0.09375,
+    "n": 1024,
+    "per_role": [
+      0.09765625,
+      0.078125,
+      0.07421875,
+      0.125
+    ]
+  },
+  "wall_seconds": 465.7318730310001
+}
