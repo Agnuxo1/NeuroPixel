@@ -8,7 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
-  "last_heartbeat_at_utc": "2026-10-07T05:15:32.813528+00:00",
+  "last_heartbeat_at_utc": "2026-10-07T05:15:51.056445+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -704,6 +704,12 @@
       "available_ram_gib": 14.334663391113281,
       "cpu_count_logical": 4,
       "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:15:51.056445+00:00",
+      "available_ram_gib": 14.586936950683594,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
     }
   ],
   "run_key": "37566497890-1",
@@ -797,6 +803,23 @@
       "name": "growth",
       "returncode": 0,
       "started_at_utc": "2026-10-07T04:58:25.727275+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_analyze_core_ablation.py",
+        "--input",
+        "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core",
+        "--output-dir",
+        "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/reports/core"
+      ],
+      "completed_at_utc": "2026-10-07T05:15:56.057968+00:00",
+      "log": "logs/core_recount.log",
+      "log_sha256": "be0ac96b63bc9cd5b3ce0b1494ee08f372b61ef768266511153901ce2c3a896b",
+      "name": "core_recount",
+      "returncode": 0,
+      "started_at_utc": "2026-10-07T05:15:51.053608+00:00",
       "status": "completed"
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-10-07T05:15:47.985390+00:00",
+  "at_utc": "2026-10-07T05:15:56.322327+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
     "core/ablation_records.json": {
@@ -1542,6 +1542,10 @@
       "bytes": 140127,
       "sha256": "e5f7355f5228cd13058976c6e3646455c60748fa6d73ca57830eb46aea2496b7"
     },
+    "logs/core_recount.log": {
+      "bytes": 128,
+      "sha256": "be0ac96b63bc9cd5b3ce0b1494ee08f372b61ef768266511153901ce2c3a896b"
+    },
     "logs/growth.log": {
       "bytes": 23191,
       "sha256": "b8eb93090d5c2e222ccbf681cf873253b37a21aaa8055efcae5865b0f14dda1c"
@@ -1554,6 +1558,22 @@
       "bytes": 160,
       "sha256": "275878e6090ef3217f2284ff8da57ef0e97e0099883a31b4ddd514367462811d"
     },
+    "reports/core/analysis_output_manifest.json": {
+      "bytes": 462,
+      "sha256": "cd5d9430e98a17e456bad72beb70de3349794f7e1b0cee8173afff43582e2306"
+    },
+    "reports/core/core_analysis.json": {
+      "bytes": 1048012,
+      "sha256": "fd04219455179f88b3bd2583d81b56d41de969a902043741963412d8b1227f36"
+    },
+    "reports/core/core_contrasts.csv": {
+      "bytes": 10535,
+      "sha256": "7be8788395f5cc476fcc03d6d62ffc8a1ed10bcc0b942a91a4805770865b090d"
+    },
+    "reports/core/core_scores.csv": {
+      "bytes": 10249,
+      "sha256": "130ade345987eaf74563ed2e5c12df0554674dafe504845bb09332d14beab03c"
+    },
     "source_commit.zip": {
       "bytes": 2386986,
       "sha256": "23d1943e0c68b078ed11339a4c8e9a1a55ee333d0de7f24478a6793903bbd61f"
@@ -1563,8 +1583,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 23774,
-      "sha256": "2555c3d0e7180e82271746e6482a504cb3b62d7d4347508e3a98538bbdfd3852"
+      "bytes": 24676,
+      "sha256": "146cc04f72eb602d81baa64e1ca421d2316ad5b1aa6a59ebd3db1a2b2c66abbc"
     }
   },
   "run_key": "37566497890-1",
