@@ -1,0 +1,61 @@
+{
+  "admission_passed": false,
+  "families": {
+    "gru": {
+      "candidates": [
+        {
+          "learning_rate": 0.001,
+          "mean_dev_accuracy": 1.0,
+          "mean_dev_cross_entropy": 0.0011956104807099204,
+          "near_accuracy": 1.0,
+          "run_id": "pilot_gru_lr0001_s69"
+        },
+        {
+          "learning_rate": 0.003,
+          "mean_dev_accuracy": 1.0,
+          "mean_dev_cross_entropy": 0.00028611476705395244,
+          "near_accuracy": 1.0,
+          "run_id": "pilot_gru_lr0003_s69"
+        }
+      ],
+      "learning_rate": 0.003,
+      "mean_dev_accuracy": 1.0,
+      "mean_dev_cross_entropy": 0.00028611476705395244,
+      "near_accuracy": 1.0,
+      "near_competence_pass": true,
+      "run_id": "pilot_gru_lr0003_s69"
+    },
+    "neuropixel": {
+      "candidates": [
+        {
+          "learning_rate": 0.001,
+          "mean_dev_accuracy": 0.6979166666666667,
+          "mean_dev_cross_entropy": 5506.322611667832,
+          "near_accuracy": 0.8333333333333334,
+          "run_id": "pilot_neuropixel_lr0001_s69"
+        },
+        {
+          "learning_rate": 0.003,
+          "mean_dev_accuracy": 0.71875,
+          "mean_dev_cross_entropy": 38545.59745948546,
+          "near_accuracy": 0.7916666666666666,
+          "run_id": "pilot_neuropixel_lr0003_s69"
+        }
+      ],
+      "learning_rate": 0.003,
+      "mean_dev_accuracy": 0.71875,
+      "mean_dev_cross_entropy": 38545.59745948546,
+      "near_accuracy": 0.7916666666666666,
+      "near_competence_pass": false,
+      "run_id": "pilot_neuropixel_lr0003_s69"
+    }
+  },
+  "item": 11,
+  "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+  "rule": [
+    "mean_dev_accuracy_desc",
+    "mean_dev_ce_asc",
+    "lr_asc"
+  ],
+  "schema_version": 1
+}
