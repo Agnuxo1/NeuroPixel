@@ -6,7 +6,8 @@
     "selection": "none; all prespecified arms retained",
     "threads": 2
   },
-  "frozen_at_utc": "2026-10-07T07:28:38.323675+00:00",
+  "freeze_reason": "Pre-accepted-growth correction: PAD/empty feature slot fixed zero; core scientific inventory unchanged.",
+  "frozen_at_utc": "2026-10-07T07:35:48.192058+00:00",
   "growth": {
     "batch_size": 64,
     "decision_probe_seeds": [
@@ -102,16 +103,16 @@
     "protocol_frozen_sha256": "2543c29507269e64c7a0c1757711a7f96abae1bf7111149253b2e71f469eb244",
     "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b"
   },
-  "implementation_commit": "6e5c8997d0eac9ed12ab13db7c4aadfbee9d7cc6",
+  "implementation_commit": "0c95e114142a22ecd24a9dc00f286b7e480b91b6",
   "implementation_sha256": {
-    ".github/workflows/item6.yml": "3238d462f2aeaa0eb91b1b9dc002d5f8b63b46fdfb9c572d476ecf0d598df02f",
-    "docs/research/06_protocol_amendment.md": "bb24636411fed23f9f25cf6ead9b94a5e3c08d548d6948ee1f0f519c9f9da2ce",
+    ".github/workflows/item6.yml": "cee9d210bcaf91cf3de938d783d74ac4ce67189abc16ff096c97ad5ef4defa46",
+    "docs/research/06_protocol_amendment.md": "586ce65baf6dab8a09304d388b49263bd07cc1fcca8d2123e4ce3d1594db4597",
     "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
-    "neuropixel/research/growth.py": "ce0a26badfb411522be3f2ba21b4cb5491af651f28f509cd379c88f76c6d041d",
+    "neuropixel/research/growth.py": "80482c6acf64d5ef50381345d5882f95cc06e1955d944f5a2f777ec8a6e04175",
     "scripts/research_ablations.py": "68feed58387935e995676a879b8ff5fc3a9357a850e788cf2908990aa80f5729",
     "scripts/research_analyze_item6.py": "8cb6bd25063838e7ec91053c09560a0374a85424f30e16ffffa5bf37106794fa",
     "scripts/research_growth.py": "e2c225706fb3cc820e830d40a34c23ef182f4f258b921b6ab84bbefe2593642d",
-    "tests/test_research_item6.py": "87052c90da2182bfe490ef6a2c20351344dd2612d6fbfe630ea4dfa9e547010b"
+    "tests/test_research_item6.py": "47f881871bcb46bda939d3f203188fc66a6dd4b6b5b2ff8e7699e6f7ed7659d0"
   },
   "item": 6,
   "planned_evaluation_cases": 34,
@@ -1086,5 +1087,7 @@
     }
   ],
   "planned_training_runs": 26,
-  "status": "frozen"
+  "revision": "A06.1",
+  "status": "frozen",
+  "supersedes_plan_sha256": "652f95406fb72a31e9d3dad4fc8883a44c9a7b2f202e10d2c9e3cbb41a7474c2"
 }
