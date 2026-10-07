@@ -1,0 +1,3776 @@
+{
+  "banks": [
+    {
+      "bank_id": "snapshots_i20",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+          "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+          "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 536886,
+          "path": "banks/snapshots_i20/gate_fit_experts.npz",
+          "sha256": "56a6e3d92f37df87bdbb5c57078510a967b85bee5b1c2c88836f172754420a41"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 120,
+        "trace": [
+          {
+            "cross_entropy": 1.9898609286057116,
+            "objective": 1.9898609286057116,
+            "update": 0
+          },
+          {
+            "cross_entropy": 1.7734167489694634,
+            "objective": 1.7734469513917261,
+            "update": 32
+          },
+          {
+            "cross_entropy": 1.6712464582588131,
+            "objective": 1.6713353807714388,
+            "update": 64
+          },
+          {
+            "cross_entropy": 1.6079245484377809,
+            "objective": 1.608082653241145,
+            "update": 96
+          },
+          {
+            "cross_entropy": 1.5661629178985004,
+            "objective": 1.566391913584777,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 1089,
+          "path": "banks/snapshots_i20/gate_weights.npz",
+          "sha256": "7fe526cc135819af118d09d3ceba9ddd4a108ee12f3bcb94aa7c9853c00ccabd"
+        }
+      },
+      "init_seed": 20,
+      "kind": "snapshots"
+    },
+    {
+      "bank_id": "duplicate_slots_i20",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+          "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+          "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 529801,
+          "path": "banks/duplicate_slots_i20/gate_fit_experts.npz",
+          "sha256": "8f9851638fbead6caa93d8fe484bfaee0a910d866a90d6f9b43347dd8d629aad"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 120,
+        "trace": [
+          {
+            "cross_entropy": 3.4494626992185204,
+            "objective": 3.4494626992185204,
+            "update": 0
+          },
+          {
+            "cross_entropy": 3.3441189880496083,
+            "objective": 3.3441325876478296,
+            "update": 32
+          },
+          {
+            "cross_entropy": 3.3028309324594276,
+            "objective": 3.302867648872967,
+            "update": 64
+          },
+          {
+            "cross_entropy": 3.274941175832365,
+            "objective": 3.27500658082625,
+            "update": 96
+          },
+          {
+            "cross_entropy": 3.2550872204968173,
+            "objective": 3.255183589912709,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 699,
+          "path": "banks/duplicate_slots_i20/gate_weights.npz",
+          "sha256": "8c2cbdba40ef7a10e008f37eca62304918fd761de73273a01822a7a3403d2840"
+        }
+      },
+      "init_seed": 20,
+      "kind": "duplicate_slots"
+    },
+    {
+      "bank_id": "single_final_i20",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "fit_gate": false,
+      "init_seed": 20,
+      "kind": "single_final"
+    },
+    {
+      "bank_id": "adaptive_novelty_i20",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i20/stage0/weights.pt",
+          "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+          "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 536886,
+          "path": "banks/adaptive_novelty_i20/gate_fit_experts.npz",
+          "sha256": "56a6e3d92f37df87bdbb5c57078510a967b85bee5b1c2c88836f172754420a41"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 120,
+        "trace": [
+          {
+            "cross_entropy": 1.9898609286057116,
+            "objective": 1.9898609286057116,
+            "update": 0
+          },
+          {
+            "cross_entropy": 1.7734167489694634,
+            "objective": 1.7734469513917261,
+            "update": 32
+          },
+          {
+            "cross_entropy": 1.6712464582588131,
+            "objective": 1.6713353807714388,
+            "update": 64
+          },
+          {
+            "cross_entropy": 1.6079245484377809,
+            "objective": 1.608082653241145,
+            "update": 96
+          },
+          {
+            "cross_entropy": 1.5661629178985004,
+            "objective": 1.566391913584777,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 1089,
+          "path": "banks/adaptive_novelty_i20/gate_weights.npz",
+          "sha256": "7fe526cc135819af118d09d3ceba9ddd4a108ee12f3bcb94aa7c9853c00ccabd"
+        }
+      },
+      "init_seed": 20,
+      "kind": "adaptive_novelty"
+    },
+    {
+      "bank_id": "adaptive_resonance_i20",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_resonance_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 199035,
+          "path": "banks/adaptive_resonance_i20/gate_fit_experts.npz",
+          "sha256": "f1173449aac8731fab5ccf0308aef5989c7c6b1a9aafac676c05af51e851eead"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 40,
+        "trace": [
+          {
+            "cross_entropy": 7.18567596378778,
+            "objective": 7.18567596378778,
+            "update": 0
+          },
+          {
+            "cross_entropy": 7.18567596378778,
+            "objective": 7.18567596378778,
+            "update": 32
+          },
+          {
+            "cross_entropy": 7.18567596378778,
+            "objective": 7.18567596378778,
+            "update": 64
+          },
+          {
+            "cross_entropy": 7.18567596378778,
+            "objective": 7.18567596378778,
+            "update": 96
+          },
+          {
+            "cross_entropy": 7.18567596378778,
+            "objective": 7.18567596378778,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 216,
+          "path": "banks/adaptive_resonance_i20/gate_weights.npz",
+          "sha256": "ce6ec3a9f2bc5bffde192fd0b57f1f0435a7e62b538524edf2a958bd81bebf98"
+        }
+      },
+      "init_seed": 20,
+      "kind": "adaptive_resonance"
+    },
+    {
+      "bank_id": "snapshots_i21",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 588543,
+          "path": "banks/snapshots_i21/gate_fit_experts.npz",
+          "sha256": "63bab6ad34087312baece29b13e51535ae9a14375cec55fb8dbe6eea92ee70d6"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 120,
+        "trace": [
+          {
+            "cross_entropy": 1.9160898241100972,
+            "objective": 1.9160898241100972,
+            "update": 0
+          },
+          {
+            "cross_entropy": 1.725903436150058,
+            "objective": 1.7259316396469206,
+            "update": 32
+          },
+          {
+            "cross_entropy": 1.6261281956145448,
+            "objective": 1.6262135580609098,
+            "update": 64
+          },
+          {
+            "cross_entropy": 1.5652167927493232,
+            "objective": 1.5653688950973965,
+            "update": 96
+          },
+          {
+            "cross_entropy": 1.5259880321747297,
+            "objective": 1.5262074613984487,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 1092,
+          "path": "banks/snapshots_i21/gate_weights.npz",
+          "sha256": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f"
+        }
+      },
+      "init_seed": 21,
+      "kind": "snapshots"
+    },
+    {
+      "bank_id": "duplicate_slots_i21",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 582449,
+          "path": "banks/duplicate_slots_i21/gate_fit_experts.npz",
+          "sha256": "81599c80a9c27b4654c8a626b7657367052c44be95935b6b1260b9e2d68ff717"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 120,
+        "trace": [
+          {
+            "cross_entropy": 3.390166250873257,
+            "objective": 3.390166250873257,
+            "update": 0
+          },
+          {
+            "cross_entropy": 3.2912952430487947,
+            "objective": 3.2913094923467883,
+            "update": 32
+          },
+          {
+            "cross_entropy": 3.2421693068079445,
+            "objective": 3.2422115291438987,
+            "update": 64
+          },
+          {
+            "cross_entropy": 3.2105399931683927,
+            "objective": 3.2106158753901366,
+            "update": 96
+          },
+          {
+            "cross_entropy": 3.18877655966231,
+            "objective": 3.1888878782273253,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 691,
+          "path": "banks/duplicate_slots_i21/gate_weights.npz",
+          "sha256": "3196c30da55c8cef90ce68cdc9253f64aaa0ff3b8d1fd9aebd3353e8d694c74e"
+        }
+      },
+      "init_seed": 21,
+      "kind": "duplicate_slots"
+    },
+    {
+      "bank_id": "single_final_i21",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "fit_gate": false,
+      "init_seed": 21,
+      "kind": "single_final"
+    },
+    {
+      "bank_id": "adaptive_novelty_i21",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 588543,
+          "path": "banks/adaptive_novelty_i21/gate_fit_experts.npz",
+          "sha256": "63bab6ad34087312baece29b13e51535ae9a14375cec55fb8dbe6eea92ee70d6"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 120,
+        "trace": [
+          {
+            "cross_entropy": 1.9160898241100972,
+            "objective": 1.9160898241100972,
+            "update": 0
+          },
+          {
+            "cross_entropy": 1.725903436150058,
+            "objective": 1.7259316396469206,
+            "update": 32
+          },
+          {
+            "cross_entropy": 1.6261281956145448,
+            "objective": 1.6262135580609098,
+            "update": 64
+          },
+          {
+            "cross_entropy": 1.5652167927493232,
+            "objective": 1.5653688950973965,
+            "update": 96
+          },
+          {
+            "cross_entropy": 1.5259880321747297,
+            "objective": 1.5262074613984487,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 1092,
+          "path": "banks/adaptive_novelty_i21/gate_weights.npz",
+          "sha256": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f"
+        }
+      },
+      "init_seed": 21,
+      "kind": "adaptive_novelty"
+    },
+    {
+      "bank_id": "adaptive_resonance_i21",
+      "experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_resonance_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "fit_gate": true,
+      "gate": {
+        "data": [
+          {
+            "bytes": 8503,
+            "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+            "n": 512,
+            "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+            "sampling_seed": 62011,
+            "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 0
+          },
+          {
+            "bytes": 8505,
+            "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+            "n": 512,
+            "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+            "sampling_seed": 62111,
+            "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 1
+          },
+          {
+            "bytes": 8436,
+            "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+            "n": 512,
+            "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+            "sampling_seed": 62211,
+            "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+            "split": "train",
+            "split_seed": 0,
+            "topic": 2
+          }
+        ],
+        "expert_outputs": {
+          "bytes": 393135,
+          "path": "banks/adaptive_resonance_i21/gate_fit_experts.npz",
+          "sha256": "b55b34bfc0b1fa870e49728400d84017fbd839d18e57f99b191d0d83ed321588"
+        },
+        "final_test_accessed": false,
+        "l2": 0.0001,
+        "learning_rate": 0.1,
+        "parameter_count": 80,
+        "trace": [
+          {
+            "cross_entropy": 3.281423841457231,
+            "objective": 3.281423841457231,
+            "update": 0
+          },
+          {
+            "cross_entropy": 3.180693935038184,
+            "objective": 3.1807084409339526,
+            "update": 32
+          },
+          {
+            "cross_entropy": 3.137320053992197,
+            "objective": 3.1373610653448485,
+            "update": 64
+          },
+          {
+            "cross_entropy": 3.113012357002836,
+            "objective": 3.113082162582302,
+            "update": 96
+          },
+          {
+            "cross_entropy": 3.0978959313812595,
+            "objective": 3.097993742314386,
+            "update": 128
+          }
+        ],
+        "updates": 128,
+        "weights": {
+          "bytes": 622,
+          "path": "banks/adaptive_resonance_i21/gate_weights.npz",
+          "sha256": "f0f50fa76f90c8ee49a45f4a5220006e9463daf4fe2d234cb81cd5ff8e3fbb7c"
+        }
+      },
+      "init_seed": 21,
+      "kind": "adaptive_resonance"
+    }
+  ],
+  "controller_source": {
+    ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+    "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+    "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+    "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+    "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+    "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+    "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+    "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+    "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+    "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+    "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+    "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+    "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+    "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+    "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+    "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+    "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+    "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+    "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+    "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+    "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+    "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+    "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+    "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+    "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+    "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+    "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+  },
+  "preallocation_checks": [
+    {
+      "init_seed": 20,
+      "kind": "construction_equivalence_not_replication",
+      "ordered_tensor_sha256": [
+        "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589",
+        "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50",
+        "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+      ],
+      "same_physical_storage_bytes_claimed": false,
+      "status": "verified"
+    },
+    {
+      "init_seed": 21,
+      "kind": "construction_equivalence_not_replication",
+      "ordered_tensor_sha256": [
+        "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516",
+        "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b",
+        "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+      ],
+      "same_physical_storage_bytes_claimed": false,
+      "status": "verified"
+    }
+  ],
+  "source": {
+    "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "historical_files_expected": 8,
+    "historical_files_verified": 7,
+    "provenance_implementation": "scripts/research_ablations.py:source_record",
+    "recovery_manifest": {
+      "path": "docs/research/06_recovery_manifest.json",
+      "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+    },
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    },
+    "unavailable_expected_sha256": {
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+    },
+    "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+  },
+  "trajectories": [
+    {
+      "config": {
+        "batch_size": 64,
+        "gradient_clip": 1,
+        "init_seed": 20,
+        "learning_rate": 0.003,
+        "optimizer_reset_each_stage": true,
+        "policy": "fixed_sequential",
+        "reinjection": true,
+        "school_weight": 0.3,
+        "split_seed": 0,
+        "stage_updates": 512,
+        "steps": 16,
+        "topics": [
+          0,
+          1,
+          2
+        ],
+        "trajectory_id": "fixed_sequential_i20",
+        "tying": true,
+        "weight_decay": 0.0001
+      },
+      "controller_source": {
+        ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+        "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+        "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+        "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+        "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+        "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+        "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+        "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+        "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+        "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+        "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+        "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+        "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+        "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+        "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+        "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+        "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+        "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+        "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+        "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+        "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+        "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+        "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+        "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+        "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+      },
+      "expert_count": 3,
+      "final_experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+          "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+          "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "final_test_accessed": false,
+      "optimizer_updates": 1536,
+      "source": {
+        "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+        "historical_files_expected": 8,
+        "historical_files_verified": 7,
+        "provenance_implementation": "scripts/research_ablations.py:source_record",
+        "recovery_manifest": {
+          "path": "docs/research/06_recovery_manifest.json",
+          "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+        },
+        "sha256": {
+          "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+          "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+          "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+          "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+          "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+          "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+          "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+        },
+        "unavailable_expected_sha256": {
+          "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+        },
+        "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+      },
+      "stages": [
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+            "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+            "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7713416814804077,
+              "gradient_norm_before_clip": 3.3954946994781494,
+              "objective": 1.7783255577087402,
+              "school_cross_entropy": 0.023279627785086632,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.8677077293395996,
+              "gradient_norm_before_clip": 3.1730422973632812,
+              "objective": 1.8716740608215332,
+              "school_cross_entropy": 0.013221180066466331,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.8016802072525024,
+              "gradient_norm_before_clip": 1.7963156700134277,
+              "objective": 1.804559588432312,
+              "school_cross_entropy": 0.009598134085536003,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.7576760053634644,
+              "gradient_norm_before_clip": 1.9413044452667236,
+              "objective": 1.7597620487213135,
+              "school_cross_entropy": 0.006953535135835409,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": null,
+            "scores_used": [],
+            "target_index": 0,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7745,
+            "n": 512,
+            "path": "datasets/topic0/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 112,
+              "AGENTE": 133,
+              "LUGAR": 136,
+              "PACIENTE": 131
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62010,
+            "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 0
+          },
+          "diagnostic_expert_outputs": [],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9001,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [],
+          "raw_resonance": [],
+          "stage": 0,
+          "tau_after_stage": null,
+          "topic": 0,
+          "train_sample_seed": 9002,
+          "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+          "training_seconds": 57.5636658049998
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+            "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+            "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7753171920776367,
+              "gradient_norm_before_clip": 1.7814418077468872,
+              "objective": 1.7779101133346558,
+              "school_cross_entropy": 0.008643221110105515,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.7191742658615112,
+              "gradient_norm_before_clip": 2.2782139778137207,
+              "objective": 1.721169114112854,
+              "school_cross_entropy": 0.006649605464190245,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.7336198091506958,
+              "gradient_norm_before_clip": 2.079963207244873,
+              "objective": 1.7363665103912354,
+              "school_cross_entropy": 0.009155848063528538,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.7920764684677124,
+              "gradient_norm_before_clip": 3.177778482437134,
+              "objective": 1.7964805364608765,
+              "school_cross_entropy": 0.014680170454084873,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 0,
+            "scores_used": [],
+            "target_index": 1,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7807,
+            "n": 512,
+            "path": "datasets/topic1/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 126,
+              "AGENTE": 144,
+              "LUGAR": 131,
+              "PACIENTE": 111
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62110,
+            "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 1
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 103123,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+                "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+                "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7807,
+                "n": 512,
+                "path": "datasets/topic1/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 126,
+                  "AGENTE": 144,
+                  "LUGAR": 131,
+                  "PACIENTE": 111
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62110,
+                "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 1
+              },
+              "mean_resonance": 0.7740039825439453,
+              "novelty": 0.2224392294883728,
+              "path": "trajectories/fixed_sequential_i20/stage1/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "c7ba2c0283fad538930af28ef11ad8065fa15f3cc7f698bd503d5ba182896fc8"
+            }
+          ],
+          "experts_after_stage": 2,
+          "final_test_accessed": false,
+          "firing_seed": 9101,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2224392294883728
+          ],
+          "raw_resonance": [
+            0.7740039825439453
+          ],
+          "stage": 1,
+          "tau_after_stage": null,
+          "topic": 1,
+          "train_sample_seed": 9102,
+          "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+          "training_seconds": 57.31619687700004
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/fixed_sequential_i20/stage2/weights.pt",
+            "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+            "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.4119466543197632,
+              "gradient_norm_before_clip": 3.2851552963256836,
+              "objective": 1.4205620288848877,
+              "school_cross_entropy": 0.02871801145374775,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.1807615756988525,
+              "gradient_norm_before_clip": 4.381767272949219,
+              "objective": 1.1856493949890137,
+              "school_cross_entropy": 0.01629268191754818,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.0020924806594849,
+              "gradient_norm_before_clip": 4.675288677215576,
+              "objective": 1.0090973377227783,
+              "school_cross_entropy": 0.023349663242697716,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.0818899869918823,
+              "gradient_norm_before_clip": 6.065892219543457,
+              "objective": 1.0875259637832642,
+              "school_cross_entropy": 0.018786437809467316,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 1,
+            "scores_used": [],
+            "target_index": 2,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7730,
+            "n": 512,
+            "path": "datasets/topic2/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 131,
+              "AGENTE": 139,
+              "LUGAR": 121,
+              "PACIENTE": 121
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62210,
+            "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 2
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 103663,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+                "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+                "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7818008661270142,
+              "novelty": 0.2200520783662796,
+              "path": "trajectories/fixed_sequential_i20/stage2/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "e1fddfcaf275c97ea430c158d00abeaeba3827b3029891493dfab1a2a25dc9af"
+            },
+            {
+              "bytes": 120876,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+                "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+                "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+              },
+              "expert_index": 1,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7972360849380493,
+              "novelty": 0.1853298544883728,
+              "path": "trajectories/fixed_sequential_i20/stage2/diagnostic_expert1.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "6ffa7e2d12d1720507c88507aa4b7732b732e8551744a4fbdf32bf15c15bce92"
+            }
+          ],
+          "experts_after_stage": 3,
+          "final_test_accessed": false,
+          "firing_seed": 9201,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2200520783662796,
+            0.1853298544883728
+          ],
+          "raw_resonance": [
+            0.7818008661270142,
+            0.7972360849380493
+          ],
+          "stage": 2,
+          "tau_after_stage": null,
+          "topic": 2,
+          "train_sample_seed": 9202,
+          "train_stream_sha256": "fc2462a58f750beb73b69eeac20f73bf11604a644f585358daaafe31a7540b01",
+          "training_seconds": 57.34559493300003
+        }
+      ],
+      "status": "completed",
+      "training_seconds": 172.22545761499987
+    },
+    {
+      "config": {
+        "batch_size": 64,
+        "gradient_clip": 1,
+        "init_seed": 20,
+        "learning_rate": 0.003,
+        "optimizer_reset_each_stage": true,
+        "policy": "adaptive_novelty",
+        "reinjection": true,
+        "school_weight": 0.3,
+        "split_seed": 0,
+        "stage_updates": 512,
+        "steps": 16,
+        "topics": [
+          0,
+          1,
+          2
+        ],
+        "trajectory_id": "adaptive_novelty_i20",
+        "tying": true,
+        "weight_decay": 0.0001
+      },
+      "controller_source": {
+        ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+        "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+        "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+        "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+        "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+        "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+        "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+        "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+        "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+        "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+        "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+        "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+        "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+        "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+        "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+        "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+        "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+        "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+        "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+        "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+        "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+        "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+        "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+        "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+        "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+      },
+      "expert_count": 3,
+      "final_experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i20/stage0/weights.pt",
+          "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+          "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "final_test_accessed": false,
+      "optimizer_updates": 1536,
+      "source": {
+        "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+        "historical_files_expected": 8,
+        "historical_files_verified": 7,
+        "provenance_implementation": "scripts/research_ablations.py:source_record",
+        "recovery_manifest": {
+          "path": "docs/research/06_recovery_manifest.json",
+          "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+        },
+        "sha256": {
+          "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+          "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+          "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+          "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+          "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+          "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+          "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+        },
+        "unavailable_expected_sha256": {
+          "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+        },
+        "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+      },
+      "stages": [
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_novelty_i20/stage0/weights.pt",
+            "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+            "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7713416814804077,
+              "gradient_norm_before_clip": 3.3954946994781494,
+              "objective": 1.7783255577087402,
+              "school_cross_entropy": 0.023279627785086632,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.8677077293395996,
+              "gradient_norm_before_clip": 3.1730422973632812,
+              "objective": 1.8716740608215332,
+              "school_cross_entropy": 0.013221180066466331,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.8016802072525024,
+              "gradient_norm_before_clip": 1.7963156700134277,
+              "objective": 1.804559588432312,
+              "school_cross_entropy": 0.009598134085536003,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.7576760053634644,
+              "gradient_norm_before_clip": 1.9413044452667236,
+              "objective": 1.7597620487213135,
+              "school_cross_entropy": 0.006953535135835409,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": null,
+            "scores_used": [],
+            "target_index": 0,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7745,
+            "n": 512,
+            "path": "datasets/topic0/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 112,
+              "AGENTE": 133,
+              "LUGAR": 136,
+              "PACIENTE": 131
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62010,
+            "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 0
+          },
+          "diagnostic_expert_outputs": [],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9001,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [],
+          "raw_resonance": [],
+          "stage": 0,
+          "tau_after_stage": null,
+          "topic": 0,
+          "train_sample_seed": 9002,
+          "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+          "training_seconds": 57.51368774999992
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_novelty_i20/stage1/weights.pt",
+            "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+            "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7753171920776367,
+              "gradient_norm_before_clip": 1.7814418077468872,
+              "objective": 1.7779101133346558,
+              "school_cross_entropy": 0.008643221110105515,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.7191742658615112,
+              "gradient_norm_before_clip": 2.2782139778137207,
+              "objective": 1.721169114112854,
+              "school_cross_entropy": 0.006649605464190245,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.7336198091506958,
+              "gradient_norm_before_clip": 2.079963207244873,
+              "objective": 1.7363665103912354,
+              "school_cross_entropy": 0.009155848063528538,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.7920764684677124,
+              "gradient_norm_before_clip": 3.177778482437134,
+              "objective": 1.7964805364608765,
+              "school_cross_entropy": 0.014680170454084873,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 0,
+            "scores_used": [
+              0.2224
+            ],
+            "target_index": 1,
+            "threshold": 0.1
+          },
+          "diagnostic_dataset": {
+            "bytes": 7807,
+            "n": 512,
+            "path": "datasets/topic1/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 126,
+              "AGENTE": 144,
+              "LUGAR": 131,
+              "PACIENTE": 111
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62110,
+            "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 1
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 103123,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_novelty_i20/stage0/weights.pt",
+                "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+                "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7807,
+                "n": 512,
+                "path": "datasets/topic1/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 126,
+                  "AGENTE": 144,
+                  "LUGAR": 131,
+                  "PACIENTE": 111
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62110,
+                "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 1
+              },
+              "mean_resonance": 0.7740039825439453,
+              "novelty": 0.2224392294883728,
+              "path": "trajectories/adaptive_novelty_i20/stage1/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "c7ba2c0283fad538930af28ef11ad8065fa15f3cc7f698bd503d5ba182896fc8"
+            }
+          ],
+          "experts_after_stage": 2,
+          "final_test_accessed": false,
+          "firing_seed": 9101,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2224392294883728
+          ],
+          "raw_resonance": [
+            0.7740039825439453
+          ],
+          "stage": 1,
+          "tau_after_stage": null,
+          "topic": 1,
+          "train_sample_seed": 9102,
+          "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+          "training_seconds": 57.05337264300033
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_novelty_i20/stage2/weights.pt",
+            "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+            "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.4119466543197632,
+              "gradient_norm_before_clip": 3.2851552963256836,
+              "objective": 1.4205620288848877,
+              "school_cross_entropy": 0.02871801145374775,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.1807615756988525,
+              "gradient_norm_before_clip": 4.381767272949219,
+              "objective": 1.1856493949890137,
+              "school_cross_entropy": 0.01629268191754818,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.0020924806594849,
+              "gradient_norm_before_clip": 4.675288677215576,
+              "objective": 1.0090973377227783,
+              "school_cross_entropy": 0.023349663242697716,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.0818899869918823,
+              "gradient_norm_before_clip": 6.065892219543457,
+              "objective": 1.0875259637832642,
+              "school_cross_entropy": 0.018786437809467316,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 1,
+            "scores_used": [
+              0.2201,
+              0.1853
+            ],
+            "target_index": 2,
+            "threshold": 0.1
+          },
+          "diagnostic_dataset": {
+            "bytes": 7730,
+            "n": 512,
+            "path": "datasets/topic2/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 131,
+              "AGENTE": 139,
+              "LUGAR": 121,
+              "PACIENTE": 121
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62210,
+            "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 2
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 103663,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_novelty_i20/stage0/weights.pt",
+                "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+                "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7818008661270142,
+              "novelty": 0.2200520783662796,
+              "path": "trajectories/adaptive_novelty_i20/stage2/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "e1fddfcaf275c97ea430c158d00abeaeba3827b3029891493dfab1a2a25dc9af"
+            },
+            {
+              "bytes": 120876,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_novelty_i20/stage1/weights.pt",
+                "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+                "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+              },
+              "expert_index": 1,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7972360849380493,
+              "novelty": 0.1853298544883728,
+              "path": "trajectories/adaptive_novelty_i20/stage2/diagnostic_expert1.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "6ffa7e2d12d1720507c88507aa4b7732b732e8551744a4fbdf32bf15c15bce92"
+            }
+          ],
+          "experts_after_stage": 3,
+          "final_test_accessed": false,
+          "firing_seed": 9201,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2200520783662796,
+            0.1853298544883728
+          ],
+          "raw_resonance": [
+            0.7818008661270142,
+            0.7972360849380493
+          ],
+          "stage": 2,
+          "tau_after_stage": null,
+          "topic": 2,
+          "train_sample_seed": 9202,
+          "train_stream_sha256": "fc2462a58f750beb73b69eeac20f73bf11604a644f585358daaafe31a7540b01",
+          "training_seconds": 56.280019752000044
+        }
+      ],
+      "status": "completed",
+      "training_seconds": 170.8470801450003
+    },
+    {
+      "config": {
+        "batch_size": 64,
+        "gradient_clip": 1,
+        "init_seed": 20,
+        "learning_rate": 0.003,
+        "optimizer_reset_each_stage": true,
+        "policy": "adaptive_resonance",
+        "reinjection": true,
+        "school_weight": 0.3,
+        "split_seed": 0,
+        "stage_updates": 512,
+        "steps": 16,
+        "topics": [
+          0,
+          1,
+          2
+        ],
+        "trajectory_id": "adaptive_resonance_i20",
+        "tying": true,
+        "weight_decay": 0.0001
+      },
+      "controller_source": {
+        ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+        "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+        "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+        "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+        "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+        "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+        "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+        "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+        "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+        "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+        "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+        "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+        "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+        "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+        "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+        "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+        "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+        "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+        "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+        "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+        "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+        "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+        "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+        "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+        "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+      },
+      "expert_count": 1,
+      "final_experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_resonance_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "final_test_accessed": false,
+      "optimizer_updates": 1536,
+      "source": {
+        "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+        "historical_files_expected": 8,
+        "historical_files_verified": 7,
+        "provenance_implementation": "scripts/research_ablations.py:source_record",
+        "recovery_manifest": {
+          "path": "docs/research/06_recovery_manifest.json",
+          "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+        },
+        "sha256": {
+          "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+          "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+          "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+          "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+          "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+          "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+          "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+        },
+        "unavailable_expected_sha256": {
+          "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+        },
+        "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+      },
+      "stages": [
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_resonance_i20/stage0/weights.pt",
+            "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+            "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7713416814804077,
+              "gradient_norm_before_clip": 3.3954946994781494,
+              "objective": 1.7783255577087402,
+              "school_cross_entropy": 0.023279627785086632,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.8677077293395996,
+              "gradient_norm_before_clip": 3.1730422973632812,
+              "objective": 1.8716740608215332,
+              "school_cross_entropy": 0.013221180066466331,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.8016802072525024,
+              "gradient_norm_before_clip": 1.7963156700134277,
+              "objective": 1.804559588432312,
+              "school_cross_entropy": 0.009598134085536003,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.7576760053634644,
+              "gradient_norm_before_clip": 1.9413044452667236,
+              "objective": 1.7597620487213135,
+              "school_cross_entropy": 0.006953535135835409,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": null,
+            "scores_used": [],
+            "target_index": 0,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7745,
+            "n": 512,
+            "path": "datasets/topic0/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 112,
+              "AGENTE": 133,
+              "LUGAR": 136,
+              "PACIENTE": 131
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62010,
+            "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 0
+          },
+          "diagnostic_expert_outputs": [],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9001,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": {
+            "bytes": 103223,
+            "checkpoint_after_stage": {
+              "bytes": 122296,
+              "parameter_count": 29824,
+              "path": "trajectories/adaptive_resonance_i20/stage0/weights.pt",
+              "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+              "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+            },
+            "input_dataset": {
+              "bytes": 7745,
+              "n": 512,
+              "path": "datasets/topic0/diagnostic_train.npz",
+              "query_role_counts": {
+                "ACCION": 112,
+                "AGENTE": 133,
+                "LUGAR": 136,
+                "PACIENTE": 131
+              },
+              "role_balance": "natural sampling; no forced role balance",
+              "sampling_seed": 62010,
+              "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+              "split": "train",
+              "targets_retained": false,
+              "topic": 0
+            },
+            "mean_resonance": 0.9913040399551392,
+            "novelty": 0.0006510416860692203,
+            "path": "trajectories/adaptive_resonance_i20/stage0/post_stage_a_diagnostic.npz",
+            "recount_atol": 1e-06,
+            "recount_rtol": 0.0,
+            "sha256": "c7780f46c3d0fecd77a2cffe0ce612531e0b5818cf43f16b4be1d31f4babf605"
+          },
+          "post_stage_a_mean_resonance": 0.9913040399551392,
+          "raw_novelty": [],
+          "raw_resonance": [],
+          "stage": 0,
+          "tau_after_stage": 0.7434780299663544,
+          "topic": 0,
+          "train_sample_seed": 9002,
+          "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+          "training_seconds": 55.626788777
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_resonance_i20/stage1/weights.pt",
+            "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+            "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7753171920776367,
+              "gradient_norm_before_clip": 1.7814418077468872,
+              "objective": 1.7779101133346558,
+              "school_cross_entropy": 0.008643221110105515,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.7191742658615112,
+              "gradient_norm_before_clip": 2.2782139778137207,
+              "objective": 1.721169114112854,
+              "school_cross_entropy": 0.006649605464190245,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.7336198091506958,
+              "gradient_norm_before_clip": 2.079963207244873,
+              "objective": 1.7363665103912354,
+              "school_cross_entropy": 0.009155848063528538,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.7920764684677124,
+              "gradient_norm_before_clip": 3.177778482437134,
+              "objective": 1.7964805364608765,
+              "school_cross_entropy": 0.014680170454084873,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "update",
+            "parent": 0,
+            "scores_used": [
+              0.774
+            ],
+            "target_index": 0,
+            "threshold": 0.7434780299663544
+          },
+          "diagnostic_dataset": {
+            "bytes": 7807,
+            "n": 512,
+            "path": "datasets/topic1/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 126,
+              "AGENTE": 144,
+              "LUGAR": 131,
+              "PACIENTE": 111
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62110,
+            "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 1
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 103123,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_resonance_i20/stage0/weights.pt",
+                "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+                "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7807,
+                "n": 512,
+                "path": "datasets/topic1/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 126,
+                  "AGENTE": 144,
+                  "LUGAR": 131,
+                  "PACIENTE": 111
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62110,
+                "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 1
+              },
+              "mean_resonance": 0.7740039825439453,
+              "novelty": 0.2224392294883728,
+              "path": "trajectories/adaptive_resonance_i20/stage1/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "c7ba2c0283fad538930af28ef11ad8065fa15f3cc7f698bd503d5ba182896fc8"
+            }
+          ],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9101,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2224392294883728
+          ],
+          "raw_resonance": [
+            0.7740039825439453
+          ],
+          "stage": 1,
+          "tau_after_stage": 0.7434780299663544,
+          "topic": 1,
+          "train_sample_seed": 9102,
+          "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+          "training_seconds": 55.629028272999676
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_resonance_i20/stage2/weights.pt",
+            "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+            "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.4119466543197632,
+              "gradient_norm_before_clip": 3.2851552963256836,
+              "objective": 1.4205620288848877,
+              "school_cross_entropy": 0.02871801145374775,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.1807615756988525,
+              "gradient_norm_before_clip": 4.381767272949219,
+              "objective": 1.1856493949890137,
+              "school_cross_entropy": 0.01629268191754818,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.0020924806594849,
+              "gradient_norm_before_clip": 4.675288677215576,
+              "objective": 1.0090973377227783,
+              "school_cross_entropy": 0.023349663242697716,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.0818899869918823,
+              "gradient_norm_before_clip": 6.065892219543457,
+              "objective": 1.0875259637832642,
+              "school_cross_entropy": 0.018786437809467316,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "update",
+            "parent": 0,
+            "scores_used": [
+              0.7972
+            ],
+            "target_index": 0,
+            "threshold": 0.7434780299663544
+          },
+          "diagnostic_dataset": {
+            "bytes": 7730,
+            "n": 512,
+            "path": "datasets/topic2/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 131,
+              "AGENTE": 139,
+              "LUGAR": 121,
+              "PACIENTE": 121
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62210,
+            "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 2
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 120876,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_resonance_i20/stage1/weights.pt",
+                "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+                "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7972360849380493,
+              "novelty": 0.1853298544883728,
+              "path": "trajectories/adaptive_resonance_i20/stage2/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "6ffa7e2d12d1720507c88507aa4b7732b732e8551744a4fbdf32bf15c15bce92"
+            }
+          ],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9201,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.1853298544883728
+          ],
+          "raw_resonance": [
+            0.7972360849380493
+          ],
+          "stage": 2,
+          "tau_after_stage": 0.7434780299663544,
+          "topic": 2,
+          "train_sample_seed": 9202,
+          "train_stream_sha256": "fc2462a58f750beb73b69eeac20f73bf11604a644f585358daaafe31a7540b01",
+          "training_seconds": 55.66894175499965
+        }
+      ],
+      "status": "completed",
+      "training_seconds": 166.92475880499933
+    },
+    {
+      "config": {
+        "batch_size": 64,
+        "gradient_clip": 1,
+        "init_seed": 21,
+        "learning_rate": 0.003,
+        "optimizer_reset_each_stage": true,
+        "policy": "fixed_sequential",
+        "reinjection": true,
+        "school_weight": 0.3,
+        "split_seed": 0,
+        "stage_updates": 512,
+        "steps": 16,
+        "topics": [
+          0,
+          1,
+          2
+        ],
+        "trajectory_id": "fixed_sequential_i21",
+        "tying": true,
+        "weight_decay": 0.0001
+      },
+      "controller_source": {
+        ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+        "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+        "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+        "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+        "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+        "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+        "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+        "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+        "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+        "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+        "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+        "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+        "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+        "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+        "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+        "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+        "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+        "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+        "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+        "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+        "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+        "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+        "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+        "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+        "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+      },
+      "expert_count": 3,
+      "final_experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "final_test_accessed": false,
+      "optimizer_updates": 1536,
+      "source": {
+        "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+        "historical_files_expected": 8,
+        "historical_files_verified": 7,
+        "provenance_implementation": "scripts/research_ablations.py:source_record",
+        "recovery_manifest": {
+          "path": "docs/research/06_recovery_manifest.json",
+          "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+        },
+        "sha256": {
+          "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+          "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+          "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+          "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+          "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+          "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+          "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+        },
+        "unavailable_expected_sha256": {
+          "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+        },
+        "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+      },
+      "stages": [
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+            "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+            "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.9006669521331787,
+              "gradient_norm_before_clip": 5.570276260375977,
+              "objective": 1.9063752889633179,
+              "school_cross_entropy": 0.019027698785066605,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.8166719675064087,
+              "gradient_norm_before_clip": 3.5319433212280273,
+              "objective": 1.8205561637878418,
+              "school_cross_entropy": 0.012947415933012962,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.883772850036621,
+              "gradient_norm_before_clip": 3.0964248180389404,
+              "objective": 1.8862268924713135,
+              "school_cross_entropy": 0.008180172182619572,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.8665624856948853,
+              "gradient_norm_before_clip": 3.492872953414917,
+              "objective": 1.8732964992523193,
+              "school_cross_entropy": 0.022446833550930023,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": null,
+            "scores_used": [],
+            "target_index": 0,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7745,
+            "n": 512,
+            "path": "datasets/topic0/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 112,
+              "AGENTE": 133,
+              "LUGAR": 136,
+              "PACIENTE": 131
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62010,
+            "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 0
+          },
+          "diagnostic_expert_outputs": [],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9001,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [],
+          "raw_resonance": [],
+          "stage": 0,
+          "tau_after_stage": null,
+          "topic": 0,
+          "train_sample_seed": 9002,
+          "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+          "training_seconds": 56.26165119699999
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+            "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+            "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7237458229064941,
+              "gradient_norm_before_clip": 3.0066139698028564,
+              "objective": 1.7292038202285767,
+              "school_cross_entropy": 0.01819339022040367,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.4867414236068726,
+              "gradient_norm_before_clip": 1.7834914922714233,
+              "objective": 1.4909476041793823,
+              "school_cross_entropy": 0.014020447619259357,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.6612019538879395,
+              "gradient_norm_before_clip": 6.0745015144348145,
+              "objective": 1.6652369499206543,
+              "school_cross_entropy": 0.013450106605887413,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.422574520111084,
+              "gradient_norm_before_clip": 3.8265678882598877,
+              "objective": 1.428942322731018,
+              "school_cross_entropy": 0.02122615836560726,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 0,
+            "scores_used": [],
+            "target_index": 1,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7807,
+            "n": 512,
+            "path": "datasets/topic1/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 126,
+              "AGENTE": 144,
+              "LUGAR": 131,
+              "PACIENTE": 111
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62110,
+            "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 1
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 123828,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+                "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+                "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7807,
+                "n": 512,
+                "path": "datasets/topic1/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 126,
+                  "AGENTE": 144,
+                  "LUGAR": 131,
+                  "PACIENTE": 111
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62110,
+                "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 1
+              },
+              "mean_resonance": 0.6908898949623108,
+              "novelty": 0.2977430522441864,
+              "path": "trajectories/fixed_sequential_i21/stage1/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c"
+            }
+          ],
+          "experts_after_stage": 2,
+          "final_test_accessed": false,
+          "firing_seed": 9101,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2977430522441864
+          ],
+          "raw_resonance": [
+            0.6908898949623108
+          ],
+          "stage": 1,
+          "tau_after_stage": null,
+          "topic": 1,
+          "train_sample_seed": 9102,
+          "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+          "training_seconds": 56.36875365600008
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/fixed_sequential_i21/stage2/weights.pt",
+            "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+            "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.2933087348937988,
+              "gradient_norm_before_clip": 4.930075168609619,
+              "objective": 1.2982220649719238,
+              "school_cross_entropy": 0.0163777694106102,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.1714391708374023,
+              "gradient_norm_before_clip": 5.0160417556762695,
+              "objective": 1.1764438152313232,
+              "school_cross_entropy": 0.016682079061865807,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 0.8945098519325256,
+              "gradient_norm_before_clip": 4.278003215789795,
+              "objective": 0.8982352614402771,
+              "school_cross_entropy": 0.012418053112924099,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 0.8947188258171082,
+              "gradient_norm_before_clip": 3.1949594020843506,
+              "objective": 0.9001622200012207,
+              "school_cross_entropy": 0.018144719302654266,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 1,
+            "scores_used": [],
+            "target_index": 2,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7730,
+            "n": 512,
+            "path": "datasets/topic2/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 131,
+              "AGENTE": 139,
+              "LUGAR": 121,
+              "PACIENTE": 121
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62210,
+            "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 2
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 123430,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+                "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+                "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.6933057904243469,
+              "novelty": 0.2888454794883728,
+              "path": "trajectories/fixed_sequential_i21/stage2/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "78336601d89d09d8b78d798b223cdfd2558c551108da7133567bd3a2d74ce1d6"
+            },
+            {
+              "bytes": 122843,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+                "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+                "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+              },
+              "expert_index": 1,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7522504329681396,
+              "novelty": 0.2445746511220932,
+              "path": "trajectories/fixed_sequential_i21/stage2/diagnostic_expert1.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "65ed0065f32eb110d7180a663c670348c986e50b8111de75668796afe8eefb1d"
+            }
+          ],
+          "experts_after_stage": 3,
+          "final_test_accessed": false,
+          "firing_seed": 9201,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2888454794883728,
+            0.2445746511220932
+          ],
+          "raw_resonance": [
+            0.6933057904243469,
+            0.7522504329681396
+          ],
+          "stage": 2,
+          "tau_after_stage": null,
+          "topic": 2,
+          "train_sample_seed": 9202,
+          "train_stream_sha256": "fc2462a58f750beb73b69eeac20f73bf11604a644f585358daaafe31a7540b01",
+          "training_seconds": 55.92844502400021
+        }
+      ],
+      "status": "completed",
+      "training_seconds": 168.55884987700028
+    },
+    {
+      "config": {
+        "batch_size": 64,
+        "gradient_clip": 1,
+        "init_seed": 21,
+        "learning_rate": 0.003,
+        "optimizer_reset_each_stage": true,
+        "policy": "adaptive_novelty",
+        "reinjection": true,
+        "school_weight": 0.3,
+        "split_seed": 0,
+        "stage_updates": 512,
+        "steps": 16,
+        "topics": [
+          0,
+          1,
+          2
+        ],
+        "trajectory_id": "adaptive_novelty_i21",
+        "tying": true,
+        "weight_decay": 0.0001
+      },
+      "controller_source": {
+        ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+        "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+        "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+        "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+        "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+        "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+        "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+        "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+        "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+        "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+        "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+        "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+        "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+        "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+        "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+        "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+        "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+        "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+        "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+        "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+        "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+        "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+        "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+        "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+        "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+      },
+      "expert_count": 3,
+      "final_experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_novelty_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "final_test_accessed": false,
+      "optimizer_updates": 1536,
+      "source": {
+        "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+        "historical_files_expected": 8,
+        "historical_files_verified": 7,
+        "provenance_implementation": "scripts/research_ablations.py:source_record",
+        "recovery_manifest": {
+          "path": "docs/research/06_recovery_manifest.json",
+          "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+        },
+        "sha256": {
+          "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+          "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+          "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+          "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+          "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+          "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+          "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+        },
+        "unavailable_expected_sha256": {
+          "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+        },
+        "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+      },
+      "stages": [
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_novelty_i21/stage0/weights.pt",
+            "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+            "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.9006669521331787,
+              "gradient_norm_before_clip": 5.570276260375977,
+              "objective": 1.9063752889633179,
+              "school_cross_entropy": 0.019027698785066605,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.8166719675064087,
+              "gradient_norm_before_clip": 3.5319433212280273,
+              "objective": 1.8205561637878418,
+              "school_cross_entropy": 0.012947415933012962,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.883772850036621,
+              "gradient_norm_before_clip": 3.0964248180389404,
+              "objective": 1.8862268924713135,
+              "school_cross_entropy": 0.008180172182619572,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.8665624856948853,
+              "gradient_norm_before_clip": 3.492872953414917,
+              "objective": 1.8732964992523193,
+              "school_cross_entropy": 0.022446833550930023,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": null,
+            "scores_used": [],
+            "target_index": 0,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7745,
+            "n": 512,
+            "path": "datasets/topic0/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 112,
+              "AGENTE": 133,
+              "LUGAR": 136,
+              "PACIENTE": 131
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62010,
+            "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 0
+          },
+          "diagnostic_expert_outputs": [],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9001,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [],
+          "raw_resonance": [],
+          "stage": 0,
+          "tau_after_stage": null,
+          "topic": 0,
+          "train_sample_seed": 9002,
+          "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+          "training_seconds": 55.851225499000066
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_novelty_i21/stage1/weights.pt",
+            "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+            "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7237458229064941,
+              "gradient_norm_before_clip": 3.0066139698028564,
+              "objective": 1.7292038202285767,
+              "school_cross_entropy": 0.01819339022040367,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.4867414236068726,
+              "gradient_norm_before_clip": 1.7834914922714233,
+              "objective": 1.4909476041793823,
+              "school_cross_entropy": 0.014020447619259357,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.6612019538879395,
+              "gradient_norm_before_clip": 6.0745015144348145,
+              "objective": 1.6652369499206543,
+              "school_cross_entropy": 0.013450106605887413,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.422574520111084,
+              "gradient_norm_before_clip": 3.8265678882598877,
+              "objective": 1.428942322731018,
+              "school_cross_entropy": 0.02122615836560726,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 0,
+            "scores_used": [
+              0.2977
+            ],
+            "target_index": 1,
+            "threshold": 0.1
+          },
+          "diagnostic_dataset": {
+            "bytes": 7807,
+            "n": 512,
+            "path": "datasets/topic1/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 126,
+              "AGENTE": 144,
+              "LUGAR": 131,
+              "PACIENTE": 111
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62110,
+            "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 1
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 123828,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_novelty_i21/stage0/weights.pt",
+                "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+                "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7807,
+                "n": 512,
+                "path": "datasets/topic1/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 126,
+                  "AGENTE": 144,
+                  "LUGAR": 131,
+                  "PACIENTE": 111
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62110,
+                "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 1
+              },
+              "mean_resonance": 0.6908898949623108,
+              "novelty": 0.2977430522441864,
+              "path": "trajectories/adaptive_novelty_i21/stage1/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c"
+            }
+          ],
+          "experts_after_stage": 2,
+          "final_test_accessed": false,
+          "firing_seed": 9101,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2977430522441864
+          ],
+          "raw_resonance": [
+            0.6908898949623108
+          ],
+          "stage": 1,
+          "tau_after_stage": null,
+          "topic": 1,
+          "train_sample_seed": 9102,
+          "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+          "training_seconds": 55.45290637400012
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_novelty_i21/stage2/weights.pt",
+            "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+            "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.2933087348937988,
+              "gradient_norm_before_clip": 4.930075168609619,
+              "objective": 1.2982220649719238,
+              "school_cross_entropy": 0.0163777694106102,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.1714391708374023,
+              "gradient_norm_before_clip": 5.0160417556762695,
+              "objective": 1.1764438152313232,
+              "school_cross_entropy": 0.016682079061865807,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 0.8945098519325256,
+              "gradient_norm_before_clip": 4.278003215789795,
+              "objective": 0.8982352614402771,
+              "school_cross_entropy": 0.012418053112924099,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 0.8947188258171082,
+              "gradient_norm_before_clip": 3.1949594020843506,
+              "objective": 0.9001622200012207,
+              "school_cross_entropy": 0.018144719302654266,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 1,
+            "scores_used": [
+              0.2888,
+              0.2446
+            ],
+            "target_index": 2,
+            "threshold": 0.1
+          },
+          "diagnostic_dataset": {
+            "bytes": 7730,
+            "n": 512,
+            "path": "datasets/topic2/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 131,
+              "AGENTE": 139,
+              "LUGAR": 121,
+              "PACIENTE": 121
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62210,
+            "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 2
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 123430,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_novelty_i21/stage0/weights.pt",
+                "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+                "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.6933057904243469,
+              "novelty": 0.2888454794883728,
+              "path": "trajectories/adaptive_novelty_i21/stage2/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "78336601d89d09d8b78d798b223cdfd2558c551108da7133567bd3a2d74ce1d6"
+            },
+            {
+              "bytes": 122843,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_novelty_i21/stage1/weights.pt",
+                "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+                "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+              },
+              "expert_index": 1,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7522504329681396,
+              "novelty": 0.2445746511220932,
+              "path": "trajectories/adaptive_novelty_i21/stage2/diagnostic_expert1.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "65ed0065f32eb110d7180a663c670348c986e50b8111de75668796afe8eefb1d"
+            }
+          ],
+          "experts_after_stage": 3,
+          "final_test_accessed": false,
+          "firing_seed": 9201,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2888454794883728,
+            0.2445746511220932
+          ],
+          "raw_resonance": [
+            0.6933057904243469,
+            0.7522504329681396
+          ],
+          "stage": 2,
+          "tau_after_stage": null,
+          "topic": 2,
+          "train_sample_seed": 9202,
+          "train_stream_sha256": "fc2462a58f750beb73b69eeac20f73bf11604a644f585358daaafe31a7540b01",
+          "training_seconds": 55.89227545799986
+        }
+      ],
+      "status": "completed",
+      "training_seconds": 167.19640733100005
+    },
+    {
+      "config": {
+        "batch_size": 64,
+        "gradient_clip": 1,
+        "init_seed": 21,
+        "learning_rate": 0.003,
+        "optimizer_reset_each_stage": true,
+        "policy": "adaptive_resonance",
+        "reinjection": true,
+        "school_weight": 0.3,
+        "split_seed": 0,
+        "stage_updates": 512,
+        "steps": 16,
+        "topics": [
+          0,
+          1,
+          2
+        ],
+        "trajectory_id": "adaptive_resonance_i21",
+        "tying": true,
+        "weight_decay": 0.0001
+      },
+      "controller_source": {
+        ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+        "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+        "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+        "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+        "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+        "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+        "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+        "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+        "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+        "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+        "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+        "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+        "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+        "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+        "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+        "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+        "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+        "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+        "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+        "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+        "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+        "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+        "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+        "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+        "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+      },
+      "expert_count": 2,
+      "final_experts": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/adaptive_resonance_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "final_test_accessed": false,
+      "optimizer_updates": 1536,
+      "source": {
+        "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+        "historical_files_expected": 8,
+        "historical_files_verified": 7,
+        "provenance_implementation": "scripts/research_ablations.py:source_record",
+        "recovery_manifest": {
+          "path": "docs/research/06_recovery_manifest.json",
+          "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+        },
+        "sha256": {
+          "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+          "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+          "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+          "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+          "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+          "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+          "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+        },
+        "unavailable_expected_sha256": {
+          "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+        },
+        "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+      },
+      "stages": [
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+            "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+            "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.9006669521331787,
+              "gradient_norm_before_clip": 5.570276260375977,
+              "objective": 1.9063752889633179,
+              "school_cross_entropy": 0.019027698785066605,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.8166719675064087,
+              "gradient_norm_before_clip": 3.5319433212280273,
+              "objective": 1.8205561637878418,
+              "school_cross_entropy": 0.012947415933012962,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.883772850036621,
+              "gradient_norm_before_clip": 3.0964248180389404,
+              "objective": 1.8862268924713135,
+              "school_cross_entropy": 0.008180172182619572,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.8665624856948853,
+              "gradient_norm_before_clip": 3.492872953414917,
+              "objective": 1.8732964992523193,
+              "school_cross_entropy": 0.022446833550930023,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": null,
+            "scores_used": [],
+            "target_index": 0,
+            "threshold": null
+          },
+          "diagnostic_dataset": {
+            "bytes": 7745,
+            "n": 512,
+            "path": "datasets/topic0/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 112,
+              "AGENTE": 133,
+              "LUGAR": 136,
+              "PACIENTE": 131
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62010,
+            "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 0
+          },
+          "diagnostic_expert_outputs": [],
+          "experts_after_stage": 1,
+          "final_test_accessed": false,
+          "firing_seed": 9001,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": {
+            "bytes": 123445,
+            "checkpoint_after_stage": {
+              "bytes": 122296,
+              "parameter_count": 29824,
+              "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+              "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+              "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+            },
+            "input_dataset": {
+              "bytes": 7745,
+              "n": 512,
+              "path": "datasets/topic0/diagnostic_train.npz",
+              "query_role_counts": {
+                "ACCION": 112,
+                "AGENTE": 133,
+                "LUGAR": 136,
+                "PACIENTE": 131
+              },
+              "role_balance": "natural sampling; no forced role balance",
+              "sampling_seed": 62010,
+              "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+              "split": "train",
+              "targets_retained": false,
+              "topic": 0
+            },
+            "mean_resonance": 0.924609899520874,
+            "novelty": 0.056640625,
+            "path": "trajectories/adaptive_resonance_i21/stage0/post_stage_a_diagnostic.npz",
+            "recount_atol": 1e-06,
+            "recount_rtol": 0.0,
+            "sha256": "f8d8da7d4ba633c3870c66ef9bacc449a993a75b595b94517cb2f745ce232542"
+          },
+          "post_stage_a_mean_resonance": 0.924609899520874,
+          "raw_novelty": [],
+          "raw_resonance": [],
+          "stage": 0,
+          "tau_after_stage": 0.6934574246406555,
+          "topic": 0,
+          "train_sample_seed": 9002,
+          "train_stream_sha256": "d5ffa79000ed9e1cb5683d1d321fd7aaecf14fd426134b0181d36c236ac2aaf1",
+          "training_seconds": 56.12138655099989
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_resonance_i21/stage1/weights.pt",
+            "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+            "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.7237458229064941,
+              "gradient_norm_before_clip": 3.0066139698028564,
+              "objective": 1.7292038202285767,
+              "school_cross_entropy": 0.01819339022040367,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.4867414236068726,
+              "gradient_norm_before_clip": 1.7834914922714233,
+              "objective": 1.4909476041793823,
+              "school_cross_entropy": 0.014020447619259357,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 1.6612019538879395,
+              "gradient_norm_before_clip": 6.0745015144348145,
+              "objective": 1.6652369499206543,
+              "school_cross_entropy": 0.013450106605887413,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 1.422574520111084,
+              "gradient_norm_before_clip": 3.8265678882598877,
+              "objective": 1.428942322731018,
+              "school_cross_entropy": 0.02122615836560726,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "create",
+            "parent": 0,
+            "scores_used": [
+              0.6909
+            ],
+            "target_index": 1,
+            "threshold": 0.6934574246406555
+          },
+          "diagnostic_dataset": {
+            "bytes": 7807,
+            "n": 512,
+            "path": "datasets/topic1/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 126,
+              "AGENTE": 144,
+              "LUGAR": 131,
+              "PACIENTE": 111
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62110,
+            "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 1
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 123828,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+                "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+                "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7807,
+                "n": 512,
+                "path": "datasets/topic1/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 126,
+                  "AGENTE": 144,
+                  "LUGAR": 131,
+                  "PACIENTE": 111
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62110,
+                "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 1
+              },
+              "mean_resonance": 0.6908898949623108,
+              "novelty": 0.2977430522441864,
+              "path": "trajectories/adaptive_resonance_i21/stage1/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c"
+            }
+          ],
+          "experts_after_stage": 2,
+          "final_test_accessed": false,
+          "firing_seed": 9101,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2977430522441864
+          ],
+          "raw_resonance": [
+            0.6908898949623108
+          ],
+          "stage": 1,
+          "tau_after_stage": 0.6934574246406555,
+          "topic": 1,
+          "train_sample_seed": 9102,
+          "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+          "training_seconds": 55.88878581100016
+        },
+        {
+          "checkpoint": {
+            "bytes": 122296,
+            "parameter_count": 29824,
+            "path": "trajectories/adaptive_resonance_i21/stage2/weights.pt",
+            "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+            "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+          },
+          "curve": [
+            {
+              "answer_cross_entropy": 1.2933087348937988,
+              "gradient_norm_before_clip": 4.930075168609619,
+              "objective": 1.2982220649719238,
+              "school_cross_entropy": 0.0163777694106102,
+              "update": 128
+            },
+            {
+              "answer_cross_entropy": 1.1714391708374023,
+              "gradient_norm_before_clip": 5.0160417556762695,
+              "objective": 1.1764438152313232,
+              "school_cross_entropy": 0.016682079061865807,
+              "update": 256
+            },
+            {
+              "answer_cross_entropy": 0.8945098519325256,
+              "gradient_norm_before_clip": 4.278003215789795,
+              "objective": 0.8982352614402771,
+              "school_cross_entropy": 0.012418053112924099,
+              "update": 384
+            },
+            {
+              "answer_cross_entropy": 0.8947188258171082,
+              "gradient_norm_before_clip": 3.1949594020843506,
+              "objective": 0.9001622200012207,
+              "school_cross_entropy": 0.018144719302654266,
+              "update": 512
+            }
+          ],
+          "decision": {
+            "action": "update",
+            "parent": 1,
+            "scores_used": [
+              0.6933,
+              0.7523
+            ],
+            "target_index": 1,
+            "threshold": 0.6934574246406555
+          },
+          "diagnostic_dataset": {
+            "bytes": 7730,
+            "n": 512,
+            "path": "datasets/topic2/diagnostic_train.npz",
+            "query_role_counts": {
+              "ACCION": 131,
+              "AGENTE": 139,
+              "LUGAR": 121,
+              "PACIENTE": 121
+            },
+            "role_balance": "natural sampling; no forced role balance",
+            "sampling_seed": 62210,
+            "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+            "split": "train",
+            "targets_retained": false,
+            "topic": 2
+          },
+          "diagnostic_expert_outputs": [
+            {
+              "bytes": 123430,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+                "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+                "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+              },
+              "expert_index": 0,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.6933057904243469,
+              "novelty": 0.2888454794883728,
+              "path": "trajectories/adaptive_resonance_i21/stage2/diagnostic_expert0.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "78336601d89d09d8b78d798b223cdfd2558c551108da7133567bd3a2d74ce1d6"
+            },
+            {
+              "bytes": 122843,
+              "checkpoint_before_intervention": {
+                "bytes": 122296,
+                "parameter_count": 29824,
+                "path": "trajectories/adaptive_resonance_i21/stage1/weights.pt",
+                "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+                "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+              },
+              "expert_index": 1,
+              "input_dataset": {
+                "bytes": 7730,
+                "n": 512,
+                "path": "datasets/topic2/diagnostic_train.npz",
+                "query_role_counts": {
+                  "ACCION": 131,
+                  "AGENTE": 139,
+                  "LUGAR": 121,
+                  "PACIENTE": 121
+                },
+                "role_balance": "natural sampling; no forced role balance",
+                "sampling_seed": 62210,
+                "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+                "split": "train",
+                "targets_retained": false,
+                "topic": 2
+              },
+              "mean_resonance": 0.7522504329681396,
+              "novelty": 0.2445746511220932,
+              "path": "trajectories/adaptive_resonance_i21/stage2/diagnostic_expert1.npz",
+              "recount_atol": 1e-06,
+              "recount_rtol": 0.0,
+              "sha256": "65ed0065f32eb110d7180a663c670348c986e50b8111de75668796afe8eefb1d"
+            }
+          ],
+          "experts_after_stage": 2,
+          "final_test_accessed": false,
+          "firing_seed": 9201,
+          "optimizer_updates": 512,
+          "post_stage_a_diagnostic": null,
+          "post_stage_a_mean_resonance": null,
+          "raw_novelty": [
+            0.2888454794883728,
+            0.2445746511220932
+          ],
+          "raw_resonance": [
+            0.6933057904243469,
+            0.7522504329681396
+          ],
+          "stage": 2,
+          "tau_after_stage": 0.6934574246406555,
+          "topic": 2,
+          "train_sample_seed": 9202,
+          "train_stream_sha256": "fc2462a58f750beb73b69eeac20f73bf11604a644f585358daaafe31a7540b01",
+          "training_seconds": 55.813166369999635
+        }
+      ],
+      "status": "completed",
+      "training_seconds": 167.82333873199968
+    }
+  ]
+}

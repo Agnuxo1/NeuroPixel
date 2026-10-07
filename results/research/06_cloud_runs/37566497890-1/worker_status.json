@@ -8,7 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
-  "last_heartbeat_at_utc": "2026-10-07T05:13:30.380576+00:00",
+  "last_heartbeat_at_utc": "2026-10-07T05:15:32.813528+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -692,6 +692,18 @@
       "available_ram_gib": 14.272956848144531,
       "cpu_count_logical": 4,
       "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:14:32.806230+00:00",
+      "available_ram_gib": 14.288005828857422,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:15:32.813528+00:00",
+      "available_ram_gib": 14.334663391113281,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
     }
   ],
   "run_key": "37566497890-1",
@@ -779,10 +791,13 @@
         "--output",
         "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/growth"
       ],
+      "completed_at_utc": "2026-10-07T05:15:47.816259+00:00",
       "log": "logs/growth.log",
+      "log_sha256": "b8eb93090d5c2e222ccbf681cf873253b37a21aaa8055efcae5865b0f14dda1c",
       "name": "growth",
+      "returncode": 0,
       "started_at_utc": "2026-10-07T04:58:25.727275+00:00",
-      "status": "running"
+      "status": "completed"
     }
   ]
 }

@@ -423,5 +423,566 @@
     "experts": 3,
     "stage": 2,
     "trajectory": "adaptive_novelty_i21"
+  },
+  {
+    "at_utc": "2026-10-07T05:13:34.942751+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/adaptive_resonance_i21/stage0/weights.pt",
+      "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+      "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+    },
+    "decision": {
+      "action": "create",
+      "parent": null,
+      "scores_used": [],
+      "target_index": 0,
+      "threshold": null
+    },
+    "event": "growth_stage_completed",
+    "experts": 1,
+    "stage": 0,
+    "trajectory": "adaptive_resonance_i21"
+  },
+  {
+    "at_utc": "2026-10-07T05:14:31.136920+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/adaptive_resonance_i21/stage1/weights.pt",
+      "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+      "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+    },
+    "decision": {
+      "action": "create",
+      "parent": 0,
+      "scores_used": [
+        0.6909
+      ],
+      "target_index": 1,
+      "threshold": 0.6934574246406555
+    },
+    "event": "growth_stage_completed",
+    "experts": 2,
+    "stage": 1,
+    "trajectory": "adaptive_resonance_i21"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:27.548513+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/adaptive_resonance_i21/stage2/weights.pt",
+      "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+      "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+    },
+    "decision": {
+      "action": "update",
+      "parent": 1,
+      "scores_used": [
+        0.6933,
+        0.7523
+      ],
+      "target_index": 1,
+      "threshold": 0.6934574246406555
+    },
+    "event": "growth_stage_completed",
+    "experts": 2,
+    "stage": 2,
+    "trajectory": "adaptive_resonance_i21"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:30.085948+00:00",
+    "bank": "snapshots_i20",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 1089,
+      "path": "banks/snapshots_i20/gate_weights.npz",
+      "sha256": "7fe526cc135819af118d09d3ceba9ddd4a108ee12f3bcb94aa7c9853c00ccabd"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:30.287226+00:00",
+    "bank": "duplicate_slots_i20",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 699,
+      "path": "banks/duplicate_slots_i20/gate_weights.npz",
+      "sha256": "8c2cbdba40ef7a10e008f37eca62304918fd761de73273a01822a7a3403d2840"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:30.490739+00:00",
+    "bank": "adaptive_novelty_i20",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 1089,
+      "path": "banks/adaptive_novelty_i20/gate_weights.npz",
+      "sha256": "7fe526cc135819af118d09d3ceba9ddd4a108ee12f3bcb94aa7c9853c00ccabd"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:30.556150+00:00",
+    "bank": "adaptive_resonance_i20",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 216,
+      "path": "banks/adaptive_resonance_i20/gate_weights.npz",
+      "sha256": "ce6ec3a9f2bc5bffde192fd0b57f1f0435a7e62b538524edf2a958bd81bebf98"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:32.960935+00:00",
+    "bank": "snapshots_i21",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 1092,
+      "path": "banks/snapshots_i21/gate_weights.npz",
+      "sha256": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:33.132487+00:00",
+    "bank": "duplicate_slots_i21",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 691,
+      "path": "banks/duplicate_slots_i21/gate_weights.npz",
+      "sha256": "3196c30da55c8cef90ce68cdc9253f64aaa0ff3b8d1fd9aebd3353e8d694c74e"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:33.301599+00:00",
+    "bank": "adaptive_novelty_i21",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 1092,
+      "path": "banks/adaptive_novelty_i21/gate_weights.npz",
+      "sha256": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:33.429393+00:00",
+    "bank": "adaptive_resonance_i21",
+    "event": "growth_gate_fitted",
+    "weights": {
+      "bytes": 622,
+      "path": "banks/adaptive_resonance_i21/gate_weights.npz",
+      "sha256": "f0f50fa76f90c8ee49a45f4a5220006e9463daf4fe2d234cb81cd5ff8e3fbb7c"
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:33.457661+00:00",
+    "completed_gate_fits": 8,
+    "completed_training_stages": 18,
+    "completed_trajectories": 6,
+    "controller_source": {
+      ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+      "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+      "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+      "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+      "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+      "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+      "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+      "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+      "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+      "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+      "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+      "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+      "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+      "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+      "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+      "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+      "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+      "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+      "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+      "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+      "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+      "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+      "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+    },
+    "development_artifacts_sha256": {
+      "banks/adaptive_novelty_i20/gate.json": "e674653c62a3429e7d00eb2ffb38c5021530bb6bbceb54ebaf5b072fa725a01e",
+      "banks/adaptive_novelty_i20/gate_fit_experts.npz": "56a6e3d92f37df87bdbb5c57078510a967b85bee5b1c2c88836f172754420a41",
+      "banks/adaptive_novelty_i20/gate_weights.npz": "7fe526cc135819af118d09d3ceba9ddd4a108ee12f3bcb94aa7c9853c00ccabd",
+      "banks/adaptive_novelty_i21/gate.json": "12c343a704da3a3592ec82dc6967cf2daa168b363d1655e65dfa356a5feec3e4",
+      "banks/adaptive_novelty_i21/gate_fit_experts.npz": "63bab6ad34087312baece29b13e51535ae9a14375cec55fb8dbe6eea92ee70d6",
+      "banks/adaptive_novelty_i21/gate_weights.npz": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f",
+      "banks/adaptive_resonance_i20/gate.json": "d831425efafec03121fa779862ba31a78f616a6865a70d9a18110e6ce7caa671",
+      "banks/adaptive_resonance_i20/gate_fit_experts.npz": "f1173449aac8731fab5ccf0308aef5989c7c6b1a9aafac676c05af51e851eead",
+      "banks/adaptive_resonance_i20/gate_weights.npz": "ce6ec3a9f2bc5bffde192fd0b57f1f0435a7e62b538524edf2a958bd81bebf98",
+      "banks/adaptive_resonance_i21/gate.json": "cca114d38b0603ceec84b69cae5eb641c8b41a026ac80ac973b2a758c8410257",
+      "banks/adaptive_resonance_i21/gate_fit_experts.npz": "b55b34bfc0b1fa870e49728400d84017fbd839d18e57f99b191d0d83ed321588",
+      "banks/adaptive_resonance_i21/gate_weights.npz": "f0f50fa76f90c8ee49a45f4a5220006e9463daf4fe2d234cb81cd5ff8e3fbb7c",
+      "banks/duplicate_slots_i20/gate.json": "8d99f6eb4af9a9a8b20d0d76d74b3b9032ba57768d42e7e805be84388a5f20aa",
+      "banks/duplicate_slots_i20/gate_fit_experts.npz": "8f9851638fbead6caa93d8fe484bfaee0a910d866a90d6f9b43347dd8d629aad",
+      "banks/duplicate_slots_i20/gate_weights.npz": "8c2cbdba40ef7a10e008f37eca62304918fd761de73273a01822a7a3403d2840",
+      "banks/duplicate_slots_i21/gate.json": "e36da64f1112b94a6e7a4a2bd6651e3421cf931b2950b68baeb6620bd7c427dc",
+      "banks/duplicate_slots_i21/gate_fit_experts.npz": "81599c80a9c27b4654c8a626b7657367052c44be95935b6b1260b9e2d68ff717",
+      "banks/duplicate_slots_i21/gate_weights.npz": "3196c30da55c8cef90ce68cdc9253f64aaa0ff3b8d1fd9aebd3353e8d694c74e",
+      "banks/snapshots_i20/gate.json": "28266ab7859c8abb816711a7491d1cf6a1c10fd21912095286ac985ccd311260",
+      "banks/snapshots_i20/gate_fit_experts.npz": "56a6e3d92f37df87bdbb5c57078510a967b85bee5b1c2c88836f172754420a41",
+      "banks/snapshots_i20/gate_weights.npz": "7fe526cc135819af118d09d3ceba9ddd4a108ee12f3bcb94aa7c9853c00ccabd",
+      "banks/snapshots_i21/gate.json": "4afedef2ab411dd8163300761882fb5c3c1b4122793cc051c349e35597ca5fbc",
+      "banks/snapshots_i21/gate_fit_experts.npz": "63bab6ad34087312baece29b13e51535ae9a14375cec55fb8dbe6eea92ee70d6",
+      "banks/snapshots_i21/gate_weights.npz": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f",
+      "datasets/topic0/diagnostic_train.npz": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+      "datasets/topic0/split0_train_n512_seed62011.npz": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+      "datasets/topic1/diagnostic_train.npz": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+      "datasets/topic1/split0_train_n512_seed62111.npz": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+      "datasets/topic2/diagnostic_train.npz": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+      "datasets/topic2/split0_train_n512_seed62211.npz": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+      "partitions.json": "eff760e91613cd88a75f05231e11fe811674f4ef76d5469a412b9e5ea26f629f",
+      "run_manifest.json": "d7bff83fc1c05572ddb0bb3eaea0eb27df0cec2ac9cc33456c7434e664b4a53e",
+      "training_bundle.json": "5b86d1cc61fd2f3c157997f68083c390e57f8cba1a239bc464fb7de0cc63ace9",
+      "trajectories/adaptive_novelty_i20/stage0/training.json": "344981c8305031b415eabd330590e52219a1a505572b1d4c28b00d5f5a98742b",
+      "trajectories/adaptive_novelty_i20/stage0/weights.pt": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+      "trajectories/adaptive_novelty_i20/stage1/diagnostic_expert0.npz": "c7ba2c0283fad538930af28ef11ad8065fa15f3cc7f698bd503d5ba182896fc8",
+      "trajectories/adaptive_novelty_i20/stage1/training.json": "3fbc71798550c15a1ff88f92e1cab0f3f08cfa3d2aced3d99a22e1ebceedf897",
+      "trajectories/adaptive_novelty_i20/stage1/weights.pt": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+      "trajectories/adaptive_novelty_i20/stage2/diagnostic_expert0.npz": "e1fddfcaf275c97ea430c158d00abeaeba3827b3029891493dfab1a2a25dc9af",
+      "trajectories/adaptive_novelty_i20/stage2/diagnostic_expert1.npz": "6ffa7e2d12d1720507c88507aa4b7732b732e8551744a4fbdf32bf15c15bce92",
+      "trajectories/adaptive_novelty_i20/stage2/training.json": "1bdb05a00ea49d968bc356741a203b2b44b8b04b63af3463a8fdc109ddd4628e",
+      "trajectories/adaptive_novelty_i20/stage2/weights.pt": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+      "trajectories/adaptive_novelty_i20/training.json": "1354c79278afc8039b087ad11f7118a6ccf5126737b857cba46af27020f11b27",
+      "trajectories/adaptive_novelty_i21/stage0/training.json": "8be4b26e39929fdf30b595a18fdd3de80b63340c6ba169651645c3bf2e177822",
+      "trajectories/adaptive_novelty_i21/stage0/weights.pt": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+      "trajectories/adaptive_novelty_i21/stage1/diagnostic_expert0.npz": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c",
+      "trajectories/adaptive_novelty_i21/stage1/training.json": "85d9680ed33dc2a3e2381a155b33adc1a82810b59424c27c3b9b1c57c56d4c68",
+      "trajectories/adaptive_novelty_i21/stage1/weights.pt": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+      "trajectories/adaptive_novelty_i21/stage2/diagnostic_expert0.npz": "78336601d89d09d8b78d798b223cdfd2558c551108da7133567bd3a2d74ce1d6",
+      "trajectories/adaptive_novelty_i21/stage2/diagnostic_expert1.npz": "65ed0065f32eb110d7180a663c670348c986e50b8111de75668796afe8eefb1d",
+      "trajectories/adaptive_novelty_i21/stage2/training.json": "c8516ec355f1cc2ff7e7893df5ff1f5bce3f00b0928d5197256a29b2fda20a6c",
+      "trajectories/adaptive_novelty_i21/stage2/weights.pt": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+      "trajectories/adaptive_novelty_i21/training.json": "11441f9eaf87f53ad72068d3e25cbf46f662d967675f8eab9fb99f9a002d50fa",
+      "trajectories/adaptive_resonance_i20/stage0/post_stage_a_diagnostic.npz": "c7780f46c3d0fecd77a2cffe0ce612531e0b5818cf43f16b4be1d31f4babf605",
+      "trajectories/adaptive_resonance_i20/stage0/training.json": "13ffb4e4ddaf0e38ac318a0409853c590ee32a375077dc80408d818a78f1678d",
+      "trajectories/adaptive_resonance_i20/stage0/weights.pt": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+      "trajectories/adaptive_resonance_i20/stage1/diagnostic_expert0.npz": "c7ba2c0283fad538930af28ef11ad8065fa15f3cc7f698bd503d5ba182896fc8",
+      "trajectories/adaptive_resonance_i20/stage1/training.json": "de19acf5774959c1a6745ceef546c2f489fc094e93eb9fb7520d6f3d0e25c8d0",
+      "trajectories/adaptive_resonance_i20/stage1/weights.pt": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+      "trajectories/adaptive_resonance_i20/stage2/diagnostic_expert0.npz": "6ffa7e2d12d1720507c88507aa4b7732b732e8551744a4fbdf32bf15c15bce92",
+      "trajectories/adaptive_resonance_i20/stage2/training.json": "a9da38d2df0050f673a62147dcbd92b4486f46a824dc95a90ad06d3525e750c7",
+      "trajectories/adaptive_resonance_i20/stage2/weights.pt": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+      "trajectories/adaptive_resonance_i20/training.json": "7af49b5494e967cf087559615628b676ae3decce3d4260a5a0fb2b5111f864e1",
+      "trajectories/adaptive_resonance_i21/stage0/post_stage_a_diagnostic.npz": "f8d8da7d4ba633c3870c66ef9bacc449a993a75b595b94517cb2f745ce232542",
+      "trajectories/adaptive_resonance_i21/stage0/training.json": "efeb365fc5812f41e6ae58ae07057d08332a03e2907ba902061b6381aa4dad25",
+      "trajectories/adaptive_resonance_i21/stage0/weights.pt": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+      "trajectories/adaptive_resonance_i21/stage1/diagnostic_expert0.npz": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c",
+      "trajectories/adaptive_resonance_i21/stage1/training.json": "e4a81d56a155f1ac081ba969101baee1fe843d6b48d5a4e9f311ded83565afb0",
+      "trajectories/adaptive_resonance_i21/stage1/weights.pt": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+      "trajectories/adaptive_resonance_i21/stage2/diagnostic_expert0.npz": "78336601d89d09d8b78d798b223cdfd2558c551108da7133567bd3a2d74ce1d6",
+      "trajectories/adaptive_resonance_i21/stage2/diagnostic_expert1.npz": "65ed0065f32eb110d7180a663c670348c986e50b8111de75668796afe8eefb1d",
+      "trajectories/adaptive_resonance_i21/stage2/training.json": "8e7f9a12af353e3aa20a0b335021cf7d00fa3cfd8a6206bfe1eac37abc32577c",
+      "trajectories/adaptive_resonance_i21/stage2/weights.pt": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+      "trajectories/adaptive_resonance_i21/training.json": "1afd7850f1f2837555539690810ab8e94e15691636e3f67491e077f984d82c3f",
+      "trajectories/fixed_sequential_i20/stage0/training.json": "99c42b82ec3dbd891e1a28c010b66451f3bce0e51804b53f60f18e74ec6e7a54",
+      "trajectories/fixed_sequential_i20/stage0/weights.pt": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+      "trajectories/fixed_sequential_i20/stage1/diagnostic_expert0.npz": "c7ba2c0283fad538930af28ef11ad8065fa15f3cc7f698bd503d5ba182896fc8",
+      "trajectories/fixed_sequential_i20/stage1/training.json": "da4271eed7b739df752a7294c9dd0eb092b8f92f93c69220ccf0d57e5ee368ee",
+      "trajectories/fixed_sequential_i20/stage1/weights.pt": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+      "trajectories/fixed_sequential_i20/stage2/diagnostic_expert0.npz": "e1fddfcaf275c97ea430c158d00abeaeba3827b3029891493dfab1a2a25dc9af",
+      "trajectories/fixed_sequential_i20/stage2/diagnostic_expert1.npz": "6ffa7e2d12d1720507c88507aa4b7732b732e8551744a4fbdf32bf15c15bce92",
+      "trajectories/fixed_sequential_i20/stage2/training.json": "ceb67e8f95daaf7f6f54a8115f173d2dca3c0cb3864153c12b6061a19c41e0c9",
+      "trajectories/fixed_sequential_i20/stage2/weights.pt": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+      "trajectories/fixed_sequential_i20/training.json": "98daec6ae08c578f783099ee573f4d35146b5bb7abd338f02f7731b90f8f67e6",
+      "trajectories/fixed_sequential_i21/stage0/training.json": "e13b0b48e6a4e303c8f05c3cbf6c19488f0ddff4eb6ea0156f87d2eb25c61ae6",
+      "trajectories/fixed_sequential_i21/stage0/weights.pt": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+      "trajectories/fixed_sequential_i21/stage1/diagnostic_expert0.npz": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c",
+      "trajectories/fixed_sequential_i21/stage1/training.json": "3b9b98bfbae99c5fb52a2e42ea6160691f326a39b03b00de22866c0de563ee0b",
+      "trajectories/fixed_sequential_i21/stage1/weights.pt": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+      "trajectories/fixed_sequential_i21/stage2/diagnostic_expert0.npz": "78336601d89d09d8b78d798b223cdfd2558c551108da7133567bd3a2d74ce1d6",
+      "trajectories/fixed_sequential_i21/stage2/diagnostic_expert1.npz": "65ed0065f32eb110d7180a663c670348c986e50b8111de75668796afe8eefb1d",
+      "trajectories/fixed_sequential_i21/stage2/training.json": "3b4ecb8251d258812720c06a6953e4271fc81cca678233619710f322b8b72bfd",
+      "trajectories/fixed_sequential_i21/stage2/weights.pt": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+      "trajectories/fixed_sequential_i21/training.json": "1816ce09e26cebd4c414f61a8d45a501d29dfcfb4a68d90999c0d52a57d08039"
+    },
+    "event": "growth_final_evaluation_authorized",
+    "source": {
+      "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+      "historical_files_expected": 8,
+      "historical_files_verified": 7,
+      "provenance_implementation": "scripts/research_ablations.py:source_record",
+      "recovery_manifest": {
+        "path": "docs/research/06_recovery_manifest.json",
+        "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+      },
+      "sha256": {
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+      },
+      "unavailable_expected_sha256": {
+        "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+      },
+      "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+    }
+  },
+  {
+    "at_utc": "2026-10-07T05:15:33.480252+00:00",
+    "datasets": [
+      {
+        "bytes": 15935,
+        "content_sha256": "142c457afccce1e9b0c67059aae0adb2bd3999a7126412d88b13cc2b5dbe6252",
+        "n": 1024,
+        "path": "datasets/topic0/split0_test_n1024_seed62012.npz",
+        "sampling_seed": 62012,
+        "sha256": "35e86562635a83c13ac8532aa04e4ea0feafe7f196dab4d7b771dbd0a64b7ea0",
+        "split": "test",
+        "split_seed": 0,
+        "topic": 0
+      },
+      {
+        "bytes": 15886,
+        "content_sha256": "551b0c57d0b4f10f70c9066e1bafcedda2995613e32d47758c67b176f31a8dca",
+        "n": 1024,
+        "path": "datasets/topic1/split0_test_n1024_seed62112.npz",
+        "sampling_seed": 62112,
+        "sha256": "d2ddfdd6bcababb0ae538fbc028fe81427a521fc6196bd544729bc6eb7084d8d",
+        "split": "test",
+        "split_seed": 0,
+        "topic": 1
+      },
+      {
+        "bytes": 15821,
+        "content_sha256": "4b79e2ce83eab0d1b59c9b922ac505d4f3f7153dc0fef04532c109400a5c72d9",
+        "n": 1024,
+        "path": "datasets/topic2/split0_test_n1024_seed62212.npz",
+        "sampling_seed": 62212,
+        "sha256": "a17a62b10f5de9a3e96afa3bf6964971a41aaf57bdec3ade6f7549c1838b984f",
+        "split": "test",
+        "split_seed": 0,
+        "topic": 2
+      }
+    ],
+    "event": "growth_final_datasets_opened"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.012116+00:00",
+    "bank": "snapshots_i20",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.023663+00:00",
+    "bank": "snapshots_i20",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.036712+00:00",
+    "bank": "snapshots_i20",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.048757+00:00",
+    "bank": "snapshots_i20",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.134227+00:00",
+    "bank": "duplicate_slots_i20",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.145984+00:00",
+    "bank": "duplicate_slots_i20",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.156044+00:00",
+    "bank": "duplicate_slots_i20",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.206114+00:00",
+    "bank": "duplicate_slots_i20",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.250818+00:00",
+    "bank": "single_final_i20",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.320067+00:00",
+    "bank": "adaptive_novelty_i20",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.351701+00:00",
+    "bank": "adaptive_novelty_i20",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.361619+00:00",
+    "bank": "adaptive_novelty_i20",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.373693+00:00",
+    "bank": "adaptive_novelty_i20",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.435963+00:00",
+    "bank": "adaptive_resonance_i20",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.444864+00:00",
+    "bank": "adaptive_resonance_i20",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.453689+00:00",
+    "bank": "adaptive_resonance_i20",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:38.462778+00:00",
+    "bank": "adaptive_resonance_i20",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:42.970353+00:00",
+    "bank": "snapshots_i21",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:42.981678+00:00",
+    "bank": "snapshots_i21",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:42.991888+00:00",
+    "bank": "snapshots_i21",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.004237+00:00",
+    "bank": "snapshots_i21",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.160452+00:00",
+    "bank": "duplicate_slots_i21",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.172091+00:00",
+    "bank": "duplicate_slots_i21",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.201994+00:00",
+    "bank": "duplicate_slots_i21",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.214225+00:00",
+    "bank": "duplicate_slots_i21",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.280908+00:00",
+    "bank": "single_final_i21",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.354117+00:00",
+    "bank": "adaptive_novelty_i21",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.371217+00:00",
+    "bank": "adaptive_novelty_i21",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.381476+00:00",
+    "bank": "adaptive_novelty_i21",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.420659+00:00",
+    "bank": "adaptive_novelty_i21",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.552678+00:00",
+    "bank": "adaptive_resonance_i21",
+    "event": "growth_final_saved",
+    "router": "uniform"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.580996+00:00",
+    "bank": "adaptive_resonance_i21",
+    "event": "growth_final_saved",
+    "router": "random"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.591351+00:00",
+    "bank": "adaptive_resonance_i21",
+    "event": "growth_final_saved",
+    "router": "scanner"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.602348+00:00",
+    "bank": "adaptive_resonance_i21",
+    "event": "growth_final_saved",
+    "router": "learned"
+  },
+  {
+    "at_utc": "2026-10-07T05:15:43.617986+00:00",
+    "event": "growth_completed"
   }
 ]

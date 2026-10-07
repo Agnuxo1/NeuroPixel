@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "bytes": 8503,
+      "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+      "n": 512,
+      "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+      "sampling_seed": 62011,
+      "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+      "split": "train",
+      "split_seed": 0,
+      "topic": 0
+    },
+    {
+      "bytes": 8505,
+      "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+      "n": 512,
+      "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+      "sampling_seed": 62111,
+      "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+      "split": "train",
+      "split_seed": 0,
+      "topic": 1
+    },
+    {
+      "bytes": 8436,
+      "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+      "n": 512,
+      "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+      "sampling_seed": 62211,
+      "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+      "split": "train",
+      "split_seed": 0,
+      "topic": 2
+    }
+  ],
+  "expert_outputs": {
+    "bytes": 588543,
+    "path": "banks/adaptive_novelty_i21/gate_fit_experts.npz",
+    "sha256": "63bab6ad34087312baece29b13e51535ae9a14375cec55fb8dbe6eea92ee70d6"
+  },
+  "final_test_accessed": false,
+  "l2": 0.0001,
+  "learning_rate": 0.1,
+  "parameter_count": 120,
+  "trace": [
+    {
+      "cross_entropy": 1.9160898241100972,
+      "objective": 1.9160898241100972,
+      "update": 0
+    },
+    {
+      "cross_entropy": 1.725903436150058,
+      "objective": 1.7259316396469206,
+      "update": 32
+    },
+    {
+      "cross_entropy": 1.6261281956145448,
+      "objective": 1.6262135580609098,
+      "update": 64
+    },
+    {
+      "cross_entropy": 1.5652167927493232,
+      "objective": 1.5653688950973965,
+      "update": 96
+    },
+    {
+      "cross_entropy": 1.5259880321747297,
+      "objective": 1.5262074613984487,
+      "update": 128
+    }
+  ],
+  "updates": 128,
+  "weights": {
+    "bytes": 1092,
+    "path": "banks/adaptive_novelty_i21/gate_weights.npz",
+    "sha256": "8af8d37451564ccafde822cfc1f0f107a6894a184a3f940fed1af24c7d7c692f"
+  }
+}
