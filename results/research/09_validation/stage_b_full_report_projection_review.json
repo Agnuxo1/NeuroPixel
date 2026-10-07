@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "offline_archive": "2b8203f15ec5f6fe190876c80bf29232034603ce",
+  "full_report_git_blob": "58af52c86adc53601a384105598ce2fe009cd6fd",
+  "full_report_bytes": 7142199,
+  "full_report_sha256": "2ffcd15900dd583f796f158bac6de9dee1761ba74cf7f4d9ae9ca700d217316e",
+  "manifest_matches": true,
+  "projection_matches_full_report_after_only_disclosed_indices_removal": true,
+  "bootstrap_indices_shape": [
+    2000,
+    256
+  ],
+  "bootstrap_indices_range": [
+    0,
+    255
+  ],
+  "bootstrap_indices_little_endian_int64_sha256": "95f989b32c09be3185420ba911b4bcafd0291a9e50aea3fcf88075039f0718c6",
+  "bootstrap_digest_matches": true,
+  "scientific_rng_draws_executed_by_root": 0,
+  "method": "Retrieve full Git blob (the contents endpoint returned empty for this file size), verify UTF8 SHA256/byte count against manifest and projection, compare complete JSON after removing only bootstrap.indices, and pack stored indices as little-endian int64 to check their saved hash.",
+  "limitations": [
+    "Deterministic identity/projection verification under shared custody; no external replication or new model evaluation.",
+    "JS SHA256 implementation was checked against canonical empty/abc/56-byte vectors and known frozen source hashes."
+  ]
+}

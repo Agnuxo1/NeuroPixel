@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "recorded_at_utc": "2026-10-07T09:58:15+00:00",
+  "received_after_freeze": true,
+  "candidate_commit": "d58aeebd9877326002eac9be5edf8799728bd9db",
+  "workflow_blob": "d0c6da8e42c14f1a8367965f718f0bf4476edc5c",
+  "architecture_audit": "Literal comparison confirms only MPLCONFIGDIR moved from job env to offline step env with identical value; github/job if, runner/step env, steps/step env and always()/step if have supported contexts; no unresolved static blocker.",
+  "evidence_tests": "GitHub fetch confirms workflow blob, MPLCONFIGDIR only in offline step env and inherited by worker/subprocesses; official context table reviewed; pip literal block preserved; no concrete static blocker.",
+  "scope": "Focused static source/documentation review only, not Actions acceptance, execution, local tests or scientific outcome inspection.",
+  "note": "The freeze receipt truthfully states that replies had not yet arrived. These replies were received after freeze and confirmed the root's narrow source review; the original freeze receipt is not rewritten."
+}
