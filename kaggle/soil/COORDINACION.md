@@ -29,3 +29,7 @@
 - La CV se hizo SIN espejo; `--submit` si lo usa. Pliegues aleatorios por muestra (mezclan Motorola/Samsung).
 - GPU liberada. SOIL-002 (Codex) LISTA: auditar split, CV dejando fuera un telefono y/o con espejo, envio.
 - 20:16: cadena del chat anterior (Claude) en marcha: soil.py --submit (pid 20144) + envio automatico a Kaggle; resultado se anotara aqui
+
+## 2026-10-07T06:27:00.782435+00:00 — SCI-008 isolated evaluation audit
+
+Root claims a read-only source audit and narrowly scoped evaluation corrections in the isolated scientific branch. Scope: CDF conversion/invariants, sample and device grouping, reference fitting and fold aggregation, with synthetic deterministic fixtures. This does not use or stop the historical competition jobs, recover unavailable result files, train on competition data or submit anything. Any score affected by a correction requires its original predictions/data before recalculation can be claimed.

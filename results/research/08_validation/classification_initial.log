@@ -1,0 +1,290 @@
+test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) ... 
+  test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': 'no'}) ... FAIL
+  test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'repetitions': True}) ... FAIL
+  test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'bootstrap_seed': True}) ... FAIL
+  test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'bootstrap_seed': -1}) ... FAIL
+  test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'repetitions': 0}) ... FAIL
+test_missing_roles_and_mismatched_shapes_are_rejected (__main__.ClassificationContractTests.test_missing_roles_and_mismatched_shapes_are_rejected) ... ok
+test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) ... 
+  test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) (value=[0.1]) ... FAIL
+  test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) (value=0.1) ... FAIL
+  test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) (value=[[0.1], [0.2], [0.3], [0.4]]) ... FAIL
+test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) ... 
+  test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) (value=nan) ... FAIL
+  test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) (value=inf) ... FAIL
+  test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) (value=-0.001) ... FAIL
+test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) ... 
+  test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'prediction': [1.0, 2.0, 3.0, 4.0]}) ... FAIL
+  test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'target': [1, 2, 3, nan]}) ... FAIL
+  test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'roles': [0.0, 1.0, 2.0, 3.0]}) ... FAIL
+  test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'prediction': [True, False, True, False]}) ... FAIL
+test_pad_target_and_negative_prediction_are_rejected (__main__.ClassificationContractTests.test_pad_target_and_negative_prediction_are_rejected) ... 
+  test_pad_target_and_negative_prediction_are_rejected (__main__.ClassificationContractTests.test_pad_target_and_negative_prediction_are_rejected) (kwargs={'target': [0, 2, 3, 4]}) ... FAIL
+  test_pad_target_and_negative_prediction_are_rejected (__main__.ClassificationContractTests.test_pad_target_and_negative_prediction_are_rejected) (kwargs={'prediction': [-1, 2, 3, 4]}) ... FAIL
+test_real_module_integration (__main__.ClassificationContractTests.test_real_module_integration) ... skipped 'real module integration requires declared cloud Torch'
+test_unknown_role_cannot_inflate_global_denominator (__main__.ClassificationContractTests.test_unknown_role_cannot_inflate_global_denominator) ... FAIL
+test_valid_counts_and_macro_role_weighting (__main__.ClassificationContractTests.test_valid_counts_and_macro_role_weighting) ... ok
+test_valid_summary_matches_preserved_original_exactly (__main__.ClassificationContractTests.test_valid_summary_matches_preserved_original_exactly) ... ok
+test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) ... 
+  test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) (args=(1.5, 4, 0.95)) ... FAIL
+  test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) (args=(True, 4, 0.95)) ... FAIL
+  test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) (args=(1, 4, nan)) ... FAIL
+
+======================================================================
+FAIL: test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': 'no'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 110, in test_interval_flag_and_counts_have_explicit_types
+    self.score(**kwargs)
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 54, in score
+    return FUNCTIONS["classification_metrics"](prediction, target, roles, nll, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/neuropixel/research/experiment.py", line 197, in classification_metrics
+    rng = np.random.default_rng(bootstrap_seed)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: invalid inputs must be rejected before RNG construction
+
+======================================================================
+FAIL: test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'repetitions': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 110, in test_interval_flag_and_counts_have_explicit_types
+    self.score(**kwargs)
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 54, in score
+    return FUNCTIONS["classification_metrics"](prediction, target, roles, nll, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/neuropixel/research/experiment.py", line 197, in classification_metrics
+    rng = np.random.default_rng(bootstrap_seed)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: invalid inputs must be rejected before RNG construction
+
+======================================================================
+FAIL: test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'bootstrap_seed': True})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 110, in test_interval_flag_and_counts_have_explicit_types
+    self.score(**kwargs)
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 54, in score
+    return FUNCTIONS["classification_metrics"](prediction, target, roles, nll, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/neuropixel/research/experiment.py", line 197, in classification_metrics
+    rng = np.random.default_rng(bootstrap_seed)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: invalid inputs must be rejected before RNG construction
+
+======================================================================
+FAIL: test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'bootstrap_seed': -1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 110, in test_interval_flag_and_counts_have_explicit_types
+    self.score(**kwargs)
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 54, in score
+    return FUNCTIONS["classification_metrics"](prediction, target, roles, nll, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/neuropixel/research/experiment.py", line 197, in classification_metrics
+    rng = np.random.default_rng(bootstrap_seed)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: invalid inputs must be rejected before RNG construction
+
+======================================================================
+FAIL: test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) (kwargs={'intervals': True, 'repetitions': 0})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 110, in test_interval_flag_and_counts_have_explicit_types
+    self.score(**kwargs)
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 54, in score
+    return FUNCTIONS["classification_metrics"](prediction, target, roles, nll, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/neuropixel/research/experiment.py", line 197, in classification_metrics
+    rng = np.random.default_rng(bootstrap_seed)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+AssertionError: invalid inputs must be rejected before RNG construction
+
+======================================================================
+FAIL: test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) (value=[0.1])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 73, in test_nll_must_align_with_every_prediction
+    with self.subTest(value=value), self.assertRaises(ValueError):
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) (value=0.1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 73, in test_nll_must_align_with_every_prediction
+    with self.subTest(value=value), self.assertRaises(ValueError):
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) (value=[[0.1], [0.2], [0.3], [0.4]])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 73, in test_nll_must_align_with_every_prediction
+    with self.subTest(value=value), self.assertRaises(ValueError):
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) (value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 78, in test_nonfinite_or_negative_nll_is_rejected
+    with self.subTest(value=bad), self.assertRaises(ValueError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) (value=inf)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 78, in test_nonfinite_or_negative_nll_is_rejected
+    with self.subTest(value=bad), self.assertRaises(ValueError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) (value=-0.001)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 78, in test_nonfinite_or_negative_nll_is_rejected
+    with self.subTest(value=bad), self.assertRaises(ValueError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'prediction': [1.0, 2.0, 3.0, 4.0]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 86, in test_noninteger_or_boolean_ids_are_rejected
+    with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'target': [1, 2, 3, nan]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 86, in test_noninteger_or_boolean_ids_are_rejected
+    with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'roles': [0.0, 1.0, 2.0, 3.0]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 86, in test_noninteger_or_boolean_ids_are_rejected
+    with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) (kwargs={'prediction': [True, False, True, False]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 86, in test_noninteger_or_boolean_ids_are_rejected
+    with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pad_target_and_negative_prediction_are_rejected (__main__.ClassificationContractTests.test_pad_target_and_negative_prediction_are_rejected) (kwargs={'target': [0, 2, 3, 4]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 91, in test_pad_target_and_negative_prediction_are_rejected
+    with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pad_target_and_negative_prediction_are_rejected (__main__.ClassificationContractTests.test_pad_target_and_negative_prediction_are_rejected) (kwargs={'prediction': [-1, 2, 3, 4]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 91, in test_pad_target_and_negative_prediction_are_rejected
+    with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_unknown_role_cannot_inflate_global_denominator (__main__.ClassificationContractTests.test_unknown_role_cannot_inflate_global_denominator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 68, in test_unknown_role_cannot_inflate_global_denominator
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) (args=(1.5, 4, 0.95))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 115, in test_wilson_rejects_fractional_counts_and_invalid_confidence
+    with self.subTest(args=args), self.assertRaises(ValueError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) (args=(True, 4, 0.95))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 115, in test_wilson_rejects_fractional_counts_and_invalid_confidence
+    with self.subTest(args=args), self.assertRaises(ValueError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) (args=(1, 4, nan))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_classification_contracts.py", line 115, in test_wilson_rejects_fractional_counts_and_invalid_confidence
+    with self.subTest(args=args), self.assertRaises(ValueError):
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.019s
+
+FAILED (failures=21, skipped=1)

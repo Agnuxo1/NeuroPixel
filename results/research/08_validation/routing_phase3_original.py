@@ -29,7 +29,6 @@ from neuropixel.phase3 import (FrameGRU, MemoryTask, RoleTaskFar, expand_vocab, 
                                memory_steps, np_stream)
 from neuropixel.safety import choose_device  # noqa: E402
 from neuropixel.task import ROLES, RoleTask, Vocab  # noqa: E402
-from neuropixel.research.routing_metrics import summarize_routing  # noqa: E402
 
 OUT = ROOT / "runs" / "phase3"
 DEV = None
@@ -260,22 +259,13 @@ def t_grow2(iters, max_novel=0.1):
         log_.append({"tema": ti, "novedad_por_lienzo": nov, "accion": action})
         log("grow2", log_[-1])
     res = {"lienzos": len(canv), "registro": log_}
-    routing_picks, routing_topics, routing_scores = [], [], []
     for ti, (c, y) in enumerate(tests):
         sc = torch.stack([scanner_score(m, c) for m in canv])
         with torch.no_grad():
             preds = torch.stack([m(c)["logits"].argmax(-1) for m in canv])
         pick = sc.argmax(0)
         res[f"tema{ti}_escaner"] = round((preds.gather(0, pick[None])[0] == y).float().mean().item(), 4)
-        picks = pick.detach().cpu().tolist()
-        scores = sc.transpose(0, 1).detach().cpu().tolist()
-        topics = [ti] * len(picks)
-        res[f"tema{ti}_routing"] = summarize_routing(picks, len(canv), topics=topics, argmax_scores=scores)
-        routing_picks.extend(picks)
-        routing_topics.extend(topics)
-        routing_scores.extend(scores)
-    res["routing"] = summarize_routing(routing_picks, len(canv), topics=routing_topics,
-                                       argmax_scores=routing_scores)
+        res[f"tema{ti}_elige_lienzo"] = pick.float().mean().item()
     save("grow_novedad", res)
     return res
 
@@ -306,22 +296,12 @@ def t_grow(iters, mode):
             log_.append({"tema": ti, "resonancias": scores, "umbral": round(tau, 4), "accion": action})
             log("grow", log_[-1])
         res = {"lienzos": len(canv), "registro": log_}
-        routing_picks, routing_topics, routing_scores = [], [], []
         for ti, (c, y) in enumerate(tests):
             sc = torch.stack([scanner_score(m, c) for m in canv])
             with torch.no_grad():
                 preds = torch.stack([m(c)["logits"].argmax(-1) for m in canv])
             pick = sc.argmax(0)
             res[f"tema{ti}_escaner"] = round((preds.gather(0, pick[None])[0] == y).float().mean().item(), 4)
-            picks = pick.detach().cpu().tolist()
-            scores = sc.transpose(0, 1).detach().cpu().tolist()
-            topics = [ti] * len(picks)
-            res[f"tema{ti}_routing"] = summarize_routing(picks, len(canv), topics=topics, argmax_scores=scores)
-            routing_picks.extend(picks)
-            routing_topics.extend(topics)
-            routing_scores.extend(scores)
-        res["routing"] = summarize_routing(routing_picks, len(canv), topics=routing_topics,
-                                           argmax_scores=routing_scores)
     else:  # un solo lienzo, aprendiendo en secuencia (referencia de olvido)
         m = NeuroPixel(V, tasks[0].out_pos).to(DEV)
         res = {"lienzos": 1}

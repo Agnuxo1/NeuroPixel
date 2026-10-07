@@ -12,8 +12,7 @@ class DevelopmentSamplerTests(unittest.TestCase):
     def setUpClass(cls):
         cls.previous_threads = torch.get_num_threads()
         torch.set_num_threads(1)
-        if torch.get_num_interop_threads() != 1:
-            torch.set_num_interop_threads(1)
+        torch.set_num_interop_threads(1)
 
     @classmethod
     def tearDownClass(cls):

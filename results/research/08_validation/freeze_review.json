@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "item": 8,
+  "at_utc": "2026-10-07T06:52:42.874308+00:00",
+  "status": "frozen_for_first_pinned_integration_run",
+  "reviewer": "root",
+  "independent_worker_review": "architecture_audit: no blockers; independently recounted187 pytest cases across13 files without numerical execution",
+  "plan_sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b",
+  "files_bound": 95,
+  "worker_sha256": "3f95985464623e2189e2db0daaa5ac96b5f42bea8867cb903f10d346aff6854a",
+  "protocol_sha256": "96d3e71ea33bce22c4a9712525466455f8bfc0646979640a224da1aaf79db6d0",
+  "scope": "Root compared exact worker constants to final plan fields, parsed every bound Python file and checked existing path/hash identities. Local runtime has no Torch; actual collection/integration remains pending."
+}

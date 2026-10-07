@@ -24,9 +24,6 @@ import torch.nn.functional as F
 from neuropixel.task import ROLES
 from neuropixel.research.data import ResearchRoleTask, frozen_dataset
 from neuropixel.research.models import build_model, model_config
-from neuropixel.research.classification_contracts import (
-    validate_binary_counts, validate_classification_inputs,
-)
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -96,7 +93,6 @@ def save_arrays(path, **arrays):
 def source_record():
     paths = ["neuropixel/model.py", "neuropixel/task.py", "neuropixel/research/models.py",
              "neuropixel/research/data.py", "neuropixel/research/experiment.py",
-             "neuropixel/research/classification_contracts.py",
              "scripts/research_train.py", "scripts/research_queue_worker.py",
              "docs/research/protocol.json"]
     snapshot = ROOT / "source_snapshot.json"
@@ -167,7 +163,8 @@ def configure_runtime(device_name, threads):
 
 
 def wilson(correct, n, confidence=0.95):
-    validate_binary_counts(correct, n, confidence)
+    if n <= 0 or not 0 <= correct <= n:
+        raise ValueError("invalid binary counts")
     z = NormalDist().inv_cdf((1 + confidence) / 2)
     p, z2 = correct / n, z*z
     center = (p + z2 / (2*n)) / (1 + z2/n)
@@ -177,10 +174,9 @@ def wilson(correct, n, confidence=0.95):
 
 def classification_metrics(prediction, target, roles, nll=None, *, intervals=False,
                            bootstrap_seed=61003, repetitions=2000):
-    prediction, target, roles, nll = validate_classification_inputs(
-        prediction, target, roles, nll, role_count=len(ROLES), intervals=intervals,
-        bootstrap_seed=bootstrap_seed, repetitions=repetitions,
-    )
+    prediction, target, roles = [np.asarray(x) for x in (prediction, target, roles)]
+    if prediction.shape != target.shape or target.shape != roles.shape or target.ndim != 1:
+        raise ValueError("prediction, target and roles must be equal-length vectors")
     correct = prediction == target
     per_role, role_means = {}, []
     for index, role in enumerate(ROLES):

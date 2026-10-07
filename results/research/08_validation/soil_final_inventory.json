@@ -1,0 +1,56 @@
+{
+  "item": 8,
+  "recorded_at_utc": "2026-10-07T06:41:48.698690+00:00",
+  "files": {
+    "kaggle/soil/soil.py": {
+      "bytes": 13816,
+      "sha256": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe"
+    },
+    "kaggle/soil/evaluation.py": {
+      "bytes": 6819,
+      "sha256": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace"
+    },
+    "tests/test_soil_evaluation.py": {
+      "bytes": 14877,
+      "sha256": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658"
+    },
+    "docs/research/08_soil_audit.md": {
+      "bytes": 13081,
+      "sha256": "e16a7baac989814a418677d1a7c638a108d407996a669e44efcce0e3e0ad8327"
+    }
+  },
+  "test_inventory": [
+    "test_metric_identity_symmetry_and_known_extremes",
+    "test_trapezoid_is_not_discrete_wasserstein",
+    "test_matches_independent_numpy_trapezoid",
+    "test_invalid_cdf_cases_rejected_without_projection",
+    "test_terminal_tolerance_explicit_and_unmodified",
+    "test_monotonicity_and_bounds_have_no_hidden_tolerance",
+    "test_pdf_roundtrip_and_input_not_mutated",
+    "test_normalization_collisions_and_duplicates_rejected",
+    "test_valid_ids_preserve_raw_names",
+    "test_folds_cover_once_with_nonempty_training",
+    "test_invalid_fold_counts_rejected",
+    "test_duplicate_missing_unknown_overlapping_empty_folds_rejected",
+    "test_reference_never_reads_heldout_label",
+    "test_reference_invariant_under_heldout_label_change",
+    "test_reference_rejects_overlap_and_empty_train",
+    "test_per_sample_records_preserve_unrounded_values_and_group",
+    "test_pooled_mean_weights_samples_not_folds",
+    "test_summary_rejects_empty_duplicate_nonfinite_scores",
+    "test_main_cv_integration_with_stubbed_training_and_predictions",
+    "test_failed_prediction_preserves_initial_plan_and_completed_sample",
+    "test_submission_uniform_fallback_constructor_is_valid"
+  ],
+  "expected_test_count": 21,
+  "local_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "numerical_threads": 1,
+    "torch_imported": false
+  },
+  "local_command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python tests/test_soil_evaluation.py -v",
+  "cloud_test_path": "tests/test_soil_evaluation.py",
+  "final_local_receipt": "results/research/08_validation/soil_corrected_tests_03.json",
+  "scope": "Deterministic synthetic evaluation contracts only; no competition dataset or model execution."
+}

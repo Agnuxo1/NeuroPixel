@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "item": 8,
+  "at_utc": "2026-10-07T06:44:21.358703+00:00",
+  "status": "historical_fixture_mismatch_reproduced",
+  "scope": "Exact existing test fixture construction and actual stdlib historical source_record; no Torch or pytest required. Historical gate correctly rejects modern source.",
+  "error": {
+    "type": "RuntimeError",
+    "message": "an available historical source changed",
+    "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 16, in <module>\n  File \"/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/scripts/research_ablations.py\", line 133, in source_record\n    raise RuntimeError(\"an available historical source changed\")\nRuntimeError: an available historical source changed\n"
+  },
+  "source_sha256": {
+    "results/research/08_validation/historical_ablation_test_before.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+    "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/research/experiment.py": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f"
+  }
+}

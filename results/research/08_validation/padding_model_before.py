@@ -1,13 +1,14 @@
-"""NeuroPixel: recurrent state on a spatial grid with a tied token dictionary.
+"""NeuroPixel: una red cuyo estado entero vive en un lienzo de píxeles.
 
-The effective dictionary has ``c_id`` latent channels and an exactly zero PAD
-row (token 0). Grounded RGB coordinates may fix the first three channels of
-other tokens. Input identities are reinjected at every local update; the same
-dictionary reads the output state. Empty non-camera cells have zero initial
-seeding, but recurrent biases and neighbors may subsequently activate them.
-Zero PAD identity does not imply zero recurrent computation or energy use.
+- Diccionario E (vocab x c_id): cada token tiene un 'color' aprendido de c_id canales.
+  El token 0 (vacío) es negro y se queda en cero: sin dato no hay actividad.
+- Identidad y activación separadas: el color de entrada se reinyecta en cada paso
+  (memoria persistente) y la actividad evoluciona en c canales de estado.
+- Dinámica local tipo autómata celular neuronal: cada píxel solo ve sus 8 vecinos.
+- Salida: el estado del píxel de salida se traduce con el MISMO diccionario (pesos
+  atados), es decir, 'leemos el color' que ha emergido.
 
-The reference Transformer attends globally to the grid.
+El baseline es un transformer pequeño que ve todo el lienzo de golpe (atención global).
 """
 from __future__ import annotations
 
@@ -56,16 +57,9 @@ class NeuroPixel(nn.Module):
         self.read = nn.Linear(c, c_id)
 
     def dictionary(self) -> torch.Tensor:
-        """Grounded effective table with a constant zero PAD row.
-
-        Functional lookup and tied lens/readout bypass Embedding.padding_idx.
-        Project here so every consumer has the same boundary, including loaded
-        nonzero PAD weights and grounded PAD input. The stored parameter is not
-        mutated; its PAD row has zero gradient through this effective table.
-        """
+        """Tabla completa vocab x c_id (con los colores anclados si los hay)."""
         w = self.embed.weight
-        dictionary = torch.cat([torch.where(self.g_mask, self.g_rgb, w[:, :3]), w[:, 3:]], 1)
-        return torch.cat([torch.zeros_like(dictionary[:1]), dictionary[1:]], dim=0)
+        return torch.cat([torch.where(self.g_mask, self.g_rgb, w[:, :3]), w[:, 3:]], 1)
 
     def lens_logits(self, s: torch.Tensor) -> torch.Tensor:
         """Diccionario aplicado a todos los píxeles: B,C,H,W -> B,H,W,vocab."""

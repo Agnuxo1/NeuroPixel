@@ -1,0 +1,44 @@
+test_fold_log_must_report_current_fold (__main__.legacy_suite.<locals>.LegacyWitness.test_fold_log_must_report_current_fold) ... FAIL
+test_invalid_cdf_must_not_be_silently_repaired (__main__.legacy_suite.<locals>.LegacyWitness.test_invalid_cdf_must_not_be_silently_repaired) ... FAIL
+test_reference_must_not_depend_on_heldout_label (__main__.legacy_suite.<locals>.LegacyWitness.test_reference_must_not_depend_on_heldout_label) ... FAIL
+
+======================================================================
+FAIL: test_fold_log_must_report_current_fold (__main__.legacy_suite.<locals>.LegacyWitness.test_fold_log_must_report_current_fold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_soil_evaluation.py", line 37, in test_fold_log_must_report_current_fold
+    self.assertEqual(result['EMD_np'], 90.)
+AssertionError: 30.0 != 90.0
+
+======================================================================
+FAIL: test_invalid_cdf_must_not_be_silently_repaired (__main__.legacy_suite.<locals>.LegacyWitness.test_invalid_cdf_must_not_be_silently_repaired)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_soil_evaluation.py", line 40, in test_invalid_cdf_must_not_be_silently_repaired
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reference_must_not_depend_on_heldout_label (__main__.legacy_suite.<locals>.LegacyWitness.test_reference_must_not_depend_on_heldout_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/tests/test_soil_evaluation.py", line 32, in test_reference_must_not_depend_on_heldout_label
+    np.testing.assert_array_equal(before, after)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1054, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 919, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 10 / 11 (90.9%)
+Max absolute difference among violations: 50.
+Max relative difference among violations: inf
+ ACTUAL: array([ 50.,  50.,  50.,  50.,  50.,  50.,  50.,  50.,  50.,  50., 100.])
+ DESIRED: array([  0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0., 100.])
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.029s
+
+FAILED (failures=3)

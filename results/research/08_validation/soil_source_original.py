@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import json
 import sys
 import time
@@ -27,37 +26,25 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[1]))
 from neuropixel.model import NeuroPixel, n_params  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
-if __package__:
-    from .evaluation import (  # noqa: E402
-        SIZES, LOGW, METRIC_NAME, CDF_ENDPOINT_ATOL, cdf_to_pdf, emd,
-        normalize_sample_id, unique_normalized_ids, validate_cdf, make_folds,
-        train_mean_cdf, score_sample, summarize_scores, uniform_cdf,
-    )
-else:
-    from evaluation import (  # noqa: E402
-        SIZES, LOGW, METRIC_NAME, CDF_ENDPOINT_ATOL, cdf_to_pdf, emd,
-        normalize_sample_id, unique_normalized_ids, validate_cdf, make_folds,
-        train_mean_cdf, score_sample, summarize_scores, uniform_cdf,
-    )
 
 D = HERE / "data"
+SIZES = [0.002, 0.0063, 0.02, 0.063, 0.2, 0.63, 2.0, 6.3, 20.0, 63.0, 200.0]
+LOGW = np.diff(np.log10(SIZES))                        # pesos logarítmicos de los 10 tramos
 VOCAB = ["<vacío>"] + [f"GRANO_{s}" for s in SIZES]
 PPM_TARGET = 6.0                                        # px/mm tras reescalar
 
 
 def ppm_table():
-    with open(D / "ppm_updated.csv", encoding="utf-8") as fh:
-        rows = list(csv.DictReader(fh))
-    unique_normalized_ids([r["phone"].strip() for r in rows])
-    table = {r["phone"].strip(): float(r["ppm"]) for r in rows}
-    if any(not np.isfinite(value) or value <= 0 for value in table.values()):
-        raise ValueError("ppm values must be positive and finite")
-    return table
+    t = {}
+    for r in csv.DictReader(open(D / "ppm_updated.csv", encoding="utf-8")):
+        t[r["phone"].strip()] = float(r["ppm"])
+    return t
 
 
 def norm(x):
-    """Existing normalization, now rejecting empty keys; labels reject collisions."""
-    return normalize_sample_id(x)
+    """Clave normalizada: minúsculas, umlauts -> ae/oe/ue, solo letras y números."""
+    x = x.lower().replace("ü", "ue").replace("ö", "oe").replace("ä", "ae").replace("ß", "ss")
+    return "".join(ch for ch in x if ch.isalnum())
 
 
 def split_name(stem, table):
@@ -71,7 +58,7 @@ def split_name(stem, table):
     return None, nb
 
 
-def load_photos(folder, table, metadata=None):
+def load_photos(folder, table):
     """Devuelve [(muestra_normalizada, array uint8 HxWx3 reescalado a PPM_TARGET)]."""
     out = []
     for f in sorted(folder.iterdir()):
@@ -83,21 +70,25 @@ def load_photos(folder, table, metadata=None):
         sc = PPM_TARGET / ppm
         im = im.resize((max(64, int(im.width * sc)), max(64, int(im.height * sc))), Image.BILINEAR)
         out.append((sample, np.asarray(im)))
-        if metadata is not None:
-            metadata.append({"file": f.name, "phone": ph, "sample_id": sample,
-                             "ppm": ppm, "ppm_source": "table" if ph in table else "fallback_15"})
     return out
 
 
-def labels(raw_ids=None):
-    with open(D / "Training_labels_updated.csv", encoding="utf-8") as fh:
-        rows = list(csv.DictReader(fh))
-    keys = unique_normalized_ids([r["sample_id"] for r in rows])
-    lab = {norm(r["sample_id"]): validate_cdf([float(r[k]) for k in list(r)[1:]],
-                                           name=f"label {r['sample_id']}") for r in rows}
-    if raw_ids is not None:
-        raw_ids.update(keys)
+def labels():
+    lab = {}
+    for r in csv.DictReader(open(D / "Training_labels_updated.csv", encoding="utf-8")):
+        lab[norm(r["sample_id"])] = np.array([float(r[k]) for k in list(r)[1:]])
     return lab
+
+
+def cdf_to_pdf(cdf):
+    pdf = np.diff(np.concatenate([[0.0], cdf]))
+    return np.clip(pdf, 0, None) / max(1e-9, np.clip(pdf, 0, None).sum())
+
+
+def emd(cdf_true, cdf_pred):
+    """EMD logarítmico entre curvas acumuladas (en %), sobre los 10 tramos."""
+    d = np.abs(np.asarray(cdf_true) - np.asarray(cdf_pred))
+    return float(np.sum(0.5 * (d[:-1] + d[1:]) * LOGW))
 
 
 def canvas_votes(model, rgb, steps):
@@ -179,87 +170,31 @@ def main():
     a = ap.parse_args()
     dev = choose_device("cuda", threads=4, force_gpu=True, vram_cap_gib=6)
     table = ppm_table()
-    raw_ids, photo_metadata = {}, []
-    labs = labels(raw_ids)
-    tr = load_photos(D / "Training-All_Photos_updated" / "Training-All_Photos_updated", table, photo_metadata)
+    labs = labels()
+    tr = load_photos(D / "Training-All_Photos_updated" / "Training-All_Photos_updated", table)
     samples = sorted({s for s, _ in tr if s in labs})
     print(json.dumps({"fotos": len(tr), "muestras_etiquetadas": len(samples),
-                      "sin_etiqueta": sorted({s for s, _ in tr} - set(labs)),
-                      "labels_without_photos": sorted(set(labs) - {s for s, _ in tr})}), flush=True)
+                      "sin_etiqueta": sorted({s for s, _ in tr} - set(labs))[:5]}), flush=True)
     out = HERE / "runs" / "np_votes"
     out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     res = {"iters": a.iters}
     if a.cv:
-        folds = make_folds(samples, a.folds, seed=0)
-        records, fold_reports = [], []
-        # Unique raw evidence survives the legacy result.json summary's later replacement.
-        evidence_path = out / f"cv_evaluation_{time.time_ns()}.json"
-        with evidence_path.open("x", encoding="utf-8") as fh:
-            pass  # reserve this run-specific name exclusively
-        evidence = {"schema_version": 1, "status": "running", "iters": a.iters,
-                    "metric": METRIC_NAME, "cdf_endpoint_atol_pp": CDF_ENDPOINT_ATOL,
-                    "group_unit": "normalized_sample_id", "split_seed": 0,
-                    "sample_ids": samples, "raw_label_ids": raw_ids,
-                    "validation_folds": folds, "photo_metadata": photo_metadata,
-                    "numpy_version": np.__version__, "torch_version": torch.__version__,
-                    "source_sha256": {str(path.relative_to(HERE.parents[1])):
-                                      hashlib.sha256(path.read_bytes()).hexdigest()
-                                      for path in (Path(__file__).resolve(), HERE / "evaluation.py",
-                                                   HERE.parents[1] / "neuropixel" / "model.py")},
-                    "folds": fold_reports, "per_sample": records}
-        def persist_evidence():
-            if records:
-                evidence["pooled_metrics"] = summarize_scores(records)
-            temporary = evidence_path.with_suffix(".tmp")
-            temporary.write_text(json.dumps(evidence, indent=2, allow_nan=False) + "\n", encoding="utf-8")
-            temporary.replace(evidence_path)
-
-        # Persist full provenance and planned memberships before any training.
-        persist_evidence()
-        active_fold, active_sample = None, None
-        try:
-            for k, fo in enumerate(folds):
-                active_fold, active_sample = k, None
-                evidence.update({"active_fold": k, "stage": "training"})
-                persist_evidence()
-                train_ids = [s for s in samples if s not in set(fo)]
-                train_labs = {s: labs[s] for s in train_ids}
-                mean_cdf = train_mean_cdf(train_labs, train_ids, fo)
-                trs = [(s, x) for s, x in tr if s in train_labs]
-                m = train(trs, train_labs, a.iters, dev, seed=k)
-                fold_records = []
-                for sample in fo:
-                    active_sample = sample
-                    evidence.update({"stage": "prediction", "active_sample": sample})
-                    pred = predict_sample(m, [x for sid, x in tr if sid == sample], dev)
-                    row = score_sample(sample, k, labs[sample], pred, mean_cdf)
-                    row["raw_sample_id"] = raw_ids[sample]
-                    row["photos"] = [r for r in photo_metadata if r["sample_id"] == sample]
-                    fold_records.append(row)
-                    records.append(row)
-                    persist_evidence()
-                fold_metrics = summarize_scores(fold_records)
-                pooled = summarize_scores(records)
-                fold_reports.append({"fold": k, "train_ids": train_ids, "validation_ids": fo,
-                                     "n_train_samples": len(train_ids), "train_mean_cdf": mean_cdf.tolist(),
-                                     "metrics": fold_metrics})
-                evidence.update({"pooled_metrics": pooled,
-                                 "status": "complete" if k + 1 == len(folds) else "running",
-                                 "stage": "fold_complete", "active_sample": None})
-                persist_evidence()
-                print(json.dumps({"fold": k, "fold_metrics": fold_metrics,
-                                  "pooled_to_date_metrics": pooled}, allow_nan=False), flush=True)
-        except Exception as exc:
-            evidence.update({"status": "failed", "failure": {"fold": active_fold,
-                             "sample_id": active_sample, "type": type(exc).__name__, "message": str(exc)}})
-            persist_evidence()
-            raise
-        res.update({"cv_EMD_neuropixel": pooled["means"]["model"],
-                    "cv_EMD_curva_media": pooled["means"]["train_mean"],
-                    "cv_EMD_trivial_9pct": pooled["means"]["uniform"],
-                    "cv_metric": METRIC_NAME, "cv_n_samples": len(records),
-                    "cv_evidence": evidence_path.name})
+        rng = np.random.default_rng(0)
+        perm = rng.permutation(samples)
+        folds = np.array_split(perm, a.folds)
+        errs, base = [], []
+        mean_cdf = np.mean([labs[s] for s in samples], 0)
+        for k, fo in enumerate(folds):
+            trs = [(s, x) for s, x in tr if s not in set(fo)]
+            m = train(trs, labs, a.iters, dev, seed=k)
+            for s in fo:
+                pred = predict_sample(m, [x for ss, x in tr if ss == s], dev)
+                errs.append(emd(labs[s], pred))
+                base.append(emd(labs[s], mean_cdf))
+            print(json.dumps({"fold": k, "EMD_np": round(float(np.mean(errs)), 3), "EMD_media": round(float(np.mean(base)), 3)}), flush=True)
+        res.update({"cv_EMD_neuropixel": round(float(np.mean(errs)), 3), "cv_EMD_curva_media": round(float(np.mean(base)), 3),
+                    "cv_EMD_trivial_9pct": round(float(np.mean([emd(labs[s], np.cumsum([100 / 11] * 11)) for s in samples])), 3)})
     if a.submit:
         m = train(tr, labs, a.iters, dev, seed=0)
         te = load_photos(D / "Test_All_Photos" / "Test_All_Photos", table)
@@ -270,8 +205,8 @@ def main():
             for r in sub:
                 sid = r["sample_id"].strip()
                 arrs = [x for s, x in te if s == norm(sid)]
-                pred = predict_sample(m, arrs, dev) if arrs else uniform_cdf()
-                pred = validate_cdf(pred, name=f"submission {sid}")
+                pred = predict_sample(m, arrs, dev) if arrs else np.cumsum([100 / 11] * 11)
+                pred = np.maximum.accumulate(pred)
                 pred[-1] = 100.0
                 w.writerow([sid] + [round(float(v), 4) for v in pred])
         res["test_muestras"] = len(sub)

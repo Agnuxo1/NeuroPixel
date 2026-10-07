@@ -1,0 +1,30 @@
+{
+  "status": "syntax_and_static_review_only",
+  "torch_executed": false,
+  "model_or_task_execution": false,
+  "test_count_authored": 10,
+  "source_commit_before": "ef25ed6497cd3554d8eb78a0ef278f7b589e1e1f",
+  "files": {
+    "neuropixel/model.py": {
+      "bytes": 6895,
+      "sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345"
+    },
+    "tests/test_padding_invariant.py": {
+      "bytes": 13574,
+      "sha256": "3c35b37c807b69492c3ac6e76a89c2d859fe08cbd6687250445dadb3388db830"
+    },
+    "docs/research/08_padding_audit.md": {
+      "bytes": 10147,
+      "sha256": "1e31e4dd01f015bc5c15ecf0e27600e91bbff40c00bf4d5a4c644011367cb060"
+    },
+    "results/research/08_validation/padding_model_before.py": {
+      "bytes": 6610,
+      "sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701"
+    },
+    "results/research/08_validation/padding_source_before.json": {
+      "bytes": 400,
+      "sha256": "fbc89571381e53b4e0b37969296ee4265076b04974a205da1dad4bdfe9a558d7"
+    }
+  },
+  "next_validation": "pinned CPU cloud fixture and test execution; preserve every failure"
+}

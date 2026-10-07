@@ -31,13 +31,13 @@ if __package__:
     from .evaluation import (  # noqa: E402
         SIZES, LOGW, METRIC_NAME, CDF_ENDPOINT_ATOL, cdf_to_pdf, emd,
         normalize_sample_id, unique_normalized_ids, validate_cdf, make_folds,
-        train_mean_cdf, score_sample, summarize_scores, uniform_cdf,
+        train_mean_cdf, score_sample, summarize_scores,
     )
 else:
     from evaluation import (  # noqa: E402
         SIZES, LOGW, METRIC_NAME, CDF_ENDPOINT_ATOL, cdf_to_pdf, emd,
         normalize_sample_id, unique_normalized_ids, validate_cdf, make_folds,
-        train_mean_cdf, score_sample, summarize_scores, uniform_cdf,
+        train_mean_cdf, score_sample, summarize_scores,
     )
 
 D = HERE / "data"
@@ -196,7 +196,7 @@ def main():
         # Unique raw evidence survives the legacy result.json summary's later replacement.
         evidence_path = out / f"cv_evaluation_{time.time_ns()}.json"
         with evidence_path.open("x", encoding="utf-8") as fh:
-            pass  # reserve this run-specific name exclusively
+            fh.write("{}\n")
         evidence = {"schema_version": 1, "status": "running", "iters": a.iters,
                     "metric": METRIC_NAME, "cdf_endpoint_atol_pp": CDF_ENDPOINT_ATOL,
                     "group_unit": "normalized_sample_id", "split_seed": 0,
@@ -205,56 +205,34 @@ def main():
                     "numpy_version": np.__version__, "torch_version": torch.__version__,
                     "source_sha256": {str(path.relative_to(HERE.parents[1])):
                                       hashlib.sha256(path.read_bytes()).hexdigest()
-                                      for path in (Path(__file__).resolve(), HERE / "evaluation.py",
-                                                   HERE.parents[1] / "neuropixel" / "model.py")},
+                                      for path in (Path(__file__).resolve(), HERE / "evaluation.py")},
                     "folds": fold_reports, "per_sample": records}
-        def persist_evidence():
-            if records:
-                evidence["pooled_metrics"] = summarize_scores(records)
+        for k, fo in enumerate(folds):
+            train_ids = [s for s in samples if s not in set(fo)]
+            train_labs = {s: labs[s] for s in train_ids}
+            mean_cdf = train_mean_cdf(train_labs, train_ids, fo)
+            trs = [(s, x) for s, x in tr if s in train_labs]
+            m = train(trs, train_labs, a.iters, dev, seed=k)
+            fold_records = []
+            for sample in fo:
+                pred = predict_sample(m, [x for sid, x in tr if sid == sample], dev)
+                row = score_sample(sample, k, labs[sample], pred, mean_cdf)
+                row["raw_sample_id"] = raw_ids[sample]
+                row["photos"] = [r for r in photo_metadata if r["sample_id"] == sample]
+                fold_records.append(row)
+            records.extend(fold_records)
+            fold_metrics = summarize_scores(fold_records)
+            pooled = summarize_scores(records)
+            fold_reports.append({"fold": k, "train_ids": train_ids, "validation_ids": fo,
+                                 "n_train_samples": len(train_ids), "train_mean_cdf": mean_cdf.tolist(),
+                                 "metrics": fold_metrics})
+            evidence.update({"pooled_metrics": pooled,
+                             "status": "complete" if k + 1 == len(folds) else "running"})
             temporary = evidence_path.with_suffix(".tmp")
             temporary.write_text(json.dumps(evidence, indent=2, allow_nan=False) + "\n", encoding="utf-8")
             temporary.replace(evidence_path)
-
-        # Persist full provenance and planned memberships before any training.
-        persist_evidence()
-        active_fold, active_sample = None, None
-        try:
-            for k, fo in enumerate(folds):
-                active_fold, active_sample = k, None
-                evidence.update({"active_fold": k, "stage": "training"})
-                persist_evidence()
-                train_ids = [s for s in samples if s not in set(fo)]
-                train_labs = {s: labs[s] for s in train_ids}
-                mean_cdf = train_mean_cdf(train_labs, train_ids, fo)
-                trs = [(s, x) for s, x in tr if s in train_labs]
-                m = train(trs, train_labs, a.iters, dev, seed=k)
-                fold_records = []
-                for sample in fo:
-                    active_sample = sample
-                    evidence.update({"stage": "prediction", "active_sample": sample})
-                    pred = predict_sample(m, [x for sid, x in tr if sid == sample], dev)
-                    row = score_sample(sample, k, labs[sample], pred, mean_cdf)
-                    row["raw_sample_id"] = raw_ids[sample]
-                    row["photos"] = [r for r in photo_metadata if r["sample_id"] == sample]
-                    fold_records.append(row)
-                    records.append(row)
-                    persist_evidence()
-                fold_metrics = summarize_scores(fold_records)
-                pooled = summarize_scores(records)
-                fold_reports.append({"fold": k, "train_ids": train_ids, "validation_ids": fo,
-                                     "n_train_samples": len(train_ids), "train_mean_cdf": mean_cdf.tolist(),
-                                     "metrics": fold_metrics})
-                evidence.update({"pooled_metrics": pooled,
-                                 "status": "complete" if k + 1 == len(folds) else "running",
-                                 "stage": "fold_complete", "active_sample": None})
-                persist_evidence()
-                print(json.dumps({"fold": k, "fold_metrics": fold_metrics,
-                                  "pooled_to_date_metrics": pooled}, allow_nan=False), flush=True)
-        except Exception as exc:
-            evidence.update({"status": "failed", "failure": {"fold": active_fold,
-                             "sample_id": active_sample, "type": type(exc).__name__, "message": str(exc)}})
-            persist_evidence()
-            raise
+            print(json.dumps({"fold": k, "fold_metrics": fold_metrics,
+                              "pooled_to_date_metrics": pooled}, allow_nan=False), flush=True)
         res.update({"cv_EMD_neuropixel": pooled["means"]["model"],
                     "cv_EMD_curva_media": pooled["means"]["train_mean"],
                     "cv_EMD_trivial_9pct": pooled["means"]["uniform"],
@@ -270,7 +248,7 @@ def main():
             for r in sub:
                 sid = r["sample_id"].strip()
                 arrs = [x for s, x in te if s == norm(sid)]
-                pred = predict_sample(m, arrs, dev) if arrs else uniform_cdf()
+                pred = predict_sample(m, arrs, dev) if arrs else np.cumsum([100 / 11] * 11)
                 pred = validate_cdf(pred, name=f"submission {sid}")
                 pred[-1] = 100.0
                 w.writerow([sid] + [round(float(v), 4) for v in pred])

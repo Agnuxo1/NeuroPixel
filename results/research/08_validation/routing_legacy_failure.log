@@ -1,0 +1,17 @@
+test_distinct_routing_distributions_are_distinguishable (__main__.LegacyRoutingFixture.test_distinct_routing_distributions_are_distinguishable) ... FAIL
+test_fixture_executes_the_preserved_source_expression (__main__.LegacyRoutingFixture.test_fixture_executes_the_preserved_source_expression) ... ok
+
+======================================================================
+FAIL: test_distinct_routing_distributions_are_distinguishable (__main__.LegacyRoutingFixture.test_distinct_routing_distributions_are_distinguishable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/61d6e3e6e688/NeuroPixel-item8/results/research/08_validation/routing_legacy_reproduction.py", line 44, in test_distinct_routing_distributions_are_distinguishable
+    self.assertNotEqual(legacy_summary([1, 1]), legacy_summary([0, 2]))
+AssertionError: 1.0 == 1.0
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1)
+
+exit_code=1

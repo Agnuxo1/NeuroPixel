@@ -36,3 +36,12 @@ Root approves the two item-7 plans after source/method and implementation review
 ## 2026-10-07T06:22:34.038049+00:00 — SCI-007 scientific closure
 
 Root closes item 7 after exact membership reconstruction, tested prospective governance, the one frozen null simulation, source/archive checks and independent report review. Report and receipts preserve the distinction between eligibility and actual exposure, the validity of properly prescribed CV, runtime-dependent historical reconstruction, local API guarantees and external custody. No simulation result estimates actual NeuroPixel bias or changes the closed H1 outcome. All work remains on the isolated research branches under the existing conservative fallback after JEV recovery failure. Item 8 is next and is not opened before this closure; no new expense, main merge or external scientific submission is authorized here.
+
+## 2026-10-07T06:27:00.782435+00:00 — SCI-008 opened
+
+SCI-008 is ACTIVE after the complete item-7 closure was archived and fetched as ef25ed6497cd3554d8eb78a0ef278f7b589e1e1f. Root owns integration and coordination under the standing user authorization and previously documented conservative fallback after JEV recovery failure. Investigate metric and invariant defects with source-level hypotheses, minimal reproductions, focused fixes and regression checks. Padding, routing summaries and Soil CDF/fold calculations are in scope; no external submission or main-branch change is requested. Focused reviewers may work on disjoint paths within this item. Items 9–30 remain pending. No response is requested.
+
+
+## 2026-10-07T06:52:42.874308+00:00 — SCI-008 integration recipe frozen
+
+Root freezes docs/research/08_cloud_validation_plan.json (SHA256 46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b) after four focused source audits, preserved regression failures/corrections, historical-fixture checks and independent worker review. The plan binds 95 files and 187 pytest cases across 13 files, including 58 new methods. Only the declared optional CIFAR absence may skip. The two-route legacy PAD witness and entire integration suite are admitted under the existing short CPU reservation. Ordinary failures remain archived; any post-freeze correction requires an explicit new source/plan revision. Historical controller/hash policies remain unchanged and reject modern code as a historical replay. H1 remains not supported; items 9–30 remain pending. No response is requested.

@@ -373,19 +373,10 @@ def test_missing_old_freeze_requires_explicit_recovery_record(tmp_path, monkeypa
 
 
 def test_source_record_declares_seven_files_and_rejects_a_placeholder(tmp_path, monkeypatch):
-    # The item-6 gate intentionally accepts only historical bytes. Item 8 changes
-    # the live core and metric contracts, so construct this historical fixture
-    # from its preserved originals instead of weakening the gate's SHA policy.
-    historical_snapshots = {
-        "neuropixel/model.py": "results/research/08_validation/padding_model_before.py",
-        "neuropixel/research/experiment.py": "results/research/08_validation/classification_source_original.py",
-    }
     for relative in CTRL.AVAILABLE_HISTORICAL_SHA256:
         destination = tmp_path / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
-        source = ROOT / historical_snapshots.get(relative, relative)
-        assert CTRL.sha256(source) == CTRL.AVAILABLE_HISTORICAL_SHA256[relative]
-        destination.write_bytes(source.read_bytes())
+        destination.write_bytes((ROOT / relative).read_bytes())
     recovery_path = tmp_path / CTRL.SOURCE_RECOVERY_RECORD
     recovery_path.parent.mkdir(parents=True, exist_ok=True)
     recovery_path.write_text(json.dumps({

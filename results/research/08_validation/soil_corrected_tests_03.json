@@ -1,0 +1,16 @@
+{
+  "item": 8,
+  "stage": "review_corrected_numpy_contract_tests",
+  "time_utc": "2026-10-07T06:39:13.350665+00:00",
+  "exit_code": 0,
+  "seconds": 0.15808394600026077,
+  "available_memory_bytes_before": 9802162176,
+  "numerical_threads": 1,
+  "source_sha256": {
+    "kaggle/soil/soil.py": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe",
+    "kaggle/soil/evaluation.py": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace",
+    "tests/test_soil_evaluation.py": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658"
+  },
+  "log_sha256": "fe0058d39e008263ced9c9a34b6c8d94b8091d933869ea69daf8f62febb4d32b",
+  "scope": "21 deterministic NumPy fixtures incl injected prediction failure and exact uniform fallback; no Torch/data/training."
+}

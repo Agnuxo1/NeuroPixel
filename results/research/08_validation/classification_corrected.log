@@ -1,0 +1,16 @@
+test_interval_flag_and_counts_have_explicit_types (__main__.ClassificationContractTests.test_interval_flag_and_counts_have_explicit_types) ... ok
+test_missing_roles_and_mismatched_shapes_are_rejected (__main__.ClassificationContractTests.test_missing_roles_and_mismatched_shapes_are_rejected) ... ok
+test_nll_must_align_with_every_prediction (__main__.ClassificationContractTests.test_nll_must_align_with_every_prediction) ... ok
+test_nonfinite_or_negative_nll_is_rejected (__main__.ClassificationContractTests.test_nonfinite_or_negative_nll_is_rejected) ... ok
+test_noninteger_or_boolean_ids_are_rejected (__main__.ClassificationContractTests.test_noninteger_or_boolean_ids_are_rejected) ... ok
+test_pad_target_and_negative_prediction_are_rejected (__main__.ClassificationContractTests.test_pad_target_and_negative_prediction_are_rejected) ... ok
+test_real_module_integration (__main__.ClassificationContractTests.test_real_module_integration) ... skipped 'real module integration requires declared cloud Torch'
+test_unknown_role_cannot_inflate_global_denominator (__main__.ClassificationContractTests.test_unknown_role_cannot_inflate_global_denominator) ... ok
+test_valid_counts_and_macro_role_weighting (__main__.ClassificationContractTests.test_valid_counts_and_macro_role_weighting) ... ok
+test_valid_summary_matches_preserved_original_exactly (__main__.ClassificationContractTests.test_valid_summary_matches_preserved_original_exactly) ... ok
+test_wilson_rejects_fractional_counts_and_invalid_confidence (__main__.ClassificationContractTests.test_wilson_rejects_fractional_counts_and_invalid_confidence) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.018s
+
+OK (skipped=1)

@@ -1,0 +1,109 @@
+{
+  "callsite_audit": {
+    "ambiguous_original_mean": "t_grow2 only",
+    "battery_comparison": "Explicit A-to-0/B-to-1 comparison inspected, outside patch.",
+    "corrected_drivers": [
+      "t_grow2",
+      "t_grow(mode=grow)"
+    ],
+    "unchanged_sequential_branch": true
+  },
+  "corrected_tests": {
+    "exit_code": 0,
+    "failed": 0,
+    "log_sha256": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721",
+    "passed": 16,
+    "reported_seconds": 0.03,
+    "total": 16
+  },
+  "evidence": {
+    "routing_corrected_run.json": {
+      "bytes": 891,
+      "sha256": "595de9c97a065affc51d77c3b14fc5e5805c08cf69008189f1f2c891db3754ac"
+    },
+    "routing_corrected_tests.log": {
+      "bytes": 2390,
+      "sha256": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721"
+    },
+    "routing_legacy_failure.json": {
+      "bytes": 386,
+      "sha256": "4fd3c6fa2385aece78b5f01fa633a5f8712ea21f28e4960c004343932cb53520"
+    },
+    "routing_legacy_failure.log": {
+      "bytes": 1044,
+      "sha256": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c"
+    },
+    "routing_legacy_reproduction.py": {
+      "bytes": 1624,
+      "sha256": "e39922f8714482b24ce17fd78bc0eaaa0738211f96312a1e7c30866e0322b66d"
+    },
+    "routing_phase3_original.py": {
+      "bytes": 28698,
+      "sha256": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3"
+    },
+    "routing_source_snapshot.json": {
+      "bytes": 351,
+      "sha256": "cd32f1c0db3bc69e1e6cd47ef3d0847888d6fe6609d2e7e7f443871ac290fe93"
+    }
+  },
+  "independent_static_review": {
+    "result": "No concrete blocker in helper, integrations or focused tests; no execution or edits by reviewer.",
+    "reviewer": "architecture_audit"
+  },
+  "integration_scope": "Descriptive summaries of already-computed picks/scores only. Original training, model construction, tset, torch.stack, argmax and prediction gather expressions compared by AST. No inference or training run.",
+  "item": 8,
+  "legacy_fixture": {
+    "counterexample": {
+      "all_slot_1": [
+        1,
+        1
+      ],
+      "distinct_counts": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "half_slot_0_2": [
+        0,
+        2
+      ],
+      "legacy_scalar_both": 1.0
+    },
+    "expected_failed": 1,
+    "passed": 1,
+    "tests": 2
+  },
+  "limitations": [
+    "Original scalar means cannot recover historical three-slot frequencies.",
+    "Mapped-slot agreement requires a complete explicit observed-topic mapping and is neither prediction accuracy nor oracle optimality.",
+    "Score ties use the unchanged first-maximum slot-order rule; ties and mapped agreement are unknown when their required inputs are absent.",
+    "Local validation is stdlib-only; root coordinates separately frozen cloud validation."
+  ],
+  "migration": {
+    "added_new_output_fields": [
+      "tema*_routing",
+      "routing"
+    ],
+    "new_summary_schema_version": 1,
+    "old_frequencies_reconstructed": false,
+    "old_result_json_modified": false,
+    "removed_new_output_fields": "tema*_elige_lienzo"
+  },
+  "preserved_original_phase3_sha256": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3",
+  "recorded_at_utc": "2026-10-07T06:37:14.681630+00:00",
+  "schema_version": 1,
+  "source_sha256": {
+    "docs/research/08_routing_audit.md": "32c8e28b02ccd08836b2407dfd726fd52d6d601555b28154219d1ac6f4b8864c",
+    "neuropixel/research/routing_metrics.py": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8",
+    "scripts/phase3.py": "b07487fb641d56f922b90927974a2a1ef48b5e55f72dea21e6e7480af9ad5615",
+    "tests/test_routing_metrics.py": "364e4648b246d0d03d0bf1e20c39cc76819faddca3a54e8163855740288a8d92"
+  },
+  "status": "local_validation_passed_cloud_pending"
+}

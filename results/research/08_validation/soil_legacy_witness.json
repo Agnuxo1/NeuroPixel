@@ -1,0 +1,17 @@
+{
+  "item": 8,
+  "stage": "preserved_original_source_witness",
+  "started_at_utc": "2026-10-07T06:31:38.874871+00:00",
+  "exit_code": 1,
+  "seconds": 0.1348843490013678,
+  "available_memory_bytes_before": 9810026496,
+  "numerical_threads": 1,
+  "test_source_sha256": "3dd038a875ebe604f89af8210ff711b949c7bece5e60a1421db390fd1bdaa032",
+  "log_sha256": "f6ce7ad1e9b6a362a35b94900f63a1a6d9dbadf366db3629ea9ec2889c469efd",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "tests/test_soil_evaluation.py",
+    "--legacy-witness"
+  ],
+  "scope": "AST-extracted original NumPy expressions only; expected failing invariants; no Torch, data or training."
+}

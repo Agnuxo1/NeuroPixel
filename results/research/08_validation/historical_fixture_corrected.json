@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "item": 8,
+  "at_utc": "2026-10-07T06:44:52.108458+00:00",
+  "status": "passed",
+  "test": "test_source_record_declares_seven_files_and_rejects_a_placeholder",
+  "wall_seconds": 0.0033963280002353713,
+  "scope": "Actual corrected test function AST with stdlib assertion adapters and actual historical source_record; full pytest integration remains pending. The historical controller and its SHA policy were not changed.",
+  "source_sha256": {
+    "tests/test_research_ablations.py": "ba4e8a471a45d57ccac6c939294038df43cdc508ba934b28f6f674b3aabfd888",
+    "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+    "results/research/08_validation/padding_model_before.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "results/research/08_validation/classification_source_original.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad"
+  }
+}

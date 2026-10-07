@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-10-07T06:27:00.782435+00:00",
+  "stage": "item7 archive retrieval before item8",
+  "source_commit": "ef25ed6497cd3554d8eb78a0ef278f7b589e1e1f",
+  "incident": "A Git blob read in the partial clone waited for lazy network retrieval. The owned read-only session was interrupted before creating the item8 worktree; Git reported Proxy CONNECT aborted.",
+  "resolution": "Install the already verified local closure bytes with git hash-object -w --stdin; verify all35 object IDs against the fetched commit tree, then create a clean detached worktree.",
+  "closure_files_verified": 35,
+  "scientific_outputs_changed": false,
+  "main_changed": false,
+  "status": "recovered"
+}
