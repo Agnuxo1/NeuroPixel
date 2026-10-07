@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-10-07T05:15:56.322327+00:00",
+  "at_utc": "2026-10-07T05:16:03.612369+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
     "core/ablation_records.json": {
@@ -1550,6 +1550,10 @@
       "bytes": 23191,
       "sha256": "b8eb93090d5c2e222ccbf681cf873253b37a21aaa8055efcae5865b0f14dda1c"
     },
+    "logs/growth_recount.log": {
+      "bytes": 101,
+      "sha256": "1a7a2dc24dd55ba87d45435c2d3ec4d9510366900c188cfdecbb5c50977b797e"
+    },
     "logs/source_environment.log": {
       "bytes": 2755,
       "sha256": "9840019e85ce2e8fb51459e3d4d2ece0f86d8d6b6e0874215efa8543b63dbc60"
@@ -1574,6 +1578,18 @@
       "bytes": 10249,
       "sha256": "130ade345987eaf74563ed2e5c12df0554674dafe504845bb09332d14beab03c"
     },
+    "reports/growth/06_growth_analysis.json": {
+      "bytes": 932211,
+      "sha256": "3c702bab4c484d33a3b713a78de253a326a667c243b9fe3dfad29a5b8eba35b1"
+    },
+    "reports/growth/06_growth_contrasts.csv": {
+      "bytes": 106574,
+      "sha256": "40216c20a6db5f551c01ad673792f8620bbae8d44ab9b02fd122b533257ec9a2"
+    },
+    "reports/growth/06_growth_runs.csv": {
+      "bytes": 27773,
+      "sha256": "31ab3c686fb36ac1344c4a13ffc4264ddf40db373832f5d089f3ce5a60599b1d"
+    },
     "source_commit.zip": {
       "bytes": 2386986,
       "sha256": "23d1943e0c68b078ed11339a4c8e9a1a55ee333d0de7f24478a6793903bbd61f"
@@ -1583,8 +1599,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 24676,
-      "sha256": "146cc04f72eb602d81baa64e1ca421d2316ad5b1aa6a59ebd3db1a2b2c66abbc"
+      "bytes": 25588,
+      "sha256": "b30d01ba858237ea26815f11b4286b41a54deb5a5aa130364902dc37c2b13e4c"
     }
   },
   "run_key": "37566497890-1",
