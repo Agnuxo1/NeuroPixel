@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "status": "pre_execution_source_corrections",
+  "source_parent": "fd57fc2cff0ce471ccca5609571cc27293b8cd05",
+  "changes": [
+    {
+      "path": "scripts/research_stability_native.py",
+      "before_blob": "b5a4f0b0f519af158cb97e129d52f918e9ccfeef",
+      "after_blob": "7595fe76ee8fba13a22589fba0ff3fdeed65d634",
+      "reason": "Root static review found the promised autograd Jacobian missing. Add native differentiation and raw witnesses alongside existing native finite differences before any plan freeze/execution.",
+      "retained_preimage": "results/research/15_validation/native_before_autograd.py",
+      "native_check_count_before": 11,
+      "native_check_count_after": 12
+    },
+    {
+      "path": "docs/research/15_probe_protocol.md",
+      "before_blob": "7520b3a6663b51b1db58380fc1af1ff94ee2c237",
+      "after_blob": "e132328294a1d1aa6d94438d226ab5875d85c1aa",
+      "reason": "Make autograd and metric tolerances numeric and distinguish numerical log-sum-exp stability from dynamical stability.",
+      "retained_preimage": "results/research/15_validation/protocol_before_explicit_metric_tolerances.md"
+    },
+    {
+      "path": "scripts/research_item15_root_recount.js",
+      "reason": "Align public JSON schema key fixedpoint_residual_l2 and add seven analytical matrix/peak summaries plus local-Jacobian tolerance checks during authoring."
+    }
+  ],
+  "numerical_execution_started": false,
+  "outcomes_used_to_change_plan": false,
+  "root_static_review": {
+    "native_file_sha256": "8bfbf1dfcc6cf13191acb68b4c9f5315b66db85ead6aca6d10413d23be0c1fd0",
+    "checks": [
+      "State boundary and 257-to-256 update alignment inspected",
+      "Literal matrices remain nonnegative on every planned trajectory",
+      "Native finite differences and autograd differentiate the injected next update",
+      "No training or optimizer step",
+      "Complete arrays saved before expected-outcome assertions",
+      "Partial failure records contain completed observations only",
+      "RNG witness begins after model construction",
+      "Guard is an execution stop and never a silent state clipping",
+      "Native readout and tied PAD dictionary inspected",
+      "Inherited transport policy unchanged except item namespace and diagnostic metadata",
+      "Independent NumPy auditor read in full:214 schemas, literal weight maps, math.fsum orbits, raw-aligned residuals, independent logaddexp NLL, native FD/autograd comparison and12 check names."
+    ],
+    "issues": [],
+    "independent_auditor_sha256": "dac909e74c7b081ccd7be95515137ce33da30639c52f4edc14d777cedc587c03"
+  },
+  "scientific_review": {
+    "reviewer": "scientific_prior_art",
+    "scope": "Full protocol and primary references; static only",
+    "issues_after_numerical_wording_correction": [],
+    "final_protocol_blob": "e132328294a1d1aa6d94438d226ab5875d85c1aa",
+    "root_javascript_recount": {
+      "blob": "9179251c35f5851185bfc82fbd42a3fc999ee4b4",
+      "status": "No static blockers; Jordan spectral norm, epsilon scaling, stable NLL, tie rule, row ordering and summaries reviewed without execution."
+    }
+  },
+  "item15_later_retrospective_feasibility": "Read-only feasibility review of already archived item9 learned weights is active within item15. It is excluded from this seven-case census and can execute only under a separate frozen plan, without new training or rewriting earlier decisions.",
+  "independent_architecture_auditor_review": {
+    "blob": "65b019d0fd939cfbd82bf2fa62bf8fb23ed44e6b",
+    "status": "Read-only complete focused cross-check of214arrays,FD/autograd,metrics and schemas; no blockers."
+  }
+}

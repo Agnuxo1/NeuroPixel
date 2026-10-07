@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T15:43:57+00:00",
+  "recorded_at": "2026-10-07T16:07:56+00:00",
   "active_item": 15,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -117,7 +117,11 @@
       "item": 15,
       "title": "Dynamical stability",
       "status": "in_progress",
-      "opened_at_utc": "2026-10-07T15:43:57+00:00"
+      "opened_at_utc": "2026-10-07T15:43:57+00:00",
+      "probe_status": "scheduled",
+      "protocol": "15_probe_protocol.md",
+      "plan": "15_probe_plan.json",
+      "frozen_at_utc": "2026-10-07T16:07:56+00:00"
     },
     {
       "item": 16,
@@ -964,15 +968,27 @@
     "closure_commit": "d7c2e07473856ccd38591b2389babb235e8e29b5"
   },
   "item15": {
-    "stage": "Opening dynamical-stability source and scientific audit",
+    "stage": "Frozen seven-case native dynamical census; bounded public CPU execution scheduled",
     "opened_at_utc": "2026-10-07T15:43:57+00:00",
     "opened_after_item14_closure_commit": "d7c2e07473856ccd38591b2389babb235e8e29b5",
     "scope": "Distinguish finite-horizon output accuracy, bounded recurrent state, sensitivity to perturbations, equilibrium/attraction and useful stable memory. Audit update constraints and historical trajectories; derive conditions and counterexamples, then execute only bounded native diagnostics needed to verify interpretable claims.",
-    "execution_plan_frozen": false,
+    "execution_plan_frozen": true,
     "model_training_started": false,
     "historical_H1": "closed and not supported; unchanged",
     "resources": "Source/review90 minutes; no numerical runner at opening. Later CPU execution must freeze finite horizons/norm/overflow/termination criteria and preserve all outcomes with RAM>=8GiB,aggregateCPU<=4.",
     "sequential_policy": "Items16–30 unopened until this feasible investigation is closed.",
-    "routing": "Established conservative root integration with independent architecture, evidence and primary-literature reviews; JEV capability unavailable in established inventory."
+    "routing": "Established conservative root integration with independent architecture, evidence and primary-literature reviews; JEV capability unavailable in established inventory.",
+    "probe_freeze_utc": "2026-10-07T16:07:56+00:00",
+    "probe_plan_sha256": "a39782409d87a172ca516a461e4c31a92ebd2ed2828477c02dfb9e38b060460d",
+    "probe_contract_parent_methods": 1,
+    "probe_native_checks": 12,
+    "constructed_trajectories": 14,
+    "aligned_state_endpoints": 3598,
+    "native_frame_snapshots": 3612,
+    "summary_rows": 154,
+    "raw_arrays": 214,
+    "optimization_steps": 0,
+    "trained_checkpoints_loaded_in_this_census": 0,
+    "later_retrospective_learned_checkpoint_feasibility": "Five archived item9 NP weights and saved validation observations located; excluded from this census and requiring a separate frozen plan before inference."
   }
 }

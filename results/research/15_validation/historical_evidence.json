@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "scope": "Read-only reinterpretation of previously observed summaries; no new historical checkpoint inference.",
+  "source_commit": "fd57fc2cff0ce471ccca5609571cc27293b8cd05",
+  "rest_state": {
+    "source": "scripts/phase3.py",
+    "source_blob": "a73b96df3266b8bb382e7dbb7ba86ad651e965b3",
+    "configs": [
+      {
+        "path": "results/phase3/stable_fijo16.json",
+        "blob": "dec383f3f6cadfb32179845ba006d9d65009823c",
+        "sha256": "11a1f557f3bf59d731f9df578935145a32c8036149bfde1e9b818a97e9cb5125",
+        "clean": [
+          0.998,
+          0.984,
+          0.8625,
+          0.6745,
+          0.377,
+          0.227
+        ],
+        "damaged": [
+          0.9045,
+          0.566,
+          0.293
+        ]
+      },
+      {
+        "path": "results/phase3/stable_reposo.json",
+        "blob": "3b4933065f830519280560f8dc7bd8a1cf45db8b",
+        "sha256": "1206d0219814b5ea2640add9c77d4680903355748f09d4cefaf251bc58cc3f87",
+        "clean": [
+          0.992,
+          0.996,
+          0.995,
+          0.9925,
+          0.982,
+          0.958
+        ],
+        "damaged": [
+          0.9935,
+          0.988,
+          0.97
+        ]
+      }
+    ],
+    "clean_horizons": [
+      8,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "damaged_horizons": [
+      16,
+      32,
+      48
+    ],
+    "lesion_after_update": 8,
+    "lesion_cell_probability": 0.5,
+    "n_per_endpoint": 2000,
+    "initialization_seeds_per_configuration": 1,
+    "retained_observables": "Aggregate accuracy and elapsed time; no per-example raw state, probability, NLL, fixed-point residual or perturbation trace.",
+    "recipe_confound": "Rest recipe jointly changes training depth and damage.",
+    "interpretation": "Finite output accuracy; does not establish a uniform state bound, convergence, attraction or global stability."
+  },
+  "visualization": {
+    "path": "scripts/make_readme_figures.py",
+    "blob": "309b1f92c7633dcee977a20563d9c2dbfb49350c",
+    "example_seed": 11,
+    "horizon": 24,
+    "retained": "PNG/GIF; PCA and quantile/clipping-based normalization cannot preserve original state magnitudes."
+  },
+  "prior_item11": {
+    "report": "docs/research/11_results.md",
+    "report_sha256": "ff44578bbcb0faf3762718eca2d5bc8cfbb3ccf05a773891444392b6115889f5",
+    "scope": "NP pilots seed69, delay2/3/4, 48 known examples at each endpoint; no main panel admitted.",
+    "interpretation": "Large but finite NLL values alone do not prove asymptotic divergence or identify its cause."
+  },
+  "changes_to_historical_results": false,
+  "model_architecture_evidence": {
+    "path": "neuropixel/model.py",
+    "blob": "b66e2f575c6ae937d8cad807b4dd0e48531850f7",
+    "sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "derivation": "F_u(s)=s+W2 ReLU(Ks+W_i u+b1)+b2; differentiable-region Jacobian I+W2 diag(active) K.",
+    "no_implemented_certificate": [
+      "hard state norm bound",
+      "uniform contraction constraint",
+      "Lyapunov function certificate"
+    ],
+    "zero_update_initialization": "Identity map; neutral, not attraction to a unique state."
+  },
+  "activity_thresholds": {
+    "scope": "Only the finite-horizon stability interpretation is assessed here; computational and energy-cost items remain unopened.",
+    "sources": [
+      {
+        "path": "results/phase3/energy_l0.3.json",
+        "blob": "eca8174bd9e978d9ae8a0d141544ed03cf0686a7",
+        "bytes": 101,
+        "sha256": "c8c926cb1df9aed6e9d4a3c377ca374208808c2e3f03510894988c9c076328a1",
+        "data": {
+          "lambda": 0.3,
+          "acierto": 0.999,
+          "pixeles_activos_final": 1,
+          "actualizaciones_activas": 1
+        }
+      },
+      {
+        "path": "results/phase3/energy_l1.0.json",
+        "blob": "d19e56d6cea83be7e83e1e3c00188f820bec5b37",
+        "bytes": 104,
+        "sha256": "f1ece97c8d5ff9ea60a8bb1f0333192cbc6fe1be39c9b98641fec391f8216fd1",
+        "data": {
+          "lambda": 1,
+          "acierto": 0.996,
+          "pixeles_activos_final": 1,
+          "actualizaciones_activas": 0.7217
+        }
+      },
+      {
+        "path": "results/phase3/energy_l3.0.json",
+        "blob": "dfce5dff036b20f134d12710ad4e6fc5c40c24e0",
+        "bytes": 104,
+        "sha256": "5be4fb44ca9b001cda07f5d41f5c42fda800a1679e418e33b0d3f7bf7c5e4084",
+        "data": {
+          "lambda": 3,
+          "acierto": 0.991,
+          "pixeles_activos_final": 1,
+          "actualizaciones_activas": 0.4929
+        }
+      }
+    ],
+    "interpretation": "Three T16 endpoint activity summaries do not prove that all future states remain active, and do not establish residual convergence or physical energy savings. No lambda0 summary is present among these three artifacts.",
+    "measurement": {
+      "native_horizon": 16,
+      "observed_adjacent_differences": 15,
+      "activity_examples": 1000,
+      "accuracy_examples": 2000,
+      "state_active_threshold": 0.05,
+      "update_active_threshold": 0.01,
+      "aggregation": "Channel max absolute value followed by spatial and batch mean, and mean across recorded time differences for update activity."
+    }
+  }
+}

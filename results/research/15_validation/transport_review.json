@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "status": "no_static_blocker_found",
+  "review_type": "Read-only GitHub source and literal derivation review; no execution",
+  "source_parent_commit": "fd57fc2cff0ce471ccca5609571cc27293b8cd05",
+  "artifacts": [
+    {
+      "path": "scripts/research_item15_worker.py",
+      "blob": "fcd2f393b27e9402a188b04ec8aa32bd8157fc21",
+      "bytes": 21278,
+      "sha256": "94c4b57be8d7f62503eb4ff8a6426e67d18a5a3e61adc929ecfd7c00e632c739"
+    },
+    {
+      "path": ".github/workflows/research-item15-probe.yml",
+      "blob": "ec1303ffb75ec5cc03c58d6f15cb12887a7f194c",
+      "bytes": 3161,
+      "sha256": "0776043f9a3289890dc0e31133ffc301c0abd89c21ece29420a064e02afed19b"
+    },
+    {
+      "path": "scripts/research_stability_probe.py",
+      "blob": "f1d8aebcc6ce25bec59aa561f5da54edf3e0712c",
+      "bytes": 5526,
+      "sha256": "1fc8fcbee083044407d260f7d9cea0e79c5f30a940141d91de5f7d14441beeea"
+    }
+  ],
+  "unchanged_transport": {
+    "path": "scripts/research_item9_worker.py",
+    "blob": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+    "sha256": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "git_timeout_seconds": 60
+  },
+  "findings": [
+    "Item15 worker equals the reviewed item14 worker after namespace substitutions, except for the one-line description of finite-horizon dynamical-stability scope.",
+    "Workflow admits only the isolated source branch and a public repository, triggers only the item15 probe plan, fixes CPU packages and six numerical-thread environment variables to 1, and gives the whole job 20 minutes with a 1,170-second deadline from its first step.",
+    "The reused Git helper takes min(60 seconds, remaining deadline), has no stdin, limits Git packing/indexing to one thread, and terminates only its own session on failure.",
+    "Parent worker imports no Torch. Child stages enforce actual runtime versions and thread counts; source guards compare committed HEAD/plan, tracked cleanliness and every bound-file SHA.",
+    "Independent owned-process-group supervision persists resource observations and enforces the 8 GiB floor and stage deadline while the main thread may archive. Only owned children are signalled.",
+    "Controller runs native then independent audit in fresh subprocesses, each at most120 seconds within the 540-second shared allowance. Child processes inherit the worker-owned process group.",
+    "Producer/auditor paths and --plan/--output/--native arguments match the agreed interfaces. Native check inventory is read from the frozen plan and must equal 12 for candidate7595fe76.",
+    "status stability_probe_status.json is distinct from worker probe_status.json. Log and result hashes, completed/failed component records, and source/resource conclusions are persisted.",
+    "Interim archives hash the completed copy and are labelled partial. Final archive is exclusive, follows owned-child shutdown, and uses a 180-second reserve with normal fast-forward results-branch publication.",
+    "The proposed single reused unittest node tests post-update intervention timing and snapshot ownership; it does not replace independent reconstruction of the new seven-case dynamics."
+  ],
+  "limits": [
+    "This receipt is a static review, not compilation, a passed contract test, an executed numerical probe or verification of a future archive.",
+    "The final frozen plan must bind these exact files, the corrected native producer and independent auditor, expected test count 1, native check count 12, and the declared finite budgets.",
+    "No branch/reference, historical source, model, dataset or result was changed by this review. Items 16–30 remain unopened."
+  ]
+}
