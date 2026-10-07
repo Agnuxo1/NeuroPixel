@@ -1,7 +1,7 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T09:02:05.347813+00:00",
+  "created_at_utc": "2026-10-07T09:07:05.418248+00:00",
   "files": {
     "contract_tests.log": {
       "bytes": 49,
@@ -159,17 +159,45 @@
       "bytes": 155168,
       "sha256": "98be11528f33c0a662c3f21f65c271fb8e649b8c306a864df7c95bb4dcbeb37d"
     },
+    "study/runs/neuropixel_seed43/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+    },
     "study/runs/neuropixel_seed43/configuration.json": {
       "bytes": 568,
       "sha256": "48098f44ed1a8787a7bf786315c2fda37f82c2d19ff0b01760a1a45a736045f1"
+    },
+    "study/runs/neuropixel_seed43/probe_predictions.npz": {
+      "bytes": 98978,
+      "sha256": "b39c60d5fa861856c0005842d1514bc5c38ad0bf2ada3b6e955f4b04a0a1fe69"
+    },
+    "study/runs/neuropixel_seed43/run.json": {
+      "bytes": 22084,
+      "sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7"
     },
     "study/runs/neuropixel_seed43/started.json": {
       "bytes": 2070,
       "sha256": "89b35fcd78e8371161b5eb49989bd5b1f8875872fe3c6e3d68312e32e13a4537"
     },
     "study/runs/neuropixel_seed43/training.jsonl": {
-      "bytes": 1206070,
-      "sha256": "e286124e081a7602896cf551893657f3c5b7903113b8b60c9a5e561903ef4067"
+      "bytes": 1701352,
+      "sha256": "edb05bb439a796dd7811085b16b12e096f8f7f03e5c028649ca06f3e8357f1ee"
+    },
+    "study/runs/neuropixel_seed43/validation_predictions.npz": {
+      "bytes": 196024,
+      "sha256": "daf6ba5ec8bcc52375eb939f26d4687f82b739e28c8ae0740d45b3bd35982900"
+    },
+    "study/runs/neuropixel_seed44/configuration.json": {
+      "bytes": 568,
+      "sha256": "163e52309b662d4e08e720ae2921c9db52a4af5c786dc8dc5146e8a0ec38f39b"
+    },
+    "study/runs/neuropixel_seed44/started.json": {
+      "bytes": 2070,
+      "sha256": "86ad563a3da0a9cbb2be7bc44bbc1f358577b3bc222f532ef10b9a69e592ed67"
+    },
+    "study/runs/neuropixel_seed44/training.jsonl": {
+      "bytes": 153299,
+      "sha256": "ac7f9daf3b099822262b6220dee64c6cfcac91d64e410782710a7db7b689e51d"
     },
     "study/runs/relative_transformer_seed40/checkpoint.pt": {
       "bytes": 131001,
@@ -255,6 +283,34 @@
       "bytes": 199280,
       "sha256": "d6aff961675e25af34a57d8534c2f0ff84c55c170a2295fa94c63295840c18c3"
     },
+    "study/runs/relative_transformer_seed43/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "906beeef4f34fef40962c1d2ac6e7abaccec1d876dfcca49fc145d7ee9190b59"
+    },
+    "study/runs/relative_transformer_seed43/configuration.json": {
+      "bytes": 528,
+      "sha256": "1b23a43422b76be48b5cc01c22e15610512676ffd4173aba631a5e13374577f4"
+    },
+    "study/runs/relative_transformer_seed43/probe_predictions.npz": {
+      "bytes": 100634,
+      "sha256": "0de7b707eeb952956618e90f17322aede6ea96765dc502e268d6e7a52d639932"
+    },
+    "study/runs/relative_transformer_seed43/run.json": {
+      "bytes": 22091,
+      "sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267"
+    },
+    "study/runs/relative_transformer_seed43/started.json": {
+      "bytes": 2024,
+      "sha256": "43cfd9944509102eee54da354858c05d78419f974e1e36139523cffb04589a85"
+    },
+    "study/runs/relative_transformer_seed43/training.jsonl": {
+      "bytes": 1704480,
+      "sha256": "97734c244df616bf04398502fbddb313bb76096afb1e64cbf2f0247b4af20ba4"
+    },
+    "study/runs/relative_transformer_seed43/validation_predictions.npz": {
+      "bytes": 199358,
+      "sha256": "4aab44482b7c0f05e98f0e26435dfdb44c4bfee95a8986d3a4954267ecdfaa2c"
+    },
     "study/train_started.json": {
       "bytes": 882,
       "sha256": "9fe28a6890252dcaa2599f7207200033c4e9e39639fbfbfb5e9115d1708ac75f"
@@ -268,12 +324,12 @@
       "sha256": "7dad38a9e544b9daa974c227dd730874321cc64bcc8b488c48586c74aff19ba9"
     },
     "train.log": {
-      "bytes": 95848,
-      "sha256": "7cd11b532679eeb00c279b4d7ac8b6192166cf2cdf181b291373da81c000c560"
+      "bytes": 115701,
+      "sha256": "100cbefe24da6b9538c9c75935a13924efd14ae261be1292bf66b933c2e6a971"
     },
     "train_resource_monitor.json": {
-      "bytes": 283289,
-      "sha256": "276767c778b47826efa98690f6f91e7e09f23d8cdb96dc3cf24666711221d11e"
+      "bytes": 323717,
+      "sha256": "2117e47d120b87ff41efac78025895d54487640f8f2e9e3ecca170d642a9072b"
     },
     "worker_status.json": {
       "bytes": 2844,
