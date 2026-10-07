@@ -1,0 +1,2697 @@
+{
+  "auditor": {
+    "path": "research_babi_audit.py",
+    "sha256": "d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949"
+  },
+  "checked_input_count": 105,
+  "checks": [
+    {
+      "check": "source_and_plan_bindings",
+      "files": 21,
+      "plan_sha256": "f01846c1c6685328d49a5cdcb6d5c399222f99b8f160e37ccff62ee5e0418993",
+      "status": "passed"
+    },
+    {
+      "check": "independent_TRAIN_control_fit_and_counts",
+      "controls": 8,
+      "records": 1000,
+      "status": "passed"
+    },
+    {
+      "check": "raw_TRAIN_parser_grouping_encoder",
+      "groups": 752,
+      "records": 1000,
+      "status": "passed"
+    },
+    {
+      "check": "run_recount",
+      "checkpoint_sha256": "294191c6b8defbc888fcc1c63fdf2389ecc9f38a4db521a2188f201cdcc9601d",
+      "completed_updates": 2048,
+      "parameter_count": 29552,
+      "run_id": "mem_neuropixel_s58",
+      "status": "passed"
+    },
+    {
+      "check": "run_recount",
+      "checkpoint_sha256": "2e7b8a45ebcc1493dd8c46bb717b0b625558111a8cbc1fcf2346227dc81acc0b",
+      "completed_updates": 384,
+      "parameter_count": 29562,
+      "run_id": "mem_relative_transformer_s58",
+      "status": "passed"
+    },
+    {
+      "check": "run_recount",
+      "checkpoint_sha256": "538ef9bf680cea1e16b01a54ff5d58cd9bbf5d8f42bd6aecd3c5036ff724265f",
+      "completed_updates": 1024,
+      "parameter_count": 29552,
+      "run_id": "pilot_neuropixel_lr0001_s59",
+      "status": "passed"
+    },
+    {
+      "check": "run_recount",
+      "checkpoint_sha256": "6eedd69a2159d611b17ea49dc6933f02fb9a89308ee7dd14dfa9d2defb2a11e0",
+      "completed_updates": 1024,
+      "parameter_count": 29552,
+      "run_id": "pilot_neuropixel_lr0003_s59",
+      "status": "passed"
+    },
+    {
+      "check": "run_recount",
+      "checkpoint_sha256": "2210df5f989ab451600e27f64265f1236c47d0b76d2d2be20a8ff9ebffc66733",
+      "completed_updates": 1024,
+      "parameter_count": 29562,
+      "run_id": "pilot_relative_transformer_lr0001_s59",
+      "status": "passed"
+    },
+    {
+      "check": "run_recount",
+      "checkpoint_sha256": "7025bd7d7d8fb2720197d54811393382f226867b000db322839186277766c8b5",
+      "completed_updates": 1024,
+      "parameter_count": 29562,
+      "run_id": "pilot_relative_transformer_lr0003_s59",
+      "status": "passed"
+    },
+    {
+      "all_memorization_checks_recounted": true,
+      "check": "preflight_selection",
+      "completed_runs": 6,
+      "status": "passed"
+    }
+  ],
+  "completed_at_utc": "2026-10-07T11:32:47.299664+00:00",
+  "development": {
+    "data_identity_sha256": "5f303328ba9c4499172b61f281829934454dac4d42cc2e86b17b856004a5a1ff",
+    "groups": 752,
+    "height": 4,
+    "raw_input_gold_conflicts": 0,
+    "records": 1000,
+    "train": 895,
+    "validation": 105,
+    "vocabulary": 18,
+    "width": 8
+  },
+  "development_controls": {
+    "official_train_all": {
+      "bow_memory": {
+        "accuracy": 0.774,
+        "correct": 774,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.8176100628930818,
+            "correct": 130,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.8375,
+            "correct": 134,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.7901234567901234,
+            "correct": 128,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.6568047337278107,
+            "correct": 111,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 0.8388888888888889,
+            "correct": 151,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.7058823529411765,
+            "correct": 120,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "bow_naive_bayes": {
+        "accuracy": 0.174,
+        "correct": 174,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.2578616352201258,
+            "correct": 41,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.1125,
+            "correct": 18,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.2222222222222222,
+            "correct": 36,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.14792899408284024,
+            "correct": 25,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 0.14444444444444443,
+            "correct": 26,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.16470588235294117,
+            "correct": 28,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "exact_memory": {
+        "accuracy": 0.914,
+        "correct": 914,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.8742138364779874,
+            "correct": 139,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.9375,
+            "correct": 150,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.9074074074074074,
+            "correct": 147,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.8579881656804734,
+            "correct": 145,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 180,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.9,
+            "correct": 153,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "fact_answer_frequency": {
+        "accuracy": 0.345,
+        "correct": 345,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.44025157232704404,
+            "correct": 70,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.29375,
+            "correct": 47,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.35802469135802467,
+            "correct": 58,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.3431952662721893,
+            "correct": 58,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 0.3,
+            "correct": 54,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.3411764705882353,
+            "correct": 58,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "fact_answer_frequency_excluding_query": {
+        "accuracy": 0.642,
+        "correct": 642,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 159,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.8,
+            "correct": 128,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.7037037037037037,
+            "correct": 114,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.621301775147929,
+            "correct": 105,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 0.43333333333333335,
+            "correct": 78,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.3411764705882353,
+            "correct": 58,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "majority": {
+        "accuracy": 0.18,
+        "correct": 180,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 180,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "question_only": {
+        "accuracy": 0.307,
+        "correct": 307,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.29559748427672955,
+            "correct": 47,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 0.40625,
+            "correct": 65,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 0.2777777777777778,
+            "correct": 45,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 0.27218934911242604,
+            "correct": 46,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 0.35555555555555557,
+            "correct": 64,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 0.23529411764705882,
+            "correct": 40,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      },
+      "symbolic_raw": {
+        "accuracy": 1.0,
+        "correct": 1000,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 1000,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 159,
+            "n": 159
+          },
+          "bedroom": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "n": 160
+          },
+          "garden": {
+            "accuracy": 1.0,
+            "correct": 162,
+            "n": 162
+          },
+          "hallway": {
+            "accuracy": 1.0,
+            "correct": 169,
+            "n": 169
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 180,
+            "n": 180
+          },
+          "office": {
+            "accuracy": 1.0,
+            "correct": 170,
+            "n": 170
+          }
+        },
+        "supported_gold_n": 1000,
+        "unsupported_gold_n": 0
+      }
+    },
+    "optimization_train": {
+      "bow_memory": {
+        "accuracy": 0.8156424581005587,
+        "correct": 730,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.8848920863309353,
+            "correct": 123,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.8533333333333334,
+            "correct": 128,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.8367346938775511,
+            "correct": 123,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.7310344827586207,
+            "correct": 106,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.8322981366459627,
+            "correct": 134,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.7581699346405228,
+            "correct": 116,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "bow_naive_bayes": {
+        "accuracy": 0.1776536312849162,
+        "correct": 159,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.26618705035971224,
+            "correct": 37,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.11333333333333333,
+            "correct": 17,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.23129251700680273,
+            "correct": 34,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.15862068965517243,
+            "correct": 23,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.12422360248447205,
+            "correct": 20,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.1830065359477124,
+            "correct": 28,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "exact_memory": {
+        "accuracy": 1.0,
+        "correct": 895,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 139,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 1.0,
+            "correct": 150,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 1.0,
+            "correct": 147,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 1.0,
+            "correct": 145,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 161,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 1.0,
+            "correct": 153,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "fact_answer_frequency": {
+        "accuracy": 0.34972067039106147,
+        "correct": 313,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.4460431654676259,
+            "correct": 62,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.29333333333333333,
+            "correct": 44,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.3673469387755102,
+            "correct": 54,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.3586206896551724,
+            "correct": 52,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.2795031055900621,
+            "correct": 45,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.3660130718954248,
+            "correct": 56,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "fact_answer_frequency_excluding_query": {
+        "accuracy": 0.6458100558659218,
+        "correct": 578,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 139,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.8066666666666666,
+            "correct": 121,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.6870748299319728,
+            "correct": 101,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.6344827586206897,
+            "correct": 92,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.42857142857142855,
+            "correct": 69,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.3660130718954248,
+            "correct": 56,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "majority": {
+        "accuracy": 0.17988826815642459,
+        "correct": 161,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 161,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "question_only": {
+        "accuracy": 0.3206703910614525,
+        "correct": 287,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.31654676258992803,
+            "correct": 44,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.43333333333333335,
+            "correct": 65,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.2789115646258503,
+            "correct": 41,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.2896551724137931,
+            "correct": 42,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.36024844720496896,
+            "correct": 58,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.24183006535947713,
+            "correct": 37,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "symbolic_raw": {
+        "accuracy": 1.0,
+        "correct": 895,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 139,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 1.0,
+            "correct": 150,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 1.0,
+            "correct": 147,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 1.0,
+            "correct": 145,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 161,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 1.0,
+            "correct": 153,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      }
+    },
+    "validation": {
+      "bow_memory": {
+        "accuracy": 0.41904761904761906,
+        "correct": 44,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.35,
+            "correct": 7,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.6,
+            "correct": 6,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.3333333333333333,
+            "correct": 5,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.20833333333333334,
+            "correct": 5,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.8947368421052632,
+            "correct": 17,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.23529411764705882,
+            "correct": 4,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "bow_naive_bayes": {
+        "accuracy": 0.14285714285714285,
+        "correct": 15,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.2,
+            "correct": 4,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.1,
+            "correct": 1,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.13333333333333333,
+            "correct": 2,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.08333333333333333,
+            "correct": 2,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.3157894736842105,
+            "correct": 6,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "exact_memory": {
+        "accuracy": 0.18095238095238095,
+        "correct": 19,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 19,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "fact_answer_frequency": {
+        "accuracy": 0.3047619047619048,
+        "correct": 32,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.4,
+            "correct": 8,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.3,
+            "correct": 3,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.26666666666666666,
+            "correct": 4,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.25,
+            "correct": 6,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.47368421052631576,
+            "correct": 9,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.11764705882352941,
+            "correct": 2,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "fact_answer_frequency_excluding_query": {
+        "accuracy": 0.6095238095238096,
+        "correct": 64,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 20,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.7,
+            "correct": 7,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.8666666666666667,
+            "correct": 13,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.5416666666666666,
+            "correct": 13,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.47368421052631576,
+            "correct": 9,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.11764705882352941,
+            "correct": 2,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "majority": {
+        "accuracy": 0.18095238095238095,
+        "correct": 19,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 19,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "question_only": {
+        "accuracy": 0.19047619047619047,
+        "correct": 20,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.15,
+            "correct": 3,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.26666666666666666,
+            "correct": 4,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.16666666666666666,
+            "correct": 4,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.3157894736842105,
+            "correct": 6,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.17647058823529413,
+            "correct": 3,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "symbolic_raw": {
+        "accuracy": 1.0,
+        "correct": 105,
+        "cross_entropy": null,
+        "cross_entropy_n": 0,
+        "n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 1.0,
+            "correct": 20,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 1.0,
+            "correct": 10,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 1.0,
+            "correct": 15,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 1.0,
+            "correct": 24,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 1.0,
+            "correct": 19,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 1.0,
+            "correct": 17,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      }
+    }
+  },
+  "input_files": {
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/checkpoint.pt": {
+      "bytes": 121336,
+      "sha256": "294191c6b8defbc888fcc1c63fdf2389ecc9f38a4db521a2188f201cdcc9601d"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/config.json": {
+      "bytes": 3167,
+      "sha256": "ba1c7fdb59f07d60ae81605f3703ef1606dbc09847e853fc7679897ae86553a8"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00128.npz": {
+      "bytes": 5797,
+      "sha256": "96fb4a29a2eda938f5d374acf9917c9094c1bce301186940a4300e35b8067e2d"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00256.npz": {
+      "bytes": 5770,
+      "sha256": "c663818ba5018d9a13dccd8665e6c9bdbc286c97e9cbe6e2caea72ee8663ab6f"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00384.npz": {
+      "bytes": 5688,
+      "sha256": "94c695d1c5f4b38c5339e496cbb425166365152dab76432cadf1c1e65c3c3348"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00512.npz": {
+      "bytes": 5698,
+      "sha256": "0e54459c57f574cc96d00aa2019fc6c1abc375233063964ac73bf6d3205674b4"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00640.npz": {
+      "bytes": 5757,
+      "sha256": "c90ede41378e8f9a311c31d8a4f995a71c659c52a04433a49068e8ba08ca63a8"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00768.npz": {
+      "bytes": 5660,
+      "sha256": "1d22eef44eb2a383b1e60f5d1de921a65762012d7bf0228fb6afe9471191bdb8"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_00896.npz": {
+      "bytes": 5626,
+      "sha256": "581020d07c21b71e1561a7510eef9e013135418765b50f2a2dfe56efdf232406"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01024.npz": {
+      "bytes": 5636,
+      "sha256": "0f6b0d2b98d0fff3387e1d280ae7f0b3cf0d84c65d99cf6196944548148bacd9"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01152.npz": {
+      "bytes": 5665,
+      "sha256": "5325b8c2d561aa2b205c1eaddb7ba7f36fd887f89951e77a149d61b71ef494ef"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01280.npz": {
+      "bytes": 5674,
+      "sha256": "44a57ab17688a8782d1f340dd1f78f59020e6e19780de410bc640d97581af88c"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01408.npz": {
+      "bytes": 5646,
+      "sha256": "781d4a77423bb1e8b03519a261eda8bfa60c7209f9a28e5060020a6454be1bcd"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01536.npz": {
+      "bytes": 5676,
+      "sha256": "d6467c75ae65ed76611946b7b4014f828396aa7b26fb2b34579b4a50305604c9"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01664.npz": {
+      "bytes": 5658,
+      "sha256": "7517fec923fcc60dd52f8ab6676e1bf94036ddc4aace3043053554c911b64e28"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01792.npz": {
+      "bytes": 5686,
+      "sha256": "d9baf7ae1e87fadb9ac58d7491ede454fb59ce6cdff57bcc8b4636f74accd910"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_01920.npz": {
+      "bytes": 5646,
+      "sha256": "8419d392e1fc0cbad11b8c6ee358ddca893456e3247c5b991b118b402d253271"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/memorization_check_02048.npz": {
+      "bytes": 5635,
+      "sha256": "46b0bc351014ce1ce3e5b5fbed83bc94541cca53519062adbce1cdcd279415f4"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/run.json": {
+      "bytes": 70169,
+      "sha256": "3c8ffc0cf264688c38d1d76f4e7077d848256e62969299cc8db9ad83b6ea9c49"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/train_indices.npy": {
+      "bytes": 1048704,
+      "sha256": "a6de3a6ed2c74e103dd0178340f83d4da92ee7e73c34c1f6c781c3fbcf65a204"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/train_log.jsonl": {
+      "bytes": 9006,
+      "sha256": "f49917169ae10cc336318efcbe6777b7a8e28e8823afc05ec61bf77d70832dca"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/train_probe_predictions.npz": {
+      "bytes": 105967,
+      "sha256": "72224bc77a44cb6db74061f7b8a1f963d444bcabae3b2e9d8a44ff9dfdc7dac0"
+    },
+    "37612623870-1-preflight/study/runs/mem_neuropixel_s58/validation_predictions.npz": {
+      "bytes": 14294,
+      "sha256": "d7c5d4a68955959857bb5bdc171fa45a35f9db283d92e55b6e0ce1a094f9165e"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/checkpoint.pt": {
+      "bytes": 127929,
+      "sha256": "2e7b8a45ebcc1493dd8c46bb717b0b625558111a8cbc1fcf2346227dc81acc0b"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/config.json": {
+      "bytes": 3146,
+      "sha256": "b177cd6ed5bfeddd11a7ca1f457992dd03fad6a3a66160f34039902591bc8b77"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/memorization_check_00128.npz": {
+      "bytes": 5758,
+      "sha256": "9557870349cbbbd668542a98c6496ac2ff731acb591e1b898c7c6e965c1f2fdf"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/memorization_check_00256.npz": {
+      "bytes": 5759,
+      "sha256": "43468b108ff23c4a20042023fff5359f56e9d446e3885e7ce4779197e7fea2a3"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/memorization_check_00384.npz": {
+      "bytes": 5757,
+      "sha256": "b3e2f5ffb61b9d22b6fa3d1ef90c3ed721739508c4f911af280fe306a13155dc"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/run.json": {
+      "bytes": 22131,
+      "sha256": "a4629a140efd49da036b36b3d79860118e8715717a655c5c4895b6ddbea60cc3"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/train_indices.npy": {
+      "bytes": 1048704,
+      "sha256": "a6de3a6ed2c74e103dd0178340f83d4da92ee7e73c34c1f6c781c3fbcf65a204"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/train_log.jsonl": {
+      "bytes": 1719,
+      "sha256": "ac0fc9f8fd85173cb8ecccfa357a2f6fb5043580ef4faff2019ba545b53d6a66"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/train_probe_predictions.npz": {
+      "bytes": 105351,
+      "sha256": "a5a46a68185d5ea72901a0d83c9f93c490054bbe5dee228a64caf03ed05eb5ea"
+    },
+    "37612623870-1-preflight/study/runs/mem_relative_transformer_s58/validation_predictions.npz": {
+      "bytes": 14216,
+      "sha256": "8e123b9c16dc2c17c7920a678186098a7c335c973edc0c5d9959046b4df7fcf0"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/checkpoint.pt": {
+      "bytes": 121336,
+      "sha256": "538ef9bf680cea1e16b01a54ff5d58cd9bbf5d8f42bd6aecd3c5036ff724265f"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/config.json": {
+      "bytes": 65305,
+      "sha256": "771f4e4be1af775927fb5dcd0e9b7d19e1183868a07ddef90cff8bb83df3b334"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/run.json": {
+      "bytes": 100418,
+      "sha256": "f525b2c690587225da59fec808c653123e5edb8a81b09fca65fb2afcfd565240"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/train_indices.npy": {
+      "bytes": 262272,
+      "sha256": "4ef94317beed0b45ab951cd7214c5a99bd7c1903bb23c842566934539bb1e4e5"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/train_log.jsonl": {
+      "bytes": 1248,
+      "sha256": "5c06b888eff46f8981ba9a66d52b48acf7bb9396238c7621237ef05465c346dd"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/train_probe_predictions.npz": {
+      "bytes": 104861,
+      "sha256": "4f5e740c5e1a450a3cb5a762cf4619e73b1ed38b2c6c5c1f1d5e134ec1ed93f4"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0001_s59/validation_predictions.npz": {
+      "bytes": 14174,
+      "sha256": "be4d14ded90b44a36302f875b52d54f790f8b181960fdf6eab49e0e063925fce"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/checkpoint.pt": {
+      "bytes": 121336,
+      "sha256": "6eedd69a2159d611b17ea49dc6933f02fb9a89308ee7dd14dfa9d2defb2a11e0"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/config.json": {
+      "bytes": 65305,
+      "sha256": "ae2a12b91a746af9391de51bdff8073093a182dbd8227a71adc8bf247f54cd8b"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/run.json": {
+      "bytes": 100364,
+      "sha256": "e48ec2c4f1f044ece8fb3148813cbd11b0037263039232a4ae324746139b8920"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/train_indices.npy": {
+      "bytes": 262272,
+      "sha256": "4ef94317beed0b45ab951cd7214c5a99bd7c1903bb23c842566934539bb1e4e5"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/train_log.jsonl": {
+      "bytes": 1254,
+      "sha256": "97d6c22a5f91ab333873eb7433795bb0e902b5c6b8bd05c913be57e480fdf2dd"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/train_probe_predictions.npz": {
+      "bytes": 105132,
+      "sha256": "d2bc8126323e486cec8c2a1f7fcd05c5da0a481e2756a8e3035b69abdfb90a6a"
+    },
+    "37612623870-1-preflight/study/runs/pilot_neuropixel_lr0003_s59/validation_predictions.npz": {
+      "bytes": 14171,
+      "sha256": "5266cbc7620bdb195e56fa13c67e6eacb3e9870737ce8d906a518cab361a4e1e"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/checkpoint.pt": {
+      "bytes": 127929,
+      "sha256": "2210df5f989ab451600e27f64265f1236c47d0b76d2d2be20a8ff9ebffc66733"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/config.json": {
+      "bytes": 65284,
+      "sha256": "47b2c8d4c32a6d877978406a8c2d4c301cb34c10b3f4c73df199e5427f01e468"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/run.json": {
+      "bytes": 101053,
+      "sha256": "f308d6d8e2eacf70f9f69ede521ced6d53b35e5b556d74785d6e56a0833c7548"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/train_indices.npy": {
+      "bytes": 262272,
+      "sha256": "4ef94317beed0b45ab951cd7214c5a99bd7c1903bb23c842566934539bb1e4e5"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/train_log.jsonl": {
+      "bytes": 1252,
+      "sha256": "8a57bad403c9f4eaa153fd84176950b10c8ba1b17d6679bd141be52c895d01f4"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/train_probe_predictions.npz": {
+      "bytes": 104923,
+      "sha256": "24e1404be2d506093de4e6607db89fb012aa35eac53eed2a36013c8eaf55fbc0"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0001_s59/validation_predictions.npz": {
+      "bytes": 14163,
+      "sha256": "5f9938d4de2586aceae67e415c35b6d3b30a008defc0785c03dbc01dd31422c0"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/checkpoint.pt": {
+      "bytes": 127929,
+      "sha256": "7025bd7d7d8fb2720197d54811393382f226867b000db322839186277766c8b5"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/config.json": {
+      "bytes": 65284,
+      "sha256": "d536d794b15c4d94beba5e19793a2d54dda967d206e6e9e9650b1e323b6589b6"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/run.json": {
+      "bytes": 101043,
+      "sha256": "67c76af49fc949707e44279c2ab63b0102fbbc4f77b87161e4ee1dbfd64fd2c9"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/train_indices.npy": {
+      "bytes": 262272,
+      "sha256": "4ef94317beed0b45ab951cd7214c5a99bd7c1903bb23c842566934539bb1e4e5"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/train_log.jsonl": {
+      "bytes": 1258,
+      "sha256": "1321f9a5aa2369e7cddaad6c71c8e57aafb88f70ad5c9e9f2cd6e8efaf3dec22"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/train_probe_predictions.npz": {
+      "bytes": 104747,
+      "sha256": "69d4154def00764111166bd84ad8eb066e89f215f50782c98de516a89ab4da97"
+    },
+    "37612623870-1-preflight/study/runs/pilot_relative_transformer_lr0003_s59/validation_predictions.npz": {
+      "bytes": 14127,
+      "sha256": "9683afd20d9dd989a24d713d123b3692f979dfb9d5a491650e60638c2c4c3fd4"
+    },
+    "37612623870-1-preflight/study_preflight_environment.json": {
+      "bytes": 294,
+      "sha256": "2f6afb6e48f38e143c946522721756c4b10f57536075dd626d99de2ebb67d820"
+    },
+    "development/acquisition_receipt.json": {
+      "bytes": 43190,
+      "sha256": "64862b87c3b4b8859aa3f1801fdce6c7b609ba3ca1bce97be79db012b5e29e08"
+    },
+    "development/author_original_download.json": {
+      "bytes": 769,
+      "sha256": "91dce641ff7949de403cda096e93e57718eceb25b69af57e046a0236ff59c9a3"
+    },
+    "development/control_predictions.json": {
+      "bytes": 478993,
+      "sha256": "55de0c6e645656b6f5df9c332eae45d388969541b2e44ca45bf1d8eb4e42ad72"
+    },
+    "development/control_scores.json": {
+      "bytes": 22024,
+      "sha256": "ba9613317f943a77eff850535668fcc570fbd484966e6ecac33a550e7258f86c"
+    },
+    "development/development_split.json": {
+      "bytes": 593248,
+      "sha256": "1f1a6c3fd2c03cd8a65dc1b32f7dc5365e763eb1d57db365da63f729164b579a"
+    },
+    "development/documented_https_mirror.tar.gz": {
+      "bytes": 11745123,
+      "sha256": "84f5296ab9a1ad0dc9464e08c491d65cd08830fca3acae9ab86f75e0fb81573c"
+    },
+    "development/documented_https_mirror_download.json": {
+      "bytes": 1035,
+      "sha256": "3f30e04b46f30fd8e1313e215804e39eddc0461ba8d6ed342854814f02721a2f"
+    },
+    "development/documented_https_mirror_member_receipt.json": {
+      "bytes": 33351,
+      "sha256": "b994f9af12d1ce8d32b930a6064a76a6a38a12a5e7243458ca5388f2b670b9dc"
+    },
+    "development/documented_https_mirror_qa4_train.txt": {
+      "bytes": 117470,
+      "sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa"
+    },
+    "development/encoded_official_train.json": {
+      "bytes": 823624,
+      "sha256": "7ed6979e680630296276a82068c1ae16fd9264d9d2d4c79085c5a1575a656fa1"
+    },
+    "development/encoder.json": {
+      "bytes": 1272,
+      "sha256": "7e574c20521d057bd214c20514e74246b3210c2a36eae80190bfdbe84490309d"
+    },
+    "development/encoding_issues.json": {
+      "bytes": 41,
+      "sha256": "aca0ad81519aafb296fcda30eb15f347baa7f06340817470d5e8e577f4370faa"
+    },
+    "development/official_train_records.json": {
+      "bytes": 1157969,
+      "sha256": "67ed1e34fe8ad9447ca0f0d5b402db61c3576403bbe119443067177ca021b12a"
+    },
+    "development/raw_input_label_conflicts.json": {
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "development/selected_qa4_train.txt": {
+      "bytes": 117470,
+      "sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa"
+    },
+    "development/selected_source.json": {
+      "bytes": 36560,
+      "sha256": "7f1c06e8dd251326ef309c89bfa218b008ff19eb1cebf11901e201735283aa2f"
+    },
+    "development/shortcut_models.json": {
+      "bytes": 146611,
+      "sha256": "5e0d06aa3b0c8be5d852c5fed27f7368d9aed553f29016f2f5db7b8848a027f2"
+    },
+    "development/source_comparison.json": {
+      "bytes": 135,
+      "sha256": "b57d0c0a7dc3092e8a869d8ee24cbd01dda463469b826dc4df949db9f6b1fd4d"
+    },
+    "development/train_audit_summary.json": {
+      "bytes": 25613,
+      "sha256": "4dd1fe116b584c65c45c349fad237e10e8a2c346cd24ba08e95daf3ecbc87979"
+    },
+    "preflight/preflight_summary.json": {
+      "bytes": 5783,
+      "sha256": "261c0b4c4bf76d2ca16fd94314c155374715cc75ca2139379ea0082bae0dbbc2"
+    },
+    "preflight/selection.json": {
+      "bytes": 3304,
+      "sha256": "55c315919c6bafff23e2618040e37ceff85a67a267c6e32d582ce9289ce51bd4"
+    },
+    "scientific_plan": {
+      "bytes": 36257,
+      "sha256": "f01846c1c6685328d49a5cdcb6d5c399222f99b8f160e37ccff62ee5e0418993"
+    },
+    "source/.github/workflows/research-item10-preflight.yml": {
+      "bytes": 3166,
+      "sha256": "68219c611e0c9402ac9281a98d0fc90e84fc431e81e0bcb60f2ebd02c71bb4d0"
+    },
+    "source/docs/research/10_acquisition_results.md": {
+      "bytes": 8958,
+      "sha256": "b41d0fc26ea2118c7350c05f19b1ecfd303066ea8200fca15dac631a6e86db80"
+    },
+    "source/docs/research/10_analysis_implementation.md": {
+      "bytes": 11320,
+      "sha256": "3176ec059dcf6ed76acec5b540fad31a8bac28610c34164be2e232f792bd20d5"
+    },
+    "source/docs/research/10_babi_provenance.md": {
+      "bytes": 11682,
+      "sha256": "ca71802677febd93b762d6fb751082ff5d4f4dc482726d9e651db6d2c0a01636"
+    },
+    "source/docs/research/10_neural_protocol.md": {
+      "bytes": 14460,
+      "sha256": "d546e64b3d3223d448001ccb0f02668c7fd03ab4385ccd878c0075fedb493f7e"
+    },
+    "source/docs/research/10_study_static_review.md": {
+      "bytes": 9515,
+      "sha256": "eb180964079ddda3066086b6b523d427ea56b76f991710a95051e7c404797efc"
+    },
+    "source/neuropixel/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/neuropixel/model.py": {
+      "bytes": 6895,
+      "sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345"
+    },
+    "source/neuropixel/research/babi_qa.py": {
+      "bytes": 25707,
+      "sha256": "bea3b511b63a8107ae8eb6b6e0bf2d12cf9f76dd80083aae2aa967e42fe7c649"
+    },
+    "source/neuropixel/research/models.py": {
+      "bytes": 17438,
+      "sha256": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee"
+    },
+    "source/pytest.ini": {
+      "bytes": 52,
+      "sha256": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0"
+    },
+    "source/results/research/10_validation/acquisition_completion_receipt.json": {
+      "bytes": 12026,
+      "sha256": "1808502b397a603acc3f298803d137cdf75c5d801e255edd963cc308634d7a76"
+    },
+    "source/results/research/10_validation/development_fixture_declaration.json": {
+      "bytes": 543,
+      "sha256": "873f49c0b98ad3cf546367d6f5cb9f88df57bc1f8f019b115c653c67980ddbc5"
+    },
+    "source/scripts/research_babi_audit.py": {
+      "bytes": 82547,
+      "sha256": "d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949"
+    },
+    "source/scripts/research_babi_fixture_ledger.py": {
+      "bytes": 4987,
+      "sha256": "72936dd3c7a1d35fa3ab061b30078a3e0a2ebd3562dfea5d53e1eb8ec1b8bbf8"
+    },
+    "source/scripts/research_babi_study.py": {
+      "bytes": 52564,
+      "sha256": "ce6ed6e4f5822fac9a2b0df455d1e9c347878f17e2160adbebcabb8787161782"
+    },
+    "source/scripts/research_item10_inputs.py": {
+      "bytes": 4766,
+      "sha256": "2cc0d5dd96fc7140a5480b1337632d79d96a3efb0f453f44e0947d4ed47a3102"
+    },
+    "source/scripts/research_item10_worker.py": {
+      "bytes": 21190,
+      "sha256": "6256f5f90cfa945c05829e23c30f4f24b05b0d92f0d7f4ac8830feac0e184537"
+    },
+    "source/scripts/research_item9_worker.py": {
+      "bytes": 30188,
+      "sha256": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5"
+    },
+    "source/tests/test_babi_qa.py": {
+      "bytes": 24863,
+      "sha256": "4be2108204e1c2fa207836c4f17d03bc6c91dae26c345d3a97dce8b23141a288"
+    },
+    "source/tests/test_babi_study.py": {
+      "bytes": 38951,
+      "sha256": "fb2a33ba5c2ded36499157813c3423a93b525a93249220323baa40c8177e3e26"
+    }
+  },
+  "issues": [],
+  "item": 10,
+  "limits": [
+    "Byte hashes do not independently establish remote archive ancestry or publication time; the operational archive audit owns that evidence.",
+    "Checkpoint files are hashed only, never deserialized; weight finiteness and parameter tensors are not rechecked here.",
+    "Recorded input streams are matched across families and counted, not regenerated from their declared PRNG seeds.",
+    "Resource and timing fields describe saved measurements and configured limits, not continuously observed physical utilization.",
+    "bAbI QA4 is external to this project but synthetic; success does not establish natural-language or out-of-generator generalization.",
+    "The source archive and original TEST have public custody; a workflow access gate is not an independent blind test."
+  ],
+  "paired_streams": [
+    {
+      "kind": "memorization",
+      "planned_stream_content_sha256": "75d27e199101149940e73f99c40781adbb8c44abd676dd5f843b7d453c6bd179",
+      "run_ids": [
+        "mem_neuropixel_s58",
+        "mem_relative_transformer_s58"
+      ],
+      "scope": "Identical saved planned indices and initial firing state; model-specific firing consumption can differ.",
+      "seed": 58,
+      "training_record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec"
+    },
+    {
+      "kind": "pilot",
+      "planned_stream_content_sha256": "19b2a8d829a0b340a0aa7d594a9c43417424735e59ad65242a39fc4311126e3c",
+      "run_ids": [
+        "pilot_neuropixel_lr0001_s59",
+        "pilot_neuropixel_lr0003_s59",
+        "pilot_relative_transformer_lr0001_s59",
+        "pilot_relative_transformer_lr0003_s59"
+      ],
+      "scope": "Identical saved planned indices and initial firing state; model-specific firing consumption can differ.",
+      "seed": 59,
+      "training_record_ids_sha256": "2894bf971712e4f856d8bf523607217d3bac3645a643fad5adb6f17ad958ad17"
+    }
+  ],
+  "phase": "preflight",
+  "preflight": {
+    "admission_passed": true,
+    "all_six_runs_completed": true,
+    "memorization": {
+      "mem_neuropixel_s58": {
+        "checks": [
+          {
+            "accuracy": 0.78125,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 1.6527297794385971,
+            "n": 32,
+            "predictions": {
+              "bytes": 5797,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00128.npz",
+              "sha256": "96fb4a29a2eda938f5d374acf9917c9094c1bce301186940a4300e35b8067e2d"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 128
+          },
+          {
+            "accuracy": 0.84375,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 1.2145359194760164,
+            "n": 32,
+            "predictions": {
+              "bytes": 5770,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00256.npz",
+              "sha256": "c663818ba5018d9a13dccd8665e6c9bdbc286c97e9cbe6e2caea72ee8663ab6f"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 256
+          },
+          {
+            "accuracy": 0.9375,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.22918826646947862,
+            "n": 32,
+            "predictions": {
+              "bytes": 5688,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00384.npz",
+              "sha256": "94c695d1c5f4b38c5339e496cbb425166365152dab76432cadf1c1e65c3c3348"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 384
+          },
+          {
+            "accuracy": 0.8125,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 6.953922586194057,
+            "n": 32,
+            "predictions": {
+              "bytes": 5698,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00512.npz",
+              "sha256": "0e54459c57f574cc96d00aa2019fc6c1abc375233063964ac73bf6d3205674b4"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 512
+          },
+          {
+            "accuracy": 0.78125,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 1.9113400353594252,
+            "n": 32,
+            "predictions": {
+              "bytes": 5757,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00640.npz",
+              "sha256": "c90ede41378e8f9a311c31d8a4f995a71c659c52a04433a49068e8ba08ca63a8"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 640
+          },
+          {
+            "accuracy": 1.0,
+            "consecutive_passes": 1,
+            "criterion_pass": true,
+            "cross_entropy": 0.0012504743484546632,
+            "n": 32,
+            "predictions": {
+              "bytes": 5660,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00768.npz",
+              "sha256": "1d22eef44eb2a383b1e60f5d1de921a65762012d7bf0228fb6afe9471191bdb8"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 768
+          },
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.43314296772898564,
+            "n": 32,
+            "predictions": {
+              "bytes": 5626,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_00896.npz",
+              "sha256": "581020d07c21b71e1561a7510eef9e013135418765b50f2a2dfe56efdf232406"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 896
+          },
+          {
+            "accuracy": 1.0,
+            "consecutive_passes": 1,
+            "criterion_pass": true,
+            "cross_entropy": 6.427242003419845e-05,
+            "n": 32,
+            "predictions": {
+              "bytes": 5636,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01024.npz",
+              "sha256": "0f6b0d2b98d0fff3387e1d280ae7f0b3cf0d84c65d99cf6196944548148bacd9"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1024
+          },
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.0542840875418876,
+            "n": 32,
+            "predictions": {
+              "bytes": 5665,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01152.npz",
+              "sha256": "5325b8c2d561aa2b205c1eaddb7ba7f36fd887f89951e77a149d61b71ef494ef"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1152
+          },
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.37693262175056413,
+            "n": 32,
+            "predictions": {
+              "bytes": 5674,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01280.npz",
+              "sha256": "44a57ab17688a8782d1f340dd1f78f59020e6e19780de410bc640d97581af88c"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1280
+          },
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.4650086714706258,
+            "n": 32,
+            "predictions": {
+              "bytes": 5646,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01408.npz",
+              "sha256": "781d4a77423bb1e8b03519a261eda8bfa60c7209f9a28e5060020a6454be1bcd"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1408
+          },
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.12552154774062166,
+            "n": 32,
+            "predictions": {
+              "bytes": 5676,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01536.npz",
+              "sha256": "d6467c75ae65ed76611946b7b4014f828396aa7b26fb2b34579b4a50305604c9"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1536
+          },
+          {
+            "accuracy": 0.9375,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 1.4461655161852902,
+            "n": 32,
+            "predictions": {
+              "bytes": 5658,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01664.npz",
+              "sha256": "7517fec923fcc60dd52f8ab6676e1bf94036ddc4aace3043053554c911b64e28"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1664
+          },
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.03192258675575468,
+            "n": 32,
+            "predictions": {
+              "bytes": 5686,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01792.npz",
+              "sha256": "d9baf7ae1e87fadb9ac58d7491ede454fb59ce6cdff57bcc8b4636f74accd910"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1792
+          },
+          {
+            "accuracy": 1.0,
+            "consecutive_passes": 1,
+            "criterion_pass": true,
+            "cross_entropy": 2.7958837362927973e-06,
+            "n": 32,
+            "predictions": {
+              "bytes": 5646,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_01920.npz",
+              "sha256": "8419d392e1fc0cbad11b8c6ee358ddca893456e3247c5b991b118b402d253271"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 1920
+          },
+          {
+            "accuracy": 1.0,
+            "consecutive_passes": 2,
+            "criterion_pass": true,
+            "cross_entropy": 5.810271319634134e-08,
+            "n": 32,
+            "predictions": {
+              "bytes": 5635,
+              "path": "study/runs/mem_neuropixel_s58/memorization_check_02048.npz",
+              "sha256": "46b0bc351014ce1ce3e5b5fbed83bc94541cca53519062adbce1cdcd279415f4"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 2048
+          }
+        ],
+        "completed_updates": 2048,
+        "passed": true
+      },
+      "mem_relative_transformer_s58": {
+        "checks": [
+          {
+            "accuracy": 0.96875,
+            "consecutive_passes": 0,
+            "criterion_pass": false,
+            "cross_entropy": 0.06886026344769311,
+            "n": 32,
+            "predictions": {
+              "bytes": 5758,
+              "path": "study/runs/mem_relative_transformer_s58/memorization_check_00128.npz",
+              "sha256": "9557870349cbbbd668542a98c6496ac2ff731acb591e1b898c7c6e965c1f2fdf"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 128
+          },
+          {
+            "accuracy": 1.0,
+            "consecutive_passes": 1,
+            "criterion_pass": true,
+            "cross_entropy": 0.0019354750325172325,
+            "n": 32,
+            "predictions": {
+              "bytes": 5759,
+              "path": "study/runs/mem_relative_transformer_s58/memorization_check_00256.npz",
+              "sha256": "43468b108ff23c4a20042023fff5359f56e9d446e3885e7ce4779197e7fea2a3"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 256
+          },
+          {
+            "accuracy": 1.0,
+            "consecutive_passes": 2,
+            "criterion_pass": true,
+            "cross_entropy": 0.0009372706738454208,
+            "n": 32,
+            "predictions": {
+              "bytes": 5757,
+              "path": "study/runs/mem_relative_transformer_s58/memorization_check_00384.npz",
+              "sha256": "b3e2f5ffb61b9d22b6fa3d1ef90c3ed721739508c4f911af280fe306a13155dc"
+            },
+            "record_ids_sha256": "027dd5e7c5acddd719414175ad3013fd1871849f3cbb1ee853040037d80485ec",
+            "update": 384
+          }
+        ],
+        "completed_updates": 384,
+        "passed": true
+      }
+    },
+    "run_ids": [
+      "mem_neuropixel_s58",
+      "mem_relative_transformer_s58",
+      "pilot_neuropixel_lr0001_s59",
+      "pilot_neuropixel_lr0003_s59",
+      "pilot_relative_transformer_lr0001_s59",
+      "pilot_relative_transformer_lr0003_s59"
+    ],
+    "runtime": {
+      "available_ram_gib": 14.406318664550781,
+      "cuda_version": null,
+      "interop_threads": 1,
+      "packages": {
+        "Pillow": "12.3.0",
+        "numpy": "2.2.6",
+        "psutil": "7.2.2",
+        "pytest": "9.1.1",
+        "scipy": "1.15.1",
+        "torch": "2.6.0+cpu"
+      },
+      "python": "3.12.14",
+      "threads": 2
+    },
+    "selection": {
+      "choices": {
+        "neuropixel": {
+          "checkpoint_sha256": "6eedd69a2159d611b17ea49dc6933f02fb9a89308ee7dd14dfa9d2defb2a11e0",
+          "config_sha256": "af3617f7a740f4616147f13999379628cad770122e1a48c722fc816773bf8125",
+          "learning_rate": 0.003,
+          "run_id": "pilot_neuropixel_lr0003_s59",
+          "validation": {
+            "accuracy": 0.34285714285714286,
+            "can_encode_n": 105,
+            "cannot_encode_n": 0,
+            "correct": 36,
+            "cross_entropy": 1.5318369816236865,
+            "cross_entropy_n": 105,
+            "gold_unseen_as_train_answer_n": 0,
+            "gold_vocabulary_supported_n": 105,
+            "n": 105,
+            "nll_supported_n": 105,
+            "per_answer": {
+              "bathroom": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "n": 20
+              },
+              "bedroom": {
+                "accuracy": 0.1,
+                "correct": 1,
+                "n": 10
+              },
+              "garden": {
+                "accuracy": 0.6,
+                "correct": 9,
+                "n": 15
+              },
+              "hallway": {
+                "accuracy": 0.041666666666666664,
+                "correct": 1,
+                "n": 24
+              },
+              "kitchen": {
+                "accuracy": 0.5789473684210527,
+                "correct": 11,
+                "n": 19
+              },
+              "office": {
+                "accuracy": 0.8235294117647058,
+                "correct": 14,
+                "n": 17
+              }
+            },
+            "supported_gold_n": 105,
+            "unsupported_gold_n": 0
+          }
+        },
+        "relative_transformer": {
+          "checkpoint_sha256": "7025bd7d7d8fb2720197d54811393382f226867b000db322839186277766c8b5",
+          "config_sha256": "a6e67e8644f283d96f65ca407e704ac00511c6f572c5aa394a583495ef70c260",
+          "learning_rate": 0.003,
+          "run_id": "pilot_relative_transformer_lr0003_s59",
+          "validation": {
+            "accuracy": 0.7523809523809524,
+            "can_encode_n": 105,
+            "cannot_encode_n": 0,
+            "correct": 79,
+            "cross_entropy": 0.6694022273530411,
+            "cross_entropy_n": 105,
+            "gold_unseen_as_train_answer_n": 0,
+            "gold_vocabulary_supported_n": 105,
+            "n": 105,
+            "nll_supported_n": 105,
+            "per_answer": {
+              "bathroom": {
+                "accuracy": 0.6,
+                "correct": 12,
+                "n": 20
+              },
+              "bedroom": {
+                "accuracy": 0.8,
+                "correct": 8,
+                "n": 10
+              },
+              "garden": {
+                "accuracy": 0.7333333333333333,
+                "correct": 11,
+                "n": 15
+              },
+              "hallway": {
+                "accuracy": 0.7916666666666666,
+                "correct": 19,
+                "n": 24
+              },
+              "kitchen": {
+                "accuracy": 0.8421052631578947,
+                "correct": 16,
+                "n": 19
+              },
+              "office": {
+                "accuracy": 0.7647058823529411,
+                "correct": 13,
+                "n": 17
+              }
+            },
+            "supported_gold_n": 105,
+            "unsupported_gold_n": 0
+          }
+        }
+      },
+      "data_identity_sha256": "5f303328ba9c4499172b61f281829934454dac4d42cc2e86b17b856004a5a1ff",
+      "item": 10,
+      "recipe_sha256": "8492892f58a4065a92df99dbbbf30f0bd7340111c853cf5533a7102109fe8d19",
+      "rule": [
+        "validation_accuracy_desc",
+        "validation_ce_asc",
+        "lr_asc"
+      ],
+      "schema_version": 1
+    },
+    "source": {
+      "implementation_sha256": {
+        ".github/workflows/research-item10-preflight.yml": "68219c611e0c9402ac9281a98d0fc90e84fc431e81e0bcb60f2ebd02c71bb4d0",
+        "docs/research/10_acquisition_results.md": "b41d0fc26ea2118c7350c05f19b1ecfd303066ea8200fca15dac631a6e86db80",
+        "docs/research/10_analysis_implementation.md": "3176ec059dcf6ed76acec5b540fad31a8bac28610c34164be2e232f792bd20d5",
+        "docs/research/10_babi_provenance.md": "ca71802677febd93b762d6fb751082ff5d4f4dc482726d9e651db6d2c0a01636",
+        "docs/research/10_neural_protocol.md": "d546e64b3d3223d448001ccb0f02668c7fd03ab4385ccd878c0075fedb493f7e",
+        "docs/research/10_study_static_review.md": "eb180964079ddda3066086b6b523d427ea56b76f991710a95051e7c404797efc",
+        "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+        "neuropixel/research/babi_qa.py": "bea3b511b63a8107ae8eb6b6e0bf2d12cf9f76dd80083aae2aa967e42fe7c649",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+        "results/research/10_validation/acquisition_completion_receipt.json": "1808502b397a603acc3f298803d137cdf75c5d801e255edd963cc308634d7a76",
+        "results/research/10_validation/development_fixture_declaration.json": "873f49c0b98ad3cf546367d6f5cb9f88df57bc1f8f019b115c653c67980ddbc5",
+        "scripts/research_babi_audit.py": "d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949",
+        "scripts/research_babi_fixture_ledger.py": "72936dd3c7a1d35fa3ab061b30078a3e0a2ebd3562dfea5d53e1eb8ec1b8bbf8",
+        "scripts/research_babi_study.py": "ce6ed6e4f5822fac9a2b0df455d1e9c347878f17e2160adbebcabb8787161782",
+        "scripts/research_item10_inputs.py": "2cc0d5dd96fc7140a5480b1337632d79d96a3efb0f453f44e0947d4ed47a3102",
+        "scripts/research_item10_worker.py": "6256f5f90cfa945c05829e23c30f4f24b05b0d92f0d7f4ac8830feac0e184537",
+        "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+        "tests/test_babi_qa.py": "4be2108204e1c2fa207836c4f17d03bc6c91dae26c345d3a97dce8b23141a288",
+        "tests/test_babi_study.py": "fb2a33ba5c2ded36499157813c3423a93b525a93249220323baa40c8177e3e26"
+      },
+      "plan_sha256": "f01846c1c6685328d49a5cdcb6d5c399222f99b8f160e37ccff62ee5e0418993",
+      "recorded_at_utc": "2026-10-07T11:14:13.896859+00:00",
+      "source_commit": "071be375dce45d0d7fabce3d095bd1003d53ed36",
+      "tracked_source_clean": true
+    },
+    "train_probe": {
+      "mem_neuropixel_s58": {
+        "accuracy": 0.19329608938547485,
+        "can_encode_n": 895,
+        "cannot_encode_n": 0,
+        "correct": 173,
+        "cross_entropy": 41.06518148153446,
+        "cross_entropy_n": 895,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 895,
+        "n": 895,
+        "nll_supported_n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.17266187050359713,
+            "correct": 24,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.30666666666666664,
+            "correct": 46,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.1564625850340136,
+            "correct": 23,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.13793103448275862,
+            "correct": 20,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.16770186335403728,
+            "correct": 27,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.21568627450980393,
+            "correct": 33,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "mem_relative_transformer_s58": {
+        "accuracy": 0.3206703910614525,
+        "can_encode_n": 895,
+        "cannot_encode_n": 0,
+        "correct": 287,
+        "cross_entropy": 5.056588269609184,
+        "cross_entropy_n": 895,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 895,
+        "n": 895,
+        "nll_supported_n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.26618705035971224,
+            "correct": 37,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.31333333333333335,
+            "correct": 47,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.3401360544217687,
+            "correct": 50,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.3931034482758621,
+            "correct": 57,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.18012422360248448,
+            "correct": 29,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.43790849673202614,
+            "correct": 67,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "pilot_neuropixel_lr0001_s59": {
+        "accuracy": 0.24581005586592178,
+        "can_encode_n": 895,
+        "cannot_encode_n": 0,
+        "correct": 220,
+        "cross_entropy": 1.8190804539527883,
+        "cross_entropy_n": 895,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 895,
+        "n": 895,
+        "nll_supported_n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.2949640287769784,
+            "correct": 41,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.46,
+            "correct": 69,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.04081632653061224,
+            "correct": 6,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.09655172413793103,
+            "correct": 14,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.4720496894409938,
+            "correct": 76,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.0915032679738562,
+            "correct": 14,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "pilot_neuropixel_lr0003_s59": {
+        "accuracy": 0.42569832402234636,
+        "can_encode_n": 895,
+        "cannot_encode_n": 0,
+        "correct": 381,
+        "cross_entropy": 1.4204387197493562,
+        "cross_entropy_n": 895,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 895,
+        "n": 895,
+        "nll_supported_n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.4266666666666667,
+            "correct": 64,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.7006802721088435,
+            "correct": 103,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.05517241379310345,
+            "correct": 8,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.6335403726708074,
+            "correct": 102,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.6797385620915033,
+            "correct": 104,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "pilot_relative_transformer_lr0001_s59": {
+        "accuracy": 0.8067039106145252,
+        "can_encode_n": 895,
+        "cannot_encode_n": 0,
+        "correct": 722,
+        "cross_entropy": 0.38008378210249855,
+        "cross_entropy_n": 895,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 895,
+        "n": 895,
+        "nll_supported_n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.7122302158273381,
+            "correct": 99,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.7466666666666667,
+            "correct": 112,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.8435374149659864,
+            "correct": 124,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.7034482758620689,
+            "correct": 102,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.968944099378882,
+            "correct": 156,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.8431372549019608,
+            "correct": 129,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      },
+      "pilot_relative_transformer_lr0003_s59": {
+        "accuracy": 0.8715083798882681,
+        "can_encode_n": 895,
+        "cannot_encode_n": 0,
+        "correct": 780,
+        "cross_entropy": 0.28503748569279796,
+        "cross_entropy_n": 895,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 895,
+        "n": 895,
+        "nll_supported_n": 895,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.8633093525179856,
+            "correct": 120,
+            "n": 139
+          },
+          "bedroom": {
+            "accuracy": 0.8133333333333334,
+            "correct": 122,
+            "n": 150
+          },
+          "garden": {
+            "accuracy": 0.9659863945578231,
+            "correct": 142,
+            "n": 147
+          },
+          "hallway": {
+            "accuracy": 0.896551724137931,
+            "correct": 130,
+            "n": 145
+          },
+          "kitchen": {
+            "accuracy": 0.9130434782608695,
+            "correct": 147,
+            "n": 161
+          },
+          "office": {
+            "accuracy": 0.7777777777777778,
+            "correct": 119,
+            "n": 153
+          }
+        },
+        "supported_gold_n": 895,
+        "unsupported_gold_n": 0
+      }
+    },
+    "validation": {
+      "mem_neuropixel_s58": {
+        "accuracy": 0.12380952380952381,
+        "can_encode_n": 105,
+        "cannot_encode_n": 0,
+        "correct": 13,
+        "cross_entropy": 46.695875281571446,
+        "cross_entropy_n": 105,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 105,
+        "n": 105,
+        "nll_supported_n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.05,
+            "correct": 1,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.2,
+            "correct": 2,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.2,
+            "correct": 3,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.08333333333333333,
+            "correct": 2,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.29411764705882354,
+            "correct": 5,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "mem_relative_transformer_s58": {
+        "accuracy": 0.26666666666666666,
+        "can_encode_n": 105,
+        "cannot_encode_n": 0,
+        "correct": 28,
+        "cross_entropy": 5.850416760013995,
+        "cross_entropy_n": 105,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 105,
+        "n": 105,
+        "nll_supported_n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.25,
+            "correct": 5,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.4,
+            "correct": 4,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.26666666666666666,
+            "correct": 4,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.2916666666666667,
+            "correct": 7,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.21052631578947367,
+            "correct": 4,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.23529411764705882,
+            "correct": 4,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "pilot_neuropixel_lr0001_s59": {
+        "accuracy": 0.1523809523809524,
+        "can_encode_n": 105,
+        "cannot_encode_n": 0,
+        "correct": 16,
+        "cross_entropy": 2.145681702329521,
+        "cross_entropy_n": 105,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 105,
+        "n": 105,
+        "nll_supported_n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.2,
+            "correct": 4,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.08333333333333333,
+            "correct": 2,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.3684210526315789,
+            "correct": 7,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.17647058823529413,
+            "correct": 3,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "pilot_neuropixel_lr0003_s59": {
+        "accuracy": 0.34285714285714286,
+        "can_encode_n": 105,
+        "cannot_encode_n": 0,
+        "correct": 36,
+        "cross_entropy": 1.5318369816236865,
+        "cross_entropy_n": 105,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 105,
+        "n": 105,
+        "nll_supported_n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.1,
+            "correct": 1,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.6,
+            "correct": 9,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.041666666666666664,
+            "correct": 1,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.5789473684210527,
+            "correct": 11,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.8235294117647058,
+            "correct": 14,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "pilot_relative_transformer_lr0001_s59": {
+        "accuracy": 0.7047619047619048,
+        "can_encode_n": 105,
+        "cannot_encode_n": 0,
+        "correct": 74,
+        "cross_entropy": 0.6397489478587598,
+        "cross_entropy_n": 105,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 105,
+        "n": 105,
+        "nll_supported_n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.5,
+            "correct": 10,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.7,
+            "correct": 7,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.8666666666666667,
+            "correct": 13,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.8421052631578947,
+            "correct": 16,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.5882352941176471,
+            "correct": 10,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      },
+      "pilot_relative_transformer_lr0003_s59": {
+        "accuracy": 0.7523809523809524,
+        "can_encode_n": 105,
+        "cannot_encode_n": 0,
+        "correct": 79,
+        "cross_entropy": 0.6694022273530411,
+        "cross_entropy_n": 105,
+        "gold_unseen_as_train_answer_n": 0,
+        "gold_vocabulary_supported_n": 105,
+        "n": 105,
+        "nll_supported_n": 105,
+        "per_answer": {
+          "bathroom": {
+            "accuracy": 0.6,
+            "correct": 12,
+            "n": 20
+          },
+          "bedroom": {
+            "accuracy": 0.8,
+            "correct": 8,
+            "n": 10
+          },
+          "garden": {
+            "accuracy": 0.7333333333333333,
+            "correct": 11,
+            "n": 15
+          },
+          "hallway": {
+            "accuracy": 0.7916666666666666,
+            "correct": 19,
+            "n": 24
+          },
+          "kitchen": {
+            "accuracy": 0.8421052631578947,
+            "correct": 16,
+            "n": 19
+          },
+          "office": {
+            "accuracy": 0.7647058823529411,
+            "correct": 13,
+            "n": 17
+          }
+        },
+        "supported_gold_n": 105,
+        "unsupported_gold_n": 0
+      }
+    }
+  },
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T11:32:46.755847+00:00",
+      "available_bytes": 15520808960
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.175497+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.179998+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.184669+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.186533+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.188197+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.189875+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.191539+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.193162+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.194797+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.196441+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.198048+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.200126+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.201785+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.203441+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.205051+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.206701+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.208321+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.209959+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.217347+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.219449+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.224061+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.225858+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.227514+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.235711+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.237796+00:00",
+      "available_bytes": 15520768000
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.248642+00:00",
+      "available_bytes": 15520837632
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.250692+00:00",
+      "available_bytes": 15520837632
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.261354+00:00",
+      "available_bytes": 15520837632
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.263643+00:00",
+      "available_bytes": 15520837632
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.274248+00:00",
+      "available_bytes": 15520837632
+    },
+    {
+      "at_utc": "2026-10-07T11:32:47.276295+00:00",
+      "available_bytes": 15520837632
+    }
+  ],
+  "resource_scope": "Admission and periodic sampled MemAvailable only; not continuous RAM or peak RSS.",
+  "runtime": {
+    "bootstrap_generator": "PCG64",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 104001,
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0",
+    "threads": 1
+  },
+  "schema_version": 1,
+  "scope": "Independent saved-array recount; no Torch, model construction, pickle, checkpoint evaluation or raw-source answer substitution.",
+  "started_at_utc": "2026-10-07T11:32:46.827233+00:00",
+  "status": "verified"
+}

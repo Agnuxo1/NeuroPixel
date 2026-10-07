@@ -1,11 +1,71 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T11:32:39.809931+00:00",
+  "created_at_utc": "2026-10-07T11:32:48.059344+00:00",
   "files": {
+    "analysis/scientific_audit.json": {
+      "bytes": 85487,
+      "sha256": "79229c2a54d45ea043f98b0d9459beb41cce833d29bd5d64a2edc8e22c535cf0"
+    },
+    "audit.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit_environment.json": {
+      "bytes": 498,
+      "sha256": "9309adab38f9ace531ba230f7f89f3a3c95e940bad61a9ca388edfb96f3e441d"
+    },
+    "audit_resource_monitor.json": {
+      "bytes": 847,
+      "sha256": "a5e1aee32f48848050d74a3a3b7470a73fdb9d4b5920920f92dbd02b53ed6b09"
+    },
+    "audit_status.json": {
+      "bytes": 822,
+      "sha256": "fc0872c4f41f9f5facac41a9bc944cb7343d53a8b3069553eda30ae182b84128"
+    },
     "execution_plan.json": {
       "bytes": 18472,
       "sha256": "8272b44b2cfec01659121584e5c4a888ea520d693593d35ba366a12abe963061"
+    },
+    "input_recovery/acquisition.json": {
+      "bytes": 4449,
+      "sha256": "08d44e7ada439d14951afffab89e8a09bd366432289458ade29ff52f8b9d0f1f"
+    },
+    "input_recovery/acquisition_started.json": {
+      "bytes": 4241,
+      "sha256": "e3519f9ce174651dd1434766e73755932d0bd3a91164b3c9cd183b05567d3dab"
+    },
+    "input_recovery/target.json": {
+      "bytes": 12321,
+      "sha256": "9d72838cb5336835cc7bb032fdea1f448e5b30dc7794921ef2fdfb6adcecdffa"
+    },
+    "input_recovery/target_started.json": {
+      "bytes": 12115,
+      "sha256": "07c60b61c178b106609d43e778f9598dad28ac03943ca8ffbf6bee0dc0734c64"
+    },
+    "offline_archive_audit.json": {
+      "bytes": 1153494,
+      "sha256": "0aaf5f7fb82bbcae10334d1d536475418bc0e4d8130ccba999868d6c6f98ef4f"
+    },
+    "offline_scientific_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "offline_scientific_stdout.log": {
+      "bytes": 185,
+      "sha256": "ef10bf6410f62027bab346ee96d235dd66cbecfc3dadc97cd5b64b7fe0ee9112"
+    },
+    "offline_started.json": {
+      "bytes": 318,
+      "sha256": "5427e040b71c747cae9386501742ccf3bed0d439efc3241d012a8c57555d5a69"
+    },
+    "offline_status.json": {
+      "bytes": 593,
+      "sha256": "8c9e71e5a653a5fd42e494e5ef1fa2a3f9a790a6b40412bdf3a6aa849812a13c"
+    },
+    "offline_subprocess.json": {
+      "bytes": 1057,
+      "sha256": "c76c1482a2776e79e142dadfce394e0989a6f5982bdebf2c04fd75cd1462ecdb"
     },
     "source.zip": {
       "bytes": 8725490,
@@ -16,8 +76,8 @@
       "sha256": "932c1e508423b0bc0154f5f5187659f9a65a9c2d6a15d3713e2c6a2657ffb3f2"
     },
     "worker_status.json": {
-      "bytes": 693,
-      "sha256": "0614ab86eb427ff38e572fc6f5bbdfaf0f4211a826be1c77c53deb67862d47b8"
+      "bytes": 1760,
+      "sha256": "255d1404094cb51db9162c48e0b763e62f6db0ec5647017cb3faaf97c036ac82"
     }
   },
   "final": false,
