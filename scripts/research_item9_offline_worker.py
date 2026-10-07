@@ -93,6 +93,19 @@ def main():
             value = plan[name]
             require(len(value) == 40 and all(c in "0123456789abcdef" for c in value),
                     "invalid raw archive identity")
+        required_operational = {
+            "scripts/research_item9_offline_worker.py",
+            ".github/workflows/research-item9-offline-audit.yml",
+            "scripts/research_item9_worker.py",
+            "scripts/research_item9_gate_archive_audit.py",
+            "scripts/research_item9_figures.py",
+            plan["job_log_path"], *plan["remote_receipt_paths"]}
+        require(required_operational <= set(plan["operational_file_git_blobs"]),
+                "operational plan omits a used source/input binding")
+        receipt_names = [Path(path).name for path in plan["remote_receipt_paths"]]
+        require(len(receipt_names) == len(set(receipt_names)), "remote receipt basenames collide")
+        require(plan["operational_file_git_blobs"][plan["job_log_path"]] == plan["job_log_git_blob"],
+                "job log plan bindings disagree")
         for path, digest in plan["operational_file_git_blobs"].items():
             require(ops.git("hash-object", ROOT / path, deadline=execution_end) == digest,
                     f"operational source identity differs: {path}")
@@ -118,8 +131,9 @@ def main():
         ops.git("worktree", "add", "--detach", frozen, S, deadline=execution_end)
         ops.git("worktree", "add", "--detach", recovered, F, deadline=execution_end)
         raw = recovered / "results/research/09_cloud_runs" / STUDY_KEY
-        require(load(raw / "archive_manifest.json")["snapshot_kind"] == "final",
-                "input is not the final stopped archive")
+        raw_manifest = load(raw / "archive_manifest.json")
+        require(raw_manifest["snapshot_kind"] == "final" and raw_manifest["attempt_status"] == "completed",
+                "input is not a completed final stopped archive")
         frozen_plan = load(frozen / "docs/research/09_study_plan.json")
         require(ops.sha(frozen / "docs/research/09_study_plan.json") ==
                 "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
@@ -136,6 +150,7 @@ def main():
         for relative in plan["remote_receipt_paths"]:
             destination = output / "remote_receipts" / Path(relative).name
             destination.parent.mkdir(exist_ok=True)
+            require(not destination.exists(), "refusing to overwrite a remote receipt copy")
             shutil.copyfile(ROOT / relative, destination)
         ops.save(output / "recovery_receipt.json", {
             "at_utc": ops.now(), "scientific_source_commit": S, "final_archive_commit": F,
@@ -184,6 +199,8 @@ def main():
                     supervisor = ops.Supervisor(child, boundary, output, name)
                     supervisor.thread.start()
                     while supervisor.poll() is None:
+                        if supervisor.failure:
+                            raise RuntimeError(supervisor.failure)
                         if time.monotonic() - last_archive >= 300:
                             archive.publish(deadline=execution_end)
                             last_archive = time.monotonic()
