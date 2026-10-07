@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T05:57:21.510280+00:00",
-  "active_item": 7,
+  "recorded_at": "2026-10-07T06:22:34.038049+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -41,8 +41,10 @@
     {
       "item": 7,
       "title": "Development, selection and final splits",
-      "status": "in_progress",
-      "opened_at_utc": "2026-10-07T05:39:32.627738+00:00"
+      "status": "completed",
+      "opened_at_utc": "2026-10-07T05:39:32.627738+00:00",
+      "closed_at_utc": "2026-10-07T06:22:34.038049+00:00",
+      "report": "07_results.md"
     },
     {
       "item": 8,
@@ -229,7 +231,7 @@
   ],
   "next_item": 8,
   "item7": {
-    "stage": "Both item-7 execution recipes frozen before numerical simulation and CPU export",
+    "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
     "scope": "Inspect train, development/selection and final-test exposure; implement and verify prospective dataset identity and evaluation gates. Do not reopen H1 or relabel exposed data as untouched.",
     "model_training_authorized_in_this_item": false,
@@ -240,6 +242,52 @@
       "passed": 17,
       "failed": 0,
       "initial_failure_preserved": true
-    }
+    },
+    "closed_at_utc": "2026-10-07T06:22:34.038049+00:00",
+    "report": "07_results.md",
+    "report_sha256": "895d261bf2c11896d8b011cf196fdc3004a5e5b154c668144214b4c2e4853cca",
+    "source_commit": "0ed43bd5bb1d8bcb166b8e63e909195cbe69f769",
+    "run_id": 37578991388,
+    "attempt": "37578991388-1",
+    "final_raw_archive_commit": "f0aa1f17e08a495e92e7e8084003f357abfe9a8d",
+    "cloud_tests": {
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0
+    },
+    "cloud_archive": {
+      "files": 10,
+      "bytes_excluding_manifest": 5404361,
+      "source_zip_files": 184,
+      "audit_status": "verified",
+      "issues": 0
+    },
+    "split_audit": {
+      "status": "verified",
+      "issues": 0,
+      "partitions": 9,
+      "pools": 24,
+      "pair_intersections": 276,
+      "all_training_eligible_union": 1319,
+      "universe_size": 1320,
+      "actual_historical_minibatches_audited": false
+    },
+    "simulation": {
+      "replicates": 10000,
+      "search_sizes": [
+        1,
+        4,
+        16,
+        64
+      ],
+      "status": "completed",
+      "analytic_diagnostic_flags": 0,
+      "independent_recount": "verified",
+      "recount_issues": 0,
+      "source_run_count": 1,
+      "scope": "Illustrative equal-accuracy binomial candidates; not an estimate of NeuroPixel bias."
+    },
+    "verdict": "All declared set relations and prospective contract checks passed after one preserved denominator correction. Opt-in governance does not establish historical non-exposure, universal enforcement or independent custody. Within-study disjointness and cross-study pool reuse are different properties. H1 remains not supported.",
+    "resource_release": "All owned item-7 local numerical tasks finished; GitHub job112654156161 completed successfully and released its standard runner."
   }
 }

@@ -1,0 +1,165 @@
+{
+  "confirmed_observations": {
+    "archive": {
+      "audit_issues": 0,
+      "bytes_excluding_manifest": 5404361,
+      "files_excluding_manifest": 10,
+      "source_zip_tracked_files": 184
+    },
+    "provenance": {
+      "archive_commit": "f0aa1f17e08a495e92e7e8084003f357abfe9a8d",
+      "final_generation_started_utc": "2026-10-07T05:59:12.680448+00:00",
+      "freeze_utc": "2026-10-07T05:57:21.510280+00:00",
+      "run_attempt": "37578991388-1",
+      "run_id": 37578991388,
+      "selection_receipt_persisted_utc": "2026-10-07T05:59:12.680176+00:00",
+      "source_commit": "0ed43bd5bb1d8bcb166b8e63e909195cbe69f769"
+    },
+    "resources": {
+      "cloud_interop_threads": 1,
+      "cloud_numerical_threads": 1,
+      "cloud_python": "3.12.8",
+      "cloud_torch": "2.6.0+cpu",
+      "cloud_worker_sampled_minimum_ram_gib": 14.275299072265625,
+      "cloud_worker_samples": 7,
+      "cloud_worker_seconds_before_archive": 4.227750006000008,
+      "exporter_sampled_minimum_ram_gib": 14.275325775146484,
+      "exporter_samples": 11,
+      "required_ram_gib": 8,
+      "simulation_numpy": "2.3.5",
+      "simulation_python": "3.12.14",
+      "simulation_sampled_minimum_ram_gib": 9.109718322753906,
+      "simulation_samples": 5,
+      "simulation_seconds": 0.6465705449991219,
+      "stage_limit_seconds": 900,
+      "workflow_limit_minutes": 35
+    },
+    "simulation": {
+      "analytic_flags": 0,
+      "arithmetic_tolerance": {
+        "atol": 1e-12,
+        "rtol": 0
+      },
+      "candidates": 64,
+      "csv_rows": 40000,
+      "independent_recount_checks": 450713,
+      "maximum_absolute_standardized_discrepancy": 1.6846819061769494,
+      "prespecified_analytic_checks": 20,
+      "recount_issues": 0,
+      "recount_maximum_absolute_arithmetic_difference": 7.284173264565652e-13,
+      "replicates": 10000,
+      "search_sizes": [
+        1,
+        4,
+        16,
+        64
+      ],
+      "trials_per_partition": 256
+    },
+    "split_scope": {
+      "all_own_train_test_intersections_zero": true,
+      "combined_train_union": 1319,
+      "growth_train_validation_test": [
+        268,
+        25,
+        67
+      ],
+      "historical_train_union": 1311,
+      "pairwise_pool_comparisons": 276,
+      "partition_families": 9,
+      "pools": 24,
+      "research_train_union": 1286,
+      "universe": 1320
+    },
+    "tests": {
+      "cloud": {
+        "development_sampler_cases": 4,
+        "governance_cases": 17,
+        "passed": 21,
+        "unique_junit_cases": 21
+      },
+      "corrected_local": {
+        "failed": 0,
+        "passed": 17,
+        "reported_seconds": 0.062,
+        "total": 17
+      },
+      "initial": {
+        "failed": 1,
+        "passed": 16,
+        "reported_seconds": 0.064,
+        "total": 17
+      }
+    }
+  },
+  "input_sha256": {
+    "../NeuroPixel-results-item7/results/research/07_cloud_runs/37578991388-1/split_pools.json": "1fc03501b21b2790109b1f66e64fa0dc76a1bce1fb11f6ccd7602bc38f28918d",
+    "../NeuroPixel-results-item7/results/research/07_cloud_runs/37578991388-1/worker_status.json": "7549f54151129206aba9abd4257b470d45d0ebf9fb4389a7985ead2ae6727953",
+    "docs/research/07_cloud_export_plan.json": "5071ae0e70d47c37e7eaea0d3f0a2299b6e3d06bf6a68337201f67c6f6ca8542",
+    "docs/research/07_execution_plan.json": "77941082f44b8bf9132bea7b8371a0a388e8e700de42794b421584973b771bab",
+    "docs/research/07_protocol.md": "8b3b44eebb0821498d3537016c847eaf3ea4ffb50607d2a0352e76f98c465f08",
+    "results/research/07_simulation/20261007_01/analysis.json": "9f951576690e4c3a509d1242f7e5b68681b4e9b112968cea0bd3bc9d4f776851",
+    "results/research/07_simulation/20261007_01/environment.json": "1d4c19630334017751be27c3235b82b0fbf0bd8aad73f54a5309c554a13360dd",
+    "results/research/07_simulation/20261007_01/events.json": "ca9771bac5e1c4ce2aa98ce0cc20d78e086a1c3b946b25edee14879142fc31c3",
+    "results/research/07_simulation/20261007_01/resource_observations.json": "b9bfbe456abf30a8de5ecb5702a4df291e47aaea678d6583206dd7eafcdb8121",
+    "results/research/07_simulation/20261007_01_root_audit.json": "2f1f200bca893c7532274eb9e356741a5d41762720ed1100bbdcde02789e98dd",
+    "results/research/07_split_exposure.json": "9203b599faf4c8ae1d6c58491adb9877ec751aca08e7f5b8a439f82e51100340",
+    "results/research/07_validation/cloud_archive_audit.json": "cd114c561b9e44c994fd1523b47f72d6200d1392a8a7ffee5013cbe41cf7ad4c",
+    "results/research/07_validation/governance_corrected.log": "476fe8ea9b73a9eee3bb203529ba3e91494c3f4d583139b41c2fdef9613f8be4",
+    "results/research/07_validation/governance_correction.json": "075c889b54b2ed87d4f89f5f2966b5452d17e510cbb017c2af9429ba73416f4b",
+    "results/research/07_validation/governance_initial.log": "1152a683340ff6819358629032e1ffb63545702941d1dfa7bae92004264b2948",
+    "results/research/07_validation/governance_review.json": "6c8651778b511091f234f63990f732109d6adb09a795414ffffb6ad65631640e"
+  },
+  "interpretation_review": [
+    "Accuracy percentages and percentage-point differences/SD/MCSE are distinguished correctly.",
+    "Monte Carlo precision concerns the stipulated null simulation, not NeuroPixel architecture or training-seed uncertainty. Conditions share candidate matrices within a replicate; the independent unit is one of 10000 replicates.",
+    "Training eligibility is distinguished from actual minibatch exposure, and compatibility of unanchored historical permutations across Torch releases remains conditional.",
+    "The one-use FinalStudy interface is distinguished from a future separately declared multi-case controller.",
+    "Resource measurements are sampled available RAM, not continuous minima, peak RSS, GPU usage or energy; reported elapsed scopes are appropriately limited.",
+    "Evidence completion is separated from coordinator closure; no new H1 decision or item-8 work is claimed."
+  ],
+  "issues": [],
+  "item": 7,
+  "limitations": [
+    "Raw-array and archive integrity rely on their existing verified independent receipts; this display review does not repeat those audits.",
+    "No models, RNG, simulations, training or test suite were executed.",
+    "Primary papers and unrecorded historical exposure were not re-audited within this numerical/provenance review."
+  ],
+  "report": {
+    "bytes": 37912,
+    "path": "docs/research/07_results.md",
+    "sha256": "895d261bf2c11896d8b011cf196fdc3004a5e5b154c668144214b4c2e4853cca"
+  },
+  "resolved_report_finding": {
+    "finding": "Recount helper does not exist in the frozen execution checkout, contrary to the original reproduction context.",
+    "initial_report_sha256": "6f11cbcdacb45d2b6c21c77c0cfe9c7ebabc9a1f0167952d6d748228efc45617",
+    "resolution": "Final report explicitly uses AUDITED_CLOSURE for the post-execution helper and a separate frozen --source-root. No numerical content changed."
+  },
+  "review_formatter_incident": {
+    "cause": "An auxiliary review formatter treated the integer root-audit checks count as a sequence.",
+    "effect": "Stopped before creating report_review.json; no input or scientific output changed.",
+    "observed_error": "TypeError: object of type 'int' has no len()",
+    "resolution": "Receipt records the integer count directly and the completed prior review; no table calculation, verifier, simulation or test was repeated."
+  },
+  "review_runtime": {
+    "active_audit_threads": 1,
+    "python": "3.12.14",
+    "sampled_available_ram_gib": 9.142711639404297,
+    "torch_imported": false
+  },
+  "reviewed_at_utc": "2026-10-07T06:21:52.572241+00:00",
+  "schema_version": 1,
+  "scope": "Independent display, provenance and interpretation review against saved JSON, logs, event receipts and worker records. No scientific recount or experiment was rerun.",
+  "status": "verified",
+  "table_review": {
+    "display_precision": "Six decimals for main percent/percentage-point values and intervals; four decimals for observed tail percentages. Exact stored values remain in the cited JSON.",
+    "final_pool_overlap_rows": 9,
+    "partition_rows": 9,
+    "simulation_mean_rows": 4,
+    "simulation_precision_rows": 12,
+    "simulation_tail_rows": 4,
+    "status": "consistent_with_saved_evidence",
+    "total_numeric_rows": 42,
+    "training_union_rows": 4
+  }
+}

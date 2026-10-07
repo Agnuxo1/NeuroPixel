@@ -183,3 +183,9 @@ Root opens SCI-007 only after SCI-006 closure was archived and fetched as commit
 ## 2026-10-07T05:57:21.510280+00:00 — SCI-007 recipes frozen
 
 Root approves the two item-7 plans after source/method and implementation review. Local governance tests pass 17/17 after one preserved denominator failure and correction; four Torch adapter checks await the declared CPU environment. Exact memberships will be exported without model execution, and the null selection simulation will run once from its committed source/plan with all predeclared conditions. Both plans precede those outputs. H1 stays closed and item 8 remains pending. Evidence stays on the isolated research branches; no response is requested.
+
+## 2026-10-07T06:22:34.038049+00:00 — SCI-007 closed
+
+SCI-007 is completed after frozen execution, independent saved-artifact audits and final report review. Source 0ed43bd5bb1d8bcb166b8e63e909195cbe69f769; cloud raw archive f0aa1f17e08a495e92e7e8084003f357abfe9a8d; run 37578991388. Cloud tests passed 21/21, exact split audit has zero issues, and all four null-simulation conditions passed their declared analytical diagnostics and independent recount. The initial denominator failure and all subsequent corrections are preserved. Deliverable: docs/research/07_results.md, SHA256 895d261bf2c11896d8b011cf196fdc3004a5e5b154c668144214b4c2e4853cca; report review covers 42 numeric table rows with zero discrepancies.
+
+The audit distinguishes internally disjoint configurations from cross-configuration eligibility: TRAIN unions cover 1,319/1,320 triples, but actual historical minibatches were not audited. The new contract is opt-in, and no historically fresh holdout or actual NeuroPixel bias estimate was created. H1 remains not supported. Items 1–7 are completed investigations; items 8–30 remain pending at this closure. The next action is to claim SCI-008. No response is requested.

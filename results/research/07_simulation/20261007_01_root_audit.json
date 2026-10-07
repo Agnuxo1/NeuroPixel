@@ -1,0 +1,514 @@
+{
+  "arithmetic_tolerance": {
+    "atol": 1e-12,
+    "rtol": 0.0
+  },
+  "audit_environment": {
+    "numpy": "2.3.5",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "thread_environment": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OMP_THREAD_LIMIT": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "checks": 450713,
+  "completed_at_utc": "2026-10-07T06:03:20.364109+00:00",
+  "input": "/workspace/scratch/61d6e3e6e688/NeuroPixel-item7/results/research/07_simulation/20261007_01",
+  "issues": [],
+  "item": 7,
+  "limits": [
+    "This recount verifies saved artifacts and recorded gate order, not independent custody or absence of outside access.",
+    "No random streams are regenerated; distributional independence is the frozen design assumption.",
+    "The simulation does not establish NeuroPixel model performance."
+  ],
+  "maximum_absolute_arithmetic_difference": 7.284173264565652e-13,
+  "method": "Exact-integer CDF-power-difference PMF; integer-sum empirical moments; independent Python selection; no RNG or producer imports.",
+  "provenance": {
+    "all_manifested_files_verified": 11,
+    "artifact_manifest_sha256": "e25030099e0cb631d23701b878d92f3c2d980ea68c677d157ac531e8853f755d",
+    "gate_order_verified": true,
+    "plan_sha256": "77941082f44b8bf9132bea7b8371a0a388e8e700de42794b421584973b771bab",
+    "source_commit": "0ed43bd5bb1d8bcb166b8e63e909195cbe69f769",
+    "source_sha256": {
+      "docs/research/07_methodological_evidence.md": "4e5c4fef9409a498aa005a58d41bb4afc1edb3694277f6f0dc825e575a7e84fe",
+      "scripts/research_simulate_holdout_selection.py": "aff9c6cd0b27f503d3305871c69a7e3b580ef5f2d569aaa1cfb5fa4935b65779"
+    }
+  },
+  "recount": {
+    "analytic_checks": 20,
+    "csv_cells": 400000,
+    "csv_rows": 40000,
+    "six_se_flags": [],
+    "summaries": [
+      {
+        "analytic": {
+          "development_mean": 0.5,
+          "development_second_moment": 0.2509765625,
+          "development_tail_probability": 0.0006939833935686371,
+          "development_variance": 0.0009765625,
+          "final_mean": 0.5,
+          "final_tail_probability": 0.0006939833935686371,
+          "final_variance": 0.0009765625,
+          "optimism_mean": 0.0,
+          "optimism_variance": 0.001953125
+        },
+        "analytic_discrepancy_checks": {
+          "development_mean": {
+            "analytic_expected": 0.5,
+            "analytic_monte_carlo_standard_error": 0.0003125,
+            "difference": -0.0002273437499999975,
+            "flagged": false,
+            "observed": 0.49977265625,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.727499999999992
+          },
+          "development_tail": {
+            "analytic_expected": 0.0006939833935686371,
+            "analytic_monte_carlo_standard_error": 0.0002633442197235565,
+            "difference": -9.398339356863716e-05,
+            "flagged": false,
+            "observed": 0.0006,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.35688420906787127
+          },
+          "final_mean": {
+            "analytic_expected": 0.5,
+            "analytic_monte_carlo_standard_error": 0.0003125,
+            "difference": 0.0005171874999999604,
+            "flagged": false,
+            "observed": 0.5005171875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 1.6549999999998732
+          },
+          "final_tail": {
+            "analytic_expected": 0.0006939833935686371,
+            "analytic_monte_carlo_standard_error": 0.0002633442197235565,
+            "difference": -0.0001939833935686371,
+            "flagged": false,
+            "observed": 0.0005,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.7366153461513969
+          },
+          "paired_optimism_mean": {
+            "analytic_expected": 0.0,
+            "analytic_monte_carlo_standard_error": 0.0004419417382415922,
+            "difference": -0.00074453125,
+            "flagged": false,
+            "observed": -0.00074453125,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -1.6846819061769494
+          }
+        },
+        "descriptive": {
+          "development": {
+            "mean": 0.49977265625,
+            "mean_monte_carlo_95_normal_interval": [
+              0.4991545643369072,
+              0.5003907481630928
+            ],
+            "monte_carlo_standard_error": 0.00031535301688408955,
+            "sample_standard_deviation": 0.03153530168840896
+          },
+          "final": {
+            "mean": 0.5005171875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.49990484223797094,
+              0.501129532762029
+            ],
+            "monte_carlo_standard_error": 0.00031242105205563314,
+            "sample_standard_deviation": 0.031242105205563316
+          },
+          "paired_optimism": {
+            "mean": -0.00074453125,
+            "mean_monte_carlo_95_normal_interval": [
+              -0.001610599223056704,
+              0.00012153672305670403
+            ],
+            "monte_carlo_standard_error": 0.000441871414824849,
+            "sample_standard_deviation": 0.0441871414824849
+          }
+        },
+        "search_size": 1,
+        "tails": {
+          "development": {
+            "analytic_probability": 0.0006939833935686371,
+            "count": 6,
+            "fraction": 0.0006,
+            "observed_monte_carlo_standard_error": 0.00024488772325231,
+            "observed_sample_standard_deviation": 0.024488772325231,
+            "replicates": 10000
+          },
+          "final": {
+            "analytic_probability": 0.0006939833935686371,
+            "count": 5,
+            "fraction": 0.0005,
+            "observed_monte_carlo_standard_error": 0.00022356206744392033,
+            "observed_sample_standard_deviation": 0.022356206744392034,
+            "replicates": 10000
+          }
+        }
+      },
+      {
+        "analytic": {
+          "development_mean": 0.53215098142633,
+          "development_second_moment": 0.2836647814122492,
+          "development_tail_probability": 0.0027730452332648627,
+          "development_variance": 0.0004801143792430018,
+          "final_mean": 0.5,
+          "final_tail_probability": 0.0006939833935686371,
+          "final_variance": 0.0009765625,
+          "optimism_mean": 0.032150981426329994,
+          "optimism_variance": 0.0014566768792430018
+        },
+        "analytic_discrepancy_checks": {
+          "development_mean": {
+            "analytic_expected": 0.53215098142633,
+            "analytic_monte_carlo_standard_error": 0.00021911512481866737,
+            "difference": 0.00018144044866996722,
+            "flagged": false,
+            "observed": 0.532332421875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.8280599014792863
+          },
+          "development_tail": {
+            "analytic_expected": 0.0027730452332648627,
+            "analytic_monte_carlo_standard_error": 0.0005258664710170377,
+            "difference": 0.0005269547667351372,
+            "flagged": false,
+            "observed": 0.0033,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 1.0020695286314694
+          },
+          "final_mean": {
+            "analytic_expected": 0.5,
+            "analytic_monte_carlo_standard_error": 0.0003125,
+            "difference": 0.0001242187500000158,
+            "flagged": false,
+            "observed": 0.50012421875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.3975000000000506
+          },
+          "final_tail": {
+            "analytic_expected": 0.0006939833935686371,
+            "analytic_monte_carlo_standard_error": 0.0002633442197235565,
+            "difference": 0.00010601660643136293,
+            "flagged": false,
+            "observed": 0.0008,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.40257806509918087
+          },
+          "paired_optimism_mean": {
+            "analytic_expected": 0.032150981426329994,
+            "analytic_monte_carlo_standard_error": 0.0003816643655416368,
+            "difference": 5.7221698670006926e-05,
+            "flagged": false,
+            "observed": 0.032208203125,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.14992675197434552
+          }
+        },
+        "descriptive": {
+          "development": {
+            "mean": 0.532332421875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.5318945955802986,
+              0.5327702481697013
+            ],
+            "monte_carlo_standard_error": 0.00022338076260273144,
+            "sample_standard_deviation": 0.022338076260273145
+          },
+          "final": {
+            "mean": 0.50012421875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.49950693272524027,
+              0.5007415047747598
+            ],
+            "monte_carlo_standard_error": 0.0003149418493672195,
+            "sample_standard_deviation": 0.03149418493672195
+          },
+          "paired_optimism": {
+            "mean": 0.032208203125,
+            "mean_monte_carlo_95_normal_interval": [
+              0.03145542905727733,
+              0.032960977192722674
+            ],
+            "monte_carlo_standard_error": 0.000384068401899321,
+            "sample_standard_deviation": 0.0384068401899321
+          }
+        },
+        "search_size": 4,
+        "tails": {
+          "development": {
+            "analytic_probability": 0.0027730452332648627,
+            "count": 33,
+            "fraction": 0.0033,
+            "observed_monte_carlo_standard_error": 0.0005735363060778619,
+            "observed_sample_standard_deviation": 0.05735363060778619,
+            "replicates": 10000
+          },
+          "final": {
+            "analytic_probability": 0.0006939833935686371,
+            "count": 8,
+            "fraction": 0.0008,
+            "observed_monte_carlo_standard_error": 0.00028274369029111855,
+            "observed_sample_standard_deviation": 0.028274369029111852,
+            "replicates": 10000
+          }
+        }
+      },
+      {
+        "analytic": {
+          "development_mean": 0.555132409298137,
+          "development_second_moment": 0.30845934304965883,
+          "development_tail_probability": 0.011046127491161944,
+          "development_variance": 0.0002873511965045261,
+          "final_mean": 0.5,
+          "final_tail_probability": 0.0006939833935686371,
+          "final_variance": 0.0009765625,
+          "optimism_mean": 0.05513240929813701,
+          "optimism_variance": 0.0012639136965045261
+        },
+        "analytic_discrepancy_checks": {
+          "development_mean": {
+            "analytic_expected": 0.555132409298137,
+            "analytic_monte_carlo_standard_error": 0.0001695143641419588,
+            "difference": -1.8737423136960807e-05,
+            "flagged": false,
+            "observed": 0.555113671875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.11053590196798463
+          },
+          "development_tail": {
+            "analytic_expected": 0.011046127491161944,
+            "analytic_monte_carlo_standard_error": 0.0010451846994005863,
+            "difference": -4.612749116194442e-05,
+            "flagged": false,
+            "observed": 0.011,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.044133339483823815
+          },
+          "final_mean": {
+            "analytic_expected": 0.5,
+            "analytic_monte_carlo_standard_error": 0.0003125,
+            "difference": -6.679687499999698e-05,
+            "flagged": false,
+            "observed": 0.499933203125,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.21374999999999034
+          },
+          "final_tail": {
+            "analytic_expected": 0.0006939833935686371,
+            "analytic_monte_carlo_standard_error": 0.0002633442197235565,
+            "difference": -9.398339356863716e-05,
+            "flagged": false,
+            "observed": 0.0006,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.35688420906787127
+          },
+          "paired_optimism_mean": {
+            "analytic_expected": 0.05513240929813701,
+            "analytic_monte_carlo_standard_error": 0.0003555156391081166,
+            "difference": 4.805945186299454e-05,
+            "flagged": false,
+            "observed": 0.05518046875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.1351823846162196
+          }
+        },
+        "descriptive": {
+          "development": {
+            "mean": 0.555113671875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.5547793478519549,
+              0.5554479958980452
+            ],
+            "monte_carlo_standard_error": 0.00017057348114548693,
+            "sample_standard_deviation": 0.017057348114548693
+          },
+          "final": {
+            "mean": 0.499933203125,
+            "mean_monte_carlo_95_normal_interval": [
+              0.49931825105205907,
+              0.5005481551979409
+            ],
+            "monte_carlo_standard_error": 0.00031375105762292756,
+            "sample_standard_deviation": 0.03137510576229276
+          },
+          "paired_optimism": {
+            "mean": 0.05518046875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.05448117428555933,
+              0.05587976321444067
+            ],
+            "monte_carlo_standard_error": 0.00035678289002074817,
+            "sample_standard_deviation": 0.035678289002074814
+          }
+        },
+        "search_size": 16,
+        "tails": {
+          "development": {
+            "analytic_probability": 0.011046127491161944,
+            "count": 110,
+            "fraction": 0.011,
+            "observed_monte_carlo_standard_error": 0.0010430766035532041,
+            "observed_sample_standard_deviation": 0.10430766035532041,
+            "replicates": 10000
+          },
+          "final": {
+            "analytic_probability": 0.0006939833935686371,
+            "count": 6,
+            "fraction": 0.0006,
+            "observed_monte_carlo_standard_error": 0.00024488772325231,
+            "observed_sample_standard_deviation": 0.024488772325231,
+            "replicates": 10000
+          }
+        }
+      },
+      {
+        "analytic": {
+          "development_mean": 0.5731190580009933,
+          "development_second_moment": 0.32866308409456924,
+          "development_tail_probability": 0.04345778473958208,
+          "development_variance": 0.0001976294506233489,
+          "final_mean": 0.5,
+          "final_tail_probability": 0.0006939833935686371,
+          "final_variance": 0.0009765625,
+          "optimism_mean": 0.07311905800099328,
+          "optimism_variance": 0.001174191950623349
+        },
+        "analytic_discrepancy_checks": {
+          "development_mean": {
+            "analytic_expected": 0.5731190580009933,
+            "analytic_monte_carlo_standard_error": 0.00014058074214605247,
+            "difference": 6.141074900667398e-05,
+            "flagged": false,
+            "observed": 0.57318046875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.43683614177305297
+          },
+          "development_tail": {
+            "analytic_expected": 0.04345778473958208,
+            "analytic_monte_carlo_standard_error": 0.0020388527579281008,
+            "difference": 0.0018422152604179176,
+            "flagged": false,
+            "observed": 0.0453,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.903554831634822
+          },
+          "final_mean": {
+            "analytic_expected": 0.5,
+            "analytic_monte_carlo_standard_error": 0.0003125,
+            "difference": 1.6796875000002487e-05,
+            "flagged": false,
+            "observed": 0.500016796875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.05375000000000796
+          },
+          "final_tail": {
+            "analytic_expected": 0.0006939833935686371,
+            "analytic_monte_carlo_standard_error": 0.0002633442197235565,
+            "difference": -9.398339356863716e-05,
+            "flagged": false,
+            "observed": 0.0006,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": -0.35688420906787127
+          },
+          "paired_optimism_mean": {
+            "analytic_expected": 0.07311905800099328,
+            "analytic_monte_carlo_standard_error": 0.0003426648436334473,
+            "difference": 4.4613874006727006e-05,
+            "flagged": false,
+            "observed": 0.073163671875,
+            "rule": "absolute difference strictly greater than 6 analytic MCSE; no rerun",
+            "standard_errors": 0.13019682303461222
+          }
+        },
+        "descriptive": {
+          "development": {
+            "mean": 0.57318046875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.5729020666902725,
+              0.5734588708097274
+            ],
+            "monte_carlo_standard_error": 0.00014204186720783273,
+            "sample_standard_deviation": 0.014204186720783272
+          },
+          "final": {
+            "mean": 0.500016796875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.49941032832474763,
+              0.5006232654252524
+            ],
+            "monte_carlo_standard_error": 0.00030942272972058415,
+            "sample_standard_deviation": 0.030942272972058416
+          },
+          "paired_optimism": {
+            "mean": 0.073163671875,
+            "mean_monte_carlo_95_normal_interval": [
+              0.07249204180946554,
+              0.07383530194053446
+            ],
+            "monte_carlo_standard_error": 0.00034266840078288666,
+            "sample_standard_deviation": 0.03426684007828867
+          }
+        },
+        "search_size": 64,
+        "tails": {
+          "development": {
+            "analytic_probability": 0.04345778473958208,
+            "count": 453,
+            "fraction": 0.0453,
+            "observed_monte_carlo_standard_error": 0.0020797171736445883,
+            "observed_sample_standard_deviation": 0.20797171736445885,
+            "replicates": 10000
+          },
+          "final": {
+            "analytic_probability": 0.0006939833935686371,
+            "count": 6,
+            "fraction": 0.0006,
+            "observed_monte_carlo_standard_error": 0.00024488772325231,
+            "observed_sample_standard_deviation": 0.024488772325231,
+            "replicates": 10000
+          }
+        }
+      }
+    ],
+    "tails": 8
+  },
+  "resource_observations": [
+    {
+      "available_bytes": 9792307200,
+      "phase": "before_numpy_import"
+    },
+    {
+      "available_bytes": 9782169600,
+      "phase": "before_array_recount"
+    },
+    {
+      "available_bytes": 9773998080,
+      "phase": "before_csv_and_summary_recount"
+    },
+    {
+      "available_bytes": 9773985792,
+      "phase": "after_recount"
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "final_gathers": 40000,
+    "replicates": 10000,
+    "shortlists_and_winners": 40000,
+    "train_order_entries": 640000,
+    "winner_ids_sha256": "0fbf8dd815d1cb65b5816324755c5128086be2b1cf5627164ca822200efb8b69",
+    "winner_ids_unchanged": true
+  },
+  "source_root": "/workspace/scratch/61d6e3e6e688/NeuroPixel-frozen-item7",
+  "started_at_utc": "2026-10-07T06:03:19.326166+00:00",
+  "status": "verified",
+  "verifier_sha256": "25a4db3a15573ad90ba61e6d5900f4674483364fcf56b6251051563d4b9e1054"
+}

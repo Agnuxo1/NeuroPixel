@@ -32,3 +32,7 @@ SCI-007 starts from the closed item-6 source/report commit. A new random seed al
 ## 2026-10-07T05:57:21.510280+00:00 — SCI-007 recipes frozen
 
 Root approves the two item-7 plans after source/method and implementation review. Local governance tests pass 17/17 after one preserved denominator failure and correction; four Torch adapter checks await the declared CPU environment. Exact memberships will be exported without model execution, and the null selection simulation will run once from its committed source/plan with all predeclared conditions. Both plans precede those outputs. H1 stays closed and item 8 remains pending. Evidence stays on the isolated research branches; no response is requested.
+
+## 2026-10-07T06:22:34.038049+00:00 — SCI-007 scientific closure
+
+Root closes item 7 after exact membership reconstruction, tested prospective governance, the one frozen null simulation, source/archive checks and independent report review. Report and receipts preserve the distinction between eligibility and actual exposure, the validity of properly prescribed CV, runtime-dependent historical reconstruction, local API guarantees and external custody. No simulation result estimates actual NeuroPixel bias or changes the closed H1 outcome. All work remains on the isolated research branches under the existing conservative fallback after JEV recovery failure. Item 8 is next and is not opened before this closure; no new expense, main merge or external scientific submission is authorized here.

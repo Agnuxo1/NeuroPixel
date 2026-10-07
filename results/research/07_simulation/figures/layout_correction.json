@@ -1,0 +1,47 @@
+{
+  "at_utc": "2026-10-07T06:11:44.228118+00:00",
+  "final_figures": {
+    "pdf": {
+      "bytes": 24636,
+      "path": "results/research/07_simulation/figures/selection_optimism.pdf",
+      "sha256": "e7b953856d6bb196fe2c68a722933867b2b5d7c1c60fd06072bc7d90eee8e579"
+    },
+    "png": {
+      "bytes": 194895,
+      "path": "results/research/07_simulation/figures/selection_optimism.png",
+      "sha256": "1235def419eca9d8e8ccbe8beb9b69b68eef86b170e4e4c53a740cfb13fa27bd"
+    }
+  },
+  "final_receipt_sha256": "34d1a1b6b992030793ab628174f1b150f4a7c04581878c4b541acadab7ee90e6",
+  "final_script_sha256": "4b5a135c74a44fd2fd7507ee83e876b5830ddb3955c39bfe5aabafb2bfcf97b9",
+  "first_render_preserved": {
+    "research_plot_holdout_selection.py": {
+      "bytes": 9673,
+      "path": "results/research/07_simulation/figures/render_01/research_plot_holdout_selection.py",
+      "sha256": "0acde978da8d7e28be06d070b9f282694276365d20b84aa76ec58324e2880501"
+    },
+    "selection_optimism.pdf": {
+      "bytes": 24607,
+      "path": "results/research/07_simulation/figures/render_01/selection_optimism.pdf",
+      "sha256": "9dbabe0de36c221f3c9239923dd82ddb500858349886ec535f00204d9e10de73"
+    },
+    "selection_optimism.png": {
+      "bytes": 197526,
+      "path": "results/research/07_simulation/figures/render_01/selection_optimism.png",
+      "sha256": "04d7ad4a539cac27e89663849be8c8fc5e3cf821d10a3259d2452f7d611516e8"
+    },
+    "selection_optimism.receipt.json": {
+      "bytes": 3879,
+      "path": "results/research/07_simulation/figures/render_01/selection_optimism.receipt.json",
+      "sha256": "0cabc7529de6bc8d6b13e5eb240ec43e6eeed0df573f42022256252c2aec77dd"
+    }
+  },
+  "input_and_plotted_values_unchanged": true,
+  "input_sha256": "9f951576690e4c3a509d1242f7e5b68681b4e9b112968cea0bd3bc9d4f776851",
+  "item": 7,
+  "reason": "The first render overlapped the left x-axis log-scale label and the legend. Increase subplot bottom margin from 0.25 to 0.32 only.",
+  "schema_version": 1,
+  "scope": "Presentation correction only. No RNG calls, simulation rerun, model execution, new metrics, or scientific criterion changes.",
+  "status": "presentation_layout_corrected",
+  "visual_review": "Final PNG inspected; axis labels, legend and Monte Carlo scope note do not overlap."
+}

@@ -1,0 +1,115 @@
+{
+  "completed_at_utc": "2026-10-07T06:10:23.324922+00:00",
+  "figures": {
+    "pdf": {
+      "bytes": 24607,
+      "path": "results/research/07_simulation/figures/selection_optimism.pdf",
+      "sha256": "9dbabe0de36c221f3c9239923dd82ddb500858349886ec535f00204d9e10de73"
+    },
+    "png": {
+      "bytes": 197526,
+      "path": "results/research/07_simulation/figures/selection_optimism.png",
+      "sha256": "04d7ad4a539cac27e89663849be8c8fc5e3cf821d10a3259d2452f7d611516e8"
+    }
+  },
+  "input": {
+    "path": "results/research/07_simulation/20261007_01/analysis.json",
+    "sha256": "9f951576690e4c3a509d1242f7e5b68681b4e9b112968cea0bd3bc9d4f776851"
+  },
+  "interval_source": "descriptive.{development,final}.mean_monte_carlo_95_normal_interval",
+  "item": 7,
+  "limitations": [
+    "Monte Carlo precision; normal approximation, not model uncertainty",
+    "Independent replicates; overlapping shortlists and shared candidate final counts across M.",
+    "illustrative null simulation; no NeuroPixel performance claim",
+    "RAM observations are sampled available memory, not continuous minima or process peak RSS."
+  ],
+  "plotted_values_percent": [
+    {
+      "analytic_development_mean_percent": 50.0,
+      "development_95_mc_interval_percent": [
+        49.91545643369072,
+        50.03907481630928
+      ],
+      "development_mean_percent": 49.977265625,
+      "final_95_mc_interval_percent": [
+        49.9904842237971,
+        50.1129532762029
+      ],
+      "final_mean_percent": 50.05171875,
+      "search_size": 1
+    },
+    {
+      "analytic_development_mean_percent": 53.215098142632996,
+      "development_95_mc_interval_percent": [
+        53.18945955802986,
+        53.27702481697013
+      ],
+      "development_mean_percent": 53.2332421875,
+      "final_95_mc_interval_percent": [
+        49.95069327252403,
+        50.074150477475975
+      ],
+      "final_mean_percent": 50.012421875,
+      "search_size": 4
+    },
+    {
+      "analytic_development_mean_percent": 55.5132409298137,
+      "development_95_mc_interval_percent": [
+        55.477934785195494,
+        55.54479958980452
+      ],
+      "development_mean_percent": 55.51136718750001,
+      "final_95_mc_interval_percent": [
+        49.93182510520591,
+        50.05481551979409
+      ],
+      "final_mean_percent": 49.9933203125,
+      "search_size": 16
+    },
+    {
+      "analytic_development_mean_percent": 57.31190580009932,
+      "development_95_mc_interval_percent": [
+        57.290206669027256,
+        57.34588708097274
+      ],
+      "development_mean_percent": 57.31804687499999,
+      "final_95_mc_interval_percent": [
+        49.94103283247476,
+        50.062326542525234
+      ],
+      "final_mean_percent": 50.0016796875,
+      "search_size": 64
+    }
+  ],
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T06:10:22.598928+00:00",
+      "available_ram_gib": 9.11258316040039,
+      "provider": "/proc/meminfo:MemAvailable"
+    },
+    {
+      "at_utc": "2026-10-07T06:10:22.899007+00:00",
+      "available_ram_gib": 9.078121185302734,
+      "provider": "/proc/meminfo:MemAvailable"
+    },
+    {
+      "at_utc": "2026-10-07T06:10:23.324865+00:00",
+      "available_ram_gib": 9.050067901611328,
+      "provider": "/proc/meminfo:MemAvailable"
+    }
+  ],
+  "runtime": {
+    "matplotlib": "3.10.8",
+    "numerical_threads": 1,
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "torch_imported": false
+  },
+  "schema_version": 1,
+  "scope": "Presentation only; no RNG calls, simulations, model evaluation, or new scientific contrasts.",
+  "script_sha256": "0acde978da8d7e28be06d070b9f282694276365d20b84aa76ec58324e2880501",
+  "started_at_utc": "2026-10-07T06:10:22.598837+00:00",
+  "status": "rendered_from_saved_analysis",
+  "transform": "Multiply saved means, interval endpoints and analytic expectation by 100; no recomputation or clipping."
+}

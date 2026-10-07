@@ -1,0 +1,53 @@
+{
+  "historical_source_sha256": {
+    "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+  },
+  "issues": [],
+  "item": 7,
+  "report_sha256": "895d261bf2c11896d8b011cf196fdc3004a5e5b154c668144214b4c2e4853cca",
+  "resolved_findings": [
+    {
+      "draft_report_sha256": "6f11cbcdacb45d2b6c21c77c0cfe9c7ebabc9a1f0167952d6d748228efc45617",
+      "finding": "Single-use FinalStudy could be mistaken for a repeated multi-case interface.",
+      "kind": "report wording",
+      "resolution": "Explicitly state that multiple cases need a separately predeclared controller and inventory."
+    },
+    {
+      "finding": "Post-execution simulation verifier does not exist in frozen source0ed.",
+      "kind": "reproduction instructions",
+      "resolution": "Use verifier from closure checkout and independently pin --source-root to frozen0ed."
+    },
+    {
+      "finding": "Preprocessing/split assignment order was ambiguous.",
+      "kind": "adoption wording",
+      "resolution": "Assign semantic groups to partitions before fitting preprocessing on train; descendants stay with their group."
+    },
+    {
+      "finding": "First render had overlapping xlabel and legend.",
+      "kind": "figure layout",
+      "resolution": "Only bottom margin changed; first render/script/receipt preserved and final PNG visually inspected."
+    }
+  ],
+  "review_method": "Root read complete report and corrected passages, inspected final rendered PNG and adoption API example, and checked historical source hashes. Numerical recounts and detailed report table audit are separate evidence.",
+  "reviewed_at_utc": "2026-10-07T06:19:14.996496+00:00",
+  "schema_version": 1,
+  "scientific_interpretation_checks": [
+    "Within-configuration disjointness distinguished from cross-configuration overlap.",
+    "Eligible pool membership distinguished from actual historical minibatch exposure.",
+    "Correctly prescribed CV not invalidated merely by cross-fold overlap.",
+    "No claim of historically fresh holdout or independent custody.",
+    "All four simulation conditions retained, including negative M1 gap.",
+    "Monte Carlo precision distinguished from real model uncertainty.",
+    "Simulation does not estimate actual NeuroPixel bias or rescue H1.",
+    "Initial failed denominator test and corrected pre-freeze implementation retained.",
+    "Opt-in API, caller trust and external chronology limitations explicit.",
+    "Resource minima identified as sampled available RAM, not peak RSS or energy."
+  ],
+  "status": "reviewed"
+}

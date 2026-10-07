@@ -1,0 +1,27 @@
+{
+  "at_utc": "2026-10-07T05:59:12.679831+00:00",
+  "environment_sha256": "1d4c19630334017751be27c3235b82b0fbf0bd8aad73f54a5309c554a13360dd",
+  "event": "selection_frozen_before_final_generation",
+  "final_draws_completed": false,
+  "final_rng_constructed": false,
+  "item": 7,
+  "monotonic_ns": 22563368878287,
+  "plan_sha256": "77941082f44b8bf9132bea7b8371a0a388e8e700de42794b421584973b771bab",
+  "replicates": 10000,
+  "schema_version": 1,
+  "search_sizes": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "selection_artifact": {
+    "path": "selection_counts.npz",
+    "sha256": "85a5409970832df28e3d02c3e232c9b9ace95917dc695df5d892f0f3831a7b76"
+  },
+  "source_sha256": {
+    "docs/research/07_methodological_evidence.md": "4e5c4fef9409a498aa005a58d41bb4afc1edb3694277f6f0dc825e575a7e84fe",
+    "scripts/research_simulate_holdout_selection.py": "aff9c6cd0b27f503d3305871c69a7e3b580ef5f2d569aaa1cfb5fa4935b65779"
+  },
+  "winner_ids_sha256": "0fbf8dd815d1cb65b5816324755c5128086be2b1cf5627164ca822200efb8b69"
+}
