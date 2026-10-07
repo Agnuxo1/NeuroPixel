@@ -4,6 +4,12 @@
     "available_ram_gib": 14.55471420288086,
     "phase": "admission"
   },
+  "completed_at_utc": "2026-10-07T12:56:53.801191+00:00",
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T12:56:53.801092+00:00",
+    "available_ram_gib": 14.612884521484375,
+    "phase": "before_final_archive"
+  },
   "gpu_requested": false,
   "item": 11,
   "paid_compute": false,
@@ -23,6 +29,29 @@
   },
   "run_key": "37624600542-1-probe",
   "schema_version": 1,
+  "source_after": {
+    "all_bindings_verified": true,
+    "at_utc": "2026-10-07T12:56:53.801009+00:00",
+    "implementation_sha256": {
+      ".github/workflows/research-item11-probe.yml": "848c3cd7f23a20a2504d7330988988b2fca4a07141bc70601327e1d82c87738e",
+      "docs/research/11_probe_protocol.md": "c8db6ca2cf57a5511acda2510bdf14fef70c886cb0abe08708fa2ff548155a24",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/11_validation/probe_static_review.json": "0aed2983e7855830f0423e280617167f862fe53044ab5f0cc21d15275780104e",
+      "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_memory_probe.py": "99016d771db6923fab75a239853c43a33d57048cb0e01e8fd6b6c1b827b75d42",
+      "tests/test_stream_memory.py": "77af92df6b2ca78efaaafb66c190654c25712d126d031dd4815e4047113f7621"
+    },
+    "plan_sha256": "e93c42d0a6c62f4870f26d360dbdc9d877fe0d5196e5d207db86ce1b65db8bc5",
+    "source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
   "source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
   "stages": [
     {
@@ -77,5 +106,6 @@
     }
   ],
   "started_at_utc": "2026-10-07T12:56:39.785898+00:00",
-  "status": "running"
+  "status": "completed",
+  "wall_seconds_before_final_archive": 14.016487243
 }
