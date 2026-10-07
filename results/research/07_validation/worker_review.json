@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-07T05:55:54.105143+00:00",
+  "reviewed_worker_sha256": "5eb26b452c7208f94e69cebf0ac181a90eb5b27cade25c3d05e721edc5277f1c",
+  "reviewed_workflow_sha256": "31b5339950d50546e53b17eed854bff84c2543ac9640591f5498e74f94ba861a",
+  "findings": [
+    {
+      "finding": "Child may exit between poll and killpg.",
+      "resolution": "Catch ProcessLookupError around both termination signals; preserve ordinary wait and stage status."
+    },
+    {
+      "finding": "Execution-plan inclusion in source ZIP was not yet checked because plan was not written.",
+      "resolution": "Compare exact local plan Git blob with HEAD plan blob before stages; include plan in tracked-change check. Root will commit plan with source before launch."
+    }
+  ],
+  "corrected_worker_sha256": "92ef2cb0ce232ed2d0d5343d5b8751247478230ac6466caff11f5c8b3364c8fb",
+  "execution_scope": "17 governance tests and 4 Torch development-sampler tests plus exact memberships; no model training or final samples."
+}

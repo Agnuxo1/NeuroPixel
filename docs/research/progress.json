@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T05:32:16.665091+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T05:57:21.510280+00:00",
+  "active_item": 7,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -41,7 +41,8 @@
     {
       "item": 7,
       "title": "Development, selection and final splits",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T05:39:32.627738+00:00"
     },
     {
       "item": 8,
@@ -226,5 +227,19 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 7
+  "next_item": 8,
+  "item7": {
+    "stage": "Both item-7 execution recipes frozen before numerical simulation and CPU export",
+    "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
+    "scope": "Inspect train, development/selection and final-test exposure; implement and verify prospective dataset identity and evaluation gates. Do not reopen H1 or relabel exposed data as untouched.",
+    "model_training_authorized_in_this_item": false,
+    "freeze_utc": "2026-10-07T05:57:21.510280+00:00",
+    "simulation_plan_sha256": "77941082f44b8bf9132bea7b8371a0a388e8e700de42794b421584973b771bab",
+    "cloud_plan_sha256": "5071ae0e70d47c37e7eaea0d3f0a2299b6e3d06bf6a68337201f67c6f6ca8542",
+    "local_governance_tests": {
+      "passed": 17,
+      "failed": 0,
+      "initial_failure_preserved": true
+    }
+  }
 }

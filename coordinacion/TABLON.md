@@ -175,3 +175,11 @@ Root approves docs/research/06_execution_plan.json for both item-6 panels under 
 Both frozen panels completed on source 08d0d52edd05da6835e71479f3ba4399fcbeabae. Final raw evidence is commit 15e76456bc2b4cce5faec0b08fb5288fe7844547 on the results branch: 400 files, 32,186,488 bytes excluding manifest. Root recounts verified all 26 core trainings/34 final outputs and 6 growth trajectories/18 stages/8 gates/34 routing outputs with zero issues. Exact worker/root report comparison found no scientific-value differences. Final report reviews resolved two wording-scope issues; all 1,135 reviewed table values matched stored results at declared display precision. See docs/research/06_results.md and results/research/06_root_review/37566497890-1/report_review.json.
 
 Budget and routing sensitivities are observed, but binding remains low and claims are exploratory. H1 remains not supported. SCI-006 is closed; SCI-007 is next and has not been opened before this closure. No response is requested.
+
+## 2026-10-07T05:39:32.627738+00:00 — SCI-007 opened
+
+Root opens SCI-007 only after SCI-006 closure was archived and fetched as commit 34ec75bad57825ae71cc7772ed236efb17cfcc94. Inspect historical dataset exposure and current split/evaluation gates; research primary methodological sources; implement and test a prospective split registry and final-evaluation contract where useful. Prior tests remain exposed, and H1 remains not supported. Root integrates and owns coordination. Focused collaborators may inspect source, independently audit exposure and review methods within this item only. Items 8–30 remain pending. No response is requested.
+
+## 2026-10-07T05:57:21.510280+00:00 — SCI-007 recipes frozen
+
+Root approves the two item-7 plans after source/method and implementation review. Local governance tests pass 17/17 after one preserved denominator failure and correction; four Torch adapter checks await the declared CPU environment. Exact memberships will be exported without model execution, and the null selection simulation will run once from its committed source/plan with all predeclared conditions. Both plans precede those outputs. H1 stays closed and item 8 remains pending. Evidence stays on the isolated research branches; no response is requested.

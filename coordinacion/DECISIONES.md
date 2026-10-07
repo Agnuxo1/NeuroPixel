@@ -24,3 +24,11 @@ Root scientific/operational review approves the complete item-6 execution plan a
 ## 2026-10-07T05:32:16.665091+00:00 — SCI-006 scientific closure
 
 Root closes only item 6 after complete frozen execution and verified evidence. Larger budget improved each declared paired binding score but all 26 probes remained below 0.95; all 38 core contrast intervals included zero. On a fixed retained expert bank, scanner routing improved binding over random slots, but absolute binding stayed about 22–24% and the learned gate added unmatched supervised fitting. Novelty reproduced the fixed bank; resonance retained K=1/2 by seed. These conditional findings do not demonstrate generally effective growth, autonomous repair, an architecture advantage at matched cost, or a rescue of H1. All negative comparisons and scope limits remain in the report. Routine continuation follows the user's standing point-by-point instruction and the previously recorded conservative fallback; no new expenditure, external scientific submission or main merge is authorized by this record.
+
+## 2026-10-07T05:39:32.627738+00:00 — SCI-007 opened
+
+SCI-007 starts from the closed item-6 source/report commit. A new random seed alone does not establish independence from previous training or adaptive development. Preserve explicit exposure provenance; do not use a new split or simulation to rescue the closed primary hypothesis. Freeze any inferential simulation design before its numerical execution. Changes remain in the isolated research branch.
+
+## 2026-10-07T05:57:21.510280+00:00 — SCI-007 recipes frozen
+
+Root approves the two item-7 plans after source/method and implementation review. Local governance tests pass 17/17 after one preserved denominator failure and correction; four Torch adapter checks await the declared CPU environment. Exact memberships will be exported without model execution, and the null selection simulation will run once from its committed source/plan with all predeclared conditions. Both plans precede those outputs. H1 stays closed and item 8 remains pending. Evidence stays on the isolated research branches; no response is requested.

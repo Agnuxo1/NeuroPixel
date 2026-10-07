@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "item": 7,
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T05:57:21.510280+00:00",
+  "simulation": {
+    "name": "null_holdout_selection",
+    "replicates": 10000,
+    "candidate_count": 64,
+    "examples_per_partition": 256,
+    "true_accuracy": 0.5,
+    "search_sizes": [
+      1,
+      4,
+      16,
+      64
+    ],
+    "bit_generator": "PCG64",
+    "seeds": {
+      "train": 71001,
+      "development": 71002,
+      "final": 71003
+    },
+    "train_rule": "descending_count_then_lower_id",
+    "development_rule": "maximum_count_then_lower_id",
+    "final_rule": "generate_only_after_selection_receipt",
+    "tail_threshold": 0.6,
+    "tail_count": 154,
+    "analytic_discrepancy_standard_errors": 6.0
+  },
+  "implementation_sha256": {
+    "scripts/research_simulate_holdout_selection.py": "aff9c6cd0b27f503d3305871c69a7e3b580ef5f2d569aaa1cfb5fa4935b65779",
+    "docs/research/07_methodological_evidence.md": "4e5c4fef9409a498aa005a58d41bb4afc1edb3694277f6f0dc825e575a7e84fe"
+  },
+  "resource_limits": {
+    "minimum_available_memory_gib": 8.0,
+    "numerical_threads": 1
+  }
+}

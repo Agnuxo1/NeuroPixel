@@ -1,0 +1,26 @@
+{
+  "reviewed_at_utc": "2026-10-07T05:52:40.679165+00:00",
+  "module_sha256": "133219c26303c03eb31d18faf7bbc2ed83da8a8ce47a8f953a2f9776cfcb595c",
+  "test_source_sha256": "959f696c9921a4e71e79540a50ec50d6676c082b1da36989a1ff74952ea208ec",
+  "corrected_test_log_sha256": "476fe8ea9b73a9eee3bb203529ba3e91494c3f4d583139b41c2fdef9613f8be4",
+  "corrected_tests": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "wall_seconds_reported": 0.062
+  },
+  "initial_failure_preserved": "governance_initial.log",
+  "defect_correction": "Validation total must equal the number of declared records; candidate denominator types/ranges are checked independently.",
+  "limitations": [
+    "The upstream metric implementation and grouping-to-content correspondence require separate scientific audit.",
+    "The protocol and candidate inventory must be committed before the metrics used for selection; this API cannot infer that chronology from caller-supplied objects.",
+    "History coverage is a declared evidential scope, not proof of no unrecorded external access.",
+    "Gate checks protect use within the given directory and public source; they are not independent custody or blinding."
+  ],
+  "source_audit_link_pinning": {
+    "old_sha256": "d863073c9a39e6902692523751eeb7c68d5ce36a85e2f72065943f41c7b22e60",
+    "new_sha256": "731dc32c2d43b38abbb530ce6281fa536470b73befe44f83de607001c5c9776e",
+    "change": "Pin historical neuropixel source links to audited commit34ec75b; findings unchanged."
+  },
+  "torch_adapter_status": "four tests compiled; cloud execution pending"
+}

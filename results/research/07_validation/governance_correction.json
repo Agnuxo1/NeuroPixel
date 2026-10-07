@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-10-07T05:50:16.194874+00:00",
+  "initial_module_sha256": "c5e384391307cefd43c7a0ec7fdcf6e329f2539e22a658550a76c3b8a304cc4e",
+  "initial_tests": {
+    "total": 17,
+    "passed": 16,
+    "failed": 1,
+    "wall_seconds_reported": 0.064,
+    "log_sha256": "1152a683340ff6819358629032e1ffb63545702941d1dfa7bae92004264b2948"
+  },
+  "finding": "The declared validation denominator could differ from the number of manifest records even if all candidates agreed.",
+  "correction": "Require denominator all to equal the validation record count; additionally validate each candidate denominator type and range before equality comparison.",
+  "changed_module_sha256": "133219c26303c03eb31d18faf7bbc2ed83da8a8ce47a8f953a2f9776cfcb595c",
+  "scientific_simulation_executed": false,
+  "model_training_executed": false
+}

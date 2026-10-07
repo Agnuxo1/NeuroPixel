@@ -35,3 +35,11 @@ Root has closed implementation validation and approved the complete item-6 execu
 ## 2026-10-07T05:32:16.665091+00:00 — SCI-006 closed
 
 SCI-006 is completed: all frozen execution, independent saved-array recounts, final archive verification and report review passed. Results are retained without configuration selection. Deliverable: docs/research/06_results.md, full tables and hash-anchored receipts. The actual completed source is 08d0d52edd05da6835e71479f3ba4399fcbeabae; raw archive 15e76456bc2b4cce5faec0b08fb5288fe7844547. Items 1–6 are completed investigations, not validated Nobel-level claims. Items 7–30 remain pending at this closure; the next action is to claim SCI-007 sequentially.
+
+## 2026-10-07T05:39:32.627738+00:00 — SCI-007 opened
+
+SCI-007 is ACTIVE, owned by root under the standing point-by-point authorization and recorded conservative fallback after JEV recovery failure. Separate code/exposure/method reviews are justified by the risk of misclassifying historical test access. Acceptance: a sourced exposure inventory, fail-closed prospective split/evaluation rules, meaningful tests or simulations, preserved failures and a reviewed limitations report. No model training is planned in this item.
+
+## 2026-10-07T05:57:21.510280+00:00 — SCI-007 recipes frozen
+
+Root approves the two item-7 plans after source/method and implementation review. Local governance tests pass 17/17 after one preserved denominator failure and correction; four Torch adapter checks await the declared CPU environment. Exact memberships will be exported without model execution, and the null selection simulation will run once from its committed source/plan with all predeclared conditions. Both plans precede those outputs. H1 stays closed and item 8 remains pending. Evidence stays on the isolated research branches; no response is requested.
