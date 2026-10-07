@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "status": "reviewed_no_material_blockers",
+  "reviewer": "evidence_tests",
+  "reviewed_at_utc": "2026-10-07T12:24:32Z",
+  "scope": "Read-only review of the final report against the completed saved scientific audit, selected immutable worker receipts, and previously reviewed frozen source contracts. No model, test, job, inference, bootstrap resampling, or training was executed.",
+  "report": {
+    "blob_sha": "786d338d38846d0b5bd15ad3896101e7b3501667",
+    "bytes": 33748,
+    "sha256": "ac14d3a4c5125e0e420f441f2c27ac373e10379a6ca90eaaf2a76ea1cbb8d5c8",
+    "identity_note": "Original report read in full; corrected blob fetched and exact text delta compared against that reviewed preimage. SHA-256 and byte identities supplied and verified by the parent review."
+  },
+  "inputs": {
+    "repository": "Agnuxo1/NeuroPixel",
+    "scientific_source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+    "main_archive_commit": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b",
+    "audit_archive_commit": "bb2323ac0e0ba028975a4a4c89d2a97a20c7ff6d",
+    "scientific_audit": {
+      "path": "results/research/10_cloud_runs/37618268225-1-audit/analysis/scientific_audit.json",
+      "blob_sha": "2d552b3226936be8eecdb5f12a5e4272aa80cb0f",
+      "sha256_from_final_manifest": "4eeb8937fbc37a585d9102f23e6d4062aef5b29f674137d646ef59df4f24f5c7",
+      "bytes": 458002,
+      "status": "verified",
+      "issues": 0,
+      "checked_input_files": 306,
+      "grouped_checks": 35
+    },
+    "additional_receipts_read": [
+      {
+        "archive": "main",
+        "path": "worker_status.json",
+        "blob_sha": "323f36f7536b17e72baf7e5e1b3c71c1d71f43b1"
+      },
+      {
+        "archive": "audit",
+        "path": "worker_status.json",
+        "blob_sha": "22ca4320914c08fb76f8554745476feebd48f694"
+      },
+      {
+        "archive": "audit",
+        "path": "archive_manifest.json",
+        "blob_sha": "680de12ee61d7ebc5e426e2513ba67388e74e22b"
+      },
+      {
+        "archive": "audit",
+        "path": "audit_resource_monitor.json",
+        "sha256_from_final_manifest": "8c627b1eb4e71319e3a57b9f1668d61906d03e78af0d03e68fc48f3315d48d09"
+      }
+    ]
+  },
+  "reviewed_sections": [
+    "All displayed scientific tables: ten main runs, three population means, eight controls across three populations, TRAIN/DEV/CE/time rows, and five all-official component-bootstrap intervals.",
+    "Primary five signed NP-minus-Transformer pairs, mean, sample SD and stored df=4 t interval; percentage versus percentage-point units.",
+    "Official, optimization-TRAIN-novel and strict-declared-exposure-novel denominators; source-component and duplicate counts; eligible CE versus accuracy.",
+    "Preregistered NeuroPixel competence screen versus descriptive application to Transformer; all five realizations retained.",
+    "Independent seed-realization interval versus conditional common-component bootstrap, with no questions-as-training-replicates or multiplicity-adjusted claim.",
+    "TRAIN 895 / DEV 105 grouping, input-only adaptation, full-TRAIN probes, preflight scale, selected rates, parameter matching and fixed training budgets.",
+    "Known exposure limitations, public-data custody, exact-identity novelty, external synthetic scope, unchanged historical H1 and absence of external-laboratory replication claims.",
+    "Main/audit worker phase status, configured time/thread/RAM limits, loop-time labels and sampled-resource scope; final-audit manifest counts and declared output hashes."
+  ],
+  "findings": {
+    "material_discrepancies": [],
+    "primary_accuracy_unit_values": {
+      "neuropixel_mean": 0.504,
+      "transformer_mean": 0.8866,
+      "paired_mean": -0.38259999999999994,
+      "paired_sample_sd": 0.11376422987916718,
+      "paired_t95": [
+        -0.5238569485243387,
+        -0.2413430514756611
+      ],
+      "n": 5,
+      "df": 4
+    },
+    "populations": {
+      "official": 1000,
+      "novel_vs_optimization_train": 886,
+      "strict_novel_vs_full_exposure": 866,
+      "train": 895,
+      "validation": 105,
+      "test_source_components": 751
+    },
+    "competence": "No NeuroPixel realization reaches 0.95 on either population. Transformer seeds 60 and 63 pass both descriptively; neither family has an all-five pass.",
+    "conclusion": "The report faithfully describes a completed negative NeuroPixel competence/comparison result under a fixed externally authored synthetic-task recipe, without claiming universal incapacity or a mechanism attribution."
+  },
+  "nonblocking_observations": [
+    {
+      "section": "7",
+      "topic": "Scope of the reported available-RAM minimum",
+      "report_value_gib": 14.464985,
+      "exact_audit_monitor_and_scientific_boundary_minimum_gib": 14.464984893798828,
+      "later_worker_before_final_archive_gib": 14.460807800292969,
+      "later_worker_observation_utc": "2026-10-07T12:03:40.644040+00:00",
+      "observation": "The reported value is correct for the eight audit-stage monitor samples and 82 scientific boundary samples. A later worker pre-archive boundary is slightly lower. Explicitly limiting the first minimum to those sample sets, or also reporting the later boundary, removes possible ambiguity.",
+      "consequence": "No effect on the 8 GiB admission/monitoring floor, scientific results or capability conclusion.",
+      "parent_notified": true,
+      "status": "resolved",
+      "resolution": "The final report explicitly distinguishes the eight-sample audit-stage monitor minimum from the later worker pre-archive boundary. Both values are rounded correctly."
+    }
+  ],
+  "limitations": [
+    "This is a bounded report review within the same project, not an external replication.",
+    "The prior full-array reconstruction, 2166 parent numerical comparisons, 259 separate reviewer checks, archive ancestry verification, source-ZIP verification, provider logs and individual checkpoint hashes were not executed again.",
+    "No claim is made here to independently verify checkpoint tensor finiteness, continuous resource use, peak RSS, energy, external blind custody, publisher authentication or complete historical exposure.",
+    "Source/archive/provenance statements outside the selected receipts rely on the completed referenced operational audits and previously reviewed contracts; this receipt does not replace them.",
+    "The author applied only the recorded RAM-scope wording correction after the full review. No scientific execution or complete second review was performed. This receipt creates no Git commit, tree or reference and opens no future research item."
+  ],
+  "reviewed_report_preimage": {
+    "blob_sha": "1c3794f6da712cd7291d9d807d0cb3e486e27378",
+    "bytes": 33652,
+    "sha256": "54c57e617c6dfe88d198f7e76d27553dfae9bdb03312db5cdb450b776b53ffed",
+    "identity_note": "Exact Git blob read in full; SHA-256 and byte identity supplied and verified by the parent review."
+  },
+  "preimage_receipt_blob_sha": "03b61cb0bf507f112edbec812d8bd9645652968b",
+  "correction_review": {
+    "scope": "Only the reported RAM-minimum scope changed; no scientific table, criterion, result or source was changed.",
+    "exact_text_delta": {
+      "first": 30310,
+      "removed": ", recorded eight parent samples and 82 scientific boundary samples, and had minimum sampled available RAM 14.464985",
+      "added": " and recorded eight parent samples plus 82 scientific boundary samples. The minimum during the eight-sample audit-stage monitor was 14.464985 GiB; a later worker boundary before final archival recorded 14.460808"
+    },
+    "full_review_repeated": false,
+    "remaining_material_discrepancies": []
+  }
+}

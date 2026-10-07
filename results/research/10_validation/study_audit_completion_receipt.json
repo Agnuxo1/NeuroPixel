@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "stage": "completed_independent_final_audit",
+  "recorded_at_utc": "2026-10-07T12:08:34+00:00",
+  "status": "verified",
+  "scientific_source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+  "scientific_plan_sha256": "571dd747cb9649bc435ffb006afc6558132b82e0d1c40e7b251827c51821b6f0",
+  "audit_source_commit": "3417e8287f76a13e94293f0affcf2c10887fe768",
+  "audit_plan_sha256": "670c1999a60a4a0d213ca430a633613d43b10f4aa36db7192760ba578e5244bc",
+  "run_id": 37618268225,
+  "job_id": 112781813916,
+  "provider_status": "completed",
+  "provider_conclusion": "success",
+  "provider_completed_updated_at_utc": "2026-10-07T12:03:46Z",
+  "raw_study_archive_F": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b",
+  "before_final_archive_G": "e8f5cb4913574fd0e27ca52f986da9153bd6996d",
+  "audit_archive_O": "bb2323ac0e0ba028975a4a4c89d2a97a20c7ff6d",
+  "audit_archive_path": "results/research/10_cloud_runs/37618268225-1-audit",
+  "audit_archive_files_excluding_manifest": 25,
+  "audit_archive_bytes_excluding_manifest": 23951462,
+  "archive_audit": {
+    "status": "verified",
+    "checks": 10988,
+    "failed_checks": 0,
+    "issues": [],
+    "report_sha256": "1732a7ce70e7380f76c9b4d5fdf61392b73ae4491300ce9dc548c50b54e9ed82",
+    "gate_ancestry": {
+      "F": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b",
+      "G": "e8f5cb4913574fd0e27ca52f986da9153bd6996d",
+      "ancestor_verified": true,
+      "claim": "Actual Git lineage; not external custody."
+    },
+    "source_inventory_counts": {
+      "071be375dce45d0d7fabce3d095bd1003d53ed36": 432,
+      "99ecaeefdd00dffd3dae444a781ad009c19dff5d": 403,
+      "f619ac2150960ff658a797e3ac8594f49c8d96c1": 449
+    },
+    "archive_input_counts": {
+      "acquisition": 35,
+      "gate": 105,
+      "preflight": 91,
+      "target": 142
+    },
+    "all_ten_training_subtrees_same_at_G_and_F": true,
+    "full_source_zip_checks": true,
+    "train_reextraction": {
+      "bytes": 117470,
+      "git_blob": null,
+      "member": "tasks_1-20_v1-2/en/qa4_two-arg-relations_train.txt",
+      "scope": "Other TAR headers traversed; only TRAIN returned as a payload.",
+      "sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+      "test_payload_extracted": false
+    }
+  },
+  "scientific_audit": {
+    "status": "verified",
+    "issues": [],
+    "checked_input_files": 306,
+    "report_check_groups": 35,
+    "report_sha256": "4eeb8937fbc37a585d9102f23e6d4062aef5b29f674137d646ef59df4f24f5c7",
+    "source_auditor": {
+      "path": "research_babi_audit.py",
+      "sha256": "d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949"
+    },
+    "runtime": {
+      "bootstrap_generator": "PCG64",
+      "bootstrap_replicates": 2000,
+      "bootstrap_seed": 104001,
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.17.0",
+      "threads": 1
+    },
+    "primary": {
+      "confidence_level": 0.95,
+      "df": 4,
+      "direction": "NeuroPixel minus RelativeTransformer",
+      "interval": [
+        -0.5238569485243387,
+        -0.2413430514756611
+      ],
+      "interval_clipped": false,
+      "maximum": -0.28300000000000003,
+      "mean": -0.38259999999999994,
+      "minimum": -0.5589999999999999,
+      "n": 5,
+      "pairs": [
+        {
+          "difference": -0.42599999999999993,
+          "neuropixel": 0.54,
+          "seed": 60,
+          "transformer": 0.966
+        },
+        {
+          "difference": -0.28300000000000003,
+          "neuropixel": 0.594,
+          "seed": 61,
+          "transformer": 0.877
+        },
+        {
+          "difference": -0.294,
+          "neuropixel": 0.467,
+          "seed": 62,
+          "transformer": 0.761
+        },
+        {
+          "difference": -0.351,
+          "neuropixel": 0.621,
+          "seed": 63,
+          "transformer": 0.972
+        },
+        {
+          "difference": -0.5589999999999999,
+          "neuropixel": 0.298,
+          "seed": 64,
+          "transformer": 0.857
+        }
+      ],
+      "sample_sd": 0.11376422987916718,
+      "unit": "paired training realization"
+    },
+    "competence_screen": {
+      "families": {
+        "neuropixel": {
+          "all_five_both_populations_pass": false,
+          "empty_strict_subset": false,
+          "rows": [
+            {
+              "all_official_accuracy": 0.54,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 60,
+              "strict_novel_accuracy": 0.5092378752886836,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.594,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 61,
+              "strict_novel_accuracy": 0.5750577367205543,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.467,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 62,
+              "strict_novel_accuracy": 0.4399538106235566,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.621,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 63,
+              "strict_novel_accuracy": 0.5923787528868361,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.298,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 64,
+              "strict_novel_accuracy": 0.2863741339491917,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            }
+          ],
+          "status": "not_established",
+          "threshold": 0.95
+        },
+        "relative_transformer": {
+          "all_five_both_populations_pass": false,
+          "empty_strict_subset": false,
+          "rows": [
+            {
+              "all_official_accuracy": 0.966,
+              "all_official_ge_095": true,
+              "all_official_n": 1000,
+              "seed": 60,
+              "strict_novel_accuracy": 0.9607390300230947,
+              "strict_novel_ge_095": true,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.877,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 61,
+              "strict_novel_accuracy": 0.8614318706697459,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.761,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 62,
+              "strict_novel_accuracy": 0.7321016166281755,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.972,
+              "all_official_ge_095": true,
+              "all_official_n": 1000,
+              "seed": 63,
+              "strict_novel_accuracy": 0.9688221709006929,
+              "strict_novel_ge_095": true,
+              "strict_novel_n": 866
+            },
+            {
+              "all_official_accuracy": 0.857,
+              "all_official_ge_095": false,
+              "all_official_n": 1000,
+              "seed": 64,
+              "strict_novel_accuracy": 0.8394919168591224,
+              "strict_novel_ge_095": false,
+              "strict_novel_n": 866
+            }
+          ],
+          "status": "not_established",
+          "threshold": 0.95
+        }
+      },
+      "preregistered_architecture": "neuropixel",
+      "scope": "Descriptive operational prerequisite, not a causal mechanism test, significance test, or replacement for historical H1."
+    },
+    "bootstrap_status": "completed",
+    "bootstrap_groups": 751,
+    "bootstrap_replicates": 2000,
+    "bootstrap_indices": {
+      "bytes": 12016128,
+      "int64_little_endian_content_sha256": "dd493d635d596b78b6e007c4d05d3b23ff757f6387b1335d71e11840aaed593e",
+      "path": "bootstrap_cluster_indices.npy",
+      "sha256": "1f2716461bddc1d006e3e37ffa5861156eb76adb844455240ea9f1636f43bd03",
+      "shape": [
+        2000,
+        751
+      ]
+    },
+    "bootstrap_draws": {
+      "path": "bootstrap_accuracy_draws.npz",
+      "bytes": 341807,
+      "sha256": "f6e4a727069956a8b8d1769937d8f215ee0e29d7052f9559f3bf81e001b4aa03"
+    },
+    "scope": "Independent saved-array recount; no Torch, model construction, pickle, checkpoint evaluation or raw-source answer substitution.",
+    "limits": [
+      "Byte hashes do not independently establish remote archive ancestry or publication time; the operational archive audit owns that evidence.",
+      "Checkpoint files are hashed only, never deserialized; weight finiteness and parameter tensors are not rechecked here.",
+      "Recorded input streams are matched across families and counted, not regenerated from their declared PRNG seeds.",
+      "Resource and timing fields describe saved measurements and configured limits, not continuously observed physical utilization.",
+      "bAbI QA4 is external to this project but synthetic; success does not establish natural-language or out-of-generator generalization.",
+      "The source archive and original TEST have public custody; a workflow access gate is not an independent blind test."
+    ]
+  },
+  "root_review": {
+    "rehashed_files": [
+      {
+        "path": "worker_status.json",
+        "bytes": 3617,
+        "sha256": "f3dfa739a22524b9d27e8feb5f7f8bb483289e00ba2b157479b116a416a5aa43"
+      },
+      {
+        "path": "offline_archive_audit.json",
+        "bytes": 2201961,
+        "sha256": "1732a7ce70e7380f76c9b4d5fdf61392b73ae4491300ce9dc548c50b54e9ed82"
+      },
+      {
+        "path": "analysis/scientific_audit.json",
+        "bytes": 458002,
+        "sha256": "4eeb8937fbc37a585d9102f23e6d4062aef5b29f674137d646ef59df4f24f5c7"
+      },
+      {
+        "path": "offline_status.json",
+        "bytes": 593,
+        "sha256": "66706c155d5b70e89b791aa96d53e376d6a6de632aef2c866632dc0d68538e11"
+      },
+      {
+        "path": "audit_resource_monitor.json",
+        "bytes": 1253,
+        "sha256": "8c627b1eb4e71319e3a57b9f1668d61906d03e78af0d03e68fc48f3315d48d09"
+      },
+      {
+        "path": "offline_subprocess.json",
+        "bytes": 1177,
+        "sha256": "a75b3df1d1f7bb2e374fcac731ad15397c6337069a8798b5934f8fd7d9a2ace6"
+      }
+    ],
+    "numerical_values_compared_to_raw_records": 2166,
+    "numerical_disagreements": 0,
+    "paired_t_arithmetic": {
+      "schema_version": 1,
+      "item": 10,
+      "method": "Independent JavaScript algebraic Student-t df4 quantile and paired-mean reconstruction from saved raw accuracies.",
+      "cdf_derivation": "For u=t/sqrt(t^2+4), integrate t4 density to obtain F(t)=1/2+3u/4-u^3/4. Bisection solves F(t)=0.975.",
+      "n": 5,
+      "df": 4,
+      "critical": 2.776445105197789,
+      "mean": -0.38259999999999994,
+      "sample_sd": 0.11376422987916718,
+      "interval": [
+        -0.5238569485243385,
+        -0.24134305147566132
+      ],
+      "errors": {
+        "mean": 0,
+        "sd": 0,
+        "interval": [
+          2.220446049250313e-16,
+          -2.220446049250313e-16
+        ]
+      },
+      "scope": "Checks the prespecified interval arithmetic, not the validity of small-sample assumptions or a new significance test."
+    },
+    "bootstrap_descriptors_match_archive_manifest": true,
+    "root_did_not_deserialize_weights_or_bootstrap_binary_arrays": true
+  },
+  "resources": {
+    "worker_seconds_before_final_archive": 15.924905383999999,
+    "worker_started_at_utc": "2026-10-07T12:03:24.720545+00:00",
+    "worker_completed_before_final_archive_at_utc": "2026-10-07T12:03:40.644141+00:00",
+    "stage_seconds": 8.004131518999998,
+    "scientific_subprocess_seconds": 2.2689972760000074,
+    "parent_supervisor_samples": 8,
+    "parent_minimum_sampled_available_ram_gib": 14.464984893798828,
+    "wrapper_boundaries": 8,
+    "scientific_boundaries": 82,
+    "scientific_minimum_sampled_available_ram_gib": 14.464984893798828,
+    "numerical_threads": 1,
+    "git_threads": 1,
+    "aggregate_cap": 4,
+    "runner_released": true
+  },
+  "provider_log": {
+    "path": "results/research/10_validation/study_audit_actions.log",
+    "bytes": 27188,
+    "sha256": "704d09cf963664222a8db72ebede3b640a115b3b35629b2212bcdeb95ebc176d",
+    "scope": "Complete provider-decoded job text re-encoded as UTF-8."
+  },
+  "conclusions": {
+    "neuropixel_mean_all_official": 0.504,
+    "transformer_mean_all_official": 0.8866,
+    "all_five_primary_differences_negative": true,
+    "both_families_fail_all_five_competence_screen": true,
+    "neuropixel_all_seeds_all_subsets_below_declared_fact_frequency_excluding_query": true,
+    "historical_H1": "closed; not supported; unchanged",
+    "independent_external_replication": false
+  },
+  "no_model_execution_in_audit": true,
+  "no_retraining_or_reselection": true
+}

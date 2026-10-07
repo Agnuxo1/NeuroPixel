@@ -1,0 +1,1711 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "status": "verified",
+  "scope": "Independent JSON-level reconstruction and consistency audit only; no NPZ/NPY decoding, checkpoint loading, model execution, or new evaluations.",
+  "source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+  "source_plan_sha256": "571dd747cb9649bc435ffb006afc6558132b82e0d1c40e7b251827c51821b6f0",
+  "raw_archive_commit": "0e135ad10518e1ccd9b7adc562265aa4e2d94d2b",
+  "raw_path": "results/research/10_cloud_runs/37615277149-1-study/",
+  "checks": [
+    {
+      "check": "ordered_ten_runs",
+      "passed": true
+    },
+    {
+      "check": "source_plan_binding",
+      "passed": true
+    },
+    {
+      "check": "closed_inventory",
+      "passed": true
+    },
+    {
+      "check": "final_archive",
+      "passed": true
+    },
+    {
+      "check": "final_metrics.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "training_manifest.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "worker_status.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "study_train_status.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "study_final_status.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "study_train_environment.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "study_final_environment.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_resource_monitor.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "final_resource_monitor.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "pre_final_archive_receipt.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "final_access.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_neuropixel_s60/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/source",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/completion",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/timings",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s60/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_relative_transformer_s60/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/source",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/completion",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/timings",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s60/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "seed60/paired_input_stream",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_neuropixel_s61/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/source",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/completion",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/timings",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s61/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_relative_transformer_s61/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/source",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/completion",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/timings",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s61/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "seed61/paired_input_stream",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_neuropixel_s62/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/source",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/completion",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/timings",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s62/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_relative_transformer_s62/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/source",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/completion",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/timings",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s62/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "seed62/paired_input_stream",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_neuropixel_s63/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/source",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/completion",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/timings",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s63/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_relative_transformer_s63/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/source",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/completion",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/timings",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s63/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "seed63/paired_input_stream",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_neuropixel_s64/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/source",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/completion",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/timings",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_neuropixel_s64/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "study/runs/train_relative_transformer_s64/run.json/retained_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/expected_config",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/source",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/completion",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/parameter_count",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/checkpoint_identity",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/exposure",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/timings",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/validation/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/validation/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/train_probe/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/train_probe/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/all_official/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/all_official/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/novel_vs_optimization_train/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/novel_vs_optimization_train/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/strict_novel_vs_full_exposure/counts",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/strict_novel_vs_full_exposure/coverage_ce",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/train_probe_flag",
+      "passed": true
+    },
+    {
+      "check": "train_relative_transformer_s64/all_references_in_archive",
+      "passed": true
+    },
+    {
+      "check": "seed64/paired_input_stream",
+      "passed": true
+    },
+    {
+      "check": "all_official/mask_counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/bow_memory/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/bow_naive_bayes/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/exact_memory/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/fact_answer_frequency/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/fact_answer_frequency_excluding_query/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/majority/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/question_only/counts",
+      "passed": true
+    },
+    {
+      "check": "all_official/symbolic_raw/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/mask_counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/bow_memory/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/bow_naive_bayes/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/exact_memory/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/fact_answer_frequency/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/fact_answer_frequency_excluding_query/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/majority/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/question_only/counts",
+      "passed": true
+    },
+    {
+      "check": "novel_vs_optimization_train/symbolic_raw/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/mask_counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/bow_memory/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/bow_naive_bayes/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/exact_memory/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/fact_answer_frequency/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/fact_answer_frequency_excluding_query/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/majority/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/question_only/counts",
+      "passed": true
+    },
+    {
+      "check": "strict_novel_vs_full_exposure/symbolic_raw/counts",
+      "passed": true
+    },
+    {
+      "check": "subset_nesting",
+      "passed": true
+    },
+    {
+      "check": "no_official_overflow_unsupported",
+      "passed": true
+    },
+    {
+      "check": "train/source_stable",
+      "passed": true
+    },
+    {
+      "check": "final/source_stable",
+      "passed": true
+    },
+    {
+      "check": "phase_specific_sources",
+      "passed": true
+    },
+    {
+      "check": "local_gate_binding",
+      "passed": true
+    },
+    {
+      "check": "recorded_chronology",
+      "passed": true
+    },
+    {
+      "check": "train/runtime",
+      "passed": true
+    },
+    {
+      "check": "train/monitor",
+      "passed": true
+    },
+    {
+      "check": "final/runtime",
+      "passed": true
+    },
+    {
+      "check": "final/monitor",
+      "passed": true
+    },
+    {
+      "check": "stage_and_worker_budgets",
+      "passed": true
+    }
+  ],
+  "issues": [],
+  "text_files_rehashed": [
+    {
+      "path": "final_metrics.json",
+      "bytes": 118044,
+      "sha256": "2e6a57e7b80ac425245ad6d2a08a61a29dd5740d4ac00c7804a46ae4b03671fa"
+    },
+    {
+      "path": "training_manifest.json",
+      "bytes": 723593,
+      "sha256": "5152d71f9f0e527d4c4eae921649db7ba7addf8975103125d8693177e62be078"
+    },
+    {
+      "path": "worker_status.json",
+      "bytes": 7257,
+      "sha256": "7e76027e8111634a33545653e1999f8e6547dac9779b8661b9a55b0e682865f8"
+    },
+    {
+      "path": "study_train_status.json",
+      "bytes": 6756,
+      "sha256": "d981d31753822d5d37e358b69fcede5361c53e0867ed3d2b6b8ca8a8890ce8a3"
+    },
+    {
+      "path": "study_final_status.json",
+      "bytes": 6760,
+      "sha256": "56fa5c458edca81ca12755dd9bbd5a9b7b8b1a7d3037182e480dbed123041cfa"
+    },
+    {
+      "path": "study_train_environment.json",
+      "bytes": 294,
+      "sha256": "68c75697c9471ab545d73aca43f76fb93f6508d07421168b32140c079132c7b9"
+    },
+    {
+      "path": "study_final_environment.json",
+      "bytes": 294,
+      "sha256": "72ad76457858ac80eb947274a917323e3c96f30346f0085c6e8f51ca49c7698b"
+    },
+    {
+      "path": "train_resource_monitor.json",
+      "bytes": 170088,
+      "sha256": "1bd19b06047274ded4f651591f0fb6d4eb5485735080feef63f98a9273540c1f"
+    },
+    {
+      "path": "final_resource_monitor.json",
+      "bytes": 1116,
+      "sha256": "af2209f969e116ff4a24b0458b3375f8cf315d0630057fb7f8934a5f218937e6"
+    },
+    {
+      "path": "pre_final_archive_receipt.json",
+      "bytes": 445,
+      "sha256": "9c3e92cc571a607d566d2e0ed96ee75fe5ed5ed4db130537a0ee6019937aa2a3"
+    },
+    {
+      "path": "final_access.json",
+      "bytes": 3760,
+      "sha256": "bb35a1c614bc33148cc76369e037b317d4d56147c4b0896b78a8a0a6bb2ede17"
+    },
+    {
+      "path": "study/runs/train_neuropixel_s60/run.json",
+      "bytes": 178374,
+      "sha256": "783874b23fe6883037eda2b1dc2b1ee96c35bce8f379154d76caa6337cbccd2b"
+    },
+    {
+      "path": "study/runs/train_relative_transformer_s60/run.json",
+      "bytes": 180942,
+      "sha256": "1b32dcde9b74b59ecb206b6c5be356565608b733a724caf5f068d2cff127decb"
+    },
+    {
+      "path": "study/runs/train_neuropixel_s61/run.json",
+      "bytes": 178520,
+      "sha256": "b35ad110d8567be075ee962bf0881cbcf5cd4cb9784d622f8898a6109ea5df3a"
+    },
+    {
+      "path": "study/runs/train_relative_transformer_s61/run.json",
+      "bytes": 181288,
+      "sha256": "d93faef79f39dd543b1cb16390bafb3014b45ae21207a1ef9f132ef85d52bd36"
+    },
+    {
+      "path": "study/runs/train_neuropixel_s62/run.json",
+      "bytes": 178501,
+      "sha256": "29f93f4537b9e0f5f9320014a8db960f42d0f4daafd1b388fd68649c1a8b304a"
+    },
+    {
+      "path": "study/runs/train_relative_transformer_s62/run.json",
+      "bytes": 181100,
+      "sha256": "04840373eacbc9e3e7ba21d9801c3f6b9c8e473ac955c461aa771f6f80527432"
+    },
+    {
+      "path": "study/runs/train_neuropixel_s63/run.json",
+      "bytes": 178464,
+      "sha256": "9f9ad8436f786becd8b2ce7360bead95c49d85822dea2cf7887b4e749244b1a6"
+    },
+    {
+      "path": "study/runs/train_relative_transformer_s63/run.json",
+      "bytes": 181067,
+      "sha256": "fb8db9f4332b6d91a84c4a41c64f781ba4e9bed372263cf28289bd20169b8d0f"
+    },
+    {
+      "path": "study/runs/train_neuropixel_s64/run.json",
+      "bytes": 178434,
+      "sha256": "d77aa1b1941fa0b52da554cd01770b460f68c6547071ee066fd424aa10e34301"
+    },
+    {
+      "path": "study/runs/train_relative_transformer_s64/run.json",
+      "bytes": 180908,
+      "sha256": "2a0edca94d03ab34b194e2747e6c1621c5efcaee39486b5d0b0053b5de955a7d"
+    }
+  ],
+  "pairs": [
+    {
+      "seed": 60,
+      "all_official": {
+        "np": 0.54,
+        "tf": 0.966,
+        "difference": -0.42599999999999993,
+        "np_correct": 540,
+        "tf_correct": 966,
+        "n": 1000
+      },
+      "novel_vs_optimization_train": {
+        "np": 0.5090293453724605,
+        "tf": 0.9616252821670429,
+        "difference": -0.45259593679458243,
+        "np_correct": 451,
+        "tf_correct": 852,
+        "n": 886
+      },
+      "strict_novel_vs_full_exposure": {
+        "np": 0.5092378752886836,
+        "tf": 0.9607390300230947,
+        "difference": -0.4515011547344111,
+        "np_correct": 441,
+        "tf_correct": 832,
+        "n": 866
+      }
+    },
+    {
+      "seed": 61,
+      "all_official": {
+        "np": 0.594,
+        "tf": 0.877,
+        "difference": -0.28300000000000003,
+        "np_correct": 594,
+        "tf_correct": 877,
+        "n": 1000
+      },
+      "novel_vs_optimization_train": {
+        "np": 0.5744920993227991,
+        "tf": 0.8611738148984198,
+        "difference": -0.2866817155756207,
+        "np_correct": 509,
+        "tf_correct": 763,
+        "n": 886
+      },
+      "strict_novel_vs_full_exposure": {
+        "np": 0.5750577367205543,
+        "tf": 0.8614318706697459,
+        "difference": -0.28637413394919164,
+        "np_correct": 498,
+        "tf_correct": 746,
+        "n": 866
+      }
+    },
+    {
+      "seed": 62,
+      "all_official": {
+        "np": 0.467,
+        "tf": 0.761,
+        "difference": -0.294,
+        "np_correct": 467,
+        "tf_correct": 761,
+        "n": 1000
+      },
+      "novel_vs_optimization_train": {
+        "np": 0.4367945823927765,
+        "tf": 0.7302483069977427,
+        "difference": -0.29345372460496616,
+        "np_correct": 387,
+        "tf_correct": 647,
+        "n": 886
+      },
+      "strict_novel_vs_full_exposure": {
+        "np": 0.4399538106235566,
+        "tf": 0.7321016166281755,
+        "difference": -0.2921478060046189,
+        "np_correct": 381,
+        "tf_correct": 634,
+        "n": 866
+      }
+    },
+    {
+      "seed": 63,
+      "all_official": {
+        "np": 0.621,
+        "tf": 0.972,
+        "difference": -0.351,
+        "np_correct": 621,
+        "tf_correct": 972,
+        "n": 1000
+      },
+      "novel_vs_optimization_train": {
+        "np": 0.5914221218961625,
+        "tf": 0.9683972911963883,
+        "difference": -0.3769751693002258,
+        "np_correct": 524,
+        "tf_correct": 858,
+        "n": 886
+      },
+      "strict_novel_vs_full_exposure": {
+        "np": 0.5923787528868361,
+        "tf": 0.9688221709006929,
+        "difference": -0.37644341801385683,
+        "np_correct": 513,
+        "tf_correct": 839,
+        "n": 866
+      }
+    },
+    {
+      "seed": 64,
+      "all_official": {
+        "np": 0.298,
+        "tf": 0.857,
+        "difference": -0.5589999999999999,
+        "np_correct": 298,
+        "tf_correct": 857,
+        "n": 1000
+      },
+      "novel_vs_optimization_train": {
+        "np": 0.2832957110609481,
+        "tf": 0.8386004514672686,
+        "difference": -0.5553047404063205,
+        "np_correct": 251,
+        "tf_correct": 743,
+        "n": 886
+      },
+      "strict_novel_vs_full_exposure": {
+        "np": 0.2863741339491917,
+        "tf": 0.8394919168591224,
+        "difference": -0.5531177829099307,
+        "np_correct": 248,
+        "tf_correct": 727,
+        "n": 866
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "population": "all_official",
+      "n": 1000,
+      "np_mean": 0.504,
+      "tf_mean": 0.8865999999999999,
+      "paired_mean_difference": -0.38259999999999994,
+      "sd_difference": 0.11376422987916718,
+      "t95": [
+        -0.5238569485243391,
+        -0.24134305147566082
+      ],
+      "raw_differences": [
+        -0.42599999999999993,
+        -0.28300000000000003,
+        -0.294,
+        -0.351,
+        -0.5589999999999999
+      ]
+    },
+    {
+      "population": "novel_vs_optimization_train",
+      "n": 886,
+      "np_mean": 0.47900677200902936,
+      "tf_mean": 0.8720090293453724,
+      "paired_mean_difference": -0.3930022573363431,
+      "sd_difference": 0.1133185092584533,
+      "t95": [
+        -0.5337057706126848,
+        -0.2522987440600014
+      ],
+      "raw_differences": [
+        -0.45259593679458243,
+        -0.2866817155756207,
+        -0.29345372460496616,
+        -0.3769751693002258,
+        -0.5553047404063205
+      ]
+    },
+    {
+      "population": "strict_novel_vs_full_exposure",
+      "n": 866,
+      "np_mean": 0.4806004618937644,
+      "tf_mean": 0.8725173210161664,
+      "paired_mean_difference": -0.3919168591224019,
+      "sd_difference": 0.11277032443231506,
+      "t95": [
+        -0.5319397110357661,
+        -0.25189400720903765
+      ],
+      "raw_differences": [
+        -0.4515011547344111,
+        -0.28637413394919164,
+        -0.2921478060046189,
+        -0.37644341801385683,
+        -0.5531177829099307
+      ]
+    }
+  ],
+  "primary": "all_official paired mean NeuroPixel minus Transformer; other populations secondary",
+  "interval_formula": {
+    "n_pairs": 5,
+    "df": 4,
+    "t975": 2.7764451051977987,
+    "units": "accuracy fraction; multiply by100 for percentage points",
+    "formula": "mean_difference +/- t975 * sample_sd_difference / sqrt(5)"
+  },
+  "competence_screen": {
+    "neuropixel": {
+      "every_seed_passes": false,
+      "passing_seeds": []
+    },
+    "relative_transformer": {
+      "every_seed_passes": false,
+      "passing_seeds": [
+        60,
+        63
+      ]
+    }
+  },
+  "controls": {
+    "all_official": {
+      "bow_memory": {
+        "n": 1000,
+        "correct": 412,
+        "accuracy": 0.412
+      },
+      "bow_naive_bayes": {
+        "n": 1000,
+        "correct": 169,
+        "accuracy": 0.169
+      },
+      "exact_memory": {
+        "n": 1000,
+        "correct": 263,
+        "accuracy": 0.263
+      },
+      "fact_answer_frequency": {
+        "n": 1000,
+        "correct": 343,
+        "accuracy": 0.343
+      },
+      "fact_answer_frequency_excluding_query": {
+        "n": 1000,
+        "correct": 657,
+        "accuracy": 0.657
+      },
+      "majority": {
+        "n": 1000,
+        "correct": 171,
+        "accuracy": 0.171
+      },
+      "question_only": {
+        "n": 1000,
+        "correct": 193,
+        "accuracy": 0.193
+      },
+      "symbolic_raw": {
+        "n": 1000,
+        "correct": 1000,
+        "accuracy": 1
+      }
+    },
+    "novel_vs_optimization_train": {
+      "bow_memory": {
+        "n": 886,
+        "correct": 319,
+        "accuracy": 0.3600451467268623
+      },
+      "bow_naive_bayes": {
+        "n": 886,
+        "correct": 152,
+        "accuracy": 0.17155756207674944
+      },
+      "exact_memory": {
+        "n": 886,
+        "correct": 149,
+        "accuracy": 0.16817155756207675
+      },
+      "fact_answer_frequency": {
+        "n": 886,
+        "correct": 311,
+        "accuracy": 0.3510158013544018
+      },
+      "fact_answer_frequency_excluding_query": {
+        "n": 886,
+        "correct": 589,
+        "accuracy": 0.664785553047404
+      },
+      "majority": {
+        "n": 886,
+        "correct": 149,
+        "accuracy": 0.16817155756207675
+      },
+      "question_only": {
+        "n": 886,
+        "correct": 159,
+        "accuracy": 0.17945823927765236
+      },
+      "symbolic_raw": {
+        "n": 886,
+        "correct": 886,
+        "accuracy": 1
+      }
+    },
+    "strict_novel_vs_full_exposure": {
+      "bow_memory": {
+        "n": 866,
+        "correct": 311,
+        "accuracy": 0.35912240184757505
+      },
+      "bow_naive_bayes": {
+        "n": 866,
+        "correct": 151,
+        "accuracy": 0.17436489607390301
+      },
+      "exact_memory": {
+        "n": 866,
+        "correct": 148,
+        "accuracy": 0.17090069284064666
+      },
+      "fact_answer_frequency": {
+        "n": 866,
+        "correct": 309,
+        "accuracy": 0.3568129330254042
+      },
+      "fact_answer_frequency_excluding_query": {
+        "n": 866,
+        "correct": 579,
+        "accuracy": 0.6685912240184757
+      },
+      "majority": {
+        "n": 866,
+        "correct": 148,
+        "accuracy": 0.17090069284064666
+      },
+      "question_only": {
+        "n": 866,
+        "correct": 157,
+        "accuracy": 0.1812933025404157
+      },
+      "symbolic_raw": {
+        "n": 866,
+        "correct": 866,
+        "accuracy": 1
+      }
+    }
+  },
+  "costs": {
+    "scientific_training_seconds": 1259.143942235,
+    "scientific_final_seconds": 4.770527241000082,
+    "worker_before_final_archive_seconds": 1284.266404426,
+    "sum_training_loop_seconds": 1253.2244592410002,
+    "sum_run_elapsed_seconds": 1257.687756658,
+    "family_training_loop_seconds": {
+      "neuropixel": 1086.0505222700003,
+      "relative_transformer": 167.173936971
+    },
+    "stage_seconds": [
+      {
+        "phase": "contract_tests",
+        "seconds": 4.503408286999985,
+        "limit": 300
+      },
+      {
+        "phase": "train",
+        "seconds": 1261.389099963,
+        "limit": 2700
+      },
+      {
+        "phase": "final",
+        "seconds": 6.503731041000037,
+        "limit": 300
+      }
+    ]
+  },
+  "resource": [
+    {
+      "phase": "train",
+      "samples": 1261,
+      "minimum_ram_gib": 14.273090362548828
+    },
+    {
+      "phase": "final",
+      "samples": 7,
+      "minimum_ram_gib": 14.450592041015625
+    }
+  ],
+  "recorded_gate": {
+    "training_archive_commit": "e8f5cb4913574fd0e27ca52f986da9153bd6996d",
+    "manifest_created": "2026-10-07T11:59:26.911495+00:00",
+    "receipt_at": "2026-10-07T11:59:30.213019+00:00",
+    "access_consumed": "2026-10-07T11:59:31.895875+00:00",
+    "population_created": "2026-10-07T11:59:32.268028+00:00",
+    "remote_git_relationship_reaudited_here": false
+  },
+  "runs": [
+    {
+      "run_id": "train_neuropixel_s60",
+      "config_sha256": "37ab62281949ed86d8f82da13f44f0b195402f676c7d85e4002fa14fb36d6ec8",
+      "completed_updates": 4096,
+      "parameter_count": 29552,
+      "dev_accuracy": 0.47619047619047616,
+      "dev_correct": 50,
+      "probe_accuracy": 0.7698324022346369,
+      "probe_correct": 689,
+      "training_seconds": 218.944969895,
+      "elapsed_total_seconds": 220.35196346799998,
+      "mean_update_seconds": 0.05328489589794921,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_relative_transformer_s60",
+      "config_sha256": "9867d10db923c8b9e21806ba1347d607f566fe5d5176944766e9e92ee6ba6c06",
+      "completed_updates": 4096,
+      "parameter_count": 29562,
+      "dev_accuracy": 0.9714285714285714,
+      "dev_correct": 102,
+      "probe_accuracy": 1,
+      "probe_correct": 895,
+      "training_seconds": 33.292332741999985,
+      "elapsed_total_seconds": 33.399845924999966,
+      "mean_update_seconds": 0.008009033601562465,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_neuropixel_s61",
+      "config_sha256": "fb08b62457d54465d29229887869c80f02d46efff04d09f0a26d7e6cdd8bf409",
+      "completed_updates": 4096,
+      "parameter_count": 29552,
+      "dev_accuracy": 0.580952380952381,
+      "dev_correct": 61,
+      "probe_accuracy": 0.7597765363128491,
+      "probe_correct": 680,
+      "training_seconds": 217.33565234400004,
+      "elapsed_total_seconds": 217.95444591399996,
+      "mean_update_seconds": 0.052892982485839735,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_relative_transformer_s61",
+      "config_sha256": "8b95be3e9161de404930287b2fc87b098ec7325c8c41c13942177d44afbf59b7",
+      "completed_updates": 4096,
+      "parameter_count": 29562,
+      "dev_accuracy": 0.7904761904761904,
+      "dev_correct": 83,
+      "probe_accuracy": 1,
+      "probe_correct": 895,
+      "training_seconds": 32.54406415100004,
+      "elapsed_total_seconds": 32.645586424000044,
+      "mean_update_seconds": 0.007841429423828539,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_neuropixel_s62",
+      "config_sha256": "3065070b8454fe0dbe383369903c47632fb23daf3c4bd7c170c16e804a225555",
+      "completed_updates": 4096,
+      "parameter_count": 29552,
+      "dev_accuracy": 0.3904761904761905,
+      "dev_correct": 41,
+      "probe_accuracy": 0.6692737430167598,
+      "probe_correct": 599,
+      "training_seconds": 216.53682496400006,
+      "elapsed_total_seconds": 217.20617424700004,
+      "mean_update_seconds": 0.0527016187265619,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_relative_transformer_s62",
+      "config_sha256": "11ac6b1291d3344809b9e083e32e24af6a9773e2f366211bef46faf41252ea1b",
+      "completed_updates": 4096,
+      "parameter_count": 29562,
+      "dev_accuracy": 0.7714285714285715,
+      "dev_correct": 81,
+      "probe_accuracy": 0.9988826815642458,
+      "probe_correct": 894,
+      "training_seconds": 34.34718087099998,
+      "elapsed_total_seconds": 34.45273645399993,
+      "mean_update_seconds": 0.008255291303465473,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_neuropixel_s63",
+      "config_sha256": "442de5aeecb8a8903f8ad5e7a87a5378972206e0449c551cc824b443e17c97dd",
+      "completed_updates": 4096,
+      "parameter_count": 29552,
+      "dev_accuracy": 0.4857142857142857,
+      "dev_correct": 51,
+      "probe_accuracy": 0.8368715083798882,
+      "probe_correct": 749,
+      "training_seconds": 215.49695552499998,
+      "elapsed_total_seconds": 216.07692530299994,
+      "mean_update_seconds": 0.05245065299682408,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_relative_transformer_s63",
+      "config_sha256": "872c46288beec6694c3756d97c17abad64916f098186150a620d017282958d80",
+      "completed_updates": 4096,
+      "parameter_count": 29562,
+      "dev_accuracy": 0.9714285714285714,
+      "dev_correct": 102,
+      "probe_accuracy": 1,
+      "probe_correct": 895,
+      "training_seconds": 33.15822511900001,
+      "elapsed_total_seconds": 33.26714474400001,
+      "mean_update_seconds": 0.007981277868165604,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_neuropixel_s64",
+      "config_sha256": "ca1d0c0b94f5119ff9732c2d63c79d14e90d3c811b3560a5987e7c5c8cc1607f",
+      "completed_updates": 4096,
+      "parameter_count": 29552,
+      "dev_accuracy": 0.37142857142857144,
+      "dev_correct": 39,
+      "probe_accuracy": 0.37094972067039106,
+      "probe_correct": 332,
+      "training_seconds": 217.7361195420001,
+      "elapsed_total_seconds": 218.3978380709998,
+      "mean_update_seconds": 0.052991512486570524,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    },
+    {
+      "run_id": "train_relative_transformer_s64",
+      "config_sha256": "66fd5158d0e93898f3dc65b98f68c47fbb75009386de9f113f4abd886e0d2aa1",
+      "completed_updates": 4096,
+      "parameter_count": 29562,
+      "dev_accuracy": 0.8476190476190476,
+      "dev_correct": 89,
+      "probe_accuracy": 1,
+      "probe_correct": 895,
+      "training_seconds": 33.832134087999975,
+      "elapsed_total_seconds": 33.93509610800015,
+      "mean_update_seconds": 0.008132294790281158,
+      "unique_records": 895,
+      "unique_raw_inputs": 820
+    }
+  ],
+  "limitations": [
+    "This independent review checks arithmetic and consistency of JSON reports, not the correctness of saved logits against model forward passes.",
+    "NPZ/NPY and raw text truth were independently audited by the separately frozen offline program, whose completion was reported by the coordinator; that audit was not rerun here.",
+    "The95% paired-t result concerns five training realizations of this fixed recipe/task/split. No new multiplicity-adjusted or real-world generalization claim is made.",
+    "Every official row is retained. Strict novelty here means exact normalized-input and canvas nonidentity, not semantic or compositional novelty.",
+    "All five NeuroPixel final training probes are below95%; optimization and representation effects remain unresolved. Tiny32 fitting does not establish full-task mastery.",
+    "RAM minima are discrete samples; recorded local gate chronology does not establish external custody. Git G/F/H authentication belongs to the separate archive audit.",
+    "This task does not revise historical H1 or open item11.",
+    "The259 recorded audit predicates are consistency checks, not independent scientific trials or additional test methods."
+  ]
+}

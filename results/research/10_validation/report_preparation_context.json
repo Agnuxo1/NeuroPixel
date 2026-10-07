@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "scope": "Preserved report preparation and interpretation context; no scientific source modification or extra final evaluation.",
+  "methods_editorial_review": {
+    "schema_version": 1,
+    "item": 10,
+    "original_blob": "86ca7d7dfa196931a6f986280768557246a89068",
+    "original_sha256": "225dcad18892816442c4753cb8352f4a9b9e67d4d114ec4f6c64e317bcb8c244",
+    "reviewed_sha256": "bb47f10a24e8f824a591fafa149b9c13833239eaf0e18ac9561c413c43659951",
+    "changes": [
+      "Qualify publisher-checksum absence to the evidence actually established by this acquisition.",
+      "Remove ambiguous bounded-transfer wording for an architecture trained from scratch.",
+      "Distinguish declared TRAIN/fixture novelty from known bibliographic and other historical exposure."
+    ],
+    "scientific_source_changed": false,
+    "final_outcomes_used": false
+  },
+  "compositional_reference_note": {
+    "schema_version": 1,
+    "item": 10,
+    "recorded_at_utc": "2026-10-07T11:45:36+00:00",
+    "purpose": "Confirm the distinction between exact-input novelty and deliberately held-out compositional generalization without altering the fixed study.",
+    "sources": [
+      {
+        "url": "https://proceedings.mlr.press/v80/lake18a.html",
+        "title": "Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks",
+        "authors": "Brenden Lake and Marco Baroni",
+        "year": 2018,
+        "venue": "ICML; PMLR80",
+        "root_web_ref": "turn160view0",
+        "observed_scope": "SCAN pairs navigation commands with action sequences and examines systematic generalization, including novel uses of familiar primitives.",
+        "application": "Its sequence output and deliberate compositional splits differ from single-answer QA4; citing it does not amount to running SCAN."
+      },
+      {
+        "url": "https://aclanthology.org/2020.emnlp-main.731/",
+        "title": "COGS: A Compositional Generalization Challenge Based on Semantic Interpretation",
+        "authors": "Najoung Kim and Tal Linzen",
+        "year": 2020,
+        "venue": "EMNLP",
+        "doi": "10.18653/v1/2020.emnlp-main.731",
+        "root_web_ref": "turn160view1",
+        "observed_scope": "COGS defines semantic-parsing generalization gaps over combinations of familiar words and structures.",
+        "application": "Deduplicated QA4 test inputs alone do not implement those withheld combinations or the semantic-parsing output task."
+      }
+    ],
+    "limits": [
+      "This is bibliographic context reviewed during fixed main execution, not new training/evaluation inputs.",
+      "No external benchmark result or source-code change is produced.",
+      "The frozen novelty ledger is not complete historical exposure or blind custody."
+    ],
+    "unchanged_recipe_sha256": "8492892f58a4065a92df99dbbbf30f0bd7340111c853cf5533a7102109fe8d19"
+  },
+  "post_freeze_literature_context": {
+    "schema_version": 1,
+    "item": 10,
+    "read_at_utc": "2026-10-07 11:17:19 UTC",
+    "scope": "Contextual literature review after recipe freeze; no source, data, architecture, optimizer, selection or threshold change.",
+    "source": {
+      "title": "End-To-End Memory Networks",
+      "authors": [
+        "Sainbayar Sukhbaatar",
+        "Arthur Szlam",
+        "Jason Weston",
+        "Rob Fergus"
+      ],
+      "url": "https://arxiv.org/html/1503.08895v5",
+      "version": "v5, 24 November2015",
+      "ref": "turn158view0",
+      "relevant_sections": [
+        "4 Synthetic Question and Answering Experiments",
+        "4.1 Model Details",
+        "4.2 Training Details",
+        "4.4 Results, Table1"
+      ]
+    },
+    "observed": {
+      "dataset_version_stated": "1.1",
+      "ours_archive_version": "1-2",
+      "support_fact_supervision": false,
+      "qa4_table1_error_percent": {
+        "memn2n_bow": 32,
+        "memn2n_position_encoding": 3.8,
+        "memn2n_position_encoding_linear_start_random_noise": 2.8
+      },
+      "selection": "Paper states10 initializations and selects lowest training error; ours reports five predetermined main seeds without best-seed selection."
+    },
+    "interpretation": "Historical context only: original-task order sensitivity and established synthetic QA capability. Different versions, architecture, initialization selection and training recipe prevent a direct matched replication or superiority inference.",
+    "exposure_limit": "Search snippets and article examples are public bibliographic exposure, not additions to the frozen invented-test or model-training inputs. The strict novelty mask is limited to its declared official-TRAIN/fixture ledger and does not claim complete human/model prior-exposure blinding."
+  },
+  "interpretive_limits_source_note": {
+    "authorship": "The architecture is trained from scratch on externally authored bAbI QA4. No prior item9 checkpoint is transferred.",
+    "no_support_leakage": "Facts and question are encoded literally, without gold/support-derived selection or annotations.",
+    "novelty": "Raw and encoded exact-input novelty is not a held-out-composition, entity or grammar test; semantically similar examples can remain.",
+    "historical": "MemN2N arXiv1503.08895v5 uses dataset1.1,10%DEV,10initializations selected by training error; this archive1-2 and five retained seeds differ. Cross-release QA4 identity has not been established.",
+    "reference_primary_url": "https://arxiv.org/html/1503.08895v5",
+    "root_retrieval": "turn158view0",
+    "limits": [
+      "No zero-shot transfer",
+      "No systematic compositional or natural-data generalization",
+      "No unique causal mechanism or independent laboratory replication",
+      "A negative result constrains these configurations/recipe, not all possible NeuroPixel variants"
+    ]
+  },
+  "report_interpretation_preparation": {
+    "schema_version": 1,
+    "item": 10,
+    "phase": "main_report_preparation",
+    "scientific_source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
+    "recipe_sha256": "8492892f58a4065a92df99dbbbf30f0bd7340111c853cf5533a7102109fe8d19",
+    "final_results_seen": false,
+    "interpretive_rules": [
+      {
+        "topic": "Externality",
+        "statement": "Training from scratch on external bAbI QA4 tests whether the architecture can learn this separately authored supervised task under the fixed recipe. It is not transfer of item9 weights or performance outside bAbI's generator."
+      },
+      {
+        "topic": "Novelty",
+        "statement": "Both novelty masks remove normalized raw and encoded exact-input overlap with their declared data/fixture exposure sets. They do not imply new semantic structures, unseen vocabulary or all-history human/model blinding."
+      },
+      {
+        "topic": "Fairness",
+        "statement": "Both families receive the same ordered training population, paired precomputed sample indices, 4096 optimizer updates and answer-only loss. Their parameter counts are 29552 and 29562. These controls do not equate operation count, memory, wall time, energy or model-specific stochastic state consumption."
+      },
+      {
+        "topic": "Representation",
+        "statement": "On acquired TRAIN, the literal encoder retains the facts/question with no raw or encoded label conflicts, OOVs or overflow; the unlearned raw grammar control answers all rows. These are data/adapter consistency results, not an architecture learnability theorem."
+      },
+      {
+        "topic": "Readout and locality",
+        "statement": "With H4 W8 the maximum Chebyshev distance is7 and the update horizon is16. An immediate hard receptive-field exclusion is not established. The readout's identity-channel bound does not by itself prohibit classification among six observed answer labels. These analytic observations do not diagnose optimization failure."
+      },
+      {
+        "topic": "Pilot inference",
+        "statement": "Both seed58 32-record memorization diagnostics passed; all 895-record full-TRAIN probes remain below95%. Pilot DEV selection values are development evidence; only the full prespecified main panel supports its five-seed contrast."
+      },
+      {
+        "topic": "Primary statistical unit",
+        "statement": "The primary t interval uses five paired training-realization differences on one fixed official test set, df4. Repeated rows, multiple masks and the 1000 nominal row count are not independent training realizations."
+      },
+      {
+        "topic": "Bootstrap statistical unit",
+        "statement": "The separate percentile bootstrap resamples connected TEST source components with one common PCG64 index array; it conditions on the fixed checkpoints. Row count changes with unequal component size and subgroup membership. Undefined subset draws do not get silently discarded."
+      },
+      {
+        "topic": "Gate",
+        "statement": "Archive actual Git ancestry and immutable checkpoint/config identity must precede the consumed final-access receipt. Gate success is internal workflow integrity, not externally held blind custody."
+      },
+      {
+        "topic": "Negative evidence",
+        "statement": "Failure of the prospective 95% screen constrains the tested configurations, recipe, training realizations and observed benchmark. It does not prove universal architecture incapacity or separate optimization, representation and data factors causally."
+      }
+    ],
+    "inherited_exposure_record": "results/research/10_validation/post_freeze_literature_context.json",
+    "primary_source_links": [
+      "https://arxiv.org/pdf/1502.05698",
+      "https://arxiv.org/html/1503.08895v5",
+      "https://proceedings.mlr.press/v80/lake18a.html",
+      "https://aclanthology.org/2020.emnlp-main.731/"
+    ],
+    "resource_note": "No new model execution, re-scoring, optional test or later agenda item was opened to produce this note."
+  }
+}

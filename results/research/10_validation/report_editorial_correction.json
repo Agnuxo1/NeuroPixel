@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "scope": "Narrow documentary correction after independent report review; no scientific recipe, measurements, admission or conclusions changed.",
+  "original_report_blob": "1c3794f6da712cd7291d9d807d0cb3e486e27378",
+  "original_report_sha256": "54c57e617c6dfe88d198f7e76d27553dfae9bdb03312db5cdb450b776b53ffed",
+  "final_report_sha256": "ac14d3a4c5125e0e420f441f2c27ac373e10379a6ca90eaaf2a76ea1cbb8d5c8",
+  "old_text": "The final audit used one numerical thread, recorded eight parent samples and 82 scientific boundary samples, and had minimum sampled available RAM 14.464985 GiB.",
+  "replacement_text": "The final audit used one numerical thread and recorded eight parent samples plus 82 scientific boundary samples. The minimum during the eight-sample audit-stage monitor was 14.464985 GiB; a later worker boundary before final archival recorded 14.460808 GiB.",
+  "evidence": {
+    "audit_archive": "bb2323ac0e0ba028975a4a4c89d2a97a20c7ff6d",
+    "audit_stage_monitor_minimum_gib": 14.464984893798828,
+    "later_worker_before_final_archive_gib": 14.460807800292969
+  },
+  "preserves_minimum_available_ram_floor_gib": 8
+}

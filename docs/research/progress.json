@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T12:02:19+00:00",
-  "active_item": 10,
+  "recorded_at": "2026-10-07T12:25:26+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -65,8 +65,10 @@
     {
       "item": 10,
       "title": "Generalization outside the generator",
-      "status": "in_progress",
-      "opened_at_utc": "2026-10-07T10:11:14+00:00"
+      "status": "completed",
+      "opened_at_utc": "2026-10-07T10:11:14+00:00",
+      "report": "10_results.md",
+      "closed_at_utc": "2026-10-07T12:25:26+00:00"
     },
     {
       "item": 11,
@@ -500,7 +502,7 @@
     "closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e"
   },
   "item10": {
-    "stage": "All ten main runs and one final evaluation completed; independent study audit frozen",
+    "stage": "completed feasible investigation; final saved-array and Git-archive audits verified; capability not established",
     "opened_after_item9_closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e",
     "scope": "Investigate generalization beyond the project's task generator, distinguish externally authored benchmarks from same-generator perturbations, establish input/output and label validity, and execute feasible bounded checks under a prospectively fixed protocol. Retain the weak item9 competence result and all external-validation limits.",
     "scientific_scoring_started": true,
@@ -598,7 +600,7 @@
     },
     "main_worker_seconds": 3600,
     "main_workflow_minutes": 70,
-    "main_scientific_scoring_started": false,
+    "main_scientific_scoring_started": true,
     "main_source_commit": "f619ac2150960ff658a797e3ac8594f49c8d96c1",
     "main_run_id": 37615277149,
     "main_job_id": 112771993909,
@@ -614,9 +616,57 @@
       "strict_novel_vs_full_exposure": 866
     },
     "main_worker_seconds_observed": 1284.266404426,
-    "main_independent_audit_status": "frozen; execution pending",
+    "main_independent_audit_status": "verified",
     "main_audit_freeze_utc": "2026-10-07T12:02:19+00:00",
     "main_audit_plan_sha256": "670c1999a60a4a0d213ca430a633613d43b10f4aa36db7192760ba578e5244bc",
-    "main_scientific_conclusions": "pending independent audit"
+    "main_scientific_conclusions": "The fixed NeuroPixel recipe underperforms the parameter-matched Transformer and a declared simple frequency control on all five paired seeds and three populations. No stable high-competence external-task performance is established. Full-TRAIN fit remains insufficient in all five NeuroPixel runs, so optimization and representation are not isolated.",
+    "main_audit_source_commit": "3417e8287f76a13e94293f0affcf2c10887fe768",
+    "main_audit_archive_commit": "bb2323ac0e0ba028975a4a4c89d2a97a20c7ff6d",
+    "main_audit_run_id": 37618268225,
+    "main_audit_job_id": 112781813916,
+    "main_audit_runner_released": true,
+    "main_audit_archive_checks": 10988,
+    "main_audit_scientific_input_files": 306,
+    "main_audit_scientific_check_groups": 35,
+    "main_audit_scientific_issues": 0,
+    "main_json_review": {
+      "checks": 259,
+      "issues": 0,
+      "rehashed_files": 21,
+      "sha256": "75517d5cd8febe605f151e3ad8c16ac4b0ab942e3bfffe381aae8fbaf43dd2e0"
+    },
+    "root_numeric_comparison_count": 2166,
+    "root_numeric_disagreements": 0,
+    "primary_mean_accuracy_neuropixel": 0.504,
+    "primary_mean_accuracy_transformer": 0.8865999999999999,
+    "primary_mean_paired_difference": -0.38259999999999994,
+    "primary_paired_t95": [
+      -0.5238569485243387,
+      -0.2413430514756611
+    ],
+    "primary_all_five_differences_negative": true,
+    "neuropixel_all_five_competence_screen_passed": false,
+    "transformer_descriptive_all_five_competence_screen_passed": false,
+    "neuropixel_all_seeds_below_frequency_excluding_query_on_all_three_subsets": true,
+    "capability_claim": "not established",
+    "external_independent_replication": false,
+    "limitations": [
+      "Architectures were trained from scratch on externally authored synthetic bAbI QA4; no zero-shot transfer or natural-world generalization was tested.",
+      "Exact novelty filters cover the official TRAIN including DEV and 149 declared fixture contexts; bibliographic and unknown historical exposure lie outside the ledger.",
+      "The five-pair t interval concerns training realizations conditional on one fixed task/split and selected rates.",
+      "The common 2000-draw component bootstrap conditions on fixed checkpoints and is not multiplicity-adjusted or independent across endpoints.",
+      "Both model families fail the all-five competence screen; Transformer application is descriptive, while NeuroPixel was the preregistered architecture.",
+      "Actual Git G-to-F lineage and identical training subtrees are verified; internal receipts do not establish external custody.",
+      "Parameter counts are matched approximately; elapsed CPU training time is not FLOPs, utilization or physical energy.",
+      "Audit hashes checkpoint files but does not deserialize or independently certify weight finiteness.",
+      "Original-author download404 and recovered interim-manifest metadata404 remain preserved; neither licenses hidden outcome selection."
+    ],
+    "completion_receipt": "results/research/10_validation/study_audit_completion_receipt.json",
+    "report": "10_results.md",
+    "closed_at_utc": "2026-10-07T12:25:26+00:00",
+    "report_sha256": "ac14d3a4c5125e0e420f441f2c27ac373e10379a6ca90eaaf2a76ea1cbb8d5c8",
+    "report_bytes": 33748,
+    "report_review_status": "reviewed_no_material_blockers; RAM sampling scope clarified in one documented edit",
+    "report_review_sha256": "84b707e0b70bbb810bb733e986f23704b793c3fa454b35548fb86d51e3cf6ab6"
   }
 }
