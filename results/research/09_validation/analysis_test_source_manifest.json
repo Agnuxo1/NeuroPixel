@@ -1,0 +1,35 @@
+{
+  "attempts": {
+    "01": [
+      "analysis_before_float64_tolerance.py",
+      "analysis_tests_attempt01.py"
+    ],
+    "02": [
+      "analysis_before_float64_tolerance.py",
+      "analysis_tests_attempt02_03.py"
+    ],
+    "03": [
+      "analysis_source_attempt03.py",
+      "analysis_tests_attempt02_03.py"
+    ]
+  },
+  "files": {
+    "analysis_before_float64_tolerance.py": {
+      "bytes": 52283,
+      "sha256": "22836e59dfa5d77dbfb2d1611213f9e6b817fa1ddc220df6fed97ed3fdb88e5d"
+    },
+    "analysis_source_attempt03.py": {
+      "bytes": 52699,
+      "sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05"
+    },
+    "analysis_tests_attempt01.py": {
+      "bytes": 15401,
+      "sha256": "03a779e28c8912399f77931770e3877ec0f3440490ad7060ad025203a8dab653"
+    },
+    "analysis_tests_attempt02_03.py": {
+      "bytes": 15689,
+      "sha256": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99"
+    }
+  },
+  "scope": "Exact source preimages matched to preserved attempt receipts; old bytes recovered by reversing the recorded local patch and accepted only after full SHA-256 equality. No test rerun."
+}

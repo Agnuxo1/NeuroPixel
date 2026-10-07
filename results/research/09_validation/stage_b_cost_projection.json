@@ -1,0 +1,97 @@
+{
+  "archive_commit": "8311c052796aeef5a52484b597cf5d9675ca315e",
+  "created_at_utc": "2026-10-07T08:02:02.312822+00:00",
+  "execution_window_seconds": 13620,
+  "explicit_allowances": {
+    "contract_tests_seconds": 900,
+    "data_source_and_setup_seconds": 300,
+    "final_stopped_archive_reserve_seconds": 180,
+    "intermediate_archival_seconds": 600,
+    "model_work_variation_factor": 2.0
+  },
+  "fits_declared_worker_limit_with_reserve": true,
+  "item": 9,
+  "kind": "prospective_operational_projection_not_measured_Stage_B",
+  "limitations": [
+    "Per-update elapsed includes run initialization and data/logging work; this is an admission proxy, not a kernel benchmark.",
+    "Endpoint overhead includes checkpoint saving and 1536-row probe plus validation; eightfold expansion to 12288 final rows is a planning approximation, not a measured final inference time.",
+    "The slower rate and larger overhead are used per family, without selecting favorable timing or changing hyperparameters.",
+    "The factor two and fixed allowances are declared operational margins, not statistical confidence bounds or guarantees.",
+    "Worker guards remain authoritative if available RAM falls below8GiB or the deadline is reached.",
+    "No final performance collection was generated or loaded for this estimate."
+  ],
+  "model_work_projection_seconds": 2084.339666629999,
+  "per_family": {
+    "neuropixel": {
+      "five_final_panel_proxy_seconds": 37.44826455999828,
+      "five_primary_run_projection_seconds": 1559.86594561,
+      "larger_pilot_endpoint_overhead_proxy_seconds": 0.936206613999957,
+      "slower_pilot_seconds_per_update": 0.0759367633076172
+    },
+    "relative_transformer": {
+      "five_final_panel_proxy_seconds": 12.891920960000789,
+      "five_primary_run_projection_seconds": 474.1335355000001,
+      "larger_pilot_endpoint_overhead_proxy_seconds": 0.3222980240000197,
+      "slower_pilot_seconds_per_update": 0.023072365497070313
+    }
+  },
+  "performance_data_recount_pending": true,
+  "pilot_cost_inputs": [
+    {
+      "endpoint_checkpoint_overhead_proxy_seconds": 0.9249510889999897,
+      "family": "neuropixel",
+      "last_training_elapsed_seconds": 77.75924562700001,
+      "learning_rate": 0.001,
+      "log_sha256": "6f866eea2ac350e7a412bbd273854c9c4c9f515d5116464663b5b4e493ed5f51",
+      "run_id": "pilot_neuropixel_lr0p001",
+      "total_run_seconds": 78.684196716,
+      "training_seconds_per_update_including_run_start": 0.0759367633076172,
+      "updates": 1024
+    },
+    {
+      "endpoint_checkpoint_overhead_proxy_seconds": 0.936206613999957,
+      "family": "neuropixel",
+      "last_training_elapsed_seconds": 76.65818897500003,
+      "learning_rate": 0.003,
+      "log_sha256": "5bddb209a3d15365e551fdaa49d8b1279359474a520d6c5ce67f5ed167733531",
+      "run_id": "pilot_neuropixel_lr0p003",
+      "total_run_seconds": 77.59439558899999,
+      "training_seconds_per_update_including_run_start": 0.07486151267089847,
+      "updates": 1024
+    },
+    {
+      "endpoint_checkpoint_overhead_proxy_seconds": 0.31369652500001166,
+      "family": "relative_transformer",
+      "last_training_elapsed_seconds": 23.274190970000006,
+      "learning_rate": 0.001,
+      "log_sha256": "d14403f65bf341acb91667c7ef26aa72e76193a128afc89036de36118444ece6",
+      "run_id": "pilot_relative_transformer_lr0p001",
+      "total_run_seconds": 23.587887495000018,
+      "training_seconds_per_update_including_run_start": 0.02272870211914063,
+      "updates": 1024
+    },
+    {
+      "endpoint_checkpoint_overhead_proxy_seconds": 0.3222980240000197,
+      "family": "relative_transformer",
+      "last_training_elapsed_seconds": 23.626102269,
+      "learning_rate": 0.003,
+      "log_sha256": "614bc8ed0b6503e265435eeca2d15e27f7c6f835cd283bc260152ff34532e17d",
+      "run_id": "pilot_relative_transformer_lr0p003",
+      "total_run_seconds": 23.94840029300002,
+      "training_seconds_per_update_including_run_start": 0.023072365497070313,
+      "updates": 1024
+    }
+  ],
+  "primary_inventory": {
+    "families": 2,
+    "final_nominal_query_rows": 122880,
+    "realizations_per_family": 5,
+    "total_optimizer_updates": 40960,
+    "updates_per_run": 4096
+  },
+  "schema_version": 1,
+  "scientific_recipe_changed": false,
+  "source_commit": "e63764ccb924ab23d65c2deb94b477387d102c82",
+  "total_planning_projection_seconds": 6148.679333259998,
+  "worker_limit_seconds": 13800
+}

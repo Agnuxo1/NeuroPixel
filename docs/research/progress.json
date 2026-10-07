@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T07:45:55.891523+00:00",
+  "recorded_at": "2026-10-07T08:22:31.852462+00:00",
   "active_item": 9,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -350,7 +350,7 @@
     "resource_release": "Owned local audits completed and GitHub job112670244618 completed successfully; no item-8 numerical task remains."
   },
   "item9": {
-    "stage": "Stage A frozen for first pinned CPU execution",
+    "stage": "Stage A audited; Stage B admitted and prospectively frozen, awaiting source publication",
     "opened_after_item8_closure_commit": "6b2f2554b56c3ac2d7811ea4f6732befd7a93817",
     "scope": "Complex role binding with explicit queries, multiple competing events and controlled transformations. Audit representational feasibility and shortcuts, implement bounded diagnostics, freeze study before performance results, retain all conditions and limits.",
     "historical_H1": "Closed; not supported; no retrospective replacement.",
@@ -365,6 +365,49 @@
       "failed": 0
     },
     "preflight_training_runs": 6,
-    "final_performance_access_permitted_in_preflight": false
+    "final_performance_access_permitted_in_preflight": false,
+    "preflight_source_commit": "e63764ccb924ab23d65c2deb94b477387d102c82",
+    "preflight_archive_commit": "8311c052796aeef5a52484b597cf5d9675ca315e",
+    "preflight_run_id": 37589908205,
+    "preflight_job_id": 112688648396,
+    "preflight_cloud_tests": {
+      "collected": 34,
+      "passed": 34,
+      "skipped": 0,
+      "failed": 0,
+      "junit_suite_counter": 137
+    },
+    "preflight_worker_seconds": 327.752899868,
+    "preflight_runner_released": true,
+    "stage_b_admitted": true,
+    "stage_b_freeze_utc": "2026-10-07T08:22:31.852462+00:00",
+    "stage_b_plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+    "stage_b_implementation_files": 83,
+    "stage_a_evidence_receipt_sha256": "a1d53e0b064e812317d93e6e8749bae4728730fecfbf359edf0249f2a72f6ee4",
+    "selected_learning_rates": {
+      "neuropixel": 0.001,
+      "relative_transformer": 0.003
+    },
+    "preflight_scientific_audit": {
+      "checks": 138074,
+      "issues": 0
+    },
+    "preflight_archive_audit": {
+      "checks": 861,
+      "issues": 0
+    },
+    "independent_analysis_tests": {
+      "passed": 19,
+      "failed": 0,
+      "earlier_failed_attempt_preserved": true
+    },
+    "offline_analysis_runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "stage_b_expected_runs": 10,
+    "stage_b_updates_per_run": 4096,
+    "stage_b_final_performance_generated": false
   }
 }

@@ -1,0 +1,93 @@
+{
+  "api_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37589908205/jobs",
+  "archive_commit": "8311c052796aeef5a52484b597cf5d9675ca315e",
+  "item": 9,
+  "jobs": [
+    {
+      "conclusion": "success",
+      "id": 112688648396,
+      "logs_url": null,
+      "name": "prospective-preflight",
+      "run_id": 37589908205,
+      "status": "completed",
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Reserve bounded shutdown before the workflow timeout",
+          "number": 2,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Check out the isolated frozen source",
+          "number": 3,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Set up the declared Python version",
+          "number": 4,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install the declared CPU-only Torch release",
+          "number": 5,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install fixed research dependencies",
+          "number": 6,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run contract tests and declared development-only preflight",
+          "number": 7,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Set up the declared Python version",
+          "number": 13,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Check out the isolated frozen source",
+          "number": 14,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "receipt_serialization_attempts": [
+    {
+      "attempt": 1,
+      "cause": "Serialized JSON pasted as Python expression instead of parsed JSON string; no receipt file or scientific execution affected.",
+      "error": "NameError: name 'null' is not defined",
+      "status": "tooling_error"
+    },
+    {
+      "attempt": 2,
+      "status": "saved"
+    }
+  ],
+  "retrieved_utc": "2026-10-07T07:59:52.602331+00:00",
+  "run_id": 37589908205,
+  "schema_version": 1,
+  "source_commit": "e63764ccb924ab23d65c2deb94b477387d102c82"
+}

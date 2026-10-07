@@ -1,0 +1,48 @@
+{
+  "attempt": 1,
+  "available_ram_gib_at_admission": 9.115287780761719,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_complex_binding_audit.py",
+    "-v"
+  ],
+  "completed_at_utc": "2026-10-07T08:07:58.946838+00:00",
+  "elapsed_seconds": 1.6741341199995077,
+  "exit_code": 0,
+  "failures_preserved": false,
+  "item": 9,
+  "runtime": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "schema_version": 1,
+  "scope": "synthetic/manual saved-artifact and statistical unit tests; excluded manual bag only; no performance populations, model or Torch imports",
+  "source_sha256_after": {
+    "scripts/research_complex_binding_audit.py": "22836e59dfa5d77dbfb2d1611213f9e6b817fa1ddc220df6fed97ed3fdb88e5d",
+    "tests/test_complex_binding_audit.py": "03a779e28c8912399f77931770e3877ec0f3440490ad7060ad025203a8dab653"
+  },
+  "source_sha256_before": {
+    "scripts/research_complex_binding_audit.py": "22836e59dfa5d77dbfb2d1611213f9e6b817fa1ddc220df6fed97ed3fdb88e5d",
+    "tests/test_complex_binding_audit.py": "03a779e28c8912399f77931770e3877ec0f3440490ad7060ad025203a8dab653"
+  },
+  "started_at_utc": "2026-10-07T08:07:57.272709+00:00",
+  "status": "passed",
+  "stdout": {
+    "path": "results/research/09_validation/analysis_test_attempt01.log",
+    "sha256": "ab12acbcaa9b63eb0289f97b8db22743e66d5222e0647c790ab60d755fed0b91"
+  },
+  "test_count": 18,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

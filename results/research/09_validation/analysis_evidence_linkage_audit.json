@@ -1,0 +1,28 @@
+{
+  "attempts": {
+    "01": {
+      "count": 18,
+      "exit_code": 0,
+      "sha256": "04c42d920bd290ed58c1c0ba183b1606937b6624dfa843e68ba39a3f7205eca1",
+      "status": "passed"
+    },
+    "02": {
+      "count": 19,
+      "exit_code": 1,
+      "sha256": "998d05c0511d65cfb4edb529273f33e16017fc5047f0035d862ba5dda3286d01",
+      "status": "failed"
+    },
+    "03": {
+      "count": 19,
+      "exit_code": 0,
+      "sha256": "af4a257c3b4ddc2dabbfd2160ea156444215c1f4f5e6c92d9e1fb93e0975b43e",
+      "status": "passed"
+    }
+  },
+  "current_analyzer_matches_passed_attempt": true,
+  "item": 9,
+  "schema_version": 1,
+  "scope": "Root verifies exact source and log linkage of the three saved synthetic-analysis validation attempts; no test or numerical reexecution.",
+  "source_preimages_verified": 4,
+  "status": "verified"
+}

@@ -1,0 +1,29 @@
+{
+  "analysis_source_matches_passing_attempt03": true,
+  "bound_files_checked": 83,
+  "cloud_test_methods_ast": 34,
+  "execution": "Only existing pure worker plan-validation functions and file/AST checks; no model, training, inference, RNG, test or final-data generation.",
+  "item": 9,
+  "offline_analysis_runtime": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+  "schema_version": 1,
+  "source_base_commit": "e63764ccb924ab23d65c2deb94b477387d102c82",
+  "stage_a_bindings_unchanged": 49,
+  "stage_a_original_objects_and_byte_hashes_match": true,
+  "status": "verified",
+  "tooling_attempts": [
+    {
+      "attempt": 1,
+      "result": "AssertionError before receipt output; the ad hoc checker used nonexistent raw subfolder preflight instead of the actual study subfolder. Earlier plan/hash/AST checks had passed. No experiment or bound source changed."
+    },
+    {
+      "attempt": 2,
+      "result": "Verified against the observed study subfolder."
+    }
+  ],
+  "verified_at_utc": "2026-10-07T08:23:37.133084+00:00"
+}

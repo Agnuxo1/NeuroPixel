@@ -1,0 +1,48 @@
+{
+  "attempt": 2,
+  "available_ram_gib_at_admission": 9.10654067993164,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_complex_binding_audit.py",
+    "-v"
+  ],
+  "completed_at_utc": "2026-10-07T08:08:46.168805+00:00",
+  "elapsed_seconds": 0.6973337100025674,
+  "exit_code": 1,
+  "failures_preserved": true,
+  "item": 9,
+  "runtime": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "schema_version": 1,
+  "scope": "synthetic regressions; new fail-before witness requires stricter float64 NLL tolerance than the old float32 logit tolerance; no model or performance examples",
+  "source_sha256_after": {
+    "scripts/research_complex_binding_audit.py": "22836e59dfa5d77dbfb2d1611213f9e6b817fa1ddc220df6fed97ed3fdb88e5d",
+    "tests/test_complex_binding_audit.py": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99"
+  },
+  "source_sha256_before": {
+    "scripts/research_complex_binding_audit.py": "22836e59dfa5d77dbfb2d1611213f9e6b817fa1ddc220df6fed97ed3fdb88e5d",
+    "tests/test_complex_binding_audit.py": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99"
+  },
+  "started_at_utc": "2026-10-07T08:08:45.471477+00:00",
+  "status": "failed",
+  "stdout": {
+    "path": "results/research/09_validation/analysis_test_attempt02.log",
+    "sha256": "3828b1f7316e301b7e91ec7b919ed100a730fdfabac66baf743611f588e8f3d3"
+  },
+  "test_count": 19,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "attempt": 3,
+  "available_ram_gib_at_admission": 9.080097198486328,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_complex_binding_audit.py",
+    "-v"
+  ],
+  "completed_at_utc": "2026-10-07T08:09:21.315822+00:00",
+  "elapsed_seconds": 0.7082849889993668,
+  "exit_code": 0,
+  "failures_preserved": false,
+  "item": 9,
+  "runtime": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "schema_version": 1,
+  "scope": "synthetic regressions after separating double NLL/CE tolerance from float32 duplicate-logit tolerance; no model or performance examples",
+  "source_sha256_after": {
+    "scripts/research_complex_binding_audit.py": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+    "tests/test_complex_binding_audit.py": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99"
+  },
+  "source_sha256_before": {
+    "scripts/research_complex_binding_audit.py": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+    "tests/test_complex_binding_audit.py": "4929c8914653063a7e9a1e9a6c26ee331c12c76a78bf8d657998610ad75a7f99"
+  },
+  "started_at_utc": "2026-10-07T08:09:20.607541+00:00",
+  "status": "passed",
+  "stdout": {
+    "path": "results/research/09_validation/analysis_test_attempt03.log",
+    "sha256": "54a24a88b0e910961b17fbae5219e15ad90d78690d1468c7ff9abf9353829204"
+  },
+  "test_count": 19,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

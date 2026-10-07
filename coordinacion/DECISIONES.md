@@ -65,3 +65,8 @@ Adopt the reviewed two-event grouped diagnostic and the fixed Stage-A selection 
 ## 2026-10-07T07:45:55.891523+00:00 — SCI-009 Stage A frozen
 
 Root freezes09_preflight_plan.json, SHA256 7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04, binding49 source/recipe/review/evidence files and34 collected test cases. Reviews have no unresolved blocker in the frozen scientific or operational source. The new35-to37-token task uses the corrected core directly. The declared contract tests precede two bounded memorization diagnostics and all four development pilots; zero skipped tests are permitted in the pinned CPU runtime. No Stage-B training or final performance evaluation is launched by this plan. All prior evidence and failure boundaries remain preserved. H1 remains not supported; items10–30 remain pending.
+
+
+## 2026-10-07T08:22:31.852462+00:00 — SCI-009 Stage B admitted for prospective freeze
+
+The reviewed Stage-A evidence is complete: two successful 32-row memorization diagnostics and four finite development pilots, 34 collected cloud tests passed without skips, 138,074 independent scientific checks and 861 archive checks with zero issues. Admit the unchanged ten-run, 4,096-update Stage-B inventory under the separate bounded resource reservation. The frozen validation-binding priority selects NeuroPixel LR 0.001 and RelativeTransformer LR 0.003; neither lower cross-entropy at the other rate nor runtime changes this rule. The complete source-linked handoff receipt, analysis source, 19 passing analysis tests, preserved earlier analysis failure and exact offline Python/NumPy/SciPy runtime will be bound before final data exist. Items 10–30 remain pending; H1 remains closed and not supported. No response is requested.

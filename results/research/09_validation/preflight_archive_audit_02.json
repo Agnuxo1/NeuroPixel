@@ -1,0 +1,2773 @@
+{
+  "archive_bytes_excluding_manifest": 12802302,
+  "archive_commit": "8311c052796aeef5a52484b597cf5d9675ca315e",
+  "archive_files_excluding_manifest": 71,
+  "archive_manifest_sha256": "826631eb010cab6b0753969485f7d0ecb03514dc058db895b02f91f3b952f874",
+  "audited_at_utc": "2026-10-07T08:00:54.268862+00:00",
+  "auditor_sha256": "db383542069ed66570acb2589129bc828e2cc8060ac2fc50c02ebc0822b883db",
+  "checks": {
+    "all_raw_files_bound": true,
+    "all_recorded_ram_above_floor": true,
+    "environment:contract_tests:0": true,
+    "environment:contract_tests:1": true,
+    "environment:preflight:0": true,
+    "environment:preflight:1": true,
+    "environment_boundaries:contract_tests": true,
+    "environment_boundaries:preflight": true,
+    "environment_issues:contract_tests": true,
+    "environment_issues:preflight": true,
+    "final_archive": true,
+    "freeze_before_worker": true,
+    "manifest_file:contract_tests.log": true,
+    "manifest_file:contract_tests_environment.json": true,
+    "manifest_file:contract_tests_resource_monitor.json": true,
+    "manifest_file:contract_tests_status.json": true,
+    "manifest_file:execution_plan.json": true,
+    "manifest_file:experiment_recipe.json": true,
+    "manifest_file:preflight.log": true,
+    "manifest_file:preflight_environment.json": true,
+    "manifest_file:preflight_resource_monitor.json": true,
+    "manifest_file:preflight_status.json": true,
+    "manifest_file:source.zip": true,
+    "manifest_file:source_after.json": true,
+    "manifest_file:source_before.json": true,
+    "manifest_file:study/context.json": true,
+    "manifest_file:study/development_controls.npz": true,
+    "manifest_file:study/development_data/fixture_exposure.json": true,
+    "manifest_file:study/development_data/manifest.json": true,
+    "manifest_file:study/development_data/memorization.npz": true,
+    "manifest_file:study/development_data/memorization_scenarios.json.gz": true,
+    "manifest_file:study/development_data/probe.npz": true,
+    "manifest_file:study/development_data/probe_scenarios.json.gz": true,
+    "manifest_file:study/development_data/train_scenarios.json.gz": true,
+    "manifest_file:study/development_data/validation.npz": true,
+    "manifest_file:study/development_data/validation_scenarios.json.gz": true,
+    "manifest_file:study/pilot_selection.json": true,
+    "manifest_file:study/preflight_completed.json": true,
+    "manifest_file:study/preflight_runs.json": true,
+    "manifest_file:study/preflight_started.json": true,
+    "manifest_file:study/runs/memorization_neuropixel/checkpoint.pt": true,
+    "manifest_file:study/runs/memorization_neuropixel/configuration.json": true,
+    "manifest_file:study/runs/memorization_neuropixel/memorization_predictions.npz": true,
+    "manifest_file:study/runs/memorization_neuropixel/run.json": true,
+    "manifest_file:study/runs/memorization_neuropixel/started.json": true,
+    "manifest_file:study/runs/memorization_neuropixel/training.jsonl": true,
+    "manifest_file:study/runs/memorization_relative_transformer/checkpoint.pt": true,
+    "manifest_file:study/runs/memorization_relative_transformer/configuration.json": true,
+    "manifest_file:study/runs/memorization_relative_transformer/memorization_predictions.npz": true,
+    "manifest_file:study/runs/memorization_relative_transformer/run.json": true,
+    "manifest_file:study/runs/memorization_relative_transformer/started.json": true,
+    "manifest_file:study/runs/memorization_relative_transformer/training.jsonl": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/checkpoint.pt": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/configuration.json": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/probe_predictions.npz": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/run.json": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/started.json": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/training.jsonl": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p001/validation_predictions.npz": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/checkpoint.pt": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/configuration.json": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/probe_predictions.npz": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/run.json": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/started.json": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/training.jsonl": true,
+    "manifest_file:study/runs/pilot_neuropixel_lr0p003/validation_predictions.npz": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/checkpoint.pt": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/configuration.json": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/probe_predictions.npz": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/run.json": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/started.json": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/training.jsonl": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p001/validation_predictions.npz": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/checkpoint.pt": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/configuration.json": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/probe_predictions.npz": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/run.json": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/started.json": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/training.jsonl": true,
+    "manifest_file:study/runs/pilot_relative_transformer_lr0p003/validation_predictions.npz": true,
+    "manifest_file:test_collection.json": true,
+    "manifest_file:tests.xml": true,
+    "manifest_file:worker_status.json": true,
+    "manifest_mapping": true,
+    "manifest_run_key": true,
+    "manifest_source": true,
+    "no_final_performance_artifacts": true,
+    "plan_exact_source_copy": true,
+    "plan_phase": true,
+    "raw_clean": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/archive_manifest.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/contract_tests.log": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/contract_tests_environment.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/contract_tests_resource_monitor.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/contract_tests_status.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/execution_plan.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/experiment_recipe.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/preflight.log": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/preflight_environment.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/preflight_resource_monitor.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/preflight_status.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/source.zip": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/source_after.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/source_before.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/context.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_controls.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/fixture_exposure.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/manifest.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/memorization.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/memorization_scenarios.json.gz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/probe.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/probe_scenarios.json.gz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/train_scenarios.json.gz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/validation.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/development_data/validation_scenarios.json.gz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/pilot_selection.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/preflight_completed.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/preflight_runs.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/preflight_started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_neuropixel/checkpoint.pt": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_neuropixel/configuration.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_neuropixel/memorization_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_neuropixel/run.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_neuropixel/started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_neuropixel/training.jsonl": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_relative_transformer/checkpoint.pt": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_relative_transformer/configuration.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_relative_transformer/memorization_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_relative_transformer/run.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_relative_transformer/started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/memorization_relative_transformer/training.jsonl": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/checkpoint.pt": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/configuration.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/probe_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/run.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/training.jsonl": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p001/validation_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/checkpoint.pt": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/configuration.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/probe_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/run.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/training.jsonl": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_neuropixel_lr0p003/validation_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/checkpoint.pt": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/configuration.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/probe_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/run.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/training.jsonl": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p001/validation_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/checkpoint.pt": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/configuration.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/probe_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/run.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/started.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/training.jsonl": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/study/runs/pilot_relative_transformer_lr0p003/validation_predictions.npz": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/test_collection.json": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/tests.xml": true,
+    "raw_git_blob:results/research/09_cloud_runs/37589908205-1-preflight/worker_status.json": true,
+    "raw_git_complete": true,
+    "raw_head": true,
+    "recipe_identity": true,
+    "resource_monitor:contract_tests": true,
+    "resource_monitor:preflight": true,
+    "source_binding:.github/workflows/research-item9-preflight.yml": true,
+    "source_binding:.github/workflows/research-item9-study.yml": true,
+    "source_binding:docs/research/09_data_contract.md": true,
+    "source_binding:docs/research/09_execution_design.md": true,
+    "source_binding:docs/research/09_experiment_recipe.json": true,
+    "source_binding:docs/research/09_methodological_evidence.md": true,
+    "source_binding:docs/research/09_protocol.md": true,
+    "source_binding:docs/research/09_representation_audit.md": true,
+    "source_binding:docs/research/09_trainer_review.md": true,
+    "source_binding:docs/research/09_worker_audit.md": true,
+    "source_binding:docs/research/09_worker_review.md": true,
+    "source_binding:neuropixel/__init__.py": true,
+    "source_binding:neuropixel/cartilla.py": true,
+    "source_binding:neuropixel/codec.py": true,
+    "source_binding:neuropixel/hrr.py": true,
+    "source_binding:neuropixel/model.py": true,
+    "source_binding:neuropixel/phase3.py": true,
+    "source_binding:neuropixel/research/ablations.py": true,
+    "source_binding:neuropixel/research/classification_contracts.py": true,
+    "source_binding:neuropixel/research/complex_binding_data.py": true,
+    "source_binding:neuropixel/research/complex_binding_metrics.py": true,
+    "source_binding:neuropixel/research/complex_binding_protocol.py": true,
+    "source_binding:neuropixel/research/data.py": true,
+    "source_binding:neuropixel/research/development_data.py": true,
+    "source_binding:neuropixel/research/experiment.py": true,
+    "source_binding:neuropixel/research/growth_ablation.py": true,
+    "source_binding:neuropixel/research/models.py": true,
+    "source_binding:neuropixel/research/routing_metrics.py": true,
+    "source_binding:neuropixel/research/split_governance.py": true,
+    "source_binding:neuropixel/safety.py": true,
+    "source_binding:neuropixel/scanner.py": true,
+    "source_binding:neuropixel/task.py": true,
+    "source_binding:pytest.ini": true,
+    "source_binding:requirements/research-cloud.txt": true,
+    "source_binding:results/research/09_validation/complex_binding_data_test_01.json": true,
+    "source_binding:results/research/09_validation/complex_binding_data_test_01.log": true,
+    "source_binding:results/research/09_validation/complex_binding_fixture_exposure.json": true,
+    "source_binding:results/research/09_validation/complex_binding_protocol_test_01.json": true,
+    "source_binding:results/research/09_validation/complex_binding_protocol_test_01.log": true,
+    "source_binding:results/research/09_validation/complex_binding_protocol_test_02.json": true,
+    "source_binding:results/research/09_validation/complex_binding_protocol_test_02.log": true,
+    "source_binding:results/research/09_validation/protocol_attempt01_source_recovery.json": true,
+    "source_binding:results/research/09_validation/protocol_gate_attempt01.py": true,
+    "source_binding:results/research/09_validation/protocol_tests_attempt01.py": true,
+    "source_binding:results/research/09_validation/trainer_attempt01.py": true,
+    "source_binding:scripts/research_complex_binding.py": true,
+    "source_binding:scripts/research_item9_worker.py": true,
+    "source_binding:tests/test_complex_binding_data.py": true,
+    "source_binding:tests/test_complex_binding_protocol.py": true,
+    "source_blob:.github/workflows/research-item6.yml": true,
+    "source_blob:.github/workflows/research-item7.yml": true,
+    "source_blob:.github/workflows/research-item8.yml": true,
+    "source_blob:.github/workflows/research-item9-preflight.yml": true,
+    "source_blob:.github/workflows/research-item9-study.yml": true,
+    "source_blob:.gitignore": true,
+    "source_blob:AGENTS.md": true,
+    "source_blob:CLAUDE.md": true,
+    "source_blob:LICENSE": true,
+    "source_blob:README.md": true,
+    "source_blob:ROADMAP.md": true,
+    "source_blob:coordinacion/COLA-DE-TRABAJO.md": true,
+    "source_blob:coordinacion/DECISIONES.md": true,
+    "source_blob:coordinacion/PROMPT-CLAUDE.md": true,
+    "source_blob:coordinacion/README.md": true,
+    "source_blob:coordinacion/RECURSOS.md": true,
+    "source_blob:coordinacion/TABLON.md": true,
+    "source_blob:coordinacion/THINKTANK.md": true,
+    "source_blob:docs/FASE3_CONCLUSIONES.md": true,
+    "source_blob:docs/img/architecture.svg": true,
+    "source_blob:docs/img/banner.png": true,
+    "source_blob:docs/img/capabilities_en.png": true,
+    "source_blob:docs/img/scaling_en.png": true,
+    "source_blob:docs/img/scanner_cartilla.png": true,
+    "source_blob:docs/img/scanner_roles.png": true,
+    "source_blob:docs/img/thinking.gif": true,
+    "source_blob:docs/research/01_mechanism_specification.md": true,
+    "source_blob:docs/research/02_protocol.md": true,
+    "source_blob:docs/research/05_results_recovered_20261007.md": true,
+    "source_blob:docs/research/06_core_inventory.json": true,
+    "source_blob:docs/research/06_execution_plan.json": true,
+    "source_blob:docs/research/06_growth_inventory.json": true,
+    "source_blob:docs/research/06_protocol_amendment.md": true,
+    "source_blob:docs/research/06_recovery_manifest.json": true,
+    "source_blob:docs/research/06_results.md": true,
+    "source_blob:docs/research/06_results_tables.md": true,
+    "source_blob:docs/research/07_adoption.md": true,
+    "source_blob:docs/research/07_cloud_export_plan.json": true,
+    "source_blob:docs/research/07_execution_plan.json": true,
+    "source_blob:docs/research/07_gate_source_audit.md": true,
+    "source_blob:docs/research/07_methodological_evidence.md": true,
+    "source_blob:docs/research/07_protocol.md": true,
+    "source_blob:docs/research/07_results.md": true,
+    "source_blob:docs/research/08_classification_audit.md": true,
+    "source_blob:docs/research/08_cloud_validation_plan.json": true,
+    "source_blob:docs/research/08_padding_audit.md": true,
+    "source_blob:docs/research/08_padding_derivation.md": true,
+    "source_blob:docs/research/08_protocol.md": true,
+    "source_blob:docs/research/08_results.md": true,
+    "source_blob:docs/research/08_routing_audit.md": true,
+    "source_blob:docs/research/08_soil_audit.md": true,
+    "source_blob:docs/research/08_worker_audit.md": true,
+    "source_blob:docs/research/09_data_contract.md": true,
+    "source_blob:docs/research/09_execution_design.md": true,
+    "source_blob:docs/research/09_experiment_recipe.json": true,
+    "source_blob:docs/research/09_methodological_evidence.md": true,
+    "source_blob:docs/research/09_preflight_plan.json": true,
+    "source_blob:docs/research/09_protocol.md": true,
+    "source_blob:docs/research/09_representation_audit.md": true,
+    "source_blob:docs/research/09_trainer_review.md": true,
+    "source_blob:docs/research/09_worker_audit.md": true,
+    "source_blob:docs/research/09_worker_review.md": true,
+    "source_blob:docs/research/progress.json": true,
+    "source_blob:docs/research/protocol.json": true,
+    "source_blob:kaggle/HISTORIAL.md": true,
+    "source_blob:kaggle/digits/COORDINACION.md": true,
+    "source_blob:kaggle/digits/train_digits.py": true,
+    "source_blob:kaggle/filament/COORDINACION.md": true,
+    "source_blob:kaggle/filament/ensemble_fil.py": true,
+    "source_blob:kaggle/filament/fil.py": true,
+    "source_blob:kaggle/filament/multiscale.py": true,
+    "source_blob:kaggle/filament/predict_fil.py": true,
+    "source_blob:kaggle/filament/train_fil.py": true,
+    "source_blob:kaggle/historial.jsonl": true,
+    "source_blob:kaggle/log_run.py": true,
+    "source_blob:kaggle/soil/COORDINACION.md": true,
+    "source_blob:kaggle/soil/evaluation.py": true,
+    "source_blob:kaggle/soil/soil.py": true,
+    "source_blob:neuropixel/__init__.py": true,
+    "source_blob:neuropixel/cartilla.py": true,
+    "source_blob:neuropixel/codec.py": true,
+    "source_blob:neuropixel/hrr.py": true,
+    "source_blob:neuropixel/model.py": true,
+    "source_blob:neuropixel/phase3.py": true,
+    "source_blob:neuropixel/research/ablations.py": true,
+    "source_blob:neuropixel/research/classification_contracts.py": true,
+    "source_blob:neuropixel/research/complex_binding_data.py": true,
+    "source_blob:neuropixel/research/complex_binding_metrics.py": true,
+    "source_blob:neuropixel/research/complex_binding_protocol.py": true,
+    "source_blob:neuropixel/research/data.py": true,
+    "source_blob:neuropixel/research/development_data.py": true,
+    "source_blob:neuropixel/research/experiment.py": true,
+    "source_blob:neuropixel/research/growth_ablation.py": true,
+    "source_blob:neuropixel/research/models.py": true,
+    "source_blob:neuropixel/research/routing_metrics.py": true,
+    "source_blob:neuropixel/research/split_governance.py": true,
+    "source_blob:neuropixel/safety.py": true,
+    "source_blob:neuropixel/scanner.py": true,
+    "source_blob:neuropixel/task.py": true,
+    "source_blob:pytest.ini": true,
+    "source_blob:requirements/research-cloud.txt": true,
+    "source_blob:results/battery/RESUMEN.md": true,
+    "source_blob:results/battery/results.json": true,
+    "source_blob:results/phase3/INFORME_FASE3.md": true,
+    "source_blob:results/phase3/dream.json": true,
+    "source_blob:results/phase3/energy_l0.3.json": true,
+    "source_blob:results/phase3/energy_l1.0.json": true,
+    "source_blob:results/phase3/energy_l3.0.json": true,
+    "source_blob:results/phase3/escala.png": true,
+    "source_blob:results/phase3/far_neuropixel_s0.json": true,
+    "source_blob:results/phase3/far_np_big_reposo_s0.json": true,
+    "source_blob:results/phase3/far_np_reposo_s0.json": true,
+    "source_blob:results/phase3/far_tf_big_s0.json": true,
+    "source_blob:results/phase3/far_tf_small_s0.json": true,
+    "source_blob:results/phase3/grow_grow.json": true,
+    "source_blob:results/phase3/grow_novedad.json": true,
+    "source_blob:results/phase3/grow_seq.json": true,
+    "source_blob:results/phase3/llm.json": true,
+    "source_blob:results/phase3/memory.json": true,
+    "source_blob:results/phase3/newword.json": true,
+    "source_blob:results/phase3/scale_np105k.json": true,
+    "source_blob:results/phase3/scale_np14k.json": true,
+    "source_blob:results/phase3/scale_np230k.json": true,
+    "source_blob:results/phase3/scale_np30k.json": true,
+    "source_blob:results/phase3/scale_np30k_s1.json": true,
+    "source_blob:results/phase3/scale_np5k.json": true,
+    "source_blob:results/phase3/scale_tf12k.json": true,
+    "source_blob:results/phase3/scale_tf170k.json": true,
+    "source_blob:results/phase3/scale_tf44k.json": true,
+    "source_blob:results/phase3/scale_tf44k_s1.json": true,
+    "source_blob:results/phase3/scale_tf800k.json": true,
+    "source_blob:results/phase3/stable_fijo16.json": true,
+    "source_blob:results/phase3/stable_reposo.json": true,
+    "source_blob:results/research/06_ci2_source_inventory.json": true,
+    "source_blob:results/research/06_ci_20261007_37563992665.json": true,
+    "source_blob:results/research/06_ci_20261007_37563992665_excerpt.log": true,
+    "source_blob:results/research/06_ci_20261007_37564586928.json": true,
+    "source_blob:results/research/06_ci_20261007_37564586928_excerpt.log": true,
+    "source_blob:results/research/06_ci_20261007_37566204008.json": true,
+    "source_blob:results/research/06_ci_20261007_37566204008_excerpt.log": true,
+    "source_blob:results/research/06_cloud_preflight.json": true,
+    "source_blob:results/research/06_local_supervision/item6-worker-supervision-first.xml": true,
+    "source_blob:results/research/06_local_supervision/item6-worker-v2-archive-corrected.xml": true,
+    "source_blob:results/research/06_local_supervision/item6-worker-v2-archive-test.xml": true,
+    "source_blob:results/research/06_local_supervision/receipt.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/budget_prefix_check.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/core/analysis_output_manifest.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/core/core_analysis.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/core/core_contrasts.csv": true,
+    "source_blob:results/research/06_root_review/37566497890-1/core/core_scores.csv": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures/06_core_paired_scores.pdf": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures/06_core_paired_scores.png": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures/06_growth_binding.pdf": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures/06_growth_binding.png": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures/06_plot_manifest.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures_final/06_core_paired_scores.pdf": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures_final/06_core_paired_scores.png": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures_final/06_growth_binding.pdf": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures_final/06_growth_binding.png": true,
+    "source_blob:results/research/06_root_review/37566497890-1/figures_final/06_plot_manifest.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/final_archive_audit.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/github_job_status.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/growth/06_growth_analysis.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/growth/06_growth_contrasts.csv": true,
+    "source_blob:results/research/06_root_review/37566497890-1/growth/06_growth_runs.csv": true,
+    "source_blob:results/research/06_root_review/37566497890-1/recount_comparison.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/report_review.json": true,
+    "source_blob:results/research/06_root_review/37566497890-1/review_operations.json": true,
+    "source_blob:results/research/06_root_review/budget_prefix_seed20_school0_partial.json": true,
+    "source_blob:results/research/06_root_review/interim_archive_e383200.json": true,
+    "source_blob:results/research/07_inputs/item6_growth_partitions.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/analysis.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/artifact_manifest.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/environment.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/events.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/final_counts.npz": true,
+    "source_blob:results/research/07_simulation/20261007_01/frozen_plan.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/methodological_evidence.md": true,
+    "source_blob:results/research/07_simulation/20261007_01/replicates.csv": true,
+    "source_blob:results/research/07_simulation/20261007_01/resource_observations.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/selection_counts.npz": true,
+    "source_blob:results/research/07_simulation/20261007_01/selection_receipt.json": true,
+    "source_blob:results/research/07_simulation/20261007_01/source_snapshot.py": true,
+    "source_blob:results/research/07_simulation/20261007_01_root_audit.json": true,
+    "source_blob:results/research/07_simulation/figures/layout_correction.json": true,
+    "source_blob:results/research/07_simulation/figures/render_01/research_plot_holdout_selection.py": true,
+    "source_blob:results/research/07_simulation/figures/render_01/selection_optimism.pdf": true,
+    "source_blob:results/research/07_simulation/figures/render_01/selection_optimism.png": true,
+    "source_blob:results/research/07_simulation/figures/render_01/selection_optimism.receipt.json": true,
+    "source_blob:results/research/07_simulation/figures/selection_optimism.pdf": true,
+    "source_blob:results/research/07_simulation/figures/selection_optimism.png": true,
+    "source_blob:results/research/07_simulation/figures/selection_optimism.receipt.json": true,
+    "source_blob:results/research/07_split_exposure.json": true,
+    "source_blob:results/research/07_validation/cloud_archive_audit.json": true,
+    "source_blob:results/research/07_validation/governance_corrected.log": true,
+    "source_blob:results/research/07_validation/governance_correction.json": true,
+    "source_blob:results/research/07_validation/governance_initial.log": true,
+    "source_blob:results/research/07_validation/governance_review.json": true,
+    "source_blob:results/research/07_validation/report_review.json": true,
+    "source_blob:results/research/07_validation/root_review.json": true,
+    "source_blob:results/research/07_validation/split_governance_initial.py": true,
+    "source_blob:results/research/07_validation/worker_review.json": true,
+    "source_blob:results/research/08_validation/archive_retrieval.json": true,
+    "source_blob:results/research/08_validation/classification_corrected.json": true,
+    "source_blob:results/research/08_validation/classification_corrected.log": true,
+    "source_blob:results/research/08_validation/classification_initial.json": true,
+    "source_blob:results/research/08_validation/classification_initial.log": true,
+    "source_blob:results/research/08_validation/classification_source_before.json": true,
+    "source_blob:results/research/08_validation/classification_source_original.py": true,
+    "source_blob:results/research/08_validation/cloud_archive_audit.json": true,
+    "source_blob:results/research/08_validation/cloud_retrieval.json": true,
+    "source_blob:results/research/08_validation/development_sampler_test_before.py": true,
+    "source_blob:results/research/08_validation/freeze_review.json": true,
+    "source_blob:results/research/08_validation/github_job_receipt.json": true,
+    "source_blob:results/research/08_validation/historical_ablation_test_before.py": true,
+    "source_blob:results/research/08_validation/historical_fixture_corrected.json": true,
+    "source_blob:results/research/08_validation/historical_fixture_initial.json": true,
+    "source_blob:results/research/08_validation/junit_reporting_audit.json": true,
+    "source_blob:results/research/08_validation/local_evidence_audit.json": true,
+    "source_blob:results/research/08_validation/padding_analytic_recount.json": true,
+    "source_blob:results/research/08_validation/padding_model_before.py": true,
+    "source_blob:results/research/08_validation/padding_source_before.json": true,
+    "source_blob:results/research/08_validation/padding_static_receipt.json": true,
+    "source_blob:results/research/08_validation/protocol_review.json": true,
+    "source_blob:results/research/08_validation/report_review.json": true,
+    "source_blob:results/research/08_validation/root_source_review.json": true,
+    "source_blob:results/research/08_validation/routing_corrected_run.json": true,
+    "source_blob:results/research/08_validation/routing_corrected_tests.log": true,
+    "source_blob:results/research/08_validation/routing_legacy_failure.json": true,
+    "source_blob:results/research/08_validation/routing_legacy_failure.log": true,
+    "source_blob:results/research/08_validation/routing_legacy_reproduction.py": true,
+    "source_blob:results/research/08_validation/routing_phase3_original.py": true,
+    "source_blob:results/research/08_validation/routing_source_snapshot.json": true,
+    "source_blob:results/research/08_validation/routing_validation.json": true,
+    "source_blob:results/research/08_validation/soil_corrected_tests_01.json": true,
+    "source_blob:results/research/08_validation/soil_corrected_tests_01.log": true,
+    "source_blob:results/research/08_validation/soil_corrected_tests_03.json": true,
+    "source_blob:results/research/08_validation/soil_corrected_tests_03.log": true,
+    "source_blob:results/research/08_validation/soil_final_inventory.json": true,
+    "source_blob:results/research/08_validation/soil_legacy_witness.json": true,
+    "source_blob:results/research/08_validation/soil_legacy_witness.log": true,
+    "source_blob:results/research/08_validation/soil_legacy_witness_source.py": true,
+    "source_blob:results/research/08_validation/soil_recovered_19_driver.py": true,
+    "source_blob:results/research/08_validation/soil_recovered_19_evaluation.py": true,
+    "source_blob:results/research/08_validation/soil_recovered_19_tests.py": true,
+    "source_blob:results/research/08_validation/soil_review_source_02.py": true,
+    "source_blob:results/research/08_validation/soil_review_tests_02.py": true,
+    "source_blob:results/research/08_validation/soil_review_witness_02.json": true,
+    "source_blob:results/research/08_validation/soil_review_witness_02.log": true,
+    "source_blob:results/research/08_validation/soil_source_original.json": true,
+    "source_blob:results/research/08_validation/soil_source_original.py": true,
+    "source_blob:results/research/09_validation/complex_binding_data_test_01.json": true,
+    "source_blob:results/research/09_validation/complex_binding_data_test_01.log": true,
+    "source_blob:results/research/09_validation/complex_binding_fixture_exposure.json": true,
+    "source_blob:results/research/09_validation/complex_binding_protocol_test_01.json": true,
+    "source_blob:results/research/09_validation/complex_binding_protocol_test_01.log": true,
+    "source_blob:results/research/09_validation/complex_binding_protocol_test_02.json": true,
+    "source_blob:results/research/09_validation/complex_binding_protocol_test_02.log": true,
+    "source_blob:results/research/09_validation/protocol_attempt01_source_recovery.json": true,
+    "source_blob:results/research/09_validation/protocol_gate_attempt01.py": true,
+    "source_blob:results/research/09_validation/protocol_tests_attempt01.py": true,
+    "source_blob:results/research/09_validation/trainer_attempt01.py": true,
+    "source_blob:scripts/__init__.py": true,
+    "source_blob:scripts/battery.py": true,
+    "source_blob:scripts/eval_roles.py": true,
+    "source_blob:scripts/make_readme_figures.py": true,
+    "source_blob:scripts/night.py": true,
+    "source_blob:scripts/phase3.py": true,
+    "source_blob:scripts/prepare_cifar.py": true,
+    "source_blob:scripts/report_phase3.py": true,
+    "source_blob:scripts/research_ablations.py": true,
+    "source_blob:scripts/research_analyze_core_ablation.py": true,
+    "source_blob:scripts/research_analyze_growth_ablation.py": true,
+    "source_blob:scripts/research_audit_split_exposure.py": true,
+    "source_blob:scripts/research_check_item6_inventory.py": true,
+    "source_blob:scripts/research_cloud_preflight.py": true,
+    "source_blob:scripts/research_compare_item6_recounts.py": true,
+    "source_blob:scripts/research_complex_binding.py": true,
+    "source_blob:scripts/research_export_split_pools.py": true,
+    "source_blob:scripts/research_growth_ablation.py": true,
+    "source_blob:scripts/research_item6_worker.py": true,
+    "source_blob:scripts/research_item7_worker.py": true,
+    "source_blob:scripts/research_item8_worker.py": true,
+    "source_blob:scripts/research_item9_worker.py": true,
+    "source_blob:scripts/research_plot_holdout_selection.py": true,
+    "source_blob:scripts/research_plot_item6.py": true,
+    "source_blob:scripts/research_render_item6_tables.py": true,
+    "source_blob:scripts/research_simulate_holdout_selection.py": true,
+    "source_blob:scripts/research_train.py": true,
+    "source_blob:scripts/research_verify_holdout_simulation.py": true,
+    "source_blob:scripts/research_verify_item6_archive.py": true,
+    "source_blob:scripts/research_verify_item7_cloud.py": true,
+    "source_blob:scripts/research_verify_item8_padding.py": true,
+    "source_blob:scripts/scan.py": true,
+    "source_blob:scripts/sweep.py": true,
+    "source_blob:scripts/train.py": true,
+    "source_blob:scripts/train_cartilla.py": true,
+    "source_blob:tests/test_classification_contracts.py": true,
+    "source_blob:tests/test_complex_binding_data.py": true,
+    "source_blob:tests/test_complex_binding_protocol.py": true,
+    "source_blob:tests/test_core.py": true,
+    "source_blob:tests/test_padding_invariant.py": true,
+    "source_blob:tests/test_research_ablations.py": true,
+    "source_blob:tests/test_research_analyze_core_ablation.py": true,
+    "source_blob:tests/test_research_analyze_growth_ablation.py": true,
+    "source_blob:tests/test_research_development_data.py": true,
+    "source_blob:tests/test_research_growth_ablation.py": true,
+    "source_blob:tests/test_research_item6_worker.py": true,
+    "source_blob:tests/test_research_item6_worker_supervision.py": true,
+    "source_blob:tests/test_research_split_governance.py": true,
+    "source_blob:tests/test_routing_metrics.py": true,
+    "source_blob:tests/test_soil_evaluation.py": true,
+    "source_clean": true,
+    "source_guard:after": true,
+    "source_guard:before": true,
+    "source_head": true,
+    "source_worktree:.github/workflows/research-item6.yml": true,
+    "source_worktree:.github/workflows/research-item7.yml": true,
+    "source_worktree:.github/workflows/research-item8.yml": true,
+    "source_worktree:.github/workflows/research-item9-preflight.yml": true,
+    "source_worktree:.github/workflows/research-item9-study.yml": true,
+    "source_worktree:.gitignore": true,
+    "source_worktree:AGENTS.md": true,
+    "source_worktree:CLAUDE.md": true,
+    "source_worktree:LICENSE": true,
+    "source_worktree:README.md": true,
+    "source_worktree:ROADMAP.md": true,
+    "source_worktree:coordinacion/COLA-DE-TRABAJO.md": true,
+    "source_worktree:coordinacion/DECISIONES.md": true,
+    "source_worktree:coordinacion/PROMPT-CLAUDE.md": true,
+    "source_worktree:coordinacion/README.md": true,
+    "source_worktree:coordinacion/RECURSOS.md": true,
+    "source_worktree:coordinacion/TABLON.md": true,
+    "source_worktree:coordinacion/THINKTANK.md": true,
+    "source_worktree:docs/FASE3_CONCLUSIONES.md": true,
+    "source_worktree:docs/img/architecture.svg": true,
+    "source_worktree:docs/img/banner.png": true,
+    "source_worktree:docs/img/capabilities_en.png": true,
+    "source_worktree:docs/img/scaling_en.png": true,
+    "source_worktree:docs/img/scanner_cartilla.png": true,
+    "source_worktree:docs/img/scanner_roles.png": true,
+    "source_worktree:docs/img/thinking.gif": true,
+    "source_worktree:docs/research/01_mechanism_specification.md": true,
+    "source_worktree:docs/research/02_protocol.md": true,
+    "source_worktree:docs/research/05_results_recovered_20261007.md": true,
+    "source_worktree:docs/research/06_core_inventory.json": true,
+    "source_worktree:docs/research/06_execution_plan.json": true,
+    "source_worktree:docs/research/06_growth_inventory.json": true,
+    "source_worktree:docs/research/06_protocol_amendment.md": true,
+    "source_worktree:docs/research/06_recovery_manifest.json": true,
+    "source_worktree:docs/research/06_results.md": true,
+    "source_worktree:docs/research/06_results_tables.md": true,
+    "source_worktree:docs/research/07_adoption.md": true,
+    "source_worktree:docs/research/07_cloud_export_plan.json": true,
+    "source_worktree:docs/research/07_execution_plan.json": true,
+    "source_worktree:docs/research/07_gate_source_audit.md": true,
+    "source_worktree:docs/research/07_methodological_evidence.md": true,
+    "source_worktree:docs/research/07_protocol.md": true,
+    "source_worktree:docs/research/07_results.md": true,
+    "source_worktree:docs/research/08_classification_audit.md": true,
+    "source_worktree:docs/research/08_cloud_validation_plan.json": true,
+    "source_worktree:docs/research/08_padding_audit.md": true,
+    "source_worktree:docs/research/08_padding_derivation.md": true,
+    "source_worktree:docs/research/08_protocol.md": true,
+    "source_worktree:docs/research/08_results.md": true,
+    "source_worktree:docs/research/08_routing_audit.md": true,
+    "source_worktree:docs/research/08_soil_audit.md": true,
+    "source_worktree:docs/research/08_worker_audit.md": true,
+    "source_worktree:docs/research/09_data_contract.md": true,
+    "source_worktree:docs/research/09_execution_design.md": true,
+    "source_worktree:docs/research/09_experiment_recipe.json": true,
+    "source_worktree:docs/research/09_methodological_evidence.md": true,
+    "source_worktree:docs/research/09_preflight_plan.json": true,
+    "source_worktree:docs/research/09_protocol.md": true,
+    "source_worktree:docs/research/09_representation_audit.md": true,
+    "source_worktree:docs/research/09_trainer_review.md": true,
+    "source_worktree:docs/research/09_worker_audit.md": true,
+    "source_worktree:docs/research/09_worker_review.md": true,
+    "source_worktree:docs/research/progress.json": true,
+    "source_worktree:docs/research/protocol.json": true,
+    "source_worktree:kaggle/HISTORIAL.md": true,
+    "source_worktree:kaggle/digits/COORDINACION.md": true,
+    "source_worktree:kaggle/digits/train_digits.py": true,
+    "source_worktree:kaggle/filament/COORDINACION.md": true,
+    "source_worktree:kaggle/filament/ensemble_fil.py": true,
+    "source_worktree:kaggle/filament/fil.py": true,
+    "source_worktree:kaggle/filament/multiscale.py": true,
+    "source_worktree:kaggle/filament/predict_fil.py": true,
+    "source_worktree:kaggle/filament/train_fil.py": true,
+    "source_worktree:kaggle/historial.jsonl": true,
+    "source_worktree:kaggle/log_run.py": true,
+    "source_worktree:kaggle/soil/COORDINACION.md": true,
+    "source_worktree:kaggle/soil/evaluation.py": true,
+    "source_worktree:kaggle/soil/soil.py": true,
+    "source_worktree:neuropixel/__init__.py": true,
+    "source_worktree:neuropixel/cartilla.py": true,
+    "source_worktree:neuropixel/codec.py": true,
+    "source_worktree:neuropixel/hrr.py": true,
+    "source_worktree:neuropixel/model.py": true,
+    "source_worktree:neuropixel/phase3.py": true,
+    "source_worktree:neuropixel/research/ablations.py": true,
+    "source_worktree:neuropixel/research/classification_contracts.py": true,
+    "source_worktree:neuropixel/research/complex_binding_data.py": true,
+    "source_worktree:neuropixel/research/complex_binding_metrics.py": true,
+    "source_worktree:neuropixel/research/complex_binding_protocol.py": true,
+    "source_worktree:neuropixel/research/data.py": true,
+    "source_worktree:neuropixel/research/development_data.py": true,
+    "source_worktree:neuropixel/research/experiment.py": true,
+    "source_worktree:neuropixel/research/growth_ablation.py": true,
+    "source_worktree:neuropixel/research/models.py": true,
+    "source_worktree:neuropixel/research/routing_metrics.py": true,
+    "source_worktree:neuropixel/research/split_governance.py": true,
+    "source_worktree:neuropixel/safety.py": true,
+    "source_worktree:neuropixel/scanner.py": true,
+    "source_worktree:neuropixel/task.py": true,
+    "source_worktree:pytest.ini": true,
+    "source_worktree:requirements/research-cloud.txt": true,
+    "source_worktree:results/battery/RESUMEN.md": true,
+    "source_worktree:results/battery/results.json": true,
+    "source_worktree:results/phase3/INFORME_FASE3.md": true,
+    "source_worktree:results/phase3/dream.json": true,
+    "source_worktree:results/phase3/energy_l0.3.json": true,
+    "source_worktree:results/phase3/energy_l1.0.json": true,
+    "source_worktree:results/phase3/energy_l3.0.json": true,
+    "source_worktree:results/phase3/escala.png": true,
+    "source_worktree:results/phase3/far_neuropixel_s0.json": true,
+    "source_worktree:results/phase3/far_np_big_reposo_s0.json": true,
+    "source_worktree:results/phase3/far_np_reposo_s0.json": true,
+    "source_worktree:results/phase3/far_tf_big_s0.json": true,
+    "source_worktree:results/phase3/far_tf_small_s0.json": true,
+    "source_worktree:results/phase3/grow_grow.json": true,
+    "source_worktree:results/phase3/grow_novedad.json": true,
+    "source_worktree:results/phase3/grow_seq.json": true,
+    "source_worktree:results/phase3/llm.json": true,
+    "source_worktree:results/phase3/memory.json": true,
+    "source_worktree:results/phase3/newword.json": true,
+    "source_worktree:results/phase3/scale_np105k.json": true,
+    "source_worktree:results/phase3/scale_np14k.json": true,
+    "source_worktree:results/phase3/scale_np230k.json": true,
+    "source_worktree:results/phase3/scale_np30k.json": true,
+    "source_worktree:results/phase3/scale_np30k_s1.json": true,
+    "source_worktree:results/phase3/scale_np5k.json": true,
+    "source_worktree:results/phase3/scale_tf12k.json": true,
+    "source_worktree:results/phase3/scale_tf170k.json": true,
+    "source_worktree:results/phase3/scale_tf44k.json": true,
+    "source_worktree:results/phase3/scale_tf44k_s1.json": true,
+    "source_worktree:results/phase3/scale_tf800k.json": true,
+    "source_worktree:results/phase3/stable_fijo16.json": true,
+    "source_worktree:results/phase3/stable_reposo.json": true,
+    "source_worktree:results/research/06_ci2_source_inventory.json": true,
+    "source_worktree:results/research/06_ci_20261007_37563992665.json": true,
+    "source_worktree:results/research/06_ci_20261007_37563992665_excerpt.log": true,
+    "source_worktree:results/research/06_ci_20261007_37564586928.json": true,
+    "source_worktree:results/research/06_ci_20261007_37564586928_excerpt.log": true,
+    "source_worktree:results/research/06_ci_20261007_37566204008.json": true,
+    "source_worktree:results/research/06_ci_20261007_37566204008_excerpt.log": true,
+    "source_worktree:results/research/06_cloud_preflight.json": true,
+    "source_worktree:results/research/06_local_supervision/item6-worker-supervision-first.xml": true,
+    "source_worktree:results/research/06_local_supervision/item6-worker-v2-archive-corrected.xml": true,
+    "source_worktree:results/research/06_local_supervision/item6-worker-v2-archive-test.xml": true,
+    "source_worktree:results/research/06_local_supervision/receipt.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/budget_prefix_check.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/core/analysis_output_manifest.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/core/core_analysis.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/core/core_contrasts.csv": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/core/core_scores.csv": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures/06_core_paired_scores.pdf": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures/06_core_paired_scores.png": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures/06_growth_binding.pdf": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures/06_growth_binding.png": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures/06_plot_manifest.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures_final/06_core_paired_scores.pdf": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures_final/06_core_paired_scores.png": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures_final/06_growth_binding.pdf": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures_final/06_growth_binding.png": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/figures_final/06_plot_manifest.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/final_archive_audit.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/github_job_status.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/growth/06_growth_analysis.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/growth/06_growth_contrasts.csv": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/growth/06_growth_runs.csv": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/recount_comparison.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/report_review.json": true,
+    "source_worktree:results/research/06_root_review/37566497890-1/review_operations.json": true,
+    "source_worktree:results/research/06_root_review/budget_prefix_seed20_school0_partial.json": true,
+    "source_worktree:results/research/06_root_review/interim_archive_e383200.json": true,
+    "source_worktree:results/research/07_inputs/item6_growth_partitions.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/analysis.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/artifact_manifest.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/environment.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/events.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/final_counts.npz": true,
+    "source_worktree:results/research/07_simulation/20261007_01/frozen_plan.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/methodological_evidence.md": true,
+    "source_worktree:results/research/07_simulation/20261007_01/replicates.csv": true,
+    "source_worktree:results/research/07_simulation/20261007_01/resource_observations.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/selection_counts.npz": true,
+    "source_worktree:results/research/07_simulation/20261007_01/selection_receipt.json": true,
+    "source_worktree:results/research/07_simulation/20261007_01/source_snapshot.py": true,
+    "source_worktree:results/research/07_simulation/20261007_01_root_audit.json": true,
+    "source_worktree:results/research/07_simulation/figures/layout_correction.json": true,
+    "source_worktree:results/research/07_simulation/figures/render_01/research_plot_holdout_selection.py": true,
+    "source_worktree:results/research/07_simulation/figures/render_01/selection_optimism.pdf": true,
+    "source_worktree:results/research/07_simulation/figures/render_01/selection_optimism.png": true,
+    "source_worktree:results/research/07_simulation/figures/render_01/selection_optimism.receipt.json": true,
+    "source_worktree:results/research/07_simulation/figures/selection_optimism.pdf": true,
+    "source_worktree:results/research/07_simulation/figures/selection_optimism.png": true,
+    "source_worktree:results/research/07_simulation/figures/selection_optimism.receipt.json": true,
+    "source_worktree:results/research/07_split_exposure.json": true,
+    "source_worktree:results/research/07_validation/cloud_archive_audit.json": true,
+    "source_worktree:results/research/07_validation/governance_corrected.log": true,
+    "source_worktree:results/research/07_validation/governance_correction.json": true,
+    "source_worktree:results/research/07_validation/governance_initial.log": true,
+    "source_worktree:results/research/07_validation/governance_review.json": true,
+    "source_worktree:results/research/07_validation/report_review.json": true,
+    "source_worktree:results/research/07_validation/root_review.json": true,
+    "source_worktree:results/research/07_validation/split_governance_initial.py": true,
+    "source_worktree:results/research/07_validation/worker_review.json": true,
+    "source_worktree:results/research/08_validation/archive_retrieval.json": true,
+    "source_worktree:results/research/08_validation/classification_corrected.json": true,
+    "source_worktree:results/research/08_validation/classification_corrected.log": true,
+    "source_worktree:results/research/08_validation/classification_initial.json": true,
+    "source_worktree:results/research/08_validation/classification_initial.log": true,
+    "source_worktree:results/research/08_validation/classification_source_before.json": true,
+    "source_worktree:results/research/08_validation/classification_source_original.py": true,
+    "source_worktree:results/research/08_validation/cloud_archive_audit.json": true,
+    "source_worktree:results/research/08_validation/cloud_retrieval.json": true,
+    "source_worktree:results/research/08_validation/development_sampler_test_before.py": true,
+    "source_worktree:results/research/08_validation/freeze_review.json": true,
+    "source_worktree:results/research/08_validation/github_job_receipt.json": true,
+    "source_worktree:results/research/08_validation/historical_ablation_test_before.py": true,
+    "source_worktree:results/research/08_validation/historical_fixture_corrected.json": true,
+    "source_worktree:results/research/08_validation/historical_fixture_initial.json": true,
+    "source_worktree:results/research/08_validation/junit_reporting_audit.json": true,
+    "source_worktree:results/research/08_validation/local_evidence_audit.json": true,
+    "source_worktree:results/research/08_validation/padding_analytic_recount.json": true,
+    "source_worktree:results/research/08_validation/padding_model_before.py": true,
+    "source_worktree:results/research/08_validation/padding_source_before.json": true,
+    "source_worktree:results/research/08_validation/padding_static_receipt.json": true,
+    "source_worktree:results/research/08_validation/protocol_review.json": true,
+    "source_worktree:results/research/08_validation/report_review.json": true,
+    "source_worktree:results/research/08_validation/root_source_review.json": true,
+    "source_worktree:results/research/08_validation/routing_corrected_run.json": true,
+    "source_worktree:results/research/08_validation/routing_corrected_tests.log": true,
+    "source_worktree:results/research/08_validation/routing_legacy_failure.json": true,
+    "source_worktree:results/research/08_validation/routing_legacy_failure.log": true,
+    "source_worktree:results/research/08_validation/routing_legacy_reproduction.py": true,
+    "source_worktree:results/research/08_validation/routing_phase3_original.py": true,
+    "source_worktree:results/research/08_validation/routing_source_snapshot.json": true,
+    "source_worktree:results/research/08_validation/routing_validation.json": true,
+    "source_worktree:results/research/08_validation/soil_corrected_tests_01.json": true,
+    "source_worktree:results/research/08_validation/soil_corrected_tests_01.log": true,
+    "source_worktree:results/research/08_validation/soil_corrected_tests_03.json": true,
+    "source_worktree:results/research/08_validation/soil_corrected_tests_03.log": true,
+    "source_worktree:results/research/08_validation/soil_final_inventory.json": true,
+    "source_worktree:results/research/08_validation/soil_legacy_witness.json": true,
+    "source_worktree:results/research/08_validation/soil_legacy_witness.log": true,
+    "source_worktree:results/research/08_validation/soil_legacy_witness_source.py": true,
+    "source_worktree:results/research/08_validation/soil_recovered_19_driver.py": true,
+    "source_worktree:results/research/08_validation/soil_recovered_19_evaluation.py": true,
+    "source_worktree:results/research/08_validation/soil_recovered_19_tests.py": true,
+    "source_worktree:results/research/08_validation/soil_review_source_02.py": true,
+    "source_worktree:results/research/08_validation/soil_review_tests_02.py": true,
+    "source_worktree:results/research/08_validation/soil_review_witness_02.json": true,
+    "source_worktree:results/research/08_validation/soil_review_witness_02.log": true,
+    "source_worktree:results/research/08_validation/soil_source_original.json": true,
+    "source_worktree:results/research/08_validation/soil_source_original.py": true,
+    "source_worktree:results/research/09_validation/complex_binding_data_test_01.json": true,
+    "source_worktree:results/research/09_validation/complex_binding_data_test_01.log": true,
+    "source_worktree:results/research/09_validation/complex_binding_fixture_exposure.json": true,
+    "source_worktree:results/research/09_validation/complex_binding_protocol_test_01.json": true,
+    "source_worktree:results/research/09_validation/complex_binding_protocol_test_01.log": true,
+    "source_worktree:results/research/09_validation/complex_binding_protocol_test_02.json": true,
+    "source_worktree:results/research/09_validation/complex_binding_protocol_test_02.log": true,
+    "source_worktree:results/research/09_validation/protocol_attempt01_source_recovery.json": true,
+    "source_worktree:results/research/09_validation/protocol_gate_attempt01.py": true,
+    "source_worktree:results/research/09_validation/protocol_tests_attempt01.py": true,
+    "source_worktree:results/research/09_validation/trainer_attempt01.py": true,
+    "source_worktree:scripts/__init__.py": true,
+    "source_worktree:scripts/battery.py": true,
+    "source_worktree:scripts/eval_roles.py": true,
+    "source_worktree:scripts/make_readme_figures.py": true,
+    "source_worktree:scripts/night.py": true,
+    "source_worktree:scripts/phase3.py": true,
+    "source_worktree:scripts/prepare_cifar.py": true,
+    "source_worktree:scripts/report_phase3.py": true,
+    "source_worktree:scripts/research_ablations.py": true,
+    "source_worktree:scripts/research_analyze_core_ablation.py": true,
+    "source_worktree:scripts/research_analyze_growth_ablation.py": true,
+    "source_worktree:scripts/research_audit_split_exposure.py": true,
+    "source_worktree:scripts/research_check_item6_inventory.py": true,
+    "source_worktree:scripts/research_cloud_preflight.py": true,
+    "source_worktree:scripts/research_compare_item6_recounts.py": true,
+    "source_worktree:scripts/research_complex_binding.py": true,
+    "source_worktree:scripts/research_export_split_pools.py": true,
+    "source_worktree:scripts/research_growth_ablation.py": true,
+    "source_worktree:scripts/research_item6_worker.py": true,
+    "source_worktree:scripts/research_item7_worker.py": true,
+    "source_worktree:scripts/research_item8_worker.py": true,
+    "source_worktree:scripts/research_item9_worker.py": true,
+    "source_worktree:scripts/research_plot_holdout_selection.py": true,
+    "source_worktree:scripts/research_plot_item6.py": true,
+    "source_worktree:scripts/research_render_item6_tables.py": true,
+    "source_worktree:scripts/research_simulate_holdout_selection.py": true,
+    "source_worktree:scripts/research_train.py": true,
+    "source_worktree:scripts/research_verify_holdout_simulation.py": true,
+    "source_worktree:scripts/research_verify_item6_archive.py": true,
+    "source_worktree:scripts/research_verify_item7_cloud.py": true,
+    "source_worktree:scripts/research_verify_item8_padding.py": true,
+    "source_worktree:scripts/scan.py": true,
+    "source_worktree:scripts/sweep.py": true,
+    "source_worktree:scripts/train.py": true,
+    "source_worktree:scripts/train_cartilla.py": true,
+    "source_worktree:tests/test_classification_contracts.py": true,
+    "source_worktree:tests/test_complex_binding_data.py": true,
+    "source_worktree:tests/test_complex_binding_protocol.py": true,
+    "source_worktree:tests/test_core.py": true,
+    "source_worktree:tests/test_padding_invariant.py": true,
+    "source_worktree:tests/test_research_ablations.py": true,
+    "source_worktree:tests/test_research_analyze_core_ablation.py": true,
+    "source_worktree:tests/test_research_analyze_growth_ablation.py": true,
+    "source_worktree:tests/test_research_development_data.py": true,
+    "source_worktree:tests/test_research_growth_ablation.py": true,
+    "source_worktree:tests/test_research_item6_worker.py": true,
+    "source_worktree:tests/test_research_item6_worker_supervision.py": true,
+    "source_worktree:tests/test_research_split_governance.py": true,
+    "source_worktree:tests/test_routing_metrics.py": true,
+    "source_worktree:tests/test_soil_evaluation.py": true,
+    "source_zip_complete": true,
+    "source_zip_crc": true,
+    "stage_inventory": true,
+    "stage_log:contract_tests": true,
+    "stage_log:preflight": true,
+    "stage_status:contract_tests": true,
+    "stage_status:preflight": true,
+    "stage_time:contract_tests": true,
+    "stage_time:preflight": true,
+    "test_collection": true,
+    "test_junit": true,
+    "test_junit_identity": true,
+    "test_threads": true,
+    "test_unique": true,
+    "worker_budget": true,
+    "worker_complete": true,
+    "worker_time_order": true
+  },
+  "collected_test_cases": 34,
+  "issues": [],
+  "item": 9,
+  "junit_suite_test_counter": 137,
+  "limitations": [
+    "Internal artifact audit, not external replication or custody.",
+    "No checkpoint unpickling or model execution.",
+    "Resource receipts are sampled observations, not peak RSS, energy or continuous CPU utilization.",
+    "Scientific data and saved-prediction recount is separate."
+  ],
+  "phase": "preflight",
+  "plan_sha256": "7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04",
+  "resource_monitors": {
+    "contract_tests": {
+      "minimum_sampled_available_ram_gib": 14.24441909790039,
+      "samples": 5
+    },
+    "preflight": {
+      "minimum_sampled_available_ram_gib": 14.200397491455078,
+      "samples": 312
+    }
+  },
+  "sampled_worker_ram_min_gib": 14.200397491455078,
+  "schema_version": 1,
+  "source_commit": "e63764ccb924ab23d65c2deb94b477387d102c82",
+  "source_files": 312,
+  "source_inventory": [
+    {
+      "bytes": 1638,
+      "git_blob": "7015ca1664b66a4860be07c53dcf55dfbe79109e",
+      "path": ".github/workflows/research-item6.yml",
+      "sha256": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159"
+    },
+    {
+      "bytes": 1586,
+      "git_blob": "d218627c8d90ca2053f77fdfc70773fbfe0349a6",
+      "path": ".github/workflows/research-item7.yml",
+      "sha256": "31b5339950d50546e53b17eed854bff84c2543ac9640591f5498e74f94ba861a"
+    },
+    {
+      "bytes": 1824,
+      "git_blob": "2ed80f13fda7c00e240768991f6d7813506ecd1a",
+      "path": ".github/workflows/research-item8.yml",
+      "sha256": "ed005bd54ac93eadcd8b812b002c3965fe83565a02ba59b7db5574d5d9446860"
+    },
+    {
+      "bytes": 1818,
+      "git_blob": "7640d843072ae218ca8e177517f26b0d88f69e52",
+      "path": ".github/workflows/research-item9-preflight.yml",
+      "sha256": "af5d60a9c6bf5385a88d71620ab6507c18c336040e46a3d3a6b9d4e9bca482de"
+    },
+    {
+      "bytes": 1802,
+      "git_blob": "6f835e36de190ddba305890b0a2d2d265c62312e",
+      "path": ".github/workflows/research-item9-study.yml",
+      "sha256": "0215d2256f97b55abbe4c4d0bd90614db91a76d31e8677f68db147f2fd6cd8ac"
+    },
+    {
+      "bytes": 104,
+      "git_blob": "3f2594fc616aa6804ead7bf2e942e0babc86e77d",
+      "path": ".gitignore",
+      "sha256": "52af1a9ed463f7537bb1151ba069d82a03575ec831f3611de2bb25b1b078f5a8"
+    },
+    {
+      "bytes": 1564,
+      "git_blob": "6680462840b2c316bb35a1bde742aa1686acbd58",
+      "path": "AGENTS.md",
+      "sha256": "f123a69112a6f7d89bdf7e4e3154a700455efd1327f0f50b4742c60cd4fc79ac"
+    },
+    {
+      "bytes": 799,
+      "git_blob": "a7211655225ad076f282ca887201c35182e1ffa7",
+      "path": "CLAUDE.md",
+      "sha256": "9b377a39eb87c4fd79637cbc38a5ad28f5be2576faa4a1995517ad9bea8cffed"
+    },
+    {
+      "bytes": 1085,
+      "git_blob": "6b6ab2d06c257064813b7b72f11780ffebee1046",
+      "path": "LICENSE",
+      "sha256": "afa3de7e3edd0ad130afc2f31d1f8dbc0a4bda40899f7ecce9c032310e4701c5"
+    },
+    {
+      "bytes": 8865,
+      "git_blob": "cc6b86440a032e1f6f51e50a8841e50c9fa42a2a",
+      "path": "README.md",
+      "sha256": "456062aaf3d655ebf12a83366263d4b3def48a82397bb9d3b16d49a562ab7697"
+    },
+    {
+      "bytes": 5019,
+      "git_blob": "e49173750c514d7671e3ed58baa21066a8287ecb",
+      "path": "ROADMAP.md",
+      "sha256": "3a5df4d314586d7ae9d40f82ec1d4b0556c09add0655b6b61aefc7ddee00cf3c"
+    },
+    {
+      "bytes": 11236,
+      "git_blob": "91f1ed62ae63256525eab5525baff4b8240be542",
+      "path": "coordinacion/COLA-DE-TRABAJO.md",
+      "sha256": "ebc1779db9e5883609b1c73e2a93e45a711cbf8f4a9a8f2e63a2820079fc7b13"
+    },
+    {
+      "bytes": 10172,
+      "git_blob": "4bbf3b13cc1b754ae3059dd91a328896aa9f512f",
+      "path": "coordinacion/DECISIONES.md",
+      "sha256": "9f560f512b5c4742bed334f19cd3a358e53de6d6494dc215bca000fd7ad948e2"
+    },
+    {
+      "bytes": 2953,
+      "git_blob": "f036a5bd499994fe4d2893658bbfb677c1563e12",
+      "path": "coordinacion/PROMPT-CLAUDE.md",
+      "sha256": "f0e480e7b2f8c5a5c11f39ff538f156ea72dac6a10353fd4014b16c7d144dad7"
+    },
+    {
+      "bytes": 2996,
+      "git_blob": "6bf360db17bddbc1f05449952dc0771aa73f246f",
+      "path": "coordinacion/README.md",
+      "sha256": "014bb1fc7e04efeaa23529297ea3f531ada7f748c895b707ce6b6453b746e5c1"
+    },
+    {
+      "bytes": 15005,
+      "git_blob": "f9faf3d13cce08bea05cafaa22928402ce97596d",
+      "path": "coordinacion/RECURSOS.md",
+      "sha256": "301e61237fb6b5b2a7786db1942b6a02526899b52428f9cbd9e5b2946fff2fb1"
+    },
+    {
+      "bytes": 20011,
+      "git_blob": "bbc1b16f2e78e53d316c6c5d9b43ce9fb2b4f3dc",
+      "path": "coordinacion/TABLON.md",
+      "sha256": "fa6298f9477ae5ada6fe81593268bb24a5c0b5122af377c20ca42a9cb258e63e"
+    },
+    {
+      "bytes": 2517,
+      "git_blob": "6c31476bbba59eedd745cfccab61cbd65bc71f9d",
+      "path": "coordinacion/THINKTANK.md",
+      "sha256": "6464c9bfdc711bd8fd12e782536696ebf1a5d2e64b7f6a0ba9fc69a5321136d8"
+    },
+    {
+      "bytes": 4753,
+      "git_blob": "a1b85313e67fc7fdbbc698bf5db08d3f2706fe05",
+      "path": "docs/FASE3_CONCLUSIONES.md",
+      "sha256": "ba4f64cb650c42cb4993f2e754dd58a70f3f91108c90d4b083acf89da53ae160"
+    },
+    {
+      "bytes": 8722,
+      "git_blob": "0b3ce9c24d869afe0df7347232e36b80ae61e73f",
+      "path": "docs/img/architecture.svg",
+      "sha256": "d883b348da11118ad6d48d18e4c55900983d8052059c5e8b450054623bf78124"
+    },
+    {
+      "bytes": 134944,
+      "git_blob": "8c2714f8de93b81130da231d1e9ec60d3074a8ce",
+      "path": "docs/img/banner.png",
+      "sha256": "f75128d39aa2a5373796d3b1e5f58e62baae7b97ae92f443328d65cb69488e65"
+    },
+    {
+      "bytes": 188095,
+      "git_blob": "18b140ca21494d2837b00a245d3f3c0b6971c72c",
+      "path": "docs/img/capabilities_en.png",
+      "sha256": "a235897240ce003429e6a83b165e59751c1db8effd16dd43a330e28eb90e1749"
+    },
+    {
+      "bytes": 96032,
+      "git_blob": "c200704764a83a0c76329017d8339f951d4fd28a",
+      "path": "docs/img/scaling_en.png",
+      "sha256": "9d110091eb6b10ccdd8df5677514a694f2c67e3f3207de982f63bfb30885ce39"
+    },
+    {
+      "bytes": 39940,
+      "git_blob": "37f405c87046f3f6db4e5dbee9039620cf10c78f",
+      "path": "docs/img/scanner_cartilla.png",
+      "sha256": "44828d9aa8fbbeaf9f8a36aa4758720194e28c4b47b38df17295ec6e4f26afa3"
+    },
+    {
+      "bytes": 215764,
+      "git_blob": "7712a5621f2f346de6aa472d1316d4df07ab7996",
+      "path": "docs/img/scanner_roles.png",
+      "sha256": "d3897818110f894b6b1395a44095eea3ce313584d675929fac1d91f923b06621"
+    },
+    {
+      "bytes": 1346779,
+      "git_blob": "d7ea807994d5b8747476e48521146dd1ef113c17",
+      "path": "docs/img/thinking.gif",
+      "sha256": "339b5dcf6cd55655c360c1cec2f290aa3f3fae0e1ee70455bc82f96c000a73c5"
+    },
+    {
+      "bytes": 38071,
+      "git_blob": "e7b0a39bba89024cc933d166ec656bd4d2cf2a2f",
+      "path": "docs/research/01_mechanism_specification.md",
+      "sha256": "e12e81fe04caefdad05bf6567e41edebda6d744c1dfd70691f26106b6d8e420b"
+    },
+    {
+      "bytes": 11762,
+      "git_blob": "9040e21684059e03d71c70eff094bd447edb4bcf",
+      "path": "docs/research/02_protocol.md",
+      "sha256": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b"
+    },
+    {
+      "bytes": 32270,
+      "git_blob": "b4e369ba490786d90601637565c21f863a5e0914",
+      "path": "docs/research/05_results_recovered_20261007.md",
+      "sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf"
+    },
+    {
+      "bytes": 27761,
+      "git_blob": "fa9fe000d89f943abd1a070a3cdb47d99ffb2d24",
+      "path": "docs/research/06_core_inventory.json",
+      "sha256": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3"
+    },
+    {
+      "bytes": 47047,
+      "git_blob": "db0b8af857dd7731128de5e7e32de53958beb10a",
+      "path": "docs/research/06_execution_plan.json",
+      "sha256": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a"
+    },
+    {
+      "bytes": 6171,
+      "git_blob": "18697682aef0ba56afdf51d60dc2d8a7c2153aec",
+      "path": "docs/research/06_growth_inventory.json",
+      "sha256": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3"
+    },
+    {
+      "bytes": 41368,
+      "git_blob": "db040e162ae5f049a1879786625d13d2e1e9342d",
+      "path": "docs/research/06_protocol_amendment.md",
+      "sha256": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c"
+    },
+    {
+      "bytes": 4208,
+      "git_blob": "6f70a4769d601d51c229f320c9776a52c35fb101",
+      "path": "docs/research/06_recovery_manifest.json",
+      "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+    },
+    {
+      "bytes": 67909,
+      "git_blob": "94e0c12402bfb3b3a7033984fd861e0e4b75e125",
+      "path": "docs/research/06_results.md",
+      "sha256": "13d277efd49ba43ff47c8478317e50bcc296470f554b4b07ef3885bba4e414f1"
+    },
+    {
+      "bytes": 37088,
+      "git_blob": "feeac25aa30598a5dabcf02a94aa5038f03bfc81",
+      "path": "docs/research/06_results_tables.md",
+      "sha256": "c03969aa9ccfcac749218eb88cdfcb30e51770ae3ef6bd6bf6566cacec788142"
+    },
+    {
+      "bytes": 11608,
+      "git_blob": "48dff665354b8021210ea18311cf71ee24eae7f4",
+      "path": "docs/research/07_adoption.md",
+      "sha256": "efb364242754583d3165e0a54e8cea7e9b143dd658d8afa37af4c95154bcc34a"
+    },
+    {
+      "bytes": 2068,
+      "git_blob": "2083ffd7b72f3190ff5febe05fff8fb813234be0",
+      "path": "docs/research/07_cloud_export_plan.json",
+      "sha256": "5071ae0e70d47c37e7eaea0d3f0a2299b6e3d06bf6a68337201f67c6f6ca8542"
+    },
+    {
+      "bytes": 1110,
+      "git_blob": "384e1de16d334a3fc448db8431d337da12e1bef5",
+      "path": "docs/research/07_execution_plan.json",
+      "sha256": "77941082f44b8bf9132bea7b8371a0a388e8e700de42794b421584973b771bab"
+    },
+    {
+      "bytes": 20781,
+      "git_blob": "acfa1a9ccb5b2cabac07e40a7eaf3eb6691b1dec",
+      "path": "docs/research/07_gate_source_audit.md",
+      "sha256": "731dc32c2d43b38abbb530ce6281fa536470b73befe44f83de607001c5c9776e"
+    },
+    {
+      "bytes": 19826,
+      "git_blob": "145650744176f1195a0d241580955833a60e22fa",
+      "path": "docs/research/07_methodological_evidence.md",
+      "sha256": "4e5c4fef9409a498aa005a58d41bb4afc1edb3694277f6f0dc825e575a7e84fe"
+    },
+    {
+      "bytes": 11312,
+      "git_blob": "ce7900a3643b783a4414960664267fe0670be9f1",
+      "path": "docs/research/07_protocol.md",
+      "sha256": "8b3b44eebb0821498d3537016c847eaf3ea4ffb50607d2a0352e76f98c465f08"
+    },
+    {
+      "bytes": 37912,
+      "git_blob": "91d66020b0d7a7ccd9bffcb488ced96ea80e3afd",
+      "path": "docs/research/07_results.md",
+      "sha256": "895d261bf2c11896d8b011cf196fdc3004a5e5b154c668144214b4c2e4853cca"
+    },
+    {
+      "bytes": 6655,
+      "git_blob": "e409aa2efb7637617f063ace68aad782320097e7",
+      "path": "docs/research/08_classification_audit.md",
+      "sha256": "5b956ca2182d39ceaa88d907dabe316d6d182b84383b8ddb08e6e2c1485aeed8"
+    },
+    {
+      "bytes": 12445,
+      "git_blob": "5f1a3d49b4592051394844dd95caa8488c26d1aa",
+      "path": "docs/research/08_cloud_validation_plan.json",
+      "sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b"
+    },
+    {
+      "bytes": 10147,
+      "git_blob": "9b2ab73d9ef18ac3106e72a8f39bed2cc8359d8e",
+      "path": "docs/research/08_padding_audit.md",
+      "sha256": "1e31e4dd01f015bc5c15ecf0e27600e91bbff40c00bf4d5a4c644011367cb060"
+    },
+    {
+      "bytes": 4880,
+      "git_blob": "4f13f22480e49cc88a1ccc3241c185e64309f45f",
+      "path": "docs/research/08_padding_derivation.md",
+      "sha256": "904eeae9bc65a429342ddc3e3e5d54cf828b7082c2f047fc43d92be52ece1d44"
+    },
+    {
+      "bytes": 14436,
+      "git_blob": "4c62fa09e266dd1aaec609577cea73d020c36963",
+      "path": "docs/research/08_protocol.md",
+      "sha256": "96d3e71ea33bce22c4a9712525466455f8bfc0646979640a224da1aaf79db6d0"
+    },
+    {
+      "bytes": 22607,
+      "git_blob": "55649a23550c191757fcd489d74597dca1c52e65",
+      "path": "docs/research/08_results.md",
+      "sha256": "c9ae8a5dab162e7b7ca2b82255c2dfb2105dce7d01f6228b37a0e081a31070ec"
+    },
+    {
+      "bytes": 7715,
+      "git_blob": "ae75d6838092b83a386a339feec1e4bd340f791a",
+      "path": "docs/research/08_routing_audit.md",
+      "sha256": "32c8e28b02ccd08836b2407dfd726fd52d6d601555b28154219d1ac6f4b8864c"
+    },
+    {
+      "bytes": 13081,
+      "git_blob": "6541d62af9234861696d6bd2c5064a8e96904b2f",
+      "path": "docs/research/08_soil_audit.md",
+      "sha256": "e16a7baac989814a418677d1a7c638a108d407996a669e44efcce0e3e0ad8327"
+    },
+    {
+      "bytes": 6238,
+      "git_blob": "89ea19b05f206d8417d88f2a41ba89cc6a5ca6f8",
+      "path": "docs/research/08_worker_audit.md",
+      "sha256": "f5042102318eef1ffce20cbccfa6fa0096abd137b394d644fffa67fcd8d37d82"
+    },
+    {
+      "bytes": 10819,
+      "git_blob": "57e3bac769e1b92bcb2f845057ce3b16e3eff1a7",
+      "path": "docs/research/09_data_contract.md",
+      "sha256": "f9f1e1dbb03879c44eaff28c646e60c9db7e76c5948bd01dad57a84bd2535fd0"
+    },
+    {
+      "bytes": 9013,
+      "git_blob": "23c408c8454cd563ce135f12ea47acbaa412a573",
+      "path": "docs/research/09_execution_design.md",
+      "sha256": "cb95db528aa352da0d99392900eb1df952c014047c383fa8f77cb94367701c11"
+    },
+    {
+      "bytes": 4079,
+      "git_blob": "1cf525292d157af8272a78f27042de6a14d9e8b3",
+      "path": "docs/research/09_experiment_recipe.json",
+      "sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97"
+    },
+    {
+      "bytes": 19781,
+      "git_blob": "c80f0d31c5f85724aa6cf119e72a6cae85b9d672",
+      "path": "docs/research/09_methodological_evidence.md",
+      "sha256": "1e3d8e97549512401e10089863a13bd4fb5c0c289ce56f0141ecf3844c92f86f"
+    },
+    {
+      "bytes": 6890,
+      "git_blob": "adfb8b34dd3cf69a5bab1126025b736ee33a6344",
+      "path": "docs/research/09_preflight_plan.json",
+      "sha256": "7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04"
+    },
+    {
+      "bytes": 12947,
+      "git_blob": "4ff9eb7558005b47c140a085c434c6a85ea09182",
+      "path": "docs/research/09_protocol.md",
+      "sha256": "d47689aab66101cc479fdee5f60dae59ec1941ea489a5e32b04659a8b70577d8"
+    },
+    {
+      "bytes": 19878,
+      "git_blob": "86c71039c4d261c0f5c34aeca28b9123e96a2398",
+      "path": "docs/research/09_representation_audit.md",
+      "sha256": "40fe39097a87d1e4ff61bf3cbbec36a1ba31dd9112110e6ff25600db2d3b5ed5"
+    },
+    {
+      "bytes": 14130,
+      "git_blob": "f5d4dac3d8348abf628809d54cdcc30654ab7705",
+      "path": "docs/research/09_trainer_review.md",
+      "sha256": "4dfa56dd7a531870e97c12c99e3414657eaf14fef8e95e62a0b24475e30464b2"
+    },
+    {
+      "bytes": 10358,
+      "git_blob": "0f262ccc9d56f14ad6b9f1515ae7a37659df0bb2",
+      "path": "docs/research/09_worker_audit.md",
+      "sha256": "fe723f0aba0ea6c4a11eeebbb2ce517e285c8a1a75db9f3172879f0d364458f5"
+    },
+    {
+      "bytes": 6860,
+      "git_blob": "6fd976c999d0f7134eb9f0dc998c760cfe5561aa",
+      "path": "docs/research/09_worker_review.md",
+      "sha256": "b21c4991c70957f330abbd380d6cba50db83098b37e12bef373a863fb5526a9e"
+    },
+    {
+      "bytes": 13391,
+      "git_blob": "482ad29ffacc663d517ade608581aba12c6dc472",
+      "path": "docs/research/progress.json",
+      "sha256": "37207eace27b101d54ab29daff8979757bd45d30a9d20cb47a59abd4a588191f"
+    },
+    {
+      "bytes": 3313,
+      "git_blob": "b7e4989854af041bd0f3e1906846b09de8efe5e8",
+      "path": "docs/research/protocol.json",
+      "sha256": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290"
+    },
+    {
+      "bytes": 11332,
+      "git_blob": "261006094eaebd685ec302cd4fc7db6468eb1058",
+      "path": "kaggle/HISTORIAL.md",
+      "sha256": "16ab6017136ed8af469eac55f8b8934df5831ef5242c41dfb2a940616eb01960"
+    },
+    {
+      "bytes": 570,
+      "git_blob": "589a53c389a202d88255445581889ef7840faf75",
+      "path": "kaggle/digits/COORDINACION.md",
+      "sha256": "1d06f3de478dd1866bf5aa1c3597382ced4254a054f2a146c53c4d226d707e5d"
+    },
+    {
+      "bytes": 6416,
+      "git_blob": "65e5f0239c9f3dbd19071c01ab13ed0e3b2c4519",
+      "path": "kaggle/digits/train_digits.py",
+      "sha256": "e916f5a0e5508a3ca4b4006726459a6b3c235df99dce31d133b9ef8727f85878"
+    },
+    {
+      "bytes": 1500,
+      "git_blob": "14ffd283378db8ffb5843480ef5ffb40e8e00ae1",
+      "path": "kaggle/filament/COORDINACION.md",
+      "sha256": "745d7702c94443d1598a0bc5b48661b3158230b5bf5b0d667debfb6d32410a8e"
+    },
+    {
+      "bytes": 4172,
+      "git_blob": "922e1e1f828aa65b7aad5d9ed0c02f86b4372db2",
+      "path": "kaggle/filament/ensemble_fil.py",
+      "sha256": "c2a456f9c47baa14f1dbebbbb44dc2483f1335b9b6b4f5a51b234b13d7cdbe35"
+    },
+    {
+      "bytes": 6248,
+      "git_blob": "0947851a3eed0cc2106bf8d36833a8a265d7b883",
+      "path": "kaggle/filament/fil.py",
+      "sha256": "561d94c2eca8a49dbe1bc8efacddd019e937f1889689c72473f01bc39225143e"
+    },
+    {
+      "bytes": 8956,
+      "git_blob": "4713006fc9803ee5de86816ddfd7a6099e702adb",
+      "path": "kaggle/filament/multiscale.py",
+      "sha256": "58cc6e8a859eb179f3fed8b4b92881f1ce5d2cbe57023f27ff136ba164e3f553"
+    },
+    {
+      "bytes": 2848,
+      "git_blob": "f43227df1b69355233f51a119b29f724cf693288",
+      "path": "kaggle/filament/predict_fil.py",
+      "sha256": "edd401f7504eaf5d789de94f935045702e4132ee2a5b63973c2fbb7393160b45"
+    },
+    {
+      "bytes": 8471,
+      "git_blob": "77f9323d7c42c60b3baaf61226b88e7278fa357e",
+      "path": "kaggle/filament/train_fil.py",
+      "sha256": "8d9b4d525d4a05128ef6c7bdc4432a4a5aa549eb1ad09ade7c597276e037b55a"
+    },
+    {
+      "bytes": 9856,
+      "git_blob": "5e1d711109cb52386ce037db4ae57575e8b5c3b5",
+      "path": "kaggle/historial.jsonl",
+      "sha256": "4da2abc03762689e1da5ce668e2b60ed9c0eac8075e43c16de594d16dfbba882"
+    },
+    {
+      "bytes": 5236,
+      "git_blob": "c9d98e02448bb45a2492aa35adc0385124ba3f5f",
+      "path": "kaggle/log_run.py",
+      "sha256": "e456aaba20c976fa206d7dab0e94d3d9a1871e22b284fb13efca8537a2ef36c9"
+    },
+    {
+      "bytes": 2887,
+      "git_blob": "0f1e9c2bd87f29889ca0fe88bb8cba2bf297b839",
+      "path": "kaggle/soil/COORDINACION.md",
+      "sha256": "77338f29b8e63979ed67670e6690119a1efc4ec144e23f7f627e9f382f0add6d"
+    },
+    {
+      "bytes": 6819,
+      "git_blob": "f963cff9d51d17584dfb166d671994e0c8e8ef77",
+      "path": "kaggle/soil/evaluation.py",
+      "sha256": "98c57707c24b7a128f019aaf3231647a18607c033edec9e6764f98f0432feace"
+    },
+    {
+      "bytes": 13816,
+      "git_blob": "c09cc89b1c7fbeb16a762934b8cb7fd87120e43a",
+      "path": "kaggle/soil/soil.py",
+      "sha256": "36f9ab7c6a1b76fd6425e9df155ac75d8e8ed5d8679e172b7c0ba2229bc716fe"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "path": "neuropixel/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 4646,
+      "git_blob": "a8a595c168b1e32a9447df27b8fcaa7f178118f5",
+      "path": "neuropixel/cartilla.py",
+      "sha256": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b"
+    },
+    {
+      "bytes": 1375,
+      "git_blob": "04cfa5fbd7d6618d3829f76718309975e6263e32",
+      "path": "neuropixel/codec.py",
+      "sha256": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f"
+    },
+    {
+      "bytes": 1158,
+      "git_blob": "4747dad764529995685f5d932c00a2a642f6f97e",
+      "path": "neuropixel/hrr.py",
+      "sha256": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa"
+    },
+    {
+      "bytes": 6895,
+      "git_blob": "b66e2f575c6ae937d8cad807b4dd0e48531850f7",
+      "path": "neuropixel/model.py",
+      "sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345"
+    },
+    {
+      "bytes": 6513,
+      "git_blob": "b826869ad1816f43a182fbcdbcbc47ea2a123dd5",
+      "path": "neuropixel/phase3.py",
+      "sha256": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0"
+    },
+    {
+      "bytes": 13639,
+      "git_blob": "5c718a868262a9e4395bad6aa21784a7fd46f0ed",
+      "path": "neuropixel/research/ablations.py",
+      "sha256": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4"
+    },
+    {
+      "bytes": 3148,
+      "git_blob": "fb7b2b53c51c2219c11aad8af73c1e5bb52e3241",
+      "path": "neuropixel/research/classification_contracts.py",
+      "sha256": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5"
+    },
+    {
+      "bytes": 16945,
+      "git_blob": "60afc4a7d47b90e88433e1eb3c2ea81bc754208d",
+      "path": "neuropixel/research/complex_binding_data.py",
+      "sha256": "67a5b2649acbd612458706796fdbd110a54cfa74a82e107cdfbc5777d6a0b1b6"
+    },
+    {
+      "bytes": 1617,
+      "git_blob": "c301701c5a61b6c5284943679687a047d16e1098",
+      "path": "neuropixel/research/complex_binding_metrics.py",
+      "sha256": "70116cebe7279f61b74a3e7299ec57faf7c4d2d117a0be1d5a263f4dbf73c8e5"
+    },
+    {
+      "bytes": 11780,
+      "git_blob": "d2e2003828de434db8482d2fa9a3d37b3c8aea34",
+      "path": "neuropixel/research/complex_binding_protocol.py",
+      "sha256": "7c8a23d2c867702f627c9da14984bc62fa736c8bebd2403f0ac704e1a09769c2"
+    },
+    {
+      "bytes": 7027,
+      "git_blob": "e90005e534d8cb86eb34ee34b6309b0679368dfb",
+      "path": "neuropixel/research/data.py",
+      "sha256": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b"
+    },
+    {
+      "bytes": 1151,
+      "git_blob": "b9453621344c48f47ab34fadfe5f2e11b9864de9",
+      "path": "neuropixel/research/development_data.py",
+      "sha256": "47a52774638248531dad7e09d2ba46417e0d0a0b05e630f634c17a31359b873a"
+    },
+    {
+      "bytes": 20280,
+      "git_blob": "78d8228301e293fe674d154730ac48941f1af38b",
+      "path": "neuropixel/research/experiment.py",
+      "sha256": "5fc9ef4d211b2baca37960b0e79ed50a348a58fee34f2c7d6330cb9b48c9532f"
+    },
+    {
+      "bytes": 18399,
+      "git_blob": "640733c74c858ae404ec2fe56de7db18880d1c0f",
+      "path": "neuropixel/research/growth_ablation.py",
+      "sha256": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5"
+    },
+    {
+      "bytes": 17438,
+      "git_blob": "930cb7e44f7e978c21b605d50f978852c00c47ac",
+      "path": "neuropixel/research/models.py",
+      "sha256": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee"
+    },
+    {
+      "bytes": 6098,
+      "git_blob": "47faa789fe2310a9fb2886a980e717dbe75fe0e4",
+      "path": "neuropixel/research/routing_metrics.py",
+      "sha256": "6256d1431317ae028d6182384b36515fd6079eb655320eb1ffee32b93e4a6cd8"
+    },
+    {
+      "bytes": 19103,
+      "git_blob": "a1ca1cdeb83825201e353b0238b720d104281ae3",
+      "path": "neuropixel/research/split_governance.py",
+      "sha256": "133219c26303c03eb31d18faf7bbc2ed83da8a8ce47a8f953a2f9776cfcb595c"
+    },
+    {
+      "bytes": 2910,
+      "git_blob": "1f5d0555ada5c6d8c059f02817b9395ac362dec2",
+      "path": "neuropixel/safety.py",
+      "sha256": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3"
+    },
+    {
+      "bytes": 3228,
+      "git_blob": "dde9631fbd8dee0895c63be8bd6ad9e4c36f7bea",
+      "path": "neuropixel/scanner.py",
+      "sha256": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a"
+    },
+    {
+      "bytes": 8477,
+      "git_blob": "3e9368c364a884f72931feb3cdc921bc3663d4fe",
+      "path": "neuropixel/task.py",
+      "sha256": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f"
+    },
+    {
+      "bytes": 52,
+      "git_blob": "19bad9b1cf61abd41262ca959265a02c96630f79",
+      "path": "pytest.ini",
+      "sha256": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0"
+    },
+    {
+      "bytes": 70,
+      "git_blob": "9f034747b188aaf1f654b28acb6edf14be842937",
+      "path": "requirements/research-cloud.txt",
+      "sha256": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5"
+    },
+    {
+      "bytes": 3338,
+      "git_blob": "e8de53c6dfb879e81436031d050734fbf4b857f1",
+      "path": "results/battery/RESUMEN.md",
+      "sha256": "c912214a44b47dcfc94c6e6a49ccbb43135d65ad75f63332ef127b6a32bae54c"
+    },
+    {
+      "bytes": 4781,
+      "git_blob": "43a6c86c15c99dccdedde40df90beb1e613eeab5",
+      "path": "results/battery/results.json",
+      "sha256": "884bd3be623713eb0592bbdfc4e3e4af954a5260064a242bc61360c002300caf"
+    },
+    {
+      "bytes": 4474,
+      "git_blob": "638d92703e6c59c808a30781eaea3dbf38535657",
+      "path": "results/phase3/INFORME_FASE3.md",
+      "sha256": "5af62be457efe63e5129924d3382e7f06ff663d969ca3bc48e2b10ec7e9da92b"
+    },
+    {
+      "bytes": 119,
+      "git_blob": "de185687d82502fe8fb10fc50d4565fc3ee5f40b",
+      "path": "results/phase3/dream.json",
+      "sha256": "1fec1ce4b9ed80aedf6f62d85a993839d9b5df646b15ea4ef86b18e20690d45c"
+    },
+    {
+      "bytes": 101,
+      "git_blob": "eca8174bd9e978d9ae8a0d141544ed03cf0686a7",
+      "path": "results/phase3/energy_l0.3.json",
+      "sha256": "c8c926cb1df9aed6e9d4a3c377ca374208808c2e3f03510894988c9c076328a1"
+    },
+    {
+      "bytes": 104,
+      "git_blob": "d19e56d6cea83be7e83e1e3c00188f820bec5b37",
+      "path": "results/phase3/energy_l1.0.json",
+      "sha256": "f1ece97c8d5ff9ea60a8bb1f0333192cbc6fe1be39c9b98641fec391f8216fd1"
+    },
+    {
+      "bytes": 104,
+      "git_blob": "dfce5dff036b20f134d12710ad4e6fc5c40c24e0",
+      "path": "results/phase3/energy_l3.0.json",
+      "sha256": "5be4fb44ca9b001cda07f5d41f5c42fda800a1679e418e33b0d3f7bf7c5e4084"
+    },
+    {
+      "bytes": 90877,
+      "git_blob": "c9d678fa192d2df6d3208f6b261f9422c1b8ad9f",
+      "path": "results/phase3/escala.png",
+      "sha256": "55adaa0eb82e575bae377732eaf43a6995237c917f98127df722900f70e78d14"
+    },
+    {
+      "bytes": 429,
+      "git_blob": "2d236bce07ccdb62fdad48c73d51198d85dc80e5",
+      "path": "results/phase3/far_neuropixel_s0.json",
+      "sha256": "0a177f4c9ef3bcb3fe05c0154f571a7278dd23c64a67b67c1eb2ae5434e30b4f"
+    },
+    {
+      "bytes": 421,
+      "git_blob": "3c706af710b64c034a6ed45d742358980d301cd4",
+      "path": "results/phase3/far_np_big_reposo_s0.json",
+      "sha256": "bcd00022e2cf585f3011ef27fe0c911cc73ab5a0b78a93d3245b705b242376ac"
+    },
+    {
+      "bytes": 423,
+      "git_blob": "752cac044c15f2f03340ef67933f78ba231c56bc",
+      "path": "results/phase3/far_np_reposo_s0.json",
+      "sha256": "c5cff822c74d8c99292973ac517299f9a67a2bf4922e620f0e32987076502a6b"
+    },
+    {
+      "bytes": 424,
+      "git_blob": "9e55d663a399462382e651f3cbd8536abf638f91",
+      "path": "results/phase3/far_tf_big_s0.json",
+      "sha256": "a54f3f781b9e34800e31775af10a570aab4d07d0420e381076914f6d99e846da"
+    },
+    {
+      "bytes": 417,
+      "git_blob": "acc67a0ade79bd038f09ae02a7f6e470436ef12c",
+      "path": "results/phase3/far_tf_small_s0.json",
+      "sha256": "a49e1f5b99faf522f515b580af747cde25b33aca37f309110b718904c9b99ff7"
+    },
+    {
+      "bytes": 539,
+      "git_blob": "89374a30ba9bfcbe465fd1d99c2635ee14e545f0",
+      "path": "results/phase3/grow_grow.json",
+      "sha256": "77a172552f63cf96791301eb9e21cda42277569eebf1ca9152893eaccbafc611"
+    },
+    {
+      "bytes": 642,
+      "git_blob": "1bf8d342104a4d0ecdd0eacb70f5ac2bb4b8163c",
+      "path": "results/phase3/grow_novedad.json",
+      "sha256": "7786e8b90468811bb1d538570b86b6029b74cde002d36f7d5a571c8abe30d531"
+    },
+    {
+      "bytes": 283,
+      "git_blob": "4d7a3ebbdcea830b81487fe26e1bfa106d1abcc4",
+      "path": "results/phase3/grow_seq.json",
+      "sha256": "4e807090d2d6cd5c3a4a5b024672733a4d59d74710af877a1248f17b3f7555ae"
+    },
+    {
+      "bytes": 429,
+      "git_blob": "29de13d0091db38815128e987c2f273b42de20f9",
+      "path": "results/phase3/llm.json",
+      "sha256": "4201b145724965f05a2f73d7fef49b05cd4aab7454b4ed8536502879f756df10"
+    },
+    {
+      "bytes": 412,
+      "git_blob": "e6ec640fa22e822092dcf83beb1399a89e03c333",
+      "path": "results/phase3/memory.json",
+      "sha256": "83f87eacb5ce63f05a958793ec5b182ace4d37ff86dc5f811b8d304a620bafc9"
+    },
+    {
+      "bytes": 1030,
+      "git_blob": "e5a782cacefade7ca6c0503c08c973938799da07",
+      "path": "results/phase3/newword.json",
+      "sha256": "a454870f77980ec3c902546d3ba23dbd287b26c210a0838d53074bcaeb2ca5b6"
+    },
+    {
+      "bytes": 210,
+      "git_blob": "5178dfa187ea5cd76f25e532cae6a1f19220535e",
+      "path": "results/phase3/scale_np105k.json",
+      "sha256": "fa2d161faf58bf35117851b46890fc0e493ae54b18981790d29b295a7b0a778e"
+    },
+    {
+      "bytes": 207,
+      "git_blob": "596aa96a89f4545b7f08e76aa6308269bb2a9635",
+      "path": "results/phase3/scale_np14k.json",
+      "sha256": "0771e15f14c06d9b6929e63c1e2052dfe4a05322dde3e0e9ef1b8572a9a3c3bd"
+    },
+    {
+      "bytes": 143,
+      "git_blob": "57bc14af304801475b2e9c7e80301a40f1811e41",
+      "path": "results/phase3/scale_np230k.json",
+      "sha256": "b9ab28ab7ac1d2d1dd54dde8af7ad91eda376795a6b8421981f33ed33207473f"
+    },
+    {
+      "bytes": 208,
+      "git_blob": "2613fdee0092df8461d5ffd48fecf73ae2bb6d0b",
+      "path": "results/phase3/scale_np30k.json",
+      "sha256": "ecbedf027aaf984046c1308e659cc202795f75ed764cbd0bfa802bcde420c29c"
+    },
+    {
+      "bytes": 207,
+      "git_blob": "beea27916fb78a1b2486e0decf25363bdb248500",
+      "path": "results/phase3/scale_np30k_s1.json",
+      "sha256": "0c414020567934563aff233da1de3963feaa5948fbca6425e95c7ab08b5aa415"
+    },
+    {
+      "bytes": 206,
+      "git_blob": "0ea72ad663743df291ddec807b0d9314c48438d3",
+      "path": "results/phase3/scale_np5k.json",
+      "sha256": "a074d21a485b405042b207188e927d00ab6136ea048810d4f71b139616fe4f58"
+    },
+    {
+      "bytes": 208,
+      "git_blob": "d810afec52094e005d6470e67ac75e9c01842310",
+      "path": "results/phase3/scale_tf12k.json",
+      "sha256": "fe351418e0568316bea0097b23ffc5795ada9f23024bfa5d1810f963373f6539"
+    },
+    {
+      "bytes": 209,
+      "git_blob": "a4656a0541adf9d2f6d8422045eef20be9546b9c",
+      "path": "results/phase3/scale_tf170k.json",
+      "sha256": "5f709a0a4b624bbab6aa6da0be00eabe9f377317e1ff03d395eb76fe7620ab26"
+    },
+    {
+      "bytes": 207,
+      "git_blob": "fafc6e40a0df6aae1b387845a32bdff7d1328645",
+      "path": "results/phase3/scale_tf44k.json",
+      "sha256": "9c4547f57e3429e45f3b7ac5f6bcff22fdec5015c8becc64211331377d899e09"
+    },
+    {
+      "bytes": 208,
+      "git_blob": "24ac9fc8e3fb85f372033dbb9d255f87991d0ac0",
+      "path": "results/phase3/scale_tf44k_s1.json",
+      "sha256": "31a7f655a7f70020ae51b6429700ca57b9c1f87b999843d8e3bd3bea4e9fb17d"
+    },
+    {
+      "bytes": 208,
+      "git_blob": "b5021c3ed0a0045e6bf71fce34d8660a744f8b83",
+      "path": "results/phase3/scale_tf800k.json",
+      "sha256": "d1dcb2cbc25fd9bdd0b5ea78dca892390587e29923aa269a3408da1e65b3a04d"
+    },
+    {
+      "bytes": 256,
+      "git_blob": "dec383f3f6cadfb32179845ba006d9d65009823c",
+      "path": "results/phase3/stable_fijo16.json",
+      "sha256": "11a1f557f3bf59d731f9df578935145a32c8036149bfde1e9b818a97e9cb5125"
+    },
+    {
+      "bytes": 254,
+      "git_blob": "3b4933065f830519280560f8dc7bd8a1cf45db8b",
+      "path": "results/phase3/stable_reposo.json",
+      "sha256": "1206d0219814b5ea2640add9c77d4680903355748f09d4cefaf251bc58cc3f87"
+    },
+    {
+      "bytes": 15451,
+      "git_blob": "251bbb3b1777c877f0a8ea66a894505f7d11902c",
+      "path": "results/research/06_ci2_source_inventory.json",
+      "sha256": "3e5cdeaac7ea5d4276985a71458ef8a96c12ee1d001ac92483a57c6c56d44bff"
+    },
+    {
+      "bytes": 2908,
+      "git_blob": "6a728392ddff80607209d7ef1bd47885c4d7cd76",
+      "path": "results/research/06_ci_20261007_37563992665.json",
+      "sha256": "5d390562f174a18e5b546e35d491776470694c82c8f92598eb9c7d16041d4618"
+    },
+    {
+      "bytes": 19931,
+      "git_blob": "f9ff6ff156a2542895c9c287dcd94003f65e6895",
+      "path": "results/research/06_ci_20261007_37563992665_excerpt.log",
+      "sha256": "645eceed2d242d3a09e6abfd51f45f23ea59373f39115ecdd4ed178b5437a0e9"
+    },
+    {
+      "bytes": 4398,
+      "git_blob": "e26c96623c79be51df0ec598e77f3672e37ce175",
+      "path": "results/research/06_ci_20261007_37564586928.json",
+      "sha256": "93bfd8e8adb0983733fae446ac79d3c14e4a7c1e3853daec4cfeafcac4572f69"
+    },
+    {
+      "bytes": 15688,
+      "git_blob": "aee515dc9ed10d37c435747abce34e00ded013c6",
+      "path": "results/research/06_ci_20261007_37564586928_excerpt.log",
+      "sha256": "58ab9d05af68574053de695e5f6ab2313807f757d006110231f132ed6691190c"
+    },
+    {
+      "bytes": 4535,
+      "git_blob": "a70ea40468a59f3a89e3dbcc86f1975deffe93e5",
+      "path": "results/research/06_ci_20261007_37566204008.json",
+      "sha256": "57ffd66fdaff46dc0525052faeb08a343fe014bf56e4e8c83ddf72d13fbff2e3"
+    },
+    {
+      "bytes": 16139,
+      "git_blob": "de7be0a9dce064a0d6612108ad15bb9fcfe4f46a",
+      "path": "results/research/06_ci_20261007_37566204008_excerpt.log",
+      "sha256": "02e8987b935a8a7801c00efbb26ade5fef1e671216c73716ff192bf7a7ae8bcc"
+    },
+    {
+      "bytes": 2993,
+      "git_blob": "d151dd38494c3f503d5fcb0472041cb3b234ea48",
+      "path": "results/research/06_cloud_preflight.json",
+      "sha256": "18d84809d373eb62846e53b69808786c0ac5e8e00546186ce38cc23de9514693"
+    },
+    {
+      "bytes": 711,
+      "git_blob": "3b63e4522f437f343b222c5902ba9a2762e4fcb4",
+      "path": "results/research/06_local_supervision/item6-worker-supervision-first.xml",
+      "sha256": "76a4c7b90d46b05d33a28cb21ceff6bed9d9e47fc95588c5843ec763eb88a09b"
+    },
+    {
+      "bytes": 395,
+      "git_blob": "4fc4f465530cbd8b93559795a96ab314c4dfc257",
+      "path": "results/research/06_local_supervision/item6-worker-v2-archive-corrected.xml",
+      "sha256": "c71e3292248fd9ecd417311ffb4aca5659db8620cc23d092baf88a68902603cb"
+    },
+    {
+      "bytes": 3666,
+      "git_blob": "20a20172d6ba665852c88c64aa9ab671887b5159",
+      "path": "results/research/06_local_supervision/item6-worker-v2-archive-test.xml",
+      "sha256": "44daf10e9988c4cde8129f2fe50aa557d99a3eb2a98364d99777cff2b17743cf"
+    },
+    {
+      "bytes": 2967,
+      "git_blob": "29bf1a601e60f217ca8a13634e35603dab1a9ade",
+      "path": "results/research/06_local_supervision/receipt.json",
+      "sha256": "758a96451ae8330c12380fdf8fb96c9a4b5960835b02d78d46cde7d378bf5a76"
+    },
+    {
+      "bytes": 37927,
+      "git_blob": "226a3816d8b48c0570c50e8e8ef9144d0b960b1d",
+      "path": "results/research/06_root_review/37566497890-1/budget_prefix_check.json",
+      "sha256": "9fbd61168e5e23ed491cfeb404725a01a67a6e629d7db97a4a7c1adc6e29581b"
+    },
+    {
+      "bytes": 462,
+      "git_blob": "8b476c712b9770e6924353ba3443307ad1657f83",
+      "path": "results/research/06_root_review/37566497890-1/core/analysis_output_manifest.json",
+      "sha256": "2c715dcdc954e4c1c5158a3163e1d44491528e6f76768e674c8b29cd5af1a06b"
+    },
+    {
+      "bytes": 1048012,
+      "git_blob": "676cc25a7cdc8e74541fba0724d61828f3a7a7b1",
+      "path": "results/research/06_root_review/37566497890-1/core/core_analysis.json",
+      "sha256": "2c2ce1e5a584bd635bb6656c6f43c649d9b78ecb8836b4e0b1f0995cfe7c8c6f"
+    },
+    {
+      "bytes": 10535,
+      "git_blob": "428b985f59cd6006a564220f9d5a518cbb224d77",
+      "path": "results/research/06_root_review/37566497890-1/core/core_contrasts.csv",
+      "sha256": "7be8788395f5cc476fcc03d6d62ffc8a1ed10bcc0b942a91a4805770865b090d"
+    },
+    {
+      "bytes": 10249,
+      "git_blob": "f29dd0e0444ac179d521b5e79d60373d3fb2a256",
+      "path": "results/research/06_root_review/37566497890-1/core/core_scores.csv",
+      "sha256": "130ade345987eaf74563ed2e5c12df0554674dafe504845bb09332d14beab03c"
+    },
+    {
+      "bytes": 33503,
+      "git_blob": "b25a6173a32da913b1d7e35dcc9fccd6f2581ea4",
+      "path": "results/research/06_root_review/37566497890-1/figures/06_core_paired_scores.pdf",
+      "sha256": "52f337a6a4b8a1dee96919380c25e80296a1976e87c36ac63d73ddab4f804546"
+    },
+    {
+      "bytes": 442651,
+      "git_blob": "f872b89b8be12c28d5450858d0d96406b342eaa6",
+      "path": "results/research/06_root_review/37566497890-1/figures/06_core_paired_scores.png",
+      "sha256": "842d3598657d4e998b9fcf3be468ca2fbcce54a8f251104294f73e4904759a7b"
+    },
+    {
+      "bytes": 61942,
+      "git_blob": "f3f0bafd2413773b794d2cf3318f9f8cf0191a75",
+      "path": "results/research/06_root_review/37566497890-1/figures/06_growth_binding.pdf",
+      "sha256": "93470e40f8b545677c83ad23936c8654a7ea3809f24c5ef9dd6f026b92c4462d"
+    },
+    {
+      "bytes": 472720,
+      "git_blob": "d0f66b5d5360b7abef280029f7588e32ee7988f6",
+      "path": "results/research/06_root_review/37566497890-1/figures/06_growth_binding.png",
+      "sha256": "3a5941232f127b4e3c86f3d1e9402343cbe382170ff5b765a31e34fee151afb9"
+    },
+    {
+      "bytes": 4797,
+      "git_blob": "5eecc420cb6b2abaf5fc8961b3adc8dd4b1f074a",
+      "path": "results/research/06_root_review/37566497890-1/figures/06_plot_manifest.json",
+      "sha256": "e0a21fe9f3eed956cd737af08532789113dcbdcb45c5ad457fc55b20b58ddbdb"
+    },
+    {
+      "bytes": 33522,
+      "git_blob": "497286cff1c67cf7e6d7aa9ec355d2e3a027a936",
+      "path": "results/research/06_root_review/37566497890-1/figures_final/06_core_paired_scores.pdf",
+      "sha256": "42d6dfb58394907ecb1bd0aa860fb55badfb160927989f6b70c70fd0cd885a09"
+    },
+    {
+      "bytes": 439569,
+      "git_blob": "7f9719556ed925c13443b2943b049962644a655a",
+      "path": "results/research/06_root_review/37566497890-1/figures_final/06_core_paired_scores.png",
+      "sha256": "cbd238c91ed6e1a4bdfe8631891a61a6434e27bbc42db0d923979a699ce3e8e5"
+    },
+    {
+      "bytes": 61961,
+      "git_blob": "98ed5818625c3e6c0af33e393daa0a7b8b1f63f9",
+      "path": "results/research/06_root_review/37566497890-1/figures_final/06_growth_binding.pdf",
+      "sha256": "598e5c333e1c68c6bf736f154f7ef15b6e728b7d63a8ce4f7f1bb0f788d642f5"
+    },
+    {
+      "bytes": 469543,
+      "git_blob": "c9a5f55b8b74a7147042156a4deec588f2babff9",
+      "path": "results/research/06_root_review/37566497890-1/figures_final/06_growth_binding.png",
+      "sha256": "d539171e18fde258a57b98b0ea38c5cecf303ddfa7e6a5e07b9ee92ff2ef81d7"
+    },
+    {
+      "bytes": 4830,
+      "git_blob": "d4c18d1f1c9b19304c2fcb13dfbc44a269de6caa",
+      "path": "results/research/06_root_review/37566497890-1/figures_final/06_plot_manifest.json",
+      "sha256": "69882fd96f4413123ab39ceaf91bfeaa63a13d422d554ff47c776f7742f7b534"
+    },
+    {
+      "bytes": 129268,
+      "git_blob": "8a3e14e0d8ef89de4f076dd9a7cf91420c5c1547",
+      "path": "results/research/06_root_review/37566497890-1/final_archive_audit.json",
+      "sha256": "50a0a42742d7198d8c3884215ae54178479f09b1a1db925c32784deec93d048e"
+    },
+    {
+      "bytes": 2484,
+      "git_blob": "c6e8cab34315b87092a5f20ebf0106506a2e70d3",
+      "path": "results/research/06_root_review/37566497890-1/github_job_status.json",
+      "sha256": "64f0bc8a91a008d66cd9ff15069c1eef784dd5615ec6e4e97e2166b45211050c"
+    },
+    {
+      "bytes": 932211,
+      "git_blob": "699068cdd40d92874550992a136da40fd7fc4934",
+      "path": "results/research/06_root_review/37566497890-1/growth/06_growth_analysis.json",
+      "sha256": "6f73d8df5b2ea98333f2c0bc5c5815104a1b3daf691faef7afc0cc1de548b948"
+    },
+    {
+      "bytes": 106574,
+      "git_blob": "7fc4b6b5765ea90295c2617616f05d7e599e11e7",
+      "path": "results/research/06_root_review/37566497890-1/growth/06_growth_contrasts.csv",
+      "sha256": "40216c20a6db5f551c01ad673792f8620bbae8d44ab9b02fd122b533257ec9a2"
+    },
+    {
+      "bytes": 27773,
+      "git_blob": "3e9756f306caf6e84dd2376de2ef0048c0bf9ba7",
+      "path": "results/research/06_root_review/37566497890-1/growth/06_growth_runs.csv",
+      "sha256": "31ab3c686fb36ac1344c4a13ffc4264ddf40db373832f5d089f3ce5a60599b1d"
+    },
+    {
+      "bytes": 2670,
+      "git_blob": "b401f32efdac279d497ca720076d3477ce670f72",
+      "path": "results/research/06_root_review/37566497890-1/recount_comparison.json",
+      "sha256": "a240c915c15cfd2d311541ddf7f6e4b560a8a7a1df1e5a0883426760ce0fd7c4"
+    },
+    {
+      "bytes": 2205,
+      "git_blob": "06fa053203dad34f2c64fd7c4e2361686a4daf32",
+      "path": "results/research/06_root_review/37566497890-1/report_review.json",
+      "sha256": "48d30a33a912229ff8f49475e8c16a75fa2adef1fc16a0b4038dca6c0d75adee"
+    },
+    {
+      "bytes": 2934,
+      "git_blob": "2789d9876b76cddaddd81b3384925712986a65d4",
+      "path": "results/research/06_root_review/37566497890-1/review_operations.json",
+      "sha256": "908647b13c2be7106276a009ee8dcd6a4f96a71708f8b829e1c14425c0603442"
+    },
+    {
+      "bytes": 1234,
+      "git_blob": "ccf0de9ad8765b3b60017a2789bdd94471e7e495",
+      "path": "results/research/06_root_review/budget_prefix_seed20_school0_partial.json",
+      "sha256": "b1b8adce61cad7b02a8f963f4e396dff25201eca73d2cc7533dfea33e7d22630"
+    },
+    {
+      "bytes": 662,
+      "git_blob": "1434febfdb26d825e50d9ffd7af27e91124c7290",
+      "path": "results/research/06_root_review/interim_archive_e383200.json",
+      "sha256": "87ce1a629d7d956440f37bdde00cf1c9845030080f3b19a39622b03307e12dfe"
+    },
+    {
+      "bytes": 22321,
+      "git_blob": "1e31ffb3d404ce27ced67e01a8b80447783695b0",
+      "path": "results/research/07_inputs/item6_growth_partitions.json",
+      "sha256": "eff760e91613cd88a75f05231e11fe811674f4ef76d5469a412b9e5ea26f629f"
+    },
+    {
+      "bytes": 19282,
+      "git_blob": "157d1f02301976c07862490de9b1cffda86d9d50",
+      "path": "results/research/07_simulation/20261007_01/analysis.json",
+      "sha256": "9f951576690e4c3a509d1242f7e5b68681b4e9b112968cea0bd3bc9d4f776851"
+    },
+    {
+      "bytes": 1768,
+      "git_blob": "a7adbe7795cc8391ec35374b7620a98c8c095479",
+      "path": "results/research/07_simulation/20261007_01/artifact_manifest.json",
+      "sha256": "e25030099e0cb631d23701b878d92f3c2d980ea68c677d157ac531e8853f755d"
+    },
+    {
+      "bytes": 969,
+      "git_blob": "d3684c4cc44fc657ab8abb53f8c1f7c3cbba47ab",
+      "path": "results/research/07_simulation/20261007_01/environment.json",
+      "sha256": "1d4c19630334017751be27c3235b82b0fbf0bd8aad73f54a5309c554a13360dd"
+    },
+    {
+      "bytes": 713,
+      "git_blob": "70d32b06ba5f2e3fb1c6cb41ee3dbf2f478c0135",
+      "path": "results/research/07_simulation/20261007_01/events.json",
+      "sha256": "ca9771bac5e1c4ce2aa98ce0cc20d78e086a1c3b946b25edee14879142fc31c3"
+    },
+    {
+      "bytes": 605208,
+      "git_blob": "6fe5f3a52c95b3000f3b166f18ccbff22250fd2a",
+      "path": "results/research/07_simulation/20261007_01/final_counts.npz",
+      "sha256": "1e36698b385732e554df19e236fd747de3b6b1ee36686aef21379bd7bc89524b"
+    },
+    {
+      "bytes": 1110,
+      "git_blob": "384e1de16d334a3fc448db8431d337da12e1bef5",
+      "path": "results/research/07_simulation/20261007_01/frozen_plan.json",
+      "sha256": "77941082f44b8bf9132bea7b8371a0a388e8e700de42794b421584973b771bab"
+    },
+    {
+      "bytes": 19826,
+      "git_blob": "145650744176f1195a0d241580955833a60e22fa",
+      "path": "results/research/07_simulation/20261007_01/methodological_evidence.md",
+      "sha256": "4e5c4fef9409a498aa005a58d41bb4afc1edb3694277f6f0dc825e575a7e84fe"
+    },
+    {
+      "bytes": 2291470,
+      "git_blob": "57af29678ed70e33d6537c89c3d2c44598a04c6a",
+      "path": "results/research/07_simulation/20261007_01/replicates.csv",
+      "sha256": "ffd9e5b60ea6d28537d350cef594b7ac100d7e4518cb808839dec7ffe3405158"
+    },
+    {
+      "bytes": 1098,
+      "git_blob": "356d1aaeb6940f382436ae2843202418d1fadd63",
+      "path": "results/research/07_simulation/20261007_01/resource_observations.json",
+      "sha256": "b9bfbe456abf30a8de5ecb5702a4df291e47aaea678d6583206dd7eafcdb8121"
+    },
+    {
+      "bytes": 1631246,
+      "git_blob": "da5a1e25f115fe94620a3669c664544b37d0138b",
+      "path": "results/research/07_simulation/20261007_01/selection_counts.npz",
+      "sha256": "85a5409970832df28e3d02c3e232c9b9ace95917dc695df5d892f0f3831a7b76"
+    },
+    {
+      "bytes": 1003,
+      "git_blob": "e9a3d1ad24e8b3153eee17d6f5a9e651411d003c",
+      "path": "results/research/07_simulation/20261007_01/selection_receipt.json",
+      "sha256": "130c1c19109582af91b1e87d09791af5585bba7906533655a5973207211f825e"
+    },
+    {
+      "bytes": 23689,
+      "git_blob": "7a20c3450e1dc9e4cb80ac101e219b7c8abb2723",
+      "path": "results/research/07_simulation/20261007_01/source_snapshot.py",
+      "sha256": "aff9c6cd0b27f503d3305871c69a7e3b580ef5f2d569aaa1cfb5fa4935b65779"
+    },
+    {
+      "bytes": 20574,
+      "git_blob": "090c9e2702aac6542aa55121f1e8909cdbe630ac",
+      "path": "results/research/07_simulation/20261007_01_root_audit.json",
+      "sha256": "2f1f200bca893c7532274eb9e356741a5d41762720ed1100bbdcde02789e98dd"
+    },
+    {
+      "bytes": 2283,
+      "git_blob": "db63837e0f10963444554660b4f5b7d116039b8c",
+      "path": "results/research/07_simulation/figures/layout_correction.json",
+      "sha256": "ba4dac27176b819c43870d7cd5c2564d21e85307f52957e8dcaefcd6c12b6308"
+    },
+    {
+      "bytes": 9673,
+      "git_blob": "7d63a413524c0de45af0b0d4d503b805d9a715ac",
+      "path": "results/research/07_simulation/figures/render_01/research_plot_holdout_selection.py",
+      "sha256": "0acde978da8d7e28be06d070b9f282694276365d20b84aa76ec58324e2880501"
+    },
+    {
+      "bytes": 24607,
+      "git_blob": "78c8070915d0010eed3fc1fdd9e96e14f72b708b",
+      "path": "results/research/07_simulation/figures/render_01/selection_optimism.pdf",
+      "sha256": "9dbabe0de36c221f3c9239923dd82ddb500858349886ec535f00204d9e10de73"
+    },
+    {
+      "bytes": 197526,
+      "git_blob": "9727b52d8a9a7b641a01c449a740686c220dac31",
+      "path": "results/research/07_simulation/figures/render_01/selection_optimism.png",
+      "sha256": "04d7ad4a539cac27e89663849be8c8fc5e3cf821d10a3259d2452f7d611516e8"
+    },
+    {
+      "bytes": 3879,
+      "git_blob": "ce3231c49d2eed9b2a69331b2e2e4a0036abc77f",
+      "path": "results/research/07_simulation/figures/render_01/selection_optimism.receipt.json",
+      "sha256": "0cabc7529de6bc8d6b13e5eb240ec43e6eeed0df573f42022256252c2aec77dd"
+    },
+    {
+      "bytes": 24636,
+      "git_blob": "72e5d07cd66a331651d3f1ba3c2b661ead8b745e",
+      "path": "results/research/07_simulation/figures/selection_optimism.pdf",
+      "sha256": "e7b953856d6bb196fe2c68a722933867b2b5d7c1c60fd06072bc7d90eee8e579"
+    },
+    {
+      "bytes": 194895,
+      "git_blob": "00d9212b5d64f70135444e8bff33e035d3df30f3",
+      "path": "results/research/07_simulation/figures/selection_optimism.png",
+      "sha256": "1235def419eca9d8e8ccbe8beb9b69b68eef86b170e4e4c53a740cfb13fa27bd"
+    },
+    {
+      "bytes": 3880,
+      "git_blob": "858b8edbead9089c12b82224855a64f2bf861cdf",
+      "path": "results/research/07_simulation/figures/selection_optimism.receipt.json",
+      "sha256": "34d1a1b6b992030793ab628174f1b150f4a7c04581878c4b541acadab7ee90e6"
+    },
+    {
+      "bytes": 280493,
+      "git_blob": "1fa9260df4acb5aff676715f776353e77ee3a98d",
+      "path": "results/research/07_split_exposure.json",
+      "sha256": "9203b599faf4c8ae1d6c58491adb9877ec751aca08e7f5b8a439f82e51100340"
+    },
+    {
+      "bytes": 45393,
+      "git_blob": "5d7776d1e685f1421e8da02848db13d1db53595d",
+      "path": "results/research/07_validation/cloud_archive_audit.json",
+      "sha256": "cd114c561b9e44c994fd1523b47f72d6200d1392a8a7ffee5013cbe41cf7ad4c"
+    },
+    {
+      "bytes": 3881,
+      "git_blob": "d77a0a04c2d3c03d25acb045fd1180f3cf4d2d2d",
+      "path": "results/research/07_validation/governance_corrected.log",
+      "sha256": "476fe8ea9b73a9eee3bb203529ba3e91494c3f4d583139b41c2fdef9613f8be4"
+    },
+    {
+      "bytes": 833,
+      "git_blob": "fa21b9bce325ba2768773c2258ec6c32e1147a45",
+      "path": "results/research/07_validation/governance_correction.json",
+      "sha256": "075c889b54b2ed87d4f89f5f2966b5452d17e510cbb017c2af9429ba73416f4b"
+    },
+    {
+      "bytes": 4330,
+      "git_blob": "11608ddf8f42c11dd0bdcc897c438800f9b06e88",
+      "path": "results/research/07_validation/governance_initial.log",
+      "sha256": "1152a683340ff6819358629032e1ffb63545702941d1dfa7bae92004264b2948"
+    },
+    {
+      "bytes": 1574,
+      "git_blob": "b781754339136249b65609ad703a28a1e279c3bd",
+      "path": "results/research/07_validation/governance_review.json",
+      "sha256": "6c8651778b511091f234f63990f732109d6adb09a795414ffffb6ad65631640e"
+    },
+    {
+      "bytes": 8210,
+      "git_blob": "88d1ec21f59405517a6df35d2ba42908dbbc9822",
+      "path": "results/research/07_validation/report_review.json",
+      "sha256": "493ed721e374df1ac51601137399852282bbfe1e4e10e5009e716e15777da259"
+    },
+    {
+      "bytes": 3171,
+      "git_blob": "d50b6273d599d81ef8d9db0853740903c5975ee8",
+      "path": "results/research/07_validation/root_review.json",
+      "sha256": "36ac9979bc36d6414a04e3d8e76bc1dd0bfe31a084b094fb2d2a2d8e117735c1"
+    },
+    {
+      "bytes": 18836,
+      "git_blob": "042ab242d9223ddf430add3d936dd92561c3b53c",
+      "path": "results/research/07_validation/split_governance_initial.py",
+      "sha256": "c5e384391307cefd43c7a0ec7fdcf6e329f2539e22a658550a76c3b8a304cc4e"
+    },
+    {
+      "bytes": 998,
+      "git_blob": "fc62ac48a25e568bb55071876210a535bc974614",
+      "path": "results/research/07_validation/worker_review.json",
+      "sha256": "7fe826868d4c70428bcafbefce6776129f6d59a95abbcfe96ffc998ca3c3bd3e"
+    },
+    {
+      "bytes": 697,
+      "git_blob": "dd7d0d496500a187d53d61f9931c3ffb3eb50a7c",
+      "path": "results/research/08_validation/archive_retrieval.json",
+      "sha256": "072fadfe2a77153c87463309d99916b4567725c6ecb380158be302de0b932309"
+    },
+    {
+      "bytes": 873,
+      "git_blob": "cc2e24410c8d1496efde936a8767332cc0b6c998",
+      "path": "results/research/08_validation/classification_corrected.json",
+      "sha256": "e10ad1d47e5da8fd3e90f2106f4cbe554f4eaf418f38699ae15ddec9f49091df"
+    },
+    {
+      "bytes": 1728,
+      "git_blob": "d69e3dd0124f1997b3dc65975162c15e1c5c0b12",
+      "path": "results/research/08_validation/classification_corrected.log",
+      "sha256": "ff5eee876fdbab07fdddb3ea0bb3b238032489c4c6dbe1b78d14f40f334a5e3a"
+    },
+    {
+      "bytes": 856,
+      "git_blob": "f2b32e09a158ce5a618488a233092d1afa377eea",
+      "path": "results/research/08_validation/classification_initial.json",
+      "sha256": "76228127e09f87c04ccbb46fd2785beeebe6d6e7fc25b0523f0f8ca659d9fb04"
+    },
+    {
+      "bytes": 24802,
+      "git_blob": "a0330e6bd185136948172a702f2276459693e8a0",
+      "path": "results/research/08_validation/classification_initial.log",
+      "sha256": "ce5f1f8976270cf72736b97f9fdf9fbff8402d8d021842f1aa0f9ee10037cd77"
+    },
+    {
+      "bytes": 368,
+      "git_blob": "0fc7f8817522e74225e2d13ab9f50a2646121df2",
+      "path": "results/research/08_validation/classification_source_before.json",
+      "sha256": "9db885b4d7491a2b0b2a0c8bf84ccc4bc8d8a028bd8d53ca74f297d9a2ae2eae"
+    },
+    {
+      "bytes": 20174,
+      "git_blob": "17c31f0f387812161d243b995283f67629d4ca05",
+      "path": "results/research/08_validation/classification_source_original.py",
+      "sha256": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad"
+    },
+    {
+      "bytes": 19928,
+      "git_blob": "e09f35a4c1af8ee993a6bab6e7ebf1d76d799cae",
+      "path": "results/research/08_validation/cloud_archive_audit.json",
+      "sha256": "93aea729bd202efadae267423e055ba5521175b0c0cda0a34753406f6575f202"
+    },
+    {
+      "bytes": 901,
+      "git_blob": "e14eab56bb6bcff240c889a618efe4b55df188b2",
+      "path": "results/research/08_validation/cloud_retrieval.json",
+      "sha256": "5b0bef92cbb108c5b26de99ee5d611b70faa0687e922d7aa62ea730ac1149c52"
+    },
+    {
+      "bytes": 3484,
+      "git_blob": "0b7f7da6d4def548f7ddaea74f5a84f00cebb732",
+      "path": "results/research/08_validation/development_sampler_test_before.py",
+      "sha256": "698c7a7184cf12a7b6abdf0fd71d5723c84d0ce87c1221ae163e6ed3147a764e"
+    },
+    {
+      "bytes": 818,
+      "git_blob": "10087f6331a14f1fa2c26d8e21323f6eaba9bc69",
+      "path": "results/research/08_validation/freeze_review.json",
+      "sha256": "f747d1f5104bade4f55b03e8487f168576a4fd09572339529c30d1e51dc71815"
+    },
+    {
+      "bytes": 2272,
+      "git_blob": "28f31a775dcb49f17604c5306bdbfddc96757251",
+      "path": "results/research/08_validation/github_job_receipt.json",
+      "sha256": "5a392b45cdddb3534136f278dd06f0144d5acf791ece2b65e6df6b45d254a3da"
+    },
+    {
+      "bytes": 20409,
+      "git_blob": "03cc1907037b11b310e1c7b09e0071ce983f29f6",
+      "path": "results/research/08_validation/historical_ablation_test_before.py",
+      "sha256": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7"
+    },
+    {
+      "bytes": 958,
+      "git_blob": "b22f549464a303301a0f529746403c100703215c",
+      "path": "results/research/08_validation/historical_fixture_corrected.json",
+      "sha256": "71b26104159f79f40120cb65e5f25d332db2b072f26bc5dfeb8b31591ebfbd7a"
+    },
+    {
+      "bytes": 1235,
+      "git_blob": "ed729a8a4d0d0b69b207089469af1a6d4c6f5866",
+      "path": "results/research/08_validation/historical_fixture_initial.json",
+      "sha256": "4361ce14a7d0cfb48c14c27db28c347de8966da40bae0bd6b2cc65eb3c7b8491"
+    },
+    {
+      "bytes": 3396,
+      "git_blob": "cfdd81c805395ac44c8c11aed3b7dd4b180d6e4f",
+      "path": "results/research/08_validation/junit_reporting_audit.json",
+      "sha256": "13c486350055b95c14ef63f6e8dd76002a5db7cc13b2fd560ac7611f42ebcf87"
+    },
+    {
+      "bytes": 75636,
+      "git_blob": "47d8b064b10493ff0da51e0e48bbe8a69d94f88d",
+      "path": "results/research/08_validation/local_evidence_audit.json",
+      "sha256": "5ab189b2b2e71de37c571f878642081e561d214e4f84a88b142a26a155e13318"
+    },
+    {
+      "bytes": 14729,
+      "git_blob": "a0943ee00c870ede886345f323718859774e36af",
+      "path": "results/research/08_validation/padding_analytic_recount.json",
+      "sha256": "85d360478dc8201a9cdd83ec0f98cad9c2fbd281490564ec0224d2ae85094a58"
+    },
+    {
+      "bytes": 6610,
+      "git_blob": "257982f977cf713d4611b9a32b38eb56adcc6f19",
+      "path": "results/research/08_validation/padding_model_before.py",
+      "sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701"
+    },
+    {
+      "bytes": 400,
+      "git_blob": "b68a939f071a3d4effa004218be891ec9362059a",
+      "path": "results/research/08_validation/padding_source_before.json",
+      "sha256": "fbc89571381e53b4e0b37969296ee4265076b04974a205da1dad4bdfe9a558d7"
+    },
+    {
+      "bytes": 1119,
+      "git_blob": "8efcd39d923a9f4690b33e640d51b0f89dede72c",
+      "path": "results/research/08_validation/padding_static_receipt.json",
+      "sha256": "bead034963d40245a7d8a327c25cfee318cf2d4a67fede0e4e55acd3f5fb34dd"
+    },
+    {
+      "bytes": 801,
+      "git_blob": "6b8584ae9d84afaeadd94726d911a54b2e4f9e38",
+      "path": "results/research/08_validation/protocol_review.json",
+      "sha256": "baeae6fbc8c13446af5901c1780cd09de494fa89480a450d48c2d95f8b79071e"
+    },
+    {
+      "bytes": 12206,
+      "git_blob": "615c8c28a9efe1a0bd49fe6eaf72aa4d2f1700a7",
+      "path": "results/research/08_validation/report_review.json",
+      "sha256": "cf5a473da7ca9059cabb6e1df9f62f32ef67198475ad03df4c326d27872eb60e"
+    },
+    {
+      "bytes": 1739,
+      "git_blob": "ac47dbd62adf750ab5c6b6778254c661da0585c4",
+      "path": "results/research/08_validation/root_source_review.json",
+      "sha256": "8cd3c8656a10f7b7393d7af951d5b828b3516fe05b9d6460f48138c11a4c5327"
+    },
+    {
+      "bytes": 891,
+      "git_blob": "ff000f70fadbef01e776b284029e78ba7e6758ec",
+      "path": "results/research/08_validation/routing_corrected_run.json",
+      "sha256": "595de9c97a065affc51d77c3b14fc5e5805c08cf69008189f1f2c891db3754ac"
+    },
+    {
+      "bytes": 2390,
+      "git_blob": "45e63c6a72c5c08d337095948b792ec921c64d79",
+      "path": "results/research/08_validation/routing_corrected_tests.log",
+      "sha256": "dc2401b227586b5003c37eeca58a15e6fa8c80d2f3852078209ef85fa6676721"
+    },
+    {
+      "bytes": 386,
+      "git_blob": "0f69e0cefc74e61a23442574f33f559eba9a3e3c",
+      "path": "results/research/08_validation/routing_legacy_failure.json",
+      "sha256": "4fd3c6fa2385aece78b5f01fa633a5f8712ea21f28e4960c004343932cb53520"
+    },
+    {
+      "bytes": 1044,
+      "git_blob": "36ec53192409391174ea2b443cb3b156fb21c178",
+      "path": "results/research/08_validation/routing_legacy_failure.log",
+      "sha256": "b33f1806a101823035b47ac90d1a723cbf082f7a55aa8931b35802e8aaf1f17c"
+    },
+    {
+      "bytes": 1624,
+      "git_blob": "6eb02a09526d710cca07b405179ae93a29e4b1e1",
+      "path": "results/research/08_validation/routing_legacy_reproduction.py",
+      "sha256": "e39922f8714482b24ce17fd78bc0eaaa0738211f96312a1e7c30866e0322b66d"
+    },
+    {
+      "bytes": 28698,
+      "git_blob": "f5256c03162f2d0cb4aa63e7baba32aa58266abd",
+      "path": "results/research/08_validation/routing_phase3_original.py",
+      "sha256": "e12ceeeadfcf875ec3b1f0b584f58226fdd7b2f077f05bd09d807fa6eb340ca3"
+    },
+    {
+      "bytes": 351,
+      "git_blob": "c1e549a8847ea2c6f0bddcf6435aa491c73210d7",
+      "path": "results/research/08_validation/routing_source_snapshot.json",
+      "sha256": "cd32f1c0db3bc69e1e6cd47ef3d0847888d6fe6609d2e7e7f443871ac290fe93"
+    },
+    {
+      "bytes": 3834,
+      "git_blob": "827f229299caca549aa7350464f496f837c07a00",
+      "path": "results/research/08_validation/routing_validation.json",
+      "sha256": "523e3c200895eab6db7cbcf9b8e2f18840448fa4bca5ac9162a6775b301edb46"
+    },
+    {
+      "bytes": 772,
+      "git_blob": "7ae161d369191e56dad6bbe8cad2b6fc8a446cf2",
+      "path": "results/research/08_validation/soil_corrected_tests_01.json",
+      "sha256": "4fe7075b451d538df77726402579fc4f0b50003dacedc92c71fa09f4d9dfb010"
+    },
+    {
+      "bytes": 2657,
+      "git_blob": "e75c0d6265fdb968b1bc26719901c9f7d462906c",
+      "path": "results/research/08_validation/soil_corrected_tests_01.log",
+      "sha256": "a38ed8725559ae301a49b88f5c7cbd8eea50a8a7e177be93d751e84eaa8f8fa2"
+    },
+    {
+      "bytes": 784,
+      "git_blob": "b07072217fd8f10cecd31af22f0687bd09cc3789",
+      "path": "results/research/08_validation/soil_corrected_tests_03.json",
+      "sha256": "d06c93758e33d2227893956a224977c669d34bc36703c72f66cca18a016f0e32"
+    },
+    {
+      "bytes": 2975,
+      "git_blob": "fdcaebb7a569f5bcecf71887084b03a5acbf84bf",
+      "path": "results/research/08_validation/soil_corrected_tests_03.log",
+      "sha256": "fe0058d39e008263ced9c9a34b6c8d94b8091d933869ea69daf8f62febb4d32b"
+    },
+    {
+      "bytes": 2421,
+      "git_blob": "622267e33805a5438f63b08e6073883edeb6f429",
+      "path": "results/research/08_validation/soil_final_inventory.json",
+      "sha256": "9ab0b4c33032a0ed056146522f80d4bc16b55f9b3cbceb4c136b5ff17da4aefa"
+    },
+    {
+      "bytes": 698,
+      "git_blob": "87b7a2212383bb2ec663112e076ff397f9938b94",
+      "path": "results/research/08_validation/soil_legacy_witness.json",
+      "sha256": "fd640d8314ad3c422b51aae63cf25b5f486c4ec6b18bea7e49d220aaf0519291"
+    },
+    {
+      "bytes": 2962,
+      "git_blob": "02b457e6d1ef1bc9bee1e14d7379cba51f6071b0",
+      "path": "results/research/08_validation/soil_legacy_witness.log",
+      "sha256": "f6ce7ad1e9b6a362a35b94900f63a1a6d9dbadf366db3629ea9ec2889c469efd"
+    },
+    {
+      "bytes": 2417,
+      "git_blob": "970a81d16aba5331f6990477e107b457e4f7d210",
+      "path": "results/research/08_validation/soil_legacy_witness_source.py",
+      "sha256": "3dd038a875ebe604f89af8210ff711b949c7bece5e60a1421db390fd1bdaa032"
+    },
+    {
+      "bytes": 12289,
+      "git_blob": "74ec178cd7c828d809ffa902c458b0930837a427",
+      "path": "results/research/08_validation/soil_recovered_19_driver.py",
+      "sha256": "f7e8b2392914f4c6d9d84df2a1cf80350dfcbf5b6da44a8473f548012171b4c1"
+    },
+    {
+      "bytes": 6666,
+      "git_blob": "d2f6e11206d69ddef6c031c3ce61ef7b97efd8f8",
+      "path": "results/research/08_validation/soil_recovered_19_evaluation.py",
+      "sha256": "732846b3b2c7c1aaed6e1cfe45e5b1d4fd69aecfa0360f468af1be5d04abd46a"
+    },
+    {
+      "bytes": 12507,
+      "git_blob": "1c71ebd02a3f53be92e8ace229c94375c03dac38",
+      "path": "results/research/08_validation/soil_recovered_19_tests.py",
+      "sha256": "8386ab0a7a7df05965f71ff7b6675e7296d944b56872b92e68e07f6d2a328d7c"
+    },
+    {
+      "bytes": 12573,
+      "git_blob": "7069718539c00b01bfd9a11dcf30cbf56abea06d",
+      "path": "results/research/08_validation/soil_review_source_02.py",
+      "sha256": "cda8b60c284421a89a98ffa4e4759cdd40901b57bcae5cb32de10876bdb5cccc"
+    },
+    {
+      "bytes": 14877,
+      "git_blob": "d3dc4af065e2640ba89bccb2f89a0ba506e84b20",
+      "path": "results/research/08_validation/soil_review_tests_02.py",
+      "sha256": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658"
+    },
+    {
+      "bytes": 432,
+      "git_blob": "621a1694eea29930bde9e4a58ffb0494d2285204",
+      "path": "results/research/08_validation/soil_review_witness_02.json",
+      "sha256": "8b5140a68989559384fb57087f0dd1e7b1aeee6b65ac12cd8b6c76c4bb5576b3"
+    },
+    {
+      "bytes": 4831,
+      "git_blob": "3bf1089b9054e51c8b9fe3678da11c7626bf124f",
+      "path": "results/research/08_validation/soil_review_witness_02.log",
+      "sha256": "4cc80fdb7123f93b375893acea4ac41842faaf26fcd97ddacf33a16d271e2313"
+    },
+    {
+      "bytes": 387,
+      "git_blob": "64a73e9caa220203023c19ba70f44784ec0346a7",
+      "path": "results/research/08_validation/soil_source_original.json",
+      "sha256": "d833642f8622abdef5d7955215c449fb2c37d62f490786181b5917e6c9f595d5"
+    },
+    {
+      "bytes": 9621,
+      "git_blob": "cd3de9a3b1c157184a0fe59d134a62ce80e5da91",
+      "path": "results/research/08_validation/soil_source_original.py",
+      "sha256": "501ed7c643c8564c5b28efd1f6a027fa3c7f40f6d13d231f2e59cfafd83bb70f"
+    },
+    {
+      "bytes": 2448,
+      "git_blob": "4bacaa78602b3a51fb7cc277c4568d436704457a",
+      "path": "results/research/09_validation/complex_binding_data_test_01.json",
+      "sha256": "7c652fd64d6ddf189e6f8b46bec5bd88bd4fda20e32bb7b5d5a0917153f4cdf1"
+    },
+    {
+      "bytes": 3501,
+      "git_blob": "74b68a35356832a4e0d6e5d38689c538ee99abb8",
+      "path": "results/research/09_validation/complex_binding_data_test_01.log",
+      "sha256": "8b78b6106207968c62c05ba66b0561fbb59307126aea96e34bb1544b41df2cad"
+    },
+    {
+      "bytes": 21807,
+      "git_blob": "be9c6961e7cca857ab7ded95b6ab9c68ded4dbe9",
+      "path": "results/research/09_validation/complex_binding_fixture_exposure.json",
+      "sha256": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699"
+    },
+    {
+      "bytes": 1640,
+      "git_blob": "3361c206ea6ffc6cb05ba3db9f103230b967aae4",
+      "path": "results/research/09_validation/complex_binding_protocol_test_01.json",
+      "sha256": "db84fd15cd07d5fa0b1198bd89a5a27f1de8ff48acc40bd8049c97efc136315e"
+    },
+    {
+      "bytes": 2073,
+      "git_blob": "0169fc202eba7b1d3e0288a3a3612531fa5e3fff",
+      "path": "results/research/09_validation/complex_binding_protocol_test_01.log",
+      "sha256": "10ef015e5607bc68ff8342c949cf77fbdfd5b3bb0fe02c6442ee1a78965200fb"
+    },
+    {
+      "bytes": 2475,
+      "git_blob": "c5a756545cc864caadf3838b6c656fee3671d5c7",
+      "path": "results/research/09_validation/complex_binding_protocol_test_02.json",
+      "sha256": "defc58ce97a9df24131b8619cc83427257059f0c28786d457e8e41d4e6f7eb46"
+    },
+    {
+      "bytes": 2464,
+      "git_blob": "47cbea5e7e7af7db14a0af2ebae31b971288f220",
+      "path": "results/research/09_validation/complex_binding_protocol_test_02.log",
+      "sha256": "ab5713b058b7a8083e5b254e467be3d23f4df6770ad1e9d69c5c01349873d12f"
+    },
+    {
+      "bytes": 1071,
+      "git_blob": "41471d357db38c55ed29248080dfd5a347aa4a17",
+      "path": "results/research/09_validation/protocol_attempt01_source_recovery.json",
+      "sha256": "5c8071006cfcb6466a653c19edb369c67621be6d73b3dc93a6b150294e0e7963"
+    },
+    {
+      "bytes": 9617,
+      "git_blob": "155ea3a5cc2c4ec079893de59fa2d4c564901087",
+      "path": "results/research/09_validation/protocol_gate_attempt01.py",
+      "sha256": "6b0e3087eca7f6019372cd8818d04cd555c3349696eff806a51faa64ff9d9ff0"
+    },
+    {
+      "bytes": 10968,
+      "git_blob": "60074e405cce3c35bd078ec1d792dbff745b63ed",
+      "path": "results/research/09_validation/protocol_tests_attempt01.py",
+      "sha256": "62f01403bd1f37cd3eb49252c4ed8e0e60a4f41035d37116dd405f9de7dc65d8"
+    },
+    {
+      "bytes": 32258,
+      "git_blob": "ca448900b3adeede92276ec94bb2ff1c92982614",
+      "path": "results/research/09_validation/trainer_attempt01.py",
+      "sha256": "abd171a1ca082c96cdf90f3162bab48a52a3c275e569d2d6b939068c4f4953fc"
+    },
+    {
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "path": "scripts/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 16596,
+      "git_blob": "cd9670ce42116524fb7b3de6f25c493259f359a3",
+      "path": "scripts/battery.py",
+      "sha256": "15f0cd9e6a0986f950c8bb6a142dc4c198b902ec256d2b844bd4ce7f8f5c0dad"
+    },
+    {
+      "bytes": 1962,
+      "git_blob": "18e4430c1fcf17953f290e50358a3883b344e5fa",
+      "path": "scripts/eval_roles.py",
+      "sha256": "6c2385cd0b169685c9a960ab26a0e0973b2bd96def2a383dd4771dfabf2b931e"
+    },
+    {
+      "bytes": 15759,
+      "git_blob": "309b1f92c7633dcee977a20563d9c2dbfb49350c",
+      "path": "scripts/make_readme_figures.py",
+      "sha256": "7b8e64d1599b13d904b17c9a29f651cb630ad709a33559545c8c361140213e4b"
+    },
+    {
+      "bytes": 4637,
+      "git_blob": "032bf0b0ee4de02ae6a69e0619449b37ac9368f1",
+      "path": "scripts/night.py",
+      "sha256": "b0a36bd01c6f93fe4952608a517f4d2e3290a626dfc056087dcfcac9b06ab77a"
+    },
+    {
+      "bytes": 29911,
+      "git_blob": "a73b96df3266b8bb382e7dbb7ba86ad651e965b3",
+      "path": "scripts/phase3.py",
+      "sha256": "b07487fb641d56f922b90927974a2a1ef48b5e55f72dea21e6e7480af9ad5615"
+    },
+    {
+      "bytes": 1167,
+      "git_blob": "3acd31a42070726c4506de0e5f90749e0c428022",
+      "path": "scripts/prepare_cifar.py",
+      "sha256": "b232b507e6c2a238f26a52916eb9bb34307f588f32413d8f6f16ffd0aa32fa01"
+    },
+    {
+      "bytes": 7689,
+      "git_blob": "be0cd1d444451d2b9f9ea171863692219be77550",
+      "path": "scripts/report_phase3.py",
+      "sha256": "bb85cf5e978284c2ff433bbb365235be4f3f6a2338893c701762fe91c42a63ed"
+    },
+    {
+      "bytes": 22718,
+      "git_blob": "2b10daf71430c2a65931206a6d3850df110c3d39",
+      "path": "scripts/research_ablations.py",
+      "sha256": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233"
+    },
+    {
+      "bytes": 52875,
+      "git_blob": "0e30e39ce700ebe1d028e5b96d73f8d69573a3b0",
+      "path": "scripts/research_analyze_core_ablation.py",
+      "sha256": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88"
+    },
+    {
+      "bytes": 60110,
+      "git_blob": "b7f51bd2a7df283bad14b29ebf4103fff3576c36",
+      "path": "scripts/research_analyze_growth_ablation.py",
+      "sha256": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d"
+    },
+    {
+      "bytes": 18976,
+      "git_blob": "18b6df6c34d89a9ca0ba5b11ead63881b9edf1e9",
+      "path": "scripts/research_audit_split_exposure.py",
+      "sha256": "486fe06cc7fbfd1c43fb5012618db85fb27645a64b68fe7226ebf7f47e3411d4"
+    },
+    {
+      "bytes": 2246,
+      "git_blob": "43750c8270d8d2c7d83be20ff29d70c2eaa606bf",
+      "path": "scripts/research_check_item6_inventory.py",
+      "sha256": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780"
+    },
+    {
+      "bytes": 5121,
+      "git_blob": "3f81fb7b15949b9c5d3c0f45b87f95f3457b3fde",
+      "path": "scripts/research_cloud_preflight.py",
+      "sha256": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4"
+    },
+    {
+      "bytes": 5317,
+      "git_blob": "d40ac109c075c13fee47dc6053ed7050495ff530",
+      "path": "scripts/research_compare_item6_recounts.py",
+      "sha256": "24ecfe010ead13238a7af6caa46c6aeeeef6e1451c597382ff7a30152c916cc9"
+    },
+    {
+      "bytes": 33708,
+      "git_blob": "60749c4417752559f0aba7e2affd38572c344198",
+      "path": "scripts/research_complex_binding.py",
+      "sha256": "e76ce37640c70a0c3632cf4a2078371a94fdde229cff4aa9bc0f5daf36e7ee05"
+    },
+    {
+      "bytes": 8373,
+      "git_blob": "0dc4cc02fd3a54000bd0c12d40d70f0663ac9b2a",
+      "path": "scripts/research_export_split_pools.py",
+      "sha256": "9e67cdb7b7717f3700a907b002dfbd1a00c012a265ff7494bf79c309543b9a1e"
+    },
+    {
+      "bytes": 40083,
+      "git_blob": "283cf1776e16c4727e42ca753cfd6f7fcafbc26a",
+      "path": "scripts/research_growth_ablation.py",
+      "sha256": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d"
+    },
+    {
+      "bytes": 24260,
+      "git_blob": "aba8d3ff6038b4c90b11266feaee3963772f8e0f",
+      "path": "scripts/research_item6_worker.py",
+      "sha256": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959"
+    },
+    {
+      "bytes": 8612,
+      "git_blob": "e2ccee7103c8db3347186ccd01e199a12c02c725",
+      "path": "scripts/research_item7_worker.py",
+      "sha256": "92ef2cb0ce232ed2d0d5343d5b8751247478230ac6466caff11f5c8b3364c8fb"
+    },
+    {
+      "bytes": 20187,
+      "git_blob": "0ab92a01e71255badf9cf98892080064c18ba278",
+      "path": "scripts/research_item8_worker.py",
+      "sha256": "3f95985464623e2189e2db0daaa5ac96b5f42bea8867cb903f10d346aff6854a"
+    },
+    {
+      "bytes": 30188,
+      "git_blob": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
+      "path": "scripts/research_item9_worker.py",
+      "sha256": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5"
+    },
+    {
+      "bytes": 9673,
+      "git_blob": "f8aca811e4fd4477f594a2bfe088e6da306f787e",
+      "path": "scripts/research_plot_holdout_selection.py",
+      "sha256": "4b5a135c74a44fd2fd7507ee83e876b5830ddb3955c39bfe5aabafb2bfcf97b9"
+    },
+    {
+      "bytes": 20077,
+      "git_blob": "15fd975a303d017a40a72ed0ffcfa233d0853a08",
+      "path": "scripts/research_plot_item6.py",
+      "sha256": "1d9c5afd0224e4118aba2f77a667d9e949df3691a0b80228cb034fbff1e76d3e"
+    },
+    {
+      "bytes": 21268,
+      "git_blob": "7f06e7940277f1134a135fa08dbb722956ef0f39",
+      "path": "scripts/research_render_item6_tables.py",
+      "sha256": "ec8105f133c01a372e7ab9bb2bc41add8e4fc9b4d4540662406ec56ed540192e"
+    },
+    {
+      "bytes": 23689,
+      "git_blob": "7a20c3450e1dc9e4cb80ac101e219b7c8abb2723",
+      "path": "scripts/research_simulate_holdout_selection.py",
+      "sha256": "aff9c6cd0b27f503d3305871c69a7e3b580ef5f2d569aaa1cfb5fa4935b65779"
+    },
+    {
+      "bytes": 8384,
+      "git_blob": "b5c7d780f90cdab21b1b51403c7c9a00b70b2c24",
+      "path": "scripts/research_train.py",
+      "sha256": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    },
+    {
+      "bytes": 22061,
+      "git_blob": "4903813b574c6a61081927b468b5736a15e6f57b",
+      "path": "scripts/research_verify_holdout_simulation.py",
+      "sha256": "25a4db3a15573ad90ba61e6d5900f4674483364fcf56b6251051563d4b9e1054"
+    },
+    {
+      "bytes": 19859,
+      "git_blob": "417d7e740764aabc0809861b2303afeac15a6962",
+      "path": "scripts/research_verify_item6_archive.py",
+      "sha256": "8e4db679255fc3be09df2abba68f54e392c500f82e7af84a6c10710de54c900f"
+    },
+    {
+      "bytes": 8143,
+      "git_blob": "6aa724f3ca3ae93fd19a5871b32e85858a665fad",
+      "path": "scripts/research_verify_item7_cloud.py",
+      "sha256": "33bddc0f635b30106c93f58d6efdcc6fc4d4f62e311f8e116080a4a084001bb3"
+    },
+    {
+      "bytes": 11171,
+      "git_blob": "b0b955ea4e5adac9d98916b5cdcac3779ff24c14",
+      "path": "scripts/research_verify_item8_padding.py",
+      "sha256": "58f29ee137b181d13f44e6a3532591b6f8531d531a72ae89a0b5e8032f985533"
+    },
+    {
+      "bytes": 2415,
+      "git_blob": "328d92d1f9ec67f09c8a8e3e09ab01e162e9765c",
+      "path": "scripts/scan.py",
+      "sha256": "1f40274f426ea3d9b3d72f5bfd777caeed53b2971967e5162605949d45944914"
+    },
+    {
+      "bytes": 3924,
+      "git_blob": "baaf07ef31f583a872bd0228fb761d8905fa5224",
+      "path": "scripts/sweep.py",
+      "sha256": "4f076d3a44ff0d0224eeeb97da5a9d8edf923157094b6119afaecfea2260a1c9"
+    },
+    {
+      "bytes": 8635,
+      "git_blob": "39b7a0f25518e9481fd3ba062d27701c0cc41a09",
+      "path": "scripts/train.py",
+      "sha256": "c72d07898688e4e906b5ff8897603d5a0cdb4c07f9a3876e744728601c51238f"
+    },
+    {
+      "bytes": 9376,
+      "git_blob": "b4bcd304c73cc5739e980e1ce2ba9986f5367631",
+      "path": "scripts/train_cartilla.py",
+      "sha256": "a04e49791220bf4fc93ef9acc52a9c090f7d204209a9e5defe54cefac998847b"
+    },
+    {
+      "bytes": 6900,
+      "git_blob": "cc590f28de44252946c1116c05a777b8247ff4b3",
+      "path": "tests/test_classification_contracts.py",
+      "sha256": "3e7ba9654c80392a1cb22907626030bf70a16ada41daf129ae191b9bf3f96fd8"
+    },
+    {
+      "bytes": 14651,
+      "git_blob": "0bdb8271652daefa6749c3342fe48fc0e5754cd0",
+      "path": "tests/test_complex_binding_data.py",
+      "sha256": "4bd206ed35407d05607df4a958b117fa92bc3e14e7d5c497b3625542631ce296"
+    },
+    {
+      "bytes": 15395,
+      "git_blob": "4e101d8b0d5f77ba1a3980e9e51554550b87f949",
+      "path": "tests/test_complex_binding_protocol.py",
+      "sha256": "32bcfc789a12ae46b2ceb376649c6fb9864372f01ab5864058f2928c53d83307"
+    },
+    {
+      "bytes": 6799,
+      "git_blob": "a09bab50ddc3f8d5c495ab4b45effd6217a0a084",
+      "path": "tests/test_core.py",
+      "sha256": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07"
+    },
+    {
+      "bytes": 13574,
+      "git_blob": "df220b1412750bce3571886648fa277182ddbdf3",
+      "path": "tests/test_padding_invariant.py",
+      "sha256": "3c35b37c807b69492c3ac6e76a89c2d859fe08cbd6687250445dadb3388db830"
+    },
+    {
+      "bytes": 21025,
+      "git_blob": "09a26abe9d2e91cc75832a0a4ae7d82966b5cf2a",
+      "path": "tests/test_research_ablations.py",
+      "sha256": "ba4e8a471a45d57ccac6c939294038df43cdc508ba934b28f6f674b3aabfd888"
+    },
+    {
+      "bytes": 12926,
+      "git_blob": "1e38e7f406c3fc580e4876d80dec2251164477ff",
+      "path": "tests/test_research_analyze_core_ablation.py",
+      "sha256": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38"
+    },
+    {
+      "bytes": 5706,
+      "git_blob": "52cd98255a96d08029df52fae0300fd159926619",
+      "path": "tests/test_research_analyze_growth_ablation.py",
+      "sha256": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196"
+    },
+    {
+      "bytes": 3537,
+      "git_blob": "f4d9a2a24028f0cda6186a68464ea4e3e99c0250",
+      "path": "tests/test_research_development_data.py",
+      "sha256": "0be8bce4d4a3ec513ef88590b810513fda3ed8800daf759a6cc7ea12a2b16e27"
+    },
+    {
+      "bytes": 14090,
+      "git_blob": "33e18595f752c50f6b5f088b0ccb89ea81b8d700",
+      "path": "tests/test_research_growth_ablation.py",
+      "sha256": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f"
+    },
+    {
+      "bytes": 3689,
+      "git_blob": "9220676687347adba01b67eab27cb4a5c3350e83",
+      "path": "tests/test_research_item6_worker.py",
+      "sha256": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3"
+    },
+    {
+      "bytes": 5991,
+      "git_blob": "4b9781cdd867508881b1ca63d9543a447acc833f",
+      "path": "tests/test_research_item6_worker_supervision.py",
+      "sha256": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+    },
+    {
+      "bytes": 20168,
+      "git_blob": "b4733729e0d18de87e7b9738f5d4945600a6ffb3",
+      "path": "tests/test_research_split_governance.py",
+      "sha256": "959f696c9921a4e71e79540a50ec50d6676c082b1da36989a1ff74952ea208ec"
+    },
+    {
+      "bytes": 7656,
+      "git_blob": "0dc0c97f4c6f31c59df93426474c4505926889a0",
+      "path": "tests/test_routing_metrics.py",
+      "sha256": "364e4648b246d0d03d0bf1e20c39cc76819faddca3a54e8163855740288a8d92"
+    },
+    {
+      "bytes": 14877,
+      "git_blob": "d3dc4af065e2640ba89bccb2f89a0ba506e84b20",
+      "path": "tests/test_soil_evaluation.py",
+      "sha256": "5193d55821eb3216de7080414677321979e868c1c306a4d126231b96271fa658"
+    }
+  ],
+  "status": "verified",
+  "worker_wall_seconds_before_archive": 327.752899868
+}
