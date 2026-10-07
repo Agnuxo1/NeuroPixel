@@ -1,5 +1,6 @@
 {
   "archive_branch": "research/scientific-validation-2026-10-07-cloud-results",
+  "completed_at_utc": "2026-10-07T05:16:05.490541+00:00",
   "execution_plan_sha256": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
   "initial_resources": {
     "at_utc": "2026-10-07T03:23:48.945078+00:00",
@@ -720,6 +721,7 @@
   ],
   "run_key": "37566497890-1",
   "schema_version": 1,
+  "scientific_report_status": "pending root synthesis and review; item 7 remains pending",
   "source": {
     "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
     "historical_files_expected": 8,
@@ -744,7 +746,7 @@
     "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
   },
   "started_at_utc": "2026-10-07T03:23:48.980290+00:00",
-  "status": "running",
+  "status": "completed",
   "steps": [
     {
       "command": [
@@ -845,5 +847,6 @@
       "started_at_utc": "2026-10-07T05:15:58.368064+00:00",
       "status": "completed"
     }
-  ]
+  ],
+  "wall_seconds": 6736.55504302
 }
