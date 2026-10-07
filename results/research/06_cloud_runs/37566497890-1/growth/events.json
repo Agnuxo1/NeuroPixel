@@ -1,0 +1,205 @@
+[
+  {
+    "at_utc": "2026-10-07T04:58:26.750996+00:00",
+    "event": "growth_started"
+  },
+  {
+    "at_utc": "2026-10-07T04:58:26.791522+00:00",
+    "diagnostic": [
+      {
+        "bytes": 7745,
+        "n": 512,
+        "path": "datasets/topic0/diagnostic_train.npz",
+        "query_role_counts": {
+          "ACCION": 112,
+          "AGENTE": 133,
+          "LUGAR": 136,
+          "PACIENTE": 131
+        },
+        "role_balance": "natural sampling; no forced role balance",
+        "sampling_seed": 62010,
+        "sha256": "2ddc4495c3b94479b034893fa19e018785516f4c5ec491e3ed68c1a560a46227",
+        "split": "train",
+        "targets_retained": false,
+        "topic": 0
+      },
+      {
+        "bytes": 7807,
+        "n": 512,
+        "path": "datasets/topic1/diagnostic_train.npz",
+        "query_role_counts": {
+          "ACCION": 126,
+          "AGENTE": 144,
+          "LUGAR": 131,
+          "PACIENTE": 111
+        },
+        "role_balance": "natural sampling; no forced role balance",
+        "sampling_seed": 62110,
+        "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+        "split": "train",
+        "targets_retained": false,
+        "topic": 1
+      },
+      {
+        "bytes": 7730,
+        "n": 512,
+        "path": "datasets/topic2/diagnostic_train.npz",
+        "query_role_counts": {
+          "ACCION": 131,
+          "AGENTE": 139,
+          "LUGAR": 121,
+          "PACIENTE": 121
+        },
+        "role_balance": "natural sampling; no forced role balance",
+        "sampling_seed": 62210,
+        "sha256": "52bdca70ad6b1102eaa1e129107e06a7c15e7cbc868e5e7605a3ca818809686b",
+        "split": "train",
+        "targets_retained": false,
+        "topic": 2
+      }
+    ],
+    "event": "development_datasets_saved",
+    "gate_fit": [
+      {
+        "bytes": 8503,
+        "content_sha256": "d058c7d851fd257fb2371416a97f86ad1f36658764e8dc44e09ec002f5333a83",
+        "n": 512,
+        "path": "datasets/topic0/split0_train_n512_seed62011.npz",
+        "sampling_seed": 62011,
+        "sha256": "73b43f7d01e9d15c2a245ee0495c7b93f6af0da241f2ba55b92965f5b5403180",
+        "split": "train",
+        "split_seed": 0,
+        "topic": 0
+      },
+      {
+        "bytes": 8505,
+        "content_sha256": "78c1b9837665e3fd45235115dbf5e14e243e384d436e63c2792fd9173e70a80b",
+        "n": 512,
+        "path": "datasets/topic1/split0_train_n512_seed62111.npz",
+        "sampling_seed": 62111,
+        "sha256": "ebd4a3068caa2d3a8071d8b78ef1f44c8df5ee55f21adec0587b76ae0a050833",
+        "split": "train",
+        "split_seed": 0,
+        "topic": 1
+      },
+      {
+        "bytes": 8436,
+        "content_sha256": "8b0bfe23ded4e30fbc845da74a5850a8454d6f106303a38de98e92d52ee716b6",
+        "n": 512,
+        "path": "datasets/topic2/split0_train_n512_seed62211.npz",
+        "sampling_seed": 62211,
+        "sha256": "42a91929c28b2dde39208af65e5a60265c4a123e2b702d80aad1c8a0204fa269",
+        "split": "train",
+        "split_seed": 0,
+        "topic": 2
+      }
+    ]
+  },
+  {
+    "at_utc": "2026-10-07T04:59:24.947187+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+      "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+      "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+    },
+    "decision": {
+      "action": "create",
+      "parent": null,
+      "scores_used": [],
+      "target_index": 0,
+      "threshold": null
+    },
+    "event": "growth_stage_completed",
+    "experts": 1,
+    "stage": 0,
+    "trajectory": "fixed_sequential_i20"
+  },
+  {
+    "at_utc": "2026-10-07T05:00:22.589428+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+      "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+      "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+    },
+    "decision": {
+      "action": "create",
+      "parent": 0,
+      "scores_used": [],
+      "target_index": 1,
+      "threshold": null
+    },
+    "event": "growth_stage_completed",
+    "experts": 2,
+    "stage": 1,
+    "trajectory": "fixed_sequential_i20"
+  },
+  {
+    "at_utc": "2026-10-07T05:01:20.550963+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/fixed_sequential_i20/stage2/weights.pt",
+      "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+      "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+    },
+    "decision": {
+      "action": "create",
+      "parent": 1,
+      "scores_used": [],
+      "target_index": 2,
+      "threshold": null
+    },
+    "event": "growth_stage_completed",
+    "experts": 3,
+    "stage": 2,
+    "trajectory": "fixed_sequential_i20"
+  },
+  {
+    "at_utc": "2026-10-07T05:02:18.149142+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/adaptive_novelty_i20/stage0/weights.pt",
+      "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+      "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+    },
+    "decision": {
+      "action": "create",
+      "parent": null,
+      "scores_used": [],
+      "target_index": 0,
+      "threshold": null
+    },
+    "event": "growth_stage_completed",
+    "experts": 1,
+    "stage": 0,
+    "trajectory": "adaptive_novelty_i20"
+  },
+  {
+    "at_utc": "2026-10-07T05:03:15.682942+00:00",
+    "checkpoint": {
+      "bytes": 122296,
+      "parameter_count": 29824,
+      "path": "trajectories/adaptive_novelty_i20/stage1/weights.pt",
+      "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+      "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+    },
+    "decision": {
+      "action": "create",
+      "parent": 0,
+      "scores_used": [
+        0.2224
+      ],
+      "target_index": 1,
+      "threshold": 0.1
+    },
+    "event": "growth_stage_completed",
+    "experts": 2,
+    "stage": 1,
+    "trajectory": "adaptive_novelty_i20"
+  }
+]

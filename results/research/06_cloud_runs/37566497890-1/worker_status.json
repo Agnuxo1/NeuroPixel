@@ -8,7 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
-  "last_heartbeat_at_utc": "2026-10-07T04:57:48.147609+00:00",
+  "last_heartbeat_at_utc": "2026-10-07T05:03:25.844984+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -596,6 +596,42 @@
       "available_ram_gib": 14.313190460205078,
       "cpu_count_logical": 4,
       "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T04:58:25.729806+00:00",
+      "available_ram_gib": 14.615802764892578,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T04:59:25.736162+00:00",
+      "available_ram_gib": 14.304256439208984,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:00:25.743697+00:00",
+      "available_ram_gib": 14.29522705078125,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:01:25.750746+00:00",
+      "available_ram_gib": 14.304920196533203,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:02:25.758118+00:00",
+      "available_ram_gib": 14.286209106445312,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T05:03:25.844984+00:00",
+      "available_ram_gib": 14.264274597167969,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
     }
   ],
   "run_key": "37566497890-1",
@@ -673,6 +709,20 @@
       "returncode": 0,
       "started_at_utc": "2026-10-07T03:24:10.050539+00:00",
       "status": "completed"
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item6_worker.py",
+        "--child",
+        "growth",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/growth"
+      ],
+      "log": "logs/growth.log",
+      "name": "growth",
+      "started_at_utc": "2026-10-07T04:58:25.727275+00:00",
+      "status": "running"
     }
   ]
 }
