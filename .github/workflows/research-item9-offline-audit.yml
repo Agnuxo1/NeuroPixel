@@ -23,7 +23,6 @@ jobs:
       PYTHONHASHSEED: "0"
       GIT_TERMINAL_PROMPT: "0"
       MPLBACKEND: Agg
-      MPLCONFIGDIR: ${{ runner.temp }}/neuropixel-item9-matplotlib
     steps:
       - name: Reserve a finite workflow deadline
         id: deadline
@@ -52,6 +51,8 @@ jobs:
           python -m pip install --disable-pip-version-check --no-input --no-cache-dir --only-binary=:all: numpy==2.3.5 scipy==1.17.0 matplotlib==3.10.8 psutil==7.2.2
       - name: Execute unchanged audits and retain their first receipts
         id: offline
+        env:
+          MPLCONFIGDIR: ${{ runner.temp }}/neuropixel-item9-matplotlib
         shell: bash
         run: python scripts/research_item9_offline_worker.py
       - name: Preserve a bootstrap outcome record in Actions

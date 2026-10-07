@@ -28,7 +28,7 @@
   },
   "operational_file_git_blobs": {
     "scripts/research_item9_offline_worker.py": "bb044ffa7849407906af35f893482723b18703b9",
-    ".github/workflows/research-item9-offline-audit.yml": "51f44ac1f49ec9057b3180155aac6bbedf50ab13",
+    ".github/workflows/research-item9-offline-audit.yml": "d0c6da8e42c14f1a8367965f718f0bf4476edc5c",
     "scripts/research_item9_worker.py": "5be7e3db7f41a30bd52669ade9ec3f7f72dcb0d0",
     "scripts/research_item9_gate_archive_audit.py": "421929f076d2123bfcd8a724ed589181c4444790",
     "scripts/research_item9_figures.py": "8f6c5ced79ce5e2be35e992fecff7079aa455d16",
@@ -41,14 +41,16 @@
     "docs/research/09_interpretation_guide.md": "a44847c0d66216ebcfa910ba1ae90f078c5f1363",
     "results/research/09_validation/study_actions_job_112701154832.log": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
     "results/research/09_validation/study_remote_recovery_01.json": "fb3cc7912e5f8efb159592830e40b434e973bdbf",
-    "results/research/09_validation/offline_workflow_validation_failures.json": "dadf6d3d1bf69826c6ecec08c9f4d1fe9e1f1233"
+    "results/research/09_validation/offline_workflow_validation_failures.json": "dadf6d3d1bf69826c6ecec08c9f4d1fe9e1f1233",
+    "results/research/09_validation/offline_workflow_context_failure_04.json": "fe1c5fe2cc3cbe9436c7c8dd8690a89a3138a351"
   },
   "job_log_path": "results/research/09_validation/study_actions_job_112701154832.log",
   "job_log_git_blob": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
   "job_log_sha256": "340b74f9322b20c682d8791ce2fa0e92f26badff92dcc21aa7cd7e3757257749",
   "remote_receipt_paths": [
     "results/research/09_validation/study_remote_recovery_01.json",
-    "results/research/09_validation/offline_workflow_validation_failures.json"
+    "results/research/09_validation/offline_workflow_validation_failures.json",
+    "results/research/09_validation/offline_workflow_context_failure_04.json"
   ],
   "stages": [
     "full_archive_audit",
@@ -110,6 +112,7 @@
   "operational_validation_failures_preserved": [
     37599727642,
     37600603127,
-    37601029823
+    37601029823,
+    37601447941
   ]
 }
