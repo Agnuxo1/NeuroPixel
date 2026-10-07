@@ -1,8 +1,16 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T16:08:57.716512+00:00",
+  "created_at_utc": "2026-10-07T16:09:04.155838+00:00",
   "files": {
+    "audit/audit.json": {
+      "bytes": 60219,
+      "sha256": "fac66bf07186ef64caa620e2b0ff58fb538d83ac3725493b11dff61236d1471d"
+    },
+    "audit_component.log": {
+      "bytes": 52,
+      "sha256": "38a23f590eb16408b08c13995caebafe5f9fd57f5a23931057261c76008a8d95"
+    },
     "contract_tests.log": {
       "bytes": 2,
       "sha256": "eb4bd64f7014f7d42e9d358035802242741b974e8dfcd37c59f9c21ce29d781e"
@@ -23,6 +31,34 @@
       "bytes": 5760,
       "sha256": "a39782409d87a172ca516a461e4c31a92ebd2ed2828477c02dfb9e38b060460d"
     },
+    "native/report.json": {
+      "bytes": 78996,
+      "sha256": "752323fa052e37d3fa29800135f90eefffdc6ffcd2554f29d51a7d590c9a9748"
+    },
+    "native/traces.npz": {
+      "bytes": 187153,
+      "sha256": "97ee04229df6d89232caa3dd3ed8ee47cf3877f6310cfb8e5275186292da3c47"
+    },
+    "native_component.log": {
+      "bytes": 37,
+      "sha256": "4427418b455671ddaf71fed08907bd11db2805e3f6d90f41cd5b02084df67363"
+    },
+    "probe.log": {
+      "bytes": 85,
+      "sha256": "7fb5d612aa07bbd9bdd34bf77b12ddec540273db5e6b50573de6e5d2470545a2"
+    },
+    "probe_environment.json": {
+      "bytes": 565,
+      "sha256": "930fcb990abcc2a32be65f6ab252dec4f8adf3433a01d85b1819066542b4e490"
+    },
+    "probe_resource_monitor.json": {
+      "bytes": 711,
+      "sha256": "0cfee4d4a14ba2d8e0d326c7c3ad89dec69618d53208d54b315f8c6a6a17a702"
+    },
+    "probe_status.json": {
+      "bytes": 821,
+      "sha256": "8248def1e381b34d7c91a6f5068238d6c80d9207eb78ed5090d5afdfcc322b29"
+    },
     "source.zip": {
       "bytes": 9490669,
       "sha256": "14fe051cecf44b5f5f1fc71ad7e5f8799b76cb78487b460c282a9df75cb36cf4"
@@ -30,6 +66,10 @@
     "source_before.json": {
       "bytes": 2632,
       "sha256": "a78c644b88c4709058c604f8d4469b543c57d26c48c2fa733bc893e0f070f1f2"
+    },
+    "stability_probe_status.json": {
+      "bytes": 2590,
+      "sha256": "03e28f2f688138ca15e60eaffe91c63fe952a8260101502e788a94d44b317c26"
     },
     "test_collection.json": {
       "bytes": 165,
@@ -44,8 +84,8 @@
       "sha256": "a32831c2b40b5c948656c8d499cdd73e318b20ebec7d56de1071a3354e1cb049"
     },
     "worker_status.json": {
-      "bytes": 1777,
-      "sha256": "37eee32b11f5aa400f98de5f68a7168676aa0c83846bb12fa53e7f07dd7837ce"
+      "bytes": 2699,
+      "sha256": "075893aee1a785f1ad99ea3e163c74465b64a878ea18f4fa9ecf3c9e839bdd3b"
     }
   },
   "final": false,
