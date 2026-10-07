@@ -1,0 +1,77 @@
+{
+    "schema":  "neuropixel.continuation_migration.v1",
+    "written_at_utc":  "2026-10-07T00:44:04.8593721Z",
+    "tool_identity":  "ChatGPT Recovery Tool / architecture_audit",
+    "authorization":  "Parent explicitly authorized isolated restoration, exact report and receipt copies, reconstructed item 5 closure, and local tool-authored commit. Item 6 remains pending.",
+    "new_repository":  "D:\\PROJECTS\\NeuroPixel-Validation-20261007-continuation",
+    "new_branch":  "research/scientific-validation-2026-10-07-continuation",
+    "git_parent_commit":  "7da18d1cbd36c40c48228118abb20a7b5ab032f4",
+    "clone":  {
+                  "source":  "D:\\PROJECTS\\196_NeuroPixel",
+                  "source_head_verified":  "1a26daa64228a375aafa77f3cef613c8af84133d",
+                  "mode":  "local --no-hardlinks --no-checkout",
+                  "source_modified":  false
+              },
+    "frozen_source":  {
+                          "origin_workspace":  "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\src",
+                          "declared_commit":  "fbf576f0dcfd0149d2969eccb61e442c41c7d47f",
+                          "identity_kind":  "Frozen content provenance; not recovered Git ancestry.",
+                          "archive_original_path":  "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\coord\\item5_source.zip",
+                          "archive_preserved_path":  "coord/recovery/item5_source_fbf576f0.zip",
+                          "archive_sha256":  "1e927f206391c23ba5d2650b030fdd7b18a97eb7162ee9e439e6d49387d36070",
+                          "archive_bytes":  209348,
+                          "archive_entries":  77,
+                          "extraction_safety":  "All entries checked before extraction for containment, traversal, rooted or drive paths, Git metadata, duplicate case-insensitive destinations, symlinks, and trailing dots or spaces.",
+                          "snapshot_preserved_path":  "coord/recovery/source_snapshot_fbf576f0.json",
+                          "snapshot_sha256":  "a438d959502e8188af45044f59097f8d994dc7c82a6e75bb20a6efa465f02376",
+                          "root_source_snapshot_removed":  true,
+                          "removal_reason":  "source_record prioritizes a root source_snapshot.json; future changes must record actual Git HEAD instead of falsely retaining fbf576f0.",
+                          "scientific_sha256":  {
+                                                    "neuropixel/model.py":  "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+                                                    "neuropixel/task.py":  "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+                                                    "neuropixel/research/models.py":  "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+                                                    "neuropixel/research/data.py":  "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+                                                    "neuropixel/research/experiment.py":  "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+                                                    "scripts/research_train.py":  "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+                                                    "scripts/research_queue_worker.py":  "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73",
+                                                    "docs/research/protocol.json":  "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290"
+                                                }
+                      },
+    "recovered_report":  {
+                             "source":  "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\recovered_docs\\05_results_recovered_20261007.md",
+                             "destination":  "docs/research/05_results.md",
+                             "bytes":  32270,
+                             "sha256":  "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+                             "recovery_note_preserved":  true,
+                             "original_linux_byte_identity":  "Not currently checkable; this is the reviewed recovered copy."
+                         },
+    "recovered_receipt":  {
+                              "source":  "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\coord\\item5_recovery_receipt_20261007.json",
+                              "destination":  "coord/recovery/item5_recovery_receipt_20261007.json",
+                              "bytes":  2946,
+                              "sha256":  "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d"
+                          },
+    "linux_access":  {
+                         "status":  "Executor transport inaccessible; deletion has not been demonstrated.",
+                         "last_confirmed_commit_as_reported":  "376e38a",
+                         "experiment_archive_commit_as_reported":  "0a56621",
+                         "closing_commit":  "unknown; not assumed to exist",
+                         "later_history":  "Linux Git objects and files after the frozen snapshot are unavailable here unless explicitly recovered.",
+                         "cpu28_evidence":  "Completed according to the copied reviewed report and verified continuity receipt. No experiments rerun.",
+                         "raw_predictions_and_weights":  "Previously verified and committed on Linux according to the receipt; currently inaccessible and not restored here.",
+                         "audit_reports":  "Verified outcomes and original hashes preserved in the receipt; original audit JSON files are not available here."
+                     },
+    "item5":  {
+                  "closure_mode":  "reconstructed_from_continuity",
+                  "closed_at_utc":  "2026-10-07T00:44:04.8593721Z",
+                  "completed_runs":  28,
+                  "failed_runs":  0,
+                  "h1_status":  "not_supported",
+                  "verified_audits":  2,
+                  "audit_issues":  0,
+                  "budget_limited_training_probes":  28
+              },
+    "item6_status":  "pending",
+    "experiments_started":  0,
+    "gpu_used":  false
+}

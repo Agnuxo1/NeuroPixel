@@ -58,3 +58,7 @@ Variables de cache y temporales de herramientas nuevas deben apuntar a una carpe
 D: o E:. Antes de una descarga pesada se registra origen, tamaño aproximado y destino. No se limpia
 C: ni se mueve contenido existente sin autorizacion expresa de Fran.
 
+
+
+## SCI-005-RECOVERY completed - 2026-10-07T00:44:04.8593721Z
+ File/Git recovery only. No experiments, GPU reservation, resource-limit changes, or other-process intervention. No resources held. Historical entries retained as provenance.
