@@ -190,7 +190,8 @@ def visible_features(canvas: torch.Tensor, role_ids: torch.Tensor, query_pos=(7,
     presence = torch.zeros(n, vocab, dtype=torch.float32)
     rows = torch.arange(n)[:, None].expand(-1, canvas.shape[1] * canvas.shape[2])
     flat = canvas.reshape(n, -1)
-    presence[rows, flat] = 1.0
+    visible = flat != 0
+    presence[rows[visible], flat[visible]] = 1.0
     query_token = canvas[:, query_pos[0], query_pos[1]]
     query = torch.zeros(n, 4, dtype=torch.float32)
     for index, token in enumerate(role_ids.tolist()):

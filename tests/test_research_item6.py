@@ -78,6 +78,7 @@ def test_balanced_topic_data_and_visible_features():
     assert torch.bincount(roles, minlength=4).tolist() == [128, 128, 128, 128]
     features = visible_features(canvas, task.role_ids)
     assert features.shape == (512, 40)
+    assert torch.all(features[:, 0] == 0)  # PAD/empty is not a visible token feature.
     assert torch.all(features[:, -1] == 1)
     assert torch.all(features[:, 35:39].sum(1) == 1)
 
