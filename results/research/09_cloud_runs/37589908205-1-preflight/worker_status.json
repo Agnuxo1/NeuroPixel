@@ -1,4 +1,10 @@
 {
+  "completed_at_utc": "2026-10-07T07:57:18.234401+00:00",
+  "final_resources": {
+    "at_utc": "2026-10-07T07:57:18.234300+00:00",
+    "available_ram_gib": 14.632766723632812,
+    "phase": "worker_finished"
+  },
   "gpu_requested": false,
   "initial_budget_seconds": 6600.0,
   "initial_resources": {
@@ -85,5 +91,6 @@
     }
   ],
   "started_at_utc": "2026-10-07T07:51:50.481646+00:00",
-  "status": "running"
+  "status": "completed",
+  "worker_wall_seconds_before_archive": 327.752899868
 }
