@@ -13,7 +13,7 @@
 <p align="center">
   <b>A neural network whose entire state lives on a canvas of pixels.</b><br>
   Words become learned colours · a local cellular rule does the thinking · the same dictionary reads the answer back.<br>
-  Every step of the reasoning is visible — and decodable pixel by pixel.
+  The model's readout can be inspected at each cell and retained update.
 </p>
 
 ---
@@ -25,9 +25,10 @@
 </p>
 
 A sentence it has **never seen** is written on an 8×8 canvas as role/word pixel pairs. A question pixel asks
-*"who is the AGENT?"*. For 24 steps each pixel only talks to its 8 neighbours. The **dictionary scanner** decodes what
-every pixel is "thinking" at every step. The input pixels keep saying their own word, activity flows towards the
-output pixel, and the output pixel ends up saying **girl** — the right answer.
+*"who is the AGENT?"*. For 24 steps each pixel only talks to its 8 neighbours. The historical animation shows
+the highest-scoring token under the **dictionary readout** at each cell. In this selected example, the final
+output is **girl**, the correct answer. Those local labels display a projection of the internal state; they do
+not establish which intermediate features caused the answer.
 
 ## How it works
 
@@ -39,7 +40,7 @@ output pixel, and the output pixel ends up saying **girl** — the right answer.
 |---|---|
 | **Colour dictionary** | Each token gets a learned 16-channel "colour". The same table is used to write the input and to read the output (tied weights). PAD has zero effective identity. Empty non-camera cells start at zero; recurrent updates can activate them. |
 | **Canvas dynamics** | A single shared 3×3 rule (depthwise perception + 1×1 MLP, residual, stochastic updates) runs for *T* steps. No attention, no global pooling. |
-| **School loss** | Every input pixel must keep "saying" its own word through the dictionary. The canvas stays legible and learns faster. |
+| **School loss** | An optional auxiliary loss trains nonempty input cells to retain their token labels under the dictionary readout at selected times. This supervision encourages readability; its effects on task learning require controlled comparisons. |
 | **Training with variable steps and state damage** | Samples update counts and erases state during training. Historical damage tests retain the source tokens; the repair audit separates preservation, reconstruction and input dependence. |
 | **Growing canvases** | When the current canvases cannot read the input (novelty, ART-like), freeze them and add a new one; route questions with the scanner. |
 
@@ -83,13 +84,15 @@ The added-token row comes from [newword.json](results/phase3/newword.json); its 
 
 The memory row quotes the archived [single-run summary](results/phase3/memory.json), which contains no raw predictions, checkpoints, or complete run configuration. It describes activation carried between frames of one `np_stream` call; a new call resets that state. See the [historical memory audit](docs/research/11_historical_memory_audit.md) for source and comparison limits.
 
+The [scanner investigation](docs/research/16_results.md) distinguishes readable scores, complete state information and causal explanations. The default linear readout maps 48 state channels into 16 coordinates, so at least 32 ambient state directions are invisible to an instantaneous readout. This dimension count alone does not determine the learned state manifold or what can be inferred from a time series. The animation generator now shares the scanner's PAD suppression; the committed historical animation has not been regenerated from the unavailable original checkpoint.
+
 ### Why it matters
 
 - **Tiny specialists instead of cannons for flies.** About 2 800× less compute than a small LLM on a bounded task,
   with higher accuracy and a fixed-cost, deterministic answer.
 - **Properties explored in the prototype.** Self-repair, variable update counts, adapting appended token rows,
   and growing separate canvases. The linked audits distinguish implemented mechanisms from demonstrated task capabilities.
-- **Interpretable by construction.** The scanner is the model's own read-out, applied everywhere, not a post-hoc probe.
+- **Inspectable readout.** The scanner applies the learned output head across the grid. Its token labels and confidence summarize a projection; causal interpretation requires additional intervention evidence.
 
 <details>
 <summary><b>Honest caveats</b> (please read before citing)</summary>

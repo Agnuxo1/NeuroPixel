@@ -1,0 +1,37 @@
+{
+  "archive_commit": "205507b71e2f7abb00ce97aa1dbec8321fc0af26",
+  "source_commit": "771975b4833bfcf20e06f848253912c699b2152e",
+  "path": "results/research/15_cloud_runs/37654405152-1-preflight",
+  "files_sha256": {
+    "archive_manifest.json": "a7fc7460987028d3074b0985a232288c71236dbf80310d94429899ac57ebca01",
+    "binding/checkpoint_binding.json": "64686a77c9938cf30a3521815c9e1d4f9bf3a5ccb18f0410521d45bda269b268",
+    "native/gates/seed40.json": "a36287e03a5d8029837f8e0498e626d4908db1fed9c380301b1f69439e777e5a",
+    "native/gates/seed40.npz": "554341c71aa9de467d8096ff9127774a4dcddf8981a0855a926ed134bb27a44a",
+    "native/gates/seed41.json": "8e577845a2da70adc6532741729e11963c123755cdd4422c8614c408d3e3e666",
+    "native/gates/seed41.npz": "943044f129045e58194daabb4e71baccfc8117dd44c92e94feed7955812d8a5c",
+    "native/gates/seed42.json": "d370ab3ad921b3305b49a0e36b6c58c47149f0f76b976d9bd3670f041013c038",
+    "native/gates/seed42.npz": "79e32915b6f9ad928ac62c43ebfaef26e18ada6448574c8cc87b4163d9510ef5",
+    "native/gates/seed43.json": "32b9f801e59f4a77b70a45753ab16782930b297d1e6f17b08265367d0953d589",
+    "native/gates/seed43.npz": "e2095ebf01edbff682fdc6e073a92c8545f66232464f255890a3b0037e1b8bd8",
+    "native/gates/seed44.json": "d5c16a3bd68105cb36eb143b320ec6753f81e7ae1d8ad81cb454304e184d5f44",
+    "native/gates/seed44.npz": "f5a0207769e031697137310fecb5a1cf610a2cbf54a9b2e8d376b8a59f6bb554"
+  },
+  "files_bytes": {
+    "archive_manifest.json": 10879,
+    "binding/checkpoint_binding.json": 8089,
+    "native/gates/seed40.json": 4781,
+    "native/gates/seed40.npz": 308702,
+    "native/gates/seed41.json": 4784,
+    "native/gates/seed41.npz": 310728,
+    "native/gates/seed42.json": 4782,
+    "native/gates/seed42.npz": 304314,
+    "native/gates/seed43.json": 4781,
+    "native/gates/seed43.npz": 307972,
+    "native/gates/seed44.json": 4784,
+    "native/gates/seed44.npz": 303625
+  },
+  "scope": "Read only five authenticated learned readout/dictionary parameter arrays for retrospective rank calculations. No learned forward pass, continuation, or new task score.",
+  "original_item9_source": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "original_item9_archive": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "provenance": "The item15B checkpoint-binding receipt authenticated every gate parameter against the original item9 checkpoint. Its receipt is copied alongside these gates; this point does not repeat binary checkpoint deserialization."
+}
