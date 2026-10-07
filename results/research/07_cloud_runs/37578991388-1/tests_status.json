@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_research_split_governance.py",
+    "tests/test_research_development_data.py",
+    "--junitxml",
+    "/home/runner/work/NeuroPixel/NeuroPixel/results/research/07_cloud_runs/37578991388-1/tests.xml"
+  ],
+  "completed_at_utc": "2026-10-07T05:59:05.207254+00:00",
+  "name": "tests",
+  "return_code": 0,
+  "started_at_utc": "2026-10-07T05:59:03.206188+00:00",
+  "wall_seconds": 2.0010836810000114
+}
