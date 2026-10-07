@@ -1,7 +1,7 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T11:58:27.410152+00:00",
+  "created_at_utc": "2026-10-07T11:59:27.843932+00:00",
   "files": {
     "contract_tests.log": {
       "bytes": 73,
@@ -175,9 +175,17 @@
       "bytes": 14275,
       "sha256": "48e7a240d7944e61f46a2e6b465a920202e145c05153edb3fd337b85642a7ae8"
     },
+    "study/runs/train_neuropixel_s64/checkpoint.pt": {
+      "bytes": 121336,
+      "sha256": "fdae652ac17ef86182eadcc4c2703927bf986a71dca56dfd48f6ad22923e657e"
+    },
     "study/runs/train_neuropixel_s64/config.json": {
       "bytes": 65300,
       "sha256": "1f8eebcdef0569e530e5af91ffd243e83e5ec3795d210ab4ab2e9d2c3f5abe20"
+    },
+    "study/runs/train_neuropixel_s64/run.json": {
+      "bytes": 178434,
+      "sha256": "d77aa1b1941fa0b52da554cd01770b460f68c6547071ee066fd424aa10e34301"
     },
     "study/runs/train_neuropixel_s64/started.json": {
       "bytes": 70726,
@@ -188,8 +196,16 @@
       "sha256": "e11423525ed82413025fb51e37851027fad9dc358e94a15d0b2328d549b1f7a6"
     },
     "study/runs/train_neuropixel_s64/train_log.jsonl": {
-      "bytes": 4410,
-      "sha256": "1dad65762c2dc7fe206a56156eb9ebfaf0a68aeddde58766417c5a6a66bae98d"
+      "bytes": 5042,
+      "sha256": "12954f4c84a16386e99ab49dc8d1e715b2bc2d77ab4b40f657d48c453452a172"
+    },
+    "study/runs/train_neuropixel_s64/train_probe_predictions.npz": {
+      "bytes": 104853,
+      "sha256": "9bb7862848d04787f560c5d2085debda83dd4d1e65ac4084a80212a448517192"
+    },
+    "study/runs/train_neuropixel_s64/validation_predictions.npz": {
+      "bytes": 14163,
+      "sha256": "4fe8a59fe8b4e89c87ec60a012f17ab743274d2b3f89b5374e3fbe94f7c0e3e6"
     },
     "study/runs/train_relative_transformer_s60/checkpoint.pt": {
       "bytes": 127929,
@@ -319,9 +335,45 @@
       "bytes": 14098,
       "sha256": "f75f18c3b72a15bbff0f96bb25e9a10e694300565cfcdfdaae4cc98793be4500"
     },
+    "study/runs/train_relative_transformer_s64/checkpoint.pt": {
+      "bytes": 127929,
+      "sha256": "5b97fd82eb58bf197e96b19390ca66e89600310a465bf9d75ec402c9a9344239"
+    },
+    "study/runs/train_relative_transformer_s64/config.json": {
+      "bytes": 65279,
+      "sha256": "2b89f3ec9466366bff0a6d222c1e592c288c8f2e2dde8b1eda41d6ff4787927f"
+    },
+    "study/runs/train_relative_transformer_s64/run.json": {
+      "bytes": 180908,
+      "sha256": "2a0edca94d03ab34b194e2747e6c1621c5efcaee39486b5d0b0053b5de955a7d"
+    },
+    "study/runs/train_relative_transformer_s64/started.json": {
+      "bytes": 70711,
+      "sha256": "036a27ad21d0d0b92188f743e66f75a39ff4eac26a8b5cfdfca8f0804adc91d8"
+    },
+    "study/runs/train_relative_transformer_s64/train_indices.npy": {
+      "bytes": 1048704,
+      "sha256": "e11423525ed82413025fb51e37851027fad9dc358e94a15d0b2328d549b1f7a6"
+    },
+    "study/runs/train_relative_transformer_s64/train_log.jsonl": {
+      "bytes": 5124,
+      "sha256": "05b921e2b1791496766bd3302248232db656667b7ba76377aad770402480bbb3"
+    },
+    "study/runs/train_relative_transformer_s64/train_probe_predictions.npz": {
+      "bytes": 104405,
+      "sha256": "08611a8fc4f7abe26c640857466159e9b6864407de561a8ce101362a84af03b2"
+    },
+    "study/runs/train_relative_transformer_s64/validation_predictions.npz": {
+      "bytes": 14109,
+      "sha256": "96d833a5d3629112b8821e3a04ab7eba3028156044cf580878a4e6fe274746f9"
+    },
     "study_train_environment.json": {
       "bytes": 294,
       "sha256": "68c75697c9471ab545d73aca43f76fb93f6508d07421168b32140c079132c7b9"
+    },
+    "study_train_status.json": {
+      "bytes": 6756,
+      "sha256": "d981d31753822d5d37e358b69fcede5361c53e0867ed3d2b6b8ca8a8890ce8a3"
     },
     "test_collection.json": {
       "bytes": 3843,
@@ -336,8 +388,8 @@
       "sha256": "b91d70440598f63bff9a8fd217d4ee45b4a93368f0b4ef600c8b53c815a6fbfb"
     },
     "train.log": {
-      "bytes": 66994,
-      "sha256": "fffa26014afff623f35c2c74f4403391ce2ff735f1391e8acca12e5bee5fb900"
+      "bytes": 75698,
+      "sha256": "6c239510e48154826530dcb313d1084f04b5c64f90995a6b38759bfa6742d8c3"
     },
     "train_data_identity.json": {
       "bytes": 1123,
@@ -348,16 +400,24 @@
       "sha256": "9d43a16f04303470d504a7d0a9c7745d80a174cb3f63c3e99b2c17415d0298d6"
     },
     "train_resource_monitor.json": {
-      "bytes": 162000,
-      "sha256": "dcacc025c31bc8bf1bf9277e92f2350c3bbfbaa28429cbade9f207d818803ef1"
+      "bytes": 170088,
+      "sha256": "1bd19b06047274ded4f651591f0fb6d4eb5485735080feef63f98a9273540c1f"
     },
     "train_started.json": {
       "bytes": 3363,
       "sha256": "b5c721d7630e06bad1586fc626a39d3b4550392b69593477e89d872292a360d1"
     },
+    "train_status.json": {
+      "bytes": 819,
+      "sha256": "821a9dadbef71563954d4322d06f68a4ff663418ec2b6788efbe7e9d99a35f19"
+    },
+    "training_manifest.json": {
+      "bytes": 723593,
+      "sha256": "5152d71f9f0e527d4c4eae921649db7ba7addf8975103125d8693177e62be078"
+    },
     "worker_status.json": {
-      "bytes": 2463,
-      "sha256": "2a8bd23ed126441b4d89f975504a8d185b72005547fb1b56d23a736a9cefef81"
+      "bytes": 2696,
+      "sha256": "761f9eeef5d6f13d560fc870f5f0172c2aaf2c30bd49f7183654096024c890d8"
     }
   },
   "final": false,
