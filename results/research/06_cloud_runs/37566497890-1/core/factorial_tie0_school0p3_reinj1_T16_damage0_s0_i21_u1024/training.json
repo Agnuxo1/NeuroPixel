@@ -1,0 +1,373 @@
+{
+  "completed_at_utc": "2026-10-07T03:46:28.515625+00:00",
+  "config": {
+    "batch_size": 64,
+    "controller_source": {
+      ".github/workflows/research-item6.yml": "6c3367a2570dd111d0e9a17078dbbdf961eca0c23972f883069709e2f94f7159",
+      "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+      "docs/research/06_core_inventory.json": "e0c1cb59016f94f9b9516e1f8016cdc6b056ce103184707619c3242bea6d7dd3",
+      "docs/research/06_execution_plan.json": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+      "docs/research/06_growth_inventory.json": "fc0e8ba465f6de90a1ffde0d69ac678610ce7acb9c19c1d9a4766fc96284d5b3",
+      "docs/research/06_protocol_amendment.md": "36202fd8ca81dd3e6889f4c1b1809f023746cbc390668f883c3fecca408f2a3c",
+      "docs/research/06_recovery_manifest.json": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525",
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/cartilla.py": "0edfb41024f95743535b59f86326d3dcc3a1c69a665e552bd54db48bdcfd0d6b",
+      "neuropixel/codec.py": "29deb126fc5f55422bceb49ce5ccf45143e04fc78da641e8015703af7eb3019f",
+      "neuropixel/hrr.py": "e97f104cc4eb47c8ade3faa2d4c105e584e920e4f3240f7b95472205f4625efa",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/growth_ablation.py": "25f3880569eb10168bb0979cfc1d400c65e1615b1e31f23ab37446df2e47aaa5",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/safety.py": "8ec6c81d51a7a8c0fa8cc7c0f2f004eef5aa02ed4e47208398bd751101ab11d3",
+      "neuropixel/scanner.py": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "requirements/research-cloud.txt": "7695af95264e6d2116637f913340ec96fb213ba2c2f58238f520cf18534b62d5",
+      "scripts/research_ablations.py": "e0f750e4d3065c402c3a7e5f7bba7ec1d64fd8af6226fbc2f444bb4af20d8233",
+      "scripts/research_analyze_core_ablation.py": "0e44f6def94478593de739620c68e1320880afd4202f62b2be100a6867886a88",
+      "scripts/research_analyze_growth_ablation.py": "37d1def26b717ce67dc4d2f28454ad8e9e43e85788baae07a0af2fe513fcb52d",
+      "scripts/research_check_item6_inventory.py": "c2c3234fa29387cf9bd36f3b75caaa30c21d5b689f4a426c012d9538857ab780",
+      "scripts/research_cloud_preflight.py": "ec374dee49dc9eb20de9a4497f2c8b92e717fd6e2fdcf6cd3f573354fbc181e4",
+      "scripts/research_growth_ablation.py": "b14e029f72318fa3a26cc3d6ddf9341129402a32115df530bf7188e842b39a4d",
+      "scripts/research_item6_worker.py": "753e67c555f51b1a1b23fafa2b4cfbf8bd2e1e01a54d0e2b5a750279a8fda959",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+      "tests/test_core.py": "22d2295bc251ad4c3d39b9159b0a82c18bf317b3e3de1ced5d13d5e81d281f07",
+      "tests/test_research_ablations.py": "6e0aed9a83a42f65ddd07921fbecfebbea8dcfd58d85a6511bc34f2dd7f0a6a7",
+      "tests/test_research_analyze_core_ablation.py": "5bbd927a3359689e1dd964436fff924f6222e3b250812953829a332c02501f38",
+      "tests/test_research_analyze_growth_ablation.py": "00bbebcfec4f193e71c36a323e4c3bfdc2037f87e5b1bd90b0676ddca5501196",
+      "tests/test_research_growth_ablation.py": "7263cd0ccdedf5ed803256ce352a075bc61d41b3edc1214d225385b73b2c122f",
+      "tests/test_research_item6_worker.py": "c242fd2ea4c2cc1f39d1108dfa0304af49009756b89b1045439a6d2df7e2b2a3",
+      "tests/test_research_item6_worker_supervision.py": "9f7832c054e8bdcba3466dc74447364754ecbeda3391088b109506dd64f6046c"
+    },
+    "family": "neuropixel",
+    "gradient_clip": 1,
+    "height": 8,
+    "init_seed": 21,
+    "learning_rate": 0.003,
+    "panel": "factorial",
+    "phase": "item6_ablation",
+    "protocol_id": "NP-SCI-20261006-v1",
+    "run_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i21_u1024",
+    "school_weight": 0.3,
+    "split_seed": 0,
+    "steps": 16,
+    "train_sample_seed": 9002,
+    "training_damage": null,
+    "update_random_seed": 9001,
+    "updates": 1024,
+    "variant": {
+      "freeze_pad": false,
+      "reinject": true,
+      "tied": false
+    },
+    "vocab": 35,
+    "weight_decay": 0.0001,
+    "width": 8
+  },
+  "curve": [
+    {
+      "elapsed_training_seconds": 13.902285150999887,
+      "last_answer_loss": 2.479299783706665,
+      "last_unclipped_gradient_norm": 5.354824066162109,
+      "mean_training_loss_since_last_log": 2.8224993236362934,
+      "update": 128
+    },
+    {
+      "elapsed_training_seconds": 27.80344683499993,
+      "last_answer_loss": 2.38067889213562,
+      "last_unclipped_gradient_norm": 3.3932175636291504,
+      "mean_training_loss_since_last_log": 2.4324892479926348,
+      "update": 256
+    },
+    {
+      "elapsed_training_seconds": 41.7142867959999,
+      "last_answer_loss": 2.4046201705932617,
+      "last_unclipped_gradient_norm": 2.0313637256622314,
+      "mean_training_loss_since_last_log": 2.3979108072817326,
+      "update": 384
+    },
+    {
+      "elapsed_training_seconds": 55.75196488500001,
+      "last_answer_loss": 2.369889497756958,
+      "last_unclipped_gradient_norm": 3.13450288772583,
+      "mean_training_loss_since_last_log": 2.3693107906728983,
+      "update": 512
+    },
+    {
+      "elapsed_training_seconds": 69.65401202099997,
+      "last_answer_loss": 2.1900503635406494,
+      "last_unclipped_gradient_norm": 2.4105000495910645,
+      "mean_training_loss_since_last_log": 2.3317103143781424,
+      "update": 640
+    },
+    {
+      "elapsed_training_seconds": 83.58521829099982,
+      "last_answer_loss": 2.1846699714660645,
+      "last_unclipped_gradient_norm": 4.910953521728516,
+      "mean_training_loss_since_last_log": 2.2101830448955297,
+      "update": 768
+    },
+    {
+      "elapsed_training_seconds": 97.51235279100001,
+      "last_answer_loss": 1.722907543182373,
+      "last_unclipped_gradient_norm": 2.5940558910369873,
+      "mean_training_loss_since_last_log": 2.035245245322585,
+      "update": 896
+    },
+    {
+      "elapsed_training_seconds": 111.473020098,
+      "last_answer_loss": 1.5690116882324219,
+      "last_unclipped_gradient_norm": 4.989490032196045,
+      "mean_training_loss_since_last_log": 1.91998419072479,
+      "update": 1024
+    }
+  ],
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": null,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "gpu_name": null,
+    "matmul_tf32": false,
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "python": "3.12.8",
+    "threads": 2,
+    "versions": {
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    }
+  },
+  "final_test_accessed": false,
+  "optimization_budget_limited": true,
+  "parameter_count": 30384,
+  "peak_cuda_allocated_bytes": null,
+  "peak_cuda_reserved_bytes": null,
+  "resolved_model": {
+    "dropout": 0.0,
+    "factory": "neuropixel.research.ablations.training_model",
+    "family": "neuropixel",
+    "h": 8,
+    "kwargs": {
+      "c": 48,
+      "c_id": 16,
+      "fire_rate": 0.5,
+      "freeze_pad": false,
+      "hidden": 128,
+      "reinject": true,
+      "tied": false
+    },
+    "out_pos": [
+      7,
+      7
+    ],
+    "parameters": 30384,
+    "primary_supervision": "answer_cross_entropy_plus_occupied_token_lens_cross_entropy",
+    "recurrent_steps": 16,
+    "school_lens_every": 4,
+    "school_state_times": [
+      3,
+      7,
+      11,
+      15
+    ],
+    "school_weight": 0.3,
+    "steps": 16,
+    "training_damage": null,
+    "validation_intervention": "none; deterministic full firing in eval mode",
+    "vocab": 35,
+    "w": 8
+  },
+  "resources": [
+    {
+      "at_utc": "2026-10-07T03:44:35.637831+00:00",
+      "available_ram_gib": 14.355255126953125
+    },
+    {
+      "at_utc": "2026-10-07T03:44:49.559678+00:00",
+      "available_ram_gib": 14.324321746826172
+    },
+    {
+      "at_utc": "2026-10-07T03:45:03.460840+00:00",
+      "available_ram_gib": 14.317462921142578
+    },
+    {
+      "at_utc": "2026-10-07T03:45:17.371680+00:00",
+      "available_ram_gib": 14.31747055053711
+    },
+    {
+      "at_utc": "2026-10-07T03:45:31.409359+00:00",
+      "available_ram_gib": 14.329200744628906
+    },
+    {
+      "at_utc": "2026-10-07T03:45:45.311406+00:00",
+      "available_ram_gib": 14.325370788574219
+    },
+    {
+      "at_utc": "2026-10-07T03:45:59.242612+00:00",
+      "available_ram_gib": 14.321479797363281
+    },
+    {
+      "at_utc": "2026-10-07T03:46:13.169746+00:00",
+      "available_ram_gib": 14.31759262084961
+    },
+    {
+      "at_utc": "2026-10-07T03:46:27.130415+00:00",
+      "available_ram_gib": 14.308849334716797
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "historical_files_expected": 8,
+    "historical_files_verified": 7,
+    "provenance_implementation": "scripts/research_ablations.py:source_record",
+    "recovery_manifest": {
+      "path": "docs/research/06_recovery_manifest.json",
+      "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+    },
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    },
+    "unavailable_expected_sha256": {
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+    },
+    "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+  },
+  "started_at_utc": "2026-10-07T03:44:35.637138+00:00",
+  "status": "completed",
+  "total_wall_seconds": 112.87848486000007,
+  "train_probe": {
+    "accuracy": 0.294921875,
+    "correct": 151,
+    "cross_entropy": 2.943176409276998,
+    "macro_agent_patient_accuracy": 0.08203125,
+    "macro_all_roles": 0.294921875,
+    "n": 512,
+    "per_role": {
+      "ACCION": {
+        "accuracy": 0.2734375,
+        "correct": 35,
+        "n": 128,
+        "wilson_95": [
+          0.20366999780458017,
+          0.3564076855068533
+        ]
+      },
+      "AGENTE": {
+        "accuracy": 0.09375,
+        "correct": 12,
+        "n": 128,
+        "wilson_95": [
+          0.054443804399147026,
+          0.15672997257307852
+        ]
+      },
+      "LUGAR": {
+        "accuracy": 0.7421875,
+        "correct": 95,
+        "n": 128,
+        "wilson_95": [
+          0.660130807704431,
+          0.8101309791005884
+        ]
+      },
+      "PACIENTE": {
+        "accuracy": 0.0703125,
+        "correct": 9,
+        "n": 128,
+        "wilson_95": [
+          0.037429768303939966,
+          0.1282348034936063
+        ]
+      }
+    }
+  },
+  "training_probe_dataset": {
+    "bytes": 8887,
+    "content_sha256": "f74bb2ae12e99b579eeea485bf6c262805a73f3c086a94421478466fc166b564",
+    "n": 512,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core/datasets/split0_train_n512_seed61006.npz",
+    "sampling_seed": 61006,
+    "sha256": "a04e1310ce4a3da1565e15a74b935f87c6e481d41b5fc24a50969f79857432c6",
+    "split": "train",
+    "split_seed": 0
+  },
+  "training_seconds": 111.47437554699991,
+  "validation": {
+    "accuracy": 0.3076171875,
+    "correct": 630,
+    "cross_entropy": 2.870538510988781,
+    "macro_agent_patient_accuracy": 0.0771484375,
+    "macro_all_roles": 0.3076171875,
+    "n": 2048,
+    "per_role": {
+      "ACCION": {
+        "accuracy": 0.3359375,
+        "correct": 172,
+        "n": 512,
+        "wilson_95": [
+          0.29638194609723306,
+          0.37793659281183783
+        ]
+      },
+      "AGENTE": {
+        "accuracy": 0.052734375,
+        "correct": 27,
+        "n": 512,
+        "wilson_95": [
+          0.036492305788731,
+          0.07563799671337894
+        ]
+      },
+      "LUGAR": {
+        "accuracy": 0.740234375,
+        "correct": 379,
+        "n": 512,
+        "wilson_95": [
+          0.7005618428507421,
+          0.7763288680324041
+        ]
+      },
+      "PACIENTE": {
+        "accuracy": 0.1015625,
+        "correct": 52,
+        "n": 512,
+        "wilson_95": [
+          0.07829375610514354,
+          0.13076555267402867
+        ]
+      }
+    }
+  },
+  "validation_dataset": {
+    "bytes": 32415,
+    "content_sha256": "44873b31d17df696ceef3ff7c5fd2f1878921305d19623443780a443be364e0a",
+    "n": 2048,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core/datasets/split0_validation_n2048_seed61001.npz",
+    "sampling_seed": 61001,
+    "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f",
+    "split": "validation",
+    "split_seed": 0
+  },
+  "validation_predictions": {
+    "bytes": 19092,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/core/factorial_tie0_school0p3_reinj1_T16_damage0_s0_i21_u1024/validation_predictions.npz",
+    "sha256": "103592d4345202b06d7fd65aea2529b9e532f87f4066eff10a9f9f7414b4327c"
+  },
+  "weights_sha256": "12cd43b10064ed58b42ea30de000ed7cba5ee2a19586fff0da0a5bec75f3ed4d"
+}

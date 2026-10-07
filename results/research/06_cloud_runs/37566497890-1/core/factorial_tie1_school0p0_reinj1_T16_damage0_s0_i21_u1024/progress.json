@@ -49,8 +49,8 @@
     "panel": "factorial",
     "phase": "item6_ablation",
     "protocol_id": "NP-SCI-20261006-v1",
-    "run_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i21_u1024",
-    "school_weight": 0.3,
+    "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+    "school_weight": 0,
     "split_seed": 0,
     "steps": 16,
     "train_sample_seed": 9002,
@@ -59,8 +59,8 @@
     "updates": 1024,
     "variant": {
       "freeze_pad": false,
-      "reinject": false,
-      "tied": false
+      "reinject": true,
+      "tied": true
     },
     "vocab": 35,
     "weight_decay": 0.0001,
@@ -68,98 +68,54 @@
   },
   "curve": [
     {
-      "elapsed_training_seconds": 13.989320945000145,
-      "last_answer_loss": 2.4779961109161377,
-      "last_unclipped_gradient_norm": 5.478586673736572,
-      "mean_training_loss_since_last_log": 2.830786155536771,
+      "elapsed_training_seconds": 13.47848857100007,
+      "last_answer_loss": 2.46592378616333,
+      "last_unclipped_gradient_norm": 4.777872085571289,
+      "mean_training_loss_since_last_log": 2.7494507487863302,
       "update": 128
     },
     {
-      "elapsed_training_seconds": 27.945789562000073,
-      "last_answer_loss": 2.447618007659912,
-      "last_unclipped_gradient_norm": 3.940676689147949,
-      "mean_training_loss_since_last_log": 2.4371144119650126,
+      "elapsed_training_seconds": 26.89324915400016,
+      "last_answer_loss": 2.3850033283233643,
+      "last_unclipped_gradient_norm": 2.576584815979004,
+      "mean_training_loss_since_last_log": 2.4262976571917534,
       "update": 256
     },
     {
-      "elapsed_training_seconds": 41.91806460700013,
-      "last_answer_loss": 2.399580717086792,
-      "last_unclipped_gradient_norm": 2.918076753616333,
-      "mean_training_loss_since_last_log": 2.401844162493944,
+      "elapsed_training_seconds": 40.30339771900003,
+      "last_answer_loss": 2.3444395065307617,
+      "last_unclipped_gradient_norm": 1.592211127281189,
+      "mean_training_loss_since_last_log": 2.3970295265316963,
       "update": 384
     },
     {
-      "elapsed_training_seconds": 55.79437151600018,
-      "last_answer_loss": 2.4139397144317627,
-      "last_unclipped_gradient_norm": 3.06404972076416,
-      "mean_training_loss_since_last_log": 2.3803283143788576,
+      "elapsed_training_seconds": 53.74916992900012,
+      "last_answer_loss": 2.3473808765411377,
+      "last_unclipped_gradient_norm": 2.420119285583496,
+      "mean_training_loss_since_last_log": 2.379894593730569,
       "update": 512
-    },
-    {
-      "elapsed_training_seconds": 69.7546936650001,
-      "last_answer_loss": 2.258578062057495,
-      "last_unclipped_gradient_norm": 2.049076557159424,
-      "mean_training_loss_since_last_log": 2.3577364664524794,
-      "update": 640
-    },
-    {
-      "elapsed_training_seconds": 83.69183075800015,
-      "last_answer_loss": 2.361130714416504,
-      "last_unclipped_gradient_norm": 2.2718803882598877,
-      "mean_training_loss_since_last_log": 2.3368610441684723,
-      "update": 768
-    },
-    {
-      "elapsed_training_seconds": 97.63208765900004,
-      "last_answer_loss": 2.15026593208313,
-      "last_unclipped_gradient_norm": 5.547341823577881,
-      "mean_training_loss_since_last_log": 2.2206382285803556,
-      "update": 896
-    },
-    {
-      "elapsed_training_seconds": 111.5165434070002,
-      "last_answer_loss": 1.6595242023468018,
-      "last_unclipped_gradient_norm": 3.681804895401001,
-      "mean_training_loss_since_last_log": 2.0542708337306976,
-      "update": 1024
     }
   ],
   "resources": [
     {
-      "at_utc": "2026-10-07T03:42:42.402419+00:00",
-      "available_ram_gib": 14.352123260498047
+      "at_utc": "2026-10-07T03:48:17.652383+00:00",
+      "available_ram_gib": 14.329254150390625
     },
     {
-      "at_utc": "2026-10-07T03:42:56.424880+00:00",
-      "available_ram_gib": 14.319717407226562
+      "at_utc": "2026-10-07T03:48:31.150642+00:00",
+      "available_ram_gib": 14.330928802490234
     },
     {
-      "at_utc": "2026-10-07T03:43:10.381348+00:00",
-      "available_ram_gib": 14.316768646240234
+      "at_utc": "2026-10-07T03:48:44.565402+00:00",
+      "available_ram_gib": 14.334709167480469
     },
     {
-      "at_utc": "2026-10-07T03:43:24.353624+00:00",
-      "available_ram_gib": 14.316787719726562
+      "at_utc": "2026-10-07T03:48:57.975550+00:00",
+      "available_ram_gib": 14.326553344726562
     },
     {
-      "at_utc": "2026-10-07T03:43:38.229931+00:00",
-      "available_ram_gib": 14.32082748413086
-    },
-    {
-      "at_utc": "2026-10-07T03:43:52.190253+00:00",
-      "available_ram_gib": 14.32461929321289
-    },
-    {
-      "at_utc": "2026-10-07T03:44:06.127390+00:00",
-      "available_ram_gib": 14.324398040771484
-    },
-    {
-      "at_utc": "2026-10-07T03:44:20.067661+00:00",
-      "available_ram_gib": 14.313907623291016
-    },
-    {
-      "at_utc": "2026-10-07T03:44:33.952103+00:00",
-      "available_ram_gib": 14.329288482666016
+      "at_utc": "2026-10-07T03:49:11.421323+00:00",
+      "available_ram_gib": 14.33035659790039
     }
   ],
   "status": "training"
