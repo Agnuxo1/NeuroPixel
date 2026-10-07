@@ -8,7 +8,7 @@
     "thread_limit": 2
   },
   "item": 6,
-  "last_heartbeat_at_utc": "2026-10-07T03:23:51.721211+00:00",
+  "last_heartbeat_at_utc": "2026-10-07T03:23:58.383593+00:00",
   "paid_compute": false,
   "resource_policy": {
     "archive_interval_seconds": 300,
@@ -24,6 +24,12 @@
     {
       "at_utc": "2026-10-07T03:23:51.721211+00:00",
       "available_ram_gib": 14.576507568359375,
+      "cpu_count_logical": 4,
+      "thread_limit": 2
+    },
+    {
+      "at_utc": "2026-10-07T03:23:58.383593+00:00",
+      "available_ram_gib": 14.608264923095703,
       "cpu_count_logical": 4,
       "thread_limit": 2
     }
@@ -67,6 +73,24 @@
       "name": "source_environment",
       "returncode": 0,
       "started_at_utc": "2026-10-07T03:23:51.708927+00:00",
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "-c",
+        "import sys, torch, pytest\ntorch.set_num_threads(2)\ntorch.set_num_interop_threads(1)\nraise SystemExit(pytest.main(sys.argv[1:]))",
+        "tests",
+        "-q",
+        "--junitxml",
+        "/home/runner/work/NeuroPixel/NeuroPixel/runs/item6/37566497890-1/verification/tests.xml"
+      ],
+      "completed_at_utc": "2026-10-07T03:24:08.390224+00:00",
+      "log": "logs/tests.log",
+      "log_sha256": "275878e6090ef3217f2284ff8da57ef0e97e0099883a31b4ddd514367462811d",
+      "name": "tests",
+      "returncode": 0,
+      "started_at_utc": "2026-10-07T03:23:58.381766+00:00",
       "status": "completed"
     }
   ]
