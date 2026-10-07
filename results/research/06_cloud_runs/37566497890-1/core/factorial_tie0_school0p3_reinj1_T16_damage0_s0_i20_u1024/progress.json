@@ -49,7 +49,7 @@
     "panel": "factorial",
     "phase": "item6_ablation",
     "protocol_id": "NP-SCI-20261006-v1",
-    "run_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024",
+    "run_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024",
     "school_weight": 0.3,
     "split_seed": 0,
     "steps": 16,
@@ -59,7 +59,7 @@
     "updates": 1024,
     "variant": {
       "freeze_pad": false,
-      "reinject": false,
+      "reinject": true,
       "tied": false
     },
     "vocab": 35,
@@ -68,98 +68,98 @@
   },
   "curve": [
     {
-      "elapsed_training_seconds": 13.87919752099998,
-      "last_answer_loss": 2.4713022708892822,
-      "last_unclipped_gradient_norm": 3.6648941040039062,
-      "mean_training_loss_since_last_log": 2.733499988913536,
+      "elapsed_training_seconds": 13.906270848999952,
+      "last_answer_loss": 2.4941484928131104,
+      "last_unclipped_gradient_norm": 3.541944980621338,
+      "mean_training_loss_since_last_log": 2.725510461255908,
       "update": 128
     },
     {
-      "elapsed_training_seconds": 27.732877283999983,
-      "last_answer_loss": 2.4356284141540527,
-      "last_unclipped_gradient_norm": 3.3234245777130127,
-      "mean_training_loss_since_last_log": 2.4243794213980436,
+      "elapsed_training_seconds": 27.82825448599999,
+      "last_answer_loss": 2.438171625137329,
+      "last_unclipped_gradient_norm": 3.367466926574707,
+      "mean_training_loss_since_last_log": 2.429887929931283,
       "update": 256
     },
     {
-      "elapsed_training_seconds": 41.692864472999986,
-      "last_answer_loss": 2.4109206199645996,
-      "last_unclipped_gradient_norm": 3.9255640506744385,
-      "mean_training_loss_since_last_log": 2.3933634124696255,
+      "elapsed_training_seconds": 41.77334612100003,
+      "last_answer_loss": 2.344546318054199,
+      "last_unclipped_gradient_norm": 2.568392276763916,
+      "mean_training_loss_since_last_log": 2.3967422619462013,
       "update": 384
     },
     {
-      "elapsed_training_seconds": 55.59346873699997,
-      "last_answer_loss": 2.4197378158569336,
-      "last_unclipped_gradient_norm": 2.674575090408325,
-      "mean_training_loss_since_last_log": 2.388224747031927,
+      "elapsed_training_seconds": 55.678209004999985,
+      "last_answer_loss": 2.377295732498169,
+      "last_unclipped_gradient_norm": 2.655564069747925,
+      "mean_training_loss_since_last_log": 2.3850560765713453,
       "update": 512
     },
     {
-      "elapsed_training_seconds": 69.59692988799998,
-      "last_answer_loss": 2.190192461013794,
-      "last_unclipped_gradient_norm": 3.22157883644104,
-      "mean_training_loss_since_last_log": 2.3675364702939987,
+      "elapsed_training_seconds": 69.58127973,
+      "last_answer_loss": 2.258585214614868,
+      "last_unclipped_gradient_norm": 2.381782293319702,
+      "mean_training_loss_since_last_log": 2.371107831597328,
       "update": 640
     },
     {
-      "elapsed_training_seconds": 83.54650380099997,
-      "last_answer_loss": 2.3269705772399902,
-      "last_unclipped_gradient_norm": 1.9257816076278687,
-      "mean_training_loss_since_last_log": 2.3553732838481665,
+      "elapsed_training_seconds": 83.48043156899996,
+      "last_answer_loss": 2.3430187702178955,
+      "last_unclipped_gradient_norm": 2.147996187210083,
+      "mean_training_loss_since_last_log": 2.3611227739602327,
       "update": 768
     },
     {
-      "elapsed_training_seconds": 97.50886855699997,
-      "last_answer_loss": 2.165602684020996,
-      "last_unclipped_gradient_norm": 2.659884214401245,
-      "mean_training_loss_since_last_log": 2.3214486464858055,
+      "elapsed_training_seconds": 97.41829351799993,
+      "last_answer_loss": 2.1856677532196045,
+      "last_unclipped_gradient_norm": 3.093087673187256,
+      "mean_training_loss_since_last_log": 2.3264882154762745,
       "update": 896
     },
     {
-      "elapsed_training_seconds": 111.359985322,
-      "last_answer_loss": 1.991714596748352,
-      "last_unclipped_gradient_norm": 2.706441879272461,
-      "mean_training_loss_since_last_log": 2.233863811008632,
+      "elapsed_training_seconds": 111.31420572799993,
+      "last_answer_loss": 1.8472199440002441,
+      "last_unclipped_gradient_norm": 3.0889177322387695,
+      "mean_training_loss_since_last_log": 2.257227508351207,
       "update": 1024
     }
   ],
   "resources": [
     {
-      "at_utc": "2026-10-07T03:27:53.278339+00:00",
-      "available_ram_gib": 14.344314575195312
+      "at_utc": "2026-10-07T03:29:46.158639+00:00",
+      "available_ram_gib": 14.341789245605469
     },
     {
-      "at_utc": "2026-10-07T03:28:07.177178+00:00",
-      "available_ram_gib": 14.307567596435547
+      "at_utc": "2026-10-07T03:30:00.084415+00:00",
+      "available_ram_gib": 14.314502716064453
     },
     {
-      "at_utc": "2026-10-07T03:28:21.030856+00:00",
-      "available_ram_gib": 14.309513092041016
+      "at_utc": "2026-10-07T03:30:14.006398+00:00",
+      "available_ram_gib": 14.325428009033203
     },
     {
-      "at_utc": "2026-10-07T03:28:34.990843+00:00",
-      "available_ram_gib": 14.320568084716797
+      "at_utc": "2026-10-07T03:30:27.951490+00:00",
+      "available_ram_gib": 14.32962417602539
     },
     {
-      "at_utc": "2026-10-07T03:28:48.891447+00:00",
-      "available_ram_gib": 14.320549011230469
+      "at_utc": "2026-10-07T03:30:41.856353+00:00",
+      "available_ram_gib": 14.312919616699219
     },
     {
-      "at_utc": "2026-10-07T03:29:02.894909+00:00",
-      "available_ram_gib": 14.330352783203125
+      "at_utc": "2026-10-07T03:30:55.759423+00:00",
+      "available_ram_gib": 14.317218780517578
     },
     {
-      "at_utc": "2026-10-07T03:29:16.844482+00:00",
-      "available_ram_gib": 14.316757202148438
+      "at_utc": "2026-10-07T03:31:09.658575+00:00",
+      "available_ram_gib": 14.31551742553711
     },
     {
-      "at_utc": "2026-10-07T03:29:30.806848+00:00",
-      "available_ram_gib": 14.316585540771484
+      "at_utc": "2026-10-07T03:31:23.596437+00:00",
+      "available_ram_gib": 14.313850402832031
     },
     {
-      "at_utc": "2026-10-07T03:29:44.657965+00:00",
-      "available_ram_gib": 14.316741943359375
+      "at_utc": "2026-10-07T03:31:37.492350+00:00",
+      "available_ram_gib": 14.308128356933594
     }
   ],
   "status": "training"

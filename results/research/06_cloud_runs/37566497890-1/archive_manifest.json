@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-10-07T03:29:10.109878+00:00",
+  "at_utc": "2026-10-07T03:34:12.205842+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
     "core/datasets/split0_train_n512_seed61006.npz": {
@@ -11,8 +11,8 @@
       "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f"
     },
     "core/events.json": {
-      "bytes": 422,
-      "sha256": "40f8d1876f631417152b6aae79d844ecf6a12169ab5518ea0bc1a9af7096129d"
+      "bytes": 914,
+      "sha256": "9b5bef9dab8f2902344bc2108653e218b7608b6478717caf36361daabfcd092f"
     },
     "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6391,
@@ -59,16 +59,76 @@
       "sha256": "f2f75a2ecc6ad0363aca04c1e8d8b77800c9dc7339d08bb27cb0ec44032669cd"
     },
     "core/factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024/progress.json": {
-      "bytes": 6840,
-      "sha256": "f2eb337f7dfe5bb23783739352fe069562b8a24302dd71dde76ffb274e60bf46"
+      "bytes": 7924,
+      "sha256": "4689591c6b05321536ce1f9cf673929e5bdab5dea92aa5d2f82561a0aa5b3776"
+    },
+    "core/factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14381,
+      "sha256": "0ec588e6ce80f85994da69e9aa966f510b3b00d3e110d984489c78fa3122907d"
+    },
+    "core/factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18893,
+      "sha256": "ccb245762386da5cf3db48acdb434d4c1debb812c96bd571bc17323d76da59c8"
+    },
+    "core/factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 124981,
+      "sha256": "ad50154a288cf4752bc015701205ab48dcf99b6a8b0c908044159238c8d8ef0e"
+    },
+    "core/factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6392,
+      "sha256": "9f6acba700a93d58e11b855ac0ff0218381ad8eb59b911ff0780f6fc2a89098a"
+    },
+    "core/factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 7916,
+      "sha256": "1382ac74fc9e68ad10ee6035376e01e8ece59e28ac3f59ce9798defe8b9a6c37"
+    },
+    "core/factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14359,
+      "sha256": "a80ea9cd1b277bf002b9794fa466b19fb14bb297b00912f2fe7432fa7d15984d"
+    },
+    "core/factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 19012,
+      "sha256": "40c156a15e214030f00e573a16c6c9c508cb5a5a0221ffd41f1ed7e7ab267fff"
+    },
+    "core/factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 124981,
+      "sha256": "f1fcf77101f23359c8cdfe4b9b6e8bf4db0de2c982b96165e466f515e73c92f8"
+    },
+    "core/factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6390,
+      "sha256": "0fa47172606fc343098452f473ebba0d374c38e0c94db9921d5d84caf704e64b"
+    },
+    "core/factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 7929,
+      "sha256": "9690b7d98a70f4fe3586873fd008245a93a6632de21a261978a0cd5f129eb5c3"
+    },
+    "core/factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14312,
+      "sha256": "e7835e9430762fc458b7d5107c2579c9f34e7fa2cbb847ccc05a9884e78ac592"
+    },
+    "core/factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18587,
+      "sha256": "a8477944e08b861227ffb00a7b0430c4f91f54dc00b2a0317d1be21aece9cdcb"
+    },
+    "core/factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 122424,
+      "sha256": "166165280020a79f4bc440e5fa868bc1ead36c3a5afde378e9e5c76949d8d947"
+    },
+    "core/factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6389,
+      "sha256": "acc4eaf7f5a01a2e0d15d4a8b42ff8d175f5fddb9f4c434f41d02c42021edc91"
+    },
+    "core/factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 6101,
+      "sha256": "d01afc9a828240f81f5d114c86f5a892235739ee2513787837ee4e4b68b84db2"
     },
     "core/run_manifest.json": {
       "bytes": 144989,
       "sha256": "4662bc312f2ec7b59445325ff5ac091f3bf297b315f5ecc18d686aea71492272"
     },
     "logs/core.log": {
-      "bytes": 7029,
-      "sha256": "cf0b1e4b474b9de2b59efebb450511dc7ec2de7554010215e34171f406f34ac6"
+      "bytes": 13791,
+      "sha256": "e64389f246da9c9ee30b0cdd66eabfe2e5bb97a5880d63a9ffeb811799fc1ba5"
     },
     "logs/source_environment.log": {
       "bytes": 2755,
@@ -87,8 +147,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 5387,
-      "sha256": "ee012bcee8ded52d7baa6ae5a6dd9b8ba213e6d321fff64ca4657371fd72d9cb"
+      "bytes": 6217,
+      "sha256": "464eee629a097efcb432b9e338f0b80ea6ada8dbe5cbcf96fe140883b6195eb1"
     }
   },
   "run_key": "37566497890-1",
