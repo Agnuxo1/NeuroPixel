@@ -1,4 +1,9 @@
 {
+  "admission": {
+    "at_utc": "2026-10-07T09:51:09.802866+00:00",
+    "available_ram_gib": 14.62960433959961,
+    "phase": "admission"
+  },
   "gpu_requested": false,
   "item": 9,
   "operation": "unchanged offline audit host fallback",
@@ -19,7 +24,41 @@
   "schema_version": 1,
   "scientific_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
   "source_commit": "87e1f1c0b388190474e8190952c148c0501c8abf",
-  "stages": [],
+  "stages": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T09:51:14.723990+00:00",
+        "available_ram_gib": 14.582984924316406,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/scientific-source/scripts/research_verify_item9_archive.py",
+        "--phase",
+        "study",
+        "--source-commit",
+        "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+        "--archive-commit",
+        "b64d0e2ba222df76caf72bc9870c7602873e7236",
+        "--source-root",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/scientific-source",
+        "--input",
+        "/tmp/neuropixel-item9-offline-inputs-_p481h8d/complete-raw-archive/results/research/09_cloud_runs/37593731891-1-study",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_offline_runs/37603398040-1-offline/full_archive_audit_01.json"
+      ],
+      "completed_at_utc": "2026-10-07T09:51:15.409699+00:00",
+      "log_sha256": "45a740a2ee4dd0678054601806b8d8d1709159f0f8da5ee3e1ddc34ea9f58a9b",
+      "maximum_seconds": 600,
+      "name": "full_archive_audit",
+      "receipt_sha256": "6cefabacb7d5538e68886924968e6502617b8e62c5f09d848bc0a35863f3b4e1",
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T09:51:14.803903+00:00",
+      "status": "completed",
+      "supervision_failure": null,
+      "wall_seconds_including_shutdown": 0.6042463129999902
+    }
+  ],
   "started_at_utc": "2026-10-07T09:51:09.801483+00:00",
   "status": "running"
 }
