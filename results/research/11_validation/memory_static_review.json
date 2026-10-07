@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "kind": "prospective_root_contract_review",
+  "controller": {
+    "blob": "5ea58325d00dec560590961155accdbc81675eb6",
+    "bytes": 41732,
+    "sha256": "f5b19486fdb9990a711071e17c344efebd9e7aa473580b11e13ab65b317c7c9a"
+  },
+  "tests": {
+    "blob": "288c18f87876c2f54ca77290c1ee9480eaee686d",
+    "bytes": 20785,
+    "sha256": "4d7ff980840ba6308d0a16e23e35e8c9506955aec1ed550b60869cd35aeeaa7b"
+  },
+  "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+  "probe_source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+  "probe_archive_commit": "ae82b5154c8d3d7da132c4b95ff05009be253437",
+  "reviews": [
+    "Root read complete controller, final gate delta and eight tests; native/helper code previously reviewed and B actually passed",
+    "Architecture reviewed controller/helper/phase3 API equivalence and count/gate schema",
+    "Evidence peer reviewed independent C auditor schema, logits/NLL/axes/sampling/selection/statistics"
+  ],
+  "before_training": true,
+  "checks": [
+    "16 cases and 1488 nominal rows per checkpoint",
+    "Targets crossed with all distractors; diagonal48/conflicting240; matched batch288 blank",
+    "No cue replay in suffix; zero/swap boundary captured before query",
+    "29,392 vs29,336 parameters;432 vs70 state values explicitly not matched",
+    "One seed69 acrossfour pilots; sample indices drawn before minibatch delays",
+    "Both selected delay2 census counts>=46 of48 required for main",
+    "Completed negative pilots remain completed, with main blocked",
+    "Ten main models have exact development inventoryd2,d3,d4, semantic missing-case rejection after rehash",
+    "Consumed final access recorded before model construction and retry refused",
+    "Primary n5 paired t only; secondary values descriptive; no independent census-row bootstrap",
+    "Census is known; delay4 development exposure explicitly retained",
+    "Worker/source after guards and full Git archive gate precede final scoring"
+  ],
+  "limitations": [
+    "Execution of C tests/pilots and independent audit are pending",
+    "Review is internal to this research workflow; not outside replication"
+  ],
+  "reviewed_at_utc": "2026-10-07T13:11:49+00:00",
+  "status": "reviewed_no_material_blockers",
+  "auditor": {
+    "blob": "f1d49beb06181b8d72b66493dab087279303862d",
+    "bytes": 56340,
+    "sha256": "2d5996e5566c058abd2f49f1cded6ab2a9c635b10d4aea301490859a5b04991d"
+  },
+  "offline_wrapper": {
+    "blob": "2551039c8e7dc59f64e643343953ab68fa1dd548",
+    "bytes": 34543,
+    "sha256": "a01a341c4dde6a492aa40ad48549067bcc7dfe8185ebf4aaaf6e97f7f18761b8"
+  },
+  "protocol": "642f5cbbbdc6f1ab259a63e8dd09bff4bc2f4314d6054674c97e86c99cb98a69",
+  "offline_review": "Root read full wrapper and operational certification addition; complete worker/runtime/source/test/RAM prerequisites required; actual G-to-F byte/chronology rules checked.",
+  "protocol_review": "Primary-literature reviewer checked full census/intervention/statistical/admission/resource protocol without a concrete blocker.",
+  "B_auditor_review": "Architecture reviewed independent root saved-array recount for exact47/18/17/10 inventories and values/limits."
+}

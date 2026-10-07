@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "kind": "prospective_source_corrections_before_first_learned_run",
+  "executed_before_correction": false,
+  "changes": [
+    {
+      "preimage": "a012fcbe956046b52f71af0301c2afda97e7b80d",
+      "successor": "38510f1b9a1ecfed8efd9ff4f79ea3aa34fc58b2",
+      "reason": "Four completed pilots that fail competence must be recorded as a completed negative scientific result; train/final still reject negative admission."
+    },
+    {
+      "preimage": "38510f1b9a1ecfed8efd9ff4f79ea3aa34fc58b2",
+      "successor": "5ea58325d00dec560590961155accdbc81675eb6",
+      "reason": "Require exactly normal_d2,normal_d3,normal_d4 metadata/prediction entries before final access; previous .values() loop admitted an empty mapping."
+    }
+  ],
+  "recipe_changed": false,
+  "training_or_final_outcome_observed": false,
+  "expected_test_methods": 8
+}

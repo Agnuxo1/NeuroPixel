@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "status": "authored_static_review_only",
+  "source_preimage": {
+    "repository": "Agnuxo1/NeuroPixel",
+    "source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+    "path": "scripts/research_item10_offline.py",
+    "git_blob": "9deac7cc8631f8ead6e7cede44f14b13158182ac",
+    "bytes": 24461,
+    "sha256": "eb25635f69848d99bb508ea697392b224d1ad5cd43f23b1b742b236e3afc9bc2",
+    "preservation": "Exact fetched preimage retained as an immutable Git blob; original committed source is unchanged."
+  },
+  "derived": {
+    "path": "scripts/research_item11_offline.py",
+    "blob": "2551039c8e7dc59f64e643343953ab68fa1dd548",
+    "bytes": 34543,
+    "sha256": "a01a341c4dde6a492aa40ad48549067bcc7dfe8185ebf4aaaf6e97f7f18761b8"
+  },
+  "exact_unchanged_sections": [
+    {
+      "name": "safe_relative",
+      "byte_identical": true,
+      "sha256": "043cb422cefbde85783f131b07a84feed3ef151def3326b6deeb61a1033cbaeb"
+    },
+    {
+      "name": "streamed_SHA256_Git_blob_SHA1",
+      "byte_identical": true,
+      "sha256": "475a9db7d1df59cf81b79fc03a435df0598db290915ce0eed7f64210a283c354"
+    },
+    {
+      "name": "ZIP_full_source_comparison",
+      "byte_identical": true,
+      "sha256": "15fe918c85885373bc417a8d2827702a0421d5f98c09a0c666c1e6769003f515"
+    }
+  ],
+  "changed_contracts": [
+    "Item11 imports research_item11_inputs; low-level bounded Git transport remains research_item9_worker, supervised by research_item11_worker.",
+    "Remove all acquisition, bAbI and TAR handling. No TEST/data member is extracted and no model is imported or invoked.",
+    "Scientific phases: probe inputs target; preflight target+probe; study target+preflight+gate+probe. Each spec is the full archived run, including its manifest.",
+    "Probe input spec equals scientific.inputs.probe for preflight/study. model.py, phase3.py and stream_memory.py hashes must match between probe and learned sources.",
+    "Probe recount source is anchored by operational plan; learned recount source is anchored by operational and scientific plans (including prior preflight in study).",
+    "Fresh sequential subprocesses use the parent supervised process group, separate exclusive logs/records/output directories, shared deadline and 180-second archive reserve.",
+    "Study gate checks G strict ancestor of F, exact source/run/training-manifest identity, all ten unchanged training subtrees and thirteen distinct artifact references per run including delays, nonpersistent buffers and d2/d3/d4 predictions+metadata.",
+    "G must contain neither final_inventory/final_access/final_metrics/final_predictions nor pre_final_archive_receipt. Recorded timestamps must progress training manifest, train completion, G snapshot, gate receipt, final child start, consumed access, final metrics, F snapshot.",
+    "After recounts, verify all input file names/bytes/hashes and source checkout HEAD/cleanliness unchanged; retain errors and nonzero child status without repair.",
+    "After full byte recovery, every final input archive must have completed worker status, exact planned stages and successful return codes, matching resource policy and no paid/GPU request. Before/after source guards must bind the committed plan/source map and declare clean/all-verified/no unexpected files.",
+    "Every stage runtime must match the pinned plan and thread policy; resource monitors must be nonempty with no failure and all RAM samples >=8 GiB, independently recomputed minima, plus successful admission and final RAM floor.",
+    "Contract-test collection must be unique and exactly match the planned methods/files; recorded setup/call/teardown outcomes must all pass, with exitstatus0 and no skips/issues. Extra successful subtest call reports are retained separately from collected methods."
+  ],
+  "cli": "python scripts/research_item11_offline.py --phase audit --plan docs/research/11_audit_plan.json --output RUN_ROOT",
+  "report_paths": [
+    "offline_archive_audit.json",
+    "offline_started.json",
+    "offline_status.json",
+    "offline_probe_subprocess.json",
+    "probe_analysis/probe_audit.json",
+    "offline_scientific_subprocess.json (preflight/study)",
+    "analysis/scientific_audit.json (preflight/study)"
+  ],
+  "validation": {
+    "execution_performed": false,
+    "python_compilation_performed": false,
+    "model_inference_performed": false,
+    "tests_performed": false,
+    "static_checks": [
+      "Read parent worker11, input helper11, producerC and both saved-array auditor CLIs/schemas.",
+      "Checked exact preserved algorithmic sections against the retained preimage.",
+      "Reviewed declared 10-run/13-reference gate and chronology against original worker order.",
+      "Read original Supervisor/resource_sample and item11 worker runtime/source/test/status schemas before implementing operational certification."
+    ]
+  },
+  "limitations": [
+    "Operational/SHA/Git evidence remains within the same research custody; it is not external replication or proof of wall-clock push time.",
+    "This receipt describes authored code and static review, not successful execution.",
+    "The wrapper verifies all bytes and delegates numerical/scientific recount to separately bound auditors; it does not load checkpoints.",
+    "Stored interim snapshots are copied partial files; only completed run subtrees are used to authenticate the pre-final gate."
+  ],
+  "superseded_authored_candidate": {
+    "path": "scripts/research_item11_offline.py",
+    "blob": "39d093b934f781b4098296b2139dae45c951bd0b",
+    "bytes": 27916,
+    "sha256": "31a2195c4b6392392f5d191aea24777a4604fdf9d8956c9501512c78a98a5c17",
+    "reason": "Root static review identified that byte-valid science could otherwise be certified despite failed final RAM/source/worker guards. No execution occurred; the earlier candidate remains preserved."
+  }
+}

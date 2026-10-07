@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "phase": "probe",
+  "recorded_at_utc": "2026-10-07T13:00:23+00:00",
+  "source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+  "source_tree": "8aeccc8e80a30a027ebd5848adf200f8cf6ba00e",
+  "plan_sha256": "e93c42d0a6c62f4870f26d360dbdc9d877fe0d5196e5d207db86ce1b65db8bc5",
+  "run_id": 37624600542,
+  "job_id": 112803038520,
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "runner_released": true,
+  "archive_commit": "ae82b5154c8d3d7da132c4b95ff05009be253437",
+  "archive_path": "results/research/11_cloud_runs/37624600542-1-probe",
+  "archive_files_excluding_manifest": 36,
+  "archive_bytes_excluding_manifest": 10315839,
+  "tests": {
+    "collected_parent_methods": 8,
+    "passed_parent_methods": 8,
+    "passed_subtests": 31,
+    "passed_call_reports": 39,
+    "failed": 0,
+    "skipped": 0
+  },
+  "producer_checks": {
+    "total": 47,
+    "failed": 0
+  },
+  "worker_seconds_before_final_archive": 14.016487243,
+  "probe_seconds": 0.7341398929999912,
+  "supervision_samples": 6,
+  "minimum_sampled_available_ram_gib": 14.475296020507812,
+  "json_rehashes": [
+    {
+      "path": "worker_status.json",
+      "sha256": "cfed04129f285b7d8712c2cf47fc54aaa6245d5cbcfe413e5b557e2e4c32bbae",
+      "bytes": 4744
+    },
+    {
+      "path": "probe/probe_report.json",
+      "sha256": "f324040a53f010dee9193446bf2102ef34825d6ec344eac356a273ad5111a386",
+      "bytes": 36960
+    },
+    {
+      "path": "test_collection.json",
+      "sha256": "8286d5c9d379a3a09ecadc61cdb69974ab553a969b594d7b49a6f6c9d9397981",
+      "bytes": 905
+    },
+    {
+      "path": "test_results.json",
+      "sha256": "46d2b82e4bc730139e888fa1a7ecaa1bf537eeb9e92286f05058d5bbc01c8eef",
+      "bytes": 10745
+    },
+    {
+      "path": "tests.xml",
+      "sha256": "17de8ddc3da0c28486a1445d9db5841a983c13c86cdfdd6735b0f70b88255048",
+      "bytes": 1352
+    },
+    {
+      "path": "memory_probe_status.json",
+      "sha256": "94f84a55fe6492a04bb81b1a76d38c5335043da4f1457fc0018797476b8acd67",
+      "bytes": 3736
+    },
+    {
+      "path": "contract_tests_resource_monitor.json",
+      "sha256": "a366e0bec89aba15c672ba82262c96a06b02d4df69bf65ba875c967e24712395",
+      "bytes": 604
+    },
+    {
+      "path": "probe_resource_monitor.json",
+      "sha256": "e070631a2e9a66b142d25fce3ae628a22d099d6c6b63b318d6b0e585dd1fceea",
+      "bytes": 578
+    }
+  ],
+  "root_json_checks": [
+    {
+      "check": "eight_unique_parent_methods",
+      "passed": true
+    },
+    {
+      "check": "all_test_reports_passed",
+      "passed": true
+    },
+    {
+      "check": "eight_parent_plus_31_subtest_calls",
+      "passed": true
+    },
+    {
+      "check": "47_producer_checks_passed",
+      "passed": true
+    },
+    {
+      "check": "ten_condition_records",
+      "passed": true
+    },
+    {
+      "check": "eighteen_scientific_payloads",
+      "passed": true
+    },
+    {
+      "check": "complete_final_archive_identity",
+      "passed": true
+    },
+    {
+      "check": "two_completed_stages",
+      "passed": true
+    },
+    {
+      "check": "supervision_clear:contract_tests_resource_monitor.json",
+      "passed": true
+    },
+    {
+      "check": "monitor_minimum:contract_tests_resource_monitor.json",
+      "passed": true
+    },
+    {
+      "check": "supervision_clear:probe_resource_monitor.json",
+      "passed": true
+    },
+    {
+      "check": "monitor_minimum:probe_resource_monitor.json",
+      "passed": true
+    },
+    {
+      "check": "RAM_floor_sampled",
+      "passed": true
+    }
+  ],
+  "independent_saved_array_audit_status": "pending",
+  "observations": [
+    {
+      "history_call_count": 0,
+      "id": "separate_calls_empty",
+      "mechanism": "original forward; prior returned states discarded"
+    },
+    {
+      "history_call_count": 1,
+      "id": "separate_calls_cue",
+      "mechanism": "original forward; prior returned states discarded"
+    },
+    {
+      "history_call_count": 5,
+      "id": "separate_calls_cue_delay4",
+      "mechanism": "original forward; prior returned states discarded"
+    },
+    {
+      "history_call_count": 17,
+      "id": "separate_calls_cue_delay16",
+      "mechanism": "original forward; prior returned states discarded"
+    },
+    {
+      "history_call_count": 6,
+      "id": "separate_calls_cue_distractor_delay4",
+      "mechanism": "original forward; prior returned states discarded"
+    },
+    {
+      "finite_sentinel": 3.25,
+      "id": "returned_state_ownership",
+      "mechanism": "ordinary returned state mutated by caller; next call initializes anew"
+    },
+    {
+      "blank_frames": 0,
+      "cue_vs_no_cue_state_max_abs": 1.6995137929916382,
+      "external_hook_vs_default_state_max_abs": 1.6953363418579102,
+      "id": "stream_delay0",
+      "local_updates": 13,
+      "mechanism": "existing within-sequence state; same query after distinct cue histories"
+    },
+    {
+      "blank_frames": 4,
+      "cue_vs_no_cue_state_max_abs": 1.8231598138809204,
+      "external_hook_vs_default_state_max_abs": 2.0815508365631104,
+      "id": "stream_delay4",
+      "local_updates": 25,
+      "mechanism": "existing within-sequence state; same query after distinct cue histories"
+    },
+    {
+      "blank_frames": 16,
+      "cue_vs_no_cue_state_max_abs": 3.9259796142578125,
+      "external_hook_vs_default_state_max_abs": 4.347705364227295,
+      "id": "stream_delay16",
+      "local_updates": 61,
+      "mechanism": "existing within-sequence state; same query after distinct cue histories"
+    },
+    {
+      "blank_frames": 32,
+      "cue_vs_no_cue_state_max_abs": 13.59538745880127,
+      "external_hook_vs_default_state_max_abs": 15.644302368164062,
+      "id": "stream_delay32",
+      "local_updates": 109,
+      "mechanism": "existing within-sequence state; same query after distinct cue histories"
+    }
+  ],
+  "limits": [
+    "All activity observations are untrained finite diagnostics; no learned-memory score.",
+    "Increasing cue-dependent activity magnitude is not stable memory or retrieval competence.",
+    "JSON checks and source hashes are not a new experimental replication.",
+    "Local executor unavailable; standard public CPU job is complete."
+  ]
+}

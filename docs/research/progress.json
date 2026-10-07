@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T12:55:25+00:00",
+  "recorded_at": "2026-10-07T13:11:49+00:00",
   "active_item": 11,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -672,7 +672,7 @@
     "closure_commit": "4411de991098ac592a42b408e266061786396395"
   },
   "item11": {
-    "stage": "Historical/source audit reviewed; untrained diagnostic protocol frozen before first execution",
+    "stage": "Memory-path probe completed; learned-memory preflight frozen before first training; main blocked pending admission and independent audits",
     "opened_after_item10_closure_commit": "4411de991098ac592a42b408e266061786396395",
     "scope": "Distinguish durable parameter/expert storage, within-call recurrent activation, across-call episodic memory, and externally reintroduced inputs. Audit current public paths and historical memory claims; derive necessary conditions and execute bounded counterfactual/integrity checks under a frozen protocol where feasible. Record interference only with a specified stored object and retrieval criterion.",
     "model_training_started": false,
@@ -687,8 +687,28 @@
     "probe_recipe_sha256": "5335fb058124b2e1137904a931554c17837814282264e6dfdd7a7b42b70a64af",
     "probe_contract_methods": 8,
     "probe_implementation_files": 13,
-    "probe_execution_completed": false,
+    "probe_execution_completed": true,
     "learned_memory_recipe_prepared": true,
-    "learned_preflight_admitted": false
+    "learned_preflight_admitted": true,
+    "probe_source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+    "probe_run_id": 37624600542,
+    "probe_job_id": 112803038520,
+    "probe_archive_commit": "ae82b5154c8d3d7da132c4b95ff05009be253437",
+    "probe_runner_released": true,
+    "probe_contract_methods_passed": 8,
+    "probe_subtests_passed": 31,
+    "probe_checks_passed": 47,
+    "probe_worker_seconds": 14.016487243,
+    "probe_json_root_checks": 13,
+    "probe_saved_array_audit_status": "pending",
+    "learned_preflight_freeze_utc": "2026-10-07T13:11:49+00:00",
+    "learned_preflight_plan_sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5",
+    "learned_recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+    "learned_preflight_runs": 4,
+    "learned_preflight_updates": 1024,
+    "learned_preflight_seed": 69,
+    "learned_contract_methods": 8,
+    "learned_model_training_started": false,
+    "learned_main_admitted": false
   }
 }
