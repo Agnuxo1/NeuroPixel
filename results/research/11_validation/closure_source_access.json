@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "prior_record": {
+    "recorded_at": "2026-10-07T12:29:19+00:00",
+    "requests": [
+      {
+        "url": "https://web.stanford.edu/class/psych209/Readings/GravesWayne16DNC.pdf",
+        "result": "web open400 Timeout fetching",
+        "scientific_execution": false
+      },
+      {
+        "url": "https://www.nature.com/articles/nature20101",
+        "result": "web open500 non-retryable identity redirect",
+        "scientific_execution": false
+      }
+    ],
+    "recovery": "Primary-paper PDF located using system1 search at gwern.net; primary bibliographic publication verified through Nature search result. No login or browser fallback."
+  },
+  "closure_attempts": [
+    {
+      "url": "https://www.bioinf.jku.at/publications/older/2604.pdf",
+      "operation": "find Task 2b",
+      "result": "No matching text found",
+      "ref": "turn176view0",
+      "role": "Supplemental source lookup; earlier root and peer full-text retrievals retained",
+      "numerical_execution": false
+    },
+    {
+      "url": "https://www.bioinf.jku.at/publications/older/2604.pdf",
+      "operation": "open",
+      "result": "400 Timeout fetching",
+      "ref": "turn177view0",
+      "role": "Supplemental reread failed; no scientific claims or outcomes changed",
+      "numerical_execution": false
+    }
+  ]
+}

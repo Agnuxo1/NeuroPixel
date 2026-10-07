@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "reviewed_draft_blob": "37ba5e11db1d1e98c23d7373d6d935b3ab436f1d",
+  "reviewed_draft_sha256": "1032e11da287b8e053cf91ed6b45b04a9d2f05da46f49fffe2c52a7b14b083cc",
+  "final_blob": "2f33bdfeb9b12d2945c7a474987b9549d4361563",
+  "final_sha256": "ff44578bbcb0faf3762718eca2d5bc8cfbb3ccf05a773891444392b6115889f5",
+  "scientific_review": {
+    "reviewer": "scientific_prior_art",
+    "scope": "Full report evidence/interpretation/primary-literature review; no model execution or new outcome sampling",
+    "finding": "Replace dynamic-state capacity with state tensor sizes; payload size does not measure information capacity",
+    "resolution": "Applied. Historical parameter/computation mismatch also stated directly."
+  },
+  "architecture_result_review": {
+    "reviewer": "architecture_audit",
+    "result": "No discrepancy or material blocker",
+    "scope": "Independent read of completed audit and raw population summaries; 12 population scores, position/target sums and selection ranking",
+    "confirmed_counts": {
+      "neuropixel_lr0001": [
+        40,
+        36,
+        31
+      ],
+      "neuropixel_lr0003": [
+        38,
+        36,
+        33
+      ],
+      "gru_lr0001": [
+        48,
+        48,
+        48
+      ],
+      "gru_lr0003": [
+        48,
+        48,
+        48
+      ]
+    },
+    "near_required": 46,
+    "near_selected_neuropixel": 38,
+    "near_selected_gru": 48,
+    "high_finite_CE_confirmed": true,
+    "no_main_or_primary_CI": true,
+    "no_neural_execution": true
+  },
+  "closed_at_utc": "2026-10-07T13:32:18+00:00"
+}

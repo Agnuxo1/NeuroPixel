@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "phase": "offline_audit_completion",
+  "source_commit": "f50ef0e55397ce4fb8e85360f5be8c12003bd6ee",
+  "run_id": 37627489876,
+  "job_id": 112812914654,
+  "archive_commit": "0a8403b1001881acc8626369a1e4f9dde83cc8e2",
+  "archive_path": "results/research/11_cloud_runs/37627489876-1-audit",
+  "files_excluding_manifest": 24,
+  "bytes_excluding_manifest": 10623568,
+  "rehashes": [
+    {
+      "path": "worker_status.json",
+      "bytes": 3693,
+      "sha256": "e842318baddfff20e6a1b2d87a875ef5615cedd7e2ad6651dbd13ce0bf1bd1c8"
+    },
+    {
+      "path": "offline_archive_audit.json",
+      "bytes": 1271269,
+      "sha256": "bb23289039a0c33176683cf4a447a75c5c9b5be2f097fd34e3e120bf672b75a2"
+    },
+    {
+      "path": "offline_status.json",
+      "bytes": 802,
+      "sha256": "46ca71b672f36aaa788b7d58e68569db82cde8b47a07047d8ce9de1301df1384"
+    },
+    {
+      "path": "probe_analysis/probe_audit.json",
+      "bytes": 78628,
+      "sha256": "e82dbba0da954e92adc0b5901f6af389179b7684b84ea7f306e00285c13fd222"
+    },
+    {
+      "path": "analysis/scientific_audit.json",
+      "bytes": 126079,
+      "sha256": "14677b614244a14c4697dd3b09b59ea7f04f93b6bef13dfabdb87440641e4f80"
+    },
+    {
+      "path": "audit_resource_monitor.json",
+      "bytes": 710,
+      "sha256": "05e6fface3625690e964d710aaff0b116816122fcad676b5a06bc6d2a6fec73e"
+    }
+  ],
+  "independent_archive_checks": 6409,
+  "independent_probe_checks": 504,
+  "independent_C_checks": 13517,
+  "numerical_comparisons": 924,
+  "max_abs_difference": 1.2434497875801753e-13,
+  "root_assertions": 20,
+  "issues": [],
+  "checks": [
+    {
+      "check": "sha256:worker_status.json",
+      "passed": true
+    },
+    {
+      "check": "bytes:worker_status.json",
+      "passed": true
+    },
+    {
+      "check": "sha256:offline_archive_audit.json",
+      "passed": true
+    },
+    {
+      "check": "bytes:offline_archive_audit.json",
+      "passed": true
+    },
+    {
+      "check": "sha256:offline_status.json",
+      "passed": true
+    },
+    {
+      "check": "bytes:offline_status.json",
+      "passed": true
+    },
+    {
+      "check": "sha256:probe_analysis/probe_audit.json",
+      "passed": true
+    },
+    {
+      "check": "bytes:probe_analysis/probe_audit.json",
+      "passed": true
+    },
+    {
+      "check": "sha256:analysis/scientific_audit.json",
+      "passed": true
+    },
+    {
+      "check": "bytes:analysis/scientific_audit.json",
+      "passed": true
+    },
+    {
+      "check": "sha256:audit_resource_monitor.json",
+      "passed": true
+    },
+    {
+      "check": "bytes:audit_resource_monitor.json",
+      "passed": true
+    },
+    {
+      "check": "archive_verified",
+      "passed": true
+    },
+    {
+      "check": "probe_verified",
+      "passed": true
+    },
+    {
+      "check": "C_verified",
+      "passed": true
+    },
+    {
+      "check": "C_negative_completed",
+      "passed": true
+    },
+    {
+      "check": "worker_completed_source",
+      "passed": true
+    },
+    {
+      "check": "no_GPU_or_paid",
+      "passed": true
+    },
+    {
+      "check": "audit_monitor",
+      "passed": true
+    },
+    {
+      "check": "all_root_metric_cost_recounts",
+      "passed": true,
+      "numeric_comparisons": 924,
+      "max_abs_difference": 1.2434497875801753e-13
+    }
+  ],
+  "worker_wall_seconds": 10.522987138000019,
+  "audit_minimum_sampled_ram_gib": 14.46136474609375,
+  "audit_monitor_samples": 4,
+  "decision": "C admission failed; no main/final run admitted or executed; item 11 ready for report closure after peer review",
+  "numerical_comparison_issues": []
+}

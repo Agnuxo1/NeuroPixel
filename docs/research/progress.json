@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T13:18:16+00:00",
-  "active_item": 11,
+  "recorded_at": "2026-10-07T13:32:18+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -73,8 +73,10 @@
     {
       "item": 11,
       "title": "Durable memory and interference",
-      "status": "in_progress",
-      "opened_at_utc": "2026-10-07T12:26:57+00:00"
+      "status": "completed",
+      "opened_at_utc": "2026-10-07T12:26:57+00:00",
+      "closed_at_utc": "2026-10-07T13:32:18+00:00",
+      "report": "11_results.md"
     },
     {
       "item": 12,
@@ -672,11 +674,11 @@
     "closure_commit": "4411de991098ac592a42b408e266061786396395"
   },
   "item11": {
-    "stage": "Four learned pilots completed; near-delay competence failed; main not admitted; independent saved-array and archive audit frozen",
+    "stage": "Closed: source/API and historical audit, untrained mechanism diagnostic, completed negative learned preflight, independent raw/source/operational recount and reviewed report",
     "opened_after_item10_closure_commit": "4411de991098ac592a42b408e266061786396395",
     "scope": "Distinguish durable parameter/expert storage, within-call recurrent activation, across-call episodic memory, and externally reintroduced inputs. Audit current public paths and historical memory claims; derive necessary conditions and execute bounded counterfactual/integrity checks under a frozen protocol where feasible. Record interference only with a specified stored object and retrieval criterion.",
-    "model_training_started": false,
-    "scientific_scoring_started": false,
+    "model_training_started": true,
+    "scientific_scoring_started": true,
     "execution_plan_frozen": true,
     "historical_H1": "closed; not supported; unchanged",
     "sequential_policy": "Do not open item12 or later before closing this feasible investigation.",
@@ -700,7 +702,7 @@
     "probe_checks_passed": 47,
     "probe_worker_seconds": 14.016487243,
     "probe_json_root_checks": 13,
-    "probe_saved_array_audit_status": "pending",
+    "probe_saved_array_audit_status": "verified",
     "learned_preflight_freeze_utc": "2026-10-07T13:11:49+00:00",
     "learned_preflight_plan_sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5",
     "learned_recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
@@ -728,6 +730,21 @@
     "learned_near_census_n": 48,
     "independent_audit_freeze_utc": "2026-10-07T13:18:16+00:00",
     "independent_audit_plan_sha256": "2d34eb9492f9a8eccef24e575bf1cca4e10fc695b02de2b09712c807e9516742",
-    "independent_audit_status": "frozen_pending_execution"
+    "independent_audit_status": "verified",
+    "independent_audit_source_commit": "f50ef0e55397ce4fb8e85360f5be8c12003bd6ee",
+    "independent_audit_run_id": 37627489876,
+    "independent_audit_job_id": 112812914654,
+    "independent_audit_archive_commit": "0a8403b1001881acc8626369a1e4f9dde83cc8e2",
+    "independent_archive_checks": 6409,
+    "independent_probe_checks": 504,
+    "independent_C_checks": 13517,
+    "independent_audit_issues": 0,
+    "independent_audit_runner_released": true,
+    "root_numeric_comparisons": 924,
+    "root_numeric_comparison_issues": 0,
+    "closed_at_utc": "2026-10-07T13:32:18+00:00",
+    "report": "docs/research/11_results.md",
+    "report_sha256": "ff44578bbcb0faf3762718eca2d5bc8cfbb3ccf05a773891444392b6115889f5",
+    "claim_status": "Useful durable memory and interference resistance not established; conditional main panel not executed"
   }
 }
