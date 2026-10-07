@@ -1,0 +1,61 @@
+{
+  "available_ram_gib_at_admission": 9.129169464111328,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_complex_binding_data.py",
+    "-v"
+  ],
+  "completed_at_utc": "2026-10-07T07:36:17.822376+00:00",
+  "elapsed_seconds": 0.07877636700141011,
+  "exit_code": 0,
+  "fixture_exposure": {
+    "candidate_group_count": 100,
+    "constructed_group_count": 31,
+    "exclusion_scope": "all fixture candidate bags, including rejected membership-only draws",
+    "path": "results/research/09_validation/complex_binding_fixture_exposure.json",
+    "run_seeds": [
+      910901,
+      910910,
+      910911,
+      910912,
+      910930,
+      910901
+    ],
+    "sha256": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699"
+  },
+  "issues": [],
+  "log": {
+    "path": "results/research/09_validation/complex_binding_data_test_01.log",
+    "sha256": "8b78b6106207968c62c05ba66b0561fbb59307126aea96e34bb1544b41df2cad"
+  },
+  "python": "3.12.14",
+  "scope": "item-9 small deterministic stdlib fixtures; no model, training, or performance dataset generation",
+  "source_sha256_after": {
+    "docs/research/09_data_contract.md": "f9f1e1dbb03879c44eaff28c646e60c9db7e76c5948bd01dad57a84bd2535fd0",
+    "docs/research/09_execution_design.md": "cb95db528aa352da0d99392900eb1df952c014047c383fa8f77cb94367701c11",
+    "neuropixel/research/complex_binding_data.py": "67a5b2649acbd612458706796fdbd110a54cfa74a82e107cdfbc5777d6a0b1b6",
+    "tests/test_complex_binding_data.py": "4bd206ed35407d05607df4a958b117fa92bc3e14e7d5c497b3625542631ce296"
+  },
+  "source_sha256_before": {
+    "docs/research/09_data_contract.md": "f9f1e1dbb03879c44eaff28c646e60c9db7e76c5948bd01dad57a84bd2535fd0",
+    "docs/research/09_execution_design.md": "cb95db528aa352da0d99392900eb1df952c014047c383fa8f77cb94367701c11",
+    "neuropixel/research/complex_binding_data.py": "67a5b2649acbd612458706796fdbd110a54cfa74a82e107cdfbc5777d6a0b1b6",
+    "tests/test_complex_binding_data.py": "4bd206ed35407d05607df4a958b117fa92bc3e14e7d5c497b3625542631ce296"
+  },
+  "started_at_utc": "2026-10-07T07:36:17.743604+00:00",
+  "status": "passed",
+  "test_count": 20,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "torch_imported_in_receipt_process": false
+}

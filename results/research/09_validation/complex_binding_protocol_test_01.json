@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "attempt": 1,
+  "started_at_utc": "2026-10-07T07:37:00.814539+00:00",
+  "scope": "Local contract, selection, point-metric and consume-once fixtures; no study data or training",
+  "admission_available_ram_gib": 9.131282806396484,
+  "source_sha256": {
+    "tests/test_complex_binding_protocol.py": "62f01403bd1f37cd3eb49252c4ed8e0e60a4f41035d37116dd405f9de7dc65d8",
+    "neuropixel/research/complex_binding_protocol.py": "6b0e3087eca7f6019372cd8818d04cd555c3349696eff806a51faa64ff9d9ff0",
+    "neuropixel/research/complex_binding_metrics.py": "70116cebe7279f61b74a3e7299ec57faf7c4d2d117a0be1d5a263f4dbf73c8e5",
+    "neuropixel/research/classification_contracts.py": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+    "scripts/research_complex_binding.py": "abd171a1ca082c96cdf90f3162bab48a52a3c275e569d2d6b939068c4f4953fc",
+    "docs/research/09_experiment_recipe.json": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97"
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_complex_binding_protocol.py",
+    "-v"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "returncode": 0,
+  "elapsed_seconds": 0.214706982998905,
+  "finished_at_utc": "2026-10-07T07:37:01.029520+00:00",
+  "log_sha256": "10ef015e5607bc68ff8342c949cf77fbdfd5b3bb0fe02c6442ee1a78965200fb"
+}

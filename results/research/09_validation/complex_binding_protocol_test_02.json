@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "attempt": 2,
+  "started_at_utc": "2026-10-07T07:42:20.580213+00:00",
+  "scope": "Added authenticated pilot-decision transfer and cloud-only trainer serialization fixture; no local study data or training",
+  "admission_available_ram_gib": 9.124286651611328,
+  "source_sha256": {
+    "tests/test_complex_binding_protocol.py": "32bcfc789a12ae46b2ceb376649c6fb9864372f01ab5864058f2928c53d83307",
+    "neuropixel/research/complex_binding_protocol.py": "7c8a23d2c867702f627c9da14984bc62fa736c8bebd2403f0ac704e1a09769c2",
+    "neuropixel/research/complex_binding_metrics.py": "70116cebe7279f61b74a3e7299ec57faf7c4d2d117a0be1d5a263f4dbf73c8e5",
+    "neuropixel/research/classification_contracts.py": "29be6bd5ccac6c95ae3ea61f32f80ec3f1c32a993f93c564cae8b3bbe1c9fdd5",
+    "neuropixel/research/complex_binding_data.py": "67a5b2649acbd612458706796fdbd110a54cfa74a82e107cdfbc5777d6a0b1b6",
+    "scripts/research_complex_binding.py": "e76ce37640c70a0c3632cf4a2078371a94fdde229cff4aa9bc0f5daf36e7ee05",
+    "docs/research/09_experiment_recipe.json": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97"
+  },
+  "local_git_blob": {
+    "tests/test_complex_binding_protocol.py": "4e101d8b0d5f77ba1a3980e9e51554550b87f949",
+    "neuropixel/research/complex_binding_protocol.py": "d2e2003828de434db8482d2fa9a3d37b3c8aea34",
+    "neuropixel/research/complex_binding_metrics.py": "c301701c5a61b6c5284943679687a047d16e1098",
+    "neuropixel/research/classification_contracts.py": "fb7b2b53c51c2219c11aad8af73c1e5bb52e3241",
+    "neuropixel/research/complex_binding_data.py": "60afc4a7d47b90e88433e1eb3c2ea81bc754208d",
+    "scripts/research_complex_binding.py": "60749c4417752559f0aba7e2affd38572c344198",
+    "docs/research/09_experiment_recipe.json": "1cf525292d157af8272a78f27042de6a14d9e8b3"
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_complex_binding_protocol.py",
+    "-v"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "returncode": 0,
+  "elapsed_seconds": 0.21438272800151026,
+  "finished_at_utc": "2026-10-07T07:42:20.815848+00:00",
+  "log_sha256": "ab5713b058b7a8083e5b254e467be3d23f4df6770ad1e9d69c5c01349873d12f"
+}

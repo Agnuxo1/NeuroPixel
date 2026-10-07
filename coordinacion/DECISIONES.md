@@ -50,3 +50,18 @@ Root freezes docs/research/08_cloud_validation_plan.json (SHA256 46b7f19063325b7
 ## 2026-10-07T07:17:56.375298+00:00 — SCI-008 closed
 
 Accept the item-8 corrected contracts on the isolated research branch. Retain the historical source snapshots and strict historical-controller hash gates. Distinguish effective zero PAD identity from raw optimizer state or recurrent activity; distinguish routing-report code preservation from future numerical behavior under changed shared PAD code. Classification dtype guards apply after array conversion. Soil retains its specified trapezoidal log-diameter metric and current prediction clamp; official hidden scorer identity was not verified. H1 remains not supported, and no task-accuracy gain is inferred from passing tests.
+
+
+## 2026-10-07T07:19:16.323499+00:00 — SCI-009 opened
+
+Investigate complex role binding next, preserving H1 as not supported. Distinguish a new synthetic task from external-domain generalization (item10), and separate failure of architecture input representation from failure to optimize. Use exact controls, untouched declared test recipes after selection freeze, paired conditions and explicit limited-sample uncertainty. No Nobel-level result follows merely from completing the investigation.
+
+
+## 2026-10-07T07:45:18.180685+00:00 — SCI-009 Stage-A reservation and implementation review
+
+Adopt the reviewed two-event grouped diagnostic and the fixed Stage-A selection rule. All six conditions remain paired within each bag, and any exact duplicate query rows are disclosed. Keep a new explicit ten-checkpoint final gate rather than relaxing historical gates. Stage B must authenticate and recompute the Stage-A selection before accepting copied rates and identities; final consumption must recheck all run artifacts plus the anchored development/fixture manifest. These are scientific-integrity controls, not external blinding. H1 remains not supported.
+
+
+## 2026-10-07T07:45:55.891523+00:00 — SCI-009 Stage A frozen
+
+Root freezes09_preflight_plan.json, SHA256 7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04, binding49 source/recipe/review/evidence files and34 collected test cases. Reviews have no unresolved blocker in the frozen scientific or operational source. The new35-to37-token task uses the corrected core directly. The declared contract tests precede two bounded memorization diagnostics and all four development pilots; zero skipped tests are permitted in the pinned CPU runtime. No Stage-B training or final performance evaluation is launched by this plan. All prior evidence and failure boundaries remain preserved. H1 remains not supported; items10–30 remain pending.

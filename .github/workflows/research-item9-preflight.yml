@@ -1,0 +1,51 @@
+name: NeuroPixel item 9 prospective preflight
+
+on:
+  push:
+    branches:
+      - research/scientific-validation-2026-10-07-cloud
+    paths:
+      - 'docs/research/09_preflight_plan.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: neuropixel-item9-cloud
+  cancel-in-progress: false
+
+jobs:
+  prospective-preflight:
+    if: github.repository == 'Agnuxo1/NeuroPixel' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      NUMEXPR_NUM_THREADS: '2'
+      VECLIB_MAXIMUM_THREADS: '2'
+      BLIS_NUM_THREADS: '2'
+      PYTHONHASHSEED: '0'
+      PYTHONUTF8: '1'
+      PYTHONUNBUFFERED: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      CUDA_VISIBLE_DEVICES: ''
+    steps:
+      - name: Reserve bounded shutdown before the workflow timeout
+        run: echo "ITEM9_JOB_DEADLINE_UNIX=$(( $(date +%s) + 120 * 60 - 30 ))" >> "$GITHUB_ENV"
+      - name: Check out the isolated frozen source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: true
+      - name: Set up the declared Python version
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12.8'
+      - name: Install the declared CPU-only Torch release
+        run: python -m pip install --no-cache-dir torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Install fixed research dependencies
+        run: python -m pip install --no-cache-dir -r requirements/research-cloud.txt
+      - name: Run contract tests and declared development-only preflight
+        run: python scripts/research_item9_worker.py --phase preflight

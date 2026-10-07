@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T07:17:56.375298+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T07:45:55.891523+00:00",
+  "active_item": 9,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -57,7 +57,8 @@
     {
       "item": 9,
       "title": "Complex role binding",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T07:19:16.323499+00:00"
     },
     {
       "item": 10,
@@ -232,7 +233,7 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 9,
+  "next_item": 10,
   "item7": {
     "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
@@ -347,5 +348,23 @@
     },
     "verdict": "Effective PAD and metric/fold contracts corrected and tested. No task-performance advantage, real Soil rescore, external replication or rescue of H1 established.",
     "resource_release": "Owned local audits completed and GitHub job112670244618 completed successfully; no item-8 numerical task remains."
+  },
+  "item9": {
+    "stage": "Stage A frozen for first pinned CPU execution",
+    "opened_after_item8_closure_commit": "6b2f2554b56c3ac2d7811ea4f6732befd7a93817",
+    "scope": "Complex role binding with explicit queries, multiple competing events and controlled transformations. Audit representational feasibility and shortcuts, implement bounded diagnostics, freeze study before performance results, retain all conditions and limits.",
+    "historical_H1": "Closed; not supported; no retrospective replacement.",
+    "preflight_freeze_utc": "2026-10-07T07:45:55.891523+00:00",
+    "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+    "preflight_plan_sha256": "7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04",
+    "implementation_files": 49,
+    "cloud_cases": 34,
+    "local_current_tests": {
+      "passed": 32,
+      "skipped_for_missing_torch": 2,
+      "failed": 0
+    },
+    "preflight_training_runs": 6,
+    "final_performance_access_permitted_in_preflight": false
   }
 }

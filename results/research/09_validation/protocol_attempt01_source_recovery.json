@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "method": "Recovered exact pre-change source bytes by reversing the two retained patches; hashes match the contemporaneous first-test receipt. This is later source preservation, not a new or repeated test.",
+  "snapshots": [
+    {
+      "original_path": "tests/test_complex_binding_protocol.py",
+      "snapshot_path": "results/research/09_validation/protocol_tests_attempt01.py",
+      "sha256": "62f01403bd1f37cd3eb49252c4ed8e0e60a4f41035d37116dd405f9de7dc65d8",
+      "bytes": 10968
+    },
+    {
+      "original_path": "neuropixel/research/complex_binding_protocol.py",
+      "snapshot_path": "results/research/09_validation/protocol_gate_attempt01.py",
+      "sha256": "6b0e3087eca7f6019372cd8818d04cd555c3349696eff806a51faa64ff9d9ff0",
+      "bytes": 9617
+    },
+    {
+      "original_path": "scripts/research_complex_binding.py",
+      "snapshot_path": "results/research/09_validation/trainer_attempt01.py",
+      "sha256": "abd171a1ca082c96cdf90f3162bab48a52a3c275e569d2d6b939068c4f4953fc",
+      "bytes": 32258
+    }
+  ]
+}

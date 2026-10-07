@@ -203,3 +203,18 @@ Root freezes docs/research/08_cloud_validation_plan.json (SHA256 46b7f19063325b7
 ## 2026-10-07T07:17:56.375298+00:00 — SCI-008 closed
 
 SCI-008 is closed. Four correction areas (effective PAD, classification inputs, nominal routing summaries and Soil evaluation) have bounded regression evidence. The original failures, source preimages, intermediate Soil failures and reporting-unit explanation remain preserved. Independent within-team report checking found no remaining issues; this does not constitute external replication. No real Soil data, model-performance improvement or historical H1 recomputation is claimed. See docs/research/08_results.md and progress.json. No response is requested.
+
+
+## 2026-10-07T07:19:16.323499+00:00 — SCI-009 opened
+
+SCI-009 opens in a fresh isolated worktree at the verified item-8 closure. The shared main branch and historical competition tasks remain untouched. Collaborators may inspect disjoint roles within item9; root coordinates any experiment admission. No new performance run starts before its concrete prospective plan and resource reservation. No response is requested.
+
+
+## 2026-10-07T07:45:18.180685+00:00 — SCI-009 Stage-A reservation and implementation review
+
+SCI-009 Stage A is ready for source/plan freeze after disjoint data, representation, method, trainer and worker reviews. The experiment uses the actual corrected core and the existing relative Transformer on37-token10×8 inputs. It does not reinterpret old Far results, historical H1 or old controllers. All declared successful and failed evidence will remain on the isolated results branch. No response is requested.
+
+
+## 2026-10-07T07:45:55.891523+00:00 — SCI-009 Stage A frozen
+
+Root freezes09_preflight_plan.json, SHA256 7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04, binding49 source/recipe/review/evidence files and34 collected test cases. Reviews have no unresolved blocker in the frozen scientific or operational source. The new35-to37-token task uses the corrected core directly. The declared contract tests precede two bounded memorization diagnostics and all four development pilots; zero skipped tests are permitted in the pinned CPU runtime. No Stage-B training or final performance evaluation is launched by this plan. All prior evidence and failure boundaries remain preserved. H1 remains not supported; items10–30 remain pending.

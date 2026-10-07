@@ -63,3 +63,18 @@ Root freezes docs/research/08_cloud_validation_plan.json (SHA256 46b7f19063325b7
 ## 2026-10-07T07:17:56.375298+00:00 — SCI-008 closed
 
 SCI-008 is completed after frozen source execution, source/archive identity checks, analytical PAD recount, local-evidence audit and report review. Deliverable: docs/research/08_results.md (SHA256 c9ae8a5dab162e7b7ca2b82255c2dfb2105dce7d01f6228b37a0e081a31070ec); review has zero unresolved issues. Source d01e20625068a2ec19bf25554e106c1fc2cc4420; raw archive 505a7098a077f90421e4a5ed0cd4c06882e98211; run37584119610. The suite has187 collected cases:186 passed, one optional CIFAR skip, zero failures/errors. All58 new methods passed. The341 JUnit header counts187 parents plus154 reconstructed nested subtests; it is not341 independent cases. Items1–8 are completed investigations; items9–30 remain pending at this closure. H1 remains not supported. Next action: claim SCI-009 sequentially.
+
+
+## 2026-10-07T07:19:16.323499+00:00 — SCI-009 opened
+
+SCI-009 is ACTIVE after verified item-8 closure6b2f2554b56c3ac2d7811ea4f6732befd7a93817. Root owns sequential integration under standing authorization and the documented conservative fallback after JEV recovery failure. Focused source/method/implementation reviews within item9 are justified by the risk of shortcut tasks and changed labels. Acceptance: explicit complex-binding task/estimands, primary-source comparison, positive and shortcut controls, reviewed frozen bounded evaluation, saved predictions/source/configuration, independent recount and a limitations report. Items10–30 remain pending.
+
+
+## 2026-10-07T07:45:18.180685+00:00 — SCI-009 Stage-A reservation and implementation review
+
+SCI-009 implementation reviews are complete in the isolated worktree. The finite two-event grammar and six paired transformations are specified;20 local grammar tests and12 current local protocol/metric tests passed, while two Torch integration cases await the pinned environment. The complete cloud inventory will contain34 cases with no allowed skip. Preserve the earlier12-case protocol receipt (11pass,1skip) and its exact recovered source preimages separately from the current14-case source (12pass,2skip). Source reviews found and corrected pilot-selection transfer and fixture-manifest identity checks before any performance execution. Root will freeze Stage A after checking final review receipts. Items10–30 remain pending.
+
+
+## 2026-10-07T07:45:55.891523+00:00 — SCI-009 Stage A frozen
+
+Root freezes09_preflight_plan.json, SHA256 7802ee68ae8ce19bf17e6135815e0c796216696e05c8d322347a314a2c88df04, binding49 source/recipe/review/evidence files and34 collected test cases. Reviews have no unresolved blocker in the frozen scientific or operational source. The new35-to37-token task uses the corrected core directly. The declared contract tests precede two bounded memorization diagnostics and all four development pilots; zero skipped tests are permitted in the pinned CPU runtime. No Stage-B training or final performance evaluation is launched by this plan. All prior evidence and failure boundaries remain preserved. H1 remains not supported; items10–30 remain pending.
