@@ -1,0 +1,25 @@
+{
+  "gpu_requested": false,
+  "item": 11,
+  "paid_compute": false,
+  "phase": "preflight",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 2,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 1800,
+    "workflow_minutes": 40
+  },
+  "run_key": "37626660573-1-preflight",
+  "schema_version": 1,
+  "source_commit": "cef4e67358ca5c344cd4154a7f641feefeb406ae",
+  "stages": [],
+  "started_at_utc": "2026-10-07T13:12:59.335117+00:00",
+  "status": "running"
+}
