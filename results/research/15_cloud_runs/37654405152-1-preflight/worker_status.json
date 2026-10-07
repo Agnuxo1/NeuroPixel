@@ -4,6 +4,12 @@
     "available_ram_gib": 14.500328063964844,
     "phase": "admission"
   },
+  "completed_at_utc": "2026-10-07T16:45:36.263391+00:00",
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T16:45:36.263309+00:00",
+    "available_ram_gib": 14.534595489501953,
+    "phase": "before_final_archive"
+  },
   "gpu_requested": false,
   "item": 15,
   "paid_compute": false,
@@ -23,6 +29,41 @@
   },
   "run_key": "37654405152-1-preflight",
   "schema_version": 1,
+  "source_after": {
+    "all_bindings_verified": true,
+    "at_utc": "2026-10-07T16:45:36.263206+00:00",
+    "implementation_sha256": {
+      ".github/workflows/research-item15-learned.yml": "00d4dfe53aef51df42380e65748e67d3087755c42e88a3af4f0c62e1fc6cbc00",
+      "docs/research/15_learned_inputs.json": "e317fd92999a70be4f48a1f4c2de67453557b0b407795d6a9a2a93c77c4eb049",
+      "docs/research/15_learned_protocol.md": "13147b83efbca3c56a15646794fd195970c3a829385e09a177a9a4a78ea6d3b3",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/research/repair_trace.py": "d94e6b6b673c712dd9fb428d0d959e120bb8698253b566ff26fe8052e9ad2c5a",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/15_validation/learned_architecture_review.json": "bf8774d7f3b540adf728d9d5d0e4b371edcda98f1055f9e162b0a57273ad0cad",
+      "results/research/15_validation/learned_auditor_before_endpoint_summaries.py": "2ffe47fba059de0d8d3373ebea51b3928584e8e62c4a3307e935ec47675bd4ae",
+      "results/research/15_validation/learned_auditor_review.json": "77ea44a913a6dc5e7ac1fc95cc6f8da8415c59a02fc5c22bbe0c878c3d63318d",
+      "results/research/15_validation/learned_controller_before_checkpoint_binding.py": "4e2dc6d094ee0d2a900b29a8ba7f4c773dfca838c7a556584a08705f9dcd860d",
+      "results/research/15_validation/learned_native_before_metric_tolerance_metadata.py": "9ad40391ef8028745e1d48fcfa8b88ea1fea089eebc7026fcbbe0c3813fbc3f9",
+      "results/research/15_validation/learned_protocol_before_explicit_readout_domain.md": "cf9b644d7f59a1042c9f58253ac340bbf8e905b0aef75c8a547a45ace7deae7b",
+      "results/research/15_validation/learned_root_pre_execution_review.json": "838316765db0bd0a0ed4db45b491f37ff81ab375989745007930c060958d872c",
+      "results/research/15_validation/learned_static_review.json": "fc90f2141d9b59925fc0feb51aefcafe39cc51a385f4538ddc587027114d433e",
+      "scripts/research_item15_learned_root_recount.js": "bf72dc010c93f0a6d922e4db19c634b1f3b44eefb480749c01bc69fcd785c831",
+      "scripts/research_item15_worker.py": "94c4b57be8d7f62503eb4ff8a6426e67d18a5a3e61adc929ecfd7c00e632c739",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_stability_learned_audit.py": "336c1d547a6e5e9f213d994ad9e1eb57ab155641476be4ce79e380d9fa76504a",
+      "scripts/research_stability_learned_bind.py": "7692809ad60a5967fab3b29fa42e25d4da1328ea0ec5d309f25a41e23fdf5d81",
+      "scripts/research_stability_learned_native.py": "1724762ac47a8911ae9e5463e6d6cafde7392dd827192e5fbede0a0dc883ec6a",
+      "scripts/research_stability_learned_probe.py": "a2ee776cb859d9ffa43fff4677f5a7d9b2081fbe414af7cb1550a5dce0048e6d",
+      "scripts/research_stability_learned_recover.py": "39f8b87d4ecb1dfbed999416ec5c135154afe34b507e65d09a9fdd942235422b",
+      "tests/test_repair_trace.py": "1462d8af779432b0f61fe94d90d5fe0975b1bcff3b50154b4c12f576affdedf4"
+    },
+    "plan_sha256": "ff561f7ca71ff76afe61d1593de9decbd1e4447140dd57fb84f4385a2473dd44",
+    "source_commit": "771975b4833bfcf20e06f848253912c699b2152e",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
   "source_commit": "771975b4833bfcf20e06f848253912c699b2152e",
   "stages": [
     {
@@ -77,5 +118,6 @@
     }
   ],
   "started_at_utc": "2026-10-07T16:44:57.262930+00:00",
-  "status": "running"
+  "status": "completed",
+  "wall_seconds_before_final_archive": 39.001697306000004
 }
