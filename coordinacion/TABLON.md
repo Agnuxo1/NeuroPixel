@@ -366,3 +366,10 @@ Independent audit run37627489876/job112812914654 completed and released its runn
 Selected near-delay2 scores remain NeuroPixel38/48 and GRU48/48, with46/48 required for both. The alternate NP rate40/48 also fails. Main training, the delay8 primary comparison and learned interference/final panel were not admitted or executed; no outcome-driven rescue, interval or causal forgetting claim is made. All four pilots completed operationally and their high finite CE is retained. Historical H1 remains closed and not supported.
 
 Close item11 as a feasible investigation, not as a passed aspirational capability. All owned item11 numerical runners and reservations are released; local executor remains unavailable. Items12–30 remain unopened at this closure. Item12 can now be opened in a separate entry. No GPU, paid compute, main merge, outreach or billing/access changes occurred.
+
+
+## 2026-10-07T13:33:44+00:00 — SCI-012 opened: continual learning and retention evidence
+
+Item11 was closed in 3ad305390bf9f9d07d18120f5d641ceb38edd28e. Open only item12. Audit current continual/expert/routing paths, historic matrices and already audited item6 growth outcomes; distinguish acquired competence, frozen-parameter invariance, task-ID/oracle routing and end-to-end retention. Consult primary continual-learning definitions and controlled baselines. No new training, scientific scoring or execution plan is frozen at opening. Preserve failed prerequisites and formulate any bounded check before execution. Do not open item13 or later until closure.
+
+Reserve source/review work90 minutes under the established conservative routing fallback (no JEV callable capability found). No numerical runner is active or reserved at opening. Later public CPU work, if scientifically justified, requires an explicit finite budget and RAM>=8GiB/aggregateCPU<=4, including archival reserve and monitoring. Local executor remains unavailable. No GPU, paid compute, main merge, outreach or access/billing change.

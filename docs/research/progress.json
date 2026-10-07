@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T13:32:18+00:00",
-  "active_item": null,
+  "recorded_at": "2026-10-07T13:33:44+00:00",
+  "active_item": 12,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -81,7 +81,8 @@
     {
       "item": 12,
       "title": "Continual learning at larger scope",
-      "status": "pending"
+      "status": "in_progress",
+      "opened_at_utc": "2026-10-07T13:33:44+00:00"
     },
     {
       "item": 13,
@@ -241,7 +242,7 @@
     "This ledger is a new recovery record, not a byte-identical copy of the disconnected ledger.",
     "Original item-5 raw archive and audit files were verified previously but are not present in this cloud branch."
   ],
-  "next_item": 12,
+  "next_item": 13,
   "item7": {
     "stage": "completed investigation; exposure limits retained; H1 unchanged",
     "opened_after_item6_closure_commit": "34ec75bad57825ae71cc7772ed236efb17cfcc94",
@@ -746,5 +747,19 @@
     "report": "docs/research/11_results.md",
     "report_sha256": "ff44578bbcb0faf3762718eca2d5bc8cfbb3ccf05a773891444392b6115889f5",
     "claim_status": "Useful durable memory and interference resistance not established; conditional main panel not executed"
+  },
+  "item12": {
+    "stage": "Opening source, historical-evidence and primary-literature audit",
+    "opened_at_utc": "2026-10-07T13:33:44+00:00",
+    "opened_after_item11_closure_commit": "3ad305390bf9f9d07d18120f5d641ceb38edd28e",
+    "scope": "Establish what continual-learning claim is supported after sequential tasks, distinguish frozen expert storage from shared-parameter retention and end-to-end routing, audit initial task competence and capacity/cost confounds, derive and test necessary invariants under a finite prospective plan where scientifically interpretable.",
+    "model_training_started": false,
+    "scientific_scoring_started": false,
+    "execution_plan_frozen": false,
+    "historical_H1": "closed and not supported; unchanged",
+    "dependency": "Items6,9,10,11 provide prior observations, not new outcome selection or a reopened protocol.",
+    "sequential_policy": "Do not open item13 or later until item12 feasible investigation is closed.",
+    "resources": "No numerical runner at opening. Source/review reservation90 minutes. Any prospective public CPU job must specify deadlines, RAM>=8GiB and aggregateCPU<=4.",
+    "routing": "No JEV callable tool in current capability inventory; established conservative root integration and independent architecture/evidence/primary-source reviews."
   }
 }
