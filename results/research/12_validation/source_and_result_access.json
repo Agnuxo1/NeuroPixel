@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "item": 12,
+  "source_commit": "aada1037271a621ac651c94c68feaba51143be05",
+  "archive_commit": "5381f6775ae4be64210b99b14360fe06faea28ec",
+  "source_plan_readback_identical": true,
+  "runtime_source_bindings": 21,
+  "raw_result_text_files_rehashed": 27,
+  "complete_archive_Git_tree": true,
+  "run": 37633696345,
+  "job": {
+    "id": 112834249348,
+    "name": "continual-evidence",
+    "status": "completed",
+    "conclusion": "success",
+    "run_id": 37633696345,
+    "logs_url": null,
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1
+      },
+      {
+        "name": "Reserve a finite workflow deadline",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2
+      },
+      {
+        "name": "Check out the isolated item-12 source",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3
+      },
+      {
+        "name": "Set up the declared Python version",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4
+      },
+      {
+        "name": "Install the pinned CPU diagnostic dependencies",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5
+      },
+      {
+        "name": "Validate contracts, execute the frozen continual evidence and archive",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6
+      },
+      {
+        "name": "Preserve a bootstrap outcome record in Actions",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7
+      },
+      {
+        "name": "Post Set up the declared Python version",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13
+      },
+      {
+        "name": "Post Check out the isolated item-12 source",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15
+      }
+    ]
+  },
+  "initial_lookup": {
+    "path": "resource_samples.jsonl",
+    "outcome": "No file content returned. The actual per-stage monitor filenames were then read from the final manifest; no execution result is inferred from this path lookup."
+  },
+  "actual_resource_monitors": [
+    "contract_tests_resource_monitor.json",
+    "probe_resource_monitor.json"
+  ],
+  "limitations": [
+    "Local execution workspace remains unavailable; no local Python/model replay occurred.",
+    "All21 bound source files, old15 selected inputs, new arrays and final logs are retained through the isolated Git branches.",
+    "Full-source ZIP was not independently unpacked by root; saved arrays were independently recounted in the frozen same-runner workflow, not externally replicated."
+  ]
+}

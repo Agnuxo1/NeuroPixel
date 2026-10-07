@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "item": 12,
+  "status": "reviewed_no_material_blockers_after_scope_clarification",
+  "at_utc": "2026-10-07T14:20:03+00:00",
+  "source_commit": "aada1037271a621ac651c94c68feaba51143be05",
+  "archive_commit": "5381f6775ae4be64210b99b14360fe06faea28ec",
+  "preimage": {
+    "blob": "90da6b62ab254873ba317c53cba5f283cb8eede3",
+    "sha256": "61ab11f6aae215f89835ffc1c52378a67a4f3dc094ab41bec4723f6af210fb6f",
+    "bytes": 24701,
+    "path": "results/research/12_validation/report_before_scope_clarification.md"
+  },
+  "report": {
+    "blob": "4674932f7ed9921cfbfca0838b61679025bad3f8",
+    "sha256": "8d8e53792bcd5ffc9a5bbebe5cdf88e471b266c540f98382250be20a691598f2",
+    "bytes": 24743,
+    "path": "docs/research/12_results.md"
+  },
+  "changes": [
+    {
+      "from": "- Preserved the failed competence prerequisite and kept the claim narrower than the implementation tests.",
+      "to": "- Retained the prior evidence of weak acquisition, did not admit a larger learned study, and kept the claim narrower than the implementation tests.",
+      "reason": "Avoid suggesting an unexecuted new acquisition preflight failed. This larger-study admission decision uses already observed weak acquisition."
+    }
+  ],
+  "reviewers": [
+    {
+      "reviewer": "evidence_tests",
+      "scope": "Full matrix producer/auditor JSON and complete report draft;88 independent JS arithmetic comparisons,0issues,maximumdifference0. Correct denominators, role decomposition and latest-descendant versus bank distinction.",
+      "numeric_checks": 88,
+      "issues": 0
+    },
+    {
+      "reviewer": "architecture_audit",
+      "scope": "Native isolation producer/auditor JSON;82 independent documentary JS checks,0issues.8stages,7parentcopies,28oldexpertcomparisons,20NPZdescriptors,scale/storage/RNG/negativecontrol consistency. No external NPZ reread or model replay.",
+      "documentary_checks": 82,
+      "issues": 0
+    },
+    {
+      "reviewer": "scientific_prior_art",
+      "scope": "Complete report read. One wording clarification adopted exactly; otherwise no scientific blocker in retrospective status, signed metrics, low acquisition, finitecopydiagnostic, costscope and internal versus external replication.",
+      "required_corrections": 1,
+      "adopted_corrections": 1
+    },
+    {
+      "reviewer": "root",
+      "scope": "All27 archived nonbinary results rehashed;3508 checks including1716 numerical comparisons,0issues. Report readback identical before one-sentence clarification; no numerical or experimental edit."
+    }
+  ],
+  "new_execution": false,
+  "new_analysis_selection": false,
+  "historical_H1_unchanged": true
+}

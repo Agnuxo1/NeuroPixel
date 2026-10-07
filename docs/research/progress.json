@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T14:04:24+00:00",
-  "active_item": 12,
+  "recorded_at": "2026-10-07T14:20:46+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -81,8 +81,10 @@
     {
       "item": 12,
       "title": "Continual learning at larger scope",
-      "status": "in_progress",
-      "opened_at_utc": "2026-10-07T13:33:44+00:00"
+      "status": "completed",
+      "opened_at_utc": "2026-10-07T13:33:44+00:00",
+      "closed_at_utc": "2026-10-07T14:20:46+00:00",
+      "report": "12_results.md"
     },
     {
       "item": 13,
@@ -749,12 +751,12 @@
     "claim_status": "Useful durable memory and interference resistance not established; conditional main panel not executed"
   },
   "item12": {
-    "stage": "Frozen: pending bounded public CPU execution of contracts, secondary recount, isolation and independent audits",
+    "stage": "Completed feasible investigation; robust learned continual performance at larger scope not established",
     "opened_at_utc": "2026-10-07T13:33:44+00:00",
     "opened_after_item11_closure_commit": "3ad305390bf9f9d07d18120f5d641ceb38edd28e",
     "scope": "Establish what continual-learning claim is supported after sequential tasks, distinguish frozen expert storage from shared-parameter retention and end-to-end routing, audit initial task competence and capacity/cost confounds, derive and test necessary invariants under a finite prospective plan where scientifically interpretable.",
-    "model_training_started": false,
-    "scientific_scoring_started": false,
+    "model_training_started": true,
+    "scientific_scoring_started": true,
     "execution_plan_frozen": true,
     "historical_H1": "closed and not supported; unchanged",
     "dependency": "Items6,9,10,11 provide prior observations, not new outcome selection or a reopened protocol.",
@@ -776,6 +778,69 @@
     "diagnostic_optimization_steps": 27,
     "diagnostic_optimizer": "SGD",
     "diagnostic_is_task_competence_assay": false,
-    "independent_audit_scope": "Fresh independently authored array recounts on the same runner; no external replication."
+    "independent_audit_scope": "Fresh independently authored array recounts on the same runner; no external replication.",
+    "model_training_scope": "27 native fixture integrity SGD steps plus2 independent unit-control steps; no new learned multi-task benchmark",
+    "probe_source_commit": "aada1037271a621ac651c94c68feaba51143be05",
+    "probe_run_id": 37633696345,
+    "probe_job_id": 112834249348,
+    "probe_archive_commit": "5381f6775ae4be64210b99b14360fe06faea28ec",
+    "probe_archive_path": "results/research/12_cloud_runs/37633696345-1-probe",
+    "probe_status": "completed",
+    "probe_runner_released": true,
+    "retrospective_reanalysis_executed": true,
+    "retrospective_original_source_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "retrospective_original_archive_commit": "15e76456bc2b4cce5faec0b08fb5288fe7844547",
+    "learned_continual_benchmark_executed": false,
+    "tests": {
+      "parent_methods": 8,
+      "passed_subtests": 7,
+      "passed_call_events": 15,
+      "failed": 0,
+      "skipped": 0
+    },
+    "native_diagnostic_checks": 10,
+    "independent_matrix_audit_checks": 6330,
+    "independent_isolation_audit_checks": 5013,
+    "independent_audit_issues": 0,
+    "root_review_checks": 3508,
+    "root_numeric_comparisons": 1716,
+    "root_review_issues": 0,
+    "root_maximum_numeric_difference": 0,
+    "root_rehashed_result_texts": 27,
+    "archive_files_excluding_manifest": 51,
+    "archive_bytes_excluding_manifest": 19417647,
+    "worker_seconds": 23.008122629,
+    "minimum_sampled_available_ram_gib": 14.272777557373047,
+    "supervisor_samples": 11,
+    "descriptive_global_BWT": [
+      0.13916015625,
+      0.04931640625
+    ],
+    "descriptive_binding_BWT": [
+      -0.2490234375,
+      -0.26171875
+    ],
+    "descriptive_final_binding_average": [
+      0.07486979166666667,
+      0.06575520833333333
+    ],
+    "old_A_B_binding_correct_per_512": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "current_native_copy_isolation_status": "Verified for eight copied experts and one fixed fixture; no eight-task learning claim",
+    "tensor_payload_bytes_at_eight_experts": 958008,
+    "report": "docs/research/12_results.md",
+    "report_sha256": "8d8e53792bcd5ffc9a5bbebe5cdf88e471b266c540f98382250be20a691598f2",
+    "claim_status": "Robust continual learning at larger scope not established; acquisition and end-to-end routing remain limiting",
+    "external_independent_replication": false,
+    "report_bytes": 24743,
+    "report_review_status": "reviewed_no_material_blockers_after_scope_clarification",
+    "report_review_sha256": "aa06c6ac80f89c4a0da9b86f3d8fda3f25e1fd87d45326eededd95e4e67077ec",
+    "closed_at_utc": "2026-10-07T14:20:46+00:00",
+    "completion_receipt": "results/research/12_validation/probe_completion_receipt.json",
+    "completion_receipt_sha256": "c115f47360fd767795083d9d6e3d94db1e5e34aa50ececb0896dcc4a693152ca"
   }
 }
