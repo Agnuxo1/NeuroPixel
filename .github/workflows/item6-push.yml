@@ -3,6 +3,16 @@ on:
   push:
     branches:
       - research/scientific-validation-2026-10-07-continuation
+    paths:
+      - docs/research/06_execution_plan.json
+      - docs/research/06_protocol_amendment.md
+      - neuropixel/research/ablations.py
+      - neuropixel/research/growth.py
+      - scripts/research_ablations.py
+      - scripts/research_growth.py
+      - scripts/research_analyze_item6.py
+      - tests/test_research_item6.py
+      - .github/workflows/item6.yml
 permissions:
   contents: read
 jobs:
