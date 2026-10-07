@@ -1,0 +1,1202 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "phase": "preflight",
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T11:09:09+00:00",
+  "freeze_parent_commit": "558e0a3d70f63214ed513a935d146c7ffcf8a6fe",
+  "scope": "32 collected data/controller contract methods followed by all six fixed TRAIN/DEV-only neural preflight runs; no official TEST member extraction or evaluation.",
+  "runtime": {
+    "python": "3.12.14",
+    "packages": {
+      "torch": "2.6.0+cpu",
+      "numpy": "2.2.6",
+      "scipy": "1.15.1",
+      "pytest": "9.1.1",
+      "psutil": "7.2.2",
+      "Pillow": "12.3.0"
+    },
+    "threads": 2,
+    "interop_threads": 1
+  },
+  "analysis_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "threads": 1,
+    "bootstrap_generator": "PCG64",
+    "bootstrap_seed": 104001,
+    "bootstrap_replicates": 2000
+  },
+  "limits": {
+    "worker_seconds": 2400,
+    "archive_reserve_seconds": 180,
+    "workflow_minutes": 50,
+    "minimum_available_ram_gib": 8,
+    "aggregate_active_cpu_threads": 4,
+    "numerical_threads": 2,
+    "git_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "heartbeat_interval_seconds": 60,
+    "archive_interval_seconds": 300,
+    "git_timeout_seconds": 60
+  },
+  "stages": [
+    {
+      "name": "contract_tests",
+      "seconds": 300,
+      "files": [
+        "tests/test_babi_qa.py",
+        "tests/test_babi_study.py"
+      ],
+      "expected_count": 32
+    },
+    {
+      "name": "preflight",
+      "seconds": 1800,
+      "script": "scripts/research_babi_study.py"
+    }
+  ],
+  "recipe": {
+    "batch_size": 32,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "preflight": {
+      "memorization_seed": 58,
+      "tiny_n": 32,
+      "lr": 0.003,
+      "max_updates": 4096,
+      "check_every": 128,
+      "required_streak": 2,
+      "target_accuracy": 1.0,
+      "target_ce": 0.05,
+      "pilot_seed": 59,
+      "pilot_updates": 1024,
+      "learning_rates": [
+        0.001,
+        0.003
+      ]
+    },
+    "train": {
+      "seeds": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "updates": 4096
+    },
+    "test_member": "tasks_1-20_v1-2/en/qa4_two-arg-relations_test.txt",
+    "member_byte_cap": 2097152,
+    "development_fixtures": [
+      {
+        "facts": [
+          "The neral is north of the vexa."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is south of the neral?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is neral north of?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is west of the tovin?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The neral is east of the selka."
+        ],
+        "question": "What is east of the selka?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin.",
+          "The selka is east of the dovar."
+        ],
+        "question": "What is east of the dovar?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin.",
+          "The selka is east of the dovar."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The vexa is west of the tovin.",
+          "The neral is north of the vexa."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The quorin is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The quorin is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "Where is the quorin?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is north of the very very very very very very very distant vexa?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The selka is north of the vexa."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is north of the tovin."
+        ],
+        "question": "What is north of the tovin?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is north of the tovin."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The neral is to the north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "Where is the quorin?"
+      },
+      {
+        "facts": [
+          "of vexa north is neral the the .",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The vexa is west of the tovin."
+        ],
+        "question": "What is neral neral neral neral north of the vexa?"
+      },
+      {
+        "facts": [
+          "  THE neral is north of the vexa .  ",
+          "The vexa is west of the tovin."
+        ],
+        "question": " WHAT is north of the vexa ? "
+      },
+      {
+        "facts": [
+          "The neral is north of the vexa.",
+          "The neral is north of the vexa.",
+          "The neral is north of the vexa.",
+          "The neral is north of the vexa.",
+          "The neral is north of the vexa.",
+          "The neral is north of the vexa.",
+          "The neral is north of the vexa."
+        ],
+        "question": "What is north of the vexa?"
+      },
+      {
+        "facts": [
+          "The zeralaa is north of the zexaaa.",
+          "The zexaaa is west of the zovinaa."
+        ],
+        "question": "What is north of the zexaaa?"
+      },
+      {
+        "facts": [
+          "The zeralab is north of the zexaab.",
+          "The zexaab is west of the zovinab."
+        ],
+        "question": "What is north of the zexaab?"
+      },
+      {
+        "facts": [
+          "The zeralac is north of the zexaac.",
+          "The zexaac is west of the zovinac."
+        ],
+        "question": "What is north of the zexaac?"
+      },
+      {
+        "facts": [
+          "The zeralad is north of the zexaad.",
+          "The zexaad is west of the zovinad."
+        ],
+        "question": "What is north of the zexaad?"
+      },
+      {
+        "facts": [
+          "The zeralae is north of the zexaae.",
+          "The zexaae is west of the zovinae."
+        ],
+        "question": "What is north of the zexaae?"
+      },
+      {
+        "facts": [
+          "The zeralaf is north of the zexaaf.",
+          "The zexaaf is west of the zovinaf."
+        ],
+        "question": "What is north of the zexaaf?"
+      },
+      {
+        "facts": [
+          "The zeralag is north of the zexaag.",
+          "The zexaag is west of the zovinag."
+        ],
+        "question": "What is north of the zexaag?"
+      },
+      {
+        "facts": [
+          "The zeralah is north of the zexaah.",
+          "The zexaah is west of the zovinah."
+        ],
+        "question": "What is north of the zexaah?"
+      },
+      {
+        "facts": [
+          "The zeralai is north of the zexaai.",
+          "The zexaai is west of the zovinai."
+        ],
+        "question": "What is north of the zexaai?"
+      },
+      {
+        "facts": [
+          "The zeralaj is north of the zexaaj.",
+          "The zexaaj is west of the zovinaj."
+        ],
+        "question": "What is north of the zexaaj?"
+      },
+      {
+        "facts": [
+          "The zeralak is north of the zexaak.",
+          "The zexaak is west of the zovinak."
+        ],
+        "question": "What is north of the zexaak?"
+      },
+      {
+        "facts": [
+          "The zeralal is north of the zexaal.",
+          "The zexaal is west of the zovinal."
+        ],
+        "question": "What is north of the zexaal?"
+      },
+      {
+        "facts": [
+          "The zeralam is north of the zexaam.",
+          "The zexaam is west of the zovinam."
+        ],
+        "question": "What is north of the zexaam?"
+      },
+      {
+        "facts": [
+          "The zeralan is north of the zexaan.",
+          "The zexaan is west of the zovinan."
+        ],
+        "question": "What is north of the zexaan?"
+      },
+      {
+        "facts": [
+          "The zeralao is north of the zexaao.",
+          "The zexaao is west of the zovinao."
+        ],
+        "question": "What is north of the zexaao?"
+      },
+      {
+        "facts": [
+          "The zeralap is north of the zexaap.",
+          "The zexaap is west of the zovinap."
+        ],
+        "question": "What is north of the zexaap?"
+      },
+      {
+        "facts": [
+          "The zeralaq is north of the zexaaq.",
+          "The zexaaq is west of the zovinaq."
+        ],
+        "question": "What is north of the zexaaq?"
+      },
+      {
+        "facts": [
+          "The zeralar is north of the zexaar.",
+          "The zexaar is west of the zovinar."
+        ],
+        "question": "What is north of the zexaar?"
+      },
+      {
+        "facts": [
+          "The zeralas is north of the zexaas.",
+          "The zexaas is west of the zovinas."
+        ],
+        "question": "What is north of the zexaas?"
+      },
+      {
+        "facts": [
+          "The zeralat is north of the zexaat.",
+          "The zexaat is west of the zovinat."
+        ],
+        "question": "What is north of the zexaat?"
+      },
+      {
+        "facts": [
+          "The zeralau is north of the zexaau.",
+          "The zexaau is west of the zovinau."
+        ],
+        "question": "What is north of the zexaau?"
+      },
+      {
+        "facts": [
+          "The zeralav is north of the zexaav.",
+          "The zexaav is west of the zovinav."
+        ],
+        "question": "What is north of the zexaav?"
+      },
+      {
+        "facts": [
+          "The zeralaw is north of the zexaaw.",
+          "The zexaaw is west of the zovinaw."
+        ],
+        "question": "What is north of the zexaaw?"
+      },
+      {
+        "facts": [
+          "The zeralax is north of the zexaax.",
+          "The zexaax is west of the zovinax."
+        ],
+        "question": "What is north of the zexaax?"
+      },
+      {
+        "facts": [
+          "The zeralay is north of the zexaay.",
+          "The zexaay is west of the zovinay."
+        ],
+        "question": "What is north of the zexaay?"
+      },
+      {
+        "facts": [
+          "The zeralaz is north of the zexaaz.",
+          "The zexaaz is west of the zovinaz."
+        ],
+        "question": "What is north of the zexaaz?"
+      },
+      {
+        "facts": [
+          "The zeralba is north of the zexaba.",
+          "The zexaba is west of the zovinba."
+        ],
+        "question": "What is north of the zexaba?"
+      },
+      {
+        "facts": [
+          "The zeralbb is north of the zexabb.",
+          "The zexabb is west of the zovinbb."
+        ],
+        "question": "What is north of the zexabb?"
+      },
+      {
+        "facts": [
+          "The zeralbc is north of the zexabc.",
+          "The zexabc is west of the zovinbc."
+        ],
+        "question": "What is north of the zexabc?"
+      },
+      {
+        "facts": [
+          "The zeralbd is north of the zexabd.",
+          "The zexabd is west of the zovinbd."
+        ],
+        "question": "What is north of the zexabd?"
+      },
+      {
+        "facts": [
+          "The zeralbe is north of the zexabe.",
+          "The zexabe is west of the zovinbe."
+        ],
+        "question": "What is north of the zexabe?"
+      },
+      {
+        "facts": [
+          "The zeralbf is north of the zexabf.",
+          "The zexabf is west of the zovinbf."
+        ],
+        "question": "What is north of the zexabf?"
+      },
+      {
+        "facts": [
+          "The zeralbg is north of the zexabg.",
+          "The zexabg is west of the zovinbg."
+        ],
+        "question": "What is north of the zexabg?"
+      },
+      {
+        "facts": [
+          "The zeralbh is north of the zexabh.",
+          "The zexabh is west of the zovinbh."
+        ],
+        "question": "What is north of the zexabh?"
+      },
+      {
+        "facts": [
+          "The zeralbi is north of the zexabi.",
+          "The zexabi is west of the zovinbi."
+        ],
+        "question": "What is north of the zexabi?"
+      },
+      {
+        "facts": [
+          "The zeralbj is north of the zexabj.",
+          "The zexabj is west of the zovinbj."
+        ],
+        "question": "What is north of the zexabj?"
+      },
+      {
+        "facts": [
+          "The zeralbk is north of the zexabk.",
+          "The zexabk is west of the zovinbk."
+        ],
+        "question": "What is north of the zexabk?"
+      },
+      {
+        "facts": [
+          "The zeralbl is north of the zexabl.",
+          "The zexabl is west of the zovinbl."
+        ],
+        "question": "What is north of the zexabl?"
+      },
+      {
+        "facts": [
+          "The zeralbm is north of the zexabm.",
+          "The zexabm is west of the zovinbm."
+        ],
+        "question": "What is north of the zexabm?"
+      },
+      {
+        "facts": [
+          "The zeralbn is north of the zexabn.",
+          "The zexabn is west of the zovinbn."
+        ],
+        "question": "What is north of the zexabn?"
+      },
+      {
+        "facts": [
+          "The zeralbo is north of the zexabo.",
+          "The zexabo is west of the zovinbo."
+        ],
+        "question": "What is north of the zexabo?"
+      },
+      {
+        "facts": [
+          "The zeralbp is north of the zexabp.",
+          "The zexabp is west of the zovinbp."
+        ],
+        "question": "What is north of the zexabp?"
+      },
+      {
+        "facts": [
+          "The zeralbq is north of the zexabq.",
+          "The zexabq is west of the zovinbq."
+        ],
+        "question": "What is north of the zexabq?"
+      },
+      {
+        "facts": [
+          "The zeralbr is north of the zexabr.",
+          "The zexabr is west of the zovinbr."
+        ],
+        "question": "What is north of the zexabr?"
+      },
+      {
+        "facts": [
+          "The zeralbs is north of the zexabs.",
+          "The zexabs is west of the zovinbs."
+        ],
+        "question": "What is north of the zexabs?"
+      },
+      {
+        "facts": [
+          "The zeralbt is north of the zexabt.",
+          "The zexabt is west of the zovinbt."
+        ],
+        "question": "What is north of the zexabt?"
+      },
+      {
+        "facts": [
+          "The zeralbu is north of the zexabu.",
+          "The zexabu is west of the zovinbu."
+        ],
+        "question": "What is north of the zexabu?"
+      },
+      {
+        "facts": [
+          "The zeralbv is north of the zexabv.",
+          "The zexabv is west of the zovinbv."
+        ],
+        "question": "What is north of the zexabv?"
+      },
+      {
+        "facts": [
+          "The zeralbw is north of the zexabw.",
+          "The zexabw is west of the zovinbw."
+        ],
+        "question": "What is north of the zexabw?"
+      },
+      {
+        "facts": [
+          "The zeralbx is north of the zexabx.",
+          "The zexabx is west of the zovinbx."
+        ],
+        "question": "What is north of the zexabx?"
+      },
+      {
+        "facts": [
+          "The zeralby is north of the zexaby.",
+          "The zexaby is west of the zovinby."
+        ],
+        "question": "What is north of the zexaby?"
+      },
+      {
+        "facts": [
+          "The zeralbz is north of the zexabz.",
+          "The zexabz is west of the zovinbz."
+        ],
+        "question": "What is north of the zexabz?"
+      },
+      {
+        "facts": [
+          "The zeralca is north of the zexaca.",
+          "The zexaca is west of the zovinca."
+        ],
+        "question": "What is north of the zexaca?"
+      },
+      {
+        "facts": [
+          "The zeralcb is north of the zexacb.",
+          "The zexacb is west of the zovincb."
+        ],
+        "question": "What is north of the zexacb?"
+      },
+      {
+        "facts": [
+          "The zeralcc is north of the zexacc.",
+          "The zexacc is west of the zovincc."
+        ],
+        "question": "What is north of the zexacc?"
+      },
+      {
+        "facts": [
+          "The zeralcd is north of the zexacd.",
+          "The zexacd is west of the zovincd."
+        ],
+        "question": "What is north of the zexacd?"
+      },
+      {
+        "facts": [
+          "The zeralce is north of the zexace.",
+          "The zexace is west of the zovince."
+        ],
+        "question": "What is north of the zexace?"
+      },
+      {
+        "facts": [
+          "The zeralcf is north of the zexacf.",
+          "The zexacf is west of the zovincf."
+        ],
+        "question": "What is north of the zexacf?"
+      },
+      {
+        "facts": [
+          "The zeralcg is north of the zexacg.",
+          "The zexacg is west of the zovincg."
+        ],
+        "question": "What is north of the zexacg?"
+      },
+      {
+        "facts": [
+          "The zeralch is north of the zexach.",
+          "The zexach is west of the zovinch."
+        ],
+        "question": "What is north of the zexach?"
+      },
+      {
+        "facts": [
+          "The zeralci is north of the zexaci.",
+          "The zexaci is west of the zovinci."
+        ],
+        "question": "What is north of the zexaci?"
+      },
+      {
+        "facts": [
+          "The zeralcj is north of the zexacj.",
+          "The zexacj is west of the zovincj."
+        ],
+        "question": "What is north of the zexacj?"
+      },
+      {
+        "facts": [
+          "The zeralck is north of the zexack.",
+          "The zexack is west of the zovinck."
+        ],
+        "question": "What is north of the zexack?"
+      },
+      {
+        "facts": [
+          "The zeralcl is north of the zexacl.",
+          "The zexacl is west of the zovincl."
+        ],
+        "question": "What is north of the zexacl?"
+      },
+      {
+        "facts": [
+          "The zeralcm is north of the zexacm.",
+          "The zexacm is west of the zovincm."
+        ],
+        "question": "What is north of the zexacm?"
+      },
+      {
+        "facts": [
+          "The zeralcn is north of the zexacn.",
+          "The zexacn is west of the zovincn."
+        ],
+        "question": "What is north of the zexacn?"
+      },
+      {
+        "facts": [
+          "The zeralco is north of the zexaco.",
+          "The zexaco is west of the zovinco."
+        ],
+        "question": "What is north of the zexaco?"
+      },
+      {
+        "facts": [
+          "The zeralcp is north of the zexacp.",
+          "The zexacp is west of the zovincp."
+        ],
+        "question": "What is north of the zexacp?"
+      },
+      {
+        "facts": [
+          "The zeralcq is north of the zexacq.",
+          "The zexacq is west of the zovincq."
+        ],
+        "question": "What is north of the zexacq?"
+      },
+      {
+        "facts": [
+          "The zeralcr is north of the zexacr.",
+          "The zexacr is west of the zovincr."
+        ],
+        "question": "What is north of the zexacr?"
+      },
+      {
+        "facts": [
+          "The zeralcs is north of the zexacs.",
+          "The zexacs is west of the zovincs."
+        ],
+        "question": "What is north of the zexacs?"
+      },
+      {
+        "facts": [
+          "The zeralct is north of the zexact.",
+          "The zexact is west of the zovinct."
+        ],
+        "question": "What is north of the zexact?"
+      },
+      {
+        "facts": [
+          "The zeralcu is north of the zexacu.",
+          "The zexacu is west of the zovincu."
+        ],
+        "question": "What is north of the zexacu?"
+      },
+      {
+        "facts": [
+          "The zeralcv is north of the zexacv.",
+          "The zexacv is west of the zovincv."
+        ],
+        "question": "What is north of the zexacv?"
+      },
+      {
+        "facts": [
+          "The zeralcw is north of the zexacw.",
+          "The zexacw is west of the zovincw."
+        ],
+        "question": "What is north of the zexacw?"
+      },
+      {
+        "facts": [
+          "The zeralcx is north of the zexacx.",
+          "The zexacx is west of the zovincx."
+        ],
+        "question": "What is north of the zexacx?"
+      },
+      {
+        "facts": [
+          "The zeralcy is north of the zexacy.",
+          "The zexacy is west of the zovincy."
+        ],
+        "question": "What is north of the zexacy?"
+      },
+      {
+        "facts": [
+          "The zeralcz is north of the zexacz.",
+          "The zexacz is west of the zovincz."
+        ],
+        "question": "What is north of the zexacz?"
+      },
+      {
+        "facts": [
+          "The zeralda is north of the zexada.",
+          "The zexada is west of the zovinda."
+        ],
+        "question": "What is north of the zexada?"
+      },
+      {
+        "facts": [
+          "The zeraldb is north of the zexadb.",
+          "The zexadb is west of the zovindb."
+        ],
+        "question": "What is north of the zexadb?"
+      },
+      {
+        "facts": [
+          "The zeraldc is north of the zexadc.",
+          "The zexadc is west of the zovindc."
+        ],
+        "question": "What is north of the zexadc?"
+      },
+      {
+        "facts": [
+          "The zeraldd is north of the zexadd.",
+          "The zexadd is west of the zovindd."
+        ],
+        "question": "What is north of the zexadd?"
+      },
+      {
+        "facts": [
+          "The zeralde is north of the zexade.",
+          "The zexade is west of the zovinde."
+        ],
+        "question": "What is north of the zexade?"
+      },
+      {
+        "facts": [
+          "The zeraldf is north of the zexadf.",
+          "The zexadf is west of the zovindf."
+        ],
+        "question": "What is north of the zexadf?"
+      },
+      {
+        "facts": [
+          "The zeraldg is north of the zexadg.",
+          "The zexadg is west of the zovindg."
+        ],
+        "question": "What is north of the zexadg?"
+      },
+      {
+        "facts": [
+          "The zeraldh is north of the zexadh.",
+          "The zexadh is west of the zovindh."
+        ],
+        "question": "What is north of the zexadh?"
+      },
+      {
+        "facts": [
+          "The zeraldi is north of the zexadi.",
+          "The zexadi is west of the zovindi."
+        ],
+        "question": "What is north of the zexadi?"
+      },
+      {
+        "facts": [
+          "The zeraldj is north of the zexadj.",
+          "The zexadj is west of the zovindj."
+        ],
+        "question": "What is north of the zexadj?"
+      },
+      {
+        "facts": [
+          "The zeraldk is north of the zexadk.",
+          "The zexadk is west of the zovindk."
+        ],
+        "question": "What is north of the zexadk?"
+      },
+      {
+        "facts": [
+          "The zeraldl is north of the zexadl.",
+          "The zexadl is west of the zovindl."
+        ],
+        "question": "What is north of the zexadl?"
+      },
+      {
+        "facts": [
+          "The zeraldm is north of the zexadm.",
+          "The zexadm is west of the zovindm."
+        ],
+        "question": "What is north of the zexadm?"
+      },
+      {
+        "facts": [
+          "The zeraldn is north of the zexadn.",
+          "The zexadn is west of the zovindn."
+        ],
+        "question": "What is north of the zexadn?"
+      },
+      {
+        "facts": [
+          "The zeraldo is north of the zexado.",
+          "The zexado is west of the zovindo."
+        ],
+        "question": "What is north of the zexado?"
+      },
+      {
+        "facts": [
+          "The zeraldp is north of the zexadp.",
+          "The zexadp is west of the zovindp."
+        ],
+        "question": "What is north of the zexadp?"
+      },
+      {
+        "facts": [
+          "The zeraldq is north of the zexadq.",
+          "The zexadq is west of the zovindq."
+        ],
+        "question": "What is north of the zexadq?"
+      },
+      {
+        "facts": [
+          "The zeraldr is north of the zexadr.",
+          "The zexadr is west of the zovindr."
+        ],
+        "question": "What is north of the zexadr?"
+      },
+      {
+        "facts": [
+          "The zeralds is north of the zexads.",
+          "The zexads is west of the zovinds."
+        ],
+        "question": "What is north of the zexads?"
+      },
+      {
+        "facts": [
+          "The zeraldt is north of the zexadt.",
+          "The zexadt is west of the zovindt."
+        ],
+        "question": "What is north of the zexadt?"
+      },
+      {
+        "facts": [
+          "The zeraldu is north of the zexadu.",
+          "The zexadu is west of the zovindu."
+        ],
+        "question": "What is north of the zexadu?"
+      },
+      {
+        "facts": [
+          "The zeraldv is north of the zexadv.",
+          "The zexadv is west of the zovindv."
+        ],
+        "question": "What is north of the zexadv?"
+      },
+      {
+        "facts": [
+          "The zeraldw is north of the zexadw.",
+          "The zexadw is west of the zovindw."
+        ],
+        "question": "What is north of the zexadw?"
+      },
+      {
+        "facts": [
+          "The zeraldx is north of the zexadx.",
+          "The zexadx is west of the zovindx."
+        ],
+        "question": "What is north of the zexadx?"
+      },
+      {
+        "facts": [
+          "The zeraldy is north of the zexady.",
+          "The zexady is west of the zovindy."
+        ],
+        "question": "What is north of the zexady?"
+      },
+      {
+        "facts": [
+          "The zeraldz is north of the zexadz.",
+          "The zexadz is west of the zovindz."
+        ],
+        "question": "What is north of the zexadz?"
+      },
+      {
+        "facts": [
+          "The zeralea is north of the zexaea.",
+          "The zexaea is west of the zovinea."
+        ],
+        "question": "What is north of the zexaea?"
+      },
+      {
+        "facts": [
+          "The zeraleb is north of the zexaeb.",
+          "The zexaeb is west of the zovineb."
+        ],
+        "question": "What is north of the zexaeb?"
+      },
+      {
+        "facts": [
+          "The zeralec is north of the zexaec.",
+          "The zexaec is west of the zovinec."
+        ],
+        "question": "What is north of the zexaec?"
+      },
+      {
+        "facts": [
+          "The zeraled is north of the zexaed.",
+          "The zexaed is west of the zovined."
+        ],
+        "question": "What is north of the zexaed?"
+      },
+      {
+        "facts": [
+          "The zeralee is north of the zexaee.",
+          "The zexaee is west of the zovinee."
+        ],
+        "question": "What is north of the zexaee?"
+      },
+      {
+        "facts": [
+          "The zeralef is north of the zexaef.",
+          "The zexaef is west of the zovinef."
+        ],
+        "question": "What is north of the zexaef?"
+      },
+      {
+        "facts": [
+          "The zeraleg is north of the zexaeg.",
+          "The zexaeg is west of the zovineg."
+        ],
+        "question": "What is north of the zexaeg?"
+      },
+      {
+        "facts": [
+          "The zeraleh is north of the zexaeh.",
+          "The zexaeh is west of the zovineh."
+        ],
+        "question": "What is north of the zexaeh?"
+      },
+      {
+        "facts": [
+          "The zeralei is north of the zexaei.",
+          "The zexaei is west of the zovinei."
+        ],
+        "question": "What is north of the zexaei?"
+      },
+      {
+        "facts": [
+          "The zeralej is north of the zexaej.",
+          "The zexaej is west of the zovinej."
+        ],
+        "question": "What is north of the zexaej?"
+      },
+      {
+        "facts": [
+          "The zeralek is north of the zexaek.",
+          "The zexaek is west of the zovinek."
+        ],
+        "question": "What is north of the zexaek?"
+      },
+      {
+        "facts": [
+          "The zeralel is north of the zexael.",
+          "The zexael is west of the zovinel."
+        ],
+        "question": "What is north of the zexael?"
+      },
+      {
+        "facts": [
+          "The zeralem is north of the zexaem.",
+          "The zexaem is west of the zovinem."
+        ],
+        "question": "What is north of the zexaem?"
+      },
+      {
+        "facts": [
+          "The zeralen is north of the zexaen.",
+          "The zexaen is west of the zovinen."
+        ],
+        "question": "What is north of the zexaen?"
+      },
+      {
+        "facts": [
+          "The zeraleo is north of the zexaeo.",
+          "The zexaeo is west of the zovineo."
+        ],
+        "question": "What is north of the zexaeo?"
+      },
+      {
+        "facts": [
+          "The zeralep is north of the zexaep.",
+          "The zexaep is west of the zovinep."
+        ],
+        "question": "What is north of the zexaep?"
+      },
+      {
+        "facts": [
+          "The zeraleq is north of the zexaeq.",
+          "The zexaeq is west of the zovineq."
+        ],
+        "question": "What is north of the zexaeq?"
+      },
+      {
+        "facts": [
+          "The zeraler is north of the zexaer.",
+          "The zexaer is west of the zoviner."
+        ],
+        "question": "What is north of the zexaer?"
+      },
+      {
+        "facts": [
+          "The zerales is north of the zexaes.",
+          "The zexaes is west of the zovines."
+        ],
+        "question": "What is north of the zexaes?"
+      },
+      {
+        "facts": [
+          "The zeralet is north of the zexaet.",
+          "The zexaet is west of the zovinet."
+        ],
+        "question": "What is north of the zexaet?"
+      },
+      {
+        "facts": [
+          "The zeraleu is north of the zexaeu.",
+          "The zexaeu is west of the zovineu."
+        ],
+        "question": "What is north of the zexaeu?"
+      },
+      {
+        "facts": [
+          "The zeralev is north of the zexaev.",
+          "The zexaev is west of the zovinev."
+        ],
+        "question": "What is north of the zexaev?"
+      },
+      {
+        "facts": [
+          "The zeralew is north of the zexaew.",
+          "The zexaew is west of the zovinew."
+        ],
+        "question": "What is north of the zexaew?"
+      },
+      {
+        "facts": [
+          "The zeralex is north of the zexaex.",
+          "The zexaex is west of the zovinex."
+        ],
+        "question": "What is north of the zexaex?"
+      }
+    ]
+  },
+  "recipe_sha256": "8492892f58a4065a92df99dbbbf30f0bd7340111c853cf5533a7102109fe8d19",
+  "inputs": {
+    "development": {
+      "archive_commit": "19c8c40ab50141ba128623e7bbbc04cfb2460f31",
+      "path": "results/research/10_cloud_runs/37609533224-1-acquisition/data",
+      "files_sha256": {
+        "acquisition_receipt.json": "64862b87c3b4b8859aa3f1801fdce6c7b609ba3ca1bce97be79db012b5e29e08",
+        "author_original_download.json": "91dce641ff7949de403cda096e93e57718eceb25b69af57e046a0236ff59c9a3",
+        "control_predictions.json": "55de0c6e645656b6f5df9c332eae45d388969541b2e44ca45bf1d8eb4e42ad72",
+        "control_scores.json": "ba9613317f943a77eff850535668fcc570fbd484966e6ecac33a550e7258f86c",
+        "development_split.json": "1f1a6c3fd2c03cd8a65dc1b32f7dc5365e763eb1d57db365da63f729164b579a",
+        "documented_https_mirror.tar.gz": "84f5296ab9a1ad0dc9464e08c491d65cd08830fca3acae9ab86f75e0fb81573c",
+        "documented_https_mirror_download.json": "3f30e04b46f30fd8e1313e215804e39eddc0461ba8d6ed342854814f02721a2f",
+        "documented_https_mirror_member_receipt.json": "b994f9af12d1ce8d32b930a6064a76a6a38a12a5e7243458ca5388f2b670b9dc",
+        "documented_https_mirror_qa4_train.txt": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+        "encoded_official_train.json": "7ed6979e680630296276a82068c1ae16fd9264d9d2d4c79085c5a1575a656fa1",
+        "encoder.json": "7e574c20521d057bd214c20514e74246b3210c2a36eae80190bfdbe84490309d",
+        "encoding_issues.json": "aca0ad81519aafb296fcda30eb15f347baa7f06340817470d5e8e577f4370faa",
+        "official_train_records.json": "67ed1e34fe8ad9447ca0f0d5b402db61c3576403bbe119443067177ca021b12a",
+        "raw_input_label_conflicts.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "selected_qa4_train.txt": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+        "selected_source.json": "7f1c06e8dd251326ef309c89bfa218b008ff19eb1cebf11901e201735283aa2f",
+        "shortcut_models.json": "5e0d06aa3b0c8be5d852c5fed27f7368d9aed553f29016f2f5db7b8848a027f2",
+        "source_comparison.json": "b57d0c0a7dc3092e8a869d8ee24cbd01dda463469b826dc4df949db9f6b1fd4d",
+        "train_audit_summary.json": "4dd1fe116b584c65c45c349fad237e10e8a2c346cd24ba08e95daf3ecbc87979"
+      }
+    }
+  },
+  "admission": {
+    "acquisition_root_recount_checks": 3176,
+    "acquisition_root_issues": 0,
+    "source_zip_and_compressed_archive_root_unpacked": false,
+    "main_runs_require_all_six_completed_and_both_memorization_diagnostics": true,
+    "final_test_access": false
+  },
+  "implementation_sha256": {
+    ".github/workflows/research-item10-preflight.yml": "68219c611e0c9402ac9281a98d0fc90e84fc431e81e0bcb60f2ebd02c71bb4d0",
+    "docs/research/10_acquisition_results.md": "b41d0fc26ea2118c7350c05f19b1ecfd303066ea8200fca15dac631a6e86db80",
+    "docs/research/10_analysis_implementation.md": "56381206b8f34c2b3eecf0444fcf40f25bbed8f0b825651aa442a12508a1dccc",
+    "docs/research/10_babi_provenance.md": "ca71802677febd93b762d6fb751082ff5d4f4dc482726d9e651db6d2c0a01636",
+    "docs/research/10_neural_protocol.md": "d546e64b3d3223d448001ccb0f02668c7fd03ab4385ccd878c0075fedb493f7e",
+    "docs/research/10_study_static_review.md": "eb180964079ddda3066086b6b523d427ea56b76f991710a95051e7c404797efc",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/research/babi_qa.py": "bea3b511b63a8107ae8eb6b6e0bf2d12cf9f76dd80083aae2aa967e42fe7c649",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "results/research/10_validation/acquisition_completion_receipt.json": "1808502b397a603acc3f298803d137cdf75c5d801e255edd963cc308634d7a76",
+    "results/research/10_validation/development_fixture_declaration.json": "873f49c0b98ad3cf546367d6f5cb9f88df57bc1f8f019b115c653c67980ddbc5",
+    "scripts/research_babi_audit.py": "1651bfa7346336f532942e7c1700e124075f78a11c30ca7f65d5d462754bf357",
+    "scripts/research_babi_fixture_ledger.py": "72936dd3c7a1d35fa3ab061b30078a3e0a2ebd3562dfea5d53e1eb8ec1b8bbf8",
+    "scripts/research_babi_study.py": "ce6ed6e4f5822fac9a2b0df455d1e9c347878f17e2160adbebcabb8787161782",
+    "scripts/research_item10_inputs.py": "2cc0d5dd96fc7140a5480b1337632d79d96a3efb0f453f44e0947d4ed47a3102",
+    "scripts/research_item10_worker.py": "6256f5f90cfa945c05829e23c30f4f24b05b0d92f0d7f4ac8830feac0e184537",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "tests/test_babi_qa.py": "4be2108204e1c2fa207836c4f17d03bc6c91dae26c345d3a97dce8b23141a288",
+    "tests/test_babi_study.py": "fb2a33ba5c2ded36499157813c3423a93b525a93249220323baa40c8177e3e26"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "phase": "preflight_preparation",
+  "recorded_at_utc": "2026-10-07T11:12:59+00:00",
+  "execution_started": false,
+  "scientific_algorithm_changed_after_results": false,
+  "source_review": {
+    "trainer_blob": "410a7c491f81f704598053e19e5d37890315f0ce",
+    "test_blob": "1c45503ef00e41958c9f578cbea390dc8e618b05",
+    "contract_methods": 32,
+    "new_controller_methods": 8,
+    "actual_test_execution": "pending_in_frozen_CPU_job"
+  },
+  "source_repairs_before_execution": [
+    "Retain all memorization-check predictions without adding inference.",
+    "Set Transformer feed-forward width144 from TRAIN geometry for prospective parameter matching.",
+    "Reconstruct all six expected preflight configurations and completed-update schedules.",
+    "Separate worker/controller environment and status namespaces.",
+    "Permit an independently verified negative complete preflight while blocking main admission.",
+    "Verify frozen fixture list against bound definitions within existing test08.",
+    "Preserve Python float types for gradient_clip and target_accuracy in plan text and canonical recipe identity.",
+    "Compare stable source identity across training/final phases; bind final artifacts to exact final-phase source while retaining both timestamps."
+  ],
+  "pre_execution_tool_lookup_failure": {
+    "operation": "github_fetch_blob",
+    "requested_sha": "22c61f",
+    "status": 422,
+    "reason": "short SHA rejected; followed by successful observed full-SHA lookup",
+    "source_mutation_or_scientific_execution": false
+  },
+  "fixture_declaration": {
+    "schema_version": 1,
+    "item": 10,
+    "fixture_count": 149,
+    "canonical_sha256": "a2b41fc96f5e043975d4b8c331e8c869c450259f1addcbf98414df837cac87f8",
+    "source": "Exact independent JavaScript reconstruction of the existing tests/test_babi_qa.py input-only ledger. tests/test_babi_study.py reexports it without additional contexts.",
+    "verification": "The frozen CPU test08 must compare this recipe list to the actual bound Python fixture definitions before model preflight.",
+    "official_train_or_test_used_to_construct_fixtures": false
+  },
+  "source_artifacts": [
+    {
+      "path": "scripts/research_item10_inputs.py",
+      "blob": "b8ce35a0ff6125fa04c635767239f4abc99ec635",
+      "bytes": 4766,
+      "sha256": "2cc0d5dd96fc7140a5480b1337632d79d96a3efb0f453f44e0947d4ed47a3102"
+    },
+    {
+      "path": "scripts/research_babi_study.py",
+      "blob": "410a7c491f81f704598053e19e5d37890315f0ce",
+      "bytes": 52564,
+      "sha256": "ce6ed6e4f5822fac9a2b0df455d1e9c347878f17e2160adbebcabb8787161782"
+    },
+    {
+      "path": "scripts/research_babi_audit.py",
+      "blob": "99853ff5c3556cefa154ceaa71e26d31ded59f53",
+      "bytes": 82547,
+      "sha256": "d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949"
+    },
+    {
+      "path": "scripts/research_babi_fixture_ledger.py",
+      "blob": "76e42c59b90414869ae4e81ed656faeb430f9977",
+      "bytes": 4987,
+      "sha256": "72936dd3c7a1d35fa3ab061b30078a3e0a2ebd3562dfea5d53e1eb8ec1b8bbf8"
+    },
+    {
+      "path": "tests/test_babi_study.py",
+      "blob": "1c45503ef00e41958c9f578cbea390dc8e618b05",
+      "bytes": 38951,
+      "sha256": "fb2a33ba5c2ded36499157813c3423a93b525a93249220323baa40c8177e3e26"
+    },
+    {
+      "path": ".github/workflows/research-item10-preflight.yml",
+      "blob": "63d0f643dad31db2290408c675fd77d698df7f50",
+      "bytes": 3166,
+      "sha256": "68219c611e0c9402ac9281a98d0fc90e84fc431e81e0bcb60f2ebd02c71bb4d0"
+    },
+    {
+      "path": "docs/research/10_neural_protocol.md",
+      "blob": "636e3dcd9376d9709c22bb2decb398cbe7e59150",
+      "bytes": 14460,
+      "sha256": "d546e64b3d3223d448001ccb0f02668c7fd03ab4385ccd878c0075fedb493f7e"
+    },
+    {
+      "path": "docs/research/10_analysis_implementation.md",
+      "blob": "c162b1fa82207e4e7d6c6937266300da6db74ec6",
+      "bytes": 11320,
+      "sha256": "3176ec059dcf6ed76acec5b540fad31a8bac28610c34164be2e232f792bd20d5"
+    },
+    {
+      "path": "docs/research/10_study_static_review.md",
+      "blob": "abda23fa07c9add59498a49d95073eb6cd776881",
+      "bytes": 9515,
+      "sha256": "eb180964079ddda3066086b6b523d427ea56b76f991710a95051e7c404797efc"
+    },
+    {
+      "path": "results/research/10_validation/development_fixture_declaration.json",
+      "blob": "c65b14275745849d8d42e956052c1796bb95631b",
+      "bytes": 543,
+      "sha256": "873f49c0b98ad3cf546367d6f5cb9f88df57bc1f8f019b115c653c67980ddbc5"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/study_01.py",
+      "blob": "131396a6bfeda3b9a8a18732ba41b15727cc6d81",
+      "bytes": 48959,
+      "sha256": "7bdf1036003d157bdb47ffa24f5eac673658df767e308b3e07e503abd50baac9"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/study_02.py",
+      "blob": "80b02f3fd2183da0eb273268167ba93b77523f13",
+      "bytes": 51069,
+      "sha256": "15bacb57d7dd46d501ffebaee583a232af8dfe8c48740ee8a38b609e629bfd7d"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/study_03.py",
+      "blob": "12b03cdbde916a7ce10c73518fd59343e9c12454",
+      "bytes": 51300,
+      "sha256": "dae8efca8c4cafc13c532291b14fe7a1f6c55f3119c45f44263d9f523b9a7592"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/study_04.py",
+      "blob": "22c61f77145474325955c3efdb5228fbc4ad088f",
+      "bytes": 52531,
+      "sha256": "638518cae1f7ea8048ef929a6f6f98549a7891d7609b253b19c8675ca40cb3d7"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/study_tests_01.py",
+      "blob": "d9b4652db16896e44546456450ed2ab43d16e9af",
+      "bytes": 38625,
+      "sha256": "0de47098be56e8920a5110f082ede552e8e8990ec9f88fa4033fbba7e9c69154"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/auditor_02.py",
+      "blob": "b378bfa79fd23c63384dffdd5bc5738745d5bcb6",
+      "bytes": 81326,
+      "sha256": "9e0288056ee7fe9ae96bf9b79911cbcb4bbefbd8ba274a769b123ebb944a73f5"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/neural_protocol_01.md",
+      "blob": "e0f7bf314d0dd581eceb75431d1702daeda3c469",
+      "bytes": 14106,
+      "sha256": "768fbe4bbbd5fb04af2e9ed4d8cb866655a21191a178966136903f2399409fcf"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/preflight_plan_01.json",
+      "blob": "255540bdfea6f4aacb5919d264eb725f7584d745",
+      "bytes": 36253,
+      "sha256": "a1ac016045f45e383f601b5735e372d7aeafccf2956a46f35da36729b347382c"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/auditor_03.py",
+      "blob": "a8472480f6e3ab05b484749ebad2cd4bf17b1f34",
+      "bytes": 81997,
+      "sha256": "1651bfa7346336f532942e7c1700e124075f78a11c30ca7f65d5d462754bf357"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/analysis_note_01.md",
+      "blob": "e27bd1270f983c2f6924816c09c414adcdc443a2",
+      "bytes": 10447,
+      "sha256": "56381206b8f34c2b3eecf0444fcf40f25bbed8f0b825651aa442a12508a1dccc"
+    },
+    {
+      "path": "results/research/10_validation/source_drafts/preflight_plan_02.json",
+      "blob": "ad3996257ab9db626fc3cc06af742f1d00f64f67",
+      "bytes": 36257,
+      "sha256": "eaf9dfeedde9792dabf8415a03b6d884e157f7dbd58ed2f6d3e3c9362b3939fa"
+    }
+  ],
+  "limits": "Static reading and authored assertions are not execution results. All ordinary failures and all six preflight outputs must remain visible; official TEST is not read in this phase.",
+  "independent_reviews": {
+    "controller_and_tests": "Two static readers; no further concrete blocker. Real execution pending.",
+    "plan_workflow": "Independent focused review; runtime/thread/source/phase schemas checked before publication.",
+    "auditor": "Independent complete static review; narrow cross-phase timestamp fix applied before any neural result."
+  }
+}
