@@ -1,0 +1,683 @@
+{
+  "collected": [
+    "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+    "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+    "tests/test_babi_qa.py::ParserContractTests::test_normalization_is_punctuation_preserving_and_label_blind",
+    "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+    "tests/test_babi_qa.py::ParserContractTests::test_prior_facts_only_no_earlier_answers_or_future_facts",
+    "tests/test_babi_qa.py::ParserContractTests::test_source_and_raw_line_hashes_preserve_bytes",
+    "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+    "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+    "tests/test_babi_qa.py::GroupingContractTests::test_connected_episodes_full_stories_and_shared_prefixes_do_not_cross",
+    "tests/test_babi_qa.py::GroupingContractTests::test_group_ids_and_assignments_ignore_order_and_gold",
+    "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+    "tests/test_babi_qa.py::EncoderContractTests::test_encoding_is_pure_and_metadata_cannot_affect_visible_input",
+    "tests/test_babi_qa.py::EncoderContractTests::test_input_oov_and_output_support_are_distinct_and_vocab_stays_frozen",
+    "tests/test_babi_qa.py::EncoderContractTests::test_literal_layout_roundtrip_preserves_order_and_punctuation",
+    "tests/test_babi_qa.py::EncoderContractTests::test_train_gold_vocabulary_admission_and_overflow_never_truncate",
+    "tests/test_babi_qa.py::ScoringContractTests::test_ce_is_over_supported_gold_only_with_explicit_none_elsewhere",
+    "tests/test_babi_qa.py::ScoringContractTests::test_empty_subset_has_null_accuracy_and_null_ce",
+    "tests/test_babi_qa.py::ScoringContractTests::test_manual_accuracy_per_answer_and_unsupported_denominator",
+    "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+    "tests/test_babi_qa.py::ControlContractTests::test_bow_controls_ignore_order_while_exact_memory_does_not",
+    "tests/test_babi_qa.py::ControlContractTests::test_fact_frequency_ignores_question_repetitions_with_declared_exclusion",
+    "tests/test_babi_qa.py::ControlContractTests::test_majority_exact_memory_question_only_and_miss_are_distinct",
+    "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_ambiguity_and_unsupported_grammar_are_explicit",
+    "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order"
+  ],
+  "exitstatus": 0,
+  "issues": [],
+  "reports": [
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_conflicting_gold_is_retained_but_not_silently_fit",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_malformed_question_fields_are_rejected",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_normalization_is_punctuation_preserving_and_label_blind",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_normalization_is_punctuation_preserving_and_label_blind",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_normalization_is_punctuation_preserving_and_label_blind",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_numeric_ids_are_original_positive_contiguous_statement_ids",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_prior_facts_only_no_earlier_answers_or_future_facts",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_prior_facts_only_no_earlier_answers_or_future_facts",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_prior_facts_only_no_earlier_answers_or_future_facts",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_source_and_raw_line_hashes_preserve_bytes",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_source_and_raw_line_hashes_preserve_bytes",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_source_and_raw_line_hashes_preserve_bytes",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ParserContractTests::test_support_metadata_never_selects_facts_and_cannot_reference_questions",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_conflict_diagnostic_keeps_both_and_empty_partition_is_explicit",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_connected_episodes_full_stories_and_shared_prefixes_do_not_cross",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_connected_episodes_full_stories_and_shared_prefixes_do_not_cross",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_connected_episodes_full_stories_and_shared_prefixes_do_not_cross",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_group_ids_and_assignments_ignore_order_and_gold",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_group_ids_and_assignments_ignore_order_and_gold",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::GroupingContractTests::test_group_ids_and_assignments_ignore_order_and_gold",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_decoder_rejects_padding_holes_contaminated_output_and_invalid_ids",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_encoding_is_pure_and_metadata_cannot_affect_visible_input",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_encoding_is_pure_and_metadata_cannot_affect_visible_input",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_encoding_is_pure_and_metadata_cannot_affect_visible_input",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_input_oov_and_output_support_are_distinct_and_vocab_stays_frozen",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_input_oov_and_output_support_are_distinct_and_vocab_stays_frozen",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_input_oov_and_output_support_are_distinct_and_vocab_stays_frozen",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_literal_layout_roundtrip_preserves_order_and_punctuation",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_literal_layout_roundtrip_preserves_order_and_punctuation",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_literal_layout_roundtrip_preserves_order_and_punctuation",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_train_gold_vocabulary_admission_and_overflow_never_truncate",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_train_gold_vocabulary_admission_and_overflow_never_truncate",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_train_gold_vocabulary_admission_and_overflow_never_truncate",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_train_gold_vocabulary_admission_and_overflow_never_truncate",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::EncoderContractTests::test_train_gold_vocabulary_admission_and_overflow_never_truncate",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_ce_is_over_supported_gold_only_with_explicit_none_elsewhere",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_ce_is_over_supported_gold_only_with_explicit_none_elsewhere",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_ce_is_over_supported_gold_only_with_explicit_none_elsewhere",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_empty_subset_has_null_accuracy_and_null_ce",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_empty_subset_has_null_accuracy_and_null_ce",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_empty_subset_has_null_accuracy_and_null_ce",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_manual_accuracy_per_answer_and_unsupported_denominator",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_manual_accuracy_per_answer_and_unsupported_denominator",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_manual_accuracy_per_answer_and_unsupported_denominator",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ScoringContractTests::test_misalignment_nonfinite_mask_and_prediction_types_fail_closed",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_bow_controls_ignore_order_while_exact_memory_does_not",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_bow_controls_ignore_order_while_exact_memory_does_not",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_bow_controls_ignore_order_while_exact_memory_does_not",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_fact_frequency_ignores_question_repetitions_with_declared_exclusion",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_fact_frequency_ignores_question_repetitions_with_declared_exclusion",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_fact_frequency_ignores_question_repetitions_with_declared_exclusion",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_majority_exact_memory_question_only_and_miss_are_distinct",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_majority_exact_memory_question_only_and_miss_are_distinct",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_majority_exact_memory_question_only_and_miss_are_distinct",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_ambiguity_and_unsupported_grammar_are_explicit",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_ambiguity_and_unsupported_grammar_are_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_ambiguity_and_unsupported_grammar_are_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_ambiguity_and_unsupported_grammar_are_explicit",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_ambiguity_and_unsupported_grammar_are_explicit",
+      "outcome": "passed",
+      "when": "teardown"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_babi_qa.py::ControlContractTests::test_raw_symbolic_solver_direct_inverse_object_and_relation_order",
+      "outcome": "passed",
+      "when": "teardown"
+    }
+  ],
+  "skips": []
+}
