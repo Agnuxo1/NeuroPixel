@@ -1,8 +1,16 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T15:35:05.329194+00:00",
+  "created_at_utc": "2026-10-07T15:35:10.995423+00:00",
   "files": {
+    "audit/audit.json": {
+      "bytes": 183062,
+      "sha256": "6324a5c9829c8a012de5d0a9efd23da50e99e36c915bac1222b6b31f02e91275"
+    },
+    "audit_component.log": {
+      "bytes": 52,
+      "sha256": "35d903d3817efea3d53bc902d31072af48de2db242be85a585bce07604077a63"
+    },
     "contract_tests.log": {
       "bytes": 21,
       "sha256": "bc3306f38e847279cb10e65fc23a89c6bcbd146227b0dfa166c52a411ccb6d2b"
@@ -22,6 +30,38 @@
     "execution_plan.json": {
       "bytes": 5139,
       "sha256": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447"
+    },
+    "native/report.json": {
+      "bytes": 180658,
+      "sha256": "56c143b2035cced57f8eb84ec87cd23aa9f33f270dc96360d8ae5167e189a65a"
+    },
+    "native/traces.npz": {
+      "bytes": 33729,
+      "sha256": "0e898b1b352cc22306c0dbc5fdd37c1ba021c9c0788a84ba55b318685f2a500d"
+    },
+    "native_component.log": {
+      "bytes": 36,
+      "sha256": "e7c5436ee0e9dfe8db5fb5a6c51e838788766e7a1f743a7e8e37f2f4c67e4693"
+    },
+    "probe.log": {
+      "bytes": 85,
+      "sha256": "7fb5d612aa07bbd9bdd34bf77b12ddec540273db5e6b50573de6e5d2470545a2"
+    },
+    "probe_environment.json": {
+      "bytes": 565,
+      "sha256": "2a51345cf86f02f3800597440ad90c0171dd120220b07867d35575c338154729"
+    },
+    "probe_resource_monitor.json": {
+      "bytes": 578,
+      "sha256": "1001293970179797ab6330b24ec42d8cb1127b244e6ce3ec78a5f5ae67fb2636"
+    },
+    "probe_status.json": {
+      "bytes": 822,
+      "sha256": "71ec25663dcc83af52c713f9bf108b712c68ecb4bdda2090a96ac3ca650ea80f"
+    },
+    "repair_probe_status.json": {
+      "bytes": 2579,
+      "sha256": "fb6d8f97dc306bad3c87d3bac46dd925a9b998f1b9531bd5d4d6dc83a6ad5024"
     },
     "source.zip": {
       "bytes": 9399977,
@@ -44,8 +84,8 @@
       "sha256": "20788b371f1a60525b91bf7628c872f0fd2c5a6317c8e21e4ee57a8e6192cca2"
     },
     "worker_status.json": {
-      "bytes": 1777,
-      "sha256": "86aec841888863be29c505c98199ec06fa31f2560746708129d982e2783b556d"
+      "bytes": 2700,
+      "sha256": "71727f3ee7952161cfab01d92f5ce339a0ea72d7b41ee3132ba66ccb2b68ed1b"
     }
   },
   "final": false,
