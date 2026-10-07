@@ -1,0 +1,51 @@
+{
+  "archive_branch": "research/scientific-validation-2026-10-07-cloud-results",
+  "execution_plan_sha256": "20f4e9b4385c95c5f206ac26702bca96ac4232930ea343fd718c4de5bec6048a",
+  "initial_resources": {
+    "at_utc": "2026-10-07T03:23:48.945078+00:00",
+    "available_ram_gib": 14.562911987304688,
+    "cpu_count_logical": 4,
+    "thread_limit": 2
+  },
+  "item": 6,
+  "paid_compute": false,
+  "resource_policy": {
+    "archive_interval_seconds": 300,
+    "cpu_threads": 2,
+    "final_archive_grace_seconds": 180.0,
+    "git_timeout_seconds": 120.0,
+    "interop_threads": 1,
+    "maximum_seconds": 18000,
+    "minimum_ram_gib": 8,
+    "supervisor_interval_seconds": 1.0
+  },
+  "resources": [],
+  "run_key": "37566497890-1",
+  "schema_version": 1,
+  "source": {
+    "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "historical_files_expected": 8,
+    "historical_files_verified": 7,
+    "provenance_implementation": "scripts/research_ablations.py:source_record",
+    "recovery_manifest": {
+      "path": "docs/research/06_recovery_manifest.json",
+      "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
+    },
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    },
+    "unavailable_expected_sha256": {
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+    },
+    "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+  },
+  "started_at_utc": "2026-10-07T03:23:48.980290+00:00",
+  "status": "running",
+  "steps": []
+}
