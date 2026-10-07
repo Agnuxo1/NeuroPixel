@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-10-07T04:24:32.593228+00:00",
+  "at_utc": "2026-10-07T04:29:35.587625+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
     "core/damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024/configuration.json": {
@@ -51,8 +51,8 @@
       "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f"
     },
     "core/events.json": {
-      "bytes": 3863,
-      "sha256": "5bdaa4428423143789263f74d3b9050a8d0be1bae9dbba83b0843b98e2ad77d9"
+      "bytes": 4030,
+      "sha256": "3971bdecb5f73fb3dec28ee48405fed78d65035d7601b6f563098605b609d62b"
     },
     "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6391,
@@ -394,13 +394,33 @@
       "bytes": 122424,
       "sha256": "36a5084d32e0ef4c410c0b56cc35e1cd2e3b8c910b68b92fd1697cc66d49d53d"
     },
+    "core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192/configuration.json": {
+      "bytes": 6395,
+      "sha256": "3ebae2908d97085cd8f3ffa19cf40024c86231d7d269d9d59922e9ab0352d940"
+    },
+    "core/optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192/progress.json": {
+      "bytes": 7200,
+      "sha256": "c7e65392ae6210b4d3ada1037d5aeed399e89f678408371db7b8e9415840431f"
+    },
     "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/configuration.json": {
       "bytes": 6397,
       "sha256": "0461edb5a73e93f8f65b0d89ec5995268ee8aa71ec3c8cbe4b155ecf5307866f"
     },
     "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/progress.json": {
-      "bytes": 22466,
-      "sha256": "3d30539d0f00e566b709fc64fd61fc342f2d267ed796089ee790027fbe4a44a2"
+      "bytes": 28262,
+      "sha256": "8a6e1ba52095faf50a1ca2ba338aea94c9ce9af1d296199ee7ef32a8e2ece9b9"
+    },
+    "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/training.json": {
+      "bytes": 34709,
+      "sha256": "ec72e671fb156375889756d7574e337179267bf79b5194fb5a662dc6217f5ff8"
+    },
+    "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/validation_predictions.npz": {
+      "bytes": 18898,
+      "sha256": "6d907fdecedd59bffa763e3b9934172b98e16d58a1b2ba3f59e492c35152fa4d"
+    },
+    "core/optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192/weights.pt": {
+      "bytes": 122424,
+      "sha256": "8f9e361b4418bdf1d3fc61320ab91e391a4c770fa28ed4edce3d2f7805a23f9b"
     },
     "core/recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6389,
@@ -487,8 +507,8 @@
       "sha256": "4662bc312f2ec7b59445325ff5ac091f3bf297b315f5ecc18d686aea71492272"
     },
     "logs/core.log": {
-      "bytes": 89546,
-      "sha256": "a66dfae72f17a4018de174cff27e07264e6ae8921ff0b0eda0012e277baea1f3"
+      "bytes": 96378,
+      "sha256": "416172f3002e23a1705be7cad3e213f1b348443f16499ddbb0a55ebb4295f8b4"
     },
     "logs/source_environment.log": {
       "bytes": 2755,
@@ -507,8 +527,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 14502,
-      "sha256": "6d269f4dee6d06d4a734073892b5bb2d259a7ac28cfd9a3d95fb7d85264d5b7d"
+      "bytes": 15331,
+      "sha256": "570e23380f828a0aadcf44647452e20e9ffa937caf66386bdeb6b7f5b822a0c6"
     }
   },
   "run_key": "37566497890-1",
