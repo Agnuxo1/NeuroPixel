@@ -16,7 +16,6 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from neuropixel.model import NeuroPixel  # noqa: E402
-from neuropixel.scanner import lens as scanner_lens  # noqa: E402
 from neuropixel.task import NOUNS, PLACES, ROLES, VERBS, RoleTask, Vocab  # noqa: E402
 
 IMG = ROOT / "docs" / "img"
@@ -129,9 +128,8 @@ def thinking_gif(model, task):
     T = 24
     with torch.no_grad():
         out = model(c, trace=True, steps=T)
-        # Match the scanner and final-answer PAD policy. These top labels
-        # are a projection of the state, not a complete causal explanation.
-        word, conf = scanner_lens(model, out["frames"][0])
+        p = model.lens_logits(out["frames"][0]).softmax(-1)          # T+1,H,W,V
+    conf, word = p.max(-1)
     pairs = []
     for r in range(7):
         for col in range(7):

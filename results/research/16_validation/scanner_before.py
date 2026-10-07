@@ -1,15 +1,8 @@
-"""Dictionary scanner: project each retained cell state into token scores.
+"""Escáner del diccionario: traduce a palabra el estado de CADA píxel en CADA paso.
 
-The scanner applies the model's output readout across the grid. Depending on
-training, that readout can also receive auxiliary supervision at input cells
-or image cells. Readability under this objective does not by itself establish
-a causal interpretation of the answer. The c_id-dimensional linear readout
-can hide directions in the c-dimensional state; top labels and confidence
-compress the projection further.
-
-`lens` receives trace frames: index 0 is the seed, and index t is the state after
-update t and its hook. Native forward's separate `lens_every` training samples
-are taken before their numbered update and have a different time contract.
+Aplica al lienzo entero la misma lectura que el píxel de salida (read + diccionario).
+Ojo: la lectura solo se entrena en el píxel de salida; en el resto de píxeles es una
+'lente' interpretativa (qué palabra estaría diciendo esa zona), no una prueba causal.
 """
 from __future__ import annotations
 

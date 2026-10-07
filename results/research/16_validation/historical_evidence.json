@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "item": 16,
+  "record_type": "static source audit before numerical recipe",
+  "source_commit": "d819411f057a9e31f708f630f73f2773826a146e",
+  "core_sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+  "sources": [
+    {
+      "path": "neuropixel/model.py",
+      "git_blob": "b66e2f575c6ae937d8cad807b4dd0e48531850f7",
+      "bytes": 6895,
+      "sha256": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345"
+    },
+    {
+      "path": "neuropixel/scanner.py",
+      "git_blob": "dde9631fbd8dee0895c63be8bd6ad9e4c36f7bea",
+      "bytes": 3228,
+      "sha256": "cff8637fc329fdd8ff8775533f67a8ed2a8f4c7c1955aa5d2d02f5bb4247a28a"
+    },
+    {
+      "path": "scripts/scan.py",
+      "git_blob": "328d92d1f9ec67f09c8a8e3e09ab01e162e9765c",
+      "bytes": 2415,
+      "sha256": "1f40274f426ea3d9b3d72f5bfd777caeed53b2971967e5162605949d45944914"
+    },
+    {
+      "path": "scripts/train.py",
+      "git_blob": "39b7a0f25518e9481fd3ba062d27701c0cc41a09",
+      "bytes": 8635,
+      "sha256": "c72d07898688e4e906b5ff8897603d5a0cdb4c07f9a3876e744728601c51238f"
+    },
+    {
+      "path": "scripts/make_readme_figures.py",
+      "git_blob": "309b1f92c7633dcee977a20563d9c2dbfb49350c",
+      "bytes": 15759,
+      "sha256": "7b8e64d1599b13d904b17c9a29f651cb630ad709a33559545c8c361140213e4b"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "a4d1a554de1c06f3981ff838c5de56ca35d39d70",
+      "bytes": 11662,
+      "sha256": "7735653952679cb9fcc4c0db5789d03ce6defb2ed8a80781d278f1ca43915c7f"
+    },
+    {
+      "path": "docs/research/01_mechanism_specification.md",
+      "git_blob": "e7b0a39bba89024cc933d166ec656bd4d2cf2a2f",
+      "bytes": 38071,
+      "sha256": "e12e81fe04caefdad05bf6567e41edebda6d744c1dfd70691f26106b6d8e420b"
+    }
+  ],
+  "observations": [
+    {
+      "id": "instantaneous_projection",
+      "statement": "At each cell the unmasked vocabulary vector is D(Rs+b), where R has shape c_id by c. Default c_id=16,c=48 gives rank(DR)<=16 and ambient instantaneous kernel dimension>=32. Neither lower rank of the actually reachable state manifold nor observability from multiple times is determined by this statement."
+    },
+    {
+      "id": "native_timing",
+      "statement": "Native forward records lens(s[t-1]) before numbered update t when t mod k=0; trace frames index0 is seed and index t is post-update/post-hook. scripts/scan.py applies scanner.lens to trace frames, so its displayed step labels align to those post-update states."
+    },
+    {
+      "id": "scanner_compression",
+      "statement": "scanner.lens suppresses PAD at -10000, computes softmax, and returns only top token and maximum probability. The renderer additionally maps categories/confidence to colors and rounds confidence to2decimals; the standard JSON retains selected top tokens, not probabilities or full state."
+    },
+    {
+      "id": "supervision_scope",
+      "statement": "scanner.py cautions this is no causal proof but says readout is trained only at the output cell. That statement misses optional school supervision at nonempty input cells and image-lens supervision in the cartilla trainer."
+    },
+    {
+      "id": "pca_compression",
+      "statement": "README figure helper maps centered 48-channel state to3PCA axes, rescales by 2nd/98th quantiles and clips; norm uses90thquantile and clips. These displays are lossy and data-dependent, not a calibrated physical activity or complete mechanism measurement."
+    },
+    {
+      "id": "claim_boundary",
+      "statement": "README claims every reasoning step decodable and interpretable by construction. Applying the actual readout everywhere is implemented, but completeness and semantic causal faithfulness need separate intervention and competence evidence."
+    },
+    {
+      "id": "animation_pad_policy",
+      "statement": "thinking_gif reads raw lens softmax without suppressing PAD, unlike scanner.lens and returned final logits. With every non-PAD score below zero, PAD can be the displayed winner. The proposed generator correction delegates to scanner.lens; previously committed images are historical and will not be relabeled as regenerated without the unavailable original checkpoint."
+    }
+  ],
+  "hypotheses_unchanged": [
+    "Historical H1 remains closed and not supported.",
+    "Assigned native weights can test mechanism possibility and measurement contracts; they cannot establish mechanisms of learned role reasoning.",
+    "Any future learned null-space intervention is an explicitly conditional state intervention and may leave the training manifold."
+  ]
+}
