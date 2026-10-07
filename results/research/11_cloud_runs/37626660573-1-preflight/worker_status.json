@@ -4,6 +4,12 @@
     "available_ram_gib": 14.523391723632812,
     "phase": "admission"
   },
+  "completed_at_utc": "2026-10-07T13:14:32.227676+00:00",
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T13:14:32.227581+00:00",
+    "available_ram_gib": 14.625125885009766,
+    "phase": "before_final_archive"
+  },
   "gpu_requested": false,
   "item": 11,
   "paid_compute": false,
@@ -23,6 +29,39 @@
   },
   "run_key": "37626660573-1-preflight",
   "schema_version": 1,
+  "source_after": {
+    "all_bindings_verified": true,
+    "at_utc": "2026-10-07T13:14:32.227489+00:00",
+    "implementation_sha256": {
+      ".github/workflows/research-item11-audit.yml": "71ab1235084dfa2577cd2df0a52173b159a6b34939f92f63ec5fa53b32e0bc37",
+      ".github/workflows/research-item11-preflight.yml": "87ae242509a681bbbf01bde35813351c02ecafe2cef560a6305aad22b4b6182d",
+      "docs/research/11_memory_implementation.md": "623635d235b03df18b599909d1013809056857200a0ada07bc196a6a35359b96",
+      "docs/research/11_memory_protocol.md": "642f5cbbbdc6f1ab259a63e8dd09bff4bc2f4314d6054674c97e86c99cb98a69",
+      "docs/research/11_offline_derivation.json": "d99571c1fe898c0d02e6943de42d0b0224d306a88472b9232135024cd1551a16",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/11_validation/memory_audit_delta.json": "d901d3e0fe500c2cbed20bdacb771d4bcfc0e85b311f9d3965e8cf25e563ec38",
+      "results/research/11_validation/memory_source_corrections.json": "dcec2b90c5fa4f76691d4f8ba10aae826f7a6cd79adb6e16ea8ed2612df63396",
+      "results/research/11_validation/memory_static_review.json": "239cd81975cf060c9cb4bb984285ce624a35e635991cf7d863c81e87460ad671",
+      "results/research/11_validation/probe_completion_receipt.json": "adb1df26e1e910757b501b42e82fa240e5271a0630922f1e2477643a67af104b",
+      "scripts/research_item11_inputs.py": "a947dbfb7d6ea0a677a83b2cbd4dc8b1b58cf1e803d8b1a0e8cca2857d021e6b",
+      "scripts/research_item11_offline.py": "a01a341c4dde6a492aa40ad48549067bcc7dfe8185ebf4aaaf6e97f7f18761b8",
+      "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_memory_audit.py": "2d5996e5566c058abd2f49f1cded6ab2a9c635b10d4aea301490859a5b04991d",
+      "scripts/research_memory_probe_audit.py": "7f7917826929529db5744431b99656f227c932981e536eef3985ff1dfb7766cb",
+      "scripts/research_memory_study.py": "f5b19486fdb9990a711071e17c344efebd9e7aa473580b11e13ab65b317c7c9a",
+      "tests/test_memory_study.py": "4d7ff980840ba6308d0a16e23e35e8c9506955aec1ed550b60869cd35aeeaa7b"
+    },
+    "plan_sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5",
+    "source_commit": "cef4e67358ca5c344cd4154a7f641feefeb406ae",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
   "source_commit": "cef4e67358ca5c344cd4154a7f641feefeb406ae",
   "stages": [
     {
@@ -77,5 +116,6 @@
     }
   ],
   "started_at_utc": "2026-10-07T13:12:59.335117+00:00",
-  "status": "running"
+  "status": "completed",
+  "wall_seconds_before_final_archive": 92.89447380000001
 }
