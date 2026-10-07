@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "stage": "preflight_independent_audit",
+  "recorded_at_utc": "2026-10-07T11:35:07+00:00",
+  "status": "verified",
+  "audit_source_commit": "6e7cad49305d3d042ba931acaa13bd49a554c2f3",
+  "audit_plan_sha256": "8272b44b2cfec01659121584e5c4a888ea520d693593d35ba366a12abe963061",
+  "scientific_source_commit": "071be375dce45d0d7fabce3d095bd1003d53ed36",
+  "scientific_plan_sha256": "f01846c1c6685328d49a5cdcb6d5c399222f99b8f160e37ccff62ee5e0418993",
+  "run_id": 37614761119,
+  "job_id": 112770312614,
+  "provider_status": "completed",
+  "provider_conclusion": "success",
+  "provider_completed_updated_at_utc": "2026-10-07T11:32:53Z",
+  "archive_commit": "83a4f36f07ee05d8fb34fabe37b61b41fbdbe0f8",
+  "archive_path": "results/research/10_cloud_runs/37614761119-1-audit",
+  "files_excluding_manifest": 19,
+  "bytes_excluding_manifest": 10025025,
+  "archive_audit": {
+    "status": "verified",
+    "checks": 5819,
+    "failed_checks": 0,
+    "issues": [],
+    "report_sha256": "0aaf5f7fb82bbcae10334d1d536475418bc0e4d8130ccba999868d6c6f98ef4f",
+    "source_inventory_files": {
+      "071be375dce45d0d7fabce3d095bd1003d53ed36": 432,
+      "99ecaeefdd00dffd3dae444a781ad009c19dff5d": 403
+    },
+    "source_ancestry_verified": true,
+    "archives": {
+      "acquisition": {
+        "commit": "19c8c40ab50141ba128623e7bbbc04cfb2460f31",
+        "path": "results/research/10_cloud_runs/37609533224-1-acquisition",
+        "files_including_manifest": 35
+      },
+      "target": {
+        "commit": "707be7d4c1df58bde0706d965e6678c0be6a2cfa",
+        "path": "results/research/10_cloud_runs/37612623870-1-preflight",
+        "files_including_manifest": 91
+      }
+    },
+    "full_zip_source_comparison": true,
+    "train_reextraction": {
+      "bytes": 117470,
+      "git_blob": null,
+      "member": "tasks_1-20_v1-2/en/qa4_two-arg-relations_train.txt",
+      "scope": "Other TAR headers traversed; only TRAIN returned as a payload.",
+      "sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+      "test_payload_extracted": false
+    }
+  },
+  "scientific_audit": {
+    "status": "verified",
+    "issues": [],
+    "checked_input_files": 105,
+    "reported_check_groups": 10,
+    "report_sha256": "79229c2a54d45ea043f98b0d9459beb41cce833d29bd5d64a2edc8e22c535cf0",
+    "preflight_admission_passed": true,
+    "all_six_runs_completed": true,
+    "memorization_snapshots_recounted": 19,
+    "development": {
+      "data_identity_sha256": "5f303328ba9c4499172b61f281829934454dac4d42cc2e86b17b856004a5a1ff",
+      "groups": 752,
+      "height": 4,
+      "raw_input_gold_conflicts": 0,
+      "records": 1000,
+      "train": 895,
+      "validation": 105,
+      "vocabulary": 18,
+      "width": 8
+    },
+    "selected_learning_rates": {
+      "neuropixel": 0.003,
+      "relative_transformer": 0.003
+    },
+    "runtime": {
+      "bootstrap_generator": "PCG64",
+      "bootstrap_replicates": 2000,
+      "bootstrap_seed": 104001,
+      "numpy": "2.3.5",
+      "python": "3.12.14",
+      "scipy": "1.17.0",
+      "threads": 1
+    },
+    "limits": [
+      "Byte hashes do not independently establish remote archive ancestry or publication time; the operational archive audit owns that evidence.",
+      "Checkpoint files are hashed only, never deserialized; weight finiteness and parameter tensors are not rechecked here.",
+      "Recorded input streams are matched across families and counted, not regenerated from their declared PRNG seeds.",
+      "Resource and timing fields describe saved measurements and configured limits, not continuously observed physical utilization.",
+      "bAbI QA4 is external to this project but synthetic; success does not establish natural-language or out-of-generator generalization.",
+      "The source archive and original TEST have public custody; a workflow access gate is not an independent blind test."
+    ]
+  },
+  "root_report_comparison": {
+    "checks": 84,
+    "issues": 0,
+    "fields": "All six validation and full-TRAIN probe counts, accuracies, cross-entropies and support denominators exactly match the independently recounted reports."
+  },
+  "root_rehashed_files": [
+    {
+      "path": "worker_status.json",
+      "bytes": 3369,
+      "sha256": "7b5f4d121754cf03963706a2b693990c18988aa3f89bbd3365ff3165f24ba7e6"
+    },
+    {
+      "path": "offline_status.json",
+      "bytes": 593,
+      "sha256": "8c9e71e5a653a5fd42e494e5ef1fa2a3f9a790a6b40412bdf3a6aa849812a13c"
+    },
+    {
+      "path": "offline_archive_audit.json",
+      "bytes": 1153494,
+      "sha256": "0aaf5f7fb82bbcae10334d1d536475418bc0e4d8130ccba999868d6c6f98ef4f"
+    },
+    {
+      "path": "analysis/scientific_audit.json",
+      "bytes": 85487,
+      "sha256": "79229c2a54d45ea043f98b0d9459beb41cce833d29bd5d64a2edc8e22c535cf0"
+    },
+    {
+      "path": "audit_resource_monitor.json",
+      "bytes": 847,
+      "sha256": "a5e1aee32f48848050d74a3a3b7470a73fdb9d4b5920920f92dbd02b53ed6b09"
+    },
+    {
+      "path": "offline_subprocess.json",
+      "bytes": 1057,
+      "sha256": "c76c1482a2776e79e142dadfce394e0989a6f5982bdebf2c04fd75cd1462ecdb"
+    }
+  ],
+  "resources": {
+    "worker_seconds_before_final_archive": 11.168775285999999,
+    "stage_seconds": 4.504564340999998,
+    "wrapper_seconds": 3.8717880210000004,
+    "scientific_subprocess_seconds": 0.665720720000003,
+    "worker_admission_available_ram_gib": 14.454303741455078,
+    "child_monitor_samples": 5,
+    "minimum_sampled_child_available_ram_gib": 14.452686309814453,
+    "wrapper_boundary_samples": 5,
+    "scientific_boundary_samples": 32,
+    "scientific_boundary_minimum_available_ram_gib": 14.454841613769531,
+    "numerical_threads": 1,
+    "git_threads": 1,
+    "aggregate_cpu_cap": 4,
+    "runner_released": true
+  },
+  "provider_log": {
+    "path": "results/research/10_validation/preflight_audit_actions.log",
+    "bytes": 27022,
+    "sha256": "598c79f3163fd036d370f52cef3290b680a437be1796ece9d2ee65be6f38196a",
+    "scope": "Complete provider-decoded text re-encoded as UTF-8."
+  },
+  "main_scientific_admission": true,
+  "main_execution_started": false,
+  "final_test_payload_extracted": false,
+  "checkpoint_weights_deserialized": false,
+  "model_execution_in_audit": false,
+  "independent_external_lab": false
+}

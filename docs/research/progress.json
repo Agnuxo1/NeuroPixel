@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T11:31:58+00:00",
+  "recorded_at": "2026-10-07T11:36:23+00:00",
   "active_item": 10,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
@@ -500,7 +500,7 @@
     "closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e"
   },
   "item10": {
-    "stage": "All six neural preflight runs completed; frozen independent saved-array/archive audit pending",
+    "stage": "Preflight independently verified; ten-run primary study frozen",
     "opened_after_item9_closure_commit": "e6a3a5dffa602cd9731076390e9b20b6c738958e",
     "scope": "Investigate generalization beyond the project's task generator, distinguish externally authored benchmarks from same-generator perturbations, establish input/output and label validity, and execute feasible bounded checks under a prospectively fixed protocol. Retain the weak item9 competence result and all external-validation limits.",
     "scientific_scoring_started": true,
@@ -569,9 +569,35 @@
     "preflight_controller_admission_passed": true,
     "preflight_json_review_checks": 125,
     "preflight_json_review_issues": 0,
-    "preflight_offline_audit_status": "frozen; execution pending",
+    "preflight_offline_audit_status": "verified",
     "preflight_offline_freeze_utc": "2026-10-07T11:31:58+00:00",
     "preflight_offline_plan_sha256": "8272b44b2cfec01659121584e5c4a888ea520d693593d35ba366a12abe963061",
-    "main_admitted": false
+    "main_admitted": true,
+    "preflight_offline_source_commit": "6e7cad49305d3d042ba931acaa13bd49a554c2f3",
+    "preflight_offline_archive_commit": "83a4f36f07ee05d8fb34fabe37b61b41fbdbe0f8",
+    "preflight_offline_run_id": 37614761119,
+    "preflight_offline_job_id": 112770312614,
+    "preflight_offline_runner_released": true,
+    "preflight_offline_archive_checks": 5819,
+    "preflight_offline_scientific_issues": 0,
+    "preflight_offline_saved_memorization_snapshots": 19,
+    "main_freeze_utc": "2026-10-07T11:36:23+00:00",
+    "main_plan_sha256": "571dd747cb9649bc435ffb006afc6558132b82e0d1c40e7b251827c51821b6f0",
+    "main_expected_runs": 10,
+    "main_seeds": [
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "main_updates": 4096,
+    "main_selected_learning_rates": {
+      "neuropixel": 0.003,
+      "relative_transformer": 0.003
+    },
+    "main_worker_seconds": 3600,
+    "main_workflow_minutes": 70,
+    "main_scientific_scoring_started": false
   }
 }
