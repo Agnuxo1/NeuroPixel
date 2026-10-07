@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "component": "constructed_census",
+  "status": "verified",
+  "verified_at_utc": "2026-10-07T16:23:07+00:00",
+  "source_commit": "ff66dc4bacd19219bf4f754e40944396e7ce8c5b",
+  "archive_commit": "ff34cc4f44c535e5f4d00276e1e3be194ec70f21",
+  "archive_path": "results/research/15_cloud_runs/37649654847-1-probe",
+  "archive_tree": "0ee55201836c4cf19c0d7a398e07f309deb5de06",
+  "run_id": 37649654847,
+  "job_id": 112889349696,
+  "provider_run": {
+    "id": 37649654847,
+    "name": "Item 15 dynamical stability evidence",
+    "node_id": "WFR_kwLOUt3dEs8AAAAIxBgkPw",
+    "head_branch": "research/scientific-validation-2026-10-07-cloud",
+    "head_sha": "ff66dc4bacd19219bf4f754e40944396e7ce8c5b",
+    "path": ".github/workflows/research-item15-probe.yml",
+    "display_title": "research: freeze item15 native stability census with independent audits",
+    "run_number": 1,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "workflow_id": 377602537,
+    "check_suite_id": 101993777900,
+    "check_suite_node_id": "CS_kwDOUt3dEs8AAAAXv02K7A",
+    "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37649654847",
+    "html_url": "https://github.com/Agnuxo1/NeuroPixel/actions/runs/37649654847",
+    "pull_requests": [],
+    "created_at": "2026-10-07T16:08:08Z",
+    "updated_at": "2026-10-07T16:09:11Z",
+    "actor": {
+      "login": "Agnuxo1",
+      "id": 166046035,
+      "node_id": "U_kgDOCeWpUw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Agnuxo1",
+      "html_url": "https://github.com/Agnuxo1",
+      "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+      "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+      "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+      "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+      "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-07T16:08:08Z",
+    "triggering_actor": {
+      "login": "Agnuxo1",
+      "id": 166046035,
+      "node_id": "U_kgDOCeWpUw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Agnuxo1",
+      "html_url": "https://github.com/Agnuxo1",
+      "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+      "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+      "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+      "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+      "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37649654847/jobs",
+    "logs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37649654847/logs",
+    "check_suite_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/check-suites/101993777900",
+    "artifacts_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37649654847/artifacts",
+    "cancel_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37649654847/cancel",
+    "rerun_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37649654847/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/workflows/377602537",
+    "head_commit": {
+      "id": "ff66dc4bacd19219bf4f754e40944396e7ce8c5b",
+      "tree_id": "30f9de6d952252f7d7e58e17c8021d0c8efad8c8",
+      "message": "research: freeze item15 native stability census with independent audits",
+      "timestamp": "2026-10-07T16:08:05Z",
+      "author": {
+        "name": "Francisco Angulo de Lafuente",
+        "email": "166046035+Agnuxo1@users.noreply.github.com"
+      },
+      "committer": {
+        "name": "Francisco Angulo de Lafuente",
+        "email": "166046035+Agnuxo1@users.noreply.github.com"
+      }
+    },
+    "repository": {
+      "id": 1390271762,
+      "node_id": "R_kgDOUt3dEg",
+      "name": "NeuroPixel",
+      "full_name": "Agnuxo1/NeuroPixel",
+      "private": false,
+      "owner": {
+        "login": "Agnuxo1",
+        "id": 166046035,
+        "node_id": "U_kgDOCeWpUw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Agnuxo1",
+        "html_url": "https://github.com/Agnuxo1",
+        "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+        "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+        "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+        "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+        "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Agnuxo1/NeuroPixel",
+      "description": "A neural network that thinks in pixels: learned colour dictionary, local cellular dynamics, self-repair, growing canvases and readable thoughts.",
+      "fork": false,
+      "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel",
+      "forks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/forks",
+      "keys_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/teams",
+      "hooks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/hooks",
+      "issue_events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/events",
+      "assignees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/tags",
+      "blobs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/languages",
+      "stargazers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/stargazers",
+      "contributors_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contributors",
+      "subscribers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscribers",
+      "subscription_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscription",
+      "commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/merges",
+      "archive_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/downloads",
+      "issues_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/deployments"
+    },
+    "head_repository": {
+      "id": 1390271762,
+      "node_id": "R_kgDOUt3dEg",
+      "name": "NeuroPixel",
+      "full_name": "Agnuxo1/NeuroPixel",
+      "private": false,
+      "owner": {
+        "login": "Agnuxo1",
+        "id": 166046035,
+        "node_id": "U_kgDOCeWpUw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Agnuxo1",
+        "html_url": "https://github.com/Agnuxo1",
+        "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+        "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+        "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+        "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+        "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Agnuxo1/NeuroPixel",
+      "description": "A neural network that thinks in pixels: learned colour dictionary, local cellular dynamics, self-repair, growing canvases and readable thoughts.",
+      "fork": false,
+      "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel",
+      "forks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/forks",
+      "keys_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/teams",
+      "hooks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/hooks",
+      "issue_events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/events",
+      "assignees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/tags",
+      "blobs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/languages",
+      "stargazers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/stargazers",
+      "contributors_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contributors",
+      "subscribers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscribers",
+      "subscription_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscription",
+      "commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/merges",
+      "archive_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/downloads",
+      "issues_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/deployments"
+    }
+  },
+  "provider_jobs": {
+    "jobs": [
+      {
+        "id": 112889349696,
+        "name": "stability-evidence",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37649654847,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Reserve a finite workflow deadline",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Check out the isolated item-15 source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install the pinned CPU diagnostic dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Validate contracts, execute the frozen stability evidence and archive",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Preserve a bootstrap outcome record in Actions",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Post Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Post Check out the isolated item-15 source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          }
+        ]
+      }
+    ]
+  },
+  "plan_sha256": "a39782409d87a172ca516a461e4c31a92ebd2ed2828477c02dfb9e38b060460d",
+  "manifest_sha256": "c8088103801480ab3d951566426ff8a0c1f0be52d1311e185a5d0b25086bf75e",
+  "archive_file_count_excluding_manifest": 21,
+  "archive_bytes_excluding_manifest": 9839284,
+  "root_text_rehashes": [
+    {
+      "path": "audit/audit.json",
+      "bytes": 60219,
+      "sha256": "fac66bf07186ef64caa620e2b0ff58fb538d83ac3725493b11dff61236d1471d",
+      "verified": true
+    },
+    {
+      "path": "audit_component.log",
+      "bytes": 52,
+      "sha256": "38a23f590eb16408b08c13995caebafe5f9fd57f5a23931057261c76008a8d95",
+      "verified": true
+    },
+    {
+      "path": "contract_tests.log",
+      "bytes": 2,
+      "sha256": "eb4bd64f7014f7d42e9d358035802242741b974e8dfcd37c59f9c21ce29d781e",
+      "verified": true
+    },
+    {
+      "path": "contract_tests_environment.json",
+      "bytes": 565,
+      "sha256": "c71d7b4617973dba26de383460a2c9ff320ad557741dde8cc9f2c6f85856a8d2",
+      "verified": true
+    },
+    {
+      "path": "contract_tests_resource_monitor.json",
+      "bytes": 603,
+      "sha256": "cc7b0d449f7cd12816fcd2c20b5b033b193d2a17c3e5b79de3a400b2092c5dd4",
+      "verified": true
+    },
+    {
+      "path": "contract_tests_status.json",
+      "bytes": 840,
+      "sha256": "4313b8490c805c77c4392e2ffb2f94bcd0a5371ce1b4a3116ef554df8b13e9c8",
+      "verified": true
+    },
+    {
+      "path": "execution_plan.json",
+      "bytes": 5760,
+      "sha256": "a39782409d87a172ca516a461e4c31a92ebd2ed2828477c02dfb9e38b060460d",
+      "verified": true
+    },
+    {
+      "path": "native/report.json",
+      "bytes": 78996,
+      "sha256": "752323fa052e37d3fa29800135f90eefffdc6ffcd2554f29d51a7d590c9a9748",
+      "verified": true
+    },
+    {
+      "path": "native_component.log",
+      "bytes": 37,
+      "sha256": "4427418b455671ddaf71fed08907bd11db2805e3f6d90f41cd5b02084df67363",
+      "verified": true
+    },
+    {
+      "path": "probe.log",
+      "bytes": 85,
+      "sha256": "7fb5d612aa07bbd9bdd34bf77b12ddec540273db5e6b50573de6e5d2470545a2",
+      "verified": true
+    },
+    {
+      "path": "probe_environment.json",
+      "bytes": 565,
+      "sha256": "930fcb990abcc2a32be65f6ab252dec4f8adf3433a01d85b1819066542b4e490",
+      "verified": true
+    },
+    {
+      "path": "probe_resource_monitor.json",
+      "bytes": 711,
+      "sha256": "0cfee4d4a14ba2d8e0d326c7c3ad89dec69618d53208d54b315f8c6a6a17a702",
+      "verified": true
+    },
+    {
+      "path": "probe_status.json",
+      "bytes": 821,
+      "sha256": "8248def1e381b34d7c91a6f5068238d6c80d9207eb78ed5090d5afdfcc322b29",
+      "verified": true
+    },
+    {
+      "path": "source_before.json",
+      "bytes": 2632,
+      "sha256": "a78c644b88c4709058c604f8d4469b543c57d26c48c2fa733bc893e0f070f1f2",
+      "verified": true
+    },
+    {
+      "path": "stability_probe_status.json",
+      "bytes": 2590,
+      "sha256": "03e28f2f688138ca15e60eaffe91c63fe952a8260101502e788a94d44b317c26",
+      "verified": true
+    },
+    {
+      "path": "test_collection.json",
+      "bytes": 165,
+      "sha256": "a7715d88934e4f402fdb051ba5ebb311984364c964d3870f35d924e633a33958",
+      "verified": true
+    },
+    {
+      "path": "test_results.json",
+      "bytes": 741,
+      "sha256": "839a6b1796804fec3e5a899291dd7745a7576ba0db0dee4054432e11072f9e68",
+      "verified": true
+    },
+    {
+      "path": "tests.xml",
+      "bytes": 387,
+      "sha256": "a32831c2b40b5c948656c8d499cdd73e318b20ebec7d56de1071a3354e1cb049",
+      "verified": true
+    },
+    {
+      "path": "worker_status.json",
+      "bytes": 5691,
+      "sha256": "f497d5d85df5a6cb9d3a7e3f59da5239e442d0d4628b0345a6881c293cb79e7e",
+      "verified": true
+    }
+  ],
+  "git_tree_issues": [],
+  "tests": {
+    "parent_methods": 1,
+    "successful_call_events": 1,
+    "total_events": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "native_checks": [
+    {
+      "aligned_states": 3598,
+      "name": "complete_inventory",
+      "native_frame_snapshots": 3612,
+      "passed": true,
+      "summary_rows": 154,
+      "trajectories": 14
+    },
+    {
+      "name": "native_initialization_and_alignment",
+      "passed": true
+    },
+    {
+      "name": "native_final_state_and_logits",
+      "passed": true
+    },
+    {
+      "name": "literal_model_parameters_unchanged",
+      "passed": true
+    },
+    {
+      "name": "runtime_rng_unchanged",
+      "passed": true
+    },
+    {
+      "name": "finite_bounded_census",
+      "passed": true
+    },
+    {
+      "name": "central_difference_matches_declared_affine_rule",
+      "passed": true
+    },
+    {
+      "name": "autograd_matches_declared_affine_rule",
+      "passed": true
+    },
+    {
+      "name": "identity_is_neutral",
+      "passed": true
+    },
+    {
+      "name": "decay_and_forced_contraction",
+      "passed": true
+    },
+    {
+      "name": "expansion_and_hidden_drift",
+      "passed": true
+    },
+    {
+      "name": "oscillation_and_nonnormal_transient",
+      "passed": true
+    }
+  ],
+  "independent_audit": {
+    "checks": 3532,
+    "issues": [],
+    "raw_arrays": 214,
+    "maximum_absolute_errors": {
+      "FD versus literal Jacobian": 9.313227966600834e-11,
+      "analytic residual at saved states": 0,
+      "autograd versus literal Jacobian": 0,
+      "independent affine orbit": 1.4551915228366852e-11,
+      "independent native FD endpoints": 0,
+      "metric.eigenvalues_imag": 0,
+      "metric.eigenvalues_real": 0,
+      "metric.fixedpoint_residual_l2": 0,
+      "metric.operator_2_norm": 0,
+      "metric.pair_gain": 0,
+      "metric.pair_l2": 0,
+      "metric.singular_values": 0,
+      "metric.spectral_radius": 0,
+      "metric.state_l2": 0,
+      "metric.step_difference_l2": 0,
+      "metric.token2_nll": 2.220446049250313e-16,
+      "observed step versus previous residual": 1.4551915228366852e-11,
+      "readout from verified native table": 0,
+      "saved FD formula": 0
+    }
+  },
+  "root_json_recount": {
+    "schema_version": 1,
+    "item": 15,
+    "status": "verified",
+    "checks": 1667,
+    "numeric_comparisons": 826,
+    "absolute_tolerance": 1e-10,
+    "relative_tolerance": 1e-12,
+    "maximum_absolute_difference": 1.1368683772161603e-13,
+    "maximum_scaled_difference": 4.496220489757795e-16,
+    "issues": [],
+    "scope": "Independent elementary JSON scalar recount; binary NPZ not read by this function"
+  },
+  "root_producer_auditor_comparison": {
+    "schema_version": 1,
+    "item": 15,
+    "status": "verified",
+    "checks": 1668,
+    "numerics": 1155,
+    "maxAbs": 2.220446049250313e-16,
+    "issues": []
+  },
+  "resource_observations": [
+    {
+      "at_utc": "2026-10-07T16:08:49.562081+00:00",
+      "available_ram_gib": 14.560707092285156,
+      "phase": "admission"
+    },
+    {
+      "at_utc": "2026-10-07T16:08:55.189409+00:00",
+      "available_ram_gib": 14.486316680908203,
+      "phase": "admission"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:00.121711+00:00",
+      "available_ram_gib": 14.489585876464844,
+      "phase": "admission"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:07.163074+00:00",
+      "available_ram_gib": 14.504661560058594,
+      "phase": "before_final_archive"
+    },
+    {
+      "at_utc": "2026-10-07T16:08:55.191590+00:00",
+      "available_ram_gib": 14.486331939697266,
+      "phase": "contract_tests"
+    },
+    {
+      "at_utc": "2026-10-07T16:08:56.192609+00:00",
+      "available_ram_gib": 14.444183349609375,
+      "phase": "contract_tests"
+    },
+    {
+      "at_utc": "2026-10-07T16:08:57.192972+00:00",
+      "available_ram_gib": 14.43704605102539,
+      "phase": "contract_tests"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:00.124579+00:00",
+      "available_ram_gib": 14.489585876464844,
+      "phase": "probe"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:01.125576+00:00",
+      "available_ram_gib": 14.406108856201172,
+      "phase": "probe"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:02.125932+00:00",
+      "available_ram_gib": 14.32938003540039,
+      "phase": "probe"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:03.126259+00:00",
+      "available_ram_gib": 14.333061218261719,
+      "phase": "probe"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:03.213300+00:00",
+      "available_ram_gib": 14.333061218261719,
+      "phase": "item15_native_finish"
+    },
+    {
+      "at_utc": "2026-10-07T16:09:03.820655+00:00",
+      "available_ram_gib": 14.416175842285156,
+      "phase": "stability_probe_finish"
+    },
+    {
+      "phase": "audit_admission",
+      "available_ram_gib": 14.417499542236328
+    },
+    {
+      "phase": "audit_finish",
+      "available_ram_gib": 14.40738296508789
+    }
+  ],
+  "minimum_retained_available_ram_gib": 14.32938003540039,
+  "supervisor_samples": 7,
+  "worker_seconds_before_final_archive": 17.604074884,
+  "numerical_runner_released": true,
+  "peer_evidence_review": {
+    "limited_provenance_checks": 20,
+    "texts_rehashed_including_manifest": 12,
+    "status": "No discrepancies; did not deserialize NPZ or rerun models."
+  },
+  "report": {
+    "path": "docs/research/15_census_results.md",
+    "sha256": "bbcb531e01dddd9fa2b710a3b8805b8c065f9e07de0453c9a0e485120076cb10",
+    "bytes": 11012
+  },
+  "scope": "Only the constructed component completed; item15 remains open for separately frozen retrospective learned-checkpoint diagnostics. No external replication or learned stability guarantee."
+}

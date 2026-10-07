@@ -1,0 +1,1851 @@
+{
+  "schema_version": 1,
+  "item": 15,
+  "status": "verified",
+  "checks": 1667,
+  "numeric_comparisons": 826,
+  "absolute_tolerance": 1e-10,
+  "relative_tolerance": 1e-12,
+  "maximum_absolute_difference": 1.1368683772161603e-13,
+  "maximum_scaled_difference": 4.496220489757795e-16,
+  "issues": [],
+  "scope": "Independent elementary JSON scalar recount; binary NPZ not read by this function",
+  "expected_rows": [
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 1,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 1,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "identity",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 1,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0.5,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 0.5,
+      "step_difference_l2": 0.5,
+      "fixedpoint_residual_l2": 0.25,
+      "pair_gain": 0.5,
+      "prediction": 2,
+      "token2_nll": 0.7943767694176431
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 0.25,
+      "step_difference_l2": 0.25,
+      "fixedpoint_residual_l2": 0.125,
+      "pair_gain": 0.25,
+      "prediction": 2,
+      "token2_nll": 0.939069931111919
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 0.125,
+      "step_difference_l2": 0.125,
+      "fixedpoint_residual_l2": 0.0625,
+      "pair_gain": 0.125,
+      "prediction": 2,
+      "token2_nll": 1.0170383945266495
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 0.0625,
+      "step_difference_l2": 0.0625,
+      "fixedpoint_residual_l2": 0.03125,
+      "pair_gain": 0.0625,
+      "prediction": 2,
+      "token2_nll": 1.057382615789905
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 0.00390625,
+      "step_difference_l2": 0.00390625,
+      "fixedpoint_residual_l2": 0.001953125,
+      "pair_gain": 0.00390625,
+      "prediction": 2,
+      "token2_nll": 1.0960098181575901
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 0.0000152587890625,
+      "step_difference_l2": 0.0000152587890625,
+      "fixedpoint_residual_l2": 0.00000762939453125,
+      "pair_gain": 0.0000152587890625,
+      "prediction": 2,
+      "token2_nll": 1.0986021161679382
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 2.3283064365386963e-10,
+      "step_difference_l2": 2.3283064365386963e-10,
+      "fixedpoint_residual_l2": 1.1641532182693481e-10,
+      "pair_gain": 2.3283064365386963e-10,
+      "prediction": 2,
+      "token2_nll": 1.0986122885128893
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 5.421010862427522e-20,
+      "step_difference_l2": 5.421010862427522e-20,
+      "fixedpoint_residual_l2": 2.710505431213761e-20,
+      "pair_gain": 5.421010862427522e-20,
+      "prediction": 2,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 2.938735877055719e-39,
+      "step_difference_l2": 2.938735877055719e-39,
+      "fixedpoint_residual_l2": 1.4693679385278594e-39,
+      "pair_gain": 2.938735877055719e-39,
+      "prediction": 2,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "decay",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 8.636168555094445e-78,
+      "step_difference_l2": 8.636168555094445e-78,
+      "fixedpoint_residual_l2": 4.3180842775472223e-78,
+      "pair_gain": 8.636168555094445e-78,
+      "prediction": 2,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0.5009756106837937,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 0.5009756106837937,
+      "step_difference_l2": 0.5009756106837937,
+      "fixedpoint_residual_l2": 0.25048780534189685,
+      "pair_gain": 0.5,
+      "prediction": 2,
+      "token2_nll": 0.7943767694176431
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 0.25048780534189685,
+      "step_difference_l2": 0.25048780534189685,
+      "fixedpoint_residual_l2": 0.12524390267094843,
+      "pair_gain": 0.25,
+      "prediction": 2,
+      "token2_nll": 0.939069931111919
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 0.12524390267094843,
+      "step_difference_l2": 0.12524390267094843,
+      "fixedpoint_residual_l2": 0.06262195133547421,
+      "pair_gain": 0.125,
+      "prediction": 2,
+      "token2_nll": 1.0170383945266495
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 0.06262195133547421,
+      "step_difference_l2": 0.06262195133547421,
+      "fixedpoint_residual_l2": 0.031310975667737106,
+      "pair_gain": 0.0625,
+      "prediction": 2,
+      "token2_nll": 1.057382615789905
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 0.003913871958467138,
+      "step_difference_l2": 0.003913871958467138,
+      "fixedpoint_residual_l2": 0.001956935979233569,
+      "pair_gain": 0.00390625,
+      "prediction": 2,
+      "token2_nll": 1.0960098181575901
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 0.00001528856233776226,
+      "step_difference_l2": 0.00001528856233776226,
+      "fixedpoint_residual_l2": 0.00000764428116888113,
+      "pair_gain": 0.0000152587890625,
+      "prediction": 2,
+      "token2_nll": 1.0986021161679382
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 2.332849477807962e-10,
+      "step_difference_l2": 2.332849477807962e-10,
+      "fixedpoint_residual_l2": 1.166424738903981e-10,
+      "pair_gain": 2.3283064365386963e-10,
+      "prediction": 2,
+      "token2_nll": 1.0986122885128893
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 5.431588454656214e-20,
+      "step_difference_l2": 5.431588454656214e-20,
+      "fixedpoint_residual_l2": 2.715794227328107e-20,
+      "pair_gain": 5.421010862427522e-20,
+      "prediction": 2,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 2.9444700012927256e-39,
+      "step_difference_l2": 2.9444700012927256e-39,
+      "fixedpoint_residual_l2": 1.4722350006463628e-39,
+      "pair_gain": 2.938735877055719e-39,
+      "prediction": 2,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "decay",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 8.653019631713231e-78,
+      "step_difference_l2": 8.653019631713231e-78,
+      "fixedpoint_residual_l2": 4.326509815856616e-78,
+      "pair_gain": 8.636168555094445e-78,
+      "prediction": 2,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 1,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0.050000000000000044,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 1.05,
+      "step_difference_l2": 0.050000000000000044,
+      "fixedpoint_residual_l2": 0.05249999999999999,
+      "pair_gain": 1.05,
+      "prediction": 2,
+      "token2_nll": 0.5305550120404414
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 1.1025,
+      "step_difference_l2": 0.05249999999999999,
+      "fixedpoint_residual_l2": 0.05512500000000009,
+      "pair_gain": 1.1025,
+      "prediction": 2,
+      "token2_nll": 0.5092723524780778
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 1.1576250000000001,
+      "step_difference_l2": 0.05512500000000009,
+      "fixedpoint_residual_l2": 0.057881250000000106,
+      "pair_gain": 1.1576250000000001,
+      "prediction": 2,
+      "token2_nll": 0.4876367423365989
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 1.2155062500000002,
+      "step_difference_l2": 0.057881250000000106,
+      "fixedpoint_residual_l2": 0.06077531250000012,
+      "pair_gain": 1.2155062500000002,
+      "prediction": 2,
+      "token2_nll": 0.46569416039019174
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 1.477455443789063,
+      "step_difference_l2": 0.07035502113281256,
+      "fixedpoint_residual_l2": 0.0738727721894532,
+      "pair_gain": 1.477455443789063,
+      "prediction": 2,
+      "token2_nll": 0.37599189252281096
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 2.1828745883819374,
+      "step_difference_l2": 0.10394640897056862,
+      "fixedpoint_residual_l2": 0.10914372941909711,
+      "pair_gain": 2.1828745883819374,
+      "prediction": 2,
+      "token2_nll": 0.20329514753933814
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 4.764941468603612,
+      "step_difference_l2": 0.2269019746954104,
+      "fixedpoint_residual_l2": 0.23824707343018048,
+      "pair_gain": 4.764941468603612,
+      "prediction": 2,
+      "token2_nll": 0.01690310836583821
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 22.704667199218342,
+      "step_difference_l2": 1.0811746285342068,
+      "fixedpoint_residual_l2": 1.1352333599609175,
+      "pair_gain": 22.704667199218342,
+      "prediction": 2,
+      "token2_nll": 2.7575177555959797e-10
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 515.5019126272614,
+      "step_difference_l2": 24.547710125107756,
+      "fixedpoint_residual_l2": 25.775095631363115,
+      "pair_gain": 515.5019126272614,
+      "prediction": 2,
+      "token2_nll": 2.6387237809413313e-224
+    },
+    {
+      "case": "expansion",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 265742.2219223645,
+      "step_difference_l2": 12654.391520112607,
+      "fixedpoint_residual_l2": 13287.111096118228,
+      "pair_gain": 265742.2219223645,
+      "prediction": 2,
+      "token2_nll": 0
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0.05009756106837941,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 1.0520487824359668,
+      "step_difference_l2": 0.05009756106837941,
+      "fixedpoint_residual_l2": 0.05260243912179833,
+      "pair_gain": 1.05,
+      "prediction": 2,
+      "token2_nll": 0.5305550120404414
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 1.104651221557765,
+      "step_difference_l2": 0.05260243912179833,
+      "fixedpoint_residual_l2": 0.05523256107788834,
+      "pair_gain": 1.1025,
+      "prediction": 2,
+      "token2_nll": 0.5092723524780778
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 1.1598837826356534,
+      "step_difference_l2": 0.05523256107788834,
+      "fixedpoint_residual_l2": 0.057994189131782774,
+      "pair_gain": 1.1576250000000001,
+      "prediction": 2,
+      "token2_nll": 0.4876367423365989
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 1.2178779717674362,
+      "step_difference_l2": 0.057994189131782774,
+      "fixedpoint_residual_l2": 0.06089389858837192,
+      "pair_gain": 1.2155062500000002,
+      "prediction": 2,
+      "token2_nll": 0.46569416039019174
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 1.4803382864206425,
+      "step_difference_l2": 0.07049229935336396,
+      "fixedpoint_residual_l2": 0.07401691432103218,
+      "pair_gain": 1.477455443789063,
+      "prediction": 2,
+      "token2_nll": 0.37599189252281096
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 2.1871338599215515,
+      "step_difference_l2": 0.10414923142483597,
+      "fixedpoint_residual_l2": 0.10935669299607782,
+      "pair_gain": 2.1828745883819374,
+      "prediction": 2,
+      "token2_nll": 0.20329514753933814
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 4.7742389242124545,
+      "step_difference_l2": 0.22734471067678386,
+      "fixedpoint_residual_l2": 0.23871194621062258,
+      "pair_gain": 4.764941468603612,
+      "prediction": 2,
+      "token2_nll": 0.01690310836583821
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 22.748969031001415,
+      "step_difference_l2": 1.0832842395714959,
+      "fixedpoint_residual_l2": 1.1374484515500711,
+      "pair_gain": 22.704667199218342,
+      "prediction": 2,
+      "token2_nll": 2.7575177555959797e-10
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 516.5077709742118,
+      "step_difference_l2": 24.595608141629207,
+      "fixedpoint_residual_l2": 25.825388548710638,
+      "pair_gain": 515.5019126272614,
+      "prediction": 2,
+      "token2_nll": 2.6387237809413313e-224
+    },
+    {
+      "case": "expansion",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 266260.74382404954,
+      "step_difference_l2": 12679.083039240468,
+      "fixedpoint_residual_l2": 13313.03719120248,
+      "pair_gain": 265742.2219223645,
+      "prediction": 2,
+      "token2_nll": 0
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 1,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 1.4142135623730951,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 2.23606797749979,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 3.1622776601683795,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 4.123105625617661,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 8.06225774829855,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 16.0312195418814,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 32.01562118716424,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 64.00781202322104,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 128.00390619039717,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 256.0019531175495,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 1.459077191241094,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 2.292140102611531,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 3.221630992214968,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 4.18376699279489,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 8.124278814147136,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 16.093598300255913,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 32.07809075132122,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 64.0703044026638,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 128.06640428406664,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "hidden_drift",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 256.06445264083413,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 1,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 1,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 1,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 1,
+      "step_difference_l2": 1.4142135623730951,
+      "fixedpoint_residual_l2": 1.4142135623730951,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 1.057382615789905
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 1.057382615789905
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "two_cycle",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": 1.3258252147247767,
+      "fixedpoint_residual_l2": 1.3258252147247767,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 1,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0.09999999999999998,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 0.9,
+      "step_difference_l2": 0.09999999999999998,
+      "fixedpoint_residual_l2": 0.08999999999999997,
+      "pair_gain": 4.099999999999998,
+      "prediction": 2,
+      "token2_nll": 0.5950597735424267
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 0.81,
+      "step_difference_l2": 0.08999999999999997,
+      "fixedpoint_residual_l2": 0.08099999999999996,
+      "pair_gain": 7.245419242528343,
+      "prediction": 2,
+      "token2_nll": 0.6364266233181535
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 0.7290000000000001,
+      "step_difference_l2": 0.08099999999999996,
+      "fixedpoint_residual_l2": 0.07289999999999996,
+      "pair_gain": 9.747299164383946,
+      "prediction": 2,
+      "token2_nll": 0.6753814403175651
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 0.6561000000000001,
+      "step_difference_l2": 0.07289999999999996,
+      "fixedpoint_residual_l2": 0.06560999999999995,
+      "pair_gain": 11.682438239083481,
+      "prediction": 2,
+      "token2_nll": 0.7118423227281068
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 0.43046721000000016,
+      "step_difference_l2": 0.04782968999999998,
+      "fixedpoint_residual_l2": 0.04304672100000001,
+      "pair_gain": 15.311553048521429,
+      "prediction": 2,
+      "token2_nll": 0.8330875777557595
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 0.1853020188851842,
+      "step_difference_l2": 0.02058911320946491,
+      "fixedpoint_residual_l2": 0.01853020188851842,
+      "pair_gain": 13.178335294470568,
+      "prediction": 2,
+      "token2_nll": 0.9789675054575901
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 0.03433683820292516,
+      "step_difference_l2": 0.0038152042447694642,
+      "fixedpoint_residual_l2": 0.0034336838202925143,
+      "pair_gain": 4.883582147259758,
+      "prediction": 2,
+      "token2_nll": 1.0758525607105824
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 0.0011790184577738598,
+      "step_difference_l2": 0.00013100205086376228,
+      "fixedpoint_residual_l2": 0.00011790184577738596,
+      "pair_gain": 0.33536732269821046,
+      "prediction": 2,
+      "token2_nll": 1.097826430836991
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 0.0000013900845237714525,
+      "step_difference_l2": 1.5445383597460574e-7,
+      "fixedpoint_residual_l2": 1.3900845237714525e-7,
+      "pair_gain": 0.0007908048619430138,
+      "prediction": 2,
+      "token2_nll": 1.0986113619453086
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 1.932334983228903e-12,
+      "step_difference_l2": 2.147038870254335e-13,
+      "fixedpoint_residual_l2": 1.9323349832289027e-13,
+      "pair_gain": 2.1985686523109257e-9,
+      "prediction": 2,
+      "token2_nll": 1.0986122886668215
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 1.0019512213675874,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 0.15013015186830383,
+      "pair_gain": 1,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 1.1513748575073193,
+      "step_difference_l2": 0.15013015186830383,
+      "fixedpoint_residual_l2": 0.11014372712506156,
+      "pair_gain": 4.099999999999998,
+      "prediction": 2,
+      "token2_nll": 0.49058630685474003
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 1.261016609971891,
+      "step_difference_l2": 0.11014372712506156,
+      "fixedpoint_residual_l2": 0.07666732619734434,
+      "pair_gain": 7.245419242528343,
+      "prediction": 2,
+      "token2_nll": 0.4493595318000395
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 1.3372764080048112,
+      "step_difference_l2": 0.07666732619734434,
+      "fixedpoint_residual_l2": 0.04881310699046412,
+      "pair_gain": 9.747299164383946,
+      "prediction": 2,
+      "token2_nll": 0.4223402310404336
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 1.3857068674647834,
+      "step_difference_l2": 0.04881310699046412,
+      "fixedpoint_residual_l2": 0.025842413788008153,
+      "pair_gain": 11.682438239083481,
+      "prediction": 2,
+      "token2_nll": 0.4058633870023206
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 1.3873219098224792,
+      "step_difference_l2": 0.021466800074121845,
+      "fixedpoint_residual_l2": 0.03120549376848255,
+      "pair_gain": 15.311553048521429,
+      "prediction": 2,
+      "token2_nll": 0.4052096237815089
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 1.0089330198096265,
+      "step_difference_l2": 0.05491937973846504,
+      "fixedpoint_residual_l2": 0.05457344017577928,
+      "pair_gain": 13.178335294470568,
+      "prediction": 2,
+      "token2_nll": 0.5476959291249367
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 0.33955995948343315,
+      "step_difference_l2": 0.027131389153045093,
+      "fixedpoint_residual_l2": 0.02537201584642083,
+      "pair_gain": 4.883582147259758,
+      "prediction": 2,
+      "token2_nll": 0.885492026451702
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 0.022139469228380733,
+      "step_difference_l2": 0.0020960488052204815,
+      "fixedpoint_residual_l2": 0.0019191941918144876,
+      "pair_gain": 0.33536732269821046,
+      "prediction": 2,
+      "token2_nll": 1.0839073186796864
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 0.000050815386306349445,
+      "step_difference_l2": 0.000005217116279418048,
+      "fixedpoint_residual_l2": 0.0000047340180449084315,
+      "pair_gain": 0.0007908048619430138,
+      "prediction": 2,
+      "token2_nll": 1.0985784120803315
+    },
+    {
+      "case": "nonnormal_transient",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 1.3934287501667068e-10,
+      "step_difference_l2": 1.4886142215319494e-11,
+      "fixedpoint_residual_l2": 1.3451203943822452e-11,
+      "pair_gain": 2.1985686523109257e-9,
+      "prediction": 2,
+      "token2_nll": 1.0986122885752145
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 0,
+      "state_l2": 0,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 1,
+      "pair_gain": 1,
+      "prediction": 1,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 1,
+      "state_l2": 1,
+      "step_difference_l2": 1,
+      "fixedpoint_residual_l2": 0.5,
+      "pair_gain": 0.5,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 2,
+      "state_l2": 1.5,
+      "step_difference_l2": 0.5,
+      "fixedpoint_residual_l2": 0.25,
+      "pair_gain": 0.25,
+      "prediction": 2,
+      "token2_nll": 0.3689811354013154
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 3,
+      "state_l2": 1.75,
+      "step_difference_l2": 0.25,
+      "fixedpoint_residual_l2": 0.125,
+      "pair_gain": 0.125,
+      "prediction": 2,
+      "token2_nll": 0.29828656075835686
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 4,
+      "state_l2": 1.875,
+      "step_difference_l2": 0.125,
+      "fixedpoint_residual_l2": 0.0625,
+      "pair_gain": 0.0625,
+      "prediction": 2,
+      "token2_nll": 0.2675124771038018
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 8,
+      "state_l2": 1.9921875,
+      "step_difference_l2": 0.0078125,
+      "fixedpoint_residual_l2": 0.00390625,
+      "pair_gain": 0.00390625,
+      "prediction": 2,
+      "token2_nll": 0.24121406135084253
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 16,
+      "state_l2": 1.999969482421875,
+      "step_difference_l2": 0.000030517578125,
+      "fixedpoint_residual_l2": 0.0000152587890625,
+      "pair_gain": 0.0000152587890625,
+      "prediction": 2,
+      "token2_nll": 0.239551266970048
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 32,
+      "state_l2": 1.9999999995343387,
+      "step_difference_l2": 4.656612873077393e-10,
+      "fixedpoint_residual_l2": 2.3283064365386963e-10,
+      "pair_gain": 2.3283064365386963e-10,
+      "prediction": 2,
+      "token2_nll": 0.23954476632107685
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 64,
+      "state_l2": 2,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 5.421010862427522e-20,
+      "prediction": 2,
+      "token2_nll": 0.23954476622188453
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 128,
+      "state_l2": 2,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 2.938735877055719e-39,
+      "prediction": 2,
+      "token2_nll": 0.23954476622188453
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "base",
+      "time": 256,
+      "state_l2": 2,
+      "step_difference_l2": 0,
+      "fixedpoint_residual_l2": 0,
+      "pair_gain": 8.636168555094445e-78,
+      "prediction": 2,
+      "token2_nll": 0.23954476622188453
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 0,
+      "state_l2": 0.0625,
+      "step_difference_l2": null,
+      "fixedpoint_residual_l2": 1.0004881620988826,
+      "pair_gain": 1,
+      "prediction": 1,
+      "token2_nll": 1.0986122886681096
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 1,
+      "state_l2": 1.0004881620988826,
+      "step_difference_l2": 1.0004881620988826,
+      "fixedpoint_residual_l2": 0.5002440810494413,
+      "pair_gain": 0.5,
+      "prediction": 2,
+      "token2_nll": 0.5514447139320511
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 2,
+      "state_l2": 1.5000813780008737,
+      "step_difference_l2": 0.5002440810494413,
+      "fixedpoint_residual_l2": 0.25012204052472065,
+      "pair_gain": 0.25,
+      "prediction": 2,
+      "token2_nll": 0.3689811354013154
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 3,
+      "state_l2": 1.7500174385291851,
+      "step_difference_l2": 0.25012204052472065,
+      "fixedpoint_residual_l2": 0.12506102026236032,
+      "pair_gain": 0.125,
+      "prediction": 2,
+      "token2_nll": 0.29828656075835686
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 4,
+      "state_l2": 1.8750040690060015,
+      "step_difference_l2": 0.12506102026236032,
+      "fixedpoint_residual_l2": 0.06253051013118016,
+      "pair_gain": 0.0625,
+      "prediction": 2,
+      "token2_nll": 0.2675124771038018
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 8,
+      "state_l2": 1.9921875149595971,
+      "step_difference_l2": 0.00781631376639752,
+      "fixedpoint_residual_l2": 0.00390815688319876,
+      "pair_gain": 0.00390625,
+      "prediction": 2,
+      "token2_nll": 0.24121406135084253
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 16,
+      "state_l2": 1.9999694824221024,
+      "step_difference_l2": 0.00003053247564999031,
+      "fixedpoint_residual_l2": 0.000015266237824995157,
+      "pair_gain": 0.0000152587890625,
+      "prediction": 2,
+      "token2_nll": 0.239551266970048
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 32,
+      "state_l2": 1.9999999995343387,
+      "step_difference_l2": 4.658886054991198e-10,
+      "fixedpoint_residual_l2": 2.329443027495599e-10,
+      "pair_gain": 2.3283064365386963e-10,
+      "prediction": 2,
+      "token2_nll": 0.23954476632107685
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 64,
+      "state_l2": 2,
+      "step_difference_l2": 3.3881317890172014e-21,
+      "fixedpoint_residual_l2": 1.6940658945086007e-21,
+      "pair_gain": 5.421010862427522e-20,
+      "prediction": 2,
+      "token2_nll": 0.23954476622188453
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 128,
+      "state_l2": 2,
+      "step_difference_l2": 1.8367099231598242e-40,
+      "fixedpoint_residual_l2": 9.183549615799121e-41,
+      "pair_gain": 2.938735877055719e-39,
+      "prediction": 2,
+      "token2_nll": 0.23954476622188453
+    },
+    {
+      "case": "forced_contraction",
+      "trajectory": "perturbed",
+      "time": 256,
+      "state_l2": 2,
+      "step_difference_l2": 5.397605346934028e-79,
+      "fixedpoint_residual_l2": 2.698802673467014e-79,
+      "pair_gain": 8.636168555094445e-78,
+      "prediction": 2,
+      "token2_nll": 0.23954476622188453
+    }
+  ],
+  "expected_summaries": [
+    {
+      "case": "identity",
+      "spectral_radius": 1,
+      "operator_2_norm": 1,
+      "peak_pair_gain": 1,
+      "first_peak_pair_time": 0,
+      "final_pair_gain": 1,
+      "maximum_state_l2_by_trajectory": [
+        1,
+        1.0019512213675874
+      ],
+      "final_state_l2_by_trajectory": [
+        1,
+        1.0019512213675874
+      ],
+      "final_residual_l2_by_trajectory": [
+        0,
+        0
+      ]
+    },
+    {
+      "case": "decay",
+      "spectral_radius": 0.5,
+      "operator_2_norm": 0.5,
+      "peak_pair_gain": 1,
+      "first_peak_pair_time": 0,
+      "final_pair_gain": 8.636168555094445e-78,
+      "maximum_state_l2_by_trajectory": [
+        1,
+        1.0019512213675874
+      ],
+      "final_state_l2_by_trajectory": [
+        8.636168555094445e-78,
+        8.653019631713231e-78
+      ],
+      "final_residual_l2_by_trajectory": [
+        4.3180842775472223e-78,
+        4.326509815856616e-78
+      ]
+    },
+    {
+      "case": "expansion",
+      "spectral_radius": 1.05,
+      "operator_2_norm": 1.05,
+      "peak_pair_gain": 265742.2219223645,
+      "first_peak_pair_time": 256,
+      "final_pair_gain": 265742.2219223645,
+      "maximum_state_l2_by_trajectory": [
+        265742.2219223645,
+        266260.74382404954
+      ],
+      "final_state_l2_by_trajectory": [
+        265742.2219223645,
+        266260.74382404954
+      ],
+      "final_residual_l2_by_trajectory": [
+        13287.111096118228,
+        13313.03719120248
+      ]
+    },
+    {
+      "case": "hidden_drift",
+      "spectral_radius": 1,
+      "operator_2_norm": 1,
+      "peak_pair_gain": 1,
+      "first_peak_pair_time": 0,
+      "final_pair_gain": 1,
+      "maximum_state_l2_by_trajectory": [
+        256.0019531175495,
+        256.06445264083413
+      ],
+      "final_state_l2_by_trajectory": [
+        256.0019531175495,
+        256.06445264083413
+      ],
+      "final_residual_l2_by_trajectory": [
+        1,
+        1
+      ]
+    },
+    {
+      "case": "two_cycle",
+      "spectral_radius": 1,
+      "operator_2_norm": 1,
+      "peak_pair_gain": 1,
+      "first_peak_pair_time": 0,
+      "final_pair_gain": 1,
+      "maximum_state_l2_by_trajectory": [
+        1,
+        1.0019512213675874
+      ],
+      "final_state_l2_by_trajectory": [
+        1,
+        1.0019512213675874
+      ],
+      "final_residual_l2_by_trajectory": [
+        1.4142135623730951,
+        1.3258252147247767
+      ]
+    },
+    {
+      "case": "nonnormal_transient",
+      "spectral_radius": 0.9,
+      "operator_2_norm": 4.193171219946131,
+      "peak_pair_gain": 15.50166155966823,
+      "first_peak_pair_time": 9,
+      "final_pair_gain": 2.1985686523109257e-9,
+      "maximum_state_l2_by_trajectory": [
+        1,
+        1.4175651855745044
+      ],
+      "final_state_l2_by_trajectory": [
+        1.932334983228903e-12,
+        1.3934287501667068e-10
+      ],
+      "final_residual_l2_by_trajectory": [
+        1.9323349832289027e-13,
+        1.3451203943822452e-11
+      ]
+    },
+    {
+      "case": "forced_contraction",
+      "spectral_radius": 0.5,
+      "operator_2_norm": 0.5,
+      "peak_pair_gain": 1,
+      "first_peak_pair_time": 0,
+      "final_pair_gain": 8.636168555094445e-78,
+      "maximum_state_l2_by_trajectory": [
+        2,
+        2
+      ],
+      "final_state_l2_by_trajectory": [
+        2,
+        2
+      ],
+      "final_residual_l2_by_trajectory": [
+        0,
+        2.698802673467014e-79
+      ]
+    }
+  ]
+}
