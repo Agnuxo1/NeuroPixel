@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "phase": "preflight",
+  "recorded_at_utc": "2026-10-07T13:17:20+00:00",
+  "source_commit": "cef4e67358ca5c344cd4154a7f641feefeb406ae",
+  "source_tree": "ac4b50bdf1f5df9a0ba03d17e765fb677fe34a19",
+  "plan_sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5",
+  "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+  "run_id": 37626660573,
+  "job_id": 112810057008,
+  "workflow_conclusion": "success",
+  "runner_released": true,
+  "archive_commit": "1b1759775adba1ab0d289ba34b6b306f9ad547c2",
+  "archive_path": "results/research/11_cloud_runs/37626660573-1-preflight",
+  "archive_files_excluding_manifest": 72,
+  "archive_bytes_excluding_manifest": 12153630,
+  "tests": {
+    "parent_methods": 8,
+    "call_reports": 8,
+    "subtests": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "all_four_pilots_completed": true,
+  "scores": [
+    {
+      "run_id": "pilot_neuropixel_lr0001_s69",
+      "family": "neuropixel",
+      "learning_rate": 0.001,
+      "delay": 2,
+      "n": 48,
+      "correct": 40,
+      "accuracy": 0.8333333333333334,
+      "cross_entropy": 322.46397908528644
+    },
+    {
+      "run_id": "pilot_neuropixel_lr0001_s69",
+      "family": "neuropixel",
+      "learning_rate": 0.001,
+      "delay": 3,
+      "n": 48,
+      "correct": 36,
+      "accuracy": 0.75,
+      "cross_entropy": 1911.6683959960938
+    },
+    {
+      "run_id": "pilot_neuropixel_lr0001_s69",
+      "family": "neuropixel",
+      "learning_rate": 0.001,
+      "delay": 4,
+      "n": 48,
+      "correct": 31,
+      "accuracy": 0.6458333333333334,
+      "cross_entropy": 9100.97682733957
+    },
+    {
+      "run_id": "pilot_neuropixel_lr0003_s69",
+      "family": "neuropixel",
+      "learning_rate": 0.003,
+      "delay": 2,
+      "n": 48,
+      "correct": 38,
+      "accuracy": 0.7916666666666666,
+      "cross_entropy": 1793.748441079755
+    },
+    {
+      "run_id": "pilot_neuropixel_lr0003_s69",
+      "family": "neuropixel",
+      "learning_rate": 0.003,
+      "delay": 3,
+      "n": 48,
+      "correct": 36,
+      "accuracy": 0.75,
+      "cross_entropy": 11152.399279876292
+    },
+    {
+      "run_id": "pilot_neuropixel_lr0003_s69",
+      "family": "neuropixel",
+      "learning_rate": 0.003,
+      "delay": 4,
+      "n": 48,
+      "correct": 33,
+      "accuracy": 0.6875,
+      "cross_entropy": 65938.79563909463
+    },
+    {
+      "run_id": "pilot_gru_lr0001_s69",
+      "family": "gru",
+      "learning_rate": 0.001,
+      "delay": 2,
+      "n": 48,
+      "correct": 48,
+      "accuracy": 1,
+      "cross_entropy": 0.0011122604112102509
+    },
+    {
+      "run_id": "pilot_gru_lr0001_s69",
+      "family": "gru",
+      "learning_rate": 0.001,
+      "delay": 3,
+      "n": 48,
+      "correct": 48,
+      "accuracy": 1,
+      "cross_entropy": 0.0011638468793292286
+    },
+    {
+      "run_id": "pilot_gru_lr0001_s69",
+      "family": "gru",
+      "learning_rate": 0.001,
+      "delay": 4,
+      "n": 48,
+      "correct": 48,
+      "accuracy": 1,
+      "cross_entropy": 0.0012273740820906121
+    },
+    {
+      "run_id": "pilot_gru_lr0003_s69",
+      "family": "gru",
+      "learning_rate": 0.003,
+      "delay": 2,
+      "n": 48,
+      "correct": 48,
+      "accuracy": 1,
+      "cross_entropy": 0.00028641486802320244
+    },
+    {
+      "run_id": "pilot_gru_lr0003_s69",
+      "family": "gru",
+      "learning_rate": 0.003,
+      "delay": 3,
+      "n": 48,
+      "correct": 48,
+      "accuracy": 1,
+      "cross_entropy": 0.0002858566713695876
+    },
+    {
+      "run_id": "pilot_gru_lr0003_s69",
+      "family": "gru",
+      "learning_rate": 0.003,
+      "delay": 4,
+      "n": 48,
+      "correct": 48,
+      "accuracy": 1,
+      "cross_entropy": 0.0002863728627383172
+    }
+  ],
+  "selected_learning_rates": {
+    "neuropixel": 0.003,
+    "gru": 0.003
+  },
+  "selected_near_correct": {
+    "neuropixel": 38,
+    "gru": 48
+  },
+  "near_census_n": 48,
+  "minimum_required_correct": 46,
+  "admission_passed": false,
+  "main_training_started": false,
+  "final_memory_panel_executed": false,
+  "reason_main_not_admitted": "NeuroPixel selected pilot fails prospectively fixed near-delay competence; both NP candidates are below threshold. Do not retune, extend budget or substitute another pilot.",
+  "worker_seconds_before_final_archive": 92.89447380000001,
+  "controller_seconds": 78.78172873700001,
+  "training_loop_seconds_total": 77.71602654400002,
+  "supervision_samples": 85,
+  "minimum_sampled_available_ram_gib": 14.306175231933594,
+  "rehashed_texts": [
+    {
+      "path": "worker_status.json",
+      "bytes": 6004,
+      "sha256": "ae5a8677d03a0aa765097d3b0cce0cc306a41f3c47190b58318583b08973d3ad"
+    },
+    {
+      "path": "preflight_summary.json",
+      "bytes": 4224,
+      "sha256": "1690d609f2d4b67faf88ddbad1e8f898c8884b13a44da494a8e5335bd3f5d660"
+    },
+    {
+      "path": "selection.json",
+      "bytes": 1786,
+      "sha256": "1992635f8801ea22ed0474fefa406e937b76872a061ce44a2fd34dae1b61703b"
+    },
+    {
+      "path": "test_collection.json",
+      "bytes": 971,
+      "sha256": "bb5aab2606ff566956ab53e5626c29193adcffd478cb2490cf681d229b15223d"
+    },
+    {
+      "path": "test_results.json",
+      "bytes": 5533,
+      "sha256": "aaea602dfeb0fe01b4b5487e12de22a5a2cfc9465b98c3622683fd6cab97f444"
+    },
+    {
+      "path": "tests.xml",
+      "bytes": 1417,
+      "sha256": "e627eebe4edab5c7e369547925bd05a39c39dce8ddce588b88bffd7580eaf5c7"
+    },
+    {
+      "path": "study_preflight_status.json",
+      "bytes": 6056,
+      "sha256": "6ca905a5bee64defa35a5bb9dbca62fa1dcf0dac32ab40a757f5d9bf0263cc09"
+    },
+    {
+      "path": "preflight_resource_monitor.json",
+      "bytes": 11403,
+      "sha256": "46e3d10130a842d5fa5d0c8260ee4e023593623c225558c539bf3a794ab0c6b1"
+    },
+    {
+      "path": "contract_tests_resource_monitor.json",
+      "bytes": 749,
+      "sha256": "1bf6edeeb2af8973cc46084a5ffed651413991a1d3ca8494f4220bd53dad5977"
+    }
+  ],
+  "root_json_checks": [
+    {
+      "check": "four_completed_fixed_budget_pilots",
+      "passed": true
+    },
+    {
+      "check": "eight_contract_methods_passed",
+      "passed": true
+    },
+    {
+      "check": "exact_eight_successful_call_reports",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_neuropixel_lr0001_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_neuropixel_lr0001_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_neuropixel_lr0001_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_neuropixel_lr0001_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_neuropixel_lr0001_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_neuropixel_lr0001_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_neuropixel_lr0003_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_neuropixel_lr0003_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_neuropixel_lr0003_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_neuropixel_lr0003_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_neuropixel_lr0003_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_neuropixel_lr0003_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_gru_lr0001_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_gru_lr0001_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_gru_lr0001_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_gru_lr0001_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_gru_lr0001_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_gru_lr0001_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_gru_lr0003_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_gru_lr0003_s69:d2",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_gru_lr0003_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_gru_lr0003_s69:d3",
+      "passed": true
+    },
+    {
+      "check": "known_census_score:pilot_gru_lr0003_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "subgroup_counts:pilot_gru_lr0003_s69:d4",
+      "passed": true
+    },
+    {
+      "check": "rate_selection:neuropixel",
+      "passed": true
+    },
+    {
+      "check": "rate_selection:gru",
+      "passed": true
+    },
+    {
+      "check": "negative_scientific_admission",
+      "passed": true
+    },
+    {
+      "check": "no_main_or_final_artifacts",
+      "passed": true
+    },
+    {
+      "check": "RAM_monitor:0",
+      "passed": true
+    },
+    {
+      "check": "RAM_monitor:1",
+      "passed": true
+    },
+    {
+      "check": "completed_source_clean_worker",
+      "passed": true
+    }
+  ],
+  "root_run_json_hashes": [
+    {
+      "bytes": 18139,
+      "path": "study/runs/pilot_neuropixel_lr0001_s69/run.json",
+      "sha256": "69072d00c146d2c681c97973b75bbd125913923360f74ab7c893f3cfbf4f1d5f"
+    },
+    {
+      "bytes": 18253,
+      "path": "study/runs/pilot_neuropixel_lr0003_s69/run.json",
+      "sha256": "acb13ab55159944b841b84a40d4ad80d60af094235379f955ce364776a5e83db"
+    },
+    {
+      "bytes": 17893,
+      "path": "study/runs/pilot_gru_lr0001_s69/run.json",
+      "sha256": "aa55ab63a6248089261d293dbbbceb29750984e564138c4aba2f84be971f30a7"
+    },
+    {
+      "bytes": 17920,
+      "path": "study/runs/pilot_gru_lr0003_s69/run.json",
+      "sha256": "3c1b3bc6b7f2ddc6dd5d25cf33e0feac0e3bac6cc76d143a3f0bd27c022e0a49"
+    }
+  ],
+  "independent_saved_array_audit_status": "pending",
+  "limitations": [
+    "One pilot seed; no primary n5 estimate or main final interference/horizon results exist.",
+    "High finite NeuroPixel CE requires saved-logit recount; no dynamical cause is isolated here.",
+    "GRU control shows this task is learnable under one pilot recipe; it is not external replication.",
+    "A completed negative preflight is a scientific outcome, not an operational failure."
+  ]
+}
