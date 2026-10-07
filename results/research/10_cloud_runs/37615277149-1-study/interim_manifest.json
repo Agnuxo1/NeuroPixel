@@ -1,7 +1,7 @@
 {
   "attempt_status": "running",
   "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
-  "created_at_utc": "2026-10-07T11:43:26.505988+00:00",
+  "created_at_utc": "2026-10-07T11:48:26.872434+00:00",
   "files": {
     "contract_tests.log": {
       "bytes": 73,
@@ -79,9 +79,17 @@
       "bytes": 14213,
       "sha256": "59426692dd4862fb0cbac51a46c29fe03e4fbbd6cb7d7f1b021390bc4ff87e4d"
     },
+    "study/runs/train_neuropixel_s61/checkpoint.pt": {
+      "bytes": 121336,
+      "sha256": "603325796f326cd05ff75c84ed8c0e17820be9404891d30d86a135bb7e88461b"
+    },
     "study/runs/train_neuropixel_s61/config.json": {
       "bytes": 65300,
       "sha256": "e5ee439d09b5e67e87e44189d07077e8ba085c073d9515f16d74dee92a129d63"
+    },
+    "study/runs/train_neuropixel_s61/run.json": {
+      "bytes": 178520,
+      "sha256": "b35ad110d8567be075ee962bf0881cbcf5cd4cb9784d622f8898a6109ea5df3a"
     },
     "study/runs/train_neuropixel_s61/started.json": {
       "bytes": 70726,
@@ -92,8 +100,32 @@
       "sha256": "2b2731e2bba55e2be172ffc6ce75cd0f4e0be590b7b0110eca1376655fb833e2"
     },
     "study/runs/train_neuropixel_s61/train_log.jsonl": {
-      "bytes": 941,
-      "sha256": "ddaac2ea17599b99587d041dabaa1391d81f1b5bc277c87722188a5521692036"
+      "bytes": 5004,
+      "sha256": "3fdd5b8a3cd464df76bb4bf2c19f586bf17ee5139f849c862f9f81f69c721efd"
+    },
+    "study/runs/train_neuropixel_s61/train_probe_predictions.npz": {
+      "bytes": 105523,
+      "sha256": "561d152af1ea059a7e8fc98eff01940cb43b17d80a40078a81fd91b65e9c8108"
+    },
+    "study/runs/train_neuropixel_s61/validation_predictions.npz": {
+      "bytes": 14236,
+      "sha256": "89dd5a307a950db417422bb294b29957e134af8f4833107a592a1d6ce44d2846"
+    },
+    "study/runs/train_neuropixel_s62/config.json": {
+      "bytes": 65300,
+      "sha256": "21553a0268877c14044663793861cc8084ced58f2ace802f48bbd165bf5af9a0"
+    },
+    "study/runs/train_neuropixel_s62/started.json": {
+      "bytes": 70726,
+      "sha256": "55da749f4dda8c11aff6593b9196ca8e4161d74325b7ce03a6270013cea3da96"
+    },
+    "study/runs/train_neuropixel_s62/train_indices.npy": {
+      "bytes": 1048704,
+      "sha256": "3b3b32bdef7121e5c631640acdf9be3ec772c4a672c5c79e79438ff8adde5ea4"
+    },
+    "study/runs/train_neuropixel_s62/train_log.jsonl": {
+      "bytes": 2038,
+      "sha256": "e5963c953605d229edee8dd1dcedcbbce799698f0670775b71fe24620f5021c7"
     },
     "study/runs/train_relative_transformer_s60/checkpoint.pt": {
       "bytes": 127929,
@@ -127,6 +159,38 @@
       "bytes": 14102,
       "sha256": "f526fd9d2da372cc9589827dd0c4d19edf2cf19e2b53f07732e466c3a1b2e264"
     },
+    "study/runs/train_relative_transformer_s61/checkpoint.pt": {
+      "bytes": 127929,
+      "sha256": "007f70543fb92276c92b16874fc4580563c8470be1a190659d1411ce6161f6ca"
+    },
+    "study/runs/train_relative_transformer_s61/config.json": {
+      "bytes": 65279,
+      "sha256": "d60ad27781fc4590aab62557173e1f94f3ce430552b486d5ad8f71a152593cb9"
+    },
+    "study/runs/train_relative_transformer_s61/run.json": {
+      "bytes": 181288,
+      "sha256": "d93faef79f39dd543b1cb16390bafb3014b45ae21207a1ef9f132ef85d52bd36"
+    },
+    "study/runs/train_relative_transformer_s61/started.json": {
+      "bytes": 70711,
+      "sha256": "2923732869c37549347a7f42a59d9ed6a854583ecd9ba5a8ca9ac0b96876ef4a"
+    },
+    "study/runs/train_relative_transformer_s61/train_indices.npy": {
+      "bytes": 1048704,
+      "sha256": "2b2731e2bba55e2be172ffc6ce75cd0f4e0be590b7b0110eca1376655fb833e2"
+    },
+    "study/runs/train_relative_transformer_s61/train_log.jsonl": {
+      "bytes": 5127,
+      "sha256": "edd363db287d9500ee87afb35135887a3d7962df0dde10567021bad598d23560"
+    },
+    "study/runs/train_relative_transformer_s61/train_probe_predictions.npz": {
+      "bytes": 104285,
+      "sha256": "7aae9e72a1f3d558299f2dde447db52d4df699a71895157b334d7780a140e2fa"
+    },
+    "study/runs/train_relative_transformer_s61/validation_predictions.npz": {
+      "bytes": 14095,
+      "sha256": "0cbc7c24add041251f47217b2a0bf70bcc9632e3701f758b3223d438b658b496"
+    },
     "study_train_environment.json": {
       "bytes": 294,
       "sha256": "68c75697c9471ab545d73aca43f76fb93f6508d07421168b32140c079132c7b9"
@@ -144,8 +208,8 @@
       "sha256": "b91d70440598f63bff9a8fd217d4ee45b4a93368f0b4ef600c8b53c815a6fbfb"
     },
     "train.log": {
-      "bytes": 16512,
-      "sha256": "3a9cc3c3597277db5295093f84d028c7d00f0ba97f8c684b2147c129e552494d"
+      "bytes": 33243,
+      "sha256": "7c6e3c0d3be9a7430627f9407a2cf2a2a85f303d363ea593d54a0af5d3e3b2af"
     },
     "train_data_identity.json": {
       "bytes": 1123,
@@ -156,8 +220,8 @@
       "sha256": "9d43a16f04303470d504a7d0a9c7745d80a174cb3f63c3e99b2c17415d0298d6"
     },
     "train_resource_monitor.json": {
-      "bytes": 32654,
-      "sha256": "39db53a5ca36e7e57a9dfdc2f7556b74db4b88dfeb533ae561f9a945544174f6"
+      "bytes": 81173,
+      "sha256": "2ed084c076f0d8fb75a1ff852c0fa82f232a60978c72dacff5c1a52d07d7422e"
     },
     "train_started.json": {
       "bytes": 3363,
