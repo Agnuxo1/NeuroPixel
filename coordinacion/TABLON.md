@@ -269,3 +269,8 @@ The weak item-9 competence and unresolved optimization/representation causes rem
 ## 2026-10-07T10:44:50+00:00 — SCI-010 acquisition frozen
 
 Freeze12 bound source/config/test documents for raw bAbI4 acquisition and24 invented-input contract methods. Static worker/gate/context and download-provenance/summary-order defects were corrected prospectively with drafts retained. No execution success or dataset access is claimed at freeze. Acquire the exact original English1k TRAIN member from two declared endpoints and preserve both outcomes. Item9 and H1 remain closed.
+
+
+## 2026-10-07T11:01:48+00:00 — SCI-010 acquisition completed and independently recounted
+
+Public CPU run37609533224/job112753126084 completed successfully; final raw commit19c8c40ab50141ba128623e7bbbc04cfb2460f31 contains34 files/23,778,454 bytes excluding its manifest. All24 contract methods and58 subtests passed. Root independently rehashed17 fetched text/JSON files and completed3,176 raw-TRAIN/parser/grouping/encoding/control checks with0 issues. Original-author endpoint404 is retained; the documented HTTPS mirror supplies the exact TRAIN member. No original-host byte comparison or external custody is claimed. TRAIN1000 records/919 unique inputs/752 connected groups; split895/105; geometry4x8/vocabulary18. No TEST parsing or neural execution occurred. The acquisition runner is released; local executor remains unavailable. Item10 continues with a prospective six-run neural preflight and exact fixture/source/runtime review; items11–30 remain pending. H1 is unchanged.

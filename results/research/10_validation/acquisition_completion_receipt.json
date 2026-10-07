@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "phase": "acquisition",
+  "reviewed_at_utc": "2026-10-07T11:00:21+00:00",
+  "status": "verified_for_train_only_neural_preflight_preparation",
+  "source_commit": "99ecaeefdd00dffd3dae444a781ad009c19dff5d",
+  "plan_sha256": "87260de70352c99906e51745cd284c4ad2a8ff069013b78e1bd062e0b6a602c8",
+  "run_id": 37609533224,
+  "job_id": 112753126084,
+  "archive_commit": "19c8c40ab50141ba128623e7bbbc04cfb2460f31",
+  "archive_path": "results/research/10_cloud_runs/37609533224-1-acquisition",
+  "archive_files": 34,
+  "archive_bytes_excluding_manifest": 23778454,
+  "worker_status": "completed",
+  "worker_seconds_before_final_archive": 12.401776782000013,
+  "stages": [
+    {
+      "name": "contract_tests",
+      "status": "completed",
+      "return_code": 0,
+      "wall_seconds_including_shutdown": 1.0025930990000234
+    },
+    {
+      "name": "acquire",
+      "status": "completed",
+      "return_code": 0,
+      "wall_seconds_including_shutdown": 1.5025041719999876
+    }
+  ],
+  "test_methods": 24,
+  "passed_methods": 24,
+  "junit_header_tests": 82,
+  "passed_call_reports": 82,
+  "subtests": 58,
+  "skipped": 0,
+  "failed": 0,
+  "junit_suite_header": "<testsuite name=\"pytest\" errors=\"0\" failures=\"0\" skipped=\"0\" tests=\"82\" time=\"0.172\" timestamp=\"2026-10-07T10:46:04.090053+00:00\" hostname=\"runnervmmprz5\">",
+  "resource_samples": 3,
+  "minimum_stage_sampled_available_ram_gib": 14.427669525146484,
+  "worker_admission_ram_gib": 14.304248809814453,
+  "runner_released": true,
+  "source_bindings_before_after_verified": true,
+  "provider_decoded_actions_log": {
+    "bytes": 30070,
+    "sha256": "94a8da1625e1e2b9d63a47f2305cae911807d1b80e35f0b1cd8ac8ccf1c5ff4c",
+    "scope": "Complete tool-decoded text re-encoded as UTF-8; not a claim of HTTP log-byte identity."
+  },
+  "root_fetched_file_checks": [
+    {
+      "path": "worker_status.json",
+      "bytes": 4722,
+      "sha256": "63633c19e4ef199869fa62f5d62e07f2668e06a9d915792accb52a95e8fb7b10",
+      "expected": {
+        "bytes": 4722,
+        "sha256": "63633c19e4ef199869fa62f5d62e07f2668e06a9d915792accb52a95e8fb7b10"
+      },
+      "verified": true
+    },
+    {
+      "path": "test_results.json",
+      "bytes": 27285,
+      "sha256": "f7642c0110235736fd6a00719c7cc7df6541d6bc4105dce6c77b62205333ac52",
+      "expected": {
+        "bytes": 27285,
+        "sha256": "f7642c0110235736fd6a00719c7cc7df6541d6bc4105dce6c77b62205333ac52"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/train_audit_summary.json",
+      "bytes": 25613,
+      "sha256": "4dd1fe116b584c65c45c349fad237e10e8a2c346cd24ba08e95daf3ecbc87979",
+      "expected": {
+        "bytes": 25613,
+        "sha256": "4dd1fe116b584c65c45c349fad237e10e8a2c346cd24ba08e95daf3ecbc87979"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/selected_source.json",
+      "bytes": 36560,
+      "sha256": "7f1c06e8dd251326ef309c89bfa218b008ff19eb1cebf11901e201735283aa2f",
+      "expected": {
+        "bytes": 36560,
+        "sha256": "7f1c06e8dd251326ef309c89bfa218b008ff19eb1cebf11901e201735283aa2f"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/acquisition_receipt.json",
+      "bytes": 43190,
+      "sha256": "64862b87c3b4b8859aa3f1801fdce6c7b609ba3ca1bce97be79db012b5e29e08",
+      "expected": {
+        "bytes": 43190,
+        "sha256": "64862b87c3b4b8859aa3f1801fdce6c7b609ba3ca1bce97be79db012b5e29e08"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/encoder.json",
+      "bytes": 1272,
+      "sha256": "7e574c20521d057bd214c20514e74246b3210c2a36eae80190bfdbe84490309d",
+      "expected": {
+        "bytes": 1272,
+        "sha256": "7e574c20521d057bd214c20514e74246b3210c2a36eae80190bfdbe84490309d"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/selected_qa4_train.txt",
+      "bytes": 117470,
+      "sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+      "expected": {
+        "bytes": 117470,
+        "sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/source_comparison.json",
+      "bytes": 135,
+      "sha256": "b57d0c0a7dc3092e8a869d8ee24cbd01dda463469b826dc4df949db9f6b1fd4d",
+      "expected": {
+        "bytes": 135,
+        "sha256": "b57d0c0a7dc3092e8a869d8ee24cbd01dda463469b826dc4df949db9f6b1fd4d"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/official_train_records.json",
+      "bytes": 1157969,
+      "sha256": "67ed1e34fe8ad9447ca0f0d5b402db61c3576403bbe119443067177ca021b12a",
+      "expected": {
+        "bytes": 1157969,
+        "sha256": "67ed1e34fe8ad9447ca0f0d5b402db61c3576403bbe119443067177ca021b12a"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/encoded_official_train.json",
+      "bytes": 823624,
+      "sha256": "7ed6979e680630296276a82068c1ae16fd9264d9d2d4c79085c5a1575a656fa1",
+      "expected": {
+        "bytes": 823624,
+        "sha256": "7ed6979e680630296276a82068c1ae16fd9264d9d2d4c79085c5a1575a656fa1"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/development_split.json",
+      "bytes": 593248,
+      "sha256": "1f1a6c3fd2c03cd8a65dc1b32f7dc5365e763eb1d57db365da63f729164b579a",
+      "expected": {
+        "bytes": 593248,
+        "sha256": "1f1a6c3fd2c03cd8a65dc1b32f7dc5365e763eb1d57db365da63f729164b579a"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/control_predictions.json",
+      "bytes": 478993,
+      "sha256": "55de0c6e645656b6f5df9c332eae45d388969541b2e44ca45bf1d8eb4e42ad72",
+      "expected": {
+        "bytes": 478993,
+        "sha256": "55de0c6e645656b6f5df9c332eae45d388969541b2e44ca45bf1d8eb4e42ad72"
+      },
+      "verified": true
+    },
+    {
+      "path": "data/shortcut_models.json",
+      "bytes": 146611,
+      "sha256": "5e0d06aa3b0c8be5d852c5fed27f7368d9aed553f29016f2f5db7b8848a027f2",
+      "expected": {
+        "bytes": 146611,
+        "sha256": "5e0d06aa3b0c8be5d852c5fed27f7368d9aed553f29016f2f5db7b8848a027f2"
+      },
+      "verified": true
+    },
+    {
+      "path": "contract_tests_resource_monitor.json",
+      "bytes": 317,
+      "sha256": "628e72e4a9557af66ef8fe43352699c7dc8d11cc36797ba661a790db7a17f38e",
+      "expected": {
+        "bytes": 317,
+        "sha256": "628e72e4a9557af66ef8fe43352699c7dc8d11cc36797ba661a790db7a17f38e"
+      },
+      "verified": true
+    },
+    {
+      "path": "acquire_resource_monitor.json",
+      "bytes": 445,
+      "sha256": "8a434b8aadd7b52d503342b783dc70a39ed4f2453b5e020ad508c5170fee3d54",
+      "expected": {
+        "bytes": 445,
+        "sha256": "8a434b8aadd7b52d503342b783dc70a39ed4f2453b5e020ad508c5170fee3d54"
+      },
+      "verified": true
+    },
+    {
+      "path": "tests.xml",
+      "bytes": 3750,
+      "sha256": "c5067141ec9caf98b3d0207e7bb282cfef26e4ca6b6f6e91becb421fb4dabde8",
+      "expected": {
+        "bytes": 3750,
+        "sha256": "c5067141ec9caf98b3d0207e7bb282cfef26e4ca6b6f6e91becb421fb4dabde8"
+      },
+      "verified": true
+    },
+    {
+      "path": "contract_tests.log",
+      "bytes": 102,
+      "sha256": "2ae0603541bfa777c7b51dea90e15fc483d081f89eee72a65005adb0116c7909",
+      "expected": {
+        "bytes": 102,
+        "sha256": "2ae0603541bfa777c7b51dea90e15fc483d081f89eee72a65005adb0116c7909"
+      },
+      "verified": true
+    }
+  ],
+  "independent_train_recount": {
+    "schema_version": 1,
+    "item": 10,
+    "scope": "Independent root JavaScript recount of saved official TRAIN bytes; no model, TEST, new RNG or symbolic input replacement.",
+    "source_commit": "99ecaeefdd00dffd3dae444a781ad009c19dff5d",
+    "archive_commit": "19c8c40ab50141ba128623e7bbbc04cfb2460f31",
+    "raw_train_sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+    "checks": 3176,
+    "issues": [],
+    "records": 1000,
+    "episodes": 1000,
+    "unique_raw_inputs": 919,
+    "connected_groups": 752,
+    "train": 895,
+    "validation": 105,
+    "geometry": [
+      4,
+      8
+    ],
+    "vocabulary_size": 18,
+    "control_metrics": {
+      "official_train_all": {
+        "majority": {
+          "n": 1000,
+          "correct": 180,
+          "accuracy": 0.18
+        },
+        "exact_memory": {
+          "n": 1000,
+          "correct": 914,
+          "accuracy": 0.914
+        },
+        "question_only": {
+          "n": 1000,
+          "correct": 307,
+          "accuracy": 0.307
+        },
+        "bow_memory": {
+          "n": 1000,
+          "correct": 774,
+          "accuracy": 0.774
+        },
+        "bow_naive_bayes": {
+          "n": 1000,
+          "correct": 174,
+          "accuracy": 0.174
+        },
+        "fact_answer_frequency": {
+          "n": 1000,
+          "correct": 345,
+          "accuracy": 0.345
+        },
+        "fact_answer_frequency_excluding_query": {
+          "n": 1000,
+          "correct": 642,
+          "accuracy": 0.642
+        },
+        "symbolic_raw": {
+          "n": 1000,
+          "correct": 1000,
+          "accuracy": 1
+        }
+      },
+      "optimization_train": {
+        "majority": {
+          "n": 895,
+          "correct": 161,
+          "accuracy": 0.17988826815642459
+        },
+        "exact_memory": {
+          "n": 895,
+          "correct": 895,
+          "accuracy": 1
+        },
+        "question_only": {
+          "n": 895,
+          "correct": 287,
+          "accuracy": 0.3206703910614525
+        },
+        "bow_memory": {
+          "n": 895,
+          "correct": 730,
+          "accuracy": 0.8156424581005587
+        },
+        "bow_naive_bayes": {
+          "n": 895,
+          "correct": 159,
+          "accuracy": 0.1776536312849162
+        },
+        "fact_answer_frequency": {
+          "n": 895,
+          "correct": 313,
+          "accuracy": 0.34972067039106147
+        },
+        "fact_answer_frequency_excluding_query": {
+          "n": 895,
+          "correct": 578,
+          "accuracy": 0.6458100558659218
+        },
+        "symbolic_raw": {
+          "n": 895,
+          "correct": 895,
+          "accuracy": 1
+        }
+      },
+      "validation": {
+        "majority": {
+          "n": 105,
+          "correct": 19,
+          "accuracy": 0.18095238095238095
+        },
+        "exact_memory": {
+          "n": 105,
+          "correct": 19,
+          "accuracy": 0.18095238095238095
+        },
+        "question_only": {
+          "n": 105,
+          "correct": 20,
+          "accuracy": 0.19047619047619047
+        },
+        "bow_memory": {
+          "n": 105,
+          "correct": 44,
+          "accuracy": 0.41904761904761906
+        },
+        "bow_naive_bayes": {
+          "n": 105,
+          "correct": 15,
+          "accuracy": 0.14285714285714285
+        },
+        "fact_answer_frequency": {
+          "n": 105,
+          "correct": 32,
+          "accuracy": 0.3047619047619048
+        },
+        "fact_answer_frequency_excluding_query": {
+          "n": 105,
+          "correct": 64,
+          "accuracy": 0.6095238095238096
+        },
+        "symbolic_raw": {
+          "n": 105,
+          "correct": 105,
+          "accuracy": 1
+        }
+      }
+    },
+    "limits": [
+      "Binary source ZIP and compressed upstream archive are not independently unpacked by this JavaScript check.",
+      "Only official TRAIN has been parsed.",
+      "The naive Bayes prediction comparison uses independent JavaScript summation; it checks selected labels, not byte equality of intermediate scores."
+    ]
+  },
+  "external_source_limit": "Original-author endpoint returned HTTP 404; selected documented HTTPS mirror cannot be byte-compared to that unavailable source.",
+  "test_payload_extracted_or_scored": false,
+  "neural_training_run": false,
+  "limits": [
+    "Root has independently rehashed seventeen fetched text/JSON files, not unpacked source.zip or compressed archive.",
+    "Three child RAM samples are stage observations, not continuous hardware telemetry or process peak memory.",
+    "The internal archive and independent code review do not provide external custody or replication."
+  ]
+}

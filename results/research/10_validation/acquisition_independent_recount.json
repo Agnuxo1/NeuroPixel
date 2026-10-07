@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "item": 10,
+  "scope": "Independent root JavaScript recount of saved official TRAIN bytes; no model, TEST, new RNG or symbolic input replacement.",
+  "source_commit": "99ecaeefdd00dffd3dae444a781ad009c19dff5d",
+  "archive_commit": "19c8c40ab50141ba128623e7bbbc04cfb2460f31",
+  "raw_train_sha256": "c9370502d85fa382f32d1fea2111e817f81ae9e3e79eb2924a1a5392a90417fa",
+  "checks": 3176,
+  "issues": [],
+  "records": 1000,
+  "episodes": 1000,
+  "unique_raw_inputs": 919,
+  "connected_groups": 752,
+  "train": 895,
+  "validation": 105,
+  "geometry": [
+    4,
+    8
+  ],
+  "vocabulary_size": 18,
+  "control_metrics": {
+    "official_train_all": {
+      "majority": {
+        "n": 1000,
+        "correct": 180,
+        "accuracy": 0.18
+      },
+      "exact_memory": {
+        "n": 1000,
+        "correct": 914,
+        "accuracy": 0.914
+      },
+      "question_only": {
+        "n": 1000,
+        "correct": 307,
+        "accuracy": 0.307
+      },
+      "bow_memory": {
+        "n": 1000,
+        "correct": 774,
+        "accuracy": 0.774
+      },
+      "bow_naive_bayes": {
+        "n": 1000,
+        "correct": 174,
+        "accuracy": 0.174
+      },
+      "fact_answer_frequency": {
+        "n": 1000,
+        "correct": 345,
+        "accuracy": 0.345
+      },
+      "fact_answer_frequency_excluding_query": {
+        "n": 1000,
+        "correct": 642,
+        "accuracy": 0.642
+      },
+      "symbolic_raw": {
+        "n": 1000,
+        "correct": 1000,
+        "accuracy": 1
+      }
+    },
+    "optimization_train": {
+      "majority": {
+        "n": 895,
+        "correct": 161,
+        "accuracy": 0.17988826815642459
+      },
+      "exact_memory": {
+        "n": 895,
+        "correct": 895,
+        "accuracy": 1
+      },
+      "question_only": {
+        "n": 895,
+        "correct": 287,
+        "accuracy": 0.3206703910614525
+      },
+      "bow_memory": {
+        "n": 895,
+        "correct": 730,
+        "accuracy": 0.8156424581005587
+      },
+      "bow_naive_bayes": {
+        "n": 895,
+        "correct": 159,
+        "accuracy": 0.1776536312849162
+      },
+      "fact_answer_frequency": {
+        "n": 895,
+        "correct": 313,
+        "accuracy": 0.34972067039106147
+      },
+      "fact_answer_frequency_excluding_query": {
+        "n": 895,
+        "correct": 578,
+        "accuracy": 0.6458100558659218
+      },
+      "symbolic_raw": {
+        "n": 895,
+        "correct": 895,
+        "accuracy": 1
+      }
+    },
+    "validation": {
+      "majority": {
+        "n": 105,
+        "correct": 19,
+        "accuracy": 0.18095238095238095
+      },
+      "exact_memory": {
+        "n": 105,
+        "correct": 19,
+        "accuracy": 0.18095238095238095
+      },
+      "question_only": {
+        "n": 105,
+        "correct": 20,
+        "accuracy": 0.19047619047619047
+      },
+      "bow_memory": {
+        "n": 105,
+        "correct": 44,
+        "accuracy": 0.41904761904761906
+      },
+      "bow_naive_bayes": {
+        "n": 105,
+        "correct": 15,
+        "accuracy": 0.14285714285714285
+      },
+      "fact_answer_frequency": {
+        "n": 105,
+        "correct": 32,
+        "accuracy": 0.3047619047619048
+      },
+      "fact_answer_frequency_excluding_query": {
+        "n": 105,
+        "correct": 64,
+        "accuracy": 0.6095238095238096
+      },
+      "symbolic_raw": {
+        "n": 105,
+        "correct": 105,
+        "accuracy": 1
+      }
+    }
+  },
+  "limits": [
+    "Binary source ZIP and compressed upstream archive are not independently unpacked by this JavaScript check.",
+    "Only official TRAIN has been parsed.",
+    "The naive Bayes prediction comparison uses independent JavaScript summation; it checks selected labels, not byte equality of intermediate scores."
+  ]
+}

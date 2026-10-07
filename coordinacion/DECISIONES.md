@@ -104,3 +104,8 @@ The weak item-9 competence and unresolved optimization/representation causes rem
 ## 2026-10-07T10:44:50+00:00 — SCI-010 external task and acquisition decision
 
 Choose original English1k bAbI4 raw single-answer QA. External authorship does not establish real-world or outside-bAbI-generator generalization. Fit vocabulary, geometry and shortcuts only on optimization-TRAIN after fixed input-defined grouped splitting (salt neuropixel-item10-dev-v1, nominalDEV0.1). Keep gold/support fields outside model inputs. Declare ordered/unordered memory, question-only, naive-Bayes, fact-frequency and unlearned grammar controls before acquisition. Shared public compressed TEST does not establish blind custody; final scoring requires a later frozen scientific inventory.
+
+
+## 2026-10-07T11:01:48+00:00 — SCI-010 acquisition completed and independently recounted
+
+Public CPU run37609533224/job112753126084 completed successfully; final raw commit19c8c40ab50141ba128623e7bbbc04cfb2460f31 contains34 files/23,778,454 bytes excluding its manifest. All24 contract methods and58 subtests passed. Root independently rehashed17 fetched text/JSON files and completed3,176 raw-TRAIN/parser/grouping/encoding/control checks with0 issues. Original-author endpoint404 is retained; the documented HTTPS mirror supplies the exact TRAIN member. No original-host byte comparison or external custody is claimed. TRAIN1000 records/919 unique inputs/752 connected groups; split895/105; geometry4x8/vocabulary18. No TEST parsing or neural execution occurred. The acquisition runner is released; local executor remains unavailable. Item10 continues with a prospective six-run neural preflight and exact fixture/source/runtime review; items11–30 remain pending. H1 is unchanged.
