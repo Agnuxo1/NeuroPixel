@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "status": "verified_for_bounded_execution",
+  "source_parent": "3058665ffcaf8a0c4c1d91313cf598d42fabee1a",
+  "execution_occurred": false,
+  "root_checks": {
+    "native_tiny_fixture_not_training": true,
+    "twelve_contract_methods": true,
+    "worker_keeps_stdout": true,
+    "workflow_public_guard": true,
+    "task_binding_present": true,
+    "root_js_syntax": true
+  },
+  "reviewers": [
+    {
+      "agent": "architecture_audit",
+      "scope": "Native and battery source audit, candidate fixes/tests; literal worker/input/workflow namespace derivation; orchestrator paths/status/deadlines; producer/auditor CLI.",
+      "result": "No blocking discrepancy found for the declared CPU probe; actual execution still required."
+    },
+    {
+      "agent": "scientific_prior_art",
+      "scope": "Primary sources, native source/contracts/census/isomorphism, secondary count and audit mathematics.",
+      "result": "Optional-Torch method default corrected; ordinal split keys and constructed/untrained scope clarified; auditor NLL centering correction accepted and root readback verified."
+    },
+    {
+      "agent": "evidence_tests",
+      "scope": "Historical source and aggregate provenance; exact item9 condition mapping/input manifest; independent producer and auditor code.",
+      "result": "Historical new-panel gold constant. Other-event swap verified as gold-preserving existing-irrelevant-content perturbation. Twelve pinned input identities delivered."
+    }
+  ],
+  "historical_inputs": {
+    "original_source": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+    "archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+    "selected_files": 12,
+    "selected_bytes": 23928770,
+    "manifest_blob": "a274ba99ce41bec2bceeadb8880bc65b79fd4df7",
+    "manifest_sha256": "49cda016746d6f020e22da2e10e09f8706b1f17f15491baf438d6952484f78e6",
+    "old_verified_projection": {
+      "commit": "2b8203f15ec5f6fe190876c80bf29232034603ce",
+      "blob": "52cdc2dd0d5c732c7a9eef373347cfb1c091696b",
+      "bytes": 715535,
+      "sha256": "97d5e1c348343e7a08856d46a5bd67baa5858cdfd27e70e155988cbb869fee89"
+    }
+  },
+  "critical_limits": [
+    "Legacy functions execute under the current core, not the full historical source.",
+    "Historical newword callers reconstruct without explicit grounding; grounding bug is not attributed to their scores.",
+    "Projection keys use old category indices and new sentinels, not literal canvas vocabulary IDs.",
+    "New-token presence counterexample does not identify the actual historical model's rule.",
+    "Gradient row selection is not optimizer-state preservation or a storage/compute reduction.",
+    "Root JavaScript recount does not independently rerun Torch inference.",
+    "No new hypothesis, training, checkpoint load, confidence interval, external replication or later-item work."
+  ],
+  "reviewed_at_utc": "2026-10-07T14:55:04+00:00",
+  "root_canonical_objects_correction": {
+    "schema_version": 1,
+    "item": 13,
+    "stage": "static_review_before_first_numerical_execution",
+    "reviewer": "root",
+    "issue": "The independent JavaScript auditor initially compared JSON objects using insertion-order JSON.stringify. The result writer sorts object keys, so equal count records could be rejected only because of key order.",
+    "correction": "Recursively canonicalize object keys for structural comparisons while preserving array order.",
+    "preserved_preimage": "results/research/13_validation/root_recount_before_canonical_objects.js",
+    "old_blob": "79e841635c4be5c717f562b27303b1dc477d737a",
+    "new_blob": "2a7579b5e340b9dc31c56afcb57b7ec246aba34d",
+    "old_sha256": "aa95f3af5222b1590d251c1cbe917ed4634e9f0c623177cde155a58b2550d0f3",
+    "new_sha256": "876fac0eaf475552d4ff3d36f71057412576d93eb47ff7ea11045a09801907ce",
+    "verification": "Read ops9.save: it uses sort_keys=True. Revised root auditor passed JavaScript syntax construction. No saved result had yet been passed to either version.",
+    "source_program_execution_claim": false
+  },
+  "centered_auditor_correction": {
+    "schema_version": 1,
+    "item": 13,
+    "stage": "static_review_before_first_numerical_execution",
+    "reviewer": "scientific_prior_art",
+    "old_blob": "711937649bd67fb1937e8b6d8a5160f4ad83498b",
+    "new_blob": "2e7e28c923a63a6fa473d2f9b494d186e54ab146",
+    "old_sha256": "28e33b3c84fbd6c4afc9a19b01bb959d1123fc0c37b0f2afb56d39dca45e0e64",
+    "new_sha256": "f1343f06b06e89e67f1f67f93ed12da4e15673c42bf3547c419972adfc1d2bc1",
+    "issue": "Uncentered logaddexp.reduce(logits) minus target can lose the normalizer contribution under an extreme common logit offset.",
+    "correction": "Center float64 rows by their maxima before the independent logaddexp reduction and target subtraction.",
+    "observed_failure_in_archived_data": false,
+    "numerical_execution_occurred": false,
+    "verification": "Root exact textual comparison established one added centering line. Inputs, selected conditions, formulas, tolerances and output schema unchanged.",
+    "preserved_preimage": "results/research/13_validation/distractor_auditor_before_centering.py"
+  },
+  "final_protocol_note": "Protocol changed only typography/spacing after its prior review; scientific recipe and limits unchanged.",
+  "final_program_blobs": {
+    "native": "ffca6a11f169eea4019972b96532821115a1801f",
+    "secondary": "413c186aa7e2a1cc446428ea5729cee112cf8cee",
+    "secondary_audit": "2e7e28c923a63a6fa473d2f9b494d186e54ab146",
+    "root_js": "2a7579b5e340b9dc31c56afcb57b7ec246aba34d"
+  }
+}

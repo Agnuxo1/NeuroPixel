@@ -22,7 +22,6 @@ import torch.nn.functional as F
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from neuropixel.model import NeuroPixel, TinyTransformer  # noqa: E402
-from neuropixel.phase3 import expand_vocab  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
 from neuropixel.task import NOUNS, RoleTask, Vocab  # noqa: E402
 from scripts.eval_roles import load  # noqa: E402
@@ -73,34 +72,51 @@ def t1_damage():
 
 # ----------------------------------------------------------------- T2 palabra nueva
 def expand(model, new: int):
-    """Delegate to the native expansion policy while preserving model configuration.
-
-    This explicitly replaces the former reconstruction-by-defaults path. It
-    preserves the model's own device, dtype, mode and grounding; it does not
-    preserve that older battery routine's initializer or RNG draw sequence.
-    Optimizer-state and row-freezing limitations are those of expand_vocab.
-    """
-    return expand_vocab(model, new)
+    """Copia el modelo con 'new' filas nuevas de diccionario; solo esas filas aprenden."""
+    old = model.embed.num_embeddings if isinstance(model, NeuroPixel) else model.tok.num_embeddings
+    V = old + new
+    if isinstance(model, NeuroPixel):
+        m2 = NeuroPixel(V, model.out_pos, steps=model.steps).to(DEV)
+        sd = model.state_dict()
+        w = torch.randn(V, sd["embed.weight"].shape[1], device=DEV) * sd["embed.weight"][1:].std()
+        w[:old] = sd["embed.weight"]
+        sd["embed.weight"] = w
+        m2.load_state_dict(sd)
+        params = [m2.embed.weight]
+    else:
+        h, w_ = int(model.pos.shape[0] ** 0.5), int(model.pos.shape[0] ** 0.5)
+        m2 = TinyTransformer(V, h, w_, (h - 1, w_ - 1)).to(DEV)
+        sd = model.state_dict()
+        for k in ("tok.weight", "head.weight"):
+            w = torch.randn(V, sd[k].shape[1], device=DEV) * sd[k].std()
+            w[:old] = sd[k]
+            sd[k] = w
+        b = torch.zeros(V, device=DEV)
+        b[:old] = sd["head.bias"]
+        b[old:] = sd["head.bias"].mean()
+        sd["head.bias"] = b
+        m2.load_state_dict(sd)
+        params = [m2.tok.weight, m2.head.weight, m2.head.bias]
+    for p in m2.parameters():
+        p.requires_grad_(False)
+    for p in params:
+        p.requires_grad_(True)
+    rows = torch.zeros(V, 1, device=DEV)
+    rows[old:] = 1
+    for p in params:
+        p.register_hook(lambda g, rows=rows: g * (rows if g.dim() == 2 else rows.squeeze(1)))
+    return m2, params, old
 
 
 def with_new_word(task, n, split, new_id, seed, ask_new=True):
-    """Replace one noun filler and label the resulting visible question.
-
-    ask_new=False retains the original question; it is not a guarantee that
-    the new token is irrelevant. If that question names the replaced role,
-    the correct answer changes to new_id.
-    """
     c, y, m = task.sample(n, split, torch.Generator().manual_seed(seed), meta=True)
     role = torch.where(torch.rand(n, generator=torch.Generator().manual_seed(seed + 1)) < 0.5, 0, 2)
     b = torch.arange(n)
     c[b, m["rows"][b, role], m["cols"][b, role] + 1] = new_id
-    qpos = task.query_pos
     if ask_new:
+        qpos = task.query_pos
         c[b, qpos[0], qpos[1]] = task.role_ids[role]
         y = torch.full((n,), new_id)
-    else:
-        replaced_is_queried = c[:, qpos[0], qpos[1]] == task.role_ids[role]
-        y = torch.where(replaced_is_queried, torch.full_like(y, new_id), y)
     return c.to(DEV), y.to(DEV)
 
 

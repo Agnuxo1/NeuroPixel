@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "stage": "static_review_before_first_numerical_execution",
+  "reviewer": "root",
+  "issue": "The independent JavaScript auditor initially compared JSON objects using insertion-order JSON.stringify. The result writer sorts object keys, so equal count records could be rejected only because of key order.",
+  "correction": "Recursively canonicalize object keys for structural comparisons while preserving array order.",
+  "preserved_preimage": "results/research/13_validation/root_recount_before_canonical_objects.js",
+  "old_blob": "79e841635c4be5c717f562b27303b1dc477d737a",
+  "new_blob": "2a7579b5e340b9dc31c56afcb57b7ec246aba34d",
+  "old_sha256": "aa95f3af5222b1590d251c1cbe917ed4634e9f0c623177cde155a58b2550d0f3",
+  "new_sha256": "876fac0eaf475552d4ff3d36f71057412576d93eb47ff7ea11045a09801907ce",
+  "verification": "Read ops9.save: it uses sort_keys=True. Revised root auditor passed JavaScript syntax construction. No saved result had yet been passed to either version.",
+  "source_program_execution_claim": false
+}

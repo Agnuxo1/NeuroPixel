@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "stage": "static_review_before_first_numerical_execution",
+  "reviewer": "scientific_prior_art",
+  "old_blob": "8cbcd8acc3364193f6566c112ec0cac1726459ce",
+  "new_blob": "d8eb9b43fa2baabd2208df5f4797b901ce5923db",
+  "old_sha256": "870c5c21791efa41327e0248c7d6e4644fb581c0ad440a443b92ed52dbf70291",
+  "new_sha256": "fd03a07df553fc4c8ff1391fa19f68f45117b0d5fe922d8c7d95714b9a7a2189",
+  "issue": "The optional-Torch fallback set torch=None, but a method default evaluated torch.float32 before the skip decorator could apply.",
+  "correction": "Use dtype=None and resolve torch.float32 inside the helper.",
+  "verification": "Root exact textual comparison; eight test methods retained. No numerical execution has yet occurred.",
+  "first_literal_comparison": "Root first expected an equivalent multiline if statement rather than the author's conditional expression and rejected that textual assumption. Readback established identical prefix/suffix and the intended one-line expression; exact comparison then passed. No source ref, workflow or scientific outcome was changed by that check.",
+  "preserved_preimage": "results/research/13_validation/test_vocab_before_optional_dtype_fix.py"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "events": [
+    {
+      "stage": "source review",
+      "event": "Literal correction comparison initially expected multiline if; read actual conditional expression and verified exact correction.",
+      "numerical_run_started": false
+    },
+    {
+      "stage": "plan assembly",
+      "event": "functions V8 has no structuredClone; replaced with JSON serialization clone for a plain JSON plan.",
+      "numerical_run_started": false
+    }
+  ],
+  "scope": "Controller source-assembly events, not numerical scientific failures."
+}

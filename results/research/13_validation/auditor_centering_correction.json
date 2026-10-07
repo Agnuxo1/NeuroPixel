@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "stage": "static_review_before_first_numerical_execution",
+  "reviewer": "scientific_prior_art",
+  "old_blob": "711937649bd67fb1937e8b6d8a5160f4ad83498b",
+  "new_blob": "2e7e28c923a63a6fa473d2f9b494d186e54ab146",
+  "old_sha256": "28e33b3c84fbd6c4afc9a19b01bb959d1123fc0c37b0f2afb56d39dca45e0e64",
+  "new_sha256": "f1343f06b06e89e67f1f67f93ed12da4e15673c42bf3547c419972adfc1d2bc1",
+  "issue": "Uncentered logaddexp.reduce(logits) minus target can lose the normalizer contribution under an extreme common logit offset.",
+  "correction": "Center float64 rows by their maxima before the independent logaddexp reduction and target subtraction.",
+  "observed_failure_in_archived_data": false,
+  "numerical_execution_occurred": false,
+  "verification": "Root exact textual comparison established one added centering line. Inputs, selected conditions, formulas, tolerances and output schema unchanged.",
+  "preserved_preimage": "results/research/13_validation/distractor_auditor_before_centering.py"
+}

@@ -110,62 +110,40 @@ class RoleTaskFar(RoleTask):
 
 # ------------------------------------------------------------------ ampliar diccionario (palabra nueva)
 def expand_vocab(model, new: int = 1):
-    """Return a copied native model, trainable tensors, and first appended ID.
-
-    Existing dictionary/grounding rows and non-vocabulary tensors are preserved.
-    Only appended rows receive gradients through the returned tensors. This is
-    not an optimizer-level freeze: use a fresh optimizer with no weight decay
-    or inherited momentum, as the historical callers do. Existing optimizers
-    still reference the original model and are not migrated.
-
-    This operation supports the native NeuroPixel and TinyTransformer classes;
-    subclasses with extra vocabulary-dependent tables require their own policy.
-    Grounding buffers remain nonpersistent, so state_dict alone still cannot
-    reconstruct a grounded model. Gradient hooks likewise require reapplying
-    this expansion policy when reconstructing a model for further adaptation.
-    """
-    if type(new) is not int or new <= 0:
-        raise ValueError("new must be a positive integer")
-    if type(model) not in (NeuroPixel, TinyTransformer):
-        raise TypeError("expand_vocab supports native NeuroPixel or TinyTransformer")
+    """Copia del modelo con 'new' filas nuevas; devuelve (modelo, parámetros entrenables, id nuevo)."""
     m = copy.deepcopy(model)
+    dev = next(m.parameters()).device
     if isinstance(m, NeuroPixel):
-        old = m.embed.weight.detach()
-        first = old.shape[0]
-        V = first + new
-        emb = nn.Embedding(V, old.shape[1], padding_idx=0).to(device=old.device, dtype=old.dtype)
+        old = m.embed.weight.data
+        V = old.shape[0] + new
+        emb = nn.Embedding(V, old.shape[1], padding_idx=0).to(dev)
         with torch.no_grad():
-            emb.weight[:first] = old
-            # Preserve the historical initialization for ordinary float32 models.
-            emb.weight[first:] = old[1:].std() * torch.randn(
-                new, old.shape[1], device=old.device, dtype=old.dtype)
+            emb.weight[: old.shape[0]] = old
+            # inicialización aleatoria pequeña (la media de filas arranca con pérdida enorme por el diccionario atado)
+            emb.weight[old.shape[0]:] = old[1:].std() * torch.randn(new, old.shape[1], device=dev)
         m.embed = emb
-        m.register_buffer("g_rgb", torch.cat([m.g_rgb, m.g_rgb.new_zeros((new, 3))]), persistent=False)
-        m.register_buffer("g_mask", torch.cat([m.g_mask, m.g_mask.new_zeros((new, 1))]), persistent=False)
+        m.register_buffer("g_rgb", torch.zeros(V, 3, device=dev), persistent=False)
+        m.register_buffer("g_mask", torch.zeros(V, 1, dtype=torch.bool, device=dev), persistent=False)
         train = [m.embed.weight]
     else:
-        old_t, old_h, old_b = m.tok.weight.detach(), m.head.weight.detach(), m.head.bias.detach()
-        first = old_t.shape[0]
-        V = first + new
+        old_t, old_h, old_b = m.tok.weight.data, m.head.weight.data, m.head.bias.data
+        V = old_t.shape[0] + new
         d = old_t.shape[1]
-        m.tok = nn.Embedding(V, d).to(device=old_t.device, dtype=old_t.dtype)
-        m.head = nn.Linear(d, V).to(device=old_h.device, dtype=old_h.dtype)
+        m.tok = nn.Embedding(V, d).to(dev)
+        m.head = nn.Linear(d, V).to(dev)
         with torch.no_grad():
-            m.tok.weight[:first] = old_t
-            m.tok.weight[first:] = old_t.std() * torch.randn(
-                new, d, device=old_t.device, dtype=old_t.dtype)
-            m.head.weight[:first] = old_h
-            m.head.weight[first:] = old_h.std() * torch.randn(
-                new, d, device=old_h.device, dtype=old_h.dtype)
-            m.head.bias[:first] = old_b
-            m.head.bias[first:] = old_b.mean()
+            m.tok.weight[: old_t.shape[0]] = old_t
+            m.tok.weight[old_t.shape[0]:] = old_t.std() * torch.randn(new, d, device=dev)
+            m.head.weight[: old_h.shape[0]] = old_h
+            m.head.weight[old_h.shape[0]:] = old_h.std() * torch.randn(new, d, device=dev)
+            m.head.bias[: old_b.shape[0]] = old_b
+            m.head.bias[old_b.shape[0]:] = old_b.mean()
         train = [m.tok.weight, m.head.weight, m.head.bias]
     for p in m.parameters():
         p.requires_grad_(False)
+    rows = torch.zeros(V, device=dev)
+    rows[V - new:] = 1
     for p in train:
         p.requires_grad_(True)
-        # Boolean row selection follows the actual gradient device after .to().
-        rows = torch.arange(V, device=p.device) >= first
-        p.register_hook(lambda gr, rows=rows: gr * rows.to(device=gr.device).reshape(
-            (-1,) + (1,) * (gr.dim() - 1)))
-    return m, train, first
+        p.register_hook(lambda gr, rows=rows: gr * (rows[:, None] if gr.dim() == 2 else rows))
+    return m, train, V - new
