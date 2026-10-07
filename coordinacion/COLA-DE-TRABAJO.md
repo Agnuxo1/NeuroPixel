@@ -288,3 +288,10 @@ Closed item14 after successful CPU run37644986366/job112873311188, sourceS=844f4
 The controls separate source-dependent rebuilding, passive retention and categorical repair from surviving spatial redundancy. No learned autonomous repair or historical mechanism attribution is established. Historical99.35% remains an input-held endpoint without immediate lesion measurement; README conditions corrected. H1 remains closed/not supported. Source ZIP, logs, histories, pre-execution corrections and independent reviews are retained.
 
 Provider completion and zero active Actions runs verified. Release all SCI-014 numerical/source-review reservations. Lowest retained availableRAM14.09469985961914GiB; numerical/interop/Git1, aggregateceiling4. Items15–30 remain unopened in this closure; item15 may open only in a separate next commit. No paid/GPU/main-merge/outreach/access/billing changes.
+
+
+## 2026-10-07T15:43:57+00:00 — SCI-015 opened after SCI-014 closure
+
+Item14 closured7c2e07473856ccd38591b2389babb235e8e29b5 report/README/progress hashes verified; numerical resources released. Only item15 now active: dynamical stability. Distinguish finite-horizon answer accuracy, bounded states, perturbation sensitivity, equilibria and attraction. Inspect actual update constraints and historical evidence before any new frozen numerical plan. Finite-horizon constructed witnesses are not a proof for all learned weights or all times. HistoricalH1 stays closed/not supported; items16–30 unopened.
+
+Reserve source/review work90 minutes with conservative root integration and independently justified architecture/evidence/primary-source tasks. No active numerical runner. Any later standard public CPU diagnostic requires finite time/state-horizon limits, RAM>=8GiB, aggregateCPU<=4, process supervision and archival reserve. No paid/GPU/main-merge/outreach/access/billing changes. The completed item14 independent operational receipt is appended as provenance without changing its scientific result.

@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "item": 14,
+  "status": "verified",
+  "review_kind": "Independent read-only operational, contract-test and resource review of retained text artifacts and Git object identities",
+  "scientific_source_commit": "844f4dfae1cb8909d4f87c0c8cfd96b965590adf",
+  "final_archive_commit": "10c694cd299a4114bd447528d22b204d89b00b9e",
+  "run": "37644986366",
+  "artifact_root": "results/research/14_cloud_runs/37644986366-1-probe",
+  "plan_sha256": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447",
+  "manifest_sha256": "23e847b571af3a2f9ae175f3ecce44f232613e90b1dd0038519ef88539580582",
+  "source_identity_checks": {
+    "helper_blob": "3dd1b6b7ef0e184edb0125eb98e6bb5afebc3a56",
+    "tests_blob": "5739d7fab2f15213dae50ba075b023f50bf871dd",
+    "plan_blob": "3be053495195a07ffe1d761f961b67c781967be6",
+    "unchanged_in_frozen_tree": true,
+    "before_after_receipts_agree_on_bound_files": 23
+  },
+  "inventory": {
+    "files_excluding_manifest": 21,
+    "bytes_excluding_manifest": 9825102,
+    "manifest_bytes": 3393,
+    "complete_text_files_rehashed_excluding_manifest": 19,
+    "binary_files_not_rehashed_by_this_reviewer": [
+      "source.zip",
+      "native/traces.npz"
+    ]
+  },
+  "tests": {
+    "collected_unique_methods": 5,
+    "successful_nested_subcases": 15,
+    "successful_call_reports": 20,
+    "setup_reports": 5,
+    "teardown_reports": 5,
+    "events": 30,
+    "exitstatus": 0,
+    "skips": 0,
+    "issues": 0,
+    "junit_testcase_elements": 5,
+    "junit_tests_attribute": 20,
+    "call_reports_by_method": {
+      "test_invalid_contracts": 14,
+      "test_native_held_source_equivalence": 1,
+      "test_post_update_boundary_and_snapshot_ownership": 1,
+      "test_recovery_does_not_reseed": 3,
+      "test_source_switch_and_complete_erasure_counterfactual": 1
+    },
+    "interpretation": "The XML aggregate counts parent calls plus successful unittest subcases; it does not denote 20 independent methods."
+  },
+  "execution": {
+    "worker_status": "completed",
+    "stage_status": [
+      {
+        "name": "contract_tests",
+        "status": "completed",
+        "return_code": 0,
+        "seconds_including_shutdown": 1.5021405049999998
+      },
+      {
+        "name": "probe",
+        "status": "completed",
+        "return_code": 0,
+        "seconds_including_shutdown": 2.5023631560000013
+      }
+    ],
+    "component_status": [
+      {
+        "name": "native",
+        "status": "completed",
+        "return_code": 0,
+        "process_seconds": 1.1676107210000026
+      },
+      {
+        "name": "audit",
+        "status": "completed",
+        "return_code": 0,
+        "process_seconds": 0.1650878089999992
+      }
+    ],
+    "worker_seconds_before_final_archive": 14.418820603,
+    "controller_seconds": 1.3380568479999937,
+    "native_internal_seconds": 0.7951436769999987,
+    "audit_internal_seconds": 0.07277849500000855
+  },
+  "runtime": {
+    "at_utc": "2026-10-07T15:35:09.323249+00:00",
+    "packages": {
+      "Pillow": "12.3.0",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    },
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "thread_environment": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "torch_interop_threads": 1,
+    "torch_threads": 1
+  },
+  "resources": {
+    "minimum_available_ram_gib_required": 8,
+    "supervisor_interval_seconds": 1,
+    "supervisor_samples": 5,
+    "supervisor_minimum_sampled_available_ram_gib": 14.146129608154297,
+    "distinct_saved_observations_recounted": 13,
+    "minimum_of_all_recounted_saved_observations": {
+      "where": "native:final",
+      "at_utc": "2026-10-07T15:35:10.172422+00:00",
+      "available_ram_gib": 14.09469985961914,
+      "phase": "item14_native_finish"
+    },
+    "monitor_failures": [
+      null,
+      null
+    ],
+    "limit": "Saved samples and endpoint observations are not a continuous RAM trace or a measurement of peak process memory."
+  },
+  "reported_scientific_checks": {
+    "native_status": "verified",
+    "native_checks": 8,
+    "audit_status": "verified",
+    "audit_checks": 6176,
+    "audit_issues": [],
+    "arrays": 88,
+    "trajectories": 216,
+    "summary_rows": 324,
+    "endpoints": 1944,
+    "native_held_comparisons": 12,
+    "native_held_state_and_logit_error": 0,
+    "optimization_steps": 0,
+    "checkpoints_loaded": 0
+  },
+  "checks": [
+    {
+      "label": "complete nontruncated raw Git tree",
+      "passed": true
+    },
+    {
+      "label": "complete nontruncated source Git tree",
+      "passed": true
+    },
+    {
+      "label": "manifest final/completed/source",
+      "passed": true
+    },
+    {
+      "label": "manifest has21files and9825102bytes",
+      "passed": true
+    },
+    {
+      "label": "19textfilesexactmanifesthashandbytes",
+      "passed": true
+    },
+    {
+      "label": "manifest exact expected hash",
+      "passed": true
+    },
+    {
+      "label": "rawGit22filesinclmanifest",
+      "passed": true
+    },
+    {
+      "label": "manifestbytesmatchGitall21entries",
+      "passed": true
+    },
+    {
+      "label": "sourcehelperandtestoriginalblobs",
+      "passed": true
+    },
+    {
+      "label": "executionplanidenticalfrozenGitblob",
+      "passed": true
+    },
+    {
+      "label": "sourcebeforeafter23bindingscleangates",
+      "passed": true
+    },
+    {
+      "label": "workercompletednoGPUorpaid",
+      "passed": true
+    },
+    {
+      "label": "stageinventory2completedzero",
+      "passed": true
+    },
+    {
+      "label": "stagestatusmatchesworker",
+      "passed": true
+    },
+    {
+      "label": "stageloghashes",
+      "passed": true
+    },
+    {
+      "label": "stagebudgets",
+      "passed": true
+    },
+    {
+      "label": "5uniquecollectedmatchingeventsandplan",
+      "passed": true
+    },
+    {
+      "label": "30events20call5setup5teardown",
+      "passed": true
+    },
+    {
+      "label": "alleventspassednoissuesnoskipexit0",
+      "passed": true
+    },
+    {
+      "label": "callcountsreflect15subcases",
+      "passed": true
+    },
+    {
+      "label": "XML5parentsheader20nofails",
+      "passed": true
+    },
+    {
+      "label": "log15us5dots",
+      "passed": true
+    },
+    {
+      "label": "runtimeexactbothstages",
+      "passed": true
+    },
+    {
+      "label": "5supervisorsamplesfailureNullandminima",
+      "passed": true
+    },
+    {
+      "label": "samplestagewindows",
+      "passed": true
+    },
+    {
+      "label": "controllercompleted2zerocomponents",
+      "passed": true
+    },
+    {
+      "label": "controllerresultandlogbindings",
+      "passed": true
+    },
+    {
+      "label": "native8verifiedchecks",
+      "passed": true
+    },
+    {
+      "label": "auditor6176verified0issues",
+      "passed": true
+    },
+    {
+      "label": "zerooptimizationandcheckpoints",
+      "passed": true
+    },
+    {
+      "label": "auditinputhashlinkage",
+      "passed": true
+    },
+    {
+      "label": "auditarrayendpointinventory",
+      "passed": true
+    },
+    {
+      "label": "chronologystagescomponentsarchive",
+      "passed": true
+    },
+    {
+      "label": "all13savedresourceobservationsabove8",
+      "passed": true
+    }
+  ],
+  "check_count": 34,
+  "issues": [],
+  "reviewer_bookkeeping_correction": {
+    "initial_check_label": "all14savedresourceobservationsabove8",
+    "initial_status": "failed",
+    "expected_count_in_initial_review": 14,
+    "observed_count": 13,
+    "correction": "13 distinct retained observations = 5 supervisor samples+ 2 worker observations+ 2 stage admissions+ 1 controller endpoint+ 1 native endpoint+ 2 auditor endpoints. Every observed value exceeds 8 GiB. Only this reviewer-side expected count was corrected; no source, raw artifact, model or job was changed or rerun.",
+    "initial_failed_checks": [
+      {
+        "label": "all14savedresourceobservationsabove8",
+        "passed": false
+      }
+    ]
+  },
+  "input_text_sha256": {
+    "audit/audit.json": "6324a5c9829c8a012de5d0a9efd23da50e99e36c915bac1222b6b31f02e91275",
+    "audit_component.log": "35d903d3817efea3d53bc902d31072af48de2db242be85a585bce07604077a63",
+    "contract_tests.log": "bc3306f38e847279cb10e65fc23a89c6bcbd146227b0dfa166c52a411ccb6d2b",
+    "contract_tests_environment.json": "84166a7aa5f5139f2edf067a7fd15be90c6685c1df257478182f8b8a317f1540",
+    "contract_tests_resource_monitor.json": "cdaf6da8bf929d25923d03133b20ff69e20f9c05e6cd1e7159c160cb15b31810",
+    "contract_tests_status.json": "a49048bb8e62bb79e989eed7c0d0b20113727c9171e7ca79638be5ab82454977",
+    "execution_plan.json": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447",
+    "native/report.json": "56c143b2035cced57f8eb84ec87cd23aa9f33f270dc96360d8ae5167e189a65a",
+    "native_component.log": "e7c5436ee0e9dfe8db5fb5a6c51e838788766e7a1f743a7e8e37f2f4c67e4693",
+    "probe.log": "7fb5d612aa07bbd9bdd34bf77b12ddec540273db5e6b50573de6e5d2470545a2",
+    "probe_environment.json": "2a51345cf86f02f3800597440ad90c0171dd120220b07867d35575c338154729",
+    "probe_resource_monitor.json": "1001293970179797ab6330b24ec42d8cb1127b244e6ce3ec78a5f5ae67fb2636",
+    "probe_status.json": "71ec25663dcc83af52c713f9bf108b712c68ecb4bdda2090a96ac3ca650ea80f",
+    "repair_probe_status.json": "fb6d8f97dc306bad3c87d3bac46dd925a9b998f1b9531bd5d4d6dc83a6ad5024",
+    "source_before.json": "73f0922de2986c5828a4d46e2aa10dc7c0e373d07c53ed242f875ca86849e0b2",
+    "test_collection.json": "216492236951546e1f8876839dcd03af62bf119b3e3bd595b81ec20acf8ab4d7",
+    "test_results.json": "ca3fb0e770aa0830bf85ff12c90e4c76ff6ba07aefb1aa7d36078a912145e988",
+    "tests.xml": "20788b371f1a60525b91bf7628c872f0fd2c5a6317c8e21e4ee57a8e6192cca2",
+    "worker_status.json": "7ed70050abb4901ec3293a0256eee7e86eecb7ac4156f958ae7c7a7a545594b2"
+  },
+  "limits": [
+    "No Python, model, test, job, RNG or numerical reconstruction was executed by this reviewer.",
+    "The 19 complete retained text artifacts and manifest were hashed; binary NPZ/ZIP contents were not decoded or rehashed in this operational review.",
+    "Source-before/source-after receipts agree on all 23 bound files; this review independently matched the frozen helper, test and plan Git blob identities, without redoing the full-source ZIP audit.",
+    "Scientific array-check totals are read from the verified saved auditor report and cross-linked to producer/manifest hashes, not a fresh independent array reconstruction here.",
+    "Constructed mechanisms establish neither learned semantic competence, reconstruction of completely erased history, long-horizon stability nor external replication. This is review under shared custody."
+  ]
+}
