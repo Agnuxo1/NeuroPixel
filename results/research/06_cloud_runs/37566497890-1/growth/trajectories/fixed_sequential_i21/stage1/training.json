@@ -1,0 +1,117 @@
+{
+  "checkpoint": {
+    "bytes": 122296,
+    "parameter_count": 29824,
+    "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+    "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+    "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+  },
+  "curve": [
+    {
+      "answer_cross_entropy": 1.7237458229064941,
+      "gradient_norm_before_clip": 3.0066139698028564,
+      "objective": 1.7292038202285767,
+      "school_cross_entropy": 0.01819339022040367,
+      "update": 128
+    },
+    {
+      "answer_cross_entropy": 1.4867414236068726,
+      "gradient_norm_before_clip": 1.7834914922714233,
+      "objective": 1.4909476041793823,
+      "school_cross_entropy": 0.014020447619259357,
+      "update": 256
+    },
+    {
+      "answer_cross_entropy": 1.6612019538879395,
+      "gradient_norm_before_clip": 6.0745015144348145,
+      "objective": 1.6652369499206543,
+      "school_cross_entropy": 0.013450106605887413,
+      "update": 384
+    },
+    {
+      "answer_cross_entropy": 1.422574520111084,
+      "gradient_norm_before_clip": 3.8265678882598877,
+      "objective": 1.428942322731018,
+      "school_cross_entropy": 0.02122615836560726,
+      "update": 512
+    }
+  ],
+  "decision": {
+    "action": "create",
+    "parent": 0,
+    "scores_used": [],
+    "target_index": 1,
+    "threshold": null
+  },
+  "diagnostic_dataset": {
+    "bytes": 7807,
+    "n": 512,
+    "path": "datasets/topic1/diagnostic_train.npz",
+    "query_role_counts": {
+      "ACCION": 126,
+      "AGENTE": 144,
+      "LUGAR": 131,
+      "PACIENTE": 111
+    },
+    "role_balance": "natural sampling; no forced role balance",
+    "sampling_seed": 62110,
+    "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+    "split": "train",
+    "targets_retained": false,
+    "topic": 1
+  },
+  "diagnostic_expert_outputs": [
+    {
+      "bytes": 123828,
+      "checkpoint_before_intervention": {
+        "bytes": 122296,
+        "parameter_count": 29824,
+        "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+        "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+        "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+      },
+      "expert_index": 0,
+      "input_dataset": {
+        "bytes": 7807,
+        "n": 512,
+        "path": "datasets/topic1/diagnostic_train.npz",
+        "query_role_counts": {
+          "ACCION": 126,
+          "AGENTE": 144,
+          "LUGAR": 131,
+          "PACIENTE": 111
+        },
+        "role_balance": "natural sampling; no forced role balance",
+        "sampling_seed": 62110,
+        "sha256": "05b6e1ff35ae95764294a20479076e380a535d6c6be1035a24862baa2226c7e4",
+        "split": "train",
+        "targets_retained": false,
+        "topic": 1
+      },
+      "mean_resonance": 0.6908898949623108,
+      "novelty": 0.2977430522441864,
+      "path": "trajectories/fixed_sequential_i21/stage1/diagnostic_expert0.npz",
+      "recount_atol": 1e-06,
+      "recount_rtol": 0.0,
+      "sha256": "f42e1a26ccac2d5f75c4863e682a37e2cc05a85d58a855170e7fb2b1f524a87c"
+    }
+  ],
+  "experts_after_stage": 2,
+  "final_test_accessed": false,
+  "firing_seed": 9101,
+  "optimizer_updates": 512,
+  "post_stage_a_diagnostic": null,
+  "post_stage_a_mean_resonance": null,
+  "raw_novelty": [
+    0.2977430522441864
+  ],
+  "raw_resonance": [
+    0.6908898949623108
+  ],
+  "stage": 1,
+  "tau_after_stage": null,
+  "topic": 1,
+  "train_sample_seed": 9102,
+  "train_stream_sha256": "877d729cec7437b9e2457bb587aadc085f2371d90d5e918612bd92fdc9abcf6d",
+  "training_seconds": 56.36875365600008
+}
