@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-10-07T03:34:12.205842+00:00",
+  "at_utc": "2026-10-07T03:39:13.996545+00:00",
   "claim": "Each listed file was copied and read back; interim files may reflect different completed write times.",
   "files": {
     "core/datasets/split0_train_n512_seed61006.npz": {
@@ -11,8 +11,8 @@
       "sha256": "890cdfd45e1025602883334e03055f16700a52e3a6e14117133975859876d98f"
     },
     "core/events.json": {
-      "bytes": 914,
-      "sha256": "9b5bef9dab8f2902344bc2108653e218b7608b6478717caf36361daabfcd092f"
+      "bytes": 1406,
+      "sha256": "6057aa5cf0170a4bd419d1aae4cf466e5a67ef1057452534d4ca3b69b67fe1bd"
     },
     "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6391,
@@ -33,6 +33,10 @@
     "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024/weights.pt": {
       "bytes": 124981,
       "sha256": "368a5b8fee36a4dd3e2bd4ca8976f8dfb2880a3240860d4bea85c41929e1f9d4"
+    },
+    "core/factorial_tie0_school0p0_reinj0_T16_damage0_s0_i21_u1024/configuration.json": {
+      "bytes": 6391,
+      "sha256": "8a8fceb0e8e4572086bf7944f0dfaea726a9d8f6d6e5571ddf2be29bbf025f99"
     },
     "core/factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024/configuration.json": {
       "bytes": 6390,
@@ -119,16 +123,68 @@
       "sha256": "acc4eaf7f5a01a2e0d15d4a8b42ff8d175f5fddb9f4c434f41d02c42021edc91"
     },
     "core/factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024/progress.json": {
-      "bytes": 6101,
-      "sha256": "d01afc9a828240f81f5d114c86f5a892235739ee2513787837ee4e4b68b84db2"
+      "bytes": 7913,
+      "sha256": "a1befc16868bf43a44bd235b2ab3203eaf4f3659aa97a6aa97639ad9099c8b23"
+    },
+    "core/factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14284,
+      "sha256": "afd38aaaaf24e6d8597e4e97350eb6bf8ea9e4f5d04e2237b1a52eb9fe71d53c"
+    },
+    "core/factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18529,
+      "sha256": "dbe7cf19765d4d66c0451f3d480dd3ed7c0a891ad4c9867998b462fd1d4b3570"
+    },
+    "core/factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 122424,
+      "sha256": "0ac04899c19ee76279e7e6f11343637bb0dda4ebca38d759faee751389b86cad"
+    },
+    "core/factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6392,
+      "sha256": "a581b865591d9f4db2d3c84d341066e11f10b0ad627696dbbb76f9259ef01396"
+    },
+    "core/factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 7926,
+      "sha256": "b2ffa3888185c2ae97f8334bd2d3efe76b9444e2350f7562ce98e16139476e06"
+    },
+    "core/factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14368,
+      "sha256": "e41bb2d3cd7e3f82c9c673485f7ec0204cad66697ea7cf7e0c61a3abf05a2f26"
+    },
+    "core/factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18026,
+      "sha256": "8a5a2ffe5dc6e966aa11216fce143d74716b046acadc93942545ab8dc547269c"
+    },
+    "core/factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 122424,
+      "sha256": "3f7ed4385bd042711c47b66229c4cf6752c6eb0338917a5ca9e881039538f6d7"
+    },
+    "core/factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024/configuration.json": {
+      "bytes": 6391,
+      "sha256": "56a22e895d24708919598b98d43bee582d6299823bf2f8eb3383d15c64f9d692"
+    },
+    "core/factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024/progress.json": {
+      "bytes": 7924,
+      "sha256": "d93d28d60155a2b9ddb2dee87893fada868a43a75a82107c1b897cb9638fc4fd"
+    },
+    "core/factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024/training.json": {
+      "bytes": 14362,
+      "sha256": "c6e50a911a23c4279b523a8998e43353de495b23536ce23f480d33a6de03a598"
+    },
+    "core/factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024/validation_predictions.npz": {
+      "bytes": 18894,
+      "sha256": "bda4525b88cd99fd19fec53290803a130c220e19ca74d577bfd0be839c60fb99"
+    },
+    "core/factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024/weights.pt": {
+      "bytes": 122424,
+      "sha256": "cdd01b1dcc60e5c4efe880d028fee5b0a6d497532516c0e8db337bdaef152ce6"
     },
     "core/run_manifest.json": {
       "bytes": 144989,
       "sha256": "4662bc312f2ec7b59445325ff5ac091f3bf297b315f5ecc18d686aea71492272"
     },
     "logs/core.log": {
-      "bytes": 13791,
-      "sha256": "e64389f246da9c9ee30b0cdd66eabfe2e5bb97a5880d63a9ffeb811799fc1ba5"
+      "bytes": 20259,
+      "sha256": "28b37bc3936a877ee4c997b4f16124de4186c102c41a1e12d52914042e3b1d43"
     },
     "logs/source_environment.log": {
       "bytes": 2755,
@@ -147,8 +203,8 @@
       "sha256": "897c894a7d695740ee76596e244f9406bb7523640d1642aff88dd772ac433f16"
     },
     "worker_status.json": {
-      "bytes": 6217,
-      "sha256": "464eee629a097efcb432b9e338f0b80ea6ada8dbe5cbcf96fe140883b6195eb1"
+      "bytes": 7042,
+      "sha256": "cbf877c7e6ecb2d955b378cb326cb020e7fdf85a0773e516a9696962170c8a35"
     }
   },
   "run_key": "37566497890-1",

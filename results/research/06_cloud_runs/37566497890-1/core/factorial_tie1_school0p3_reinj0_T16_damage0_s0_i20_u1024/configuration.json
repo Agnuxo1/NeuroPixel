@@ -49,8 +49,8 @@
     "panel": "factorial",
     "phase": "item6_ablation",
     "protocol_id": "NP-SCI-20261006-v1",
-    "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024",
-    "school_weight": 0,
+    "run_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024",
+    "school_weight": 0.3,
     "split_seed": 0,
     "steps": 16,
     "train_sample_seed": 9002,
@@ -59,108 +59,37 @@
     "updates": 1024,
     "variant": {
       "freeze_pad": false,
-      "reinject": true,
+      "reinject": false,
       "tied": true
     },
     "vocab": 35,
     "weight_decay": 0.0001,
     "width": 8
   },
-  "curve": [
-    {
-      "elapsed_training_seconds": 13.375611231999983,
-      "last_answer_loss": 2.490067720413208,
-      "last_unclipped_gradient_norm": 3.212354898452759,
-      "mean_training_loss_since_last_log": 2.6386845223605633,
-      "update": 128
+  "schema_version": 1,
+  "source": {
+    "git_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+    "historical_files_expected": 8,
+    "historical_files_verified": 7,
+    "provenance_implementation": "scripts/research_ablations.py:source_record",
+    "recovery_manifest": {
+      "path": "docs/research/06_recovery_manifest.json",
+      "sha256": "d0b59290ed00822229b15faeb32b9d568b830d7370de0602aab117f38f595525"
     },
-    {
-      "elapsed_training_seconds": 26.736506297999995,
-      "last_answer_loss": 2.401305675506592,
-      "last_unclipped_gradient_norm": 3.087019443511963,
-      "mean_training_loss_since_last_log": 2.419411577284336,
-      "update": 256
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
     },
-    {
-      "elapsed_training_seconds": 40.12815171,
-      "last_answer_loss": 2.3650803565979004,
-      "last_unclipped_gradient_norm": 2.5554821491241455,
-      "mean_training_loss_since_last_log": 2.3919128086417913,
-      "update": 384
+    "unavailable_expected_sha256": {
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
     },
-    {
-      "elapsed_training_seconds": 53.64565948300003,
-      "last_answer_loss": 2.3790407180786133,
-      "last_unclipped_gradient_norm": 2.3797926902770996,
-      "mean_training_loss_since_last_log": 2.375514976680279,
-      "update": 512
-    },
-    {
-      "elapsed_training_seconds": 67.066533736,
-      "last_answer_loss": 2.294921636581421,
-      "last_unclipped_gradient_norm": 1.6890926361083984,
-      "mean_training_loss_since_last_log": 2.373268112540245,
-      "update": 640
-    },
-    {
-      "elapsed_training_seconds": 80.48971123499996,
-      "last_answer_loss": 2.3584296703338623,
-      "last_unclipped_gradient_norm": 2.0257623195648193,
-      "mean_training_loss_since_last_log": 2.3618038836866617,
-      "update": 768
-    },
-    {
-      "elapsed_training_seconds": 93.88093647300002,
-      "last_answer_loss": 2.251060724258423,
-      "last_unclipped_gradient_norm": 1.7514210939407349,
-      "mean_training_loss_since_last_log": 2.3456278946250677,
-      "update": 896
-    },
-    {
-      "elapsed_training_seconds": 107.29488022499993,
-      "last_answer_loss": 2.0797126293182373,
-      "last_unclipped_gradient_norm": 2.751202344894409,
-      "mean_training_loss_since_last_log": 2.2928257286548615,
-      "update": 1024
-    }
-  ],
-  "resources": [
-    {
-      "at_utc": "2026-10-07T03:33:27.671267+00:00",
-      "available_ram_gib": 14.336311340332031
-    },
-    {
-      "at_utc": "2026-10-07T03:33:41.066386+00:00",
-      "available_ram_gib": 14.32333755493164
-    },
-    {
-      "at_utc": "2026-10-07T03:33:54.427280+00:00",
-      "available_ram_gib": 14.31313705444336
-    },
-    {
-      "at_utc": "2026-10-07T03:34:07.818926+00:00",
-      "available_ram_gib": 14.326618194580078
-    },
-    {
-      "at_utc": "2026-10-07T03:34:21.336434+00:00",
-      "available_ram_gib": 14.320972442626953
-    },
-    {
-      "at_utc": "2026-10-07T03:34:34.757309+00:00",
-      "available_ram_gib": 14.331939697265625
-    },
-    {
-      "at_utc": "2026-10-07T03:34:48.180485+00:00",
-      "available_ram_gib": 14.321800231933594
-    },
-    {
-      "at_utc": "2026-10-07T03:35:01.571710+00:00",
-      "available_ram_gib": 14.327384948730469
-    },
-    {
-      "at_utc": "2026-10-07T03:35:14.985669+00:00",
-      "available_ram_gib": 14.317798614501953
-    }
-  ],
-  "status": "training"
+    "verification_scope": "Seven exact historical files; the legacy GPU queue worker is unavailable and is not replaced or executed."
+  },
+  "started_at_utc": "2026-10-07T03:35:16.485889+00:00",
+  "status": "started"
 }
