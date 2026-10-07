@@ -12,3 +12,7 @@
 Una decision solo queda `confirmada` cuando tiene evidencia suficiente. JEV debe devolver
 `provenance=jev`; un error o una respuesta local se registra como `no revisada`.
 
+
+## SCI-006-CLOUD — 2026-10-07
+
+Following the already documented JEV recovery failure, continue the existing conservative fallback for reversible scientific work within item 6. This is a local operational decision, not a JEV decision. Recover historical scientific sources by exact recorded hashes, record the missing GPU worker, and validate a separately versioned standard public GitHub CPU environment before freezing and executing the declared ablations. Keep paired comparisons in the same software environment, preserve negative findings and failed attempts, and retain the no-paid-compute constraint. No main-branch merge or external scientific submission is part of this action.

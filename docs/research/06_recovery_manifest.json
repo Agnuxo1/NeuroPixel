@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "item": 6,
+  "status": "recovered_source_preflight_pending",
+  "generated_at_utc": "2026-10-07T02:31:49Z",
+  "recovery_method": "Complete retained text restored and checked against SHA-256 anchors recorded before execution access was lost. Public baseline files fetched at the pinned base commit.",
+  "public_base_commit": "7da18d1cbd36c40c48228118abb20a7b5ab032f4",
+  "known_previous_source_commit": "fbf576f0dcfd0149d2969eccb61e442c41c7d47f",
+  "previous_source_zip": {
+    "bytes": 209348,
+    "sha256": "1e927f206391c23ba5d2650b030fdd7b18a97eb7162ee9e439e6d49387d36070",
+    "availability": "Stored in the disconnected execution environment; not recovered into this branch."
+  },
+  "last_confirmed_local_analysis_commit": "376e38a",
+  "item5_closure_commit_in_disconnected_continuation": "ac0adf1cceb07ef812496a7dad2ede1511f109bb",
+  "item6_opening_commit_in_disconnected_continuation": "a0d9f63a8db646d599de7686f76b27f041369929",
+  "available_historical_sha256": {
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a",
+    "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290"
+  },
+  "unavailable_historical_sha256": {
+    "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73"
+  },
+  "unavailable_source_policy": "The old GPU queue worker is not fabricated or executed. Item 6 uses a separately versioned CPU worker and an explicit provenance adapter preserving seven available historical files and identifying the unavailable eighth.",
+  "verified_document_sha256": {
+    "docs/research/02_protocol.md": "09f052d77af7cad01ddc07d3402cf3b680c4538c5bb49de51340a6583614790b",
+    "docs/research/05_results_recovered_20261007.md": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf"
+  },
+  "loss_observables": "Historical trainer preserved: mean total loss in each 128-update window and last answer loss at its endpoint. School loss is not separately recorded; subtracting unlike window and endpoint statistics is invalid.",
+  "evidence_availability": {
+    "item5_report": "Complete report with verified recovery-copy hash. Its note distinguishes text recovery from unavailable original Linux byte identity.",
+    "item5_cpu_raw_archive": "Previously verified and committed locally; not recovered into this branch.",
+    "item5_original_audits": "Previously completed with zero issues; original files are absent here. Hashes below are historical anchors, not a new audit.",
+    "item5_primary_analysis_sha256": "11fd91ee4ddb8155fc9127e5f6b826535654842190f048fecd23c3dd6f31e436",
+    "item5_independent_check_sha256": "adef6b11f29a0c00c58f1cb10a95453ba056eea5e711d8462179bcfafcff1453",
+    "mechanism_document": "Complete text recovered; original-file SHA-256 anchor not retained, so historical byte identity is not asserted.",
+    "protocol_frozen_lock": "Original lock was not recovered and is not fabricated. Protocol MD and JSON are verified directly against their recorded frozen hashes."
+  },
+  "scientific_state": {
+    "completed_items": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "active_item": 6,
+    "remaining_items": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "item5_primary_verdict": "H1 not supported under the frozen protocol; all 28 training probes below the threshold, without establishing a cause of failure.",
+    "item6_measurements": "None at creation of this manifest."
+  }
+}

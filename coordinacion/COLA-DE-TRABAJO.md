@@ -23,3 +23,7 @@ breve. Hasta entonces su responsable es `JEV por asignar` y no se inicia.
 Decision JEV vigente: 2026-09-27 19:34, `provenance=jev`, modelo `jev-1.13.0`.
 Politica: `single_gpu_queue`. Siguiente tras cerrar las cargas activas: `FIL-002`.
 
+
+## 2026-10-07 — Scientific validation continuation
+
+SCI-006 is active in the isolated research/scientific-validation-2026-10-07-cloud branch. Root is responsible for integration and review; focused collaborators cover source recovery, implementation and independent scientific checks within item 6. Items 1–5 are completed investigations, with H1 not supported in item 5. Items 7–30 remain pending. The immediate action is a source/environment preflight with zero optimizer updates and no final-test access. See docs/research/progress.json and 06_recovery_manifest.json. This dated section does not assert that the historical September reservations above are still active.

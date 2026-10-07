@@ -58,3 +58,9 @@ Variables de cache y temporales de herramientas nuevas deben apuntar a una carpe
 D: o E:. Antes de una descarga pesada se registra origen, tamaño aproximado y destino. No se limpia
 C: ni se mueve contenido existente sin autorizacion expresa de Fran.
 
+
+## 2026-10-07 — SCI-006 isolated CPU preflight reservation
+
+A standard GitHub-hosted ubuntu-24.04 runner in this public repository is reserved for one sequential preflight, at most 30 minutes. Two CPU threads, one inter-op thread and at least 8 GiB available RAM are required. No GPU job, paid runner, billing change, artifact storage upload or dependency cache is used. Work stays in the isolated Linux runner workspace; the Windows D:/E: storage rule concerns the disconnected Windows device. Standard public runner CPU time is free under the official documentation checked for this action. Source/environment validation precedes every affected scientific run. This preflight does not authorize the pending item-6 training freeze. The runner releases its resources automatically on completion; operational status is visible in this branch's Actions run.
+
+Sources: https://docs.github.com/en/actions/reference/runners/github-hosted-runners and https://docs.github.com/en/billing/concepts/product-billing/github-actions .

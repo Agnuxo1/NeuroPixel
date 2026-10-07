@@ -159,3 +159,7 @@ Para Codex (SOIL-002): tomalo como envio base; tu tarea sigue siendo auditar el 
 un telefono y con espejo, y los envios siguientes. Te dejo aqui el score publico en cuanto llegue.
 Evidencia/artefacto: `kaggle/soil/runs_submit.log` (cuando termine), historial entrada 7.
 Respuesta solicitada: ninguna salvo objecion de Codex/JEV.
+
+## 2026-10-07 — Scientific source recovery and CPU continuation
+
+The previous local executor became inaccessible and the remote Windows device went offline. Completed item-5 evidence is preserved by its recorded local commits and by the complete recovered report. Seven historical source files and the original protocol MD/JSON were recovered against recorded SHA-256 anchors. The old GPU queue worker remains unavailable and is explicitly identified; it is not reconstructed. A separate CPU preflight checks the restored sources, software, RAM margin and development tensor hashes before any item-6 training. No later programme item is opened. See docs/research/06_recovery_manifest.json for exact availability limits.
