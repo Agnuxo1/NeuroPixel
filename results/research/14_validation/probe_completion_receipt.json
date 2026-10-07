@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "item": 14,
+  "status": "verified",
+  "freeze_utc": "2026-10-07T15:34:14+00:00",
+  "source_commit": "844f4dfae1cb8909d4f87c0c8cfd96b965590adf",
+  "plan_sha256": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447",
+  "run_id": 37644986366,
+  "job_id": 112873311188,
+  "archive_commit": "10c694cd299a4114bd447528d22b204d89b00b9e",
+  "archive_path": "results/research/14_cloud_runs/37644986366-1-probe",
+  "manifest": {
+    "blob": "d7e575d8e81d047e21b7fb959aade7c06a103f9d",
+    "bytes": 3393,
+    "sha256": "23e847b571af3a2f9ae175f3ecce44f232613e90b1dd0038519ef88539580582"
+  },
+  "archive_files_excluding_manifest": 21,
+  "archive_bytes_excluding_manifest": 9825102,
+  "text_rehash_records": [
+    {
+      "path": "audit/audit.json",
+      "blob": "44a51589734da5fcc03d807694159374b69d7dc9",
+      "bytes": 183062,
+      "sha256": "6324a5c9829c8a012de5d0a9efd23da50e99e36c915bac1222b6b31f02e91275",
+      "verified": true
+    },
+    {
+      "path": "audit_component.log",
+      "blob": "7e8a17db6d6d2bf32b0673834186b65a1ff88234",
+      "bytes": 52,
+      "sha256": "35d903d3817efea3d53bc902d31072af48de2db242be85a585bce07604077a63",
+      "verified": true
+    },
+    {
+      "path": "contract_tests.log",
+      "blob": "4288db4b13b5a4acb451f8c02ade967ca88d7cc1",
+      "bytes": 21,
+      "sha256": "bc3306f38e847279cb10e65fc23a89c6bcbd146227b0dfa166c52a411ccb6d2b",
+      "verified": true
+    },
+    {
+      "path": "contract_tests_environment.json",
+      "blob": "a0409011276ba27834ee885156da23cd952d33ba",
+      "bytes": 565,
+      "sha256": "84166a7aa5f5139f2edf067a7fd15be90c6685c1df257478182f8b8a317f1540",
+      "verified": true
+    },
+    {
+      "path": "contract_tests_resource_monitor.json",
+      "blob": "a420b1934d949c75f75a208cebc203400d15955d",
+      "bytes": 461,
+      "sha256": "cdaf6da8bf929d25923d03133b20ff69e20f9c05e6cd1e7159c160cb15b31810",
+      "verified": true
+    },
+    {
+      "path": "contract_tests_status.json",
+      "blob": "b3dba76de630d4fbad97161ba4cc3bb8e18759f4",
+      "bytes": 840,
+      "sha256": "a49048bb8e62bb79e989eed7c0d0b20113727c9171e7ca79638be5ab82454977",
+      "verified": true
+    },
+    {
+      "path": "execution_plan.json",
+      "blob": "3be053495195a07ffe1d761f961b67c781967be6",
+      "bytes": 5139,
+      "sha256": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447",
+      "verified": true
+    },
+    {
+      "path": "native/report.json",
+      "blob": "349ba1b7edfaaf3f7cd8e42453f4d01fa2c3238b",
+      "bytes": 180658,
+      "sha256": "56c143b2035cced57f8eb84ec87cd23aa9f33f270dc96360d8ae5167e189a65a",
+      "verified": true
+    },
+    {
+      "path": "native_component.log",
+      "blob": "3bcf854ab3f580db4631b7717d1f84d624ea6f49",
+      "bytes": 36,
+      "sha256": "e7c5436ee0e9dfe8db5fb5a6c51e838788766e7a1f743a7e8e37f2f4c67e4693",
+      "verified": true
+    },
+    {
+      "path": "probe.log",
+      "blob": "7ca2b529cbc4cc9db27a058411ef749f6c59ebc1",
+      "bytes": 85,
+      "sha256": "7fb5d612aa07bbd9bdd34bf77b12ddec540273db5e6b50573de6e5d2470545a2",
+      "verified": true
+    },
+    {
+      "path": "probe_environment.json",
+      "blob": "ecde6644d4e8ac69f9c1826d83d566a6b4cba6ad",
+      "bytes": 565,
+      "sha256": "2a51345cf86f02f3800597440ad90c0171dd120220b07867d35575c338154729",
+      "verified": true
+    },
+    {
+      "path": "probe_resource_monitor.json",
+      "blob": "d52bb5430edd6b246d224ca5569f97d4fc28c790",
+      "bytes": 578,
+      "sha256": "1001293970179797ab6330b24ec42d8cb1127b244e6ce3ec78a5f5ae67fb2636",
+      "verified": true
+    },
+    {
+      "path": "probe_status.json",
+      "blob": "71ef31ea5bc2ae7a5e7263ab12df0aa8b95f2e38",
+      "bytes": 822,
+      "sha256": "71ec25663dcc83af52c713f9bf108b712c68ecb4bdda2090a96ac3ca650ea80f",
+      "verified": true
+    },
+    {
+      "path": "repair_probe_status.json",
+      "blob": "ea5fe4fcb01ff551eb48299e682f8a981312e164",
+      "bytes": 2579,
+      "sha256": "fb6d8f97dc306bad3c87d3bac46dd925a9b998f1b9531bd5d4d6dc83a6ad5024",
+      "verified": true
+    },
+    {
+      "path": "source_before.json",
+      "blob": "1da164fd39ba45efd70fdeccdbc90b4f9d64fb74",
+      "bytes": 3004,
+      "sha256": "73f0922de2986c5828a4d46e2aa10dc7c0e373d07c53ed242f875ca86849e0b2",
+      "verified": true
+    },
+    {
+      "path": "test_collection.json",
+      "blob": "a6d7a871a4f456bfd98b9d7fbbe01c54a0d64fca",
+      "bytes": 537,
+      "sha256": "216492236951546e1f8876839dcd03af62bf119b3e3bd595b81ec20acf8ab4d7",
+      "verified": true
+    },
+    {
+      "path": "test_results.json",
+      "blob": "328fec592ea1ab40c62a810d232b9a9e6023f404",
+      "bytes": 5434,
+      "sha256": "ca3fb0e770aa0830bf85ff12c90e4c76ff6ba07aefb1aa7d36078a912145e988",
+      "verified": true
+    },
+    {
+      "path": "tests.xml",
+      "blob": "9ce3e8ed67f5b5710167ae16d8f652552e4a787d",
+      "bytes": 888,
+      "sha256": "20788b371f1a60525b91bf7628c872f0fd2c5a6317c8e21e4ee57a8e6192cca2",
+      "verified": true
+    },
+    {
+      "path": "worker_status.json",
+      "blob": "3ad42af174b591627f76bd402860e5c5fe15f2cc",
+      "bytes": 6070,
+      "sha256": "7ed70050abb4901ec3293a0256eee7e86eecb7ac4156f958ae7c7a7a545594b2",
+      "verified": true
+    }
+  ],
+  "binary_descriptors": {
+    "native/traces.npz": {
+      "bytes": 33729,
+      "sha256": "0e898b1b352cc22306c0dbc5fdd37c1ba021c9c0788a84ba55b318685f2a500d"
+    },
+    "source.zip": {
+      "bytes": 9399977,
+      "sha256": "33699d6c4a5e252f3aa2c8d3e24a8d6ee5cd99ca127a12ba267856cd8477b534"
+    }
+  },
+  "tree_verified": true,
+  "tests": {
+    "parents": 5,
+    "additional_subcalls": 15,
+    "successful_calls": 20,
+    "total_events": 30,
+    "failed": 0,
+    "skipped": 0
+  },
+  "native_checks": 8,
+  "independent_audit_checks": 6176,
+  "independent_audit_maximum_errors": {
+    "post_damage": 5.551115123125783e-17,
+    "pre_damage": 5.551115123125783e-17,
+    "prefix_logits": 2.220446049250313e-16,
+    "prefix_states": 2.220446049250313e-16,
+    "recovery_logits": 1.6653345369377348e-16,
+    "recovery_states": 1.6653345369377348e-16
+  },
+  "independent_audit_nll_error": 4.440892098500626e-16,
+  "root_recount": {
+    "schema_version": 1,
+    "item": 14,
+    "status": "verified",
+    "checks": 5213,
+    "numeric_comparisons": 3912,
+    "maximum_absolute_difference": 4.440892098500626e-16,
+    "issues": [],
+    "expected_summary_rows": 324,
+    "constructed_trajectories": 216,
+    "scope": "Independent elementary-loop reconstruction of archived JSON summary; native equivalence and unchanged assertions checked against report, with actual saved witnesses separately audited in NumPy."
+  },
+  "root_producer_auditor_comparison": {
+    "checks": 4860,
+    "issues": [],
+    "maximum_numeric_difference": 4.440892098500626e-16
+  },
+  "logical_checks": [
+    {
+      "name": "source_identity",
+      "passed": true
+    },
+    {
+      "name": "final_archive",
+      "passed": true
+    },
+    {
+      "name": "plan_identity",
+      "passed": true
+    },
+    {
+      "name": "worker_stages",
+      "passed": true
+    },
+    {
+      "name": "five_contracts_no_failure",
+      "passed": true
+    },
+    {
+      "name": "20_call_reports",
+      "passed": true
+    },
+    {
+      "name": "native_checks",
+      "passed": true
+    },
+    {
+      "name": "independent_audit",
+      "passed": true
+    },
+    {
+      "name": "root_recount",
+      "passed": true
+    },
+    {
+      "name": "resource_floor",
+      "passed": true
+    },
+    {
+      "name": "serial_component_limits",
+      "passed": true
+    },
+    {
+      "name": "complete_text_hashes_and_tree",
+      "passed": true
+    },
+    {
+      "name": "provider_completion",
+      "passed": true
+    }
+  ],
+  "execution": {
+    "worker_seconds_before_final_archive": 14.418820603,
+    "controller_seconds": 1.3380568479999937,
+    "native_process_seconds": 1.1676107210000026,
+    "audit_process_seconds": 0.1650878089999992,
+    "supervisor_samples": 5,
+    "minimum_supervisor_sampled_ram_gib": 14.146129608154297,
+    "minimum_all_retained_resource_observations": 14.09469985961914,
+    "resource_observations": [
+      {
+        "path": "worker.admission.available_ram_gib",
+        "value": 14.250717163085938
+      },
+      {
+        "path": "worker.final_resource_observation.available_ram_gib",
+        "value": 14.306209564208984
+      },
+      {
+        "path": "worker.stages.0.admission.available_ram_gib",
+        "value": 14.208663940429688
+      },
+      {
+        "path": "worker.stages.1.admission.available_ram_gib",
+        "value": 14.316886901855469
+      },
+      {
+        "path": "native.final_resource_observation.available_ram_gib",
+        "value": 14.09469985961914
+      },
+      {
+        "path": "controller.final_resource_observation.available_ram_gib",
+        "value": 14.14388656616211
+      },
+      {
+        "path": "contracts_monitor.samples.0.available_ram_gib",
+        "value": 14.208663940429688
+      },
+      {
+        "path": "contracts_monitor.samples.1.available_ram_gib",
+        "value": 14.146129608154297
+      },
+      {
+        "path": "probe_monitor.samples.0.available_ram_gib",
+        "value": 14.316699981689453
+      },
+      {
+        "path": "probe_monitor.samples.1.available_ram_gib",
+        "value": 14.170841217041016
+      },
+      {
+        "path": "probe_monitor.samples.2.available_ram_gib",
+        "value": 14.162029266357422
+      },
+      {
+        "path": "audit.results.available_ram_gib_at_admission",
+        "value": 14.156795501708984
+      },
+      {
+        "path": "audit.results.available_ram_gib_at_finish",
+        "value": 14.144084930419922
+      }
+    ],
+    "threads": 1,
+    "interop_threads": 1,
+    "aggregate_ceiling": 4,
+    "available_ram_floor_gib": 8,
+    "optimization_steps": 0,
+    "checkpoints_loaded": 0
+  },
+  "limits": [
+    "Constructed deterministic controls, not learned task competence or a population sample.",
+    "Independent programs share one runner; no external laboratory replication.",
+    "Root rehashes19text files and verifies binary descriptors/sizes; does not independently decode the source ZIP in V8.",
+    "NPZ contents independently reconstructed by the fresh NumPy auditor, including all saved native-held and weight-invariance witnesses."
+  ]
+}

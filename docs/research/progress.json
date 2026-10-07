@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "record_type": "recovered continuation ledger",
-  "recorded_at": "2026-10-07T15:34:14+00:00",
-  "active_item": 14,
+  "recorded_at": "2026-10-07T15:42:51+00:00",
+  "active_item": null,
   "order_policy": "Finish the feasible investigation and record its limits before opening the next item.",
   "status_is_not_claim_validity": true,
   "items": [
@@ -103,12 +103,15 @@
     {
       "item": 14,
       "title": "Assisted repair versus stored memory",
-      "status": "in_progress",
+      "status": "completed",
       "opened_at_utc": "2026-10-07T15:18:42+00:00",
-      "probe_status": "frozen_for_first_execution",
+      "probe_status": "completed",
       "protocol": "14_probe_protocol.md",
       "plan": "14_probe_plan.json",
-      "frozen_at_utc": "2026-10-07T15:34:14+00:00"
+      "frozen_at_utc": "2026-10-07T15:34:14+00:00",
+      "closed_at_utc": "2026-10-07T15:42:51+00:00",
+      "report": "14_results.md",
+      "claim_status": "Constructed measurement controls verified; learned autonomous repair unestablished"
     },
     {
       "item": 15,
@@ -904,7 +907,7 @@
     "closure_commit": "dd9930694e5679e0a514525840a83b4c760f2730"
   },
   "item14": {
-    "stage": "Frozen for bounded constructed CPU census",
+    "stage": "Completed feasible investigation; constructed controls and historical limits verified",
     "opened_at_utc": "2026-10-07T15:18:42+00:00",
     "opened_after_item13_closure_commit": "dd9930694e5679e0a514525840a83b4c760f2730",
     "scope": "Distinguish recovery of damaged recurrent state while source tokens are repeatedly available from autonomous recovery of stored content after the source is removed. Trace damage/readout/input paths, examine historical and saved damage evidence, define paired causal controls, and execute a bounded native diagnostic if interpretable.",
@@ -923,6 +926,39 @@
     "summary_rows": 324,
     "optimization_steps": 0,
     "learned_repair_benchmark_admitted": false,
-    "raw_arrays_planned": 88
+    "raw_arrays_planned": 88,
+    "closed_at_utc": "2026-10-07T15:42:51+00:00",
+    "probe_status": "completed",
+    "probe_source_commit": "844f4dfae1cb8909d4f87c0c8cfd96b965590adf",
+    "probe_run_id": 37644986366,
+    "probe_job_id": 112873311188,
+    "probe_archive_commit": "10c694cd299a4114bd447528d22b204d89b00b9e",
+    "probe_archive_path": "results/research/14_cloud_runs/37644986366-1-probe",
+    "probe_runner_released": true,
+    "tests": {
+      "parents": 5,
+      "additional_subcalls": 15,
+      "successful_calls": 20,
+      "total_events": 30,
+      "failed": 0,
+      "skipped": 0
+    },
+    "native_checks": 8,
+    "independent_audit_checks": 6176,
+    "independent_audit_issues": 0,
+    "root_review_checks": 10086,
+    "root_review_issues": 0,
+    "root_maximum_numeric_difference": 4.440892098500626e-16,
+    "root_rehashed_result_texts": 19,
+    "raw_arrays": 88,
+    "archive_files_excluding_manifest": 21,
+    "archive_bytes_excluding_manifest": 9825102,
+    "worker_seconds": 14.418820603,
+    "minimum_all_retained_available_ram_gib": 14.09469985961914,
+    "report": "docs/research/14_results.md",
+    "report_sha256": "3b9681492f10829cda3d2e6f4b0211b987d1ee85d8a35ffe94a0ca4ab3d5be6e",
+    "report_bytes": 20024,
+    "claim_status": "Learned autonomous repair unestablished; input-held robustness does not isolate surviving-state recovery",
+    "external_independent_replication": false
   }
 }

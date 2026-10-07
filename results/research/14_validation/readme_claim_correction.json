@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "item": 14,
+  "source_before": "844f4dfae1cb8909d4f87c0c8cfd96b965590adf",
+  "before_sha256": "7434abf5123f7976a80dfb9f9f32ab7ea85ce9cfbcf0c12088769f5f6ab782d8",
+  "changes": [
+    {
+      "old": "| **Rest-state training** | Random number of steps + random damage during training → dynamics that are stable for any length and repair themselves. |",
+      "replacement": "| **Training with variable steps and state damage** | Samples update counts and erases state during training. Historical damage tests retain the source tokens; the repair audit separates preservation, reconstruction and input dependence. |"
+    },
+    {
+      "old": "| Self-repair: 50 % of the state erased mid-thought | **99.4 %** with rest-state training; stable from 8 to 64 steps | Transformer 25–33 % |",
+      "replacement": "| Historical robustness to state erasure, source input retained | Rest-trained model: 99.35 % after a 50 % cell-erasure probability at step 8, scored at step 16; 99.6 % intact | Historical Transformer 25–33 % uses a different first-layer lesion, base competence and remaining computation |"
+    }
+  ],
+  "inserted_note": "\n\nThe [repair audit](docs/research/14_results.md) traces the historical damage score to\n[one rest-trained summary](results/phase3/stable_reposo.json). Its original input remains available\nafter the lesion, and no immediate post-lesion response was retained. Constructed controls now\nseparate source-driven rebuilding, passive retention and categorical recovery from surviving\nredundancy. They do not establish learned autonomous repair or a matched advantage over another architecture.",
+  "scope": "Clarify the damage claim and distinguish constructed controls from learned repair; preserve historical result files.",
+  "historical_scores_recomputed": false
+}

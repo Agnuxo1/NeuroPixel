@@ -40,7 +40,7 @@ output pixel, and the output pixel ends up saying **girl** — the right answer.
 | **Colour dictionary** | Each token gets a learned 16-channel "colour". The same table is used to write the input and to read the output (tied weights). Empty pixels are black and carry no activity. |
 | **Canvas dynamics** | A single shared 3×3 rule (depthwise perception + 1×1 MLP, residual, stochastic updates) runs for *T* steps. No attention, no global pooling. |
 | **School loss** | Every input pixel must keep "saying" its own word through the dictionary. The canvas stays legible and learns faster. |
-| **Rest-state training** | Random number of steps + random damage during training → dynamics that are stable for any length and repair themselves. |
+| **Training with variable steps and state damage** | Samples update counts and erases state during training. Historical damage tests retain the source tokens; the repair audit separates preservation, reconstruction and input dependence. |
 | **Growing canvases** | When the current canvases cannot read the input (novelty, ART-like), freeze them and add a new one; route questions with the scanner. |
 
 ## Key results
@@ -65,13 +65,19 @@ gap *widens* with size, and so does robustness to damage.
 | Capability | NeuroPixel | Baseline |
 |---|---|---|
 | Unseen combinations (scaling) | 49 % → **99.7 %** (5 k → 236 k params) | Transformer **54 %** flat (13 k → 811 k) |
-| Self-repair: 50 % of the state erased mid-thought | **99.4 %** with rest-state training; stable from 8 to 64 steps | Transformer 25–33 % |
+| Historical robustness to state erasure, source input retained | Rest-trained model: 99.35 % after a 50 % cell-erasure probability at step 8, scored at step 16; 99.6 % intact | Historical Transformer 25–33 % uses a different first-layer lesion, base competence and remaining computation |
 | Cost per answer (CPU, same 200 questions) | **56 MFLOP · 5.7 ms · 99.5 %** | Qwen2-494M (3-shot): 158 GFLOP · 279 ms · 94 % |
 | Added-token adaptation from 5 examples (historical report) | Selected norm-constrained condition: 98.6 % new, 92.6 % old (97.95 % before) | Plain adaptation on one 44 k Transformer base: 61.22 % new; a different method |
 | Continual learning, 3 topics in a row | growing canvases **93 %** average | single canvas 66 % (forgets) |
 | Recurrent memory within one stream (historical report) | 99.2 % at 0 blank frames; **96.5 % at 8** | GRU 77.0 % at 0; 78.5 % at 8 (slower decline in the reported long-delay curve) |
 | Non-local binding (role and word far apart) | 66 % → 74 % with size + rest-state | Transformer 56 % — **not solved yet** |
 | Imagination (fill a masked word) | 100 % plausible category, diverse, not copied | — |
+
+The [repair audit](docs/research/14_results.md) traces the historical damage score to
+[one rest-trained summary](results/phase3/stable_reposo.json). Its original input remains available
+after the lesion, and no immediate post-lesion response was retained. Constructed controls now
+separate source-driven rebuilding, passive retention and categorical recovery from surviving
+redundancy. They do not establish learned autonomous repair or a matched advantage over another architecture.
 
 The added-token row comes from [newword.json](results/phase3/newword.json); its Transformer figure comes from the different plain adaptation procedure in [scale_tf44k.json](results/phase3/scale_tf44k.json). Every target in the historical new-token panel is the inserted token, so a presence shortcut solves that panel. These aggregates do not establish new semantic binding or a matched advantage. See the [vocabulary and distractor audit](docs/research/13_results.md) for corrected allocation/label code, controls, transformed-split checks and the separate saved-output distractor recount.
 
