@@ -1,4 +1,9 @@
 {
+  "admission": {
+    "at_utc": "2026-10-07T13:18:55.178236+00:00",
+    "available_ram_gib": 14.54537582397461,
+    "phase": "admission"
+  },
   "gpu_requested": false,
   "item": 11,
   "paid_compute": false,
@@ -19,7 +24,33 @@
   "run_key": "37627489876-1-audit",
   "schema_version": 1,
   "source_commit": "f50ef0e55397ce4fb8e85360f5be8c12003bd6ee",
-  "stages": [],
+  "stages": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T13:18:59.666504+00:00",
+        "available_ram_gib": 14.552738189697266,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item11_worker.py",
+        "--phase",
+        "audit",
+        "--child",
+        "audit",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/11_cloud_runs/37627489876-1-audit"
+      ],
+      "completed_at_utc": "2026-10-07T13:19:03.671158+00:00",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "audit",
+      "return_code": 0,
+      "stage_limit_seconds": 1200,
+      "started_at_utc": "2026-10-07T13:18:59.666650+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 4.003019196999986
+    }
+  ],
   "started_at_utc": "2026-10-07T13:18:55.177225+00:00",
   "status": "running"
 }
