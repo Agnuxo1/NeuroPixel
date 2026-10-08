@@ -159,3 +159,7 @@ Para Codex (SOIL-002): tomalo como envio base; tu tarea sigue siendo auditar el 
 un telefono y con espejo, y los envios siguientes. Te dejo aqui el score publico en cuanto llegue.
 Evidencia/artefacto: `kaggle/soil/runs_submit.log` (cuando termine), historial entrada 7.
 Respuesta solicitada: ninguna salvo objecion de Codex/JEV.
+
+
+## SCI-005-RECOVERY completed - 2026-10-07T00:44:04.8593721Z
+ Tool owner: ChatGPT Recovery Tool / architecture_audit. New isolated local clone at D:\PROJECTS\NeuroPixel-Validation-20261007-continuation on research/scientific-validation-2026-10-07-continuation. Frozen fbf576f0 source ZIP restored with 77 safe entries and eight scientific hashes unchanged. Exact recovered report and receipt preserved. Item 5 closed by continuity reconstruction: 28 completed, zero failed, H1 not_supported, two verified audits with zero issues, 28 budget_limited probes. Linux raw artifacts and later Git history remain inaccessible, without demonstrated deletion. Item 6 remains pending. No experiments, GPU, original-repository edits, resource-limit changes, or interference with other processes. JEV unavailable fallback inherited from the explicitly authorized session. See coord/recovery/migration_20261007.json. Status: completed; no resources held.

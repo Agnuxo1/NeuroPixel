@@ -1,0 +1,71 @@
+name: NeuroPixel U16 continuation contracts and parent admission
+on:
+  push:
+    branches: [research/query-budget-preflight-2026-10-08]
+    paths:
+      - .github/workflows/qtrain-u16-preflight.yml
+      - neuropixel/research/qtrain_budget.py
+      - neuropixel/research/qtrain_budget_transport.py
+      - scripts/research_OPT03_qtrain_u16.py
+      - scripts/test_OPT03_qtrain_u16.py
+      - scripts/test_QTRAIN_U16_transport.py
+      - docs/research/OPT03_QTRAIN_U16_parent_inventory.json
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-u16-preflight-20261008
+  cancel-in-progress: false
+jobs:
+  contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed scientific CPU dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Actual RAM admission and closed-source identity
+        run: |
+          python - <<'PY'
+          import hashlib,json,psutil
+          from pathlib import Path
+          ram=psutil.virtual_memory().available/2**30
+          assert ram>=8
+          raw=Path('docs/research/OPT03_QTRAIN_plan.json').read_bytes()
+          assert hashlib.sha256(raw).hexdigest()=='20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5'
+          for name,digest in json.loads(raw)['source_sha256'].items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest
+          print(json.dumps({'available_ram_gib':ram,'scientific_updates':0,'old_sources_unchanged':True}))
+          PY
+      - name: Immutable transport and recovery contracts
+        run: python scripts/test_QTRAIN_U16_transport.py
+      - name: Old versus new updater, restoration and pending endpoint contracts
+        run: python scripts/test_OPT03_qtrain_u16.py
+      - name: Admit twelve actual parents without updates or inference
+        run: python scripts/research_OPT03_qtrain_u16.py --admit-parents-only
+      - name: Preserve factual preflight receipts in Git
+        if: always()
+        run: |
+          python - <<'PY'
+          import importlib.util,json,os
+          from pathlib import Path
+          s=importlib.util.spec_from_file_location('transport','neuropixel/research/qtrain_budget_transport.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+          base='results/research/U16_preflight_cloud/'+os.environ['GITHUB_RUN_ID']+'/'
+          items={'transport_receipt.json':Path('results/research/OPT03_QTRAIN_U16_transport_contracts/receipt.json'),'continuation_receipt.json':Path('results/research/OPT03_QTRAIN_U16_contracts/receipt.json'),'parent_admission_receipt.json':Path('results/research/OPT03_QTRAIN_U16/parent_admission_receipt.json')}
+          available=[]
+          for name,path in items.items():
+              if path.exists():m.publish_immutable(base+name,path.read_bytes());available.append(name)
+          receipt={'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'available_receipts':available,'scientific_updates':0,'new_model_evaluations':0,'test_accessed':False,'scope':'Only fixtures and exact-state loading of closed parents; no scientific training'}
+          m.publish_immutable(base+'scope_receipt.json',(json.dumps(receipt,indent=2)+'\n').encode())
+          print(json.dumps(receipt))
+          PY
