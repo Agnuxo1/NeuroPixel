@@ -79,6 +79,10 @@ def main():
                                         updates=256,endpoints=(128,256))
                     a=torch.load(base/'full/checkpoint.pt',weights_only=True)
                     b=torch.load(base/'resumed/checkpoint.pt',weights_only=True)
+                    for location in ('full','resumed'):
+                        for endpoint in (128,256):
+                            saved=torch.load(base/location/f'checkpoint_u{endpoint}.pt',weights_only=True)
+                            self.assertEqual(saved['update'],endpoint)
                     keys=('head','optimizer','cpu_rng','context_rng','mask_rng','frozen_body_digest')
                     self.assertEqual(state_digest({k:a[k] for k in keys}),state_digest({k:b[k] for k in keys}))
                     self.assertEqual([x['batch_witness_sha256'] for x in full['curve']],
@@ -108,6 +112,16 @@ def main():
             self.assertTrue(all(torch.equal(x,y) for x,y in zip(first,second)))
             roles=banks['train']['roles'][first[0]]
             self.assertTrue(torch.equal(torch.bincount(roles,minlength=4),torch.full((4,),16)))
+
+        def test_archival_callback_preserves_training_states(self):
+            body,_,banks=self.fixture();parent=dict(parent_case='synthetic_fixture',init_seed=200)
+            with tempfile.TemporaryDirectory(dir=dest) as folder:
+                base=pathlib.Path(folder);calls=[]
+                result=ex.fit_head(body,'local_query',banks,base,'fixture_plan',parent,
+                    updates=1152,endpoints=(1024,1152),archive_callback=lambda:calls.append(
+                    json.loads((base/'progress.json').read_text())['update']))
+                self.assertEqual(calls,[1024,1152])
+                self.assertEqual(result['new_backbone_updates'],0)
 
     result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Contracts))
     files=[pathlib.Path(__file__),ROOT/'neuropixel/research/readout_experiment.py',ROOT/'scripts/research_READ03.py']

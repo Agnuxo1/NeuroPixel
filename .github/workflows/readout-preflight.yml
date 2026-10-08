@@ -10,6 +10,8 @@ on:
       - neuropixel/research/readout_experiment.py
       - scripts/research_READ03.py
       - scripts/test_readout_experiment_contracts.py
+      - neuropixel/research/readout_transport.py
+      - scripts/test_READ03_transport.py
       - docs/research/READ03_parent_inventory.json
 permissions:
   contents: write
@@ -50,6 +52,8 @@ jobs:
         run: python scripts/test_frozen_readout_contracts.py
       - name: Cache reference decisions, head-only fitting and interrupted-resume fixtures
         run: python scripts/test_readout_experiment_contracts.py
+      - name: Bounded archive and preservation contracts
+        run: python scripts/test_READ03_transport.py
       - name: Admit all twelve actual closed parents without fitting
         run: python scripts/admit_READ03_parents.py --recover-cloud --expected-inventory-sha256 f2574cabde30ff6a613ddbae591646efb4dc4aba6124e99761ade7c140637414
       - name: Preserve factual preflight receipts in Git
@@ -67,6 +71,8 @@ jobs:
               if path.exists():m.publish_immutable(base+name,path.read_bytes());available.append(name)
           controller=Path('results/research/READ03_controller_contracts/receipt.json')
           if controller.exists():m.publish_immutable(base+'controller_receipt.json',controller.read_bytes());available.append('controller_receipt.json')
+          archive=Path('results/research/READ03_transport_contracts/receipt.json')
+          if archive.exists():m.publish_immutable(base+'archive_receipt.json',archive.read_bytes());available.append('archive_receipt.json')
           receipt={'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'available_receipts':available,'scientific_head_fits':0,'new_backbone_updates':0,'scientific_dataset_evaluations':0,'test_accessed':False,'scope':'Untrained synthetic fixtures plus restoration/freeze of all12actual bodies; not a scientific fitting experiment'}
           m.publish_immutable(base+'scope_receipt.json',(json.dumps(receipt,indent=2)+'\n').encode())
           print(json.dumps(receipt))

@@ -2,6 +2,7 @@
 import hashlib
 import json
 import pathlib
+import shutil
 import time
 
 import torch
@@ -184,7 +185,7 @@ def restore(reader, optimizer, context_rng, mask_rng, payload):
     reader.assert_frozen()
 
 
-def fit_head(body, mode, banks, output, plan_hash, parent, updates=8192, endpoints=(1024,4096,8192), stop_after=None):
+def fit_head(body, mode, banks, output, plan_hash, parent, updates=8192, endpoints=(1024,4096,8192), stop_after=None, archive_callback=None):
     """Stateful fitting of new head only, with intact restart/closed-run guards."""
     output = pathlib.Path(output)
     final_path = output/'result.json'
@@ -220,6 +221,8 @@ def fit_head(body, mode, banks, output, plan_hash, parent, updates=8192, endpoin
                    plan_sha256=plan_hash,update=update,curve=curve,evaluations=evaluations,
                    resources=resources,elapsed_update_seconds=elapsed,
                    effective_gradient_parameters=effective_parameters))
+        save_json(output/'progress.json',dict(config=config,plan_sha256=plan_hash,update=update,
+                  frozen_body_digest=body_digest(body),checkpoint_sha256=sha(checkpoint),test_accessed=False))
     def endpoint(update):
         panels = {}
         for panel in ('probe', 'validation'):
@@ -229,6 +232,11 @@ def fit_head(body, mode, banks, output, plan_hash, parent, updates=8192, endpoin
             panels[panel] = dict(metrics=result['metrics'], artifact_sha256=sha(path))
         evaluations.append(dict(update=update, panels=panels, test_accessed=False))
         persist(update)
+        snapshot = output/f'checkpoint_u{update}.pt'
+        if snapshot.exists() and snapshot.read_bytes() != checkpoint.read_bytes():
+            raise ValueError('Preserved evaluated head checkpoint differs')
+        if not snapshot.exists():
+            shutil.copyfile(checkpoint,snapshot)
     if last in endpoints and last not in [e['update'] for e in evaluations]:
         endpoint(last)
     losses, witnesses = [], hashlib.sha256()
@@ -249,6 +257,11 @@ def fit_head(body, mode, banks, output, plan_hash, parent, updates=8192, endpoin
             persist(update)
             if update in endpoints:
                 endpoint(update)
+            if archive_callback is not None and update % 1024 == 0 and update < updates:
+                before_archive=state_digest(training_state(reader,optimizer,context_rng,mask_rng))
+                archive_callback()
+                if state_digest(training_state(reader,optimizer,context_rng,mask_rng)) != before_archive:
+                    raise ValueError('Archival changed head/optimizer/RNG')
             print(json.dumps({'event':'head_progress','parent':parent['parent_case'],'mode':mode,'update':update}),flush=True)
             if stop_after and update >= stop_after:
                 return None
@@ -262,4 +275,6 @@ def fit_head(body, mode, banks, output, plan_hash, parent, updates=8192, endpoin
                   effective_gradient_parameters=effective_parameters,
                   matched_joint_competence_gate_passed=gate,test_accessed=False)
     save_json(final_path,result)
+    if archive_callback is not None:
+        archive_callback()
     return result

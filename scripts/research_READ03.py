@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import pathlib
+import os
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -66,6 +67,10 @@ def main():
     from neuropixel.research.experiment import configure_runtime, environment_record
     from neuropixel.research.OPT03_role_views import transform
     from neuropixel.research.readout_experiment import paired_training_dataset, extract_bank, fit_head, save_state, save_json, MODES
+    from neuropixel.research import readout_transport
+    publish=os.environ.get('READ03_PUBLISH_AFTER_FIT')=='1'
+    if publish:
+        readout_transport.recover(args.output,{d['parent_case']+'__'+m for d in inventory['parents'] for m in MODES},args.expected_plan_sha256)
     environment = environment_record(configure_runtime('cpu',2))
     task = ResearchRoleTask(seed=0)
     datasets = {'train':paired_training_dataset(task)}
@@ -133,7 +138,8 @@ def main():
                 save_state(cache,dict(identity=identity,bank=bank,tensor_digest=state_digest(bank)))
             banks[panel] = bank
         for mode in MODES:
-            result = fit_head(body,mode,banks,parent_folder/mode,args.expected_plan_sha256,descriptor)
+            archive=(lambda m=mode:readout_transport.publish_fit(args.output,case,m,args.plan)) if publish else None
+            result = fit_head(body,mode,banks,parent_folder/mode,args.expected_plan_sha256,descriptor,archive_callback=archive)
             completed.append(dict(parent=case,mode=mode,checkpoint_sha256=result['checkpoint_sha256']))
         del banks, body, payload
     save_json(args.output/'cohort_progress.json',dict(plan_sha256=args.expected_plan_sha256,
