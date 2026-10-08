@@ -16,6 +16,8 @@ archive=importlib.util.module_from_spec(spec);spec.loader.exec_module(archive)
 
 
 def main():
+    observer_path=ROOT/'scripts/watch_READ03.py'
+    if not observer_path.is_file():raise ValueError('Required exact-run recovery observer missing; no replay started')
     plan=json.loads((ROOT/'docs/research/READ03_execution_plan.json').read_text(encoding='utf-8'))
     parents=json.loads((ROOT/'docs/research/READ03_parent_inventory.json').read_text(encoding='utf-8'))
     archive.recover_existing(ROOT/'results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort',
@@ -24,7 +26,7 @@ def main():
     out=ROOT/'results/research/READ03_readonly_verification';out.mkdir(parents=True,exist_ok=True)
     records,missing=[],[]
     with (out/'observer.log').open('w',encoding='utf-8') as log:
-        observer=subprocess.Popen([sys.executable,'scripts/watch_READ03.py'],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
+        observer=subprocess.Popen([sys.executable,str(observer_path)],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
         try:
             for conf in plan['runs']:
                 case=conf['run_id'];folder=base/conf['parent_case']/conf['mode']

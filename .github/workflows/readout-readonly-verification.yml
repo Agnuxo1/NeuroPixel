@@ -7,6 +7,7 @@ on:
       - scripts/replay_READ03.py
       - scripts/verify_READ03_archived_fits.py
       - scripts/test_READ03_recount.py
+      - scripts/watch_READ03.py
 permissions:
   contents: write
 concurrency:
@@ -39,6 +40,7 @@ jobs:
           from scripts.research_READ03 import load_plan
           assert psutil.virtual_memory().available/2**30>=8
           load_plan(Path('docs/research/READ03_execution_plan.json'),'d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0')
+          assert Path('scripts/watch_READ03.py').is_file()
           print('Admission passed; zero optimizer updates and no final test')
           PY
           python scripts/test_READ03_recount.py -v
