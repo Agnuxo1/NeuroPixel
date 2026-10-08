@@ -1,0 +1,49 @@
+name: NeuroPixel QTRAIN preflight only
+on:
+  push:
+    branches: [research/query-supervision-development-2026-10-08]
+    paths:
+      - .github/workflows/opt03-qtrain.yml
+      - scripts/research_OPT03_qtrain.py
+      - scripts/test_OPT03_qtrain.py
+      - neuropixel/research/qtrain.py
+permissions:
+  contents: write
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fixed CPU dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Actual RAM admission
+        run: python -c "import psutil; assert psutil.virtual_memory().available/2**30>=8"
+      - name: Query policy and resume contracts only
+        run: python scripts/test_OPT03_qtrain.py
+      - name: Preserve preflight receipt in Git
+        if: always()
+        env:
+          ARCHIVE_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64,json,os,urllib.request
+          from pathlib import Path
+          p=Path('results/research/OPT03_QTRAIN_contracts/receipt.json')
+          if p.exists():
+              data=p.read_bytes();d=json.loads(data);d.update(source_commit=os.environ['GITHUB_SHA'],workflow_run_id=os.environ['GITHUB_RUN_ID'],scientific_training_started=False)
+              body=(json.dumps(d,indent=2)+'\n').encode();path='results/research/OPT03_QTRAIN_preflight/'+os.environ['GITHUB_RUN_ID']+'/receipt.json'
+              payload={'message':'Preserve QTRAIN preflight only','branch':os.environ['GITHUB_REF_NAME'],'content':base64.b64encode(body).decode()}
+              req=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/'+path,data=json.dumps(payload).encode(),method='PUT',headers={'Authorization':'Bearer '+os.environ['ARCHIVE_TOKEN'],'Content-Type':'application/json','Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(req,timeout=60) as r:assert r.status==201
+          PY
