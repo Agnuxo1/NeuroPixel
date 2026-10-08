@@ -1,0 +1,62 @@
+name: NeuroPixel DEV04 fresh-body and partition contracts
+on:
+  push:
+    branches: [research/dev04-preflight-2026-10-08]
+    paths:
+      - .github/workflows/dev04-preflight.yml
+      - neuropixel/research/dev04.py
+      - scripts/test_DEV04_contracts.py
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-dev04-preflight-20261008
+  cancel-in-progress: false
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed scientific CPU software
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Actual RAM and immutable numerical source admission
+        run: |
+          python - <<'PY'
+          import hashlib,json,psutil
+          from pathlib import Path
+          assert psutil.virtual_memory().available/2**30>=8
+          raw=Path('docs/research/READ03_execution_plan.json').read_bytes()
+          assert hashlib.sha256(raw).hexdigest()=='d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0'
+          for name,digest in json.loads(raw)['source_sha256'].items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest
+          print('Original32sources unchanged; no scientific cohort training')
+          PY
+      - name: Fresh partition, initialization and resume fixtures
+        run: python scripts/test_DEV04_contracts.py
+      - name: Preserve factual contract receipt
+        if: always()
+        run: |
+          python - <<'PY'
+          import importlib.util,json,os
+          from pathlib import Path
+          spec=importlib.util.spec_from_file_location('archive','neuropixel/research/qtrain_budget_transport.py')
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          prefix='results/research/DEV04_preflight_cloud/'+os.environ['GITHUB_RUN_ID']+'/'
+          available=[]
+          for name in ('receipt.json','local_admission_refused.json'):
+              p=Path('results/research/DEV04_contracts')/name
+              if p.exists():m.publish_immutable(prefix+name,p.read_bytes());available.append(name)
+          scope={'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'available_receipts':available,'scientific_body_fits':0,'scientific_head_fits':0,'test_scored':False,'scope':'Untrained synthetic fitting fixtures and test partition identities; not DEV04 scientific cohort'}
+          m.publish_immutable(prefix+'scope_receipt.json',(json.dumps(scope,indent=2)+'\n').encode())
+          print(json.dumps(scope))
+          PY
