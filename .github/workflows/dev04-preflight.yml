@@ -6,6 +6,11 @@ on:
       - .github/workflows/dev04-preflight.yml
       - neuropixel/research/dev04.py
       - scripts/test_DEV04_contracts.py
+      - neuropixel/research/dev04_transport.py
+      - scripts/test_DEV04_transport.py
+      - scripts/describe_DEV04_partitions.py
+      - scripts/research_DEV04.py
+      - scripts/test_DEV04_cli.py
 permissions:
   contents: write
 concurrency:
@@ -43,6 +48,12 @@ jobs:
           PY
       - name: Fresh partition, initialization and resume fixtures
         run: python scripts/test_DEV04_contracts.py
+      - name: Immutable case archive contracts
+        run: python scripts/test_DEV04_transport.py
+      - name: Frozen manifest execution-admission contracts
+        run: python scripts/test_DEV04_cli.py
+      - name: Admit twelve fresh initializations and pin development partitions
+        run: python scripts/describe_DEV04_partitions.py
       - name: Preserve factual contract receipt
         if: always()
         run: |
@@ -53,9 +64,13 @@ jobs:
           m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
           prefix='results/research/DEV04_preflight_cloud/'+os.environ['GITHUB_RUN_ID']+'/'
           available=[]
-          for name in ('receipt.json','local_admission_refused.json'):
+          for name in ('receipt.json','local_admission_refused.json','partition_inventory.json'):
               p=Path('results/research/DEV04_contracts')/name
               if p.exists():m.publish_immutable(prefix+name,p.read_bytes());available.append(name)
+          p=Path('results/research/DEV04_transport_contracts/receipt.json')
+          if p.exists():m.publish_immutable(prefix+'archive_receipt.json',p.read_bytes());available.append('archive_receipt.json')
+          p=Path('results/research/DEV04_cli_contracts/receipt.json')
+          if p.exists():m.publish_immutable(prefix+'cli_receipt.json',p.read_bytes());available.append('cli_receipt.json')
           scope={'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'available_receipts':available,'scientific_body_fits':0,'scientific_head_fits':0,'test_scored':False,'scope':'Untrained synthetic fitting fixtures and test partition identities; not DEV04 scientific cohort'}
           m.publish_immutable(prefix+'scope_receipt.json',(json.dumps(scope,indent=2)+'\n').encode())
           print(json.dumps(scope))

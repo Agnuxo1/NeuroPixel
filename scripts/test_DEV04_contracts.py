@@ -95,6 +95,18 @@ def main():
                 wrong=dict(config,init_seed=401)
                 with self.assertRaises(ValueError):ex.fit_body(wrong,task,data,folder,'fixture-plan',env,endpoints=(128,256))
 
+        def test_wrong_prospective_birth_rejected_before_update(self):
+            config,task,data=self.fixture()
+            with tempfile.TemporaryDirectory(dir=DEST) as d:
+                folder=pathlib.Path(d)
+                with self.assertRaises(ValueError):ex.fit_body(config,task,data,folder,'fixture-plan',env,endpoints=(128,256),expected_birth='wrong-birth')
+                self.assertFalse((folder/'checkpoint.pt').exists())
+
+        def test_wrong_partition_rejected_before_initialization(self):
+            config,task,data=self.fixture();wrong=ex.DevelopmentRoleTask(102)
+            with tempfile.TemporaryDirectory(dir=DEST) as d,patch.object(ex,'new_objects',side_effect=AssertionError('No initialization on wrong partition')):
+                with self.assertRaises(ValueError):ex.fit_body(config,wrong,data,pathlib.Path(d),'fixture-plan',env,endpoints=(128,256))
+
     result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Contracts))
     receipt=dict(status='passed' if result.wasSuccessful() else 'failed',tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),
         available_ram_gib=ram,environment=env,scientific_body_fits=0,scientific_head_fits=0,test_scored=False,

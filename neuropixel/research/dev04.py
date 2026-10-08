@@ -91,7 +91,7 @@ def check_resume(payload,config,plan_hash,birth,environment):
         raise ValueError('Initial state digest differs')
 
 
-def fit_body(config,task,datasets,output,plan_hash,environment,endpoints=(8192,16384),stop_after=None,archive_callback=None):
+def fit_body(config,task,datasets,output,plan_hash,environment,endpoints=(8192,16384),stop_after=None,archive_callback=None,expected_birth=None):
     """Durable fresh fitting; skips closed bodies before admission/initialization."""
     output=pathlib.Path(output);final=output/'result.json'
     if final.exists():
@@ -100,12 +100,15 @@ def fit_body(config,task,datasets,output,plan_hash,environment,endpoints=(8192,1
             or result['last_update']!=config['updates'] or sha(output/'checkpoint.pt')!=result['checkpoint_sha256']):raise ValueError('Closed fresh-body identity differs')
         return result
     budget.require_ram();task.check_partitions()
+    if task.split_seed!=config['partition_seed']:raise ValueError('Current task partition differs from registered body configuration')
     model,opt,sampler,query_rng=new_objects(config)
     birth=budget.state_digest(model.state_dict());checkpoint=output/'checkpoint.pt'
+    if expected_birth is not None and birth!=expected_birth:raise ValueError('Fresh model initialization differs from prospective admission hash')
     curve,evaluations,resources=[],[],[];elapsed=0.;last=0
     if checkpoint.exists():
         payload=torch.load(checkpoint,map_location='cpu',weights_only=True)
         check_resume(payload,config,plan_hash,birth,environment)
+        if payload['partition']!=task.partition_record():raise ValueError('Resume partition membership differs')
         budget.restore(model,opt,sampler,query_rng,payload,payload['training_state_digest'])
         last=payload['update'];curve=payload['curve'];evaluations=payload['evaluations'];resources=payload['resources'];elapsed=payload['elapsed_update_seconds']
         if [w['update'] for w in curve]!=list(range(128,last+1,128)):raise ValueError('Missing/repeated durable prefix')
