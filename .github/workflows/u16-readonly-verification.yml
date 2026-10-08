@@ -1,0 +1,46 @@
+name: NeuroPixel U16 read-only checkpoint verification
+on:
+  push:
+    branches: [research/query-budget-replay-2026-10-08]
+    paths:
+      - .github/workflows/u16-readonly-verification.yml
+      - scripts/replay_OPT03_QTRAIN_U16.py
+      - scripts/verify_U16_archived_cases.py
+      - scripts/watch_OPT03_QTRAIN_U16.py
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-u16-readonly-verification-20261008
+  cancel-in-progress: false
+jobs:
+  readonly-verification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed parent CPU dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: RAM and exact governing sources admission
+        run: |
+          python - <<'PY'
+          import hashlib,json,psutil
+          from pathlib import Path
+          raw=Path('docs/research/OPT03_QTRAIN_U16_plan.json').read_bytes()
+          assert hashlib.sha256(raw).hexdigest()=='a4093bb8d559404b9f68587b753f8cea180a1e75d33363a04c1f2c7ebcb22dc0'
+          for name,digest in json.loads(raw)['source_sha256'].items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest
+          ram=psutil.virtual_memory().available/2**30;assert ram>=8
+          print(json.dumps({'available_ram_gib':ram,'new_updates':0,'test_accessed':False}))
+          PY
+      - name: Replay published exact continuation cases without optimizer steps
+        run: python scripts/verify_U16_archived_cases.py
