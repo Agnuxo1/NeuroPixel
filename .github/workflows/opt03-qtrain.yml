@@ -1,23 +1,26 @@
-name: NeuroPixel QTRAIN preflight only
+name: NeuroPixel QTRAIN controlled development
 on:
   push:
     branches: [research/query-supervision-development-2026-10-08]
     paths:
       - .github/workflows/opt03-qtrain.yml
-      - scripts/research_OPT03_qtrain.py
-      - scripts/test_OPT03_qtrain.py
+      - docs/research/OPT03_QTRAIN_plan.json
       - neuropixel/research/qtrain.py
+      - scripts/research_OPT03_qtrain.py
 permissions:
   contents: write
 jobs:
-  preflight:
+  development:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 350
     env:
       OMP_NUM_THREADS: "2"
       MKL_NUM_THREADS: "2"
       PYTHONUTF8: "1"
       CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_PUBLISH_AFTER_CASE: "1"
+      QTRAIN_ARCHIVE_TOKEN: ${{ github.token }}
+      EXPECTED_PLAN_SHA256: "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,23 +30,45 @@ jobs:
         run: |
           python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
-      - name: Actual RAM admission
-        run: python -c "import psutil; assert psutil.virtual_memory().available/2**30>=8"
-      - name: Query policy and resume contracts only
-        run: python scripts/test_OPT03_qtrain.py
-      - name: Preserve preflight receipt in Git
-        if: always()
-        env:
-          ARCHIVE_TOKEN: ${{ github.token }}
+      - name: Exact plan and Git blob identity plus RAM admission
         run: |
           python - <<'PY'
-          import base64,json,os,urllib.request
+          import hashlib,importlib.util,json,os,psutil,urllib.request
           from pathlib import Path
-          p=Path('results/research/OPT03_QTRAIN_contracts/receipt.json')
-          if p.exists():
-              data=p.read_bytes();d=json.loads(data);d.update(source_commit=os.environ['GITHUB_SHA'],workflow_run_id=os.environ['GITHUB_RUN_ID'],scientific_training_started=False)
-              body=(json.dumps(d,indent=2)+'\n').encode();path='results/research/OPT03_QTRAIN_preflight/'+os.environ['GITHUB_RUN_ID']+'/receipt.json'
-              payload={'message':'Preserve QTRAIN preflight only','branch':os.environ['GITHUB_REF_NAME'],'content':base64.b64encode(body).decode()}
-              req=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/'+path,data=json.dumps(payload).encode(),method='PUT',headers={'Authorization':'Bearer '+os.environ['ARCHIVE_TOKEN'],'Content-Type':'application/json','Accept':'application/vnd.github+json'})
-              with urllib.request.urlopen(req,timeout=60) as r:assert r.status==201
+          p=Path('docs/research/OPT03_QTRAIN_plan.json');raw=p.read_bytes()
+          assert b'\r\n' not in raw
+          assert hashlib.sha256(raw).hexdigest()==os.environ['EXPECTED_PLAN_SHA256']
+          s=importlib.util.spec_from_file_location('q','scripts/research_OPT03_qtrain.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+          m.load_plan(p,os.environ['EXPECTED_PLAN_SHA256'])
+          req=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/docs/research/OPT03_QTRAIN_plan.json?ref='+os.environ['GITHUB_SHA'],headers={'Authorization':'Bearer '+os.environ['QTRAIN_ARCHIVE_TOKEN'],'Accept':'application/vnd.github+json'})
+          with urllib.request.urlopen(req,timeout=30) as r:meta=json.load(r)
+          assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==meta['sha']
+          ram=psutil.virtual_memory().available/2**30
+          assert ram>=8
+          print(json.dumps({'plan_sha256':os.environ['EXPECTED_PLAN_SHA256'],'git_blob':meta['sha'],'available_ram_gib':ram,'test_access':False}))
+          PY
+      - name: Query policy and resumability contracts
+        run: python scripts/test_OPT03_qtrain.py
+      - name: Twelve frozen development trainings with per-case Git archival
+        run: python scripts/research_OPT03_qtrain.py --expected-plan-sha256 "$EXPECTED_PLAN_SHA256"
+      - name: Preserve complete and partial owned cases
+        if: always()
+        run: |
+          python - <<'PY'
+          import base64,json,os,subprocess,sys,urllib.request
+          from pathlib import Path
+          root=Path('results/research/OPT03_QTRAIN');root.mkdir(parents=True,exist_ok=True)
+          complete=[];partial=[]
+          for case in sorted(root.glob('QTRAIN_*')):
+              if not case.is_dir():continue
+              if (case/'result.json').exists():complete.append(case.name);flag=[]
+              elif (case/'progress.json').exists():partial.append(case.name);flag=['--allow-partial']
+              else:continue
+              subprocess.run([sys.executable,'scripts/archive_OPT03_QTRAIN_case.py','--root',str(root),'--run-id',case.name,'--plan','docs/research/OPT03_QTRAIN_plan.json']+flag,check=True)
+          receipt={'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'complete_cases':complete,'partial_cases':partial,'expected_cases':12,'scientific_task3_complete':False,'scope':'Frozen development only, no final test; per-case archives require audit'}
+          body=(json.dumps(receipt,indent=2)+'\n').encode();path='results/research/OPT03_QTRAIN_cloud/'+os.environ['GITHUB_RUN_ID']+'/cohort_receipt.json'
+          payload={'branch':os.environ['GITHUB_REF_NAME'],'message':'Preserve QTRAIN cohort status','content':base64.b64encode(body).decode()}
+          req=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/'+path,data=json.dumps(payload).encode(),method='PUT',headers={'Authorization':'Bearer '+os.environ['QTRAIN_ARCHIVE_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'})
+          with urllib.request.urlopen(req,timeout=60) as r:assert r.status==201
+          print(json.dumps(receipt))
           PY
