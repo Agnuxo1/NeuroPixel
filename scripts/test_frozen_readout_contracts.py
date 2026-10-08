@@ -38,21 +38,23 @@ def main():
 
         def test_compact_state_preserves_all_head_logits_exactly(self):
             canvas, state = self.fixture()
-            packed = pack_visible_state(state, canvas)
-            for mode in ('query_attention', 'uniform_global', 'local_query'):
-                body = ResearchNCA(35, (7, 7)).double()
-                reader = FrozenReadout(body, mode).double()
-                identities = torch.nn.functional.embedding(canvas, body.dictionary()).permute(0, 3, 1, 2)
-                if mode == 'local_query':
-                    value = reader.head(state[:, :, 7, 7], identities[:, :, 7, 6])
-                    identity = body.read(state[:, :, 7, 7]+value['delta'])*value['identity_gate']
-                else:
-                    value = reader.head(state, identities, canvas, (7, 6))
-                    identity = body.read(state[:, :, 7, 7]+value['delta'])
-                expected = identity @ body.decoder_dictionary().T
-                expected[:, 0] = -1e4
-                torch.testing.assert_close(reader(packed), expected, atol=0, rtol=0)
-                self.assertEqual(sum(p.numel() for p in reader.head_parameters()), 3168)
+            for layout in (torch.contiguous_format, torch.channels_last):
+                source = state.contiguous(memory_format=layout)
+                packed = pack_visible_state(source, canvas)
+                for mode in ('query_attention', 'uniform_global', 'local_query'):
+                    body = ResearchNCA(35, (7, 7)).double()
+                    reader = FrozenReadout(body, mode).double()
+                    identities = torch.nn.functional.embedding(canvas, body.dictionary()).permute(0, 3, 1, 2)
+                    if mode == 'local_query':
+                        value = reader.head(source[:, :, 7, 7], identities[:, :, 7, 6])
+                        identity = body.read(source[:, :, 7, 7]+value['delta'])*value['identity_gate']
+                    else:
+                        value = reader.head(source, identities, canvas, (7, 6))
+                        identity = body.read(source[:, :, 7, 7]+value['delta'])
+                    expected = identity @ body.decoder_dictionary().T
+                    expected[:, 0] = -1e4
+                    torch.testing.assert_close(reader(packed), expected, atol=0, rtol=0)
+                    self.assertEqual(sum(p.numel() for p in reader.head_parameters()), 3168)
 
         def test_optimizer_changes_only_new_head_for_each_variant(self):
             canvas, state = self.fixture()

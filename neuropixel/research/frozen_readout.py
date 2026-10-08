@@ -25,6 +25,8 @@ def pack_visible_state(state, canvas):
         raise ValueError('Native visible int64 8x8 canvases required')
     if state.shape != (len(canvas), 48, 8, 8) or not torch.isfinite(state).all():
         raise ValueError('Finite 48-channel native states required')
+    if not (state.is_contiguous() or state.is_contiguous(memory_format=torch.channels_last)):
+        raise ValueError('Unsupported noncanonical state layout')
     mask = (canvas != 0).clone()
     mask[:, QUERY_POS[0], QUERY_POS[1]] = False
     if not (mask.flatten(1).sum(1) == 8).all():
@@ -33,7 +35,8 @@ def pack_visible_state(state, canvas):
     flat = state.permute(0, 2, 3, 1).reshape(len(canvas), 64, 48)
     facts = flat.gather(1, positions[:, :, None].expand(-1, -1, 48))
     return dict(canvas=canvas.detach().clone(), positions=positions.detach().clone(),
-                facts=facts.detach().clone(), local=state[:, :, OUTPUT_POS[0], OUTPUT_POS[1]].detach().clone())
+                facts=facts.detach().clone(), local=state[:, :, OUTPUT_POS[0], OUTPUT_POS[1]].detach().clone(),
+                channels_last=state.is_contiguous(memory_format=torch.channels_last))
 
 
 def unpack_visible_state(packed):
@@ -53,7 +56,10 @@ def unpack_visible_state(packed):
     flat = torch.zeros((len(canvas), 64, 48), dtype=facts.dtype, device=facts.device)
     flat.scatter_(1, positions[:, :, None].expand(-1, -1, 48), facts)
     flat[:, OUTPUT_POS[0]*8+OUTPUT_POS[1]] = local
-    return flat.reshape(len(canvas), 8, 8, 48).permute(0, 3, 1, 2)
+    # Preserve the original layout. A layout change can select a different GEMM
+    # reduction order, despite identical values at every consumed cell.
+    memory_format = torch.channels_last if packed['channels_last'] else torch.contiguous_format
+    return flat.reshape(len(canvas), 8, 8, 48).permute(0, 3, 1, 2).contiguous(memory_format=memory_format)
 
 
 class FrozenReadout(nn.Module):
@@ -82,7 +88,9 @@ class FrozenReadout(nn.Module):
         canvas = packed['canvas']
         state = unpack_visible_state(packed)
         identities = torch.nn.functional.embedding(canvas, self.backbone.dictionary()).permute(0, 3, 1, 2)
-        local = packed['local']
+        # Use the reconstructed view, retaining its original leading/channel
+        # strides for the local MLP as well as the global attention projections.
+        local = state[:, :, OUTPUT_POS[0], OUTPUT_POS[1]]
         if self.mode == 'local_query':
             out = self.head(local, identities[:, :, QUERY_POS[0], QUERY_POS[1]])
             identity = self.backbone.read(local + out['delta']) * out['identity_gate']
