@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-10-08T05:27:36.707683+00:00",
+  "scope": "Read-only exact endpoint verification, not new scientifictraining or externalreplication",
+  "scientific_source": "6a5af5b68aaa9173edf46658dd8f9d16845fbad6",
+  "science_run": 37728384380,
+  "branch": "research/query-supervision-replay-2026-10-08",
+  "minimum_RAM_gib": 8,
+  "threads": 2,
+  "no_paid_runner_or_Actions_storage_cache": true,
+  "files_sha256": {
+    "scripts/verify_QTRAIN_archived_cases.py": "22f775c33599707af759642fffb512f565524a0241f32b45975e68dd19c15b12",
+    "scripts/replay_OPT03_QTRAIN.py": "58ab46862eb0fe998c0fae9f0870ed3e1564810c0043234218cec7044250cade",
+    "scripts/watch_OPT03_QTRAIN.py": "15e079272ba2d4a54acb6a85547a2619ab2d75277ca03ec06b1c8d5b34bf0d13",
+    ".github/workflows/qtrain-readonly-verification.yml": "627e11ae868cc797af6fe82807ab94aa594d2c9ca0baf7e7904ba3f8733b431b"
+  },
+  "experiment_unchanged": true
+}
