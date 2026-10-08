@@ -79,7 +79,7 @@ def main():
         payload=torch.load(checkpoint,map_location='cpu',weights_only=True)
         model,opt,sampler,query_rng=study.new_objects(conf)
         birth=state_digest(model.state_dict());study.check_resume(payload,conf,args.expected_plan_sha256,birth,environment)
-        actual=validate_state(payload,16384,conf,args.expected_plan_sha256);restore(model,opt,sampler,query_rng,payload,actual)
+        actual=validate_state(payload,conf['updates'],conf,args.expected_plan_sha256);restore(model,opt,sampler,query_rng,payload,actual)
         for parameter in model.parameters():parameter.requires_grad_(False);parameter.grad=None
         datasets=dict(train=paired_training_dataset(task),**data)
         for panel,arrays in data.items():datasets[panel+'_query_flip']=tuple(torch.from_numpy(v) for v in transform(*(x.numpy() for x in arrays),'query_flip'))
@@ -95,7 +95,7 @@ def main():
             else:
                 bank=extract_bank(model,arrays,seeds)
                 if panel!='train':
-                    base=panel.replace('_query_flip','');reference=folder/'body/decisions'/f'u16384_{base}_matched.npz'
+                    base=panel.replace('_query_flip','');reference=folder/'body/decisions'/f'u{conf["updates"]}_{base}_matched.npz'
                     field='query_predictions' if panel.endswith('_query_flip') else 'predictions'
                     with np.load(reference,allow_pickle=False) as prior:
                         if not np.array_equal(bank['predictions'].numpy(),prior[field]):raise ValueError('State extraction changed original body decisions')

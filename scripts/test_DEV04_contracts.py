@@ -107,6 +107,30 @@ def main():
             with tempfile.TemporaryDirectory(dir=DEST) as d,patch.object(ex,'new_objects',side_effect=AssertionError('No initialization on wrong partition')):
                 with self.assertRaises(ValueError):ex.fit_body(config,wrong,data,pathlib.Path(d),'fixture-plan',env,endpoints=(128,256))
 
+        def test_complete_controller_fixture_body_and_two_heads(self):
+            from scripts import research_DEV04 as cli
+            from neuropixel.research import readout_experiment as heads
+            config,task,data=self.fixture();config['run_id']='DEV04_partition101_fixture'
+            initial=ex.new_objects(config)[0];birth=budget.state_digest(initial.state_dict())
+            plan=dict(runs=[config],partitions={'101':task.partition_record()},modes=['query_attention','local_query'],initial_body_model_digests={config['run_id']:birth})
+            real_body,real_panels,real_head,real_head_data=ex.fit_body,ex.panels,heads.fit_head,heads.paired_training_dataset
+            def body(*a,**kw):return real_body(*a,**kw,endpoints=(128,256))
+            def small_panels(t):return real_panels(t,64,64)
+            def head(*a,**kw):return real_head(*a,**kw,updates=256,endpoints=(128,256))
+            def head_data(t):return real_head_data(t,n=64)
+            with tempfile.TemporaryDirectory(dir=DEST) as d:
+                argv=['research_DEV04.py','--expected-plan-sha256','fixture-plan','--output',d]
+                with patch('sys.argv',argv),patch.dict('os.environ',{'DEV04_PUBLISH':'0'}),patch.object(cli,'load_plan',return_value=plan),patch.object(ex,'fit_body',side_effect=body),patch.object(ex,'panels',side_effect=small_panels),patch.object(heads,'fit_head',side_effect=head),patch.object(heads,'paired_training_dataset',side_effect=head_data):
+                    cli.main()
+                folder=pathlib.Path(d)/config['run_id'];record=json.loads((folder/'result.json').read_text())
+                self.assertTrue(record['new_body_initialization']);self.assertFalse(record['historical_checkpoint_loaded']);self.assertFalse(record['test_scored'])
+                self.assertEqual(set(record['head_results_sha256']),{'query_attention','local_query'})
+                for mode in plan['modes']:
+                    result=json.loads((folder/mode/'result.json').read_text());self.assertEqual(result['new_backbone_updates'],0)
+                    self.assertEqual(result['effective_gradient_parameters'],3168)
+                with patch('sys.argv',argv),patch.object(cli,'load_plan',return_value=plan),patch.object(ex,'new_objects',side_effect=AssertionError('No refit of closed case')):
+                    cli.main()
+
     result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Contracts))
     receipt=dict(status='passed' if result.wasSuccessful() else 'failed',tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),
         available_ram_gib=ram,environment=env,scientific_body_fits=0,scientific_head_fits=0,test_scored=False,
