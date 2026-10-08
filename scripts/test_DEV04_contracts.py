@@ -125,6 +125,7 @@ def main():
                 folder=pathlib.Path(d)/config['run_id'];record=json.loads((folder/'result.json').read_text())
                 self.assertTrue(record['new_body_initialization']);self.assertFalse(record['historical_checkpoint_loaded']);self.assertFalse(record['test_scored'])
                 self.assertEqual(set(record['head_results_sha256']),{'query_attention','local_query'})
+                self.assertTrue((folder/'datasets/head_train.npz').exists())
                 for mode in plan['modes']:
                     result=json.loads((folder/mode/'result.json').read_text());self.assertEqual(result['new_backbone_updates'],0)
                     self.assertEqual(result['effective_gradient_parameters'],3168)

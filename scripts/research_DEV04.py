@@ -64,8 +64,8 @@ def main():
             continue
         require_ram();task=study.DevelopmentRoleTask(conf['partition_seed']);partition=task.partition_record()
         if partition!=plan['partitions'][str(conf['partition_seed'])]:raise ValueError('Prospective partition hashes/counts differ')
-        save_json(folder/'partition.json',partition);data=study.panels(task)
-        for panel,arrays in data.items():
+        save_json(folder/'partition.json',partition);data=study.panels(task);head_train=paired_training_dataset(task)
+        for panel,arrays in dict(head_train=head_train,**data).items():
             path=folder/'datasets'/(panel+'.npz');path.parent.mkdir(parents=True,exist_ok=True)
             if path.exists():
                 with np.load(path,allow_pickle=False) as saved:
@@ -81,7 +81,7 @@ def main():
         birth=state_digest(model.state_dict());study.check_resume(payload,conf,args.expected_plan_sha256,birth,environment)
         actual=validate_state(payload,conf['updates'],conf,args.expected_plan_sha256);restore(model,opt,sampler,query_rng,payload,actual)
         for parameter in model.parameters():parameter.requires_grad_(False);parameter.grad=None
-        datasets=dict(train=paired_training_dataset(task),**data)
+        datasets=dict(train=head_train,**data)
         for panel,arrays in data.items():datasets[panel+'_query_flip']=tuple(torch.from_numpy(v) for v in transform(*(x.numpy() for x in arrays),'query_flip'))
         banks={}
         for panel,arrays in datasets.items():
