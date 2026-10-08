@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "local_registration_id": "NP-OPT03-QTRAIN-20261008-D3",
+  "frozen_utc": "2026-10-08T04:31:09.721148+00:00",
+  "scope": "development only, no final test or H1 reinterpretation",
+  "runs": [
+    {
+      "run_id": "QTRAIN_paired_school0.0_seed200",
+      "init_seed": 200,
+      "policy": "paired",
+      "school_weight": 0.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_paired_school0.3_seed200",
+      "init_seed": 200,
+      "policy": "paired",
+      "school_weight": 0.3,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_repeated_school0.0_seed200",
+      "init_seed": 200,
+      "policy": "repeated",
+      "school_weight": 0.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_repeated_school0.3_seed200",
+      "init_seed": 200,
+      "policy": "repeated",
+      "school_weight": 0.3,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_paired_school0.0_seed201",
+      "init_seed": 201,
+      "policy": "paired",
+      "school_weight": 0.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_paired_school0.3_seed201",
+      "init_seed": 201,
+      "policy": "paired",
+      "school_weight": 0.3,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_repeated_school0.0_seed201",
+      "init_seed": 201,
+      "policy": "repeated",
+      "school_weight": 0.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_repeated_school0.3_seed201",
+      "init_seed": 201,
+      "policy": "repeated",
+      "school_weight": 0.3,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_paired_school0.0_seed202",
+      "init_seed": 202,
+      "policy": "paired",
+      "school_weight": 0.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_paired_school0.3_seed202",
+      "init_seed": 202,
+      "policy": "paired",
+      "school_weight": 0.3,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_repeated_school0.0_seed202",
+      "init_seed": 202,
+      "policy": "repeated",
+      "school_weight": 0.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "QTRAIN_repeated_school0.3_seed202",
+      "init_seed": 202,
+      "policy": "repeated",
+      "school_weight": 0.3,
+      "updates": 8192
+    }
+  ],
+  "training_count": 12,
+  "optimizer_updates": 98304,
+  "context_draws_per_update": 16,
+  "examples_per_update": 64,
+  "examples_per_role_per_update": 16,
+  "sampler_seed": 92002,
+  "query_assignment_seed": 92003,
+  "firing_seed": 92001,
+  "probe_n": 2048,
+  "probe_seed": 77001,
+  "validation_n": 4096,
+  "validation_seed": 77002,
+  "evaluation_mask_seeds": [
+    79000,
+    79001,
+    79002,
+    79003,
+    79004,
+    79005,
+    79006,
+    79007
+  ],
+  "endpoints": [
+    1024,
+    4096,
+    8192
+  ],
+  "expected_parameter_count": 29824,
+  "model": "historicalNP, PADlegacy,T16,tying/reinject,firing0.5",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "clip": 1.0
+  },
+  "competence_gate": {
+    "metric": "matched joint query binding",
+    "probe_minimum": 0.95,
+    "validation_minimum": 0.9,
+    "all_three_initializations": true
+  },
+  "minimum_available_ram_gib": 8,
+  "threads": 2,
+  "analysis": "paired factorial effects and interactions within each of3seeds;development df2 intervals;no masks/examples/endpoints inflate trainingn",
+  "source_sha256": {
+    "docs/research/OPT03_QTRAIN_protocol.md": "69e96c2e5cafbf6da0d32b61ae5dd3605fd23e6ffdf5f402747be1ed81dda690",
+    "neuropixel/research/qtrain.py": "06ea39527ee662ce7796572e11ef646fda55a18c2f3fd8edabf92da3d4cb4515",
+    "scripts/research_OPT03_qtrain.py": "4c0f4d368a5101a41847422b28f9ff76794a35cc961cf65ebbc4c3c6c34b9a8c",
+    "scripts/test_OPT03_qtrain.py": "5a31906bebe197d3b5440fabcde6cee20e41154da585bea3b71a5be0cd215d6b",
+    "scripts/archive_OPT03_QTRAIN_case.py": "50f655b2a95e931a7d4aed8efb78c527a1e5fd012f9103809c70261f83ec8381",
+    "neuropixel/research/OPT03_role_views.py": "990ce2532c2e19916fbe9bc8197da917b6c55ff2c80c654c6c6be5aa3fef5db2",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad"
+  },
+  "contracts_receipt": {
+    "status": "passed",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "scope": "Native batch transformations and tiny-model operational checks; no scientific NeuroPixel training or learned outcomes",
+    "source_commit": "aa0f77feed5ed4cb0855a8c2227e2655bc8ae8e2",
+    "workflow_run_id": "37727219968",
+    "scientific_training_started": false
+  },
+  "line_endings": "LF explicit; execution must supply independently frozen expected SHA256",
+  "archival": "Each completed case in Git before next; no Actions artifact/cache storage"
+}

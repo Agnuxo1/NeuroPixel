@@ -1,0 +1,160 @@
+{
+  "item": 5,
+  "frozen_at_utc": "2026-10-06T22:40:18.140123+00:00",
+  "protocol_id": "NP-SCI-20261006-v1",
+  "pilot_selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+  "planned_training_runs": 28,
+  "unique_initialization_split_pairs": [
+    [
+      10,
+      0
+    ],
+    [
+      11,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      13,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      10,
+      101
+    ],
+    [
+      10,
+      202
+    ]
+  ],
+  "primary_reference_family": "relative_transformer",
+  "selected_learning_rates": {
+    "convgru": 0.003,
+    "neuropixel": 0.003,
+    "relative_transformer": 0.001,
+    "standard_nca": 0.001
+  },
+  "resolved_models": {
+    "convgru": {
+      "dropout": 0.0,
+      "family": "convgru",
+      "h": 8,
+      "kwargs": {
+        "c": 24,
+        "c_id": 16
+      },
+      "out_pos": [
+        7,
+        7
+      ],
+      "parameters": 27835,
+      "primary_supervision": "answer_cross_entropy_only",
+      "recurrent_steps": 16,
+      "steps": 16,
+      "vocab": 35,
+      "w": 8
+    },
+    "neuropixel": {
+      "dropout": 0.0,
+      "family": "neuropixel",
+      "h": 8,
+      "kwargs": {
+        "c": 48,
+        "c_id": 16,
+        "fire_rate": 0.5,
+        "freeze_pad": false,
+        "hidden": 128,
+        "reinject": true,
+        "tied": true
+      },
+      "out_pos": [
+        7,
+        7
+      ],
+      "parameters": 29824,
+      "primary_supervision": "answer_cross_entropy_only",
+      "recurrent_steps": 16,
+      "steps": 16,
+      "vocab": 35,
+      "w": 8
+    },
+    "relative_transformer": {
+      "dropout": 0.0,
+      "family": "relative_transformer",
+      "h": 8,
+      "kwargs": {
+        "d": 32,
+        "ff": 128,
+        "heads": 4,
+        "layers": 2
+      },
+      "out_pos": [
+        7,
+        7
+      ],
+      "parameters": 29547,
+      "primary_supervision": "answer_cross_entropy_only",
+      "recurrent_steps": null,
+      "steps": 16,
+      "vocab": 35,
+      "w": 8
+    },
+    "standard_nca": {
+      "dropout": 0.0,
+      "family": "standard_nca",
+      "h": 8,
+      "kwargs": {
+        "c": 48,
+        "c_id": 16,
+        "fire_rate": 0.5,
+        "freeze_pad": false,
+        "hidden": 128,
+        "reinject": false,
+        "tied": false
+      },
+      "out_pos": [
+        7,
+        7
+      ],
+      "parameters": 30384,
+      "primary_supervision": "answer_cross_entropy_only",
+      "recurrent_steps": 16,
+      "steps": 16,
+      "vocab": 35,
+      "w": 8
+    }
+  },
+  "primary_dataset_hashes": {
+    "validation_dataset": "44873b31d17df696ceef3ff7c5fd2f1878921305d19623443780a443be364e0a",
+    "training_probe_dataset": "f74bb2ae12e99b579eeea485bf6c262805a73f3c086a94421478466fc166b564"
+  },
+  "allowed_configuration_changes": [
+    "phase",
+    "init_seed",
+    "split_seed",
+    "controller_source"
+  ],
+  "analysis_scope": "Five initializations conditional on split0; three splits conditional on init10; panels overlap and are not pooled.",
+  "failed_runs_policy": "Retain all evidence; failures never count as a complete positive H1 panel.",
+  "resource_policy": {
+    "cpu_threads_max": 4,
+    "gpu_queue_required": true,
+    "preserve_available_ram_gib": 8,
+    "preserve_gpu_memory_gib": 3.5,
+    "max_gpu_temperature_c": 83,
+    "paid_compute": false
+  },
+  "implementation_frozen_at_utc": "2026-10-06T22:45:11.123380+00:00",
+  "cpu_compatibility": {
+    "passed": 136,
+    "skipped": 2,
+    "seconds": 5.14
+  }
+}
