@@ -39,7 +39,7 @@ def main():
     from neuropixel.research.glob05_experiment import validate_head
     from replay_READ03 import recount
     environment=environment_record(configure_runtime('cpu',2));start=time.monotonic();body,parent_folder,datasets,old_attention=admit_parent(descriptor,inventory,environment,ROOT/'results/research/GLOB05_parent_recovery/cohort')
-    folder=a.case_folder;before={f.relative_to(folder).as_posix():sha(f) for f in folder.rglob('*') if f.is_file()};record=json.loads((folder/'result.json').read_bytes())
+    folder=a.case_folder;before={f.relative_to(folder).as_posix():sha(f) for f in folder.rglob('*') if f.is_file() and 'cache' not in f.relative_to(folder).parts};record=json.loads((folder/'result.json').read_bytes())
     issues=[];checks=0;decisions=0;maximum=0.
     def check(ok,label):
         nonlocal checks
