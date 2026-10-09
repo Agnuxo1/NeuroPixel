@@ -1,0 +1,36 @@
+{
+  "source": "authenticated_github_connector_workflow_job_logs",
+  "run_id": 37908785698,
+  "job_id": 113748614310,
+  "first_logged_utc": "2026-10-09T09:03:14.4293205Z",
+  "last_logged_utc": "2026-10-09T09:12:17.3574642Z",
+  "observed_log_span_seconds": 542.928,
+  "timeline": [
+    {
+      "utc": "2026-10-09T09:03:15.2050304Z",
+      "event": "##[group]Run actions/checkout@v4"
+    },
+    {
+      "utc": "2026-10-09T09:03:17.8933489Z",
+      "event": "##[group]Run actions/setup-python@v5"
+    },
+    {
+      "utc": "2026-10-09T09:03:24.9711035Z",
+      "event": "##[group]Run python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu"
+    },
+    {
+      "utc": "2026-10-09T09:03:56.3902575Z",
+      "event": "##[group]Run python scripts/research_VIS07_main.py --output results/research/VIS07_MAIN"
+    },
+    {
+      "utc": "2026-10-09T09:12:10.6926560Z",
+      "event": "{\"status\": \"completed_all_five_pairs\", \"selected_models\": 10, \"score_rows\": 55}"
+    },
+    {
+      "utc": "2026-10-09T09:12:11.1450866Z",
+      "event": "##[group]Run mkdir -p results/research/VIS07_MAIN"
+    }
+  ],
+  "scope": "Observed job log interval only; excludes provider queue before first log and later independent recovery/replay/graphics/publication. Main-script bracket includes data admission, all fits, DEV selection, model sealing, final scoring and its internal bookkeeping.",
+  "energy_measured": false
+}
