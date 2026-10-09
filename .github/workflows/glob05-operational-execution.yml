@@ -1,0 +1,91 @@
+name: NeuroPixel GLOB05 operational fixed-recipe execution
+on:
+  push:
+    branches: [research/glob05-global-information-control-2026-10-09]
+    paths:
+      - .github/workflows/glob05-operational-execution.yml
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-glob05-science-20261009
+  cancel-in-progress: false
+jobs:
+  control:
+    name: ${{ matrix.case }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        case:
+          - DEV04_partition101_seed400
+          - DEV04_partition101_seed401
+          - DEV04_partition101_seed402
+          - DEV04_partition101_seed403
+          - DEV04_partition102_seed404
+          - DEV04_partition102_seed405
+          - DEV04_partition102_seed406
+          - DEV04_partition102_seed407
+          - DEV04_partition103_seed408
+          - DEV04_partition103_seed409
+          - DEV04_partition103_seed410
+          - DEV04_partition103_seed411
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+      GLOB05_PUBLISH: "1"
+      GLOB05_CASE: ${{ matrix.case }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Identical fixed scientific CPU software
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Frozen old/new files and RAM admission
+        run: |
+          python - <<'PY'
+          import json,psutil
+          from pathlib import Path
+          from scripts.research_GLOB05 import load_plan
+          receipt=json.loads(Path('docs/research/GLOB05_executor_manifest.json').read_bytes())
+          assert psutil.virtual_memory().available/2**30>=8
+          load_plan(Path('docs/research/GLOB05_execution_plan.json'),receipt['plan_sha256'])
+          print('Fixed12newheads/0newbodies/0oldheadrefits,originaltestexcluded')
+          PY
+      - name: Only the one fixed new head for this case
+        run: |
+          h=$(python -c "import json;print(json.load(open('docs/research/GLOB05_executor_manifest.json'))['plan_sha256'])")
+          python scripts/research_GLOB05.py --case "$GLOB05_CASE" --recover-cloud --expected-plan-sha256 "$h"
+      - name: Independent numerical endpoint replay before success
+        run: |
+          h=$(python -c "import json;print(json.load(open('docs/research/GLOB05_executor_manifest.json'))['plan_sha256'])")
+          python scripts/replay_GLOB05.py --case "$GLOB05_CASE" --case-folder "results/research/GLOB05/$GLOB05_CASE" --output "results/research/GLOB05_replays/$GLOB05_CASE/replay.json" --expected-plan-sha256 "$h"
+      - name: Preserve durable head, numerical proof and exact attempt disposition
+        if: always()
+        run: |
+          python - <<'PY'
+          import os,json
+          from pathlib import Path
+          from neuropixel.research import glob05_transport as archive
+          case=os.environ['GLOB05_CASE'];branch=archive.select_case_archive_branch(case)
+          root=Path('results/research/GLOB05');folder=root/case;available=(folder/'progress.json').exists()
+          if available:archive.publish_case(root,case,Path('docs/research/GLOB05_execution_plan.json'))
+          proof=Path('results/research/GLOB05_replays')/case/'replay.json';verified=False
+          if proof.exists():
+              r=json.loads(proof.read_bytes());r.update(scientific_run_id=os.environ['GITHUB_RUN_ID'],scientific_source_commit=os.environ['GITHUB_SHA'],case_run_id=case)
+              verified=r['status']=='verified_readonly_GLOB05_control_replay' and not r['issues'] and r['individual_decisions_replayed']==294912
+              archive.old.publish_immutable('results/research/GLOB05_cloud/NP-GLOB05-20261009/proofs/'+os.environ['GITHUB_RUN_ID']+'/'+case+'/replay.json',(json.dumps(r,indent=2)+'\n').encode())
+          receipt=dict(source_commit=os.environ['GITHUB_SHA'],workflow_run_id=os.environ['GITHUB_RUN_ID'],case_run_id=case,archive_branch=branch,
+              durable_evidence_available=available,head_training_completed=(folder/'result.json').exists(),numerical_replay_verified=verified,
+              new_body_initializations=0,old_head_fits_repeated=0,original_DEV04_precision_reinterpreted=False,original_test_scored=False,scientific_task3_complete=False)
+          archive.old.publish_immutable('results/research/GLOB05_cloud/NP-GLOB05-20261009/attempts/'+os.environ['GITHUB_RUN_ID']+'/'+case+'/attempt_receipt.json',(json.dumps(receipt,indent=2)+'\n').encode())
+          print(json.dumps(receipt))
+          PY
+
