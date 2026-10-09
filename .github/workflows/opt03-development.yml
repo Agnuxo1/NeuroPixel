@@ -1,0 +1,71 @@
+name: NeuroPixel OPT03 development only
+on:
+  push:
+    branches: [research/optimization-development-2026-10-08]
+    paths:
+      - .github/workflows/opt03-development.yml
+      - scripts/research_OPT03_development.py
+      - docs/research/OPT03_execution_plan.json
+permissions:
+  contents: write
+jobs:
+  development:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      PYTHONUTF8: "1"
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fixed CPU environment
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Freeze and RAM admission
+        run: |
+          python - <<'PY'
+          import importlib.util, json, psutil
+          from pathlib import Path
+          s=importlib.util.spec_from_file_location('opt03','scripts/research_OPT03_development.py')
+          m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+          m.load_plan(Path('docs/research/OPT03_execution_plan.json'))
+          available=psutil.virtual_memory().available/2**30
+          print(json.dumps({'available_ram_gib':available,'minimum':8,'test_access':False}))
+          assert available>=8
+          PY
+      - name: Resumption and admission contracts
+        run: python scripts/test_OPT03_contracts.py
+      - name: Frozen twelve-run development cohort
+        run: python scripts/research_OPT03_development.py --device cpu
+      - name: Preserve all owned evidence in Git without Actions artifacts or cache
+        if: always()
+        env:
+          GH_ARCHIVE_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, os, urllib.request, zipfile
+          from pathlib import Path
+          root=Path('results/research/OPT03_development')
+          root.mkdir(parents=True,exist_ok=True)
+          files={str(p.relative_to(root)):{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(root.rglob('*')) if p.is_file()}
+          (root/'archive_manifest.json').write_text(json.dumps({'run_id':os.environ['GITHUB_RUN_ID'],'commit':os.environ['GITHUB_SHA'],'files':files,'scope':'development only, no final test'},indent=2)+'\n')
+          archive=Path('OPT03_raw.zip')
+          with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(root.rglob('*')):
+                  if p.is_file():z.write(p,str(p.relative_to(root)))
+          data=archive.read_bytes()
+          assert len(data)<50*1024**2
+          receipt={'run_id':os.environ['GITHUB_RUN_ID'],'source_commit':os.environ['GITHUB_SHA'],'archive_sha256':hashlib.sha256(data).hexdigest(),'archive_bytes':len(data),'files':len(files),'completed_runs':len(list(root.glob('*/result.json'))),'no_actions_artifact_storage':True}
+          branch=os.environ['GITHUB_REF_NAME'];repo=os.environ['GITHUB_REPOSITORY']
+          for name,body in [('raw.zip',data),('receipt.json',(json.dumps(receipt,indent=2)+'\n').encode())]:
+              path='results/research/OPT03_cloud/'+os.environ['GITHUB_RUN_ID']+'/'+name
+              payload={'message':'Archive OPT03 development evidence '+os.environ['GITHUB_RUN_ID'],'branch':branch,'content':base64.b64encode(body).decode()}
+              request=urllib.request.Request('https://api.github.com/repos/'+repo+'/contents/'+path,data=json.dumps(payload).encode(),method='PUT',headers={'Authorization':'Bearer '+os.environ['GH_ARCHIVE_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'})
+              with urllib.request.urlopen(request,timeout=60) as response:assert response.status==201
+          print(json.dumps(receipt))
+          PY

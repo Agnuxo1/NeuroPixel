@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "available_ram_gib": 14.514251708984375,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.6.0+cpu",
+      "psutil": "6.1.1",
+      "pytest": null,
+      "scipy": "1.15.1"
+    },
+    "device": "cpu",
+    "threads": 2,
+    "cuda_runtime": null,
+    "gpu_name": null,
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "scientific_body_fits": 0,
+  "scientific_head_fits": 0,
+  "test_scored": false,
+  "scope": "Fresh synthetic body fitting fixtures and reserved-test partition metadata only; not the twelve scientific body trainings"
+}

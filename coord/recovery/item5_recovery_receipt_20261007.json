@@ -1,0 +1,87 @@
+{
+  "schema": "neuropixel.item5.recovery_receipt.v1",
+  "written_at_utc": "2026-10-07T00:31:47Z",
+  "status": "scientifically_complete_local_access_unavailable",
+  "repository": "https://github.com/Agnuxo1/NeuroPixel",
+  "last_confirmed_local_commit": "376e38a",
+  "local_report": "/workspace/scratch/61d6e3e6e688/NeuroPixel-research/docs/research/05_results.md",
+  "local_report_review": "Root read the full final diff at 2026-10-07 00:15:36 UTC; author finalized it. Later read attempts by the second auditor failed due executor transport outage.",
+  "local_closure_commit": "unknown; do not assume it exists",
+  "cpu_completed_runs": 28,
+  "cpu_failed_runs": 0,
+  "cpu_training_source": "fbf576f0dcfd0149d2969eccb61e442c41c7d47f",
+  "cpu_training_loop_seconds": 2876.993445514003,
+  "cpu_worker_finished_at": "2026-10-07T00:06:21.326185+00:00",
+  "primary": {
+    "pairs": 5,
+    "init_seeds": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "neuropixel_binding": [
+      0.142578125,
+      0.09716796875,
+      0.07373046875,
+      0.169921875,
+      0.13623046875
+    ],
+    "relative_transformer_binding": [
+      0.4921875,
+      0.501953125,
+      0.48779296875,
+      0.4853515625,
+      0.50244140625
+    ],
+    "neuropixel_mean": 0.12392578125,
+    "reference_mean": 0.4939453125,
+    "paired_difference_mean": -0.37001953125,
+    "paired_t_ci95": [
+      -0.42030141465134446,
+      -0.3197376478486555
+    ],
+    "h1_status": "not_supported",
+    "all_28_training_probes_below_0_95": true
+  },
+  "audits": [
+    {
+      "path": "results/research/05_analysis.json",
+      "sha256": "11fd91ee4ddb8155fc9127e5f6b826535654842190f048fecd23c3dd6f31e436",
+      "status": "verified",
+      "issues": 0,
+      "hashes": 196
+    },
+    {
+      "path": "results/research/05_independent_check.json",
+      "sha256": "adef6b11f29a0c00c58f1cb10a95453ba056eea5e711d8462179bcfafcff1453",
+      "status": "verified",
+      "issues": 0,
+      "checks": 3152,
+      "predictions": 114688,
+      "hashes": 35
+    }
+  ],
+  "archive": {
+    "path": "results/research/05_experiment",
+    "files": 215,
+    "bytes": 6305023,
+    "checkpoints": 28,
+    "commit": "0a56621",
+    "availability": "Previously verified and committed locally; not available through the disconnected executor and not copied to Windows at time of receipt."
+  },
+  "windows_source": {
+    "path": "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\coord\\item5_source.zip",
+    "bytes": 209348,
+    "sha256": "1e927f206391c23ba5d2650b030fdd7b18a97eb7162ee9e439e6d49387d36070",
+    "entries": 77,
+    "scientific_files_verified": 8
+  },
+  "constraints": [
+    "Do not rerun completed replications solely to recover access.",
+    "Preserve interrupted GPU attempt separately.",
+    "This receipt does not replace original predictions, weights, or independent external replication.",
+    "Item 6 remains unopened until explicit scientific closure and migration record."
+  ]
+}

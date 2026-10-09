@@ -1,0 +1,66 @@
+name: NeuroPixel item 6 causal ablations
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  item6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install fixed CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pytest==9.1.1 pillow==11.3.0
+      - name: Environment and RAM gate
+        run: |
+          python - <<'PY'
+          import json, os, platform, psutil
+          row={"python":platform.python_version(),"platform":platform.platform(),
+               "cpu_count":os.cpu_count(),"ram_total_gib":psutil.virtual_memory().total/2**30,
+               "ram_available_gib":psutil.virtual_memory().available/2**30}
+          print(json.dumps(row))
+          assert row["ram_available_gib"] >= 8.0
+          PY
+      - name: Regression suite
+        run: python -m pytest -q
+      - name: Core causal ablations
+        run: python scripts/research_ablations.py --device cpu --threads 2 --minimum-ram-gib 8 --output runs/research/item6_actions/core
+      - name: Growth and routing panel
+        run: python scripts/research_growth.py --device cpu --threads 2 --minimum-ram-gib 8 --output runs/research/item6_actions/growth
+      - name: Frozen analysis
+        run: python scripts/research_analyze_item6.py --core runs/research/item6_actions/core/ablation_records.json --growth runs/research/item6_actions/growth/growth_records.json --output runs/research/item6_actions/item6_analysis.json
+      - name: Artifact manifest
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path("runs/research/item6_actions")
+          files=[]
+          for p in sorted(root.rglob("*")):
+              if p.is_file():
+                  files.append({"path":p.as_posix(),"bytes":p.stat().st_size,
+                                "sha256":hashlib.sha256(p.read_bytes()).hexdigest()})
+          (root/"artifact_manifest.json").write_text(json.dumps({"files":files},indent=2)+"\n")
+          print(json.dumps({"files":len(files),"bytes":sum(x["bytes"] for x in files)}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: neuropixel-item6-RUNID
+          path: runs/research/item6_actions
+          if-no-files-found: error
+          retention-days: 90
