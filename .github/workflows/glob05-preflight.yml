@@ -1,0 +1,42 @@
+name: NeuroPixel GLOB05 active global control synthetic preflight
+on:
+  push:
+    branches: [research/glob05-preflight-2026-10-09]
+    paths:
+      - .github/workflows/glob05-preflight.yml
+      - neuropixel/research/query_gated_uniform.py
+      - scripts/test_GLOB05_control.py
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-glob05-preflight-20261009
+  cancel-in-progress: false
+jobs:
+  synthetic-contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed CPU software
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Original frozen sources, RAM and synthetic-only control contracts
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from scripts.research_DEV04 import load_plan
+          import psutil
+          assert psutil.virtual_memory().available/2**30>=8
+          load_plan(Path('docs/research/DEV04_execution_plan.json'),'2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a')
+          print('43 governors intact; zero real scientific body/head fits')
+          PY
+          python scripts/test_GLOB05_control.py -v
