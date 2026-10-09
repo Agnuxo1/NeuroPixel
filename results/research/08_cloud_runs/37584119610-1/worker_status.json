@@ -1,0 +1,139 @@
+{
+  "bounded_optimizer_and_sampler_fixtures_requested": true,
+  "completed_at_utc": "2026-10-07T06:55:13.516990+00:00",
+  "item": 8,
+  "job_deadline_unix": 1791358136.0,
+  "minimum_sampled_available_ram_gib": 14.328044891357422,
+  "resource_limits": {
+    "aggregate_active_cpu_threads": 4,
+    "compatibility_fixture_max_threads": 2,
+    "interop_threads": 1,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 1,
+    "stage_seconds": 900,
+    "workflow_minutes": 35
+  },
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T06:55:01.805527+00:00",
+      "available_ram_gib": 14.512123107910156,
+      "phase": "worker_admission"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:02.367160+00:00",
+      "available_ram_gib": 14.513355255126953,
+      "phase": "before_legacy_padding_demonstration"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:02.367700+00:00",
+      "available_ram_gib": 14.513355255126953,
+      "phase": "running_legacy_padding_demonstration"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:03.367883+00:00",
+      "available_ram_gib": 14.413803100585938,
+      "phase": "running_legacy_padding_demonstration"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:04.368230+00:00",
+      "available_ram_gib": 14.353271484375,
+      "phase": "running_legacy_padding_demonstration"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:05.440890+00:00",
+      "available_ram_gib": 14.408191680908203,
+      "phase": "before_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:05.441381+00:00",
+      "available_ram_gib": 14.408191680908203,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:06.441537+00:00",
+      "available_ram_gib": 14.343578338623047,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:07.441862+00:00",
+      "available_ram_gib": 14.35036849975586,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:08.442161+00:00",
+      "available_ram_gib": 14.343196868896484,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:09.442518+00:00",
+      "available_ram_gib": 14.33828353881836,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:10.442868+00:00",
+      "available_ram_gib": 14.338676452636719,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:11.443159+00:00",
+      "available_ram_gib": 14.328102111816406,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:12.443427+00:00",
+      "available_ram_gib": 14.328044891357422,
+      "phase": "running_full_pytest"
+    },
+    {
+      "at_utc": "2026-10-07T06:55:13.516889+00:00",
+      "available_ram_gib": 14.543346405029297,
+      "phase": "worker_finished_before_archive"
+    }
+  ],
+  "run_key": "37584119610-1",
+  "schema_version": 1,
+  "scientific_final_performance_scoring_requested": false,
+  "scientific_training_requested": false,
+  "source_commit": "d01e20625068a2ec19bf25554e106c1fc2cc4420",
+  "stages": [
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item8_worker.py",
+        "--child",
+        "legacy_padding_demonstration",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/08_cloud_runs/37584119610-1"
+      ],
+      "completed_at_utc": "2026-10-07T06:55:05.368588+00:00",
+      "execution_deadline_unix": 1791357002.367286,
+      "log_sha256": "e0748d4352886ab32e82bb3f95fcfa96f66a410a955682e50eca765895739fc6",
+      "name": "legacy_padding_demonstration",
+      "requested_stage_limit_seconds": 900,
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T06:55:02.367373+00:00",
+      "wall_seconds_including_shutdown": 3.0012694520000025
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item8_worker.py",
+        "--child",
+        "full_pytest",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/08_cloud_runs/37584119610-1"
+      ],
+      "completed_at_utc": "2026-10-07T06:55:13.443788+00:00",
+      "execution_deadline_unix": 1791357005.4410126,
+      "log_sha256": "88b56a767cf9fd3ef7b17402fc74a825fac485ca91f7f2b243a431d4b7cb968b",
+      "name": "full_pytest",
+      "requested_stage_limit_seconds": 900,
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T06:55:05.441104+00:00",
+      "wall_seconds_including_shutdown": 8.002703983999993
+    }
+  ],
+  "started_at_utc": "2026-10-07T06:55:01.805627+00:00",
+  "status": "completed",
+  "worker_wall_seconds_before_archive": 11.713040590000006
+}

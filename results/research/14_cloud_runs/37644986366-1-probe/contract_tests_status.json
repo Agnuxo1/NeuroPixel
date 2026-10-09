@@ -1,0 +1,25 @@
+{
+  "admission": {
+    "at_utc": "2026-10-07T15:35:03.808731+00:00",
+    "available_ram_gib": 14.208663940429688,
+    "phase": "admission"
+  },
+  "command": [
+    "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+    "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item14_worker.py",
+    "--phase",
+    "probe",
+    "--child",
+    "contract_tests",
+    "--output",
+    "/home/runner/work/NeuroPixel/NeuroPixel/results/research/14_cloud_runs/37644986366-1-probe"
+  ],
+  "completed_at_utc": "2026-10-07T15:35:05.311981+00:00",
+  "log_sha256": "bc3306f38e847279cb10e65fc23a89c6bcbd146227b0dfa166c52a411ccb6d2b",
+  "name": "contract_tests",
+  "return_code": 0,
+  "stage_limit_seconds": 120,
+  "started_at_utc": "2026-10-07T15:35:03.808864+00:00",
+  "status": "completed",
+  "wall_seconds_including_shutdown": 1.5021405049999998
+}

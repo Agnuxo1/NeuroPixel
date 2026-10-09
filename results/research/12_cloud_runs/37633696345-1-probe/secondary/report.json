@@ -1,0 +1,2223 @@
+{
+  "input_sha256": {
+    "archive_manifest.json": "60acc62bf2f2afaf2c79540fb09731a90ef7eb07764b556a63f172c1c9253469",
+    "growth/banks/snapshots_i20/final_experts.npz": "3fb52759ca85ce6e7c92472aebfc15adae10cbde11013509ae2f2952502364b1",
+    "growth/banks/snapshots_i21/final_experts.npz": "52c4b0b7e8ddab81e3a4df9535df6dd169a4f1f04a9e8a13ad3c908ff08b980f",
+    "growth/datasets/topic0/split0_test_n1024_seed62012.npz": "35e86562635a83c13ac8532aa04e4ea0feafe7f196dab4d7b771dbd0a64b7ea0",
+    "growth/datasets/topic1/split0_test_n1024_seed62112.npz": "d2ddfdd6bcababb0ae538fbc028fe81427a521fc6196bd544729bc6eb7084d8d",
+    "growth/datasets/topic2/split0_test_n1024_seed62212.npz": "a17a62b10f5de9a3e96afa3bf6964971a41aaf57bdec3ade6f7549c1838b984f",
+    "growth/growth_records.json": "670176c4d9df860d140693061d432b7c07de063d992d7a77a64daf09211b9c06",
+    "growth/partitions.json": "eff760e91613cd88a75f05231e11fe811674f4ef76d5469a412b9e5ea26f629f",
+    "growth/trajectories/fixed_sequential_i20/stage0/weights.pt": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+    "growth/trajectories/fixed_sequential_i20/stage1/weights.pt": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+    "growth/trajectories/fixed_sequential_i20/stage2/weights.pt": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+    "growth/trajectories/fixed_sequential_i21/stage0/weights.pt": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+    "growth/trajectories/fixed_sequential_i21/stage1/weights.pt": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+    "growth/trajectories/fixed_sequential_i21/stage2/weights.pt": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+    "worker_status.json": "5601ca21cf663325b6402a13e923528ca6258c817978fef8af5711b3e6c27047"
+  },
+  "input_unchanged": true,
+  "item": 12,
+  "known_prior_observations": true,
+  "limitations": [
+    "Only seeds20/21, split0, three noun-disjoint topics, and already accessed final examples.",
+    "Newest copied checkpoint sequence is measured; no unrecorded intermediate router trajectory is invented.",
+    "No new confirmatory interval, no seed/content replication from metric rows, and no FWT without initial baseline.",
+    "Low binding acquisition cannot support a claim of useful retention merely from small forgetting.",
+    "Checkpoint bytes are checked without deserialization; original full archive audit remains separately cited.",
+    "Synthetic routing outcomes are a constructed counterexample, not a measured learned model result."
+  ],
+  "original_source_commit": "08d0d52edd05da6835e71479f3ba4399fcbeabae",
+  "payloads": {
+    "predictions_s20.npy": {
+      "bytes": 73856,
+      "sha256": "d6bb005f9b1340048e058fdb33c7fcdc31aff22685dbca46e89029ffac32174f"
+    },
+    "predictions_s21.npy": {
+      "bytes": 73856,
+      "sha256": "7d05cf5b6310a904b9de08b6fbd5bdc032ada096392a35d042863c4394e887d9"
+    },
+    "router_fixture.npz": {
+      "bytes": 434,
+      "sha256": "e9d381862d043e59edf0d18d3dfaeda3f7389672084329d4e23714a5ba7852cd"
+    }
+  },
+  "phase": "secondary_reanalysis",
+  "runtime": {
+    "available_ram_gib": 14.433246612548828,
+    "numpy": "2.2.6",
+    "python": "3.12.14",
+    "threads": 1,
+    "torch_imported": false
+  },
+  "schema_version": 1,
+  "scope": "Retrospective new summaries of existing item6 predictions; no new checkpoint or model inference.",
+  "seeds": [
+    {
+      "bank_id": "snapshots_i20",
+      "checkpoints": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage0/weights.pt",
+          "sha256": "5a04eadb5340efee0bc39d5a1ed7b2def00a3bd4ad34860e6ceeeb2b591838ff",
+          "tensor_sha256": "3683d0e6d3b7046c3ae1fd9a09f394ea3391213e358c9277ca01b33eb15a6589"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage1/weights.pt",
+          "sha256": "14cf3562888a780e6111f232373d843e990334eaca395eb54322e14eb0b307dd",
+          "tensor_sha256": "7ca6a7725a67c57d975203f5706eda30272d93e6bf4cb089d9b72b1c75092b50"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i20/stage2/weights.pt",
+          "sha256": "d5e7b7294c52007dfa54514610730f82ee6866522fcf857c1a82b065f15116d5",
+          "tensor_sha256": "a7615b6a2d4e730fec95f1d19caddc92beda1a659cd95ebd13e86ccb7fd3b756"
+        }
+      ],
+      "hard_selection_oracle_by_topic": [
+        {
+          "accuracy": 0.55078125,
+          "binding": 0.291015625,
+          "correct": 564,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.81640625,
+              "correct": 209,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.3203125,
+              "correct": 82,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.8046875,
+              "correct": 206,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.26171875,
+              "correct": 67,
+              "n": 256
+            }
+          },
+          "task": 0
+        },
+        {
+          "accuracy": 0.5078125,
+          "binding": 0.20703125,
+          "correct": 520,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.81640625,
+              "correct": 209,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.26171875,
+              "correct": 67,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.80078125,
+              "correct": 205,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.15234375,
+              "correct": 39,
+              "n": 256
+            }
+          },
+          "task": 1
+        },
+        {
+          "accuracy": 0.5244140625,
+          "binding": 0.224609375,
+          "correct": 537,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.87109375,
+              "correct": 223,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.3046875,
+              "correct": 78,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.77734375,
+              "correct": 199,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.14453125,
+              "correct": 37,
+              "n": 256
+            }
+          },
+          "task": 2
+        }
+      ],
+      "measures": {
+        "ACCION": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.078125,
+            0.16796875,
+            0.76953125
+          ],
+          "final": {
+            "BWT": 0.59765625,
+            "after_task": 2,
+            "average_seen_accuracy": 0.7369791666666666,
+            "max_past_forgetting": -0.46875,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.078125,
+                "backward_change": 0.6328125,
+                "current": 0.7109375,
+                "max_past_forgetting": -0.3984375,
+                "post_acquisition_forgetting": -0.3984375,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.16796875,
+                "backward_change": 0.5625,
+                "current": 0.73046875,
+                "max_past_forgetting": -0.5390625,
+                "post_acquisition_forgetting": -0.5625,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": -0.48046875,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.078125,
+              0.19140625,
+              0.09375
+            ],
+            [
+              0.3125,
+              0.16796875,
+              0.2734375
+            ],
+            [
+              0.7109375,
+              0.73046875,
+              0.76953125
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.078125,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": 0.234375,
+              "after_task": 1,
+              "average_seen_accuracy": 0.240234375,
+              "max_past_forgetting": -0.234375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.078125,
+                  "backward_change": 0.234375,
+                  "current": 0.3125,
+                  "max_past_forgetting": -0.234375,
+                  "post_acquisition_forgetting": -0.234375,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": -0.234375,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": 0.59765625,
+              "after_task": 2,
+              "average_seen_accuracy": 0.7369791666666666,
+              "max_past_forgetting": -0.46875,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.078125,
+                  "backward_change": 0.6328125,
+                  "current": 0.7109375,
+                  "max_past_forgetting": -0.3984375,
+                  "post_acquisition_forgetting": -0.3984375,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.16796875,
+                  "backward_change": 0.5625,
+                  "current": 0.73046875,
+                  "max_past_forgetting": -0.5390625,
+                  "post_acquisition_forgetting": -0.5625,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": -0.48046875,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "AGENTE": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.3203125,
+            0.26171875,
+            0.3046875
+          ],
+          "final": {
+            "BWT": -0.291015625,
+            "after_task": 2,
+            "average_seen_accuracy": 0.1015625,
+            "max_past_forgetting": 0.291015625,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.3203125,
+                "backward_change": -0.3203125,
+                "current": 0.0,
+                "max_past_forgetting": 0.3203125,
+                "post_acquisition_forgetting": 0.3203125,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.26171875,
+                "backward_change": -0.26171875,
+                "current": 0.0,
+                "max_past_forgetting": 0.26171875,
+                "post_acquisition_forgetting": 0.26171875,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": 0.291015625,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.3203125,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.26171875,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.3046875
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.3203125,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.3203125,
+              "after_task": 1,
+              "average_seen_accuracy": 0.130859375,
+              "max_past_forgetting": 0.3203125,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.3203125,
+                  "backward_change": -0.3203125,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.3203125,
+                  "post_acquisition_forgetting": 0.3203125,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.3203125,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": -0.291015625,
+              "after_task": 2,
+              "average_seen_accuracy": 0.1015625,
+              "max_past_forgetting": 0.291015625,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.3203125,
+                  "backward_change": -0.3203125,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.3203125,
+                  "post_acquisition_forgetting": 0.3203125,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.26171875,
+                  "backward_change": -0.26171875,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.26171875,
+                  "post_acquisition_forgetting": 0.26171875,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": 0.291015625,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "LUGAR": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.13671875,
+            0.30859375,
+            0.65625
+          ],
+          "final": {
+            "BWT": 0.45703125,
+            "after_task": 2,
+            "average_seen_accuracy": 0.671875,
+            "max_past_forgetting": -0.40234375,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.13671875,
+                "backward_change": 0.53515625,
+                "current": 0.671875,
+                "max_past_forgetting": -0.42578125,
+                "post_acquisition_forgetting": -0.42578125,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.30859375,
+                "backward_change": 0.37890625,
+                "current": 0.6875,
+                "max_past_forgetting": -0.37890625,
+                "post_acquisition_forgetting": -0.37890625,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": -0.40234375,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.13671875,
+              0.13671875,
+              0.1484375
+            ],
+            [
+              0.24609375,
+              0.30859375,
+              0.29296875
+            ],
+            [
+              0.671875,
+              0.6875,
+              0.65625
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.13671875,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": 0.109375,
+              "after_task": 1,
+              "average_seen_accuracy": 0.27734375,
+              "max_past_forgetting": -0.109375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.13671875,
+                  "backward_change": 0.109375,
+                  "current": 0.24609375,
+                  "max_past_forgetting": -0.109375,
+                  "post_acquisition_forgetting": -0.109375,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": -0.109375,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": 0.45703125,
+              "after_task": 2,
+              "average_seen_accuracy": 0.671875,
+              "max_past_forgetting": -0.40234375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.13671875,
+                  "backward_change": 0.53515625,
+                  "current": 0.671875,
+                  "max_past_forgetting": -0.42578125,
+                  "post_acquisition_forgetting": -0.42578125,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.30859375,
+                  "backward_change": 0.37890625,
+                  "current": 0.6875,
+                  "max_past_forgetting": -0.37890625,
+                  "post_acquisition_forgetting": -0.37890625,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": -0.40234375,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "PACIENTE": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.26171875,
+            0.15234375,
+            0.14453125
+          ],
+          "final": {
+            "BWT": -0.20703125,
+            "after_task": 2,
+            "average_seen_accuracy": 0.048177083333333336,
+            "max_past_forgetting": 0.20703125,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.26171875,
+                "backward_change": -0.26171875,
+                "current": 0.0,
+                "max_past_forgetting": 0.26171875,
+                "post_acquisition_forgetting": 0.26171875,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.15234375,
+                "backward_change": -0.15234375,
+                "current": 0.0,
+                "max_past_forgetting": 0.15234375,
+                "post_acquisition_forgetting": 0.15234375,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": 0.20703125,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.26171875,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.15234375,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.14453125
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.26171875,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.26171875,
+              "after_task": 1,
+              "average_seen_accuracy": 0.076171875,
+              "max_past_forgetting": 0.26171875,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.26171875,
+                  "backward_change": -0.26171875,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.26171875,
+                  "post_acquisition_forgetting": 0.26171875,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.26171875,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": -0.20703125,
+              "after_task": 2,
+              "average_seen_accuracy": 0.048177083333333336,
+              "max_past_forgetting": 0.20703125,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.26171875,
+                  "backward_change": -0.26171875,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.26171875,
+                  "post_acquisition_forgetting": 0.26171875,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.15234375,
+                  "backward_change": -0.15234375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.15234375,
+                  "post_acquisition_forgetting": 0.15234375,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": 0.20703125,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "accuracy": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.19921875,
+            0.22265625,
+            0.46875
+          ],
+          "final": {
+            "BWT": 0.13916015625,
+            "after_task": 2,
+            "average_seen_accuracy": 0.3896484375,
+            "max_past_forgetting": -0.13916015625,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.19921875,
+                "backward_change": 0.146484375,
+                "current": 0.345703125,
+                "max_past_forgetting": -0.146484375,
+                "post_acquisition_forgetting": -0.146484375,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.22265625,
+                "backward_change": 0.1318359375,
+                "current": 0.3544921875,
+                "max_past_forgetting": -0.1318359375,
+                "post_acquisition_forgetting": -0.1318359375,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": -0.13916015625,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.19921875,
+              0.08203125,
+              0.060546875
+            ],
+            [
+              0.1396484375,
+              0.22265625,
+              0.1416015625
+            ],
+            [
+              0.345703125,
+              0.3544921875,
+              0.46875
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.19921875,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.0595703125,
+              "after_task": 1,
+              "average_seen_accuracy": 0.18115234375,
+              "max_past_forgetting": 0.0595703125,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.19921875,
+                  "backward_change": -0.0595703125,
+                  "current": 0.1396484375,
+                  "max_past_forgetting": 0.0595703125,
+                  "post_acquisition_forgetting": 0.0595703125,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.0595703125,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": 0.13916015625,
+              "after_task": 2,
+              "average_seen_accuracy": 0.3896484375,
+              "max_past_forgetting": -0.13916015625,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.19921875,
+                  "backward_change": 0.146484375,
+                  "current": 0.345703125,
+                  "max_past_forgetting": -0.146484375,
+                  "post_acquisition_forgetting": -0.146484375,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.22265625,
+                  "backward_change": 0.1318359375,
+                  "current": 0.3544921875,
+                  "max_past_forgetting": -0.1318359375,
+                  "post_acquisition_forgetting": -0.1318359375,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": -0.13916015625,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "binding": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.291015625,
+            0.20703125,
+            0.224609375
+          ],
+          "final": {
+            "BWT": -0.2490234375,
+            "after_task": 2,
+            "average_seen_accuracy": 0.07486979166666667,
+            "max_past_forgetting": 0.2490234375,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.291015625,
+                "backward_change": -0.291015625,
+                "current": 0.0,
+                "max_past_forgetting": 0.291015625,
+                "post_acquisition_forgetting": 0.291015625,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.20703125,
+                "backward_change": -0.20703125,
+                "current": 0.0,
+                "max_past_forgetting": 0.20703125,
+                "post_acquisition_forgetting": 0.20703125,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": 0.2490234375,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.291015625,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.20703125,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.224609375
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.291015625,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.291015625,
+              "after_task": 1,
+              "average_seen_accuracy": 0.103515625,
+              "max_past_forgetting": 0.291015625,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.291015625,
+                  "backward_change": -0.291015625,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.291015625,
+                  "post_acquisition_forgetting": 0.291015625,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.291015625,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": -0.2490234375,
+              "after_task": 2,
+              "average_seen_accuracy": 0.07486979166666667,
+              "max_past_forgetting": 0.2490234375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.291015625,
+                  "backward_change": -0.291015625,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.291015625,
+                  "post_acquisition_forgetting": 0.291015625,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.20703125,
+                  "backward_change": -0.20703125,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.20703125,
+                  "post_acquisition_forgetting": 0.20703125,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": 0.2490234375,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        }
+      },
+      "oracle_scope": "Label-aware any-individual-argmax-correct bound for hard selectors only.",
+      "rows": [
+        {
+          "accuracy": 0.19921875,
+          "binding": 0.291015625,
+          "checkpoint_after_task": 0,
+          "correct": 204,
+          "cross_entropy": 1.9111936484114267,
+          "evaluation_task": 0,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.078125,
+              "correct": 20,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.3203125,
+              "correct": 82,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.13671875,
+              "correct": 35,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.26171875,
+              "correct": 67,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.08203125,
+          "binding": 0.0,
+          "checkpoint_after_task": 0,
+          "correct": 84,
+          "cross_entropy": 6.459765472536674,
+          "evaluation_task": 1,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.19140625,
+              "correct": 49,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.13671875,
+              "correct": 35,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.060546875,
+          "binding": 0.0,
+          "checkpoint_after_task": 0,
+          "correct": 62,
+          "cross_entropy": 6.125097602052847,
+          "evaluation_task": 2,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.09375,
+              "correct": 24,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.1484375,
+              "correct": 38,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.1396484375,
+          "binding": 0.0,
+          "checkpoint_after_task": 1,
+          "correct": 143,
+          "cross_entropy": 6.4825288422353005,
+          "evaluation_task": 0,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.3125,
+              "correct": 80,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.24609375,
+              "correct": 63,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.22265625,
+          "binding": 0.20703125,
+          "checkpoint_after_task": 1,
+          "correct": 228,
+          "cross_entropy": 1.8753293801750672,
+          "evaluation_task": 1,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.16796875,
+              "correct": 43,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.26171875,
+              "correct": 67,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.30859375,
+              "correct": 79,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.15234375,
+              "correct": 39,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.1416015625,
+          "binding": 0.0,
+          "checkpoint_after_task": 1,
+          "correct": 145,
+          "cross_entropy": 6.845297609621649,
+          "evaluation_task": 2,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.2734375,
+              "correct": 70,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.29296875,
+              "correct": 75,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.345703125,
+          "binding": 0.0,
+          "checkpoint_after_task": 2,
+          "correct": 354,
+          "cross_entropy": 10.465164653256204,
+          "evaluation_task": 0,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.7109375,
+              "correct": 182,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.671875,
+              "correct": 172,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.3544921875,
+          "binding": 0.0,
+          "checkpoint_after_task": 2,
+          "correct": 363,
+          "cross_entropy": 9.561833410807598,
+          "evaluation_task": 1,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.73046875,
+              "correct": 187,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.6875,
+              "correct": 176,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.46875,
+          "binding": 0.224609375,
+          "checkpoint_after_task": 2,
+          "correct": 480,
+          "cross_entropy": 1.6215765415711092,
+          "evaluation_task": 2,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.76953125,
+              "correct": 197,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.3046875,
+              "correct": 78,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.65625,
+              "correct": 168,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.14453125,
+              "correct": 37,
+              "n": 256
+            }
+          }
+        }
+      ],
+      "seed": 20
+    },
+    {
+      "bank_id": "snapshots_i21",
+      "checkpoints": [
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage0/weights.pt",
+          "sha256": "658ca156b1e172b221f0dfc8a12e640e2eacb117a6a6f3410a42670cbd78c762",
+          "tensor_sha256": "4e059067bd9604d520e29a2e5c7e2eecfb998a53413e1f0eb613f6168932f516"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage1/weights.pt",
+          "sha256": "ac3bc610327e84f3de94fc7f90c5aa8c8765b55d304b9051ecc0271f95358853",
+          "tensor_sha256": "7a6c28f1e1b11ccfe721c39269133a197d74b6e796b7eb39d35810f53beb774b"
+        },
+        {
+          "bytes": 122296,
+          "parameter_count": 29824,
+          "path": "trajectories/fixed_sequential_i21/stage2/weights.pt",
+          "sha256": "e07bb7805a29041e33c6aa3eaf8470fa2bdef505231979e71b74269eb6b780c2",
+          "tensor_sha256": "94e6e537b5a1500192a08645e5b5ec5e8fe41ce1fbbf5c389eaaffbc1f922201"
+        }
+      ],
+      "hard_selection_oracle_by_topic": [
+        {
+          "accuracy": 0.546875,
+          "binding": 0.27734375,
+          "correct": 560,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.76953125,
+              "correct": 197,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.30859375,
+              "correct": 79,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.86328125,
+              "correct": 221,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.24609375,
+              "correct": 63,
+              "n": 256
+            }
+          },
+          "task": 0
+        },
+        {
+          "accuracy": 0.5361328125,
+          "binding": 0.24609375,
+          "correct": 549,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.8125,
+              "correct": 208,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.23828125,
+              "correct": 61,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.83984375,
+              "correct": 215,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.25390625,
+              "correct": 65,
+              "n": 256
+            }
+          },
+          "task": 1
+        },
+        {
+          "accuracy": 0.52734375,
+          "binding": 0.197265625,
+          "correct": 540,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.79296875,
+              "correct": 203,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.2890625,
+              "correct": 74,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.921875,
+              "correct": 236,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.10546875,
+              "correct": 27,
+              "n": 256
+            }
+          },
+          "task": 2
+        }
+      ],
+      "measures": {
+        "ACCION": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.125,
+            0.296875,
+            0.66796875
+          ],
+          "final": {
+            "BWT": 0.474609375,
+            "after_task": 2,
+            "average_seen_accuracy": 0.6796875,
+            "max_past_forgetting": -0.388671875,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.125,
+                "backward_change": 0.49609375,
+                "current": 0.62109375,
+                "max_past_forgetting": -0.32421875,
+                "post_acquisition_forgetting": -0.32421875,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.296875,
+                "backward_change": 0.453125,
+                "current": 0.75,
+                "max_past_forgetting": -0.453125,
+                "post_acquisition_forgetting": -0.453125,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": -0.388671875,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.125,
+              0.046875,
+              0.125
+            ],
+            [
+              0.296875,
+              0.296875,
+              0.265625
+            ],
+            [
+              0.62109375,
+              0.75,
+              0.66796875
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.125,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": 0.171875,
+              "after_task": 1,
+              "average_seen_accuracy": 0.296875,
+              "max_past_forgetting": -0.171875,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.125,
+                  "backward_change": 0.171875,
+                  "current": 0.296875,
+                  "max_past_forgetting": -0.171875,
+                  "post_acquisition_forgetting": -0.171875,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": -0.171875,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": 0.474609375,
+              "after_task": 2,
+              "average_seen_accuracy": 0.6796875,
+              "max_past_forgetting": -0.388671875,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.125,
+                  "backward_change": 0.49609375,
+                  "current": 0.62109375,
+                  "max_past_forgetting": -0.32421875,
+                  "post_acquisition_forgetting": -0.32421875,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.296875,
+                  "backward_change": 0.453125,
+                  "current": 0.75,
+                  "max_past_forgetting": -0.453125,
+                  "post_acquisition_forgetting": -0.453125,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": -0.388671875,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "AGENTE": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.30859375,
+            0.23828125,
+            0.2890625
+          ],
+          "final": {
+            "BWT": -0.2734375,
+            "after_task": 2,
+            "average_seen_accuracy": 0.09635416666666667,
+            "max_past_forgetting": 0.2734375,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.30859375,
+                "backward_change": -0.30859375,
+                "current": 0.0,
+                "max_past_forgetting": 0.30859375,
+                "post_acquisition_forgetting": 0.30859375,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.23828125,
+                "backward_change": -0.23828125,
+                "current": 0.0,
+                "max_past_forgetting": 0.23828125,
+                "post_acquisition_forgetting": 0.23828125,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": 0.2734375,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.30859375,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.23828125,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.2890625
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.30859375,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.30859375,
+              "after_task": 1,
+              "average_seen_accuracy": 0.119140625,
+              "max_past_forgetting": 0.30859375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.30859375,
+                  "backward_change": -0.30859375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.30859375,
+                  "post_acquisition_forgetting": 0.30859375,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.30859375,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": -0.2734375,
+              "after_task": 2,
+              "average_seen_accuracy": 0.09635416666666667,
+              "max_past_forgetting": 0.2734375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.30859375,
+                  "backward_change": -0.30859375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.30859375,
+                  "post_acquisition_forgetting": 0.30859375,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.23828125,
+                  "backward_change": -0.23828125,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.23828125,
+                  "post_acquisition_forgetting": 0.23828125,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": 0.2734375,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "LUGAR": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.22265625,
+            0.6796875,
+            0.80078125
+          ],
+          "final": {
+            "BWT": 0.24609375,
+            "after_task": 2,
+            "average_seen_accuracy": 0.7317708333333334,
+            "max_past_forgetting": -0.0703125,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.22265625,
+                "backward_change": 0.5078125,
+                "current": 0.73046875,
+                "max_past_forgetting": -0.15625,
+                "post_acquisition_forgetting": -0.15625,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.6796875,
+                "backward_change": -0.015625,
+                "current": 0.6640625,
+                "max_past_forgetting": 0.015625,
+                "post_acquisition_forgetting": 0.015625,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": -0.0703125,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.22265625,
+              0.1953125,
+              0.234375
+            ],
+            [
+              0.57421875,
+              0.6796875,
+              0.765625
+            ],
+            [
+              0.73046875,
+              0.6640625,
+              0.80078125
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.22265625,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": 0.3515625,
+              "after_task": 1,
+              "average_seen_accuracy": 0.626953125,
+              "max_past_forgetting": -0.3515625,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.22265625,
+                  "backward_change": 0.3515625,
+                  "current": 0.57421875,
+                  "max_past_forgetting": -0.3515625,
+                  "post_acquisition_forgetting": -0.3515625,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": -0.3515625,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": 0.24609375,
+              "after_task": 2,
+              "average_seen_accuracy": 0.7317708333333334,
+              "max_past_forgetting": -0.0703125,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.22265625,
+                  "backward_change": 0.5078125,
+                  "current": 0.73046875,
+                  "max_past_forgetting": -0.15625,
+                  "post_acquisition_forgetting": -0.15625,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.6796875,
+                  "backward_change": -0.015625,
+                  "current": 0.6640625,
+                  "max_past_forgetting": 0.015625,
+                  "post_acquisition_forgetting": 0.015625,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": -0.0703125,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "PACIENTE": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.24609375,
+            0.25390625,
+            0.10546875
+          ],
+          "final": {
+            "BWT": -0.25,
+            "after_task": 2,
+            "average_seen_accuracy": 0.03515625,
+            "max_past_forgetting": 0.25,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.24609375,
+                "backward_change": -0.24609375,
+                "current": 0.0,
+                "max_past_forgetting": 0.24609375,
+                "post_acquisition_forgetting": 0.24609375,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.25390625,
+                "backward_change": -0.25390625,
+                "current": 0.0,
+                "max_past_forgetting": 0.25390625,
+                "post_acquisition_forgetting": 0.25390625,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": 0.25,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.24609375,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.25390625,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.10546875
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.24609375,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.24609375,
+              "after_task": 1,
+              "average_seen_accuracy": 0.126953125,
+              "max_past_forgetting": 0.24609375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.24609375,
+                  "backward_change": -0.24609375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.24609375,
+                  "post_acquisition_forgetting": 0.24609375,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.24609375,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": -0.25,
+              "after_task": 2,
+              "average_seen_accuracy": 0.03515625,
+              "max_past_forgetting": 0.25,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.24609375,
+                  "backward_change": -0.24609375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.24609375,
+                  "post_acquisition_forgetting": 0.24609375,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.25390625,
+                  "backward_change": -0.25390625,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.25390625,
+                  "post_acquisition_forgetting": 0.25390625,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": 0.25,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "accuracy": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.2255859375,
+            0.3671875,
+            0.4658203125
+          ],
+          "final": {
+            "BWT": 0.04931640625,
+            "after_task": 2,
+            "average_seen_accuracy": 0.3857421875,
+            "max_past_forgetting": -0.04931640625,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.2255859375,
+                "backward_change": 0.1123046875,
+                "current": 0.337890625,
+                "max_past_forgetting": -0.1123046875,
+                "post_acquisition_forgetting": -0.1123046875,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.3671875,
+                "backward_change": -0.013671875,
+                "current": 0.353515625,
+                "max_past_forgetting": 0.013671875,
+                "post_acquisition_forgetting": 0.013671875,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": -0.04931640625,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.2255859375,
+              0.060546875,
+              0.08984375
+            ],
+            [
+              0.2177734375,
+              0.3671875,
+              0.2578125
+            ],
+            [
+              0.337890625,
+              0.353515625,
+              0.4658203125
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.2255859375,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.0078125,
+              "after_task": 1,
+              "average_seen_accuracy": 0.29248046875,
+              "max_past_forgetting": 0.0078125,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.2255859375,
+                  "backward_change": -0.0078125,
+                  "current": 0.2177734375,
+                  "max_past_forgetting": 0.0078125,
+                  "post_acquisition_forgetting": 0.0078125,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.0078125,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": 0.04931640625,
+              "after_task": 2,
+              "average_seen_accuracy": 0.3857421875,
+              "max_past_forgetting": -0.04931640625,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.2255859375,
+                  "backward_change": 0.1123046875,
+                  "current": 0.337890625,
+                  "max_past_forgetting": -0.1123046875,
+                  "post_acquisition_forgetting": -0.1123046875,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.3671875,
+                  "backward_change": -0.013671875,
+                  "current": 0.353515625,
+                  "max_past_forgetting": 0.013671875,
+                  "post_acquisition_forgetting": 0.013671875,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": -0.04931640625,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        },
+        "binding": {
+          "FWT": null,
+          "FWT_reason": "No random-initialization baseline was recorded for these saved predictions.",
+          "acquisition_diagonal": [
+            0.27734375,
+            0.24609375,
+            0.197265625
+          ],
+          "final": {
+            "BWT": -0.26171875,
+            "after_task": 2,
+            "average_seen_accuracy": 0.06575520833333333,
+            "max_past_forgetting": 0.26171875,
+            "per_old_task": [
+              {
+                "at_acquisition": 0.27734375,
+                "backward_change": -0.27734375,
+                "current": 0.0,
+                "max_past_forgetting": 0.27734375,
+                "post_acquisition_forgetting": 0.27734375,
+                "task": 0
+              },
+              {
+                "at_acquisition": 0.24609375,
+                "backward_change": -0.24609375,
+                "current": 0.0,
+                "max_past_forgetting": 0.24609375,
+                "post_acquisition_forgetting": 0.24609375,
+                "task": 1
+              }
+            ],
+            "post_acquisition_forgetting": 0.26171875,
+            "tasks_seen": 3
+          },
+          "matrix": [
+            [
+              0.27734375,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.24609375,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.197265625
+            ]
+          ],
+          "stages": [
+            {
+              "BWT": null,
+              "after_task": 0,
+              "average_seen_accuracy": 0.27734375,
+              "max_past_forgetting": null,
+              "per_old_task": [],
+              "post_acquisition_forgetting": null,
+              "tasks_seen": 1
+            },
+            {
+              "BWT": -0.27734375,
+              "after_task": 1,
+              "average_seen_accuracy": 0.123046875,
+              "max_past_forgetting": 0.27734375,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.27734375,
+                  "backward_change": -0.27734375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.27734375,
+                  "post_acquisition_forgetting": 0.27734375,
+                  "task": 0
+                }
+              ],
+              "post_acquisition_forgetting": 0.27734375,
+              "tasks_seen": 2
+            },
+            {
+              "BWT": -0.26171875,
+              "after_task": 2,
+              "average_seen_accuracy": 0.06575520833333333,
+              "max_past_forgetting": 0.26171875,
+              "per_old_task": [
+                {
+                  "at_acquisition": 0.27734375,
+                  "backward_change": -0.27734375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.27734375,
+                  "post_acquisition_forgetting": 0.27734375,
+                  "task": 0
+                },
+                {
+                  "at_acquisition": 0.24609375,
+                  "backward_change": -0.24609375,
+                  "current": 0.0,
+                  "max_past_forgetting": 0.24609375,
+                  "post_acquisition_forgetting": 0.24609375,
+                  "task": 1
+                }
+              ],
+              "post_acquisition_forgetting": 0.26171875,
+              "tasks_seen": 3
+            }
+          ],
+          "uncertainty": "Descriptive per seed; no additional interval, p-value or bootstrap."
+        }
+      },
+      "oracle_scope": "Label-aware any-individual-argmax-correct bound for hard selectors only.",
+      "rows": [
+        {
+          "accuracy": 0.2255859375,
+          "binding": 0.27734375,
+          "checkpoint_after_task": 0,
+          "correct": 231,
+          "cross_entropy": 2.1544012994506136,
+          "evaluation_task": 0,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.125,
+              "correct": 32,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.30859375,
+              "correct": 79,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.22265625,
+              "correct": 57,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.24609375,
+              "correct": 63,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.060546875,
+          "binding": 0.0,
+          "checkpoint_after_task": 0,
+          "correct": 62,
+          "cross_entropy": 7.65919245945937,
+          "evaluation_task": 1,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.046875,
+              "correct": 12,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.1953125,
+              "correct": 50,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.08984375,
+          "binding": 0.0,
+          "checkpoint_after_task": 0,
+          "correct": 92,
+          "cross_entropy": 7.131718430239608,
+          "evaluation_task": 2,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.125,
+              "correct": 32,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.234375,
+              "correct": 60,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.2177734375,
+          "binding": 0.0,
+          "checkpoint_after_task": 1,
+          "correct": 223,
+          "cross_entropy": 7.426552531353593,
+          "evaluation_task": 0,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.296875,
+              "correct": 76,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.57421875,
+              "correct": 147,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.3671875,
+          "binding": 0.24609375,
+          "checkpoint_after_task": 1,
+          "correct": 376,
+          "cross_entropy": 1.6081530192602589,
+          "evaluation_task": 1,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.296875,
+              "correct": 76,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.23828125,
+              "correct": 61,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.6796875,
+              "correct": 174,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.25390625,
+              "correct": 65,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.2578125,
+          "binding": 0.0,
+          "checkpoint_after_task": 1,
+          "correct": 264,
+          "cross_entropy": 7.179039527505081,
+          "evaluation_task": 2,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.265625,
+              "correct": 68,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.765625,
+              "correct": 196,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.337890625,
+          "binding": 0.0,
+          "checkpoint_after_task": 2,
+          "correct": 346,
+          "cross_entropy": 8.996606366978991,
+          "evaluation_task": 0,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.62109375,
+              "correct": 159,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.73046875,
+              "correct": 187,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.353515625,
+          "binding": 0.0,
+          "checkpoint_after_task": 2,
+          "correct": 362,
+          "cross_entropy": 9.097419124296877,
+          "evaluation_task": 1,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.75,
+              "correct": 192,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.6640625,
+              "correct": 170,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 256
+            }
+          }
+        },
+        {
+          "accuracy": 0.4658203125,
+          "binding": 0.197265625,
+          "checkpoint_after_task": 2,
+          "correct": 477,
+          "cross_entropy": 2.0390143903018254,
+          "evaluation_task": 2,
+          "n": 1024,
+          "per_role": {
+            "ACCION": {
+              "accuracy": 0.66796875,
+              "correct": 171,
+              "n": 256
+            },
+            "AGENTE": {
+              "accuracy": 0.2890625,
+              "correct": 74,
+              "n": 256
+            },
+            "LUGAR": {
+              "accuracy": 0.80078125,
+              "correct": 205,
+              "n": 256
+            },
+            "PACIENTE": {
+              "accuracy": 0.10546875,
+              "correct": 27,
+              "n": 256
+            }
+          }
+        }
+      ],
+      "seed": 21
+    }
+  ],
+  "source": {
+    "plan_sha256": "c5ee67317b336d786f44f66572d274e7e95099a18ed87f6e486133512a302ffa",
+    "source_commit": "aada1037271a621ac651c94c68feaba51143be05"
+  },
+  "source_implementation_sha256": {
+    ".github/workflows/research-item12-probe.yml": "9339df6463d627b615a3147f19b35b2970a64ff85a3d932c6e052f553da86f5b",
+    "docs/research/12_probe_protocol.md": "7a7c5e5c0301296620df4bb5c437a8b824be7bdc9f3146ae93e1ed6c255ef2c6",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/research/continual_metrics.py": "17fa886a8261bde59b7ee1b1bcdedf8e73532f87b9ec4cf704e01d2352e57a72",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "results/research/12_validation/isolation_before_rng_witness.py": "8ee2a68282b9053957b2c80b4bae7acc197d9b07a4c11fef0e36c3dbe5e1d85c",
+    "results/research/12_validation/isolation_fixture_correction.json": "19bc8c99d017dfb9c2576caf0896177fc73c16004cb75cb6b67f3f39581d5f2b",
+    "results/research/12_validation/isolation_rng_witness_correction.json": "f681aff31d09cfa480eac661da73467cc6b8aa154379e84b45042a14b0e9770e",
+    "results/research/12_validation/probe_static_review.json": "9a62abca081f9aef7cec00522b328153d6809c71d75145ec825e82f35a2a7889",
+    "results/research/12_validation/worker_derivation.json": "1ef559747cfe9ec398c9bbc549532c50fffd6904d10920b0fe4e298208b5cdd1",
+    "scripts/research_continual_isolation.py": "3b6c30b954fea42a469cd6358723dc323f0bfbbddea4f0586da058037b04766a",
+    "scripts/research_continual_isolation_audit.py": "5523b9c58743c9364f455fb0b345b86690774f337cd43ed5bb8fa91a27ab5843",
+    "scripts/research_continual_matrix.py": "e0a50440d87a7d73d1563e9826e0f505e93e307077eab67fff3d9f8333a53b7c",
+    "scripts/research_continual_matrix_audit.py": "a30d2f13e8e02e93bf39c742f0972994094d88545d21ab4035bbdc537108db6a",
+    "scripts/research_continual_probe.py": "896ae3b1afcac004d2116f714f2a0230393abe2b702becc047b243c1e584fe88",
+    "scripts/research_item12_inputs.py": "b6aa6f6c1ae26078fda8997652794b60d97dc7866c539e6f6fa7661386562431",
+    "scripts/research_item12_worker.py": "36ddb9972eaabbde034aa6ffcfd83f83487e2c59f36a8d813e92d8d23e781f08",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "tests/test_continual_isolation.py": "0064f7bc12debb572c501447646e533ff084a7848f72186357e690e3e2524ce1",
+    "tests/test_continual_metrics.py": "2f486c58606487f7df2a9d7fe2f6fcf921195b54b83a94cff0e4e850f0457a3e"
+  },
+  "status": "completed",
+  "synthetic_routing": {
+    "all_expert_outputs_fixed": true,
+    "argmax_tie": "lowest class index",
+    "rows": [
+      {
+        "experts": 1,
+        "last_hard_correct": 2,
+        "n": 2,
+        "old_hard_correct": 2,
+        "uniform_correct": 2
+      },
+      {
+        "experts": 2,
+        "last_hard_correct": 0,
+        "n": 2,
+        "old_hard_correct": 2,
+        "uniform_correct": 1
+      },
+      {
+        "experts": 4,
+        "last_hard_correct": 0,
+        "n": 2,
+        "old_hard_correct": 2,
+        "uniform_correct": 0
+      },
+      {
+        "experts": 8,
+        "last_hard_correct": 0,
+        "n": 2,
+        "old_hard_correct": 2,
+        "uniform_correct": 0
+      }
+    ],
+    "scope": "Literal two-example output counterexample, not trained NeuroPixel predictions.",
+    "sizes": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "wall_seconds": 0.07582340000000443
+}

@@ -1,0 +1,1699 @@
+{
+  "auditor_sha256": "f4212055fd181b2f34d447d5d5a2e96ca76ce81a3b323f6583ba5343de82774a",
+  "available_ram_gib_at_admission": 14.586135864257812,
+  "checkpoint_deserialization": false,
+  "checks": {
+    "access_receipt_identity": true,
+    "access_receipt_path": true,
+    "available_ram_at_least_8gib": true,
+    "chronology:final_access_consumed->final_scientific_complete": true,
+    "chronology:final_inventory_created->train_scientific_complete": true,
+    "chronology:final_scientific_complete->final_worker_complete": true,
+    "chronology:final_scientific_start->final_access_consumed": true,
+    "chronology:final_worker_complete->source_after": true,
+    "chronology:final_worker_start->final_scientific_start": true,
+    "chronology:gate_archive_receipt_written->final_worker_start": true,
+    "chronology:intermediate_copy_manifest_created->gate_archive_receipt_written": true,
+    "chronology:source_after->worker_complete": true,
+    "chronology:source_freeze->train_worker_start": true,
+    "chronology:train_scientific_complete->train_worker_complete": true,
+    "chronology:train_scientific_start->final_inventory_created": true,
+    "chronology:train_worker_complete->intermediate_copy_manifest_created": true,
+    "chronology:train_worker_start->train_scientific_start": true,
+    "chronology:worker_complete->final_copy_manifest_created": true,
+    "commit_object:final": true,
+    "commit_object:remote_head": true,
+    "commit_object:source": true,
+    "complete_final_manifest": true,
+    "complete_inventory": true,
+    "completed_primary_index": true,
+    "completed_summary:neuropixel_seed40": true,
+    "completed_summary:neuropixel_seed41": true,
+    "completed_summary:neuropixel_seed42": true,
+    "completed_summary:neuropixel_seed43": true,
+    "completed_summary:neuropixel_seed44": true,
+    "completed_summary:relative_transformer_seed40": true,
+    "completed_summary:relative_transformer_seed41": true,
+    "completed_summary:relative_transformer_seed42": true,
+    "completed_summary:relative_transformer_seed43": true,
+    "completed_summary:relative_transformer_seed44": true,
+    "consumed_access_links": true,
+    "entry:neuropixel_seed40": true,
+    "entry:neuropixel_seed41": true,
+    "entry:neuropixel_seed42": true,
+    "entry:neuropixel_seed43": true,
+    "entry:neuropixel_seed44": true,
+    "entry:relative_transformer_seed40": true,
+    "entry:relative_transformer_seed41": true,
+    "entry:relative_transformer_seed42": true,
+    "entry:relative_transformer_seed43": true,
+    "entry:relative_transformer_seed44": true,
+    "entry_paths:neuropixel_seed40": true,
+    "entry_paths:neuropixel_seed41": true,
+    "entry_paths:neuropixel_seed42": true,
+    "entry_paths:neuropixel_seed43": true,
+    "entry_paths:neuropixel_seed44": true,
+    "entry_paths:relative_transformer_seed40": true,
+    "entry_paths:relative_transformer_seed41": true,
+    "entry_paths:relative_transformer_seed42": true,
+    "entry_paths:relative_transformer_seed43": true,
+    "entry_paths:relative_transformer_seed44": true,
+    "exact_recipe_population": true,
+    "final_dataset_links_consumed_access": true,
+    "final_is_ancestor_of_provided_remote_head": true,
+    "final_manifest_inventory": true,
+    "final_receipt_manifest_hash": true,
+    "final_worker_complete": true,
+    "intermediate_commit_object": true,
+    "intermediate_differs_from_final": true,
+    "intermediate_full_inventory": true,
+    "intermediate_hash:contract_tests.log": true,
+    "intermediate_hash:contract_tests_environment.json": true,
+    "intermediate_hash:contract_tests_resource_monitor.json": true,
+    "intermediate_hash:contract_tests_status.json": true,
+    "intermediate_hash:execution_plan.json": true,
+    "intermediate_hash:experiment_recipe.json": true,
+    "intermediate_hash:source.zip": true,
+    "intermediate_hash:source_before.json": true,
+    "intermediate_hash:study/context.json": true,
+    "intermediate_hash:study/development_data/fixture_exposure.json": true,
+    "intermediate_hash:study/development_data/manifest.json": true,
+    "intermediate_hash:study/development_data/memorization.npz": true,
+    "intermediate_hash:study/development_data/memorization_scenarios.json.gz": true,
+    "intermediate_hash:study/development_data/probe.npz": true,
+    "intermediate_hash:study/development_data/probe_scenarios.json.gz": true,
+    "intermediate_hash:study/development_data/train_scenarios.json.gz": true,
+    "intermediate_hash:study/development_data/validation.npz": true,
+    "intermediate_hash:study/development_data/validation_scenarios.json.gz": true,
+    "intermediate_hash:study/final_inventory.json": true,
+    "intermediate_hash:study/primary_runs.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/checkpoint.pt": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/configuration.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/run.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/started.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/training.jsonl": true,
+    "intermediate_hash:study/runs/neuropixel_seed40/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/checkpoint.pt": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/configuration.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/run.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/started.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/training.jsonl": true,
+    "intermediate_hash:study/runs/neuropixel_seed41/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/checkpoint.pt": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/configuration.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/run.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/started.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/training.jsonl": true,
+    "intermediate_hash:study/runs/neuropixel_seed42/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/checkpoint.pt": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/configuration.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/run.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/started.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/training.jsonl": true,
+    "intermediate_hash:study/runs/neuropixel_seed43/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/checkpoint.pt": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/configuration.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/run.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/started.json": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/training.jsonl": true,
+    "intermediate_hash:study/runs/neuropixel_seed44/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/checkpoint.pt": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/configuration.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/run.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/started.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/training.jsonl": true,
+    "intermediate_hash:study/runs/relative_transformer_seed40/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/checkpoint.pt": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/configuration.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/run.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/started.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/training.jsonl": true,
+    "intermediate_hash:study/runs/relative_transformer_seed41/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/checkpoint.pt": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/configuration.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/run.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/started.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/training.jsonl": true,
+    "intermediate_hash:study/runs/relative_transformer_seed42/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/checkpoint.pt": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/configuration.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/run.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/started.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/training.jsonl": true,
+    "intermediate_hash:study/runs/relative_transformer_seed43/validation_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/checkpoint.pt": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/configuration.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/probe_predictions.npz": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/run.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/started.json": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/training.jsonl": true,
+    "intermediate_hash:study/runs/relative_transformer_seed44/validation_predictions.npz": true,
+    "intermediate_hash:study/train_completed.json": true,
+    "intermediate_hash:study/train_started.json": true,
+    "intermediate_hash:test_collection.json": true,
+    "intermediate_hash:tests.xml": true,
+    "intermediate_hash:train.log": true,
+    "intermediate_hash:train_environment.json": true,
+    "intermediate_hash:train_resource_monitor.json": true,
+    "intermediate_hash:train_status.json": true,
+    "intermediate_hash:worker_status.json": true,
+    "intermediate_is_ancestor_of_final": true,
+    "intermediate_manifest_schema": true,
+    "intermediate_source_guard": true,
+    "intermediate_training_complete": true,
+    "inventory_manifest_hash:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "inventory_manifest_hash:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "inventory_receipt_hash": true,
+    "inventory_source_plan_recipe": true,
+    "inventory_unchanged_in_final": true,
+    "job_log_archive_event_metadata": true,
+    "job_log_archive_line_before_final_heartbeats": true,
+    "job_log_event_between_copy_and_receipt": true,
+    "job_log_event_timestamp_before_recorded_final_start": true,
+    "job_log_final_heartbeat_present": true,
+    "job_log_final_heartbeats_in_recorded_stage": true,
+    "job_log_one_matching_archive_event": true,
+    "neuropixel_seed40:checkpoint:final": true,
+    "neuropixel_seed40:checkpoint:intermediate": true,
+    "neuropixel_seed40:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed40:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed40:checkpoint:unchanged_bytes": true,
+    "neuropixel_seed40:probe_predictions:final": true,
+    "neuropixel_seed40:probe_predictions:intermediate": true,
+    "neuropixel_seed40:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed40:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed40:probe_predictions:unchanged_bytes": true,
+    "neuropixel_seed40:summary:final": true,
+    "neuropixel_seed40:summary:intermediate": true,
+    "neuropixel_seed40:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed40:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed40:summary:unchanged_bytes": true,
+    "neuropixel_seed40:training_log:final": true,
+    "neuropixel_seed40:training_log:intermediate": true,
+    "neuropixel_seed40:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed40:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed40:training_log:unchanged_bytes": true,
+    "neuropixel_seed40:validation_predictions:final": true,
+    "neuropixel_seed40:validation_predictions:intermediate": true,
+    "neuropixel_seed40:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed40:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed40:validation_predictions:unchanged_bytes": true,
+    "neuropixel_seed41:checkpoint:final": true,
+    "neuropixel_seed41:checkpoint:intermediate": true,
+    "neuropixel_seed41:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed41:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed41:checkpoint:unchanged_bytes": true,
+    "neuropixel_seed41:probe_predictions:final": true,
+    "neuropixel_seed41:probe_predictions:intermediate": true,
+    "neuropixel_seed41:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed41:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed41:probe_predictions:unchanged_bytes": true,
+    "neuropixel_seed41:summary:final": true,
+    "neuropixel_seed41:summary:intermediate": true,
+    "neuropixel_seed41:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed41:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed41:summary:unchanged_bytes": true,
+    "neuropixel_seed41:training_log:final": true,
+    "neuropixel_seed41:training_log:intermediate": true,
+    "neuropixel_seed41:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed41:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed41:training_log:unchanged_bytes": true,
+    "neuropixel_seed41:validation_predictions:final": true,
+    "neuropixel_seed41:validation_predictions:intermediate": true,
+    "neuropixel_seed41:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed41:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed41:validation_predictions:unchanged_bytes": true,
+    "neuropixel_seed42:checkpoint:final": true,
+    "neuropixel_seed42:checkpoint:intermediate": true,
+    "neuropixel_seed42:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed42:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed42:checkpoint:unchanged_bytes": true,
+    "neuropixel_seed42:probe_predictions:final": true,
+    "neuropixel_seed42:probe_predictions:intermediate": true,
+    "neuropixel_seed42:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed42:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed42:probe_predictions:unchanged_bytes": true,
+    "neuropixel_seed42:summary:final": true,
+    "neuropixel_seed42:summary:intermediate": true,
+    "neuropixel_seed42:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed42:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed42:summary:unchanged_bytes": true,
+    "neuropixel_seed42:training_log:final": true,
+    "neuropixel_seed42:training_log:intermediate": true,
+    "neuropixel_seed42:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed42:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed42:training_log:unchanged_bytes": true,
+    "neuropixel_seed42:validation_predictions:final": true,
+    "neuropixel_seed42:validation_predictions:intermediate": true,
+    "neuropixel_seed42:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed42:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed42:validation_predictions:unchanged_bytes": true,
+    "neuropixel_seed43:checkpoint:final": true,
+    "neuropixel_seed43:checkpoint:intermediate": true,
+    "neuropixel_seed43:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed43:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed43:checkpoint:unchanged_bytes": true,
+    "neuropixel_seed43:probe_predictions:final": true,
+    "neuropixel_seed43:probe_predictions:intermediate": true,
+    "neuropixel_seed43:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed43:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed43:probe_predictions:unchanged_bytes": true,
+    "neuropixel_seed43:summary:final": true,
+    "neuropixel_seed43:summary:intermediate": true,
+    "neuropixel_seed43:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed43:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed43:summary:unchanged_bytes": true,
+    "neuropixel_seed43:training_log:final": true,
+    "neuropixel_seed43:training_log:intermediate": true,
+    "neuropixel_seed43:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed43:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed43:training_log:unchanged_bytes": true,
+    "neuropixel_seed43:validation_predictions:final": true,
+    "neuropixel_seed43:validation_predictions:intermediate": true,
+    "neuropixel_seed43:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed43:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed43:validation_predictions:unchanged_bytes": true,
+    "neuropixel_seed44:checkpoint:final": true,
+    "neuropixel_seed44:checkpoint:intermediate": true,
+    "neuropixel_seed44:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed44:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed44:checkpoint:unchanged_bytes": true,
+    "neuropixel_seed44:probe_predictions:final": true,
+    "neuropixel_seed44:probe_predictions:intermediate": true,
+    "neuropixel_seed44:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed44:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed44:probe_predictions:unchanged_bytes": true,
+    "neuropixel_seed44:summary:final": true,
+    "neuropixel_seed44:summary:intermediate": true,
+    "neuropixel_seed44:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed44:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed44:summary:unchanged_bytes": true,
+    "neuropixel_seed44:training_log:final": true,
+    "neuropixel_seed44:training_log:intermediate": true,
+    "neuropixel_seed44:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed44:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed44:training_log:unchanged_bytes": true,
+    "neuropixel_seed44:validation_predictions:final": true,
+    "neuropixel_seed44:validation_predictions:intermediate": true,
+    "neuropixel_seed44:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "neuropixel_seed44:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "neuropixel_seed44:validation_predictions:unchanged_bytes": true,
+    "no_final_manifest_in_intermediate": true,
+    "no_final_or_receipt_in_intermediate": true,
+    "phase_completion_records": true,
+    "plan_declared_inventory": true,
+    "primary_index:final": true,
+    "primary_index:intermediate": true,
+    "primary_index:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "primary_index:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "primary_index:unchanged_bytes": true,
+    "receipt_schema": true,
+    "recovered_checkout_head": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:contract_tests.log": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:contract_tests_environment.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:contract_tests_resource_monitor.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:contract_tests_status.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:execution_plan.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:experiment_recipe.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:interim_manifest.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:source.zip": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:source_before.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/context.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/fixture_exposure.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/manifest.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/memorization.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/memorization_scenarios.json.gz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/probe.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/probe_scenarios.json.gz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/train_scenarios.json.gz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/validation.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/development_data/validation_scenarios.json.gz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/final_inventory.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/primary_runs.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed40/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed41/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed42/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed43/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/neuropixel_seed44/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed40/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed41/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed42/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed43/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/checkpoint.pt": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/configuration.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/probe_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/run.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/training.jsonl": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/runs/relative_transformer_seed44/validation_predictions.npz": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/train_completed.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:study/train_started.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:test_collection.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:tests.xml": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:train.log": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:train_environment.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:train_resource_monitor.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:train_status.json": true,
+    "regular_git_file:2e58f5deb47f5676e8663d666d9db7ea98e3e080:worker_status.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:archive_manifest.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:contract_tests.log": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:contract_tests_environment.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:contract_tests_resource_monitor.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:contract_tests_status.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:execution_plan.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:experiment_recipe.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:final.log": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:final_environment.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:final_resource_monitor.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:final_status.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:source.zip": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:source_after.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:source_before.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/context.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/fixture_exposure.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/manifest.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/memorization.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/memorization_scenarios.json.gz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/probe.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/probe_scenarios.json.gz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/train_scenarios.json.gz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/validation.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/development_data/validation_scenarios.json.gz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_access.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_completed.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_data/controls.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_data/examples.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_data/manifest.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_data/records.json.gz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_data/scenarios.json.gz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_inventory.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed40.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed40.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed41.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed41.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed42.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed42.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed43.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed43.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed44.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/neuropixel_seed44.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed40.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed40.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed41.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed41.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed42.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed42.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed43.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed43.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed44.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_predictions/relative_transformer_seed44.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/final_summary.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/gate_archive_receipt.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/primary_runs.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed40/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed41/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed42/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed43/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/neuropixel_seed44/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed40/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed41/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed42/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed43/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/checkpoint.pt": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/configuration.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/probe_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/run.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/training.jsonl": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/runs/relative_transformer_seed44/validation_predictions.npz": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/train_completed.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:study/train_started.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:test_collection.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:tests.xml": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:train.log": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:train_environment.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:train_resource_monitor.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:train_status.json": true,
+    "regular_git_file:b64d0e2ba222df76caf72bc9870c7602873e7236:worker_status.json": true,
+    "relative_transformer_seed40:checkpoint:final": true,
+    "relative_transformer_seed40:checkpoint:intermediate": true,
+    "relative_transformer_seed40:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed40:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed40:checkpoint:unchanged_bytes": true,
+    "relative_transformer_seed40:probe_predictions:final": true,
+    "relative_transformer_seed40:probe_predictions:intermediate": true,
+    "relative_transformer_seed40:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed40:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed40:probe_predictions:unchanged_bytes": true,
+    "relative_transformer_seed40:summary:final": true,
+    "relative_transformer_seed40:summary:intermediate": true,
+    "relative_transformer_seed40:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed40:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed40:summary:unchanged_bytes": true,
+    "relative_transformer_seed40:training_log:final": true,
+    "relative_transformer_seed40:training_log:intermediate": true,
+    "relative_transformer_seed40:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed40:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed40:training_log:unchanged_bytes": true,
+    "relative_transformer_seed40:validation_predictions:final": true,
+    "relative_transformer_seed40:validation_predictions:intermediate": true,
+    "relative_transformer_seed40:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed40:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed40:validation_predictions:unchanged_bytes": true,
+    "relative_transformer_seed41:checkpoint:final": true,
+    "relative_transformer_seed41:checkpoint:intermediate": true,
+    "relative_transformer_seed41:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed41:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed41:checkpoint:unchanged_bytes": true,
+    "relative_transformer_seed41:probe_predictions:final": true,
+    "relative_transformer_seed41:probe_predictions:intermediate": true,
+    "relative_transformer_seed41:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed41:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed41:probe_predictions:unchanged_bytes": true,
+    "relative_transformer_seed41:summary:final": true,
+    "relative_transformer_seed41:summary:intermediate": true,
+    "relative_transformer_seed41:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed41:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed41:summary:unchanged_bytes": true,
+    "relative_transformer_seed41:training_log:final": true,
+    "relative_transformer_seed41:training_log:intermediate": true,
+    "relative_transformer_seed41:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed41:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed41:training_log:unchanged_bytes": true,
+    "relative_transformer_seed41:validation_predictions:final": true,
+    "relative_transformer_seed41:validation_predictions:intermediate": true,
+    "relative_transformer_seed41:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed41:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed41:validation_predictions:unchanged_bytes": true,
+    "relative_transformer_seed42:checkpoint:final": true,
+    "relative_transformer_seed42:checkpoint:intermediate": true,
+    "relative_transformer_seed42:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed42:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed42:checkpoint:unchanged_bytes": true,
+    "relative_transformer_seed42:probe_predictions:final": true,
+    "relative_transformer_seed42:probe_predictions:intermediate": true,
+    "relative_transformer_seed42:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed42:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed42:probe_predictions:unchanged_bytes": true,
+    "relative_transformer_seed42:summary:final": true,
+    "relative_transformer_seed42:summary:intermediate": true,
+    "relative_transformer_seed42:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed42:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed42:summary:unchanged_bytes": true,
+    "relative_transformer_seed42:training_log:final": true,
+    "relative_transformer_seed42:training_log:intermediate": true,
+    "relative_transformer_seed42:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed42:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed42:training_log:unchanged_bytes": true,
+    "relative_transformer_seed42:validation_predictions:final": true,
+    "relative_transformer_seed42:validation_predictions:intermediate": true,
+    "relative_transformer_seed42:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed42:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed42:validation_predictions:unchanged_bytes": true,
+    "relative_transformer_seed43:checkpoint:final": true,
+    "relative_transformer_seed43:checkpoint:intermediate": true,
+    "relative_transformer_seed43:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed43:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed43:checkpoint:unchanged_bytes": true,
+    "relative_transformer_seed43:probe_predictions:final": true,
+    "relative_transformer_seed43:probe_predictions:intermediate": true,
+    "relative_transformer_seed43:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed43:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed43:probe_predictions:unchanged_bytes": true,
+    "relative_transformer_seed43:summary:final": true,
+    "relative_transformer_seed43:summary:intermediate": true,
+    "relative_transformer_seed43:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed43:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed43:summary:unchanged_bytes": true,
+    "relative_transformer_seed43:training_log:final": true,
+    "relative_transformer_seed43:training_log:intermediate": true,
+    "relative_transformer_seed43:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed43:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed43:training_log:unchanged_bytes": true,
+    "relative_transformer_seed43:validation_predictions:final": true,
+    "relative_transformer_seed43:validation_predictions:intermediate": true,
+    "relative_transformer_seed43:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed43:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed43:validation_predictions:unchanged_bytes": true,
+    "relative_transformer_seed44:checkpoint:final": true,
+    "relative_transformer_seed44:checkpoint:intermediate": true,
+    "relative_transformer_seed44:checkpoint:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed44:checkpoint:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed44:checkpoint:unchanged_bytes": true,
+    "relative_transformer_seed44:probe_predictions:final": true,
+    "relative_transformer_seed44:probe_predictions:intermediate": true,
+    "relative_transformer_seed44:probe_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed44:probe_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed44:probe_predictions:unchanged_bytes": true,
+    "relative_transformer_seed44:summary:final": true,
+    "relative_transformer_seed44:summary:intermediate": true,
+    "relative_transformer_seed44:summary:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed44:summary:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed44:summary:unchanged_bytes": true,
+    "relative_transformer_seed44:training_log:final": true,
+    "relative_transformer_seed44:training_log:intermediate": true,
+    "relative_transformer_seed44:training_log:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed44:training_log:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed44:training_log:unchanged_bytes": true,
+    "relative_transformer_seed44:validation_predictions:final": true,
+    "relative_transformer_seed44:validation_predictions:intermediate": true,
+    "relative_transformer_seed44:validation_predictions:manifest:2e58f5deb47f5676e8663d666d9db7ea98e3e080": true,
+    "relative_transformer_seed44:validation_predictions:manifest:b64d0e2ba222df76caf72bc9870c7602873e7236": true,
+    "relative_transformer_seed44:validation_predictions:unchanged_bytes": true,
+    "source_plan_recipe_unchanged": true,
+    "study_plan_phase": true,
+    "summary_artifact_population:neuropixel_seed40": true,
+    "summary_artifact_population:neuropixel_seed41": true,
+    "summary_artifact_population:neuropixel_seed42": true,
+    "summary_artifact_population:neuropixel_seed43": true,
+    "summary_artifact_population:neuropixel_seed44": true,
+    "summary_artifact_population:relative_transformer_seed40": true,
+    "summary_artifact_population:relative_transformer_seed41": true,
+    "summary_artifact_population:relative_transformer_seed42": true,
+    "summary_artifact_population:relative_transformer_seed43": true,
+    "summary_artifact_population:relative_transformer_seed44": true,
+    "ten_reference_sections_completed": true,
+    "train_status_unchanged": true,
+    "worker_source_run_identity": true
+  },
+  "checks_count": 690,
+  "commit_metadata": {
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080": [
+      "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+      "15fbcb08bbb9bf6cf4b67fab9626d40a68ccdd29",
+      "2026-10-07T09:16:12Z",
+      "2026-10-07T09:16:12Z"
+    ],
+    "b64d0e2ba222df76caf72bc9870c7602873e7236": [
+      "b64d0e2ba222df76caf72bc9870c7602873e7236",
+      "0a127eda8dac6a5556efc5f6c53cb4abeb2ee990",
+      "2026-10-07T09:17:54Z",
+      "2026-10-07T09:17:54Z"
+    ]
+  },
+  "completed_at_utc": "2026-10-07T09:51:18.077777+00:00",
+  "dependency_limits": [],
+  "descendant_path_commits": [
+    "0a127eda8dac6a5556efc5f6c53cb4abeb2ee990",
+    "b64d0e2ba222df76caf72bc9870c7602873e7236"
+  ],
+  "failed_checks": 0,
+  "final_archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "git_object_inputs": {
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/contract_tests.log": {
+      "bytes": 49,
+      "sha256": "d1da1da0a453d6152431563efa6216a249abd78d0fb582e99b1fa732bfcff7ef"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/contract_tests_environment.json": {
+      "bytes": 9818,
+      "sha256": "5adef3a5442d9812e44cd48d60bdd645d2afe14d34ebd4d2e7439e81598edae5"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/contract_tests_resource_monitor.json": {
+      "bytes": 748,
+      "sha256": "9aa1fba2ce580d5bd58b7d66ed48a0334a58cddb1906e837534603c904469bfe"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/contract_tests_status.json": {
+      "bytes": 894,
+      "sha256": "893eb3705b5ba946deca777e11de5b4eadc9ab4bcc44a778a9a5396413d75f6a"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/execution_plan.json": {
+      "bytes": 14625,
+      "sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/experiment_recipe.json": {
+      "bytes": 4079,
+      "sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/interim_manifest.json": {
+      "bytes": 16832,
+      "sha256": "839dc5ca468298bcd718a41f324e734b0de3d29ee0e7b592e5e0705524dddf54"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/source.zip": {
+      "bytes": 8089454,
+      "sha256": "04a6e2650770cd42ee85e1b4a74412880d89aca2bd9155c1b20503ae7ffb61f2"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/source_before.json": {
+      "bytes": 10544,
+      "sha256": "b3269673c0fd653e6bceb310bb7c2a853edb5b3e9e2a19219b01c431bd6b0dbc"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/context.json": {
+      "bytes": 1319,
+      "sha256": "ea129b2dd668a236d4df66081f1481c8ddd43bb65630936c2c42a16664622c12"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/fixture_exposure.json": {
+      "bytes": 21807,
+      "sha256": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/manifest.json": {
+      "bytes": 20117,
+      "sha256": "7128baef41f6df81e3bfafff15fcf39d6406c99d78cfdf248babcae461b017f0"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/memorization.npz": {
+      "bytes": 6835,
+      "sha256": "6da493aec5c5d5da1bd80d1cab59b3c51800ff4ecf7087e7116df170e7e3cb63"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/memorization_scenarios.json.gz": {
+      "bytes": 761,
+      "sha256": "ccb76c0db01cf22d6dba76bbb53b95231021d995380d48488f59ae7ea42769e8"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/probe.npz": {
+      "bytes": 64707,
+      "sha256": "38d201b273ebb723197e6c65bb901483aa9a35a5418cc814dbfe02105ad0e753"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/probe_scenarios.json.gz": {
+      "bytes": 6765,
+      "sha256": "44db31b01eb512b011fe785da0a2ae2b9096745d6c6d74f1b8e48a45742f0f85"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/train_scenarios.json.gz": {
+      "bytes": 196925,
+      "sha256": "134aff63a31e1e7cc608ff490d825cd1e468c94c9d1b2d14118075155e070b11"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/validation.npz": {
+      "bytes": 125965,
+      "sha256": "9107f7b2fe0f818e37b3850b2811788028da0c4f7d9e4ff9b0372ee7e610416d"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/development_data/validation_scenarios.json.gz": {
+      "bytes": 12882,
+      "sha256": "697209a614d329008f93fbc9f25d227253313b0093c1dba1639577e37ef250fe"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/final_inventory.json": {
+      "bytes": 8481,
+      "sha256": "d91866946ea8b232a59f2e82873c1338b3f77e1cab369ae541b69d427ef701aa"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/primary_runs.json": {
+      "bytes": 794,
+      "sha256": "a85984c414ac241c533f0d6def2b8b4329f9a194e19547264326e790633cf253"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "555fbb99bae3a0caf0b1fef564da2510801bd7d5294ecb7146f4228036c856c8"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/configuration.json": {
+      "bytes": 568,
+      "sha256": "ffd63543364ed69d1deaebdd42cae4292062ad0611bf6c1f2e4fe01048825603"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/probe_predictions.npz": {
+      "bytes": 98959,
+      "sha256": "815c0e1aede8d763c085b7666dbb215aee456c34ef7e14b5bfce68a9a0973e53"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/run.json": {
+      "bytes": 22103,
+      "sha256": "5f28a35bd40c488a5ecb6af5cc2cb5ec618311b669e7f6f0c2b09bada4d2ce9a"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/started.json": {
+      "bytes": 2070,
+      "sha256": "4d24a828987e23ecec8c6efc8dd7fb1f14695ba1b251fef52f44c2279c4f2d3f"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/training.jsonl": {
+      "bytes": 1693701,
+      "sha256": "e7e41363d7fde4af412f847ab9632480234fa016768b53569deddeca92848166"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/validation_predictions.npz": {
+      "bytes": 195967,
+      "sha256": "131e910ec9cbac800cda84cd7ca045d437b52fb196f1a0f174dce96b39d87c28"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "ca3ce2a44d4d73cb3b18f4e92246c877ca6abc0cb27ba2874f3c9679534aa4c9"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/configuration.json": {
+      "bytes": 568,
+      "sha256": "b9c9e2c7cfacb2a3279b577b09cb6c68d721d92f993153707e2968bb0f3924e6"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/probe_predictions.npz": {
+      "bytes": 98545,
+      "sha256": "01da6114af8befca6a537dae4cd74cb84118a3d2949abf7b9cee22b65d623c39"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/run.json": {
+      "bytes": 22088,
+      "sha256": "03870bfb86f2b3b28152d49fbd7580ad01ec8bf6000e41c70605cceb29a110f9"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/started.json": {
+      "bytes": 2070,
+      "sha256": "736e4328a53565ddeffac6306a650c9f3fd0508948c9cfee4ed4e09ef703957c"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/training.jsonl": {
+      "bytes": 1698531,
+      "sha256": "01ceb72b031ec6d7594ff3ef1dbb135bfb574aba07d51236c0b682e3926d3f24"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/validation_predictions.npz": {
+      "bytes": 195112,
+      "sha256": "512c4ebeb546eaa5361c596406271c5af0b5096681f40ab0884b4c55f2c25057"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "04c534d742ea0c9a3528dac9146d4a04007821c89cc875546bd36e3d4dc66a9c"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/configuration.json": {
+      "bytes": 568,
+      "sha256": "2671da5816423fce92d11e6c683944308d6a3b4b6d15b43a6b114b55ba9d20a8"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/probe_predictions.npz": {
+      "bytes": 78995,
+      "sha256": "184d90bdc0a479ce59271a8b6b5a3db91fcab346a76402e8ccc997dd53c6b16f"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/run.json": {
+      "bytes": 22091,
+      "sha256": "95d6e71b4207d889004acc082dabfd5d861d548fe2d9d35840a27852acb32286"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/started.json": {
+      "bytes": 2070,
+      "sha256": "7f5286204abed9e391230eb773686016e54b647e0dc1ff5962d392e691ed53ef"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/training.jsonl": {
+      "bytes": 1700339,
+      "sha256": "e4e37245ada894225fa3b910c2f074c8548f7b89501f06ca6fc172309407c1b3"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/validation_predictions.npz": {
+      "bytes": 155168,
+      "sha256": "98be11528f33c0a662c3f21f65c271fb8e649b8c306a864df7c95bb4dcbeb37d"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/configuration.json": {
+      "bytes": 568,
+      "sha256": "48098f44ed1a8787a7bf786315c2fda37f82c2d19ff0b01760a1a45a736045f1"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/probe_predictions.npz": {
+      "bytes": 98978,
+      "sha256": "b39c60d5fa861856c0005842d1514bc5c38ad0bf2ada3b6e955f4b04a0a1fe69"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/run.json": {
+      "bytes": 22084,
+      "sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/started.json": {
+      "bytes": 2070,
+      "sha256": "89b35fcd78e8371161b5eb49989bd5b1f8875872fe3c6e3d68312e32e13a4537"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/training.jsonl": {
+      "bytes": 1701352,
+      "sha256": "edb05bb439a796dd7811085b16b12e096f8f7f03e5c028649ca06f3e8357f1ee"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/validation_predictions.npz": {
+      "bytes": 196024,
+      "sha256": "daf6ba5ec8bcc52375eb939f26d4687f82b739e28c8ae0740d45b3bd35982900"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "e1aa251aec7e05a1befcdc8bf9fe42c1fa4cdb07b111cde6bb253b4b8fa49fed"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/configuration.json": {
+      "bytes": 568,
+      "sha256": "163e52309b662d4e08e720ae2921c9db52a4af5c786dc8dc5146e8a0ec38f39b"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/probe_predictions.npz": {
+      "bytes": 79849,
+      "sha256": "671f1fdbacfa8e89004266ce5e108cb2ca9be85dca54e6bdac36eeb51e1b8a25"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/run.json": {
+      "bytes": 22093,
+      "sha256": "71bf7077f2be715bbede5d9391ab1b3cef7a38f4f7604ee18dd9234fc09bab97"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/started.json": {
+      "bytes": 2070,
+      "sha256": "86ad563a3da0a9cbb2be7bc44bbc1f358577b3bc222f532ef10b9a69e592ed67"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/training.jsonl": {
+      "bytes": 1701632,
+      "sha256": "bfd4492cd65654316d489080f41cf511ce04a128e0aed3676bbf290ec897847c"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/validation_predictions.npz": {
+      "bytes": 157035,
+      "sha256": "5af877990225c3da47026f5f1ae85b8f38e621553d80bb5d76279426545e2120"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "a57ba1f23d5acfe06f40d745af65cf4b583eaa8286c2b0ccfab9ba79e0ac84ea"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/configuration.json": {
+      "bytes": 528,
+      "sha256": "49a0c83770a981b94b2414361c2595ac8e1dd33f514aa1431399b6bd26cb46d7"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/probe_predictions.npz": {
+      "bytes": 100566,
+      "sha256": "debc2ad7d2451ebcfc4ed964d4c26d5e4b808840083a541edd45b85125c04cd5"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/run.json": {
+      "bytes": 22090,
+      "sha256": "03f49107a6436dacace4eadc4abfaf01c6a67a101f2d5ef5733ead9e85bcee26"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/started.json": {
+      "bytes": 2024,
+      "sha256": "07778c7e40e6fea7b7b4317143595d0c8f7bdc4ca7f7541e0453e61c61e58dbb"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/training.jsonl": {
+      "bytes": 1702928,
+      "sha256": "775bf01edb0411cf40eaa6c80d323e55025ace4ba3949ccd1991581b4c9d3332"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/validation_predictions.npz": {
+      "bytes": 199219,
+      "sha256": "0abc64572a17ce8739dac99c27803ba2e7e730e76251f8b0f0c7b125683c5e79"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "511229427fe3cc7b9a0362be87fa7880687b7561f53eca7a951df0696dbe3f8f"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/configuration.json": {
+      "bytes": 528,
+      "sha256": "ea1b6c5d31107caba187b4320376c736fc4d48631c1d0befde2f0d318297763e"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/probe_predictions.npz": {
+      "bytes": 100654,
+      "sha256": "fa7acbb7bc46c2562d17a547e203794fc223177709f019ba6852c5442867dfda"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/run.json": {
+      "bytes": 22108,
+      "sha256": "a51e9d3fdd48f4b0aeb6704803d89c6e2f0347a609cb77683d68fa7caedacdcb"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/started.json": {
+      "bytes": 2024,
+      "sha256": "70c3729678c17ad675d2f70b25f5c1d33cfa2a39c77056dcfc9873afb246c545"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/training.jsonl": {
+      "bytes": 1704424,
+      "sha256": "d14dd766c890e83ce74d1640e8699116adb240c98aebdd4d89b27a96f06d20de"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/validation_predictions.npz": {
+      "bytes": 199428,
+      "sha256": "354b7a53eab658d24e306b0841b1f166000fe189fadec5811e718939a40b8e42"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "7d012c410da236a76e07bf1cb606f9cccf36008b9c68d4a10a78c22ab6b3a6f4"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/configuration.json": {
+      "bytes": 528,
+      "sha256": "22d331fef91ee85133da27f5305cb92503a5ef3e8dc134ff065f44e75b77e818"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/probe_predictions.npz": {
+      "bytes": 100553,
+      "sha256": "d197d9696d153b50805dde0c9a1487336f313a47a5cfd66973adcf87adc38a64"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/run.json": {
+      "bytes": 22079,
+      "sha256": "72e89a4443bd3483a79a63b1c9444c00dc4e1666ca924434d83196343c704ef4"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/started.json": {
+      "bytes": 2024,
+      "sha256": "2c48a654e12dbc8975f535d963e2363265e70683544647215fcfda345dc7f4f5"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/training.jsonl": {
+      "bytes": 1703720,
+      "sha256": "b7e8dedeb3284701f6ddaff45869bb522e9ba6ba87255e83038614578a4f4881"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/validation_predictions.npz": {
+      "bytes": 199280,
+      "sha256": "d6aff961675e25af34a57d8534c2f0ff84c55c170a2295fa94c63295840c18c3"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "906beeef4f34fef40962c1d2ac6e7abaccec1d876dfcca49fc145d7ee9190b59"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/configuration.json": {
+      "bytes": 528,
+      "sha256": "1b23a43422b76be48b5cc01c22e15610512676ffd4173aba631a5e13374577f4"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/probe_predictions.npz": {
+      "bytes": 100634,
+      "sha256": "0de7b707eeb952956618e90f17322aede6ea96765dc502e268d6e7a52d639932"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/run.json": {
+      "bytes": 22091,
+      "sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/started.json": {
+      "bytes": 2024,
+      "sha256": "43cfd9944509102eee54da354858c05d78419f974e1e36139523cffb04589a85"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/training.jsonl": {
+      "bytes": 1704480,
+      "sha256": "97734c244df616bf04398502fbddb313bb76096afb1e64cbf2f0247b4af20ba4"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/validation_predictions.npz": {
+      "bytes": 199358,
+      "sha256": "4aab44482b7c0f05e98f0e26435dfdb44c4bfee95a8986d3a4954267ecdfaa2c"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "7b5d68573ba0a4aafcff3d2c8913df65b5e4894bb9f6c6ba05ecb2ab960f2128"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/configuration.json": {
+      "bytes": 528,
+      "sha256": "b9f8fcd7afc2965d11568f026127a8de01e268b9db50222b98552bcad98fca20"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/probe_predictions.npz": {
+      "bytes": 100404,
+      "sha256": "f5dbbe08400597559fa44e1af03e6393d5cbf4d6e9ab07b49517c60681ec054f"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/run.json": {
+      "bytes": 22113,
+      "sha256": "bf4394f0ab3aa4f8cf4b4177cfa6ac26eae21c8269e36c4f1019f3ec6e51d0b1"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/started.json": {
+      "bytes": 2024,
+      "sha256": "88e67f4d27ed4d783afa7d34fac9f52fa988e9f4f919d1787d6e83b0a471807b"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/training.jsonl": {
+      "bytes": 1704452,
+      "sha256": "7d768f0bf5fe16978cb7f5e7fb6f00efb99550f7df4e7599ce95e347783c1069"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/validation_predictions.npz": {
+      "bytes": 198967,
+      "sha256": "a324f3ad30563edc8a0ee593e035c37f6f149f747fa4371d769720a4ba1bc43e"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/train_completed.json": {
+      "bytes": 325,
+      "sha256": "bf9f9fe8bd3b3a915cc8be90aa3e6d523d24f451cec6d9932e60331958de4187"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/study/train_started.json": {
+      "bytes": 882,
+      "sha256": "9fe28a6890252dcaa2599f7207200033c4e9e39639fbfbfb5e9115d1708ac75f"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/test_collection.json": {
+      "bytes": 4296,
+      "sha256": "264d96d383b0d76412c4b61414e35123819bae5be86d122aa400a1e72e71d724"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/tests.xml": {
+      "bytes": 5469,
+      "sha256": "7dad38a9e544b9daa974c227dd730874321cc64bcc8b488c48586c74aff19ba9"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/train.log": {
+      "bytes": 143554,
+      "sha256": "8eabaa5e51d3575cc79bd1801ce33c1aab2a0aa9dc4945e1a20120f07b6d2296"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/train_environment.json": {
+      "bytes": 1640,
+      "sha256": "dbc948ec06f1983afc927a94df7874fcdd3509c9024597837f788d21db447f34"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/train_resource_monitor.json": {
+      "bytes": 397322,
+      "sha256": "cfce0118ebbf3a88c56db859a5b4376c0adeb152230d084674ecc9cf76a61e2b"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/train_status.json": {
+      "bytes": 878,
+      "sha256": "4d617de6b2488537542198deda8a26ab8261b56bc99ff2b80c0b7d291420c6c9"
+    },
+    "2e58f5deb47f5676e8663d666d9db7ea98e3e080:results/research/09_cloud_runs/37593731891-1-study/worker_status.json": {
+      "bytes": 3077,
+      "sha256": "ca46f97da658c1e61e7a49e5c15188452f52dad513d4d918fea21889870b8b8b"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/archive_manifest.json": {
+      "bytes": 22477,
+      "sha256": "49cda016746d6f020e22da2e10e09f8706b1f17f15491baf438d6952484f78e6"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/execution_plan.json": {
+      "bytes": 14625,
+      "sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/experiment_recipe.json": {
+      "bytes": 4079,
+      "sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/final_status.json": {
+      "bytes": 884,
+      "sha256": "65e34e23d44e3927e1a33f3650b964050d25a6f53043a56d8d2f5b6333e84d33"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/source.zip": {
+      "bytes": 8089454,
+      "sha256": "04a6e2650770cd42ee85e1b4a74412880d89aca2bd9155c1b20503ae7ffb61f2"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/source_after.json": {
+      "bytes": 10544,
+      "sha256": "0d2e9aa884c3c11ccee4f9861309287df1efa2bb79cfdfbb3ba9f07a5cf95edb"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/final_access.json": {
+      "bytes": 492,
+      "sha256": "94cef0d664c1eed44b3986d70a7123442066bdc7a781e3d350ecfbda99fc572e"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/final_completed.json": {
+      "bytes": 331,
+      "sha256": "ada9feeeaa2c97fd89451fc0803a54e1be0351432efafbc997b27ea4750cf419"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/final_data/manifest.json": {
+      "bytes": 3854,
+      "sha256": "81c917d80206da2e961558c3842b6b3f70bc7b841031ef2e9d70149aed997295"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/final_inventory.json": {
+      "bytes": 8481,
+      "sha256": "d91866946ea8b232a59f2e82873c1338b3f77e1cab369ae541b69d427ef701aa"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/final_started.json": {
+      "bytes": 882,
+      "sha256": "b877002264de143ea63d09c0048fb15bf3437330e066e87a551537b837a4b457"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/gate_archive_receipt.json": {
+      "bytes": 398,
+      "sha256": "85b28a642b0dd5cdabd9e57f03f1ef25df8e595433732c8b7097afaaaaa0ea17"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/primary_runs.json": {
+      "bytes": 794,
+      "sha256": "a85984c414ac241c533f0d6def2b8b4329f9a194e19547264326e790633cf253"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "555fbb99bae3a0caf0b1fef564da2510801bd7d5294ecb7146f4228036c856c8"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/probe_predictions.npz": {
+      "bytes": 98959,
+      "sha256": "815c0e1aede8d763c085b7666dbb215aee456c34ef7e14b5bfce68a9a0973e53"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/run.json": {
+      "bytes": 22103,
+      "sha256": "5f28a35bd40c488a5ecb6af5cc2cb5ec618311b669e7f6f0c2b09bada4d2ce9a"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/training.jsonl": {
+      "bytes": 1693701,
+      "sha256": "e7e41363d7fde4af412f847ab9632480234fa016768b53569deddeca92848166"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed40/validation_predictions.npz": {
+      "bytes": 195967,
+      "sha256": "131e910ec9cbac800cda84cd7ca045d437b52fb196f1a0f174dce96b39d87c28"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "ca3ce2a44d4d73cb3b18f4e92246c877ca6abc0cb27ba2874f3c9679534aa4c9"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/probe_predictions.npz": {
+      "bytes": 98545,
+      "sha256": "01da6114af8befca6a537dae4cd74cb84118a3d2949abf7b9cee22b65d623c39"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/run.json": {
+      "bytes": 22088,
+      "sha256": "03870bfb86f2b3b28152d49fbd7580ad01ec8bf6000e41c70605cceb29a110f9"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/training.jsonl": {
+      "bytes": 1698531,
+      "sha256": "01ceb72b031ec6d7594ff3ef1dbb135bfb574aba07d51236c0b682e3926d3f24"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed41/validation_predictions.npz": {
+      "bytes": 195112,
+      "sha256": "512c4ebeb546eaa5361c596406271c5af0b5096681f40ab0884b4c55f2c25057"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "04c534d742ea0c9a3528dac9146d4a04007821c89cc875546bd36e3d4dc66a9c"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/probe_predictions.npz": {
+      "bytes": 78995,
+      "sha256": "184d90bdc0a479ce59271a8b6b5a3db91fcab346a76402e8ccc997dd53c6b16f"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/run.json": {
+      "bytes": 22091,
+      "sha256": "95d6e71b4207d889004acc082dabfd5d861d548fe2d9d35840a27852acb32286"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/training.jsonl": {
+      "bytes": 1700339,
+      "sha256": "e4e37245ada894225fa3b910c2f074c8548f7b89501f06ca6fc172309407c1b3"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed42/validation_predictions.npz": {
+      "bytes": 155168,
+      "sha256": "98be11528f33c0a662c3f21f65c271fb8e649b8c306a864df7c95bb4dcbeb37d"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/probe_predictions.npz": {
+      "bytes": 98978,
+      "sha256": "b39c60d5fa861856c0005842d1514bc5c38ad0bf2ada3b6e955f4b04a0a1fe69"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/run.json": {
+      "bytes": 22084,
+      "sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/training.jsonl": {
+      "bytes": 1701352,
+      "sha256": "edb05bb439a796dd7811085b16b12e096f8f7f03e5c028649ca06f3e8357f1ee"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed43/validation_predictions.npz": {
+      "bytes": 196024,
+      "sha256": "daf6ba5ec8bcc52375eb939f26d4687f82b739e28c8ae0740d45b3bd35982900"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/checkpoint.pt": {
+      "bytes": 123192,
+      "sha256": "e1aa251aec7e05a1befcdc8bf9fe42c1fa4cdb07b111cde6bb253b4b8fa49fed"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/probe_predictions.npz": {
+      "bytes": 79849,
+      "sha256": "671f1fdbacfa8e89004266ce5e108cb2ca9be85dca54e6bdac36eeb51e1b8a25"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/run.json": {
+      "bytes": 22093,
+      "sha256": "71bf7077f2be715bbede5d9391ab1b3cef7a38f4f7604ee18dd9234fc09bab97"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/training.jsonl": {
+      "bytes": 1701632,
+      "sha256": "bfd4492cd65654316d489080f41cf511ce04a128e0aed3676bbf290ec897847c"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/neuropixel_seed44/validation_predictions.npz": {
+      "bytes": 157035,
+      "sha256": "5af877990225c3da47026f5f1ae85b8f38e621553d80bb5d76279426545e2120"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "a57ba1f23d5acfe06f40d745af65cf4b583eaa8286c2b0ccfab9ba79e0ac84ea"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/probe_predictions.npz": {
+      "bytes": 100566,
+      "sha256": "debc2ad7d2451ebcfc4ed964d4c26d5e4b808840083a541edd45b85125c04cd5"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/run.json": {
+      "bytes": 22090,
+      "sha256": "03f49107a6436dacace4eadc4abfaf01c6a67a101f2d5ef5733ead9e85bcee26"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/training.jsonl": {
+      "bytes": 1702928,
+      "sha256": "775bf01edb0411cf40eaa6c80d323e55025ace4ba3949ccd1991581b4c9d3332"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed40/validation_predictions.npz": {
+      "bytes": 199219,
+      "sha256": "0abc64572a17ce8739dac99c27803ba2e7e730e76251f8b0f0c7b125683c5e79"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "511229427fe3cc7b9a0362be87fa7880687b7561f53eca7a951df0696dbe3f8f"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/probe_predictions.npz": {
+      "bytes": 100654,
+      "sha256": "fa7acbb7bc46c2562d17a547e203794fc223177709f019ba6852c5442867dfda"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/run.json": {
+      "bytes": 22108,
+      "sha256": "a51e9d3fdd48f4b0aeb6704803d89c6e2f0347a609cb77683d68fa7caedacdcb"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/training.jsonl": {
+      "bytes": 1704424,
+      "sha256": "d14dd766c890e83ce74d1640e8699116adb240c98aebdd4d89b27a96f06d20de"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed41/validation_predictions.npz": {
+      "bytes": 199428,
+      "sha256": "354b7a53eab658d24e306b0841b1f166000fe189fadec5811e718939a40b8e42"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "7d012c410da236a76e07bf1cb606f9cccf36008b9c68d4a10a78c22ab6b3a6f4"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/probe_predictions.npz": {
+      "bytes": 100553,
+      "sha256": "d197d9696d153b50805dde0c9a1487336f313a47a5cfd66973adcf87adc38a64"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/run.json": {
+      "bytes": 22079,
+      "sha256": "72e89a4443bd3483a79a63b1c9444c00dc4e1666ca924434d83196343c704ef4"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/training.jsonl": {
+      "bytes": 1703720,
+      "sha256": "b7e8dedeb3284701f6ddaff45869bb522e9ba6ba87255e83038614578a4f4881"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed42/validation_predictions.npz": {
+      "bytes": 199280,
+      "sha256": "d6aff961675e25af34a57d8534c2f0ff84c55c170a2295fa94c63295840c18c3"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "906beeef4f34fef40962c1d2ac6e7abaccec1d876dfcca49fc145d7ee9190b59"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/probe_predictions.npz": {
+      "bytes": 100634,
+      "sha256": "0de7b707eeb952956618e90f17322aede6ea96765dc502e268d6e7a52d639932"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/run.json": {
+      "bytes": 22091,
+      "sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/training.jsonl": {
+      "bytes": 1704480,
+      "sha256": "97734c244df616bf04398502fbddb313bb76096afb1e64cbf2f0247b4af20ba4"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed43/validation_predictions.npz": {
+      "bytes": 199358,
+      "sha256": "4aab44482b7c0f05e98f0e26435dfdb44c4bfee95a8986d3a4954267ecdfaa2c"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/checkpoint.pt": {
+      "bytes": 131001,
+      "sha256": "7b5d68573ba0a4aafcff3d2c8913df65b5e4894bb9f6c6ba05ecb2ab960f2128"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/probe_predictions.npz": {
+      "bytes": 100404,
+      "sha256": "f5dbbe08400597559fa44e1af03e6393d5cbf4d6e9ab07b49517c60681ec054f"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/run.json": {
+      "bytes": 22113,
+      "sha256": "bf4394f0ab3aa4f8cf4b4177cfa6ac26eae21c8269e36c4f1019f3ec6e51d0b1"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/training.jsonl": {
+      "bytes": 1704452,
+      "sha256": "7d768f0bf5fe16978cb7f5e7fb6f00efb99550f7df4e7599ce95e347783c1069"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/study/runs/relative_transformer_seed44/validation_predictions.npz": {
+      "bytes": 198967,
+      "sha256": "a324f3ad30563edc8a0ee593e035c37f6f149f747fa4371d769720a4ba1bc43e"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/train_status.json": {
+      "bytes": 878,
+      "sha256": "4d617de6b2488537542198deda8a26ab8261b56bc99ff2b80c0b7d291420c6c9"
+    },
+    "b64d0e2ba222df76caf72bc9870c7602873e7236:results/research/09_cloud_runs/37593731891-1-study/worker_status.json": {
+      "bytes": 4336,
+      "sha256": "10ae33d7c746fbf7810595f95ce16c14cae2618b5afc13db4af9eba3c7d71065"
+    }
+  },
+  "input": "/tmp/neuropixel-item9-offline-inputs-_p481h8d/complete-raw-archive/results/research/09_cloud_runs/37593731891-1-study",
+  "intermediate_archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+  "intermediate_inventory": {
+    "forbidden_paths_found": [],
+    "git_regular_files": 100,
+    "manifested_bytes": 30542121,
+    "manifested_files": 99
+  },
+  "issues": [],
+  "item": 9,
+  "job_log": {
+    "bytes": 44137,
+    "final_heartbeat_events": [
+      {
+        "event": {
+          "at_utc": "2026-10-07T09:16:15.581847+00:00",
+          "available_ram_gib": 14.603931427001953,
+          "event": "resource_heartbeat",
+          "phase": "final"
+        },
+        "line": 409,
+        "prefix": "2026-10-07T09:16:15.5828353Z "
+      },
+      {
+        "event": {
+          "at_utc": "2026-10-07T09:17:15.601862+00:00",
+          "available_ram_gib": 14.409072875976562,
+          "event": "resource_heartbeat",
+          "phase": "final"
+        },
+        "line": 410,
+        "prefix": "2026-10-07T09:17:15.6041158Z "
+      }
+    ],
+    "intermediate_archive_events": [
+      {
+        "event": {
+          "archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+          "at_utc": "2026-10-07T09:16:15.491317+00:00",
+          "event": "evidence_archived",
+          "files": 99,
+          "snapshot_kind": "interim_partial"
+        },
+        "line": 408,
+        "prefix": "2026-10-07T09:16:15.4916234Z "
+      }
+    ],
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_offline_runs/37603398040-1-offline/study_actions_job.log",
+    "provided": true,
+    "scope": "The frozen worker emits no final-stage-start stdout event. Log order can establish archive event before the first observed final heartbeat; start ordering also compares recorded event UTC with the saved final_status timestamp. Prefix timestamps are retained without assuming their origin.",
+    "sha256": "340b74f9322b20c682d8791ce2fa0e92f26badff92dcc21aa7cd7e3757257749"
+  },
+  "limits": [
+    "The caller must independently recover and identify the supplied final archive and remote branch head; this helper does not contact the server.",
+    "Git ancestry authenticates content and structural ordering. Commit dates and worker timestamps do not independently attest when a push reached a remote server.",
+    "The frozen worker checks push success and ls-remote equality before writing the receipt. Saved logs can corroborate its recorded sequence, not provide external blinding or custody.",
+    "Absence from the intermediate Git tree does not prove absence from unrecorded files, machines or prior human access.",
+    "Intermediate manifests describe the completed copy, not an atomic snapshot of every live file. The gate snapshot follows completed training; its referenced artifacts are checked directly.",
+    "This same-team artifact audit neither establishes external replication nor changes the scientific protocol or earlier H1."
+  ],
+  "model_or_rng_execution": false,
+  "network_access": false,
+  "primary_references": [
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed40/checkpoint.pt",
+        "sha256": "555fbb99bae3a0caf0b1fef564da2510801bd7d5294ecb7146f4228036c856c8"
+      },
+      "family": "neuropixel",
+      "initialization": 40,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed40",
+      "summary": {
+        "bytes": 22103,
+        "path": "runs/neuropixel_seed40/run.json",
+        "sha256": "5f28a35bd40c488a5ecb6af5cc2cb5ec618311b669e7f6f0c2b09bada4d2ce9a"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed40/checkpoint.pt",
+        "sha256": "a57ba1f23d5acfe06f40d745af65cf4b583eaa8286c2b0ccfab9ba79e0ac84ea"
+      },
+      "family": "relative_transformer",
+      "initialization": 40,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed40",
+      "summary": {
+        "bytes": 22090,
+        "path": "runs/relative_transformer_seed40/run.json",
+        "sha256": "03f49107a6436dacace4eadc4abfaf01c6a67a101f2d5ef5733ead9e85bcee26"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed41/checkpoint.pt",
+        "sha256": "ca3ce2a44d4d73cb3b18f4e92246c877ca6abc0cb27ba2874f3c9679534aa4c9"
+      },
+      "family": "neuropixel",
+      "initialization": 41,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed41",
+      "summary": {
+        "bytes": 22088,
+        "path": "runs/neuropixel_seed41/run.json",
+        "sha256": "03870bfb86f2b3b28152d49fbd7580ad01ec8bf6000e41c70605cceb29a110f9"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed41/checkpoint.pt",
+        "sha256": "511229427fe3cc7b9a0362be87fa7880687b7561f53eca7a951df0696dbe3f8f"
+      },
+      "family": "relative_transformer",
+      "initialization": 41,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed41",
+      "summary": {
+        "bytes": 22108,
+        "path": "runs/relative_transformer_seed41/run.json",
+        "sha256": "a51e9d3fdd48f4b0aeb6704803d89c6e2f0347a609cb77683d68fa7caedacdcb"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed42/checkpoint.pt",
+        "sha256": "04c534d742ea0c9a3528dac9146d4a04007821c89cc875546bd36e3d4dc66a9c"
+      },
+      "family": "neuropixel",
+      "initialization": 42,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed42",
+      "summary": {
+        "bytes": 22091,
+        "path": "runs/neuropixel_seed42/run.json",
+        "sha256": "95d6e71b4207d889004acc082dabfd5d861d548fe2d9d35840a27852acb32286"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed42/checkpoint.pt",
+        "sha256": "7d012c410da236a76e07bf1cb606f9cccf36008b9c68d4a10a78c22ab6b3a6f4"
+      },
+      "family": "relative_transformer",
+      "initialization": 42,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed42",
+      "summary": {
+        "bytes": 22079,
+        "path": "runs/relative_transformer_seed42/run.json",
+        "sha256": "72e89a4443bd3483a79a63b1c9444c00dc4e1666ca924434d83196343c704ef4"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed43/checkpoint.pt",
+        "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+      },
+      "family": "neuropixel",
+      "initialization": 43,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed43",
+      "summary": {
+        "bytes": 22084,
+        "path": "runs/neuropixel_seed43/run.json",
+        "sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed43/checkpoint.pt",
+        "sha256": "906beeef4f34fef40962c1d2ac6e7abaccec1d876dfcca49fc145d7ee9190b59"
+      },
+      "family": "relative_transformer",
+      "initialization": 43,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed43",
+      "summary": {
+        "bytes": 22091,
+        "path": "runs/relative_transformer_seed43/run.json",
+        "sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed44/checkpoint.pt",
+        "sha256": "e1aa251aec7e05a1befcdc8bf9fe42c1fa4cdb07b111cde6bb253b4b8fa49fed"
+      },
+      "family": "neuropixel",
+      "initialization": 44,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed44",
+      "summary": {
+        "bytes": 22093,
+        "path": "runs/neuropixel_seed44/run.json",
+        "sha256": "71bf7077f2be715bbede5d9391ab1b3cef7a38f4f7604ee18dd9234fc09bab97"
+      },
+      "updates": 4096
+    },
+    {
+      "all_nested_artifacts_checked": true,
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed44/checkpoint.pt",
+        "sha256": "7b5d68573ba0a4aafcff3d2c8913df65b5e4894bb9f6c6ba05ecb2ab960f2128"
+      },
+      "family": "relative_transformer",
+      "initialization": 44,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed44",
+      "summary": {
+        "bytes": 22113,
+        "path": "runs/relative_transformer_seed44/run.json",
+        "sha256": "bf4394f0ab3aa4f8cf4b4177cfa6ac26eae21c8269e36c4f1019f3ec6e51d0b1"
+      },
+      "updates": 4096
+    }
+  ],
+  "provided_remote_head": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "raw_git_prefix": "results/research/09_cloud_runs/37593731891-1-study",
+  "recorded_chronology": [
+    {
+      "at_utc": "2026-10-07T08:22:31.852462+00:00",
+      "event": "source_freeze"
+    },
+    {
+      "at_utc": "2026-10-07T08:27:03.380586+00:00",
+      "event": "train_worker_start"
+    },
+    {
+      "at_utc": "2026-10-07T08:27:04.771044+00:00",
+      "event": "train_scientific_start"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:11.700848+00:00",
+      "event": "final_inventory_created"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:11.705613+00:00",
+      "event": "train_scientific_complete"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:12.371434+00:00",
+      "event": "train_worker_complete"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:12.470954+00:00",
+      "event": "intermediate_copy_manifest_created"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:15.491798+00:00",
+      "event": "gate_archive_receipt_written"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:15.580302+00:00",
+      "event": "final_worker_start"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:16.957535+00:00",
+      "event": "final_scientific_start"
+    },
+    {
+      "at_utc": "2026-10-07T09:16:17.038259+00:00",
+      "event": "final_access_consumed"
+    },
+    {
+      "at_utc": "2026-10-07T09:17:47.378233+00:00",
+      "event": "final_scientific_complete"
+    },
+    {
+      "at_utc": "2026-10-07T09:17:48.107702+00:00",
+      "event": "final_worker_complete"
+    },
+    {
+      "at_utc": "2026-10-07T09:17:53.559503+00:00",
+      "event": "source_after"
+    },
+    {
+      "at_utc": "2026-10-07T09:17:53.632580+00:00",
+      "event": "worker_complete"
+    },
+    {
+      "at_utc": "2026-10-07T09:17:53.787168+00:00",
+      "event": "final_copy_manifest_created"
+    }
+  ],
+  "repository": "/tmp/neuropixel-item9-offline-inputs-_p481h8d/complete-raw-archive",
+  "schema_version": 1,
+  "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "started_at_utc": "2026-10-07T09:51:17.010958+00:00",
+  "status": "verified"
+}

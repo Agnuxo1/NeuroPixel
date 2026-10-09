@@ -1,0 +1,255 @@
+{
+  "context": {
+    "development_identities": {
+      "fixture_exposure.json": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699",
+      "memorization.npz": "1f822a1a0256f2a80907a01ce124a94e8f642942e2608aad6a9ebbb58bcc7442",
+      "memorization_scenarios.json.gz": "ccb76c0db01cf22d6dba76bbb53b95231021d995380d48488f59ae7ea42769e8",
+      "probe.npz": "2f46f63706e8a7b85c1d925ecd565a18d9b799ca8c89986a7e1b319e1572cb32",
+      "probe_scenarios.json.gz": "44db31b01eb512b011fe785da0a2ae2b9096745d6c6d74f1b8e48a45742f0f85",
+      "train_scenarios.json.gz": "134aff63a31e1e7cc608ff490d825cd1e468c94c9d1b2d14118075155e070b11",
+      "validation.npz": "b3c9e4cacaeb3195fce01b9929b9fefe4442364a49e5c0c4777b1803e8387376",
+      "validation_scenarios.json.gz": "697209a614d329008f93fbc9f25d227253313b0093c1dba1639577e37ef250fe"
+    },
+    "development_manifest": {
+      "bytes": 20117,
+      "path": "development_data/manifest.json",
+      "sha256": "7128baef41f6df81e3bfafff15fcf39d6406c99d78cfdf248babcae461b017f0"
+    },
+    "pilot_evidence_sha256": "a1d53e0b064e812317d93e6e8749bae4728730fecfbf359edf0249f2a72f6ee4",
+    "plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+    "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959"
+  },
+  "created_at_utc": "2026-10-07T09:16:11.700848+00:00",
+  "entries": [
+    {
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed40/checkpoint.pt",
+        "sha256": "555fbb99bae3a0caf0b1fef564da2510801bd7d5294ecb7146f4228036c856c8"
+      },
+      "family": "neuropixel",
+      "initialization": 40,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed40",
+      "summary": {
+        "bytes": 22103,
+        "path": "runs/neuropixel_seed40/run.json",
+        "sha256": "5f28a35bd40c488a5ecb6af5cc2cb5ec618311b669e7f6f0c2b09bada4d2ce9a"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed40/checkpoint.pt",
+        "sha256": "a57ba1f23d5acfe06f40d745af65cf4b583eaa8286c2b0ccfab9ba79e0ac84ea"
+      },
+      "family": "relative_transformer",
+      "initialization": 40,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed40",
+      "summary": {
+        "bytes": 22090,
+        "path": "runs/relative_transformer_seed40/run.json",
+        "sha256": "03f49107a6436dacace4eadc4abfaf01c6a67a101f2d5ef5733ead9e85bcee26"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed41/checkpoint.pt",
+        "sha256": "ca3ce2a44d4d73cb3b18f4e92246c877ca6abc0cb27ba2874f3c9679534aa4c9"
+      },
+      "family": "neuropixel",
+      "initialization": 41,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed41",
+      "summary": {
+        "bytes": 22088,
+        "path": "runs/neuropixel_seed41/run.json",
+        "sha256": "03870bfb86f2b3b28152d49fbd7580ad01ec8bf6000e41c70605cceb29a110f9"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed41/checkpoint.pt",
+        "sha256": "511229427fe3cc7b9a0362be87fa7880687b7561f53eca7a951df0696dbe3f8f"
+      },
+      "family": "relative_transformer",
+      "initialization": 41,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed41",
+      "summary": {
+        "bytes": 22108,
+        "path": "runs/relative_transformer_seed41/run.json",
+        "sha256": "a51e9d3fdd48f4b0aeb6704803d89c6e2f0347a609cb77683d68fa7caedacdcb"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed42/checkpoint.pt",
+        "sha256": "04c534d742ea0c9a3528dac9146d4a04007821c89cc875546bd36e3d4dc66a9c"
+      },
+      "family": "neuropixel",
+      "initialization": 42,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed42",
+      "summary": {
+        "bytes": 22091,
+        "path": "runs/neuropixel_seed42/run.json",
+        "sha256": "95d6e71b4207d889004acc082dabfd5d861d548fe2d9d35840a27852acb32286"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed42/checkpoint.pt",
+        "sha256": "7d012c410da236a76e07bf1cb606f9cccf36008b9c68d4a10a78c22ab6b3a6f4"
+      },
+      "family": "relative_transformer",
+      "initialization": 42,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed42",
+      "summary": {
+        "bytes": 22079,
+        "path": "runs/relative_transformer_seed42/run.json",
+        "sha256": "72e89a4443bd3483a79a63b1c9444c00dc4e1666ca924434d83196343c704ef4"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed43/checkpoint.pt",
+        "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+      },
+      "family": "neuropixel",
+      "initialization": 43,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed43",
+      "summary": {
+        "bytes": 22084,
+        "path": "runs/neuropixel_seed43/run.json",
+        "sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed43/checkpoint.pt",
+        "sha256": "906beeef4f34fef40962c1d2ac6e7abaccec1d876dfcca49fc145d7ee9190b59"
+      },
+      "family": "relative_transformer",
+      "initialization": 43,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed43",
+      "summary": {
+        "bytes": 22091,
+        "path": "runs/relative_transformer_seed43/run.json",
+        "sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 123192,
+        "path": "runs/neuropixel_seed44/checkpoint.pt",
+        "sha256": "e1aa251aec7e05a1befcdc8bf9fe42c1fa4cdb07b111cde6bb253b4b8fa49fed"
+      },
+      "family": "neuropixel",
+      "initialization": 44,
+      "learning_rate": 0.001,
+      "run_id": "neuropixel_seed44",
+      "summary": {
+        "bytes": 22093,
+        "path": "runs/neuropixel_seed44/run.json",
+        "sha256": "71bf7077f2be715bbede5d9391ab1b3cef7a38f4f7604ee18dd9234fc09bab97"
+      },
+      "updates": 4096
+    },
+    {
+      "checkpoint": {
+        "bytes": 131001,
+        "path": "runs/relative_transformer_seed44/checkpoint.pt",
+        "sha256": "7b5d68573ba0a4aafcff3d2c8913df65b5e4894bb9f6c6ba05ecb2ab960f2128"
+      },
+      "family": "relative_transformer",
+      "initialization": 44,
+      "learning_rate": 0.003,
+      "run_id": "relative_transformer_seed44",
+      "summary": {
+        "bytes": 22113,
+        "path": "runs/relative_transformer_seed44/run.json",
+        "sha256": "bf4394f0ab3aa4f8cf4b4177cfa6ac26eae21c8269e36c4f1019f3ec6e51d0b1"
+      },
+      "updates": 4096
+    }
+  ],
+  "final_data_generated": false,
+  "final_recipe": {
+    "bucket_ranges": {
+      "final": [
+        85,
+        99
+      ],
+      "train": [
+        0,
+        69
+      ],
+      "validation": [
+        70,
+        84
+      ]
+    },
+    "final_bags": 256,
+    "final_conditions": [
+      "base",
+      "swap_queried_agent_patient",
+      "swap_other_agent_patient",
+      "relabel_events",
+      "query_switch",
+      "layout_permutation"
+    ],
+    "final_seed": 91003,
+    "group_unit": "sorted 4 nouns, 2 verbs, 2 places; all assignments/layouts/queries/conditions",
+    "height": 10,
+    "memorization_bags": 4,
+    "memorization_layout_seed": 91005,
+    "out_pos": [
+      9,
+      7
+    ],
+    "probe_bags": 64,
+    "probe_layout_seed": 91004,
+    "query_order": "event-major then role 0,1,2,3",
+    "train_bags": 2048,
+    "train_seed": 91001,
+    "validation_bags": 128,
+    "validation_conditions": [
+      "base"
+    ],
+    "validation_seed": 91002,
+    "vocab_size": 37,
+    "width": 8
+  },
+  "item": 9,
+  "primary_index": {
+    "bytes": 794,
+    "path": "primary_runs.json",
+    "sha256": "a85984c414ac241c533f0d6def2b8b4329f9a194e19547264326e790633cf253"
+  },
+  "schema_version": 1,
+  "scope": "All ten checkpoints; local accidental-access guard, not external blinding.",
+  "selected_learning_rates": {
+    "neuropixel": 0.001,
+    "relative_transformer": 0.003
+  }
+}

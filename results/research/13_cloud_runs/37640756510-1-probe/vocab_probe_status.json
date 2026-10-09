@@ -1,0 +1,199 @@
+{
+  "admission": {
+    "at_utc": "2026-10-07T14:56:17.647971+00:00",
+    "available_ram_gib": 14.450359344482422,
+    "phase": "admission"
+  },
+  "completed_at_utc": "2026-10-07T14:56:22.386721+00:00",
+  "components": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T14:56:18.438569+00:00",
+        "available_ram_gib": 14.394775390625,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_distractor_recount.py",
+        "--input",
+        "/tmp/neuropixel-item13-pinned-input-4v0jrlfs/tree/results/research/09_cloud_runs/37593731891-1-study",
+        "--plan",
+        "/home/runner/work/NeuroPixel/NeuroPixel/docs/research/13_probe_plan.json",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/13_cloud_runs/37640756510-1-probe/secondary"
+      ],
+      "completed_at_utc": "2026-10-07T14:56:19.507707+00:00",
+      "fresh_interpreter": true,
+      "limit_seconds": 120,
+      "log_sha256": "f0b64cc945683159b52d1e8b2641c8579fa908fcab12d3c954d7ab0a4af8aeef",
+      "name": "secondary",
+      "pid": 2522,
+      "result_path": "secondary/report.json",
+      "result_sha256": "cc436eb78825b099a0d13304717345355bd454af2dd65d359a924e928ff438dc",
+      "result_status": "completed",
+      "return_code": 0,
+      "serial": true,
+      "started_at_utc": "2026-10-07T14:56:18.438688+00:00",
+      "status": "completed",
+      "wall_seconds": 1.068145453999989
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T14:56:19.508984+00:00",
+        "available_ram_gib": 14.387779235839844,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_vocab_native.py",
+        "--plan",
+        "/home/runner/work/NeuroPixel/NeuroPixel/docs/research/13_probe_plan.json",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/13_cloud_runs/37640756510-1-probe/native"
+      ],
+      "completed_at_utc": "2026-10-07T14:56:21.186916+00:00",
+      "fresh_interpreter": true,
+      "limit_seconds": 120,
+      "log_sha256": "e7c5436ee0e9dfe8db5fb5a6c51e838788766e7a1f743a7e8e37f2f4c67e4693",
+      "name": "native",
+      "pid": 2524,
+      "result_path": "native/report.json",
+      "result_sha256": "b4b429df98ee123cbd65f6ccea2e7d273ade856a5f1f1248014506bb6530af1f",
+      "result_status": "verified",
+      "return_code": 0,
+      "serial": true,
+      "started_at_utc": "2026-10-07T14:56:19.509104+00:00",
+      "status": "completed",
+      "wall_seconds": 1.6765916340000047
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T14:56:21.188028+00:00",
+        "available_ram_gib": 14.26430892944336,
+        "phase": "admission"
+      },
+      "audit_checks": 32954,
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_distractor_recount_audit.py",
+        "--input",
+        "/tmp/neuropixel-item13-pinned-input-4v0jrlfs/tree/results/research/09_cloud_runs/37593731891-1-study",
+        "--plan",
+        "/home/runner/work/NeuroPixel/NeuroPixel/docs/research/13_probe_plan.json",
+        "--produced",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/13_cloud_runs/37640756510-1-probe/secondary",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/13_cloud_runs/37640756510-1-probe/secondary_audit"
+      ],
+      "completed_at_utc": "2026-10-07T14:56:22.358448+00:00",
+      "fresh_interpreter": true,
+      "limit_seconds": 120,
+      "log_sha256": "a86992af72b6f4503093086aab9390126cb46582d5cbdb40412fec0f42f00049",
+      "name": "secondary_audit",
+      "pid": 2527,
+      "result_path": "secondary_audit/audit.json",
+      "result_sha256": "4706d6521ace33b0e053f88eec48e0d8987bfe73d96d551ef8f94dd268d59677",
+      "result_status": "verified",
+      "return_code": 0,
+      "serial": true,
+      "started_at_utc": "2026-10-07T14:56:21.188139+00:00",
+      "status": "completed",
+      "wall_seconds": 1.1693773990000125
+    }
+  ],
+  "contract_optimization_steps_are_separate": true,
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T14:56:22.386739+00:00",
+    "available_ram_gib": 14.224117279052734,
+    "phase": "vocab_probe_finish"
+  },
+  "full_task_learning_benchmark_executed": false,
+  "implementation_sha256": {
+    ".github/workflows/research-item13-probe.yml": "8a80562474ee2208633423aca0e362237377beb4c8437b5ee0e63d226267f5d0",
+    "docs/research/13_probe_protocol.md": "cefed9ad7d3d9ff04ac1dd9f3d36efc7d897860a3d1e0ae5d934a0a43f1b9c92",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/phase3.py": "72299cf2e0c8fe789c1b570c1f8ea5499d87eeda8a86ec47deafc31d5cb3edbe",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "results/research/13_validation/auditor_centering_correction.json": "dc4c43a6fae33c854b656d0d608ed4c5a1dea0afc44c9abe4506d8817a631716",
+    "results/research/13_validation/battery_before.py": "15f0cd9e6a0986f950c8bb6a142dc4c198b902ec256d2b844bd4ce7f8f5c0dad",
+    "results/research/13_validation/distractor_auditor_before_centering.py": "28e33b3c84fbd6c4afc9a19b01bb959d1123fc0c37b0f2afb56d39dca45e0e64",
+    "results/research/13_validation/optional_dtype_fix.json": "bbea57526b9f0fff1312ecf044aef106350ad0f8182e8386f24e1ea528318dc9",
+    "results/research/13_validation/phase3_before.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+    "results/research/13_validation/probe_static_review.json": "6dc8f92a421cadc2f399b6636c9ab407d183199f01c1e35d5fec3012a334826c",
+    "results/research/13_validation/root_canonical_correction.json": "066a1e55eeb36586c98f8fef9072bad8b32af98ff1da4aa2d141f44a294f3dca",
+    "results/research/13_validation/root_recount_before_canonical_objects.js": "aa95f3af5222b1590d251c1cbe917ed4634e9f0c623177cde155a58b2550d0f3",
+    "results/research/13_validation/session_pre_execution_events.json": "f6766fedf52583f669d3b3eb8c9a9d4337a1dbab3b2dda0f170ad1eb9a847a03",
+    "results/research/13_validation/test_vocab_before_optional_dtype_fix.py": "870c5c21791efa41327e0248c7d6e4644fb581c0ad440a443b92ed52dbf70291",
+    "results/research/13_validation/worker_derivation.json": "ccfc6ccc456da00d125af34317b29bf08483d2ab94473643cd65756a7c270b03",
+    "scripts/battery.py": "61b826412710d1ae6792d66a0c057164960a0c7d02e421fb34a82af40cca3666",
+    "scripts/research_distractor_recount.py": "efa1b7cde56d3f72f13012eabb7005512c6ad600e850d22ddd716ba96b5289f0",
+    "scripts/research_distractor_recount_audit.py": "f1343f06b06e89e67f1f67f93ed12da4e15673c42bf3547c419972adfc1d2bc1",
+    "scripts/research_item13_inputs.py": "8aa5fab742111f0fa39edca3731d3f9085e930bbde5a3177266776afcaca2ba6",
+    "scripts/research_item13_root_recount.js": "876fac0eaf475552d4ff3d36f71057412576d93eb47ff7ea11045a09801907ce",
+    "scripts/research_item13_worker.py": "a4b79d610a617d34654ca9dfee9881f553159af4a755581937a3b50df4c8b28a",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "scripts/research_vocab_native.py": "35242a74f8f79ba0570ab0ef14bd5a252b54474592f358bcceb2317c25e360b0",
+    "scripts/research_vocab_probe.py": "e4a4e4e673225ac15075fe22161146e8fbb5120ab30183dafdda28956d1ed32d",
+    "tests/test_battery_vocab.py": "976eb0c9ea8f6d20676afb79df268c5a4b382c15212d1517b8721b3adb71a19a",
+    "tests/test_vocab_expansion.py": "fd03a07df553fc4c8ff1391fa19f68f45117b0d5fe922d8c7d95714b9a7a2189"
+  },
+  "input_directory": "/tmp/neuropixel-item13-pinned-input-4v0jrlfs/tree/results/research/09_cloud_runs/37593731891-1-study",
+  "input_sha256": {
+    "archive_manifest.json": "49cda016746d6f020e22da2e10e09f8706b1f17f15491baf438d6952484f78e6",
+    "study/final_data/examples.npz": "b52b895652db3fcdb0a057a8ba270893a9099c6d9fac609efa02b4a7fb895ea9",
+    "study/final_predictions/neuropixel_seed40.npz": "96c10bd4f482d8d9f9f339be5634097b4a91925cc5a75be883ca62eb84236544",
+    "study/final_predictions/neuropixel_seed41.npz": "2afe04293fc1d45ff59663dc6de424b546d0ed3e5496b862c64a9c07867b7b4a",
+    "study/final_predictions/neuropixel_seed42.npz": "cddd3e8ac6793189a2ddd56c008e7e5e52679989697ee585c7962e3410dd2917",
+    "study/final_predictions/neuropixel_seed43.npz": "a0d0fd57e8907224a5769f2b2b76b87366ad34d499319daf2d3286343eb19eec",
+    "study/final_predictions/neuropixel_seed44.npz": "57268e2f94dfa05d4af01180afd5fe93fd2ddcd6422e1705a818658c128b60df",
+    "study/final_predictions/relative_transformer_seed40.npz": "f7e14ab8f2b99da4241a2d5e280eeb51b5a2f2224cc94ab1f107246a9f93c495",
+    "study/final_predictions/relative_transformer_seed41.npz": "af8b9a8953baad05e09c133a090c72069a9b7e0729d725e4b65d81650a2d641f",
+    "study/final_predictions/relative_transformer_seed42.npz": "75a38973268530c217c6a8227e7861ef30e871306c29dcc29b53388c4e5385d3",
+    "study/final_predictions/relative_transformer_seed43.npz": "6fd5e3f3d7f28dda6ee8026163fa1a1f9a100abbccaf4a9b5e997caa4bd0947e",
+    "study/final_predictions/relative_transformer_seed44.npz": "fde7a170e9a23ea9635d1f7500aebbeb42a2573a372492e12f3b80c905537252"
+  },
+  "input_spec": {
+    "archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+    "files_sha256": {
+      "archive_manifest.json": "49cda016746d6f020e22da2e10e09f8706b1f17f15491baf438d6952484f78e6",
+      "study/final_data/examples.npz": "b52b895652db3fcdb0a057a8ba270893a9099c6d9fac609efa02b4a7fb895ea9",
+      "study/final_predictions/neuropixel_seed40.npz": "96c10bd4f482d8d9f9f339be5634097b4a91925cc5a75be883ca62eb84236544",
+      "study/final_predictions/neuropixel_seed41.npz": "2afe04293fc1d45ff59663dc6de424b546d0ed3e5496b862c64a9c07867b7b4a",
+      "study/final_predictions/neuropixel_seed42.npz": "cddd3e8ac6793189a2ddd56c008e7e5e52679989697ee585c7962e3410dd2917",
+      "study/final_predictions/neuropixel_seed43.npz": "a0d0fd57e8907224a5769f2b2b76b87366ad34d499319daf2d3286343eb19eec",
+      "study/final_predictions/neuropixel_seed44.npz": "57268e2f94dfa05d4af01180afd5fe93fd2ddcd6422e1705a818658c128b60df",
+      "study/final_predictions/relative_transformer_seed40.npz": "f7e14ab8f2b99da4241a2d5e280eeb51b5a2f2224cc94ab1f107246a9f93c495",
+      "study/final_predictions/relative_transformer_seed41.npz": "af8b9a8953baad05e09c133a090c72069a9b7e0729d725e4b65d81650a2d641f",
+      "study/final_predictions/relative_transformer_seed42.npz": "75a38973268530c217c6a8227e7861ef30e871306c29dcc29b53388c4e5385d3",
+      "study/final_predictions/relative_transformer_seed43.npz": "6fd5e3f3d7f28dda6ee8026163fa1a1f9a100abbccaf4a9b5e997caa4bd0947e",
+      "study/final_predictions/relative_transformer_seed44.npz": "fde7a170e9a23ea9635d1f7500aebbeb42a2573a372492e12f3b80c905537252"
+    },
+    "path": "results/research/09_cloud_runs/37593731891-1-study"
+  },
+  "input_unchanged": true,
+  "item": 13,
+  "limitations": [
+    "Previously inspected item9 predictions are recounted; no new confirmatory final set.",
+    "Other-event exchange perturbs existing irrelevant facts, not addition to a distractor-free scene.",
+    "Initial binding competence is weak and remains visible beside conditional retention.",
+    "Literal shortcuts, softmax values and untrained isomorphism fixtures establish no semantic acquisition.",
+    "Independent programs share one authorized runner; this is not external laboratory replication."
+  ],
+  "new_fixture_optimization_steps": 0,
+  "observed_seeds": [
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "plan_sha256": "60278a7580dabaaa1fb338a0276819d0c653a9052ed33c51d5793a14edd627da",
+  "schema_version": 1,
+  "source_commit": "9618ba8aae3b83d95a2813f99dd72c9d2e1d148a",
+  "source_unchanged": true,
+  "started_at_utc": "2026-10-07T14:56:17.645545+00:00",
+  "status": "completed",
+  "wall_seconds": 4.74119417
+}

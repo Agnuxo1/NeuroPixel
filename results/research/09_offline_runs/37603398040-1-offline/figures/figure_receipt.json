@@ -1,0 +1,213 @@
+{
+  "completed_at_utc": "2026-10-07T09:51:35.796015+00:00",
+  "frozen_auditor_sha256": "b12ac084aed181b1a22aa96f1b28a1c467d55587e205e0de7f18bb7e32b80e05",
+  "helper_sha256": "f6d1a9d9f03858de316036b6af5197550426f35d4a08a922c23861358d74e05a",
+  "input": {
+    "bytes": 7142199,
+    "path": "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_offline_runs/37603398040-1-offline/scientific_audit_01.json",
+    "sha256": "2ffcd15900dd583f796f158bac6de9dee1761ba74cf7f4d9ae9ca700d217316e",
+    "status": "verified"
+  },
+  "inventory_archive_commit_claim": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+  "item": 9,
+  "limits": "Editorial rendering of saved outcomes; no model, data generation, RNG draws, uncertainty refit or scientific test.",
+  "minimum_sampled_available_ram_gib": 14.573951721191406,
+  "numeric_derivations": "Multiplication by100 for percent/percentage-point axes only; no newly estimated mean or interval.",
+  "outputs": {
+    "base_paired_difference.png": {
+      "bytes": 155416,
+      "sha256": "2e03d3f022fe211c808f62ff8ed2f5b33724a8724ecb632996bf3dc6f5d602ef"
+    },
+    "base_paired_difference.svg": {
+      "bytes": 11849,
+      "sha256": "5c45b04db9389423c1fbb99e020b4d730c5a656887b4d55d36482ac6923bb5cf"
+    },
+    "binding_by_condition.png": {
+      "bytes": 206446,
+      "sha256": "952e10a1c250838253351e01315de35f3142cbbdd5d37786469b5bee28537ba6"
+    },
+    "binding_by_condition.svg": {
+      "bytes": 30737,
+      "sha256": "beeecf8e4469b852b152ef427b81edb2dddb1cd12365eb50a81cc0f1a16f754a"
+    }
+  },
+  "plotted_saved_values": {
+    "analytic_binding_lines": {
+      "bag_category": 0.25,
+      "role_only_and_event_category": 0.5
+    },
+    "binding": {
+      "neuropixel": {
+        "base": [
+          0.09765625,
+          0.1005859375,
+          0.091796875,
+          0.1025390625,
+          0.0888671875
+        ],
+        "layout_permutation": [
+          0.0927734375,
+          0.0927734375,
+          0.1005859375,
+          0.1015625,
+          0.0888671875
+        ],
+        "query_switch": [
+          0.09765625,
+          0.1005859375,
+          0.091796875,
+          0.1025390625,
+          0.0888671875
+        ],
+        "relabel_events": [
+          0.0986328125,
+          0.0986328125,
+          0.0908203125,
+          0.1171875,
+          0.08984375
+        ],
+        "swap_other_agent_patient": [
+          0.09765625,
+          0.0986328125,
+          0.091796875,
+          0.1015625,
+          0.087890625
+        ],
+        "swap_queried_agent_patient": [
+          0.1015625,
+          0.1005859375,
+          0.0966796875,
+          0.1064453125,
+          0.087890625
+        ]
+      },
+      "relative_transformer": {
+        "base": [
+          0.478515625,
+          0.5009765625,
+          0.5068359375,
+          0.4970703125,
+          0.484375
+        ],
+        "layout_permutation": [
+          0.4814453125,
+          0.498046875,
+          0.505859375,
+          0.48828125,
+          0.486328125
+        ],
+        "query_switch": [
+          0.478515625,
+          0.5009765625,
+          0.5068359375,
+          0.4970703125,
+          0.484375
+        ],
+        "relabel_events": [
+          0.4638671875,
+          0.4921875,
+          0.5068359375,
+          0.49609375,
+          0.4853515625
+        ],
+        "swap_other_agent_patient": [
+          0.4765625,
+          0.5009765625,
+          0.50390625,
+          0.5,
+          0.486328125
+        ],
+        "swap_queried_agent_patient": [
+          0.4697265625,
+          0.50390625,
+          0.5029296875,
+          0.5078125,
+          0.484375
+        ]
+      }
+    },
+    "differences": [
+      -0.380859375,
+      -0.400390625,
+      -0.4150390625,
+      -0.39453125,
+      -0.3955078125
+    ],
+    "inventory_archive_commit_claim": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+    "means": {
+      "neuropixel": {
+        "base": 0.0962890625,
+        "layout_permutation": 0.0953125,
+        "query_switch": 0.0962890625,
+        "relabel_events": 0.0990234375,
+        "swap_other_agent_patient": 0.0955078125,
+        "swap_queried_agent_patient": 0.0986328125
+      },
+      "relative_transformer": {
+        "base": 0.4935546875,
+        "layout_permutation": 0.4919921875,
+        "query_switch": 0.4935546875,
+        "relabel_events": 0.4888671875,
+        "swap_other_agent_patient": 0.4935546875,
+        "swap_queried_agent_patient": 0.49375
+      }
+    },
+    "paired_mean": -0.397265625,
+    "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+    "t95": [
+      -0.4125410251515038,
+      -0.3819902248484962
+    ]
+  },
+  "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T09:51:34.232060+00:00",
+      "available_ram_gib": 14.613914489746094,
+      "phase": "before_input"
+    },
+    {
+      "at_utc": "2026-10-07T09:51:34.285458+00:00",
+      "available_ram_gib": 14.613727569580078,
+      "phase": "before_matplotlib"
+    },
+    {
+      "at_utc": "2026-10-07T09:51:35.262618+00:00",
+      "available_ram_gib": 14.58108139038086,
+      "phase": "before_binding_by_condition"
+    },
+    {
+      "at_utc": "2026-10-07T09:51:35.597047+00:00",
+      "available_ram_gib": 14.581172943115234,
+      "phase": "before_base_paired_difference"
+    },
+    {
+      "at_utc": "2026-10-07T09:51:35.795999+00:00",
+      "available_ram_gib": 14.573951721191406,
+      "phase": "after_figures"
+    }
+  ],
+  "run_annotation": {
+    "provenance": "explicit caller annotation; not stored in the analyzer JSON",
+    "value": "37593731891"
+  },
+  "runtime": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "thread_environment": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "schema_version": 1,
+  "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "started_at_utc": "2026-10-07T09:51:35.257201+00:00",
+  "status": "rendered",
+  "visual_review_pending": true
+}

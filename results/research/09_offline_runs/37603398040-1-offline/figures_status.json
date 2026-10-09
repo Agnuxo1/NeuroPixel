@@ -1,0 +1,27 @@
+{
+  "admission": {
+    "at_utc": "2026-10-07T09:51:34.082701+00:00",
+    "available_ram_gib": 14.613922119140625,
+    "phase": "admission"
+  },
+  "command": [
+    "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+    "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item9_figures.py",
+    "--input",
+    "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_offline_runs/37603398040-1-offline/scientific_audit_01.json",
+    "--output-dir",
+    "/home/runner/work/NeuroPixel/NeuroPixel/results/research/09_offline_runs/37603398040-1-offline/figures",
+    "--run-id",
+    "37593731891"
+  ],
+  "completed_at_utc": "2026-10-07T09:51:35.968259+00:00",
+  "log_sha256": "2b4e6934bf55f484868a2cafb4b504b92d2f644f27fe25d7cf7fedee2f979fa7",
+  "maximum_seconds": 300,
+  "name": "figures",
+  "receipt_sha256": "730c4a4371f1f7dd8d92c6f6e76d24e34b7a6b593b292d8ff380301c36dbe435",
+  "return_code": 0,
+  "started_at_utc": "2026-10-07T09:51:34.162459+00:00",
+  "status": "completed",
+  "supervision_failure": null,
+  "wall_seconds_including_shutdown": 1.8037234410000167
+}

@@ -1,0 +1,119 @@
+{
+  "admission": {
+    "at_utc": "2026-10-07T14:05:24.636731+00:00",
+    "available_ram_gib": 14.543758392333984,
+    "phase": "admission"
+  },
+  "completed_at_utc": "2026-10-07T14:05:47.641783+00:00",
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T14:05:47.641679+00:00",
+    "available_ram_gib": 14.50164794921875,
+    "phase": "before_final_archive"
+  },
+  "gpu_requested": false,
+  "item": 12,
+  "paid_compute": false,
+  "phase": "probe",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 900,
+    "workflow_minutes": 20
+  },
+  "run_key": "37633696345-1-probe",
+  "schema_version": 1,
+  "source_after": {
+    "all_bindings_verified": true,
+    "at_utc": "2026-10-07T14:05:47.641578+00:00",
+    "implementation_sha256": {
+      ".github/workflows/research-item12-probe.yml": "9339df6463d627b615a3147f19b35b2970a64ff85a3d932c6e052f553da86f5b",
+      "docs/research/12_probe_protocol.md": "7a7c5e5c0301296620df4bb5c437a8b824be7bdc9f3146ae93e1ed6c255ef2c6",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/research/continual_metrics.py": "17fa886a8261bde59b7ee1b1bcdedf8e73532f87b9ec4cf704e01d2352e57a72",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/12_validation/isolation_before_rng_witness.py": "8ee2a68282b9053957b2c80b4bae7acc197d9b07a4c11fef0e36c3dbe5e1d85c",
+      "results/research/12_validation/isolation_fixture_correction.json": "19bc8c99d017dfb9c2576caf0896177fc73c16004cb75cb6b67f3f39581d5f2b",
+      "results/research/12_validation/isolation_rng_witness_correction.json": "f681aff31d09cfa480eac661da73467cc6b8aa154379e84b45042a14b0e9770e",
+      "results/research/12_validation/probe_static_review.json": "9a62abca081f9aef7cec00522b328153d6809c71d75145ec825e82f35a2a7889",
+      "results/research/12_validation/worker_derivation.json": "1ef559747cfe9ec398c9bbc549532c50fffd6904d10920b0fe4e298208b5cdd1",
+      "scripts/research_continual_isolation.py": "3b6c30b954fea42a469cd6358723dc323f0bfbbddea4f0586da058037b04766a",
+      "scripts/research_continual_isolation_audit.py": "5523b9c58743c9364f455fb0b345b86690774f337cd43ed5bb8fa91a27ab5843",
+      "scripts/research_continual_matrix.py": "e0a50440d87a7d73d1563e9826e0f505e93e307077eab67fff3d9f8333a53b7c",
+      "scripts/research_continual_matrix_audit.py": "a30d2f13e8e02e93bf39c742f0972994094d88545d21ab4035bbdc537108db6a",
+      "scripts/research_continual_probe.py": "896ae3b1afcac004d2116f714f2a0230393abe2b702becc047b243c1e584fe88",
+      "scripts/research_item12_inputs.py": "b6aa6f6c1ae26078fda8997652794b60d97dc7866c539e6f6fa7661386562431",
+      "scripts/research_item12_worker.py": "36ddb9972eaabbde034aa6ffcfd83f83487e2c59f36a8d813e92d8d23e781f08",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "tests/test_continual_isolation.py": "0064f7bc12debb572c501447646e533ff084a7848f72186357e690e3e2524ce1",
+      "tests/test_continual_metrics.py": "2f486c58606487f7df2a9d7fe2f6fcf921195b54b83a94cff0e4e850f0457a3e"
+    },
+    "plan_sha256": "c5ee67317b336d786f44f66572d274e7e95099a18ed87f6e486133512a302ffa",
+    "source_commit": "aada1037271a621ac651c94c68feaba51143be05",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
+  "source_commit": "aada1037271a621ac651c94c68feaba51143be05",
+  "stages": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T14:05:32.361589+00:00",
+        "available_ram_gib": 14.539772033691406,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item12_worker.py",
+        "--phase",
+        "probe",
+        "--child",
+        "contract_tests",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/12_cloud_runs/37633696345-1-probe"
+      ],
+      "completed_at_utc": "2026-10-07T14:05:36.371369+00:00",
+      "log_sha256": "74e7c2231712285e2d95c5aecfb8c12e627569a0d4f3c8c9b3ac32fd37bb4369",
+      "name": "contract_tests",
+      "return_code": 0,
+      "stage_limit_seconds": 120,
+      "started_at_utc": "2026-10-07T14:05:32.361773+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 4.003223769999991
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T14:05:38.180360+00:00",
+        "available_ram_gib": 14.522354125976562,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item12_worker.py",
+        "--phase",
+        "probe",
+        "--child",
+        "probe",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/12_cloud_runs/37633696345-1-probe"
+      ],
+      "completed_at_utc": "2026-10-07T14:05:44.685437+00:00",
+      "log_sha256": "b5419a165d7d72608158e57b4a0cbea32c2ec2c9441f8cb6df6f49f447793258",
+      "name": "probe",
+      "return_code": 0,
+      "stage_limit_seconds": 540,
+      "started_at_utc": "2026-10-07T14:05:38.180541+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 6.503817052999992
+    }
+  ],
+  "started_at_utc": "2026-10-07T14:05:24.635351+00:00",
+  "status": "completed",
+  "wall_seconds_before_final_archive": 23.008122629
+}

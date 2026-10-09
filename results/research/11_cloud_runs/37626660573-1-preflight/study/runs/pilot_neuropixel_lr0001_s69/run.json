@@ -1,0 +1,594 @@
+{
+  "at_utc": "2026-10-07T13:13:47.832553+00:00",
+  "checkpoint": {
+    "bytes": 120696,
+    "path": "study/runs/pilot_neuropixel_lr0001_s69/checkpoint.pt",
+    "sha256": "ebfba2c5c3cc572536bba4d7c46a2f742eefb0a4198f4c3f1af81b33336055a9"
+  },
+  "completed_updates": 1024,
+  "config": {
+    "batch_size": 32,
+    "family": "neuropixel",
+    "firing_seed": 110069,
+    "gradient_clip": 1.0,
+    "index_seed": 100069,
+    "initialization_seed": 69,
+    "kind": "pilot",
+    "learning_rate": 0.001,
+    "loss": "answer_cross_entropy_only",
+    "model": {
+      "c": 48,
+      "c_id": 16,
+      "fire_rate": 0.5,
+      "grounded": false,
+      "hidden": 128,
+      "parameters": 29392,
+      "retina": false,
+      "state_payload_bytes_float32": 1728,
+      "state_values_per_example": 432
+    },
+    "optimizer": "AdamW",
+    "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+    "run_id": "pilot_neuropixel_lr0001_s69",
+    "schedule": "constant",
+    "seed": 69,
+    "task": {
+      "answer_tokens": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "census_n": 48,
+      "census_order": "target token outer; row-major cue position inner",
+      "cue_positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "fact_updates": 3,
+      "gap_updates": 3,
+      "height": 3,
+      "out_pos": [
+        2,
+        2
+      ],
+      "pad": 0,
+      "query": 1,
+      "query_pos": [
+        2,
+        1
+      ],
+      "query_updates": 10,
+      "vocab": 8,
+      "width": 3
+    },
+    "updates": 1024,
+    "weight_decay": 0.0001
+  },
+  "config_artifact": {
+    "bytes": 1465,
+    "path": "study/runs/pilot_neuropixel_lr0001_s69/config.json",
+    "sha256": "6f802ca6216930c909309c9d5f7a94e213a5e193f0ec448119b1c64ec33df381"
+  },
+  "config_sha256": "8149361568a75868bd0aa422f2b47bad2efc0b63b2671ff12f12e7f45de16fcb",
+  "cost_scope": "State payload excludes allocator/autograd overhead and is not information capacity or peak RSS; parameter matching does not match state size or compute.",
+  "development": {
+    "normal_d2": {
+      "case_id": "normal_d2",
+      "metadata": {
+        "bytes": 21349,
+        "path": "study/runs/pilot_neuropixel_lr0001_s69/normal_d2.json",
+        "sha256": "923eedcb7656242ac15fa846c9beb11b64ec053be9c8f61bf444d2212d0f7d45"
+      },
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "correct": 40,
+        "cross_entropy": 322.46397908528644,
+        "cross_entropy_n": 48,
+        "n": 48,
+        "per_position": {
+          "0": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 1117.0738932291667,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "1": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 354.38427734375,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "3": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 479.6658528645833,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "4": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 124.69108072916667,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "5": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 184.41097005208334,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 123.807373046875,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "7": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 195.67838541666666,
+            "cross_entropy_n": 6,
+            "n": 6
+          }
+        },
+        "per_target": {
+          "2": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "cross_entropy": 1473.0230102539062,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "5": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "cross_entropy": 461.7608642578125,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          }
+        }
+      },
+      "predictions": {
+        "bytes": 161939,
+        "path": "study/runs/pilot_neuropixel_lr0001_s69/normal_d2.npz",
+        "sha256": "716537c6697403b5d71bd1ac9b7de7e9ff52870ccdce37d8d24c7e320406647c"
+      }
+    },
+    "normal_d3": {
+      "case_id": "normal_d3",
+      "metadata": {
+        "bytes": 21377,
+        "path": "study/runs/pilot_neuropixel_lr0001_s69/normal_d3.json",
+        "sha256": "d782d3b54f26f2fc8fa474e7f609be7865e74cca66bb3dc25f10c661305fa001"
+      },
+      "metrics": {
+        "accuracy": 0.75,
+        "correct": 36,
+        "cross_entropy": 1911.6683959960938,
+        "cross_entropy_n": 48,
+        "n": 48,
+        "per_position": {
+          "0": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 4920.943522135417,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "1": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 2190.0162760416665,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "2": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 373.8050130208333,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "3": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 3186.583984375,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "4": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 1624.4000651041667,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "5": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 806.78369140625,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 1362.3624674479167,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "7": {
+            "accuracy": 0.8333333333333334,
+            "correct": 5,
+            "cross_entropy": 828.4521484375,
+            "cross_entropy_n": 6,
+            "n": 6
+          }
+        },
+        "per_target": {
+          "2": {
+            "accuracy": 0.25,
+            "correct": 2,
+            "cross_entropy": 7708.6712646484375,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "3": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "cross_entropy": 18.7711181640625,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "5": {
+            "accuracy": 0.375,
+            "correct": 3,
+            "cross_entropy": 3742.5679931640625,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          }
+        }
+      },
+      "predictions": {
+        "bytes": 162181,
+        "path": "study/runs/pilot_neuropixel_lr0001_s69/normal_d3.npz",
+        "sha256": "a7c5ad78c7b25583458546fd9b07e41d2c933379585088c3c65309335f55a945"
+      }
+    },
+    "normal_d4": {
+      "case_id": "normal_d4",
+      "metadata": {
+        "bytes": 21389,
+        "path": "study/runs/pilot_neuropixel_lr0001_s69/normal_d4.json",
+        "sha256": "d40757b3dbb88e3fcdaeec399acae9a5322ef86bd9c20c98ef5fd0d3f2e6fe1f"
+      },
+      "metrics": {
+        "accuracy": 0.6458333333333334,
+        "correct": 31,
+        "cross_entropy": 9100.97682733957,
+        "cross_entropy_n": 48,
+        "n": 48,
+        "per_position": {
+          "0": {
+            "accuracy": 0.5,
+            "correct": 3,
+            "cross_entropy": 21684.0244140625,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "1": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 10617.104166666666,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "2": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 3199.91796875,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "3": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 16375.817708333334,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "4": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 8659.012369791666,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "5": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 2861.4480822582286,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "6": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 6490.123046875,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "7": {
+            "accuracy": 0.6666666666666666,
+            "correct": 4,
+            "cross_entropy": 2920.3668619791665,
+            "cross_entropy_n": 6,
+            "n": 6
+          }
+        },
+        "per_target": {
+          "2": {
+            "accuracy": 0.125,
+            "correct": 1,
+            "cross_entropy": 30811.038208139078,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "3": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "cross_entropy": 252.998779296875,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "5": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "cross_entropy": 23524.6845703125,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "7": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "cross_entropy": 17.139406288968406,
+            "cross_entropy_n": 8,
+            "n": 8
+          }
+        }
+      },
+      "predictions": {
+        "bytes": 162438,
+        "path": "study/runs/pilot_neuropixel_lr0001_s69/normal_d4.npz",
+        "sha256": "8ffa636fa627fa0c10426382beb822102c7fee1c7d4771859a58f9d5c37cc1b2"
+      }
+    }
+  },
+  "elapsed_total_seconds": 37.20965079999999,
+  "item": 11,
+  "mean_update_seconds": 0.03549698952246111,
+  "median_update_seconds": 0.035309881999992854,
+  "minibatch_indices": {
+    "bytes": 262272,
+    "path": "study/runs/pilot_neuropixel_lr0001_s69/train_indices.npy",
+    "sha256": "7ce4e317d24df244d58435513a789842a7a832269339f7669ea327ebafb51086"
+  },
+  "nonpersistent_buffers": {
+    "bytes": 598,
+    "path": "study/runs/pilot_neuropixel_lr0001_s69/nonpersistent_buffers.json",
+    "sha256": "ea50f8462e01cebd8e4499d2b1ad5021c46d77c7751571d588d0379d80cf28b4"
+  },
+  "parameter_count": 29392,
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T13:13:11.355183+00:00",
+      "available_ram_gib": 14.397048950195312,
+      "update": 0
+    },
+    {
+      "at_utc": "2026-10-07T13:13:15.844532+00:00",
+      "available_ram_gib": 14.392688751220703,
+      "update": 128
+    },
+    {
+      "at_utc": "2026-10-07T13:13:20.373888+00:00",
+      "available_ram_gib": 14.408615112304688,
+      "update": 256
+    },
+    {
+      "at_utc": "2026-10-07T13:13:25.002563+00:00",
+      "available_ram_gib": 14.417034149169922,
+      "update": 384
+    },
+    {
+      "at_utc": "2026-10-07T13:13:29.560116+00:00",
+      "available_ram_gib": 14.428131103515625,
+      "update": 512
+    },
+    {
+      "at_utc": "2026-10-07T13:13:34.103341+00:00",
+      "available_ram_gib": 14.437767028808594,
+      "update": 640
+    },
+    {
+      "at_utc": "2026-10-07T13:13:38.533890+00:00",
+      "available_ram_gib": 14.442333221435547,
+      "update": 768
+    },
+    {
+      "at_utc": "2026-10-07T13:13:43.128068+00:00",
+      "available_ram_gib": 14.440685272216797,
+      "update": 896
+    }
+  ],
+  "run_id": "pilot_neuropixel_lr0001_s69",
+  "runtime": {
+    "available_ram_gib": 14.408504486083984,
+    "cuda_version": null,
+    "interop_threads": 1,
+    "packages": {
+      "Pillow": "12.3.0",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    },
+    "python": "3.12.14",
+    "threads": 2
+  },
+  "schema_version": 1,
+  "source": {
+    "implementation_sha256": {
+      ".github/workflows/research-item11-audit.yml": "71ab1235084dfa2577cd2df0a52173b159a6b34939f92f63ec5fa53b32e0bc37",
+      ".github/workflows/research-item11-preflight.yml": "87ae242509a681bbbf01bde35813351c02ecafe2cef560a6305aad22b4b6182d",
+      "docs/research/11_memory_implementation.md": "623635d235b03df18b599909d1013809056857200a0ada07bc196a6a35359b96",
+      "docs/research/11_memory_protocol.md": "642f5cbbbdc6f1ab259a63e8dd09bff4bc2f4314d6054674c97e86c99cb98a69",
+      "docs/research/11_offline_derivation.json": "d99571c1fe898c0d02e6943de42d0b0224d306a88472b9232135024cd1551a16",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/11_validation/memory_audit_delta.json": "d901d3e0fe500c2cbed20bdacb771d4bcfc0e85b311f9d3965e8cf25e563ec38",
+      "results/research/11_validation/memory_source_corrections.json": "dcec2b90c5fa4f76691d4f8ba10aae826f7a6cd79adb6e16ea8ed2612df63396",
+      "results/research/11_validation/memory_static_review.json": "239cd81975cf060c9cb4bb984285ce624a35e635991cf7d863c81e87460ad671",
+      "results/research/11_validation/probe_completion_receipt.json": "adb1df26e1e910757b501b42e82fa240e5271a0630922f1e2477643a67af104b",
+      "scripts/research_item11_inputs.py": "a947dbfb7d6ea0a677a83b2cbd4dc8b1b58cf1e803d8b1a0e8cca2857d021e6b",
+      "scripts/research_item11_offline.py": "a01a341c4dde6a492aa40ad48549067bcc7dfe8185ebf4aaaf6e97f7f18761b8",
+      "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_memory_audit.py": "2d5996e5566c058abd2f49f1cded6ab2a9c635b10d4aea301490859a5b04991d",
+      "scripts/research_memory_probe_audit.py": "7f7917826929529db5744431b99656f227c932981e536eef3985ff1dfb7766cb",
+      "scripts/research_memory_study.py": "f5b19486fdb9990a711071e17c344efebd9e7aa473580b11e13ab65b317c7c9a",
+      "tests/test_memory_study.py": "4d7ff980840ba6308d0a16e23e35e8c9506955aec1ed550b60869cd35aeeaa7b"
+    },
+    "plan_sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5",
+    "recorded_at_utc": "2026-10-07T13:13:10.613386+00:00",
+    "source_commit": "cef4e67358ca5c344cd4154a7f641feefeb406ae",
+    "tracked_source_clean": true
+  },
+  "state_payload_bytes_float32": 1728,
+  "state_values_per_example": 432,
+  "status": "completed",
+  "training_delays": {
+    "bytes": 8320,
+    "path": "study/runs/pilot_neuropixel_lr0001_s69/training_delays.npy",
+    "sha256": "578ae6a72ca66ccb7ce3cada58576312559d2d3b9c01c9a4b9eae15e21fda012"
+  },
+  "training_log": {
+    "bytes": 2087,
+    "path": "study/runs/pilot_neuropixel_lr0001_s69/training_log.jsonl",
+    "sha256": "941dca7aa811c51fbd5c52706f0343046ba236c6d7b0f185966afd3ac7f1f4a0"
+  },
+  "training_seconds": 36.360916067999995
+}

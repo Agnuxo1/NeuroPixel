@@ -1,0 +1,78 @@
+{
+  "completed_at_utc": "2026-10-07T05:59:07.211617+00:00",
+  "development_sampler_fixtures_requested": true,
+  "final_predictions_requested": false,
+  "item": 7,
+  "minimum_sampled_available_ram_gib": 14.275299072265625,
+  "model_training_requested": false,
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T05:59:02.985566+00:00",
+      "available_ram_gib": 14.364791870117188
+    },
+    {
+      "at_utc": "2026-10-07T05:59:03.206036+00:00",
+      "available_ram_gib": 14.367134094238281
+    },
+    {
+      "at_utc": "2026-10-07T05:59:03.206671+00:00",
+      "available_ram_gib": 14.367134094238281
+    },
+    {
+      "at_utc": "2026-10-07T05:59:04.206906+00:00",
+      "available_ram_gib": 14.281463623046875
+    },
+    {
+      "at_utc": "2026-10-07T05:59:05.208138+00:00",
+      "available_ram_gib": 14.369461059570312
+    },
+    {
+      "at_utc": "2026-10-07T05:59:05.208661+00:00",
+      "available_ram_gib": 14.369461059570312
+    },
+    {
+      "at_utc": "2026-10-07T05:59:06.208817+00:00",
+      "available_ram_gib": 14.275299072265625
+    }
+  ],
+  "run_key": "37578991388-1",
+  "schema_version": 1,
+  "source_commit": "0ed43bd5bb1d8bcb166b8e63e909195cbe69f769",
+  "stages": [
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_research_split_governance.py",
+        "tests/test_research_development_data.py",
+        "--junitxml",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/07_cloud_runs/37578991388-1/tests.xml"
+      ],
+      "completed_at_utc": "2026-10-07T05:59:05.207254+00:00",
+      "name": "tests",
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T05:59:03.206188+00:00",
+      "wall_seconds": 2.0010836810000114
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.8/x64/bin/python",
+        "scripts/research_export_split_pools.py",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/07_cloud_runs/37578991388-1/split_pools.json",
+        "--source-root",
+        "/home/runner/work/NeuroPixel/NeuroPixel"
+      ],
+      "completed_at_utc": "2026-10-07T05:59:07.209134+00:00",
+      "name": "memberships",
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T05:59:05.208245+00:00",
+      "wall_seconds": 2.000906057000009
+    }
+  ],
+  "started_at_utc": "2026-10-07T05:59:02.985663+00:00",
+  "status": "completed",
+  "worker_wall_seconds": 4.227750006000008
+}

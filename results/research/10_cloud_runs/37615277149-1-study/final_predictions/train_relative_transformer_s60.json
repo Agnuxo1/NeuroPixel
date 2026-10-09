@@ -1,0 +1,153 @@
+{
+  "checkpoint": {
+    "bytes": 127929,
+    "path": "study/runs/train_relative_transformer_s60/checkpoint.pt",
+    "sha256": "f1aa80def2c4857c7a66b79f5a5423d24c5a3f7b8bc3e204c904e342de2eaf5a"
+  },
+  "metrics": {
+    "all_official": {
+      "accuracy": 0.966,
+      "can_encode_n": 1000,
+      "cannot_encode_n": 0,
+      "correct": 966,
+      "cross_entropy": 0.14855196237185658,
+      "cross_entropy_n": 1000,
+      "gold_unseen_as_train_answer_n": 0,
+      "gold_vocabulary_supported_n": 1000,
+      "n": 1000,
+      "nll_supported_n": 1000,
+      "per_answer": {
+        "bathroom": {
+          "accuracy": 0.96045197740113,
+          "correct": 170,
+          "n": 177
+        },
+        "bedroom": {
+          "accuracy": 0.9487179487179487,
+          "correct": 148,
+          "n": 156
+        },
+        "garden": {
+          "accuracy": 0.9700598802395209,
+          "correct": 162,
+          "n": 167
+        },
+        "hallway": {
+          "accuracy": 0.9602272727272727,
+          "correct": 169,
+          "n": 176
+        },
+        "kitchen": {
+          "accuracy": 0.9766081871345029,
+          "correct": 167,
+          "n": 171
+        },
+        "office": {
+          "accuracy": 0.9803921568627451,
+          "correct": 150,
+          "n": 153
+        }
+      },
+      "supported_gold_n": 1000,
+      "unsupported_gold_n": 0
+    },
+    "novel_vs_optimization_train": {
+      "accuracy": 0.9616252821670429,
+      "can_encode_n": 886,
+      "cannot_encode_n": 0,
+      "correct": 852,
+      "cross_entropy": 0.16765870384082382,
+      "cross_entropy_n": 886,
+      "gold_unseen_as_train_answer_n": 0,
+      "gold_vocabulary_supported_n": 886,
+      "n": 886,
+      "nll_supported_n": 886,
+      "per_answer": {
+        "bathroom": {
+          "accuracy": 0.9548387096774194,
+          "correct": 148,
+          "n": 155
+        },
+        "bedroom": {
+          "accuracy": 0.9424460431654677,
+          "correct": 131,
+          "n": 139
+        },
+        "garden": {
+          "accuracy": 0.9655172413793104,
+          "correct": 140,
+          "n": 145
+        },
+        "hallway": {
+          "accuracy": 0.9578313253012049,
+          "correct": 159,
+          "n": 166
+        },
+        "kitchen": {
+          "accuracy": 0.9731543624161074,
+          "correct": 145,
+          "n": 149
+        },
+        "office": {
+          "accuracy": 0.9772727272727273,
+          "correct": 129,
+          "n": 132
+        }
+      },
+      "supported_gold_n": 886,
+      "unsupported_gold_n": 0
+    },
+    "strict_novel_vs_full_exposure": {
+      "accuracy": 0.9607390300230947,
+      "can_encode_n": 866,
+      "cannot_encode_n": 0,
+      "correct": 832,
+      "cross_entropy": 0.17118758417279828,
+      "cross_entropy_n": 866,
+      "gold_unseen_as_train_answer_n": 0,
+      "gold_vocabulary_supported_n": 866,
+      "n": 866,
+      "nll_supported_n": 866,
+      "per_answer": {
+        "bathroom": {
+          "accuracy": 0.9533333333333334,
+          "correct": 143,
+          "n": 150
+        },
+        "bedroom": {
+          "accuracy": 0.9411764705882353,
+          "correct": 128,
+          "n": 136
+        },
+        "garden": {
+          "accuracy": 0.9652777777777778,
+          "correct": 139,
+          "n": 144
+        },
+        "hallway": {
+          "accuracy": 0.9559748427672956,
+          "correct": 152,
+          "n": 159
+        },
+        "kitchen": {
+          "accuracy": 0.972972972972973,
+          "correct": 144,
+          "n": 148
+        },
+        "office": {
+          "accuracy": 0.9767441860465116,
+          "correct": 126,
+          "n": 129
+        }
+      },
+      "supported_gold_n": 866,
+      "unsupported_gold_n": 0
+    }
+  },
+  "predictions": {
+    "bytes": 117761,
+    "path": "final_predictions/train_relative_transformer_s60.npz",
+    "sha256": "12fef8905fb73ccb5f4451d574d08472a36a795b6b7b78db87d0359de552877b"
+  },
+  "run_id": "train_relative_transformer_s60"
+}

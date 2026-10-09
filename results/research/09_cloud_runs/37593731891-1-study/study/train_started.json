@@ -1,0 +1,30 @@
+{
+  "at_utc": "2026-10-07T08:27:04.771044+00:00",
+  "context": {
+    "plan_sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792",
+    "recipe_sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97",
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959"
+  },
+  "resource": {
+    "at_utc": "2026-10-07T08:27:04.771056+00:00",
+    "available_ram_gib": 14.364234924316406,
+    "phase": "phase_admission"
+  },
+  "runtime": {
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "inter_threads": 1,
+    "intra_threads": 2,
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "python": "3.12.8",
+    "torch_cuda_version": null,
+    "versions": {
+      "Pillow": "12.3.0",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    }
+  }
+}

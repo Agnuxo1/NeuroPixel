@@ -1,0 +1,3563 @@
+{
+  "check_count": 504,
+  "checks": [
+    {
+      "check": "admission_RAM_floor",
+      "detail": 14.461235046386719,
+      "passed": true
+    },
+    {
+      "check": "frozen_probe_plan",
+      "passed": true
+    },
+    {
+      "check": "prospective_recipe_identity",
+      "passed": true
+    },
+    {
+      "check": "canonical_recipe_hash",
+      "passed": true
+    },
+    {
+      "check": "completed_untrained_probe",
+      "passed": true
+    },
+    {
+      "check": "producer_report_receipt",
+      "passed": true
+    },
+    {
+      "check": "source_plan_hash",
+      "passed": true
+    },
+    {
+      "check": "producer_source_bindings",
+      "passed": true
+    },
+    {
+      "check": "reported_source_stability",
+      "passed": true
+    },
+    {
+      "check": "exact_source:.github/workflows/research-item11-probe.yml",
+      "passed": true
+    },
+    {
+      "check": "exact_source:docs/research/11_probe_protocol.md",
+      "passed": true
+    },
+    {
+      "check": "exact_source:neuropixel/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:neuropixel/model.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:neuropixel/phase3.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:neuropixel/research/stream_memory.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:neuropixel/task.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:pytest.ini",
+      "passed": true
+    },
+    {
+      "check": "exact_source:results/research/11_validation/probe_static_review.json",
+      "passed": true
+    },
+    {
+      "check": "exact_source:scripts/research_item11_worker.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:scripts/research_item9_worker.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:scripts/research_memory_probe.py",
+      "passed": true
+    },
+    {
+      "check": "exact_source:tests/test_stream_memory.py",
+      "passed": true
+    },
+    {
+      "check": "fixed_tolerances",
+      "passed": true
+    },
+    {
+      "check": "producer_check_inventory",
+      "passed": true
+    },
+    {
+      "check": "producer_condition_inventory",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:default_query_reference",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:default_query_reference",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:default_query_reference:state",
+      "passed": true
+    },
+    {
+      "check": "finite:default_query_reference:state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:default_query_reference:logits",
+      "passed": true
+    },
+    {
+      "check": "finite:default_query_reference:logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:default_query_reference:update_states",
+      "passed": true
+    },
+    {
+      "check": "finite:default_query_reference:update_states",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:diagnostic_buffers",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:diagnostic_buffers",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_buffers:g_rgb",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_buffers:g_rgb",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_buffers:g_mask",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_buffers:g_mask",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:diagnostic_parameters",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:diagnostic_parameters",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:embed.weight",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:embed.weight",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:seed.weight",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:seed.weight",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:seed.bias",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:seed.bias",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:perceive.weight",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:perceive.weight",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:f1.weight",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:f1.weight",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:f1.bias",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:f1.bias",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:f2.weight",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:f2.weight",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:f2.bias",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:f2.bias",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:read.weight",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:read.weight",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:diagnostic_parameters:read.bias",
+      "passed": true
+    },
+    {
+      "check": "finite:diagnostic_parameters:read.bias",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:final_rng",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:final_rng",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:final_rng:torch_global",
+      "passed": true
+    },
+    {
+      "check": "finite:final_rng:torch_global",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:grounded_parameters_only",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:grounding_serialization",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:grounding_serialization",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:grounded_dictionary",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:grounded_dictionary",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:parameter_only_dictionary",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:parameter_only_dictionary",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:complete_dictionary",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:complete_dictionary",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:g_rgb",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:g_rgb",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:g_mask",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:g_mask",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:grounded_state",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:grounded_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:grounded_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:grounded_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:complete_state",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:complete_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:grounding_serialization:complete_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:grounding_serialization:complete_logits",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:initial_rng",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:initial_rng",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:initial_rng:torch_global",
+      "passed": true
+    },
+    {
+      "check": "finite:initial_rng:torch_global",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:initial_rng:private_f2_before",
+      "passed": true
+    },
+    {
+      "check": "finite:initial_rng:private_f2_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:initial_rng:private_f2_after",
+      "passed": true
+    },
+    {
+      "check": "finite:initial_rng:private_f2_after",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:inputs",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:inputs",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:inputs:cue",
+      "passed": true
+    },
+    {
+      "check": "finite:inputs:cue",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:inputs:blank",
+      "passed": true
+    },
+    {
+      "check": "finite:inputs:blank",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:inputs:query",
+      "passed": true
+    },
+    {
+      "check": "finite:inputs:query",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:inputs:cue_token_ids",
+      "passed": true
+    },
+    {
+      "check": "finite:inputs:cue_token_ids",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:inputs:donor_permutation",
+      "passed": true
+    },
+    {
+      "check": "finite:inputs:donor_permutation",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:inputs:distractor",
+      "passed": true
+    },
+    {
+      "check": "finite:inputs:distractor",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:returned_state_ownership",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:returned_state_ownership",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:returned_state_ownership:original_returned_state",
+      "passed": true
+    },
+    {
+      "check": "finite:returned_state_ownership:original_returned_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:returned_state_ownership:original_returned_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:returned_state_ownership:original_returned_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:returned_state_ownership:mutated_returned_state",
+      "passed": true
+    },
+    {
+      "check": "finite:returned_state_ownership:mutated_returned_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:returned_state_ownership:fresh_state",
+      "passed": true
+    },
+    {
+      "check": "finite:returned_state_ownership:fresh_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:returned_state_ownership:fresh_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:returned_state_ownership:fresh_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:returned_state_ownership:finite_sentinel",
+      "passed": true
+    },
+    {
+      "check": "finite:returned_state_ownership:finite_sentinel",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:separate_calls_cue",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:separate_calls_cue",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue:state",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue:state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue:logits",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue:logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue:history_states",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue:history_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue:history_frames",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue:history_frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue:history_steps",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue:history_steps",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:separate_calls_cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:separate_calls_cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay16:state",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay16:state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay16:logits",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay16:logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay16:history_states",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay16:history_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay16:history_frames",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay16:history_frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay16:history_steps",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay16:history_steps",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:separate_calls_cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:separate_calls_cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay4:state",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay4:state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay4:logits",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay4:logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay4:history_states",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay4:history_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay4:history_frames",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay4:history_frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_delay4:history_steps",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_delay4:history_steps",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:separate_calls_cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:separate_calls_cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_distractor_delay4:state",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_distractor_delay4:state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_distractor_delay4:logits",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_distractor_delay4:logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_distractor_delay4:history_states",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_distractor_delay4:history_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_distractor_delay4:history_frames",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_distractor_delay4:history_frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_cue_distractor_delay4:history_steps",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_cue_distractor_delay4:history_steps",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:separate_calls_empty",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:separate_calls_empty",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_empty:state",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_empty:state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_empty:logits",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_empty:logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_empty:history_states",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_empty:history_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_empty:history_frames",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_empty:history_frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:separate_calls_empty:history_steps",
+      "passed": true
+    },
+    {
+      "check": "finite:separate_calls_empty:history_steps",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:stream_delay0",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:stream_delay0",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:frames",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:steps",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:steps",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:native_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:native_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:native_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:native_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:whole_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:whole_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:frame_states",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:frame_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:continued_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:continued_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:zero_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:zero_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:zero_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:zero_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:zero_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:zero_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:swap_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:swap_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:swap_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:swap_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:swap_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:swap_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay0:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay0:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:stream_delay16",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:stream_delay16",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:frames",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:steps",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:steps",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:native_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:native_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:native_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:native_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:whole_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:whole_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:frame_states",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:frame_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:continued_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:continued_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:zero_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:zero_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:zero_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:zero_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:zero_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:zero_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:swap_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:swap_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:swap_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:swap_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:swap_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:swap_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay16:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay16:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:stream_delay32",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:stream_delay32",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:frames",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:steps",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:steps",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:native_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:native_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:native_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:native_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:whole_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:whole_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:frame_states",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:frame_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:continued_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:continued_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:zero_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:zero_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:zero_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:zero_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:zero_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:zero_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:swap_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:swap_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:swap_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:swap_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:swap_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:swap_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay32:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay32:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "saved_file_identity:stream_delay4",
+      "passed": true
+    },
+    {
+      "check": "array_inventory:stream_delay4",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:frames",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:frames",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:steps",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:steps",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:native_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:native_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:native_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:native_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:whole_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:whole_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:whole_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:frame_states",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:frame_states",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:prefix_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:continued_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:continued_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:zero_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:zero_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:zero_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:zero_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:zero_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:zero_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:zero_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:swap_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:swap_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:swap_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:swap_before",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:swap_before",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:swap_after",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:swap_after",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:no_cue_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:no_cue_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:external_hook_state",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:external_hook_logits",
+      "passed": true
+    },
+    {
+      "check": "array_shape_dtype:stream_delay4:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "finite:stream_delay4:external_hook_injected_state",
+      "passed": true
+    },
+    {
+      "check": "full_probe_file_inventory",
+      "passed": true
+    },
+    {
+      "check": "actual_saved_parameter_count",
+      "passed": true
+    },
+    {
+      "check": "active_final_update_projection",
+      "passed": true
+    },
+    {
+      "check": "saved_parameters_buffers_match_reported_before_after_hashes",
+      "passed": true
+    },
+    {
+      "check": "saved_global_RNG_unchanged",
+      "passed": true
+    },
+    {
+      "check": "private_initializer_consumed_separate_stream",
+      "passed": true
+    },
+    {
+      "check": "literal_input:cue",
+      "passed": true
+    },
+    {
+      "check": "literal_input:blank",
+      "passed": true
+    },
+    {
+      "check": "literal_input:query",
+      "passed": true
+    },
+    {
+      "check": "literal_input:cue_token_ids",
+      "passed": true
+    },
+    {
+      "check": "literal_input:donor_permutation",
+      "passed": true
+    },
+    {
+      "check": "literal_input:distractor",
+      "passed": true
+    },
+    {
+      "check": "query_reference_shapes",
+      "passed": true
+    },
+    {
+      "check": "query_trace_endpoint",
+      "passed": true
+    },
+    {
+      "check": "identical_query_batch_states",
+      "passed": true
+    },
+    {
+      "check": "identical_query_batch_logits",
+      "passed": true
+    },
+    {
+      "check": "literal_history_frames:empty",
+      "passed": true
+    },
+    {
+      "check": "literal_history_updates:empty",
+      "passed": true
+    },
+    {
+      "check": "history_activity_shape:empty",
+      "passed": true
+    },
+    {
+      "check": "separate_call_state_reset:empty",
+      "passed": true
+    },
+    {
+      "check": "separate_call_logit_reset:empty",
+      "passed": true
+    },
+    {
+      "check": "literal_history_frames:cue",
+      "passed": true
+    },
+    {
+      "check": "literal_history_updates:cue",
+      "passed": true
+    },
+    {
+      "check": "history_activity_shape:cue",
+      "passed": true
+    },
+    {
+      "check": "separate_call_state_reset:cue",
+      "passed": true
+    },
+    {
+      "check": "separate_call_logit_reset:cue",
+      "passed": true
+    },
+    {
+      "check": "literal_history_frames:cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "literal_history_updates:cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "history_activity_shape:cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "separate_call_state_reset:cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "separate_call_logit_reset:cue_delay4",
+      "passed": true
+    },
+    {
+      "check": "literal_history_frames:cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "literal_history_updates:cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "history_activity_shape:cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "separate_call_state_reset:cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "separate_call_logit_reset:cue_delay16",
+      "passed": true
+    },
+    {
+      "check": "literal_history_frames:cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "literal_history_updates:cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "history_activity_shape:cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "separate_call_state_reset:cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "separate_call_logit_reset:cue_distractor_delay4",
+      "passed": true
+    },
+    {
+      "check": "actual_returned_state_mutation",
+      "passed": true
+    },
+    {
+      "check": "returned_state_ownership:original_returned_state",
+      "passed": true
+    },
+    {
+      "check": "returned_state_ownership:fresh_state",
+      "passed": true
+    },
+    {
+      "check": "returned_state_ownership:original_returned_logits",
+      "passed": true
+    },
+    {
+      "check": "returned_state_ownership:fresh_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:literal_frames",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:literal_updates",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:frame_state_shape",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:whole_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:prefix_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:native_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:continued_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:zero_query_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:swap_donor_state",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 2.384185791015625e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:native_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:zero_query_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:swap_donor_logits",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 1.1920928955078125e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:zero_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:zero_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:swap_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:swap_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:actual_injected_prefix",
+      "passed": true
+    },
+    {
+      "check": "stream_delay0:recounted_observations",
+      "passed": true
+    },
+    {
+      "check": "nontrivial_activity_positive_controls",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:literal_frames",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:literal_updates",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:frame_state_shape",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:whole_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:prefix_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:native_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:continued_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:zero_query_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:swap_donor_state",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 3.5762786865234375e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:native_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:zero_query_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:swap_donor_logits",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 2.384185791015625e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:zero_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:zero_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:swap_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:swap_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:actual_injected_prefix",
+      "passed": true
+    },
+    {
+      "check": "stream_delay4:recounted_observations",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:literal_frames",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:literal_updates",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:frame_state_shape",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:whole_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:prefix_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:native_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:continued_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:zero_query_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:swap_donor_state",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 4.76837158203125e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:native_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:zero_query_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:swap_donor_logits",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 5.960464477539062e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:zero_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:zero_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:swap_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:swap_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:actual_injected_prefix",
+      "passed": true
+    },
+    {
+      "check": "stream_delay16:recounted_observations",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:literal_frames",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:literal_updates",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:frame_state_shape",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:whole_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:prefix_endpoint",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:native_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:continued_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:zero_query_state",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:swap_donor_state",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 9.5367431640625e-07,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:native_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:continued_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:zero_query_logits",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:swap_donor_logits",
+      "detail": {
+        "atol": 1e-06,
+        "max_abs_difference": 1.9073486328125e-06,
+        "rtol": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:zero_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:zero_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:swap_before",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:swap_after",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:actual_injected_prefix",
+      "passed": true
+    },
+    {
+      "check": "stream_delay32:recounted_observations",
+      "passed": true
+    },
+    {
+      "check": "declared_grounding_RGB",
+      "passed": true
+    },
+    {
+      "check": "declared_grounding_mask",
+      "passed": true
+    },
+    {
+      "check": "grounded_dictionary_restoration",
+      "passed": true
+    },
+    {
+      "check": "parameter_only_dictionary_incomplete",
+      "passed": true
+    },
+    {
+      "check": "grounded_eval_restoration:state",
+      "passed": true
+    },
+    {
+      "check": "grounded_eval_restoration:logits",
+      "passed": true
+    },
+    {
+      "check": "end_source_bindings_stable",
+      "passed": true
+    }
+  ],
+  "completed_at_utc": "2026-10-07T13:19:02.566983+00:00",
+  "failed_checks": 0,
+  "files": {
+    "default_query_reference": {
+      "arrays": {
+        "logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "update_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            11,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 19526,
+      "path": "probe/default_query_reference.npz",
+      "sha256": "f2b13be72f0f10a48467f0af878216922468403782aa578a08d44d4c3a173760"
+    },
+    "diagnostic_buffers": {
+      "arrays": {
+        "g_mask": {
+          "dtype": "bool",
+          "shape": [
+            8,
+            1
+          ]
+        },
+        "g_rgb": {
+          "dtype": "float32",
+          "shape": [
+            8,
+            3
+          ]
+        }
+      },
+      "bytes": 398,
+      "path": "probe/diagnostic_buffers.npz",
+      "sha256": "f60ccbf70401ed3e0a1c8ef71973c3d3b300f8bb61fb0287ff3ee4b1da92857e"
+    },
+    "diagnostic_parameters": {
+      "arrays": {
+        "embed.weight": {
+          "dtype": "float32",
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "f1.bias": {
+          "dtype": "float32",
+          "shape": [
+            128
+          ]
+        },
+        "f1.weight": {
+          "dtype": "float32",
+          "shape": [
+            128,
+            160,
+            1,
+            1
+          ]
+        },
+        "f2.bias": {
+          "dtype": "float32",
+          "shape": [
+            48
+          ]
+        },
+        "f2.weight": {
+          "dtype": "float32",
+          "shape": [
+            48,
+            128,
+            1,
+            1
+          ]
+        },
+        "perceive.weight": {
+          "dtype": "float32",
+          "shape": [
+            96,
+            1,
+            3,
+            3
+          ]
+        },
+        "read.bias": {
+          "dtype": "float32",
+          "shape": [
+            16
+          ]
+        },
+        "read.weight": {
+          "dtype": "float32",
+          "shape": [
+            16,
+            48
+          ]
+        },
+        "seed.bias": {
+          "dtype": "float32",
+          "shape": [
+            48
+          ]
+        },
+        "seed.weight": {
+          "dtype": "float32",
+          "shape": [
+            48,
+            16,
+            1,
+            1
+          ]
+        }
+      },
+      "bytes": 110573,
+      "path": "probe/diagnostic_parameters.npz",
+      "sha256": "a569e0629a927982c62007744f576d102e4c391ff9ec04cd91526730e4a88d97"
+    },
+    "final_rng": {
+      "arrays": {
+        "torch_global": {
+          "dtype": "uint8",
+          "shape": [
+            5056
+          ]
+        }
+      },
+      "bytes": 3420,
+      "path": "probe/final_rng.npz",
+      "sha256": "b438a798a42292c12498acacb63fed7666913edc4e85d79a88623a23e056d4aa"
+    },
+    "grounded_parameters_only": {
+      "bytes": 120696,
+      "path": "probe/grounded_parameters_only.pt",
+      "sha256": "d60a4500eb624282533f4b01c7fe77d534e1500123c66dc5bd77893b752b510d"
+    },
+    "grounding_serialization": {
+      "arrays": {
+        "complete_dictionary": {
+          "dtype": "float32",
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "complete_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "complete_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "g_mask": {
+          "dtype": "bool",
+          "shape": [
+            8
+          ]
+        },
+        "g_rgb": {
+          "dtype": "float32",
+          "shape": [
+            8,
+            3
+          ]
+        },
+        "grounded_dictionary": {
+          "dtype": "float32",
+          "shape": [
+            8,
+            16
+          ]
+        },
+        "grounded_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "grounded_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "parameter_only_dictionary": {
+          "dtype": "float32",
+          "shape": [
+            8,
+            16
+          ]
+        }
+      },
+      "bytes": 6897,
+      "path": "probe/grounding_serialization.npz",
+      "sha256": "81fb4a8cc63f9840598ef8d924e052261035c1fd3f77f3b31f7a1f11ea2b6a76"
+    },
+    "initial_rng": {
+      "arrays": {
+        "private_f2_after": {
+          "dtype": "uint8",
+          "shape": [
+            5056
+          ]
+        },
+        "private_f2_before": {
+          "dtype": "uint8",
+          "shape": [
+            5056
+          ]
+        },
+        "torch_global": {
+          "dtype": "uint8",
+          "shape": [
+            5056
+          ]
+        }
+      },
+      "bytes": 10232,
+      "path": "probe/initial_rng.npz",
+      "sha256": "2a9962ed555be0b10b52ba4895e5042cc337b30c9ccb1ddaafbae7badf4f657e"
+    },
+    "inputs": {
+      "arrays": {
+        "blank": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            3,
+            3
+          ]
+        },
+        "cue": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            3,
+            3
+          ]
+        },
+        "cue_token_ids": {
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        "distractor": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            3,
+            3
+          ]
+        },
+        "donor_permutation": {
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        "query": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 1268,
+      "path": "probe/inputs.npz",
+      "sha256": "93e033dc8500c86b412296f3ded578564e6eb63392636d2c42f792cac27a8b37"
+    },
+    "returned_state_ownership": {
+      "arrays": {
+        "finite_sentinel": {
+          "dtype": "float32",
+          "shape": []
+        },
+        "fresh_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "fresh_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "mutated_returned_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "original_returned_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "original_returned_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 4915,
+      "path": "probe/returned_state_ownership.npz",
+      "sha256": "658f2be4f5ce9cfe2ba9b7c7ce8458ab08deaf8445161385764594350d9c10d4"
+    },
+    "separate_calls_cue": {
+      "arrays": {
+        "history_frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            1,
+            3,
+            3
+          ]
+        },
+        "history_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            1,
+            48,
+            3,
+            3
+          ]
+        },
+        "history_steps": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 12531,
+      "path": "probe/separate_calls_cue.npz",
+      "sha256": "7554b8f0f066dd8515471582bfab3d96c0e765a29111c8f32a9f1365fcc1213e"
+    },
+    "separate_calls_cue_delay16": {
+      "arrays": {
+        "history_frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            17,
+            3,
+            3
+          ]
+        },
+        "history_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            17,
+            48,
+            3,
+            3
+          ]
+        },
+        "history_steps": {
+          "dtype": "int64",
+          "shape": [
+            17
+          ]
+        },
+        "logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 15455,
+      "path": "probe/separate_calls_cue_delay16.npz",
+      "sha256": "6197be3711b2676f0b7e56dabbda22a3fb58390b033cb1c432270d3d9d0eada5"
+    },
+    "separate_calls_cue_delay4": {
+      "arrays": {
+        "history_frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            5,
+            3,
+            3
+          ]
+        },
+        "history_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            5,
+            48,
+            3,
+            3
+          ]
+        },
+        "history_steps": {
+          "dtype": "int64",
+          "shape": [
+            5
+          ]
+        },
+        "logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 14519,
+      "path": "probe/separate_calls_cue_delay4.npz",
+      "sha256": "42d21a2d6207e10c6bc7af430697f1263277b383c8332eafc07eb1d6bfd34633"
+    },
+    "separate_calls_cue_distractor_delay4": {
+      "arrays": {
+        "history_frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            6,
+            3,
+            3
+          ]
+        },
+        "history_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "history_steps": {
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        "logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 16263,
+      "path": "probe/separate_calls_cue_distractor_delay4.npz",
+      "sha256": "a5b95761d1606c601c7a03f7d0be15a5da0ad04b654af4f5ca0d8201f6b8e4b1"
+    },
+    "separate_calls_empty": {
+      "arrays": {
+        "history_frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            0,
+            3,
+            3
+          ]
+        },
+        "history_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            0,
+            48,
+            3,
+            3
+          ]
+        },
+        "history_steps": {
+          "dtype": "int64",
+          "shape": [
+            0
+          ]
+        },
+        "logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 2801,
+      "path": "probe/separate_calls_empty.npz",
+      "sha256": "4660d17121b2d178f746831a05af3440b0fd939c2e30bdf936fc5a081b189e5c"
+    },
+    "stream_delay0": {
+      "arrays": {
+        "continued_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "continued_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_injected_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "external_hook_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "frame_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            2,
+            48,
+            3,
+            3
+          ]
+        },
+        "frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            2,
+            3,
+            3
+          ]
+        },
+        "native_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "native_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "no_cue_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "no_cue_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "prefix_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "steps": {
+          "dtype": "int64",
+          "shape": [
+            2
+          ]
+        },
+        "swap_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "swap_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "whole_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "whole_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "zero_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 125860,
+      "path": "probe/stream_delay0.npz",
+      "sha256": "aaf8b9f241358530a887b64cd0849bdc70885504ac7f5ccf3f58eb648e4ac213"
+    },
+    "stream_delay16": {
+      "arrays": {
+        "continued_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "continued_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_injected_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "external_hook_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "frame_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            18,
+            48,
+            3,
+            3
+          ]
+        },
+        "frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            18,
+            3,
+            3
+          ]
+        },
+        "native_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "native_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "no_cue_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "no_cue_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "prefix_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "steps": {
+          "dtype": "int64",
+          "shape": [
+            18
+          ]
+        },
+        "swap_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "swap_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "whole_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "whole_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "zero_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 280150,
+      "path": "probe/stream_delay16.npz",
+      "sha256": "0919c799913fe4f3cdbf885fac95869f71d30fbe861d5a3fa37879a9526cf38c"
+    },
+    "stream_delay32": {
+      "arrays": {
+        "continued_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "continued_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_injected_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "external_hook_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "frame_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            34,
+            48,
+            3,
+            3
+          ]
+        },
+        "frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            34,
+            3,
+            3
+          ]
+        },
+        "native_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "native_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "no_cue_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "no_cue_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "prefix_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "steps": {
+          "dtype": "int64",
+          "shape": [
+            34
+          ]
+        },
+        "swap_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "swap_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "whole_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "whole_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "zero_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 435057,
+      "path": "probe/stream_delay32.npz",
+      "sha256": "9db86a18faf0a5fac6aa378489af46267c5d5b90bc046e7a1016a13c2473fcef"
+    },
+    "stream_delay4": {
+      "arrays": {
+        "continued_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "continued_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_injected_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "external_hook_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "external_hook_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "frame_states": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "frames": {
+          "dtype": "int64",
+          "shape": [
+            6,
+            6,
+            3,
+            3
+          ]
+        },
+        "native_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "native_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "no_cue_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "no_cue_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "prefix_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "steps": {
+          "dtype": "int64",
+          "shape": [
+            6
+          ]
+        },
+        "swap_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "swap_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "swap_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "whole_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "whole_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_after": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_before": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        },
+        "zero_logits": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            8
+          ]
+        },
+        "zero_state": {
+          "dtype": "float32",
+          "shape": [
+            6,
+            48,
+            3,
+            3
+          ]
+        }
+      },
+      "bytes": 164055,
+      "path": "probe/stream_delay4.npz",
+      "sha256": "0e47a002ac129e82bbb17b4608e97cbc786c3ab31f3270c2e793f3a05f0ee3e4"
+    }
+  },
+  "issues": [],
+  "item": 11,
+  "limits": [
+    "This is an untrained activity/API counterfactual, not a learned-memory accuracy test.",
+    "Default forward resets; native np_stream retains state only within its own sequence call.",
+    "Explicit initial_state, boundary interventions and core-hook injection are caller-enabled mechanisms.",
+    "Zeroing tests necessity of retained state for cue dependence; swapping tests donor-specific dependence.",
+    "Finite sampled delays do not establish indefinite retention, consolidation or robust interference resistance.",
+    "state_dict excludes grounded buffers and constructor/runtime configuration; explicit reconstruction is required.",
+    "Saved hashes link the reported before/after parameter state to saved parameters; no independent live trajectory was observed.",
+    "The .pt checkpoint is hashed only; its deserialization witness is produced by the original executed test.",
+    "Finite seeded activity checks do not measure learned retrieval or independent experimental replication."
+  ],
+  "observations": [
+    {
+      "blank_frames": 0,
+      "cue_vs_no_cue_state_max_abs": 1.6995137929916382,
+      "explicit_hook_vs_default_state_max_abs": 1.6953363418579102,
+      "local_updates": 13,
+      "no_learned_accuracy_claim": true,
+      "whole_state_max_abs": 1.851586937904358
+    },
+    {
+      "blank_frames": 4,
+      "cue_vs_no_cue_state_max_abs": 1.8231598138809204,
+      "explicit_hook_vs_default_state_max_abs": 2.0815508365631104,
+      "local_updates": 25,
+      "no_learned_accuracy_claim": true,
+      "whole_state_max_abs": 2.274014949798584
+    },
+    {
+      "blank_frames": 16,
+      "cue_vs_no_cue_state_max_abs": 3.9259796142578125,
+      "explicit_hook_vs_default_state_max_abs": 4.347705364227295,
+      "local_updates": 61,
+      "no_learned_accuracy_claim": true,
+      "whole_state_max_abs": 4.579582691192627
+    },
+    {
+      "blank_frames": 32,
+      "cue_vs_no_cue_state_max_abs": 13.59538745880127,
+      "explicit_hook_vs_default_state_max_abs": 15.644302368164062,
+      "local_updates": 109,
+      "no_learned_accuracy_claim": true,
+      "whole_state_max_abs": 15.991382598876953
+    }
+  ],
+  "parameter_count": 29392,
+  "phase": "probe",
+  "recipe": {
+    "active_f2_seed": 110002,
+    "active_f2_std": 0.01,
+    "cue_pos": [
+      0,
+      0
+    ],
+    "cue_steps": 3,
+    "delays": [
+      0,
+      4,
+      16,
+      32
+    ],
+    "gap_steps": 3,
+    "init_seed": 110001,
+    "out_pos": [
+      2,
+      2
+    ],
+    "query_pos": [
+      2,
+      1
+    ],
+    "query_steps": 10,
+    "shape": [
+      3,
+      3
+    ],
+    "vocabulary": 8
+  },
+  "schema_version": 1,
+  "scope": "Saved arrays and exact source bindings; no model execution, Torch seed reconstruction, checkpoint deserialization or external custody.",
+  "source": {
+    "implementation_sha256": {
+      ".github/workflows/research-item11-probe.yml": "848c3cd7f23a20a2504d7330988988b2fca4a07141bc70601327e1d82c87738e",
+      "docs/research/11_probe_protocol.md": "c8db6ca2cf57a5511acda2510bdf14fef70c886cb0abe08708fa2ff548155a24",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/11_validation/probe_static_review.json": "0aed2983e7855830f0423e280617167f862fe53044ab5f0cc21d15275780104e",
+      "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_memory_probe.py": "99016d771db6923fab75a239853c43a33d57048cb0e01e8fd6b6c1b827b75d42",
+      "tests/test_stream_memory.py": "77af92df6b2ca78efaaafb66c190654c25712d126d031dd4815e4047113f7621"
+    },
+    "plan_sha256": "e93c42d0a6c62f4870f26d360dbdc9d877fe0d5196e5d207db86ce1b65db8bc5",
+    "recorded_at_utc": "2026-10-07T12:56:50.820300+00:00",
+    "source_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+    "tracked_source_clean": true
+  },
+  "started_at_utc": "2026-10-07T13:19:02.533753+00:00",
+  "state_payload": {
+    "float32_bytes_per_example": 1728,
+    "scope": "Allocated array payload, not capacity, peak memory or energy.",
+    "values_per_example": 432
+  },
+  "status": "verified",
+  "wall_seconds": 0.033234440000001086
+}

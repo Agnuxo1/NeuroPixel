@@ -1,0 +1,29 @@
+{
+  "registration_id": "NP-GLOB05-20261009",
+  "case_run_id": "DEV04_partition101_seed400",
+  "config": {
+    "parent_case": "DEV04_partition101_seed400",
+    "mode": "gated_uniform_global",
+    "head_seed": 700,
+    "updates": 8192
+  },
+  "parent": {
+    "parent_case": "DEV04_partition101_seed400",
+    "original_zip_sha256": "0752914226f0b674c73166c058823824748e077e4e805ee3a139e39a2b5e31d1",
+    "body_checkpoint_sha256": "d2fae42bba6f69eab0bbfc744a9f1c4875f27dbb0747f61c4ca85a520138ec04",
+    "frozen_body_digest": "3e4efa2a3fa43f0c5d33233eedda774e8372301c62f3a601fb78c50a432289e4",
+    "parent_inventory_sha256": "e0f3c16b0ec18b2b6d33c53f67fa26bc9f3fde69b6396fd9dcef8aa002a09949"
+  },
+  "plan_sha256": "b26f17cec8a98fda6dbd5aa128d67501fd2273bf07718300c1c865391985e0b2",
+  "case_status": "partial",
+  "update": 5120,
+  "new_body_initializations": 0,
+  "new_backbone_updates": 0,
+  "closed_head_trainings_repeated": 0,
+  "test_accessed": false,
+  "zip_sha256": "3d78eafad0cac23b363388de65e839570282339e0307a9dc1780bca603871fbb",
+  "zip_bytes": 1044505,
+  "source_commit": "e4b82b280ece658ef14ea6d7e215e249edb06af3",
+  "workflow_run_id": "37887762153",
+  "archive_branch": "research/glob05-evidence-2026-10-09/DEV04_partition101_seed400"
+}

@@ -1,0 +1,1134 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "recorded_at_utc": "2026-10-07 09:22:44 UTC",
+  "repository": "Agnuxo1/NeuroPixel",
+  "record_type": "root remote recovery before offline recount",
+  "scientific_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+  "final_archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "observed_remote_head": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+  "intermediate_archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+  "provider": "GitHub connector, read-only authenticated API retrieval",
+  "representation": "Responses below are parsed from connector structuredContent.content; they are not original HTTP response bytes or headers.",
+  "observations": {
+    "results_ref": {
+      "retrieved_interval_utc": [
+        "2026-10-07T09:19:02Z",
+        "2026-10-07T09:19:24Z"
+      ],
+      "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/ref/heads/research/scientific-validation-2026-10-07-cloud-results",
+      "response": {
+        "ref": "refs/heads/research/scientific-validation-2026-10-07-cloud-results",
+        "node_id": "REF_kwDOUt3dEtoAQnJlZnMvaGVhZHMvcmVzZWFyY2gvc2NpZW50aWZpYy12YWxpZGF0aW9uLTIwMjYtMTAtMDctY2xvdWQtcmVzdWx0cw",
+        "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/refs/heads/research/scientific-validation-2026-10-07-cloud-results",
+        "object": {
+          "sha": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+          "type": "commit",
+          "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/b64d0e2ba222df76caf72bc9870c7602873e7236"
+        }
+      }
+    },
+    "study_run": {
+      "retrieved_interval_utc": [
+        "2026-10-07T09:19:02Z",
+        "2026-10-07T09:19:24Z"
+      ],
+      "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891",
+      "response": {
+        "id": 37593731891,
+        "name": "NeuroPixel item 9 frozen binding study",
+        "node_id": "WFR_kwLOUt3dEs8AAAAIwMLTMw",
+        "head_branch": "research/scientific-validation-2026-10-07-cloud",
+        "head_sha": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+        "path": ".github/workflows/research-item9-study.yml",
+        "display_title": "Freeze item 9 Stage B after audited pilots and independent analysis r…",
+        "run_number": 1,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "workflow_id": 377213342,
+        "check_suite_id": 101836742300,
+        "check_suite_node_id": "CS_kwDOUt3dEs8AAAAXtfFenA",
+        "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891",
+        "html_url": "https://github.com/Agnuxo1/NeuroPixel/actions/runs/37593731891",
+        "pull_requests": [],
+        "created_at": "2026-10-07T08:26:08Z",
+        "updated_at": "2026-10-07T09:17:59Z",
+        "actor": {
+          "login": "Agnuxo1",
+          "id": 166046035,
+          "node_id": "U_kgDOCeWpUw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Agnuxo1",
+          "html_url": "https://github.com/Agnuxo1",
+          "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+          "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+          "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+          "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+          "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "run_attempt": 1,
+        "referenced_workflows": [],
+        "run_started_at": "2026-10-07T08:26:08Z",
+        "triggering_actor": {
+          "login": "Agnuxo1",
+          "id": 166046035,
+          "node_id": "U_kgDOCeWpUw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Agnuxo1",
+          "html_url": "https://github.com/Agnuxo1",
+          "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+          "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+          "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+          "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+          "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "jobs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891/jobs",
+        "logs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891/logs",
+        "check_suite_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/check-suites/101836742300",
+        "artifacts_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891/artifacts",
+        "cancel_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891/cancel",
+        "rerun_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/runs/37593731891/rerun",
+        "previous_attempt_url": null,
+        "workflow_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/actions/workflows/377213342",
+        "head_commit": {
+          "id": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+          "tree_id": "a2b8319335bd6fb05de8b1c9749d537d10150218",
+          "message": "Freeze item 9 Stage B after audited pilots and independent analysis review\n\nPreserve all six Stage-A runs and verified source/archive evidence. Bind the unchanged ten-run 4096-update recipe, authenticated learning-rate selection, exact offline analysis runtime and 83 implementation/evidence files before final access. Retain failed analysis fixtures and independent reviews. H1 remains not supported.",
+          "timestamp": "2026-10-07T08:26:04Z",
+          "author": {
+            "name": "Francisco Angulo de Lafuente",
+            "email": "166046035+Agnuxo1@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "Francisco Angulo de Lafuente",
+            "email": "166046035+Agnuxo1@users.noreply.github.com"
+          }
+        },
+        "repository": {
+          "id": 1390271762,
+          "node_id": "R_kgDOUt3dEg",
+          "name": "NeuroPixel",
+          "full_name": "Agnuxo1/NeuroPixel",
+          "private": false,
+          "owner": {
+            "login": "Agnuxo1",
+            "id": 166046035,
+            "node_id": "U_kgDOCeWpUw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Agnuxo1",
+            "html_url": "https://github.com/Agnuxo1",
+            "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+            "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+            "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+            "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+            "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/Agnuxo1/NeuroPixel",
+          "description": "A neural network that thinks in pixels: learned colour dictionary, local cellular dynamics, self-repair, growing canvases and readable thoughts.",
+          "fork": false,
+          "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel",
+          "forks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/forks",
+          "keys_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/teams",
+          "hooks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/hooks",
+          "issue_events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/events",
+          "assignees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/tags",
+          "blobs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/languages",
+          "stargazers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/stargazers",
+          "contributors_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contributors",
+          "subscribers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscribers",
+          "subscription_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscription",
+          "commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/merges",
+          "archive_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/downloads",
+          "issues_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/labels{/name}",
+          "releases_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/deployments"
+        },
+        "head_repository": {
+          "id": 1390271762,
+          "node_id": "R_kgDOUt3dEg",
+          "name": "NeuroPixel",
+          "full_name": "Agnuxo1/NeuroPixel",
+          "private": false,
+          "owner": {
+            "login": "Agnuxo1",
+            "id": 166046035,
+            "node_id": "U_kgDOCeWpUw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/166046035?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Agnuxo1",
+            "html_url": "https://github.com/Agnuxo1",
+            "followers_url": "https://api.github.com/users/Agnuxo1/followers",
+            "following_url": "https://api.github.com/users/Agnuxo1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Agnuxo1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Agnuxo1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Agnuxo1/subscriptions",
+            "organizations_url": "https://api.github.com/users/Agnuxo1/orgs",
+            "repos_url": "https://api.github.com/users/Agnuxo1/repos",
+            "events_url": "https://api.github.com/users/Agnuxo1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Agnuxo1/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/Agnuxo1/NeuroPixel",
+          "description": "A neural network that thinks in pixels: learned colour dictionary, local cellular dynamics, self-repair, growing canvases and readable thoughts.",
+          "fork": false,
+          "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel",
+          "forks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/forks",
+          "keys_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/teams",
+          "hooks_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/hooks",
+          "issue_events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/events",
+          "assignees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/tags",
+          "blobs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/languages",
+          "stargazers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/stargazers",
+          "contributors_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contributors",
+          "subscribers_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscribers",
+          "subscription_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/subscription",
+          "commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/merges",
+          "archive_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/downloads",
+          "issues_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/labels{/name}",
+          "releases_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/deployments"
+        }
+      }
+    },
+    "final_commit": {
+      "retrieved_before_utc": "2026-10-07T09:20:08Z",
+      "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/b64d0e2ba222df76caf72bc9870c7602873e7236",
+      "response": {
+        "sha": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+        "node_id": "C_kwDOUt3dEtoAKGI2NGQwZTJiYTIyMmRmNzZjYWY3MmJjOTg3MGM3NjAyODczZTcyMzY",
+        "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/b64d0e2ba222df76caf72bc9870c7602873e7236",
+        "html_url": "https://github.com/Agnuxo1/NeuroPixel/commit/b64d0e2ba222df76caf72bc9870c7602873e7236",
+        "author": {
+          "name": "NeuroPixel research automation",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2026-10-07T09:17:54Z"
+        },
+        "committer": {
+          "name": "NeuroPixel research automation",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2026-10-07T09:17:54Z"
+        },
+        "tree": {
+          "sha": "cbacab0a58467bccbb2fd69ae31327f67d6a9c65",
+          "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/trees/cbacab0a58467bccbb2fd69ae31327f67d6a9c65"
+        },
+        "message": "research: archive item9 final 37593731891-1-study",
+        "parents": [
+          {
+            "sha": "0a127eda8dac6a5556efc5f6c53cb4abeb2ee990",
+            "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/0a127eda8dac6a5556efc5f6c53cb4abeb2ee990",
+            "html_url": "https://github.com/Agnuxo1/NeuroPixel/commit/0a127eda8dac6a5556efc5f6c53cb4abeb2ee990"
+          }
+        ],
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      }
+    },
+    "gate_commit": {
+      "retrieved_interval_utc": [
+        "2026-10-07T09:20:08Z",
+        "2026-10-07T09:20:21Z"
+      ],
+      "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+      "response": {
+        "sha": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+        "node_id": "C_kwDOUt3dEtoAKDJlNThmNWRlYjQ3ZjU2NzZlODY2M2Q2NjZkOWRiN2VhOThlM2UwODA",
+        "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+        "html_url": "https://github.com/Agnuxo1/NeuroPixel/commit/2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+        "author": {
+          "name": "NeuroPixel research automation",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2026-10-07T09:16:12Z"
+        },
+        "committer": {
+          "name": "NeuroPixel research automation",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2026-10-07T09:16:12Z"
+        },
+        "tree": {
+          "sha": "8b99fde1526730960cce047bf4b892ccb94ca9bd",
+          "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/trees/8b99fde1526730960cce047bf4b892ccb94ca9bd"
+        },
+        "message": "research: archive item9 partial 37593731891-1-study",
+        "parents": [
+          {
+            "sha": "15fbcb08bbb9bf6cf4b67fab9626d40a68ccdd29",
+            "url": "https://api.github.com/repos/Agnuxo1/NeuroPixel/git/commits/15fbcb08bbb9bf6cf4b67fab9626d40a68ccdd29",
+            "html_url": "https://github.com/Agnuxo1/NeuroPixel/commit/15fbcb08bbb9bf6cf4b67fab9626d40a68ccdd29"
+          }
+        ],
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      }
+    }
+  },
+  "completed_job_connector_response": {
+    "jobs": [
+      {
+        "id": 112701154832,
+        "name": "frozen-study",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37593731891,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Reserve bounded shutdown before the workflow timeout",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Check out the isolated frozen source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install the declared CPU-only Torch release",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Install fixed research dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Run contract tests, all trainings and gated final evaluation",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Post Set up the declared Python version",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13
+          },
+          {
+            "name": "Post Check out the isolated frozen source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          }
+        ]
+      }
+    ]
+  },
+  "final_manifest": {
+    "attempt_status": "completed",
+    "claim": "Hashes cover the completed copied files. Live interim files may reflect different times or incomplete writes; they are not final study evidence.",
+    "created_at_utc": "2026-10-07T09:17:53.787168+00:00",
+    "files": {
+      "contract_tests.log": {
+        "bytes": 49,
+        "sha256": "d1da1da0a453d6152431563efa6216a249abd78d0fb582e99b1fa732bfcff7ef"
+      },
+      "contract_tests_environment.json": {
+        "bytes": 9818,
+        "sha256": "5adef3a5442d9812e44cd48d60bdd645d2afe14d34ebd4d2e7439e81598edae5"
+      },
+      "contract_tests_resource_monitor.json": {
+        "bytes": 748,
+        "sha256": "9aa1fba2ce580d5bd58b7d66ed48a0334a58cddb1906e837534603c904469bfe"
+      },
+      "contract_tests_status.json": {
+        "bytes": 894,
+        "sha256": "893eb3705b5ba946deca777e11de5b4eadc9ab4bcc44a778a9a5396413d75f6a"
+      },
+      "execution_plan.json": {
+        "bytes": 14625,
+        "sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792"
+      },
+      "experiment_recipe.json": {
+        "bytes": 4079,
+        "sha256": "7450b1ede40542c5ff940842e42eb2725ac4420946baad6bac920e779a214b97"
+      },
+      "final.log": {
+        "bytes": 2813,
+        "sha256": "91f5082480c7e6cd18df2aa85a4948e50930844db6f7dcf4231ce97ce0427e07"
+      },
+      "final_environment.json": {
+        "bytes": 1640,
+        "sha256": "38ab96141ea4326ad90b154fd95ae6781e03a1c488d534c6d00a0f9a2dee1723"
+      },
+      "final_resource_monitor.json": {
+        "bytes": 12713,
+        "sha256": "7b2fbb15607e3ba3e690c8f7b5801f535027bc6eeb6a09bae43a86ea292ec7fc"
+      },
+      "final_status.json": {
+        "bytes": 884,
+        "sha256": "65e34e23d44e3927e1a33f3650b964050d25a6f53043a56d8d2f5b6333e84d33"
+      },
+      "source.zip": {
+        "bytes": 8089454,
+        "sha256": "04a6e2650770cd42ee85e1b4a74412880d89aca2bd9155c1b20503ae7ffb61f2"
+      },
+      "source_after.json": {
+        "bytes": 10544,
+        "sha256": "0d2e9aa884c3c11ccee4f9861309287df1efa2bb79cfdfbb3ba9f07a5cf95edb"
+      },
+      "source_before.json": {
+        "bytes": 10544,
+        "sha256": "b3269673c0fd653e6bceb310bb7c2a853edb5b3e9e2a19219b01c431bd6b0dbc"
+      },
+      "study/context.json": {
+        "bytes": 1319,
+        "sha256": "ea129b2dd668a236d4df66081f1481c8ddd43bb65630936c2c42a16664622c12"
+      },
+      "study/development_data/fixture_exposure.json": {
+        "bytes": 21807,
+        "sha256": "9de460a8665434824cd54c3e894764f4068ffa9a7498a2e3942ec348f22d5699"
+      },
+      "study/development_data/manifest.json": {
+        "bytes": 20117,
+        "sha256": "7128baef41f6df81e3bfafff15fcf39d6406c99d78cfdf248babcae461b017f0"
+      },
+      "study/development_data/memorization.npz": {
+        "bytes": 6835,
+        "sha256": "6da493aec5c5d5da1bd80d1cab59b3c51800ff4ecf7087e7116df170e7e3cb63"
+      },
+      "study/development_data/memorization_scenarios.json.gz": {
+        "bytes": 761,
+        "sha256": "ccb76c0db01cf22d6dba76bbb53b95231021d995380d48488f59ae7ea42769e8"
+      },
+      "study/development_data/probe.npz": {
+        "bytes": 64707,
+        "sha256": "38d201b273ebb723197e6c65bb901483aa9a35a5418cc814dbfe02105ad0e753"
+      },
+      "study/development_data/probe_scenarios.json.gz": {
+        "bytes": 6765,
+        "sha256": "44db31b01eb512b011fe785da0a2ae2b9096745d6c6d74f1b8e48a45742f0f85"
+      },
+      "study/development_data/train_scenarios.json.gz": {
+        "bytes": 196925,
+        "sha256": "134aff63a31e1e7cc608ff490d825cd1e468c94c9d1b2d14118075155e070b11"
+      },
+      "study/development_data/validation.npz": {
+        "bytes": 125965,
+        "sha256": "9107f7b2fe0f818e37b3850b2811788028da0c4f7d9e4ff9b0372ee7e610416d"
+      },
+      "study/development_data/validation_scenarios.json.gz": {
+        "bytes": 12882,
+        "sha256": "697209a614d329008f93fbc9f25d227253313b0093c1dba1639577e37ef250fe"
+      },
+      "study/final_access.json": {
+        "bytes": 492,
+        "sha256": "94cef0d664c1eed44b3986d70a7123442066bdc7a781e3d350ecfbda99fc572e"
+      },
+      "study/final_completed.json": {
+        "bytes": 331,
+        "sha256": "ada9feeeaa2c97fd89451fc0803a54e1be0351432efafbc997b27ea4750cf419"
+      },
+      "study/final_data/controls.npz": {
+        "bytes": 3888,
+        "sha256": "fa004fdc4313f13d45ba9b68668b4d601b97bdd71d14fed9c19058f985c03db2"
+      },
+      "study/final_data/examples.npz": {
+        "bytes": 1463718,
+        "sha256": "b52b895652db3fcdb0a057a8ba270893a9099c6d9fac609efa02b4a7fb895ea9"
+      },
+      "study/final_data/manifest.json": {
+        "bytes": 3854,
+        "sha256": "81c917d80206da2e961558c3842b6b3f70bc7b841031ef2e9d70149aed997295"
+      },
+      "study/final_data/records.json.gz": {
+        "bytes": 1532969,
+        "sha256": "1a8df6665da99800d2b272eeeb4b2fc1aefc9d5a0fac329c15b4ca685fc39039"
+      },
+      "study/final_data/scenarios.json.gz": {
+        "bytes": 25239,
+        "sha256": "2a353948e53d6e4d527d652e8121a348641aa75027529a2f59565ed265ef929d"
+      },
+      "study/final_inventory.json": {
+        "bytes": 8481,
+        "sha256": "d91866946ea8b232a59f2e82873c1338b3f77e1cab369ae541b69d427ef701aa"
+      },
+      "study/final_predictions/neuropixel_seed40.json": {
+        "bytes": 2663,
+        "sha256": "925bd0686dc2fe585ad614d7d7e7cb1383969e15954b2e517574c067b41df480"
+      },
+      "study/final_predictions/neuropixel_seed40.npz": {
+        "bytes": 2324774,
+        "sha256": "96c10bd4f482d8d9f9f339be5634097b4a91925cc5a75be883ca62eb84236544"
+      },
+      "study/final_predictions/neuropixel_seed41.json": {
+        "bytes": 2654,
+        "sha256": "b5bac471c42453eb1eda0d71f27152e73fd9a6ccbee38e3cd008ebad9bf5c874"
+      },
+      "study/final_predictions/neuropixel_seed41.npz": {
+        "bytes": 2314104,
+        "sha256": "2afe04293fc1d45ff59663dc6de424b546d0ed3e5496b862c64a9c07867b7b4a"
+      },
+      "study/final_predictions/neuropixel_seed42.json": {
+        "bytes": 2647,
+        "sha256": "c0574362ec6681b4c572554aac84c11f9bc5e728ec8381f548aa7d24aca02a44"
+      },
+      "study/final_predictions/neuropixel_seed42.npz": {
+        "bytes": 1835236,
+        "sha256": "cddd3e8ac6793189a2ddd56c008e7e5e52679989697ee585c7962e3410dd2917"
+      },
+      "study/final_predictions/neuropixel_seed43.json": {
+        "bytes": 2644,
+        "sha256": "b3d42e275b83ead5d276de080ff7e3bd90e23962d1837e2a87ccbe88ea7c0c89"
+      },
+      "study/final_predictions/neuropixel_seed43.npz": {
+        "bytes": 2324619,
+        "sha256": "a0d0fd57e8907224a5769f2b2b76b87366ad34d499319daf2d3286343eb19eec"
+      },
+      "study/final_predictions/neuropixel_seed44.json": {
+        "bytes": 2658,
+        "sha256": "aca42df031def234cb2d3af7dc985f4a5965143a18386b0d86ff37d916619648"
+      },
+      "study/final_predictions/neuropixel_seed44.npz": {
+        "bytes": 1851085,
+        "sha256": "57268e2f94dfa05d4af01180afd5fe93fd2ddcd6422e1705a818658c128b60df"
+      },
+      "study/final_predictions/relative_transformer_seed40.json": {
+        "bytes": 2693,
+        "sha256": "7b30a97c23365aea8894e2e6ce89f5a0c06bc9838b10478c986d147fb8635f12"
+      },
+      "study/final_predictions/relative_transformer_seed40.npz": {
+        "bytes": 2358890,
+        "sha256": "f7e14ab8f2b99da4241a2d5e280eeb51b5a2f2224cc94ab1f107246a9f93c495"
+      },
+      "study/final_predictions/relative_transformer_seed41.json": {
+        "bytes": 2630,
+        "sha256": "26295ee7a30832ec7ace2961f2c992c04c735308942f0a28f64ea6f6c6c461fc"
+      },
+      "study/final_predictions/relative_transformer_seed41.npz": {
+        "bytes": 2360544,
+        "sha256": "af8b9a8953baad05e09c133a090c72069a9b7e0729d725e4b65d81650a2d641f"
+      },
+      "study/final_predictions/relative_transformer_seed42.json": {
+        "bytes": 2639,
+        "sha256": "a684629dfe667cb0791a6a105901fe9327ec7a718430d6b92dfc557ef6da1b2e"
+      },
+      "study/final_predictions/relative_transformer_seed42.npz": {
+        "bytes": 2358408,
+        "sha256": "75a38973268530c217c6a8227e7861ef30e871306c29dcc29b53388c4e5385d3"
+      },
+      "study/final_predictions/relative_transformer_seed43.json": {
+        "bytes": 2625,
+        "sha256": "8eeb7795c32d12e80fbf74184a67dc7963666a1a1860527964e66e0d94a82f61"
+      },
+      "study/final_predictions/relative_transformer_seed43.npz": {
+        "bytes": 2359050,
+        "sha256": "6fd5e3f3d7f28dda6ee8026163fa1a1f9a100abbccaf4a9b5e997caa4bd0947e"
+      },
+      "study/final_predictions/relative_transformer_seed44.json": {
+        "bytes": 2700,
+        "sha256": "15a8abc27d963966d60b049ede162fa46fd3dfa484942a9b33f1dfef8efd114d"
+      },
+      "study/final_predictions/relative_transformer_seed44.npz": {
+        "bytes": 2355865,
+        "sha256": "fde7a170e9a23ea9635d1f7500aebbeb42a2573a372492e12f3b80c905537252"
+      },
+      "study/final_started.json": {
+        "bytes": 882,
+        "sha256": "b877002264de143ea63d09c0048fb15bf3437330e066e87a551537b837a4b457"
+      },
+      "study/final_summary.json": {
+        "bytes": 32872,
+        "sha256": "b19f9ddf21724bca64abfe5b3b8425721423b3f703011cfd94bda5b92e65dc84"
+      },
+      "study/gate_archive_receipt.json": {
+        "bytes": 398,
+        "sha256": "85b28a642b0dd5cdabd9e57f03f1ef25df8e595433732c8b7097afaaaaa0ea17"
+      },
+      "study/primary_runs.json": {
+        "bytes": 794,
+        "sha256": "a85984c414ac241c533f0d6def2b8b4329f9a194e19547264326e790633cf253"
+      },
+      "study/runs/neuropixel_seed40/checkpoint.pt": {
+        "bytes": 123192,
+        "sha256": "555fbb99bae3a0caf0b1fef564da2510801bd7d5294ecb7146f4228036c856c8"
+      },
+      "study/runs/neuropixel_seed40/configuration.json": {
+        "bytes": 568,
+        "sha256": "ffd63543364ed69d1deaebdd42cae4292062ad0611bf6c1f2e4fe01048825603"
+      },
+      "study/runs/neuropixel_seed40/probe_predictions.npz": {
+        "bytes": 98959,
+        "sha256": "815c0e1aede8d763c085b7666dbb215aee456c34ef7e14b5bfce68a9a0973e53"
+      },
+      "study/runs/neuropixel_seed40/run.json": {
+        "bytes": 22103,
+        "sha256": "5f28a35bd40c488a5ecb6af5cc2cb5ec618311b669e7f6f0c2b09bada4d2ce9a"
+      },
+      "study/runs/neuropixel_seed40/started.json": {
+        "bytes": 2070,
+        "sha256": "4d24a828987e23ecec8c6efc8dd7fb1f14695ba1b251fef52f44c2279c4f2d3f"
+      },
+      "study/runs/neuropixel_seed40/training.jsonl": {
+        "bytes": 1693701,
+        "sha256": "e7e41363d7fde4af412f847ab9632480234fa016768b53569deddeca92848166"
+      },
+      "study/runs/neuropixel_seed40/validation_predictions.npz": {
+        "bytes": 195967,
+        "sha256": "131e910ec9cbac800cda84cd7ca045d437b52fb196f1a0f174dce96b39d87c28"
+      },
+      "study/runs/neuropixel_seed41/checkpoint.pt": {
+        "bytes": 123192,
+        "sha256": "ca3ce2a44d4d73cb3b18f4e92246c877ca6abc0cb27ba2874f3c9679534aa4c9"
+      },
+      "study/runs/neuropixel_seed41/configuration.json": {
+        "bytes": 568,
+        "sha256": "b9c9e2c7cfacb2a3279b577b09cb6c68d721d92f993153707e2968bb0f3924e6"
+      },
+      "study/runs/neuropixel_seed41/probe_predictions.npz": {
+        "bytes": 98545,
+        "sha256": "01da6114af8befca6a537dae4cd74cb84118a3d2949abf7b9cee22b65d623c39"
+      },
+      "study/runs/neuropixel_seed41/run.json": {
+        "bytes": 22088,
+        "sha256": "03870bfb86f2b3b28152d49fbd7580ad01ec8bf6000e41c70605cceb29a110f9"
+      },
+      "study/runs/neuropixel_seed41/started.json": {
+        "bytes": 2070,
+        "sha256": "736e4328a53565ddeffac6306a650c9f3fd0508948c9cfee4ed4e09ef703957c"
+      },
+      "study/runs/neuropixel_seed41/training.jsonl": {
+        "bytes": 1698531,
+        "sha256": "01ceb72b031ec6d7594ff3ef1dbb135bfb574aba07d51236c0b682e3926d3f24"
+      },
+      "study/runs/neuropixel_seed41/validation_predictions.npz": {
+        "bytes": 195112,
+        "sha256": "512c4ebeb546eaa5361c596406271c5af0b5096681f40ab0884b4c55f2c25057"
+      },
+      "study/runs/neuropixel_seed42/checkpoint.pt": {
+        "bytes": 123192,
+        "sha256": "04c534d742ea0c9a3528dac9146d4a04007821c89cc875546bd36e3d4dc66a9c"
+      },
+      "study/runs/neuropixel_seed42/configuration.json": {
+        "bytes": 568,
+        "sha256": "2671da5816423fce92d11e6c683944308d6a3b4b6d15b43a6b114b55ba9d20a8"
+      },
+      "study/runs/neuropixel_seed42/probe_predictions.npz": {
+        "bytes": 78995,
+        "sha256": "184d90bdc0a479ce59271a8b6b5a3db91fcab346a76402e8ccc997dd53c6b16f"
+      },
+      "study/runs/neuropixel_seed42/run.json": {
+        "bytes": 22091,
+        "sha256": "95d6e71b4207d889004acc082dabfd5d861d548fe2d9d35840a27852acb32286"
+      },
+      "study/runs/neuropixel_seed42/started.json": {
+        "bytes": 2070,
+        "sha256": "7f5286204abed9e391230eb773686016e54b647e0dc1ff5962d392e691ed53ef"
+      },
+      "study/runs/neuropixel_seed42/training.jsonl": {
+        "bytes": 1700339,
+        "sha256": "e4e37245ada894225fa3b910c2f074c8548f7b89501f06ca6fc172309407c1b3"
+      },
+      "study/runs/neuropixel_seed42/validation_predictions.npz": {
+        "bytes": 155168,
+        "sha256": "98be11528f33c0a662c3f21f65c271fb8e649b8c306a864df7c95bb4dcbeb37d"
+      },
+      "study/runs/neuropixel_seed43/checkpoint.pt": {
+        "bytes": 123192,
+        "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+      },
+      "study/runs/neuropixel_seed43/configuration.json": {
+        "bytes": 568,
+        "sha256": "48098f44ed1a8787a7bf786315c2fda37f82c2d19ff0b01760a1a45a736045f1"
+      },
+      "study/runs/neuropixel_seed43/probe_predictions.npz": {
+        "bytes": 98978,
+        "sha256": "b39c60d5fa861856c0005842d1514bc5c38ad0bf2ada3b6e955f4b04a0a1fe69"
+      },
+      "study/runs/neuropixel_seed43/run.json": {
+        "bytes": 22084,
+        "sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7"
+      },
+      "study/runs/neuropixel_seed43/started.json": {
+        "bytes": 2070,
+        "sha256": "89b35fcd78e8371161b5eb49989bd5b1f8875872fe3c6e3d68312e32e13a4537"
+      },
+      "study/runs/neuropixel_seed43/training.jsonl": {
+        "bytes": 1701352,
+        "sha256": "edb05bb439a796dd7811085b16b12e096f8f7f03e5c028649ca06f3e8357f1ee"
+      },
+      "study/runs/neuropixel_seed43/validation_predictions.npz": {
+        "bytes": 196024,
+        "sha256": "daf6ba5ec8bcc52375eb939f26d4687f82b739e28c8ae0740d45b3bd35982900"
+      },
+      "study/runs/neuropixel_seed44/checkpoint.pt": {
+        "bytes": 123192,
+        "sha256": "e1aa251aec7e05a1befcdc8bf9fe42c1fa4cdb07b111cde6bb253b4b8fa49fed"
+      },
+      "study/runs/neuropixel_seed44/configuration.json": {
+        "bytes": 568,
+        "sha256": "163e52309b662d4e08e720ae2921c9db52a4af5c786dc8dc5146e8a0ec38f39b"
+      },
+      "study/runs/neuropixel_seed44/probe_predictions.npz": {
+        "bytes": 79849,
+        "sha256": "671f1fdbacfa8e89004266ce5e108cb2ca9be85dca54e6bdac36eeb51e1b8a25"
+      },
+      "study/runs/neuropixel_seed44/run.json": {
+        "bytes": 22093,
+        "sha256": "71bf7077f2be715bbede5d9391ab1b3cef7a38f4f7604ee18dd9234fc09bab97"
+      },
+      "study/runs/neuropixel_seed44/started.json": {
+        "bytes": 2070,
+        "sha256": "86ad563a3da0a9cbb2be7bc44bbc1f358577b3bc222f532ef10b9a69e592ed67"
+      },
+      "study/runs/neuropixel_seed44/training.jsonl": {
+        "bytes": 1701632,
+        "sha256": "bfd4492cd65654316d489080f41cf511ce04a128e0aed3676bbf290ec897847c"
+      },
+      "study/runs/neuropixel_seed44/validation_predictions.npz": {
+        "bytes": 157035,
+        "sha256": "5af877990225c3da47026f5f1ae85b8f38e621553d80bb5d76279426545e2120"
+      },
+      "study/runs/relative_transformer_seed40/checkpoint.pt": {
+        "bytes": 131001,
+        "sha256": "a57ba1f23d5acfe06f40d745af65cf4b583eaa8286c2b0ccfab9ba79e0ac84ea"
+      },
+      "study/runs/relative_transformer_seed40/configuration.json": {
+        "bytes": 528,
+        "sha256": "49a0c83770a981b94b2414361c2595ac8e1dd33f514aa1431399b6bd26cb46d7"
+      },
+      "study/runs/relative_transformer_seed40/probe_predictions.npz": {
+        "bytes": 100566,
+        "sha256": "debc2ad7d2451ebcfc4ed964d4c26d5e4b808840083a541edd45b85125c04cd5"
+      },
+      "study/runs/relative_transformer_seed40/run.json": {
+        "bytes": 22090,
+        "sha256": "03f49107a6436dacace4eadc4abfaf01c6a67a101f2d5ef5733ead9e85bcee26"
+      },
+      "study/runs/relative_transformer_seed40/started.json": {
+        "bytes": 2024,
+        "sha256": "07778c7e40e6fea7b7b4317143595d0c8f7bdc4ca7f7541e0453e61c61e58dbb"
+      },
+      "study/runs/relative_transformer_seed40/training.jsonl": {
+        "bytes": 1702928,
+        "sha256": "775bf01edb0411cf40eaa6c80d323e55025ace4ba3949ccd1991581b4c9d3332"
+      },
+      "study/runs/relative_transformer_seed40/validation_predictions.npz": {
+        "bytes": 199219,
+        "sha256": "0abc64572a17ce8739dac99c27803ba2e7e730e76251f8b0f0c7b125683c5e79"
+      },
+      "study/runs/relative_transformer_seed41/checkpoint.pt": {
+        "bytes": 131001,
+        "sha256": "511229427fe3cc7b9a0362be87fa7880687b7561f53eca7a951df0696dbe3f8f"
+      },
+      "study/runs/relative_transformer_seed41/configuration.json": {
+        "bytes": 528,
+        "sha256": "ea1b6c5d31107caba187b4320376c736fc4d48631c1d0befde2f0d318297763e"
+      },
+      "study/runs/relative_transformer_seed41/probe_predictions.npz": {
+        "bytes": 100654,
+        "sha256": "fa7acbb7bc46c2562d17a547e203794fc223177709f019ba6852c5442867dfda"
+      },
+      "study/runs/relative_transformer_seed41/run.json": {
+        "bytes": 22108,
+        "sha256": "a51e9d3fdd48f4b0aeb6704803d89c6e2f0347a609cb77683d68fa7caedacdcb"
+      },
+      "study/runs/relative_transformer_seed41/started.json": {
+        "bytes": 2024,
+        "sha256": "70c3729678c17ad675d2f70b25f5c1d33cfa2a39c77056dcfc9873afb246c545"
+      },
+      "study/runs/relative_transformer_seed41/training.jsonl": {
+        "bytes": 1704424,
+        "sha256": "d14dd766c890e83ce74d1640e8699116adb240c98aebdd4d89b27a96f06d20de"
+      },
+      "study/runs/relative_transformer_seed41/validation_predictions.npz": {
+        "bytes": 199428,
+        "sha256": "354b7a53eab658d24e306b0841b1f166000fe189fadec5811e718939a40b8e42"
+      },
+      "study/runs/relative_transformer_seed42/checkpoint.pt": {
+        "bytes": 131001,
+        "sha256": "7d012c410da236a76e07bf1cb606f9cccf36008b9c68d4a10a78c22ab6b3a6f4"
+      },
+      "study/runs/relative_transformer_seed42/configuration.json": {
+        "bytes": 528,
+        "sha256": "22d331fef91ee85133da27f5305cb92503a5ef3e8dc134ff065f44e75b77e818"
+      },
+      "study/runs/relative_transformer_seed42/probe_predictions.npz": {
+        "bytes": 100553,
+        "sha256": "d197d9696d153b50805dde0c9a1487336f313a47a5cfd66973adcf87adc38a64"
+      },
+      "study/runs/relative_transformer_seed42/run.json": {
+        "bytes": 22079,
+        "sha256": "72e89a4443bd3483a79a63b1c9444c00dc4e1666ca924434d83196343c704ef4"
+      },
+      "study/runs/relative_transformer_seed42/started.json": {
+        "bytes": 2024,
+        "sha256": "2c48a654e12dbc8975f535d963e2363265e70683544647215fcfda345dc7f4f5"
+      },
+      "study/runs/relative_transformer_seed42/training.jsonl": {
+        "bytes": 1703720,
+        "sha256": "b7e8dedeb3284701f6ddaff45869bb522e9ba6ba87255e83038614578a4f4881"
+      },
+      "study/runs/relative_transformer_seed42/validation_predictions.npz": {
+        "bytes": 199280,
+        "sha256": "d6aff961675e25af34a57d8534c2f0ff84c55c170a2295fa94c63295840c18c3"
+      },
+      "study/runs/relative_transformer_seed43/checkpoint.pt": {
+        "bytes": 131001,
+        "sha256": "906beeef4f34fef40962c1d2ac6e7abaccec1d876dfcca49fc145d7ee9190b59"
+      },
+      "study/runs/relative_transformer_seed43/configuration.json": {
+        "bytes": 528,
+        "sha256": "1b23a43422b76be48b5cc01c22e15610512676ffd4173aba631a5e13374577f4"
+      },
+      "study/runs/relative_transformer_seed43/probe_predictions.npz": {
+        "bytes": 100634,
+        "sha256": "0de7b707eeb952956618e90f17322aede6ea96765dc502e268d6e7a52d639932"
+      },
+      "study/runs/relative_transformer_seed43/run.json": {
+        "bytes": 22091,
+        "sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267"
+      },
+      "study/runs/relative_transformer_seed43/started.json": {
+        "bytes": 2024,
+        "sha256": "43cfd9944509102eee54da354858c05d78419f974e1e36139523cffb04589a85"
+      },
+      "study/runs/relative_transformer_seed43/training.jsonl": {
+        "bytes": 1704480,
+        "sha256": "97734c244df616bf04398502fbddb313bb76096afb1e64cbf2f0247b4af20ba4"
+      },
+      "study/runs/relative_transformer_seed43/validation_predictions.npz": {
+        "bytes": 199358,
+        "sha256": "4aab44482b7c0f05e98f0e26435dfdb44c4bfee95a8986d3a4954267ecdfaa2c"
+      },
+      "study/runs/relative_transformer_seed44/checkpoint.pt": {
+        "bytes": 131001,
+        "sha256": "7b5d68573ba0a4aafcff3d2c8913df65b5e4894bb9f6c6ba05ecb2ab960f2128"
+      },
+      "study/runs/relative_transformer_seed44/configuration.json": {
+        "bytes": 528,
+        "sha256": "b9f8fcd7afc2965d11568f026127a8de01e268b9db50222b98552bcad98fca20"
+      },
+      "study/runs/relative_transformer_seed44/probe_predictions.npz": {
+        "bytes": 100404,
+        "sha256": "f5dbbe08400597559fa44e1af03e6393d5cbf4d6e9ab07b49517c60681ec054f"
+      },
+      "study/runs/relative_transformer_seed44/run.json": {
+        "bytes": 22113,
+        "sha256": "bf4394f0ab3aa4f8cf4b4177cfa6ac26eae21c8269e36c4f1019f3ec6e51d0b1"
+      },
+      "study/runs/relative_transformer_seed44/started.json": {
+        "bytes": 2024,
+        "sha256": "88e67f4d27ed4d783afa7d34fac9f52fa988e9f4f919d1787d6e83b0a471807b"
+      },
+      "study/runs/relative_transformer_seed44/training.jsonl": {
+        "bytes": 1704452,
+        "sha256": "7d768f0bf5fe16978cb7f5e7fb6f00efb99550f7df4e7599ce95e347783c1069"
+      },
+      "study/runs/relative_transformer_seed44/validation_predictions.npz": {
+        "bytes": 198967,
+        "sha256": "a324f3ad30563edc8a0ee593e035c37f6f149f747fa4371d769720a4ba1bc43e"
+      },
+      "study/train_completed.json": {
+        "bytes": 325,
+        "sha256": "bf9f9fe8bd3b3a915cc8be90aa3e6d523d24f451cec6d9932e60331958de4187"
+      },
+      "study/train_started.json": {
+        "bytes": 882,
+        "sha256": "9fe28a6890252dcaa2599f7207200033c4e9e39639fbfbfb5e9115d1708ac75f"
+      },
+      "test_collection.json": {
+        "bytes": 4296,
+        "sha256": "264d96d383b0d76412c4b61414e35123819bae5be86d122aa400a1e72e71d724"
+      },
+      "tests.xml": {
+        "bytes": 5469,
+        "sha256": "7dad38a9e544b9daa974c227dd730874321cc64bcc8b488c48586c74aff19ba9"
+      },
+      "train.log": {
+        "bytes": 143554,
+        "sha256": "8eabaa5e51d3575cc79bd1801ce33c1aab2a0aa9dc4945e1a20120f07b6d2296"
+      },
+      "train_environment.json": {
+        "bytes": 1640,
+        "sha256": "dbc948ec06f1983afc927a94df7874fcdd3509c9024597837f788d21db447f34"
+      },
+      "train_resource_monitor.json": {
+        "bytes": 397322,
+        "sha256": "cfce0118ebbf3a88c56db859a5b4376c0adeb152230d084674ecc9cf76a61e2b"
+      },
+      "train_status.json": {
+        "bytes": 878,
+        "sha256": "4d617de6b2488537542198deda8a26ab8261b56bc99ff2b80c0b7d291420c6c9"
+      },
+      "worker_status.json": {
+        "bytes": 4336,
+        "sha256": "10ae33d7c746fbf7810595f95ce16c14cae2618b5afc13db4af9eba3c7d71065"
+      }
+    },
+    "final": true,
+    "item": 9,
+    "run_key": "37593731891-1-study",
+    "schema_version": 1,
+    "snapshot_kind": "final",
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959"
+  },
+  "gate_receipt": {
+    "archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+    "archived_at_utc": "2026-10-07T09:16:15.491798+00:00",
+    "final_inventory_sha256": "d91866946ea8b232a59f2e82873c1338b3f77e1cab369ae541b69d427ef701aa",
+    "item": 9,
+    "results_branch": "research/scientific-validation-2026-10-07-cloud-results",
+    "schema_version": 1,
+    "source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959"
+  },
+  "decoded_job_log": {
+    "tool": "github_fetch_workflow_job_logs",
+    "repo_full_name": "Agnuxo1/NeuroPixel",
+    "job_id": 112701154832,
+    "retrieved_interval_utc": [
+      "2026-10-07T09:19:02Z",
+      "2026-10-07T09:19:24Z"
+    ],
+    "path": "results/research/09_validation/study_actions_job_112701154832.log",
+    "git_blob": "a862871eb8fc6a7c64111d1c22945649a3a8f80b",
+    "characters": 43335,
+    "split_newline_entries": 447,
+    "encoding": "UTF-8; original returned BOM and line endings preserved",
+    "transformation": "Exact decoded string supplied by connector, no filtering, concatenation, normalization or redaction. Original HTTP bytes unavailable.",
+    "explicit_truncation_marker_observed": false,
+    "credential_pattern_scan": {
+      "token_prefixes_checked": [
+        "ghp_",
+        "gho_",
+        "ghu_",
+        "ghs_",
+        "ghr_",
+        "github_pat_"
+      ],
+      "matches": 0,
+      "scope": "Narrow precautionary scan; not a comprehensive secret audit."
+    }
+  },
+  "root_archive_events": [
+    {
+      "line": 346,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:26:57.629436+00:00",
+      "archive_commit": "b5f37ddcd435312ee7820a03a98c6b010ba8fd64",
+      "snapshot_kind": "interim_partial",
+      "files": 5
+    },
+    {
+      "line": 348,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:27:03.292470+00:00",
+      "archive_commit": "da5b6675a987b6579c0744063af63f66db890bff",
+      "snapshot_kind": "interim_partial",
+      "files": 11
+    },
+    {
+      "line": 355,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:32:05.625707+00:00",
+      "archive_commit": "526a4720f861688c59d1b3312c07c8332ca16c15",
+      "snapshot_kind": "interim_partial",
+      "files": 27
+    },
+    {
+      "line": 361,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:37:07.688348+00:00",
+      "archive_commit": "b9a01809d3a74d35ad90cac465ae69d092b9814c",
+      "snapshot_kind": "interim_partial",
+      "files": 41
+    },
+    {
+      "line": 367,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:42:06.156843+00:00",
+      "archive_commit": "d408078b4f4481ff5c4eecf883db40bc3aa88767",
+      "snapshot_kind": "interim_partial",
+      "files": 41
+    },
+    {
+      "line": 373,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:47:07.541354+00:00",
+      "archive_commit": "1d64df91d0e3277d2ab0dedccb6d6494b55874b0",
+      "snapshot_kind": "interim_partial",
+      "files": 55
+    },
+    {
+      "line": 379,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:52:07.028098+00:00",
+      "archive_commit": "833b933df01ead9636bf2488bd8ccd7849310d3e",
+      "snapshot_kind": "interim_partial",
+      "files": 55
+    },
+    {
+      "line": 385,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T08:57:08.172120+00:00",
+      "archive_commit": "e9631af65ab7030616a64806e11a8ce66a461338",
+      "snapshot_kind": "interim_partial",
+      "files": 69
+    },
+    {
+      "line": 391,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T09:02:07.717823+00:00",
+      "archive_commit": "bac8a0ba3e09ae63701f48b8929656c4f4e3f3a0",
+      "snapshot_kind": "interim_partial",
+      "files": 69
+    },
+    {
+      "line": 397,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T09:07:08.942052+00:00",
+      "archive_commit": "195eacdcd316804612687e1b528c4dd923ffad41",
+      "snapshot_kind": "interim_partial",
+      "files": 83
+    },
+    {
+      "line": 403,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T09:12:07.808168+00:00",
+      "archive_commit": "15fbcb08bbb9bf6cf4b67fab9626d40a68ccdd29",
+      "snapshot_kind": "interim_partial",
+      "files": 83
+    },
+    {
+      "line": 408,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T09:16:15.491317+00:00",
+      "archive_commit": "2e58f5deb47f5676e8663d666d9db7ea98e3e080",
+      "snapshot_kind": "interim_partial",
+      "files": 99
+    },
+    {
+      "line": 411,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T09:17:53.543884+00:00",
+      "archive_commit": "0a127eda8dac6a5556efc5f6c53cb4abeb2ee990",
+      "snapshot_kind": "interim_partial",
+      "files": 133
+    },
+    {
+      "line": 412,
+      "event": "evidence_archived",
+      "at_utc": "2026-10-07T09:17:55.754815+00:00",
+      "archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+      "snapshot_kind": "final",
+      "files": 134
+    }
+  ],
+  "local_executor_interruption": {
+    "first_observed_after_utc": "2026-10-07T09:02:53Z",
+    "affected_operations": [
+      "read-only tail/sed in item9-finalize",
+      "pwd with default login",
+      "pwd with login:false and /bin/bash"
+    ],
+    "outcome": "no exec_command response or process session ID; each waiting functions cell terminated; no scientific command launched",
+    "remote_worker": "GitHub independent runner unaffected; eight complete run records and resource failure null in 09:07 interim"
+  },
+  "claims_and_limits": [
+    "The original final archive is complete and the original Actions run reports success. Scientific correctness remains pending frozen independent recount.",
+    "Root opened the intermediate commit through the remote API; actual object ancestry/content remains pending the dedicated Git audit.",
+    "Log chronology and recovered object identities are corroboration under shared custody, not external blinding or proof of absence of unrecorded access.",
+    "All final outcomes remain uninspected before this operational recovery receipt; only status/provenance/resource metadata were read."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "checkpoint": {
+    "bytes": 123192,
+    "path": "runs/neuropixel_seed43/checkpoint.pt",
+    "sha256": "a7fa4a58481643f6fcb495d858cd4e240c408c519dbc3188bae560b000811eeb"
+  },
+  "condition_metrics": {
+    "base": {
+      "all_eight": 0.0,
+      "binding": 0.1025390625,
+      "correct": 240,
+      "cross_entropy": 2.3716492629885275,
+      "global": 0.1171875,
+      "groups": 256,
+      "macro": 0.1171875,
+      "n": 2048,
+      "per_role": [
+        0.095703125,
+        0.107421875,
+        0.109375,
+        0.15625
+      ]
+    },
+    "layout_permutation": {
+      "all_eight": 0.0,
+      "binding": 0.1015625,
+      "correct": 234,
+      "cross_entropy": 2.3716434289621793,
+      "global": 0.1142578125,
+      "groups": 256,
+      "macro": 0.1142578125,
+      "n": 2048,
+      "per_role": [
+        0.08984375,
+        0.099609375,
+        0.11328125,
+        0.154296875
+      ]
+    },
+    "query_switch": {
+      "all_eight": 0.0,
+      "binding": 0.1025390625,
+      "correct": 240,
+      "cross_entropy": 2.3716492629885275,
+      "global": 0.1171875,
+      "groups": 256,
+      "macro": 0.1171875,
+      "n": 2048,
+      "per_role": [
+        0.095703125,
+        0.107421875,
+        0.109375,
+        0.15625
+      ]
+    },
+    "relabel_events": {
+      "all_eight": 0.0,
+      "binding": 0.1171875,
+      "correct": 255,
+      "cross_entropy": 2.372031518544536,
+      "global": 0.12451171875,
+      "groups": 256,
+      "macro": 0.12451171875,
+      "n": 2048,
+      "per_role": [
+        0.099609375,
+        0.107421875,
+        0.134765625,
+        0.15625
+      ]
+    },
+    "swap_other_agent_patient": {
+      "all_eight": 0.0,
+      "binding": 0.1015625,
+      "correct": 233,
+      "cross_entropy": 2.3699647856235457,
+      "global": 0.11376953125,
+      "groups": 256,
+      "macro": 0.11376953125,
+      "n": 2048,
+      "per_role": [
+        0.09375,
+        0.10546875,
+        0.109375,
+        0.146484375
+      ]
+    },
+    "swap_queried_agent_patient": {
+      "all_eight": 0.0,
+      "binding": 0.1064453125,
+      "correct": 239,
+      "cross_entropy": 2.3758137141886193,
+      "global": 0.11669921875,
+      "groups": 256,
+      "macro": 0.11669921875,
+      "n": 2048,
+      "per_role": [
+        0.107421875,
+        0.099609375,
+        0.10546875,
+        0.154296875
+      ]
+    }
+  },
+  "evaluation_wall_seconds": 13.6269613139998,
+  "family": "neuropixel",
+  "initialization": 43,
+  "predictions": {
+    "bytes": 2324619,
+    "path": "final_predictions/neuropixel_seed43.npz",
+    "sha256": "a0d0fd57e8907224a5769f2b2b76b87366ad34d499319daf2d3286343eb19eec"
+  },
+  "run_id": "neuropixel_seed43"
+}

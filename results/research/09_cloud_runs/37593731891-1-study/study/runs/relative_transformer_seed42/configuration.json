@@ -1,0 +1,27 @@
+{
+  "batch_size": 32,
+  "family": "relative_transformer",
+  "gradient_clip": 1.0,
+  "height": 10,
+  "initialization": 42,
+  "learning_rate": 0.003,
+  "loss": "answer_cross_entropy_only",
+  "memorization": false,
+  "model": {
+    "class": "neuropixel.research.models.RelativeTransformer",
+    "d": 32,
+    "ff": 128,
+    "heads": 4,
+    "layers": 2
+  },
+  "optimizer": "AdamW",
+  "out_pos": [
+    9,
+    7
+  ],
+  "scheduled_updates": 4096,
+  "trainable_parameters": 30157,
+  "vocab": 37,
+  "weight_decay": 0.0001,
+  "width": 8
+}

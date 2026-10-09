@@ -1,0 +1,18 @@
+{
+  "count": 12,
+  "expected_count": 12,
+  "nodeids": [
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_01_preserved_legacy_exhibits_grounding_loss_and_dtype_failure",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_02_neuropixel_preserves_grounding_prefixes_configuration_and_outputs",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_03_transformer_preserves_old_tables_configuration_and_outputs",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_04_fresh_adam_without_decay_changes_only_appended_rows",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_05_hooks_follow_dtype_conversion_and_repeated_expansion",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_06_invalid_requests_fail_before_copy_or_rng_consumption",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_07_old_logits_do_not_imply_old_softmax_or_global_argmax",
+    "tests/test_vocab_expansion.py::VocabularyExpansionContracts::test_08_gradient_mask_is_not_an_optimizer_weight_decay_freeze",
+    "tests/test_battery_vocab.py::BatteryExpansionContracts::test_01_old_unforced_query_has_two_stale_labels_fixed_census_has_none",
+    "tests/test_battery_vocab.py::BatteryExpansionContracts::test_02_forced_new_query_preserves_legacy_inputs_and_targets",
+    "tests/test_battery_vocab.py::BatteryExpansionContracts::test_03_wrapper_preserves_rectangular_transformer_dtype_mode_and_readout",
+    "tests/test_battery_vocab.py::BatteryExpansionContracts::test_04_wrapper_preserves_nondefault_neuropixel_grounding_and_configuration"
+  ]
+}

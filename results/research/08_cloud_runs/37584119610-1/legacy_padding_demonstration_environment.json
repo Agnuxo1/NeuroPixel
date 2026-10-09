@@ -1,0 +1,60 @@
+{
+  "issues": [],
+  "limitations": "Thread observations are boundaries, not continuous utilization. The safety compatibility fixture intentionally requests two intra-op threads; numerical fixtures start at one.",
+  "records": [
+    {
+      "at_utc": "2026-10-07T06:55:03.543649+00:00",
+      "phase": "imported_before_legacy_cli_initializes_threads",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "pytest_plugin_autoload_disabled": true,
+      "python": "3.12.8",
+      "thread_environment": {
+        "BLIS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "torch_cuda_version": null,
+      "torch_interop_threads": 2,
+      "torch_threads": 1,
+      "versions": {
+        "Pillow": "12.3.0",
+        "numpy": "2.2.6",
+        "psutil": "7.2.2",
+        "pytest": "9.1.1",
+        "scipy": "1.15.1",
+        "torch": "2.6.0+cpu"
+      }
+    },
+    {
+      "at_utc": "2026-10-07T06:55:04.137822+00:00",
+      "phase": "after_stage_or_exception",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "pytest_plugin_autoload_disabled": true,
+      "python": "3.12.8",
+      "thread_environment": {
+        "BLIS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      },
+      "torch_cuda_version": null,
+      "torch_interop_threads": 1,
+      "torch_threads": 1,
+      "versions": {
+        "Pillow": "12.3.0",
+        "numpy": "2.2.6",
+        "psutil": "7.2.2",
+        "pytest": "9.1.1",
+        "scipy": "1.15.1",
+        "torch": "2.6.0+cpu"
+      }
+    }
+  ],
+  "skipped_nodeids": [],
+  "test_thread_boundaries": []
+}

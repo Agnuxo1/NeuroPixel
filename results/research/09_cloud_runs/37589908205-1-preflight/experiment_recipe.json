@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "item": 9,
+  "recipe_id": "NP-SCI-ITEM9-TWO-EVENT-v1",
+  "analysis_status": "exploratory; H1 unchanged",
+  "data": {
+    "height": 10,
+    "width": 8,
+    "vocab_size": 37,
+    "out_pos": [
+      9,
+      7
+    ],
+    "train_bags": 2048,
+    "validation_bags": 128,
+    "final_bags": 256,
+    "probe_bags": 64,
+    "memorization_bags": 4,
+    "train_seed": 91001,
+    "validation_seed": 91002,
+    "final_seed": 91003,
+    "probe_layout_seed": 91004,
+    "memorization_layout_seed": 91005,
+    "query_order": "event-major then role 0,1,2,3",
+    "validation_conditions": [
+      "base"
+    ],
+    "final_conditions": [
+      "base",
+      "swap_queried_agent_patient",
+      "swap_other_agent_patient",
+      "relabel_events",
+      "query_switch",
+      "layout_permutation"
+    ],
+    "group_unit": "sorted 4 nouns, 2 verbs, 2 places; all assignments/layouts/queries/conditions",
+    "bucket_ranges": {
+      "train": [
+        0,
+        69
+      ],
+      "validation": [
+        70,
+        84
+      ],
+      "final": [
+        85,
+        99
+      ]
+    }
+  },
+  "models": {
+    "neuropixel": {
+      "class": "neuropixel.model.NeuroPixel",
+      "c_id": 16,
+      "c": 48,
+      "hidden": 128,
+      "steps": 16,
+      "fire_rate": 0.5,
+      "grounded": null,
+      "retina": false
+    },
+    "relative_transformer": {
+      "class": "neuropixel.research.models.RelativeTransformer",
+      "d": 32,
+      "layers": 2,
+      "heads": 4,
+      "ff": 128
+    }
+  },
+  "training": {
+    "family_order": [
+      "neuropixel",
+      "relative_transformer"
+    ],
+    "optimizer": "AdamW",
+    "batch_size": 32,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "answer_cross_entropy_only",
+    "minibatch_seed_offset": 92000,
+    "update_rng_seed_offset": 93000,
+    "checkpoint": "final_scheduled",
+    "primary_updates": 4096,
+    "primary_initializations": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "pilot_updates": 1024,
+    "pilot_initialization": 39,
+    "pilot_learning_rates": [
+      0.001,
+      0.003
+    ],
+    "lr_selection": [
+      "validation_base_binding_desc",
+      "validation_base_cross_entropy_asc",
+      "learning_rate_asc"
+    ],
+    "memorization_lr": 0.003,
+    "memorization_initialization": 38,
+    "memorization_max_updates": 4096,
+    "memorization_check_every": 128,
+    "memorization_consecutive_checks": 2,
+    "memorization_min_accuracy": 1.0,
+    "memorization_max_ce": 0.05,
+    "training_probe_binding_flag_below": 0.95,
+    "training_log_every": 1,
+    "training_progress_every": 128,
+    "evaluation_batch_size": 64
+  },
+  "analysis": {
+    "primary": "base_macro_agent_patient_accuracy",
+    "paired_seed_t_confidence": 0.95,
+    "paired_seed_t_df": 4,
+    "bootstrap_seed": 94001,
+    "bootstrap_repetitions": 2000,
+    "bootstrap_confidence": 0.95,
+    "bootstrap_unit": "scenario bag retaining all query, condition and checkpoint pairs",
+    "high_competence_screen": {
+      "all_five_base_binding_at_least": 0.95,
+      "all_five_base_all_eight_at_least": 0.9,
+      "every_condition_every_seed_binding_at_least": 0.9
+    },
+    "secondary_inference": "descriptive; no corrected family-wide discovery test or Nobel criterion"
+  },
+  "runtime": {
+    "python": "3.12.8",
+    "versions": {
+      "torch": "2.6.0+cpu",
+      "numpy": "2.2.6",
+      "scipy": "1.15.1",
+      "pytest": "9.1.1",
+      "psutil": "7.2.2",
+      "Pillow": "12.3.0"
+    },
+    "intra_threads": 2,
+    "inter_threads": 1,
+    "minimum_available_ram_gib": 8.0,
+    "aggregate_active_cpu_ceiling": 4,
+    "device": "cpu",
+    "paid_compute": false,
+    "deterministic_algorithms": true
+  },
+  "limits": [
+    "Two explicit events with all fillers distinct; no recursion, coreference or repeated entities.",
+    "New fixed-template grouped synthetic diagnostic; not external-domain generalization.",
+    "Five initializations and one group recipe do not describe total pipeline uncertainty.",
+    "A new local final-access gate does not establish external custody or historical H1 blindness."
+  ]
+}

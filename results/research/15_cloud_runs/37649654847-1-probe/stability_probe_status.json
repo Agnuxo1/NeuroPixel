@@ -1,0 +1,63 @@
+{
+  "completed_at_utc": "2026-10-07T16:09:03.820627+00:00",
+  "components": [
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_stability_native.py",
+        "--plan",
+        "/home/runner/work/NeuroPixel/NeuroPixel/docs/research/15_probe_plan.json",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/15_cloud_runs/37649654847-1-probe/native"
+      ],
+      "completed_at_utc": "2026-10-07T16:09:03.550254+00:00",
+      "limit_seconds": 120,
+      "log_sha256": "4427418b455671ddaf71fed08907bd11db2805e3f6d90f41cd5b02084df67363",
+      "name": "native",
+      "pid": 2538,
+      "result_sha256": "752323fa052e37d3fa29800135f90eefffdc6ffcd2554f29d51a7d590c9a9748",
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T16:09:01.529104+00:00",
+      "status": "completed",
+      "wall_seconds": 2.0203513599999923
+    },
+    {
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_stability_audit.py",
+        "--plan",
+        "/home/runner/work/NeuroPixel/NeuroPixel/docs/research/15_probe_plan.json",
+        "--native",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/15_cloud_runs/37649654847-1-probe/native",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/15_cloud_runs/37649654847-1-probe/audit"
+      ],
+      "completed_at_utc": "2026-10-07T16:09:03.818778+00:00",
+      "limit_seconds": 120,
+      "log_sha256": "38a23f590eb16408b08c13995caebafe5f9fd57f5a23931057261c76008a8d95",
+      "name": "audit",
+      "pid": 2539,
+      "result_sha256": "fac66bf07186ef64caa620e2b0ff58fb538d83ac3725493b11dff61236d1471d",
+      "return_code": 0,
+      "started_at_utc": "2026-10-07T16:09:03.552317+00:00",
+      "status": "completed",
+      "wall_seconds": 0.26561000600000284
+    }
+  ],
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T16:09:03.820655+00:00",
+    "available_ram_gib": 14.416175842285156,
+    "phase": "stability_probe_finish"
+  },
+  "item": 15,
+  "new_learning_study_executed": false,
+  "optimization_steps": 0,
+  "plan_sha256": "a39782409d87a172ca516a461e4c31a92ebd2ed2828477c02dfb9e38b060460d",
+  "schema_version": 1,
+  "source_commit": "ff66dc4bacd19219bf4f754e40944396e7ce8c5b",
+  "source_unchanged": true,
+  "started_at_utc": "2026-10-07T16:09:01.527482+00:00",
+  "status": "completed",
+  "trained_checkpoints_loaded": 0,
+  "wall_seconds": 2.2931780879999906
+}

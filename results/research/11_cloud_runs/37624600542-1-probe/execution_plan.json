@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "phase": "probe",
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T12:55:25+00:00",
+  "freeze_parent_commit": "b343ff5f06ea980a07263bbb3c598a1d9451643d",
+  "scope": "Eight focused stream contracts and untrained finite state-path counterfactuals. No optimizer, learned-memory scoring, historical H1 replacement or item12 opening.",
+  "runtime": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.1",
+      "Pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "torch": "2.6.0+cpu"
+    },
+    "threads": 1,
+    "interop_threads": 1
+  },
+  "limits": {
+    "worker_seconds": 600,
+    "archive_reserve_seconds": 180,
+    "workflow_minutes": 20,
+    "minimum_available_ram_gib": 8,
+    "aggregate_active_cpu_threads": 4,
+    "numerical_threads": 1,
+    "git_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "heartbeat_interval_seconds": 60,
+    "archive_interval_seconds": 300,
+    "git_timeout_seconds": 60
+  },
+  "stages": [
+    {
+      "name": "contract_tests",
+      "seconds": 120,
+      "files": [
+        "tests/test_stream_memory.py"
+      ],
+      "expected_count": 8
+    },
+    {
+      "name": "probe",
+      "seconds": 120,
+      "script": "scripts/research_memory_probe.py"
+    }
+  ],
+  "probe_recipe": {
+    "active_f2_seed": 110002,
+    "active_f2_std": 0.01,
+    "cue_pos": [
+      0,
+      0
+    ],
+    "cue_steps": 3,
+    "delays": [
+      0,
+      4,
+      16,
+      32
+    ],
+    "gap_steps": 3,
+    "init_seed": 110001,
+    "out_pos": [
+      2,
+      2
+    ],
+    "query_pos": [
+      2,
+      1
+    ],
+    "query_steps": 10,
+    "shape": [
+      3,
+      3
+    ],
+    "vocabulary": 8
+  },
+  "probe_recipe_sha256": "5335fb058124b2e1137904a931554c17837814282264e6dfdd7a7b42b70a64af",
+  "implementation_sha256": {
+    ".github/workflows/research-item11-probe.yml": "848c3cd7f23a20a2504d7330988988b2fca4a07141bc70601327e1d82c87738e",
+    "docs/research/11_probe_protocol.md": "c8db6ca2cf57a5511acda2510bdf14fef70c886cb0abe08708fa2ff548155a24",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+    "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "results/research/11_validation/probe_static_review.json": "0aed2983e7855830f0423e280617167f862fe53044ab5f0cc21d15275780104e",
+    "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "scripts/research_memory_probe.py": "99016d771db6923fab75a239853c43a33d57048cb0e01e8fd6b6c1b827b75d42",
+    "tests/test_stream_memory.py": "77af92df6b2ca78efaaafb66c190654c25712d126d031dd4815e4047113f7621"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "checkpoint": {
+    "bytes": 121336,
+    "path": "study/runs/train_neuropixel_s61/checkpoint.pt",
+    "sha256": "603325796f326cd05ff75c84ed8c0e17820be9404891d30d86a135bb7e88461b"
+  },
+  "metrics": {
+    "all_official": {
+      "accuracy": 0.594,
+      "can_encode_n": 1000,
+      "cannot_encode_n": 0,
+      "correct": 594,
+      "cross_entropy": 1.660563778255226,
+      "cross_entropy_n": 1000,
+      "gold_unseen_as_train_answer_n": 0,
+      "gold_vocabulary_supported_n": 1000,
+      "n": 1000,
+      "nll_supported_n": 1000,
+      "per_answer": {
+        "bathroom": {
+          "accuracy": 0.3728813559322034,
+          "correct": 66,
+          "n": 177
+        },
+        "bedroom": {
+          "accuracy": 0.5576923076923077,
+          "correct": 87,
+          "n": 156
+        },
+        "garden": {
+          "accuracy": 0.8862275449101796,
+          "correct": 148,
+          "n": 167
+        },
+        "hallway": {
+          "accuracy": 0.5852272727272727,
+          "correct": 103,
+          "n": 176
+        },
+        "kitchen": {
+          "accuracy": 0.391812865497076,
+          "correct": 67,
+          "n": 171
+        },
+        "office": {
+          "accuracy": 0.803921568627451,
+          "correct": 123,
+          "n": 153
+        }
+      },
+      "supported_gold_n": 1000,
+      "unsupported_gold_n": 0
+    },
+    "novel_vs_optimization_train": {
+      "accuracy": 0.5744920993227991,
+      "can_encode_n": 886,
+      "cannot_encode_n": 0,
+      "correct": 509,
+      "cross_entropy": 1.7857561955330485,
+      "cross_entropy_n": 886,
+      "gold_unseen_as_train_answer_n": 0,
+      "gold_vocabulary_supported_n": 886,
+      "n": 886,
+      "nll_supported_n": 886,
+      "per_answer": {
+        "bathroom": {
+          "accuracy": 0.3419354838709677,
+          "correct": 53,
+          "n": 155
+        },
+        "bedroom": {
+          "accuracy": 0.5323741007194245,
+          "correct": 74,
+          "n": 139
+        },
+        "garden": {
+          "accuracy": 0.8758620689655172,
+          "correct": 127,
+          "n": 145
+        },
+        "hallway": {
+          "accuracy": 0.5963855421686747,
+          "correct": 99,
+          "n": 166
+        },
+        "kitchen": {
+          "accuracy": 0.348993288590604,
+          "correct": 52,
+          "n": 149
+        },
+        "office": {
+          "accuracy": 0.7878787878787878,
+          "correct": 104,
+          "n": 132
+        }
+      },
+      "supported_gold_n": 886,
+      "unsupported_gold_n": 0
+    },
+    "strict_novel_vs_full_exposure": {
+      "accuracy": 0.5750577367205543,
+      "can_encode_n": 866,
+      "cannot_encode_n": 0,
+      "correct": 498,
+      "cross_entropy": 1.7816653634786022,
+      "cross_entropy_n": 866,
+      "gold_unseen_as_train_answer_n": 0,
+      "gold_vocabulary_supported_n": 866,
+      "n": 866,
+      "nll_supported_n": 866,
+      "per_answer": {
+        "bathroom": {
+          "accuracy": 0.3466666666666667,
+          "correct": 52,
+          "n": 150
+        },
+        "bedroom": {
+          "accuracy": 0.5441176470588235,
+          "correct": 74,
+          "n": 136
+        },
+        "garden": {
+          "accuracy": 0.875,
+          "correct": 126,
+          "n": 144
+        },
+        "hallway": {
+          "accuracy": 0.5849056603773585,
+          "correct": 93,
+          "n": 159
+        },
+        "kitchen": {
+          "accuracy": 0.35135135135135137,
+          "correct": 52,
+          "n": 148
+        },
+        "office": {
+          "accuracy": 0.7829457364341085,
+          "correct": 101,
+          "n": 129
+        }
+      },
+      "supported_gold_n": 866,
+      "unsupported_gold_n": 0
+    }
+  },
+  "predictions": {
+    "bytes": 119138,
+    "path": "final_predictions/train_neuropixel_s61.npz",
+    "sha256": "5b764b3f23b8dac56d14595131ba4c4c629f0edccbf2a5e6ebe701685d12fc4b"
+  },
+  "run_id": "train_neuropixel_s61"
+}

@@ -1,0 +1,97 @@
+{
+  "item": 9,
+  "runs": {
+    "neuropixel_seed40": {
+      "final_evaluation_wall_seconds": 13.63389706900034,
+      "final_summary_sha256": "925bd0686dc2fe585ad614d7d7e7cb1383969e15954b2e517574c067b41df480",
+      "learning_rate": 0.001,
+      "run_wall_seconds": 469.73062144100004,
+      "trainable_parameters": 29856,
+      "training_summary_sha256": "5f28a35bd40c488a5ecb6af5cc2cb5ec618311b669e7f6f0c2b09bada4d2ce9a",
+      "updates_completed": 4096
+    },
+    "neuropixel_seed41": {
+      "final_evaluation_wall_seconds": 13.590478648000044,
+      "final_summary_sha256": "b5bac471c42453eb1eda0d71f27152e73fd9a6ccbee38e3cd008ebad9bf5c874",
+      "learning_rate": 0.001,
+      "run_wall_seconds": 465.568185429,
+      "trainable_parameters": 29856,
+      "training_summary_sha256": "03870bfb86f2b3b28152d49fbd7580ad01ec8bf6000e41c70605cceb29a110f9",
+      "updates_completed": 4096
+    },
+    "neuropixel_seed42": {
+      "final_evaluation_wall_seconds": 13.60410906900006,
+      "final_summary_sha256": "c0574362ec6681b4c572554aac84c11f9bc5e728ec8381f548aa7d24aca02a44",
+      "learning_rate": 0.001,
+      "run_wall_seconds": 465.7318730310001,
+      "trainable_parameters": 29856,
+      "training_summary_sha256": "95d6e71b4207d889004acc082dabfd5d861d548fe2d9d35840a27852acb32286",
+      "updates_completed": 4096
+    },
+    "neuropixel_seed43": {
+      "final_evaluation_wall_seconds": 13.6269613139998,
+      "final_summary_sha256": "b3d42e275b83ead5d276de080ff7e3bd90e23962d1837e2a87ccbe88ea7c0c89",
+      "learning_rate": 0.001,
+      "run_wall_seconds": 466.0818796169999,
+      "trainable_parameters": 29856,
+      "training_summary_sha256": "987be5483c5c17404113954b6a8af5d1f695f7e74b439d8705e2205340ae04e7",
+      "updates_completed": 4096
+    },
+    "neuropixel_seed44": {
+      "final_evaluation_wall_seconds": 13.682360790000075,
+      "final_summary_sha256": "aca42df031def234cb2d3af7dc985f4a5965143a18386b0d86ff37d916619648",
+      "learning_rate": 0.001,
+      "run_wall_seconds": 465.9992221370003,
+      "trainable_parameters": 29856,
+      "training_summary_sha256": "71bf7077f2be715bbede5d9391ab1b3cef7a38f4f7604ee18dd9234fc09bab97",
+      "updates_completed": 4096
+    },
+    "relative_transformer_seed40": {
+      "final_evaluation_wall_seconds": 3.2494797509998534,
+      "final_summary_sha256": "7b30a97c23365aea8894e2e6ce89f5a0c06bc9838b10478c986d147fb8635f12",
+      "learning_rate": 0.003,
+      "run_wall_seconds": 123.641544608,
+      "trainable_parameters": 30157,
+      "training_summary_sha256": "03f49107a6436dacace4eadc4abfaf01c6a67a101f2d5ef5733ead9e85bcee26",
+      "updates_completed": 4096
+    },
+    "relative_transformer_seed41": {
+      "final_evaluation_wall_seconds": 3.2351734799999576,
+      "final_summary_sha256": "26295ee7a30832ec7ace2961f2c992c04c735308942f0a28f64ea6f6c6c461fc",
+      "learning_rate": 0.003,
+      "run_wall_seconds": 122.33375931800015,
+      "trainable_parameters": 30157,
+      "training_summary_sha256": "a51e9d3fdd48f4b0aeb6704803d89c6e2f0347a609cb77683d68fa7caedacdcb",
+      "updates_completed": 4096
+    },
+    "relative_transformer_seed42": {
+      "final_evaluation_wall_seconds": 3.2581631960001687,
+      "final_summary_sha256": "a684629dfe667cb0791a6a105901fe9327ec7a718430d6b92dfc557ef6da1b2e",
+      "learning_rate": 0.003,
+      "run_wall_seconds": 122.44149144699986,
+      "trainable_parameters": 30157,
+      "training_summary_sha256": "72e89a4443bd3483a79a63b1c9444c00dc4e1666ca924434d83196343c704ef4",
+      "updates_completed": 4096
+    },
+    "relative_transformer_seed43": {
+      "final_evaluation_wall_seconds": 3.230427660999794,
+      "final_summary_sha256": "8eeb7795c32d12e80fbf74184a67dc7963666a1a1860527964e66e0d94a82f61",
+      "learning_rate": 0.003,
+      "run_wall_seconds": 121.69146371899978,
+      "trainable_parameters": 30157,
+      "training_summary_sha256": "505f3dc7b019745354cc028a91a91d19b6a9b337b1d215fc07d08726002a7267",
+      "updates_completed": 4096
+    },
+    "relative_transformer_seed44": {
+      "final_evaluation_wall_seconds": 3.2499809200003256,
+      "final_summary_sha256": "15a8abc27d963966d60b049ede162fa46fd3dfa484942a9b33f1dfef8efd114d",
+      "learning_rate": 0.003,
+      "run_wall_seconds": 121.96996247400011,
+      "trainable_parameters": 30157,
+      "training_summary_sha256": "bf4394f0ab3aa4f8cf4b4177cfa6ac26eae21c8269e36c4f1019f3ec6e51d0b1",
+      "updates_completed": 4096
+    }
+  },
+  "schema_version": 1,
+  "scope": "Exact saved values, no new timing. Run wall includes construction/training/checkpoint/development evaluation. Final evaluation wall includes prediction/output/metrics, excludes model load and later summary write. Neither is pure inference latency or energy."
+}
