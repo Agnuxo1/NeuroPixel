@@ -22,7 +22,9 @@ These are results of the specified recipes and device. They do not establish gen
 
 ## Graphics backends and fair acceleration controls
 
-The original scalar renderer uses RGBA32F textures and framebuffer passes. The separately verified vector renderer packs coefficients and performs four-channel fetches/DOT4 with shared perception taps. The advanced OpenGL 4.6 backend uses compute shaders, SSBO weights and shared pixel tiles. It passed **21 checks across all seven workloads** against archived CUDA outputs. Its full timing comparison remains incomplete after a RAM guard interruption and a queue timeout; no speed claim follows from partial rows. [RENDER10 evidence](docs/research/RENDER10_results.md) distinguishes graphics compute from fragment rasterization.
+The original scalar renderer uses RGBA32F textures and framebuffer passes. The vector renderer packs coefficients and performs four-channel fetches/DOT4. The advanced OpenGL 4.6 backend uses compute shaders, SSBO weights and shared pixel tiles. Its complete comparison passed **77 output gates and all 245 timing rows**, preserving the original 143 rows without repeating them. Compute measures **2.084×** relative to the best CUDA comparator for C16/grid128, and loses for C48/grid128. Recovery interrupted measurement sessions; results are descriptive technical measurements, not independent replications. [All RENDER10 cases and limits](docs/research/RENDER10_results.md).
+
+![All five advanced GPU backends](docs/animations/advanced_GPU_backends.gif)
 
 ![All graphics workloads and comparators](docs/animations/all_GPU_workloads.gif)
 
@@ -48,9 +50,9 @@ The scanner projects state through a learned decoder. [SCN06](docs/research/SCN0
 
 ## Reproduce and inspect every result
 
-An [interactive local viewer](docs/research/VIS07_viewer.md) exposes all sixteen raw channels, selectable RGB projection, per-cell decoder probabilities and reset/depth controls. Archive mode has passed fifty HTTP checks and browser control checks; it is explicitly labelled as playback of actual GPU states. The new live GPU integration is prepared and awaiting resource admission, while a separate CPU/Mesa integration endpoint is registered. No playback or software-renderer check is presented as physical GPU execution.
+An [interactive local viewer](docs/research/VIS07_viewer.md) exposes all sixteen raw channels, selectable RGB projection, per-cell decoder probabilities and reset/depth controls. Archive mode passed fifty HTTP checks and browser controls. Live physical GPU integration passed **27 trajectory gates plus 52 HTTP checks**, including all ten TRAIN resets and clean release. A separate CPU/Mesa execution passed the same integration checks; software and archive modes are labelled explicitly and are not presented as physical GPU execution.
 
-The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) is frozen for all seven workloads and five comparators. It uses actual board counters over multi-second blocks; execution is pending resource admission. Full wall energy remains unmeasured.
+The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) uses actual board counters over multi-second blocks. Its original execution passed all 77 output gates and preserved 100/105 blocks before the unchanged RAM floor stopped it. Complete comparative energy conclusions remain pending; full wall energy is unmeasured.
 
 - [Reproduction instructions and environments](docs/research/REPRODUCE_20261009.md)
 - [All-study evidence index](docs/research/RESULTS_INDEX_20261009.md)

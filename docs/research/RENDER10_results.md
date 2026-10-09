@@ -1,17 +1,19 @@
-# OpenGL 4.6 compute: validated execution, incomplete timing
+# OpenGL 4.6: complete registered timing cohort
 
-The advanced backend executes the same neural update with OpenGL 4.6 compute shaders, SSBO coefficients, four-channel arithmetic, shared 4×4 pixel tiles and explicit image barriers. It is graphics compute; the scalar and vector fragment renderers remain separate implementations.
+All 245 registered rows and 77 output gates are complete. The original 143 rows are preserved exactly; only missing keys were measured. Recovery verifies identical registered input arrays and unchanged source. The interruption separates measurement sessions and qualifies interpretation: these are descriptive technical measurements on one GPU, not independent replications or confidence intervals.
 
-## Execution fidelity
+| Workload | CUDA eager ms | CUDA Graph ms | Scalar fragment ms | Vector fragment ms | Compute ms | Best CUDA / compute |
+|---|---:|---:|---:|---:|---:|---:|
+| C16_grid8 | 4.7211 | 2.4105 | 12.0515 | 2.5491 | 2.2705 | 1.0617× |
+| C16_grid32 | 5.3619 | 4.1319 | 16.1152 | 3.5662 | 3.2316 | 1.2786× |
+| C16_grid128 | 11.1982 | 10.8098 | 33.1744 | 7.3729 | 5.1868 | 2.0841× |
+| C48_grid8 | 5.0039 | 3.2900 | 41.5868 | 3.8431 | 2.9715 | 1.1072× |
+| C48_grid32 | 4.7555 | 4.0063 | 45.4874 | 4.1155 | 3.0398 | 1.3179× |
+| C48_grid128 | 4.7253 | 9.9665 | 91.2469 | 5.9474 | 9.0106 | 0.5244× |
+| RGB8_retina_C16 | 5.8618 | 2.9160 | 14.2554 | 2.8033 | 2.4897 | 1.1712× |
 
-The Torch-free physical GPU preflight passed **21 checks across all seven registered workloads**. Complete states and scanner logits meet the original pointwise limit `1e-4 + 1e-5 * abs(reference)`; every categorical scanner decision agrees with the archived native CUDA reference. Inputs and references are admitted by SHA256. The actual NVIDIA context reports 49,152 bytes of available shared memory per workgroup. No training or accuracy selection occurs.
+Compute is faster in six point comparisons and slower for C48/grid128. C16/grid128 measures approximately 2.084× relative to the best CUDA comparator. Small differences may be sensitive to technical noise; no universal advantage is claimed.
 
-Evidence: [successful receipt](../../results/research/RENDER10_preflight/render_only_20261009B/receipt.json), original inputs/references under `RENDER09_benchmark/original_20261009A`, and `scripts/preflight_RENDER10_render_only_B.py`. Earlier API-query and GLSL image-parameter compilation failures remain preserved. The successful test does not convert those attempts into successful replications or imply that the separate 136-check tensor preflight completed.
+FP32, TF32 off, resident seeding, sixteen updates and full decoding are held fixed. CUDA eager and CUDA Graph remain strong comparators. Setup, compilation, transfers, training and complete system energy are outside this primary timing. Short counter deltas remain inadequate energy evidence.
 
-## Timing status
-
-The fixed RENDER10 plan compares compute, scalar fragment, vector fragment, native CUDA eager and CUDA Graph on the same seven workloads. All **77 pre-timing parity checks passed**. The timing execution then stopped when available host RAM fell below the unchanged 8 GiB floor. Its partial rows are preserved in [the original receipt](../../results/research/RENDER10_benchmark/original_20261009A/receipt.json).
-
-Recovery verifies the frozen source and original inputs and skips every completed `(case, block, method)` key. The first recovery process exhausted its 20-minute FIFO wait behind another owner's GPU job and terminated before running measurements. Other workloads were not interrupted. The full registered timing cohort is **incomplete**; no RENDER10 speed effect or energy advantage is reported from partial rows. Complete RENDER09 results remain separately available.
-
-The resource interruption and any eventual recovery are operational qualifications, not independent scientific replications. Whole-system wall energy and independent outside replication remain unmeasured.
+The separate sustained RENDER11 energy endpoint preserves 100/105 original blocks after a RAM-floor interruption; do not infer its complete comparative effect without all registered rows. Original failures and queue timeouts remain archived.
