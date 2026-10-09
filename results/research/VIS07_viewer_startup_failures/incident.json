@@ -1,0 +1,12 @@
+{
+  "runs": [37934036977, 37935076118],
+  "status": "both_terminal_failure_before_model_loading_or_shader_execution",
+  "first_source": "d679874ee8001d41dc94776897b16db865a66f62",
+  "second_source": "d0a1ef44c3c624b9760eca03491a909e3fa31f6c",
+  "failures": ["data/vis07_models/weights_seed240.json excluded by existing data/ Git ignore rule", "evidence branch not precreated; archival PUT returned404"],
+  "observation_incident": "GitHub connector workflow-by-commit returned empty results despite completed runs; authenticated gh API independently confirmed actual jobs and logs. Explicit second push was unnecessary; preserve both attempts and count neither as a scientific replication.",
+  "new_training": 0,
+  "new_neural_forward": 0,
+  "fix": "Explicitly track all five exported model JSONs and gallery, verify all nine viewer governors against the actual Git index, precreate evidence branch, then run unchanged frozen integration source",
+  "scientific_source_or_tolerance_change": false
+}

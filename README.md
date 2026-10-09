@@ -63,4 +63,4 @@ CPU studies used Python3.12.14/Torch2.6.0+cpu, two threads and a minimum8GiB ava
 
 ## License and attribution
 
-Code: [MIT](LICENSE). Optical-digits data: Alpaydin & Kaynak(1998), [UCI DOI10.24432/C50P49](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits), CC BY4.0. Third-party sources and internal reproduction are explicitly distinguished. Independent replication, full energy accounting, broad stable memory and exceptional original utility remain open research requirements.
+Code: [MIT](LICENSE). Optical-digits data: Alpaydin & Kaynak(1998), [UCI DOI10.24432/C50P49](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits), CC BY4.0. Historical bAbI data: Weston and colleagues; the [publisher dataset card](https://huggingface.co/datasets/facebook/babi_qa/blob/main/README.md) declares CC BY3.0. The historical acquisition report retains its mirror and upstream-checksum limitations. Third-party sources and internal reproduction are explicitly distinguished. Independent replication, full energy accounting, broad stable memory and exceptional original utility remain open research requirements.
