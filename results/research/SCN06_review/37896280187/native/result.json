@@ -1,0 +1,72 @@
+{
+  "status": "verified_native_SCN06_witnesses",
+  "source_commit": "d30b5bd2eab29e11dcfd7d63629646acf5e3c9cc",
+  "workflow_run_id": "37896280187",
+  "plan_sha256": "ec9b7e3e3d232adaf716378364378ce5b2c9b3685572bea5b6d9a5cabaad1917",
+  "checks": [
+    {
+      "name": "coupled initial raw logits identical",
+      "passed": true
+    },
+    {
+      "name": "coupled scanner at intervention identical",
+      "passed": true
+    },
+    {
+      "name": "coupled pre-update timing",
+      "passed": true
+    },
+    {
+      "name": "coupled next token contrast",
+      "passed": true
+    },
+    {
+      "name": "coupled future input all PAD",
+      "passed": true
+    },
+    {
+      "name": "inactive initial raw logits identical",
+      "passed": true
+    },
+    {
+      "name": "inactive scanner at intervention identical",
+      "passed": true
+    },
+    {
+      "name": "inactive pre-update timing",
+      "passed": true
+    },
+    {
+      "name": "inactive next token contrast",
+      "passed": true
+    },
+    {
+      "name": "inactive future input all PAD",
+      "passed": true
+    },
+    {
+      "name": "top summary compresses distinct vectors",
+      "passed": true
+    },
+    {
+      "name": "finite sentinel has documented extreme limit",
+      "passed": true
+    },
+    {
+      "name": "RAM8 finish",
+      "passed": true
+    }
+  ],
+  "training_updates": 0,
+  "learned_forward_calls": 0,
+  "constructed_models": 3,
+  "wall_seconds": 0.009137284000004797,
+  "process_cpu_seconds": 0.024754465999999864,
+  "available_ram_gib": 14.320579528808594,
+  "native_npz_sha256": "5dc8b6910e5d0ff1d7c89c5fb282210671225e56be9920812bfd6b7673372d6d",
+  "limits": [
+    "Assigned weights/states; no learned semantic causal mechanism or reachable-manifold claim",
+    "Top summary differs from full probability vector; finite PAD policy retained",
+    "No visual task or external replication"
+  ]
+}

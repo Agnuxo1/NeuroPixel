@@ -1,0 +1,194 @@
+{
+  "status": "frozen",
+  "local_registration_id": "NP-OPT03-ROLE-20261008-D2",
+  "frozen_utc": "2026-10-08T03:12:59.525991+00:00",
+  "mode_root": "results/research/OPT03_modes",
+  "checkpoint_root": "results/research/OPT03_cloud_recovery/37696760073/archive",
+  "runs": [
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed100",
+      "seed": 100,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed100",
+      "seed": 100,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed100",
+      "seed": 100,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed100",
+      "seed": 100,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed101",
+      "seed": 101,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed101",
+      "seed": 101,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed101",
+      "seed": 101,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed101",
+      "seed": 101,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed102",
+      "seed": 102,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed102",
+      "seed": 102,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed102",
+      "seed": 102,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed102",
+      "seed": 102,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    }
+  ],
+  "transforms": [
+    "query_flip",
+    "pair_relocate",
+    "both"
+  ],
+  "mask_seeds": [
+    78000,
+    78001,
+    78002,
+    78003,
+    78004,
+    78005,
+    78006,
+    78007
+  ],
+  "role_ids": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "query_pos": [
+    7,
+    6
+  ],
+  "out_pos": [
+    7,
+    7
+  ],
+  "new_trainings": 0,
+  "test_access": false,
+  "threads": 2,
+  "minimum_available_ram_gib": 8,
+  "contracts": {
+    "status": "passed",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "scope": "Constructed role-key/value transformations only; no learned neural scores or test data"
+  },
+  "input_sha256": {
+    "docs/research/OPT03_role_protocol.md": "613ea192cb84f2e2e8b876969add9508772c145a8c131da43f563969165c4e3e",
+    "scripts/diagnose_OPT03_roles.py": "f450abb5c64fde9ffb76f33819254372e0223b24553361ce90d7db345a165eae",
+    "neuropixel/research/OPT03_role_views.py": "990ce2532c2e19916fbe9bc8197da917b6c55ff2c80c654c6c6be5aa3fef5db2",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "neuropixel/research/growth.py": "80482c6acf64d5ef50381345d5882f95cc06e1955d944f5a2f777ec8a6e04175",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire0.5_seed100/checkpoint.pt": "6b7c80112b40ab9cb534ec9c1dce59fd0bb1eb1bad986bdf91c7366d6f08483e",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire0.5_seed101/checkpoint.pt": "6918be4c11004f677f9d42ab9fcfbbb2d4ebcd6a1245e1b1db5cf811054e8525",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire0.5_seed102/checkpoint.pt": "9c00a3968fc9a7c415774346de58bd2d691a0edcec3b2d0022293ac866e47841",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire1.0_seed100/checkpoint.pt": "b696ba50dd1013a90953a382423d9d8650984ebe4e35b7edff5a4b45a0e66d3e",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire1.0_seed101/checkpoint.pt": "b51868468dafc0398a11bee48dba159b738748d27a57c13ae1afde238a858b77",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire1.0_seed102/checkpoint.pt": "082405aad912e69d13b51a002b49e7be559e5a341e7e6d7582a56f8a07d5e771",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire0.5_seed100/checkpoint.pt": "f28bf96835ec38188e6256ad6fca2a3a7d3cd131f99b7ee56bd44e313f3fcf39",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire0.5_seed101/checkpoint.pt": "359dbbad76522e1fb070b72d2f4171304d3169c1366759c97440fb85258cf809",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire0.5_seed102/checkpoint.pt": "87605aeac4c1bfcea6d1f0162a542f416c51bb83dd05e4eda3eaf467c7fee5b2",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire1.0_seed100/checkpoint.pt": "3827e992a0cc0cd011a2c79dba700fdab7e2bfa07549a87a368d92308657c253",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire1.0_seed101/checkpoint.pt": "e1b20e563ee2f61082cc5ccf61335377ad2a4224b4cd4ca0feb9998f51ada751",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire1.0_seed102/checkpoint.pt": "3ae5f7083e87a2f40830f2a14dfc745b683940448d295b32646e70c15f95d4b9",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed100_probe.npz": "12aa7b5c0c382e3a9782e25f3ec6762914c93608bf2a36749c64fc3e6ed7a10a",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed100_validation.npz": "f5d72d1f3120239fceb6f5d91f86b4402cfd407df7f6c7f8fdea3a81524ef80d",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed101_probe.npz": "636bc2404570894c7d69646d54170928b3a35257e8ad7d5e93e311c5fbae6bb4",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed101_validation.npz": "0ef97b48932ac3acd8f91489d072bf01a043bd6e1f6a9ab7f89358a05a87fb80",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed102_probe.npz": "c6d673b66fdab390a23c1288bce72d57dba4400a234b42548951a77bbee35b17",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed102_validation.npz": "6444dc98a6cc3c692eaf73a98e8fb77100633a90cb5f9279c11bdec4785fc487",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed100_probe.npz": "8222c86353d92f97eaa0265851b8e87b8283459d0f3ef8ad64731c41b3c53c52",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed100_validation.npz": "994b0ceb83ecf3bf45b42845c8517b20a309fbe2486ce78c02fdd73fe5411b9e",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed101_probe.npz": "57172ac31c6feb8fe8e01790da6ab3c01f4a04e9e4f7e75ca637fc361e5f9daf",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed101_validation.npz": "7b59918d5b02d2a8af2be59a0363b9837d684565da6870a81ba68acb1ef06aba",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed102_probe.npz": "dd5a4ef5a776b574e702a3bfa970c1af5c5ec679b900ea4db97b234ccd389370",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed102_validation.npz": "0e362388945b641064f17cbe49338c7d25aafbba625f4d36375ac58ee3690aa6",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed100_probe.npz": "9f68d6f0b541fb62ad659871dd9de7992a24b1bb9138bf111d078bf691c7c2e4",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed100_validation.npz": "34075277b47726133d73d6a99b894a19c622f60b96270fb00e177408d8751ec2",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed101_probe.npz": "09133d917486cc127d7ccd56e5936f3706e797c468e77c9ff8c4981790ef0d6d",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed101_validation.npz": "2b8c9a5a91777c747d3b5ffbad4bf5bb962fff2c0e6b614c49fa7538fe58d387",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed102_probe.npz": "b677278659b51c4ec53e415991800bf4e81a9224f0ed35e32cf377f0de79173e",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed102_validation.npz": "fb4f6f7aecbc188cb11e06f52e8e1806e228100d0f591379462498f95da0ab2e",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed100_probe.npz": "1ff2e7f4adeecc304add23734fbd5ffce926eb05477827d43bfb9b57503eddfe",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed100_validation.npz": "c1a223e0d05b88156df8196c9399a717f8d560663717799d97be3e1413704a33",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed101_probe.npz": "9bbde1c664b2406523c4715a2ad602c1bdd486e394437b22493b9fdbb3c01cb5",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed101_validation.npz": "f8b010144cd9d540994e7c6bc81305237b249b62833f70ee35d713606327277a",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed102_probe.npz": "4ff3e42de90d33aa4fc4f579a0d9e092c00373bda691e3f3311b2877b1ab9562",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed102_validation.npz": "3ed8c94a1c8eaf4a83a7b0ba96c02dc1eefab8a4fc584a1547e2266a15ab48ea",
+    "results/research/OPT03_modes/subset_probe.npz": "c1882cbf0a340e5b32eac45b551a10e3482529699f97fe0bac33d1a13c5b21d0",
+    "results/research/OPT03_modes/subset_validation.npz": "52f28e0ec8e6fa8efd19e8b4fd88ec42bb01721e89fdfa92b12b5b13b5dfdbe5",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed100.json": "b6245783b2b08c58f0aef014898e28160d155845fcbf27842bbf9318aff48aea",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed101.json": "511472b6dd5615e52df7a597252da7d61166bcff65058bba48d5af68ce5cd2eb",
+    "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed102.json": "0a99e59d1beb8e0443faa2f0ad2ecf9a904ef4554d771fc6c53f5b0c047a6b7f",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed100.json": "44f56e07910b327c100b1df9dcbd5f419b5f74a415875bc2491618b43e8a2ff7",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed101.json": "61a5ed69ee93d27e3f01dad72b1b1842c72927e75a79624951d0d4b1074cc5f1",
+    "results/research/OPT03_modes/OPT03D_pad0_fire1.0_seed102.json": "b16639724fab8372a6a10f0ae5e3e478174105f7a2aedf91fc837d6fbedb5cc6",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed100.json": "4eeebf714301aae405f9f226a9347f2754ba86b333967417aad508aa7a59e18b",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed101.json": "e23ecfe5a89204f10a5ba83a8568cc5da17ca8c0158bf8d09f7a157c48b0b606",
+    "results/research/OPT03_modes/OPT03D_pad1_fire0.5_seed102.json": "470e8119f5f576f2d820dee556018491767030df10b9002171f41cd88538db81",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed100.json": "35cc213c03fce0131da76e9b8f98d5ebe5ee428665c9910197352e319c6b7971",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed101.json": "ed4df33594e47647a24ed40e8d8b8497716bf6b6aae87dc20bbfe3bc698eb449",
+    "results/research/OPT03_modes/OPT03D_pad1_fire1.0_seed102.json": "71760a381aa0c46bbaab2b17adbe2262e0e37148d1c815a2c2e96faefb1d4bfd",
+    "results/research/OPT03_modes/summary.json": "1483368b753659b633d1a62d34a72b7f0f3253798fd6b7cc3c1fc18f84e8d84e"
+  },
+  "statistical_unit": "three initializations; masks averaged within checkpoint, original metrics not rerun"
+}

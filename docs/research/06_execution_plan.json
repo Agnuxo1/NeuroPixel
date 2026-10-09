@@ -1,0 +1,1093 @@
+{
+  "execution": {
+    "local_fallback_allowed": true,
+    "minimum_available_ram_gib": 8.0,
+    "primary_environment": "GitHub Actions ubuntu-latest CPU",
+    "selection": "none; all prespecified arms retained",
+    "threads": 2
+  },
+  "freeze_reason": "Pre-accepted-growth correction: PAD/empty feature slot fixed zero; core scientific inventory unchanged.",
+  "frozen_at_utc": "2026-10-07T07:35:48.192058+00:00",
+  "growth": {
+    "batch_size": 64,
+    "decision_probe_seeds": [
+      62010,
+      62110,
+      62210
+    ],
+    "final_data_seeds": [
+      62012,
+      62112,
+      62212
+    ],
+    "final_examples_per_topic": 1024,
+    "firing_seeds": [
+      9001,
+      9101,
+      9201
+    ],
+    "gate": {
+      "features": 40,
+      "l2": 0.0001,
+      "learning_rate": 0.1,
+      "steps": 128,
+      "training_examples_per_topic": 512
+    },
+    "gate_data_seeds": [
+      62011,
+      62111,
+      62211
+    ],
+    "gradient_clip": 1.0,
+    "init_seeds": [
+      20,
+      21
+    ],
+    "learning_rate": 0.003,
+    "max_experts": 3,
+    "novelty_threshold": 0.1,
+    "novelty_token_probability_threshold": 0.5,
+    "planned_gate_fits": 8,
+    "planned_stage_trainings": 18,
+    "planned_training_trajectories": 6,
+    "policies": [
+      "fixed_snapshot",
+      "adaptive_novelty",
+      "adaptive_resonance"
+    ],
+    "random_router_seed": 62013,
+    "resonance_multiplier": 0.75,
+    "routers": [
+      "legacy_reconstruction",
+      "uniform_mixture",
+      "random",
+      "learned_gate"
+    ],
+    "school_weight": 0.3,
+    "stage_updates": 512,
+    "stages_per_policy": 3,
+    "steps": 16,
+    "topic_names": [
+      "A",
+      "B",
+      "C"
+    ],
+    "topics": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "train_sample_seeds": [
+      9002,
+      9102,
+      9202
+    ],
+    "weight_decay": 0.0001
+  },
+  "historical_anchor": {
+    "protocol_frozen_sha256": "2543c29507269e64c7a0c1757711a7f96abae1bf7111149253b2e71f469eb244",
+    "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b"
+  },
+  "implementation_commit": "0c95e114142a22ecd24a9dc00f286b7e480b91b6",
+  "implementation_sha256": {
+    ".github/workflows/item6.yml": "cee9d210bcaf91cf3de938d783d74ac4ce67189abc16ff096c97ad5ef4defa46",
+    "docs/research/06_protocol_amendment.md": "586ce65baf6dab8a09304d388b49263bd07cc1fcca8d2123e4ce3d1594db4597",
+    "neuropixel/research/ablations.py": "a21dc745bed75feff00f67a398be585fd70c4644895c90553bd3691a79ef06b4",
+    "neuropixel/research/growth.py": "80482c6acf64d5ef50381345d5882f95cc06e1955d944f5a2f777ec8a6e04175",
+    "scripts/research_ablations.py": "68feed58387935e995676a879b8ff5fc3a9357a850e788cf2908990aa80f5729",
+    "scripts/research_analyze_item6.py": "8cb6bd25063838e7ec91053c09560a0374a85424f30e16ffffa5bf37106794fa",
+    "scripts/research_growth.py": "e2c225706fb3cc820e830d40a34c23ef182f4f258b921b6ab84bbefe2593642d",
+    "tests/test_research_item6.py": "47f881871bcb46bda939d3f203188fc66a6dd4b6b5b2ff8e7699e6f7ed7659d0"
+  },
+  "item": 6,
+  "planned_evaluation_cases": 34,
+  "planned_evaluations": [
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024__deploy_T1",
+      "kind": "deployment_truncation",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": 1
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024__deploy_T4",
+      "kind": "deployment_truncation",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": 4
+    },
+    {
+      "damage": {
+        "after_step": 8,
+        "erase_probability": 0.3,
+        "seed": 62002
+      },
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024__lesion",
+      "kind": "fixed_lesion",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p0_reinj0_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p0_reinj0_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p0_reinj1_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj0_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p0_reinj0_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024__deploy_T1",
+      "kind": "deployment_truncation",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": 1
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024__deploy_T4",
+      "kind": "deployment_truncation",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": 4
+    },
+    {
+      "damage": {
+        "after_step": 8,
+        "erase_probability": 0.3,
+        "seed": 62002
+      },
+      "evaluation_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024__lesion",
+      "kind": "fixed_lesion",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "factorial_tie1_school0p3_reinj1_T16_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "factorial_tie1_school0p3_reinj1_T16_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024__clean",
+      "kind": "clean",
+      "run_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": {
+        "after_step": 8,
+        "erase_probability": 0.3,
+        "seed": 62002
+      },
+      "evaluation_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024__lesion",
+      "kind": "fixed_lesion",
+      "run_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i21_u1024__clean",
+      "kind": "clean",
+      "run_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": {
+        "after_step": 8,
+        "erase_probability": 0.3,
+        "seed": 62002
+      },
+      "evaluation_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i21_u1024__lesion",
+      "kind": "fixed_lesion",
+      "run_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i21_u1024",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192__clean",
+      "kind": "clean",
+      "run_id": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192__clean",
+      "kind": "clean",
+      "run_id": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192__clean",
+      "kind": "clean",
+      "run_id": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192",
+      "steps_override": null
+    },
+    {
+      "damage": null,
+      "evaluation_id": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192__clean",
+      "kind": "clean",
+      "run_id": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192",
+      "steps_override": null
+    }
+  ],
+  "planned_runs": [
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p0_reinj0_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p0_reinj0_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p3_reinj1_T16_damage0_s0_i20_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p0_reinj0_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p3_reinj0_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie0_school0p3_reinj1_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": false
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p0_reinj0_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p0_reinj1_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p3_reinj0_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": false,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "factorial",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "factorial_tie1_school0p3_reinj1_T16_damage0_s0_i21_u1024",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "recurrence",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 1,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "recurrence",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 4,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "recurrence",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T1_damage0_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 1,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "recurrence",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "recurrence_tie1_school0p0_reinj1_T4_damage0_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 4,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "damage",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i20_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": {
+        "after_step": 8,
+        "apply_probability": 0.5,
+        "erase_probability": 0.3,
+        "seed": 62001
+      },
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "damage",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "damage_tie1_school0p0_reinj1_T16_damage1_s0_i21_u1024",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": {
+        "after_step": 8,
+        "apply_probability": 0.5,
+        "erase_probability": 0.3,
+        "seed": 62001
+      },
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "optimization",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 8192,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 20,
+      "learning_rate": 0.003,
+      "panel": "optimization",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 8192,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "optimization",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 8192,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 21,
+      "learning_rate": 0.003,
+      "panel": "optimization",
+      "phase": "item6_ablation",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "run_id": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192",
+      "school_weight": 0.3,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "training_damage": null,
+      "update_random_seed": 9001,
+      "updates": 8192,
+      "variant": {
+        "freeze_pad": false,
+        "reinject": true,
+        "tied": true
+      },
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    }
+  ],
+  "planned_training_runs": 26,
+  "revision": "A06.1",
+  "status": "frozen",
+  "supersedes_plan_sha256": "652f95406fb72a31e9d3dad4fc8883a44c9a7b2f202e10d2c9e3cbb41a7474c2"
+}

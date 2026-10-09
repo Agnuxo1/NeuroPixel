@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "checks": [],
+  "rows": [],
+  "graphics": {
+    "GL_VENDOR": "NVIDIA Corporation",
+    "GL_RENDERER": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+    "GL_VERSION": "4.6.0 NVIDIA 581.29",
+    "GL_MAX_TEXTURE_SIZE": 32768
+  },
+  "physical_gpu": true,
+  "tensor_device": "cuda",
+  "torch_version": "2.6.0+cu124",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "available_ram_start_gib": 9.089202880859375,
+  "available_ram_end_gib": 8.634857177734375,
+  "wall_seconds": 0.03338210000219988,
+  "source_sha256": {
+    "neuropixel/rendering/nca_gl.py": "ed8ac459e5ba2dfd9a3f1cff63f0bd5a2084a8e86b78d9df67647da53889d2dc",
+    "scripts/preflight_RENDER08.py": "41b7cba71774c555d40f2c3f7ac1b6890cc31e62aa3d164749d7fb6bad47964a",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701"
+  },
+  "trained_models_loaded": 0,
+  "training_updates": 0,
+  "scientific_speed_benchmark": false
+}

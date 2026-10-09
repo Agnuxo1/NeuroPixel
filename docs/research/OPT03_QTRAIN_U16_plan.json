@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "registration_id": "NP-OPT03-QTRAIN-U16-20261008",
+  "status": "frozen",
+  "frozen_utc": "2026-10-08T11:35:53.826632+00:00",
+  "parent_inventory_file": "docs/research/OPT03_QTRAIN_U16_parent_inventory.json",
+  "parent_updates": 8192,
+  "target_updates": 16384,
+  "endpoints": [
+    12288,
+    16384
+  ],
+  "runs": [
+    {
+      "run_id": "QTRAIN_U16_paired_school0.0_seed200",
+      "parent_case": "QTRAIN_paired_school0.0_seed200",
+      "init_seed": 200,
+      "policy": "paired",
+      "school_weight": 0.0,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_paired_school0.3_seed200",
+      "parent_case": "QTRAIN_paired_school0.3_seed200",
+      "init_seed": 200,
+      "policy": "paired",
+      "school_weight": 0.3,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_repeated_school0.0_seed200",
+      "parent_case": "QTRAIN_repeated_school0.0_seed200",
+      "init_seed": 200,
+      "policy": "repeated",
+      "school_weight": 0.0,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_repeated_school0.3_seed200",
+      "parent_case": "QTRAIN_repeated_school0.3_seed200",
+      "init_seed": 200,
+      "policy": "repeated",
+      "school_weight": 0.3,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_paired_school0.0_seed201",
+      "parent_case": "QTRAIN_paired_school0.0_seed201",
+      "init_seed": 201,
+      "policy": "paired",
+      "school_weight": 0.0,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_paired_school0.3_seed201",
+      "parent_case": "QTRAIN_paired_school0.3_seed201",
+      "init_seed": 201,
+      "policy": "paired",
+      "school_weight": 0.3,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_repeated_school0.0_seed201",
+      "parent_case": "QTRAIN_repeated_school0.0_seed201",
+      "init_seed": 201,
+      "policy": "repeated",
+      "school_weight": 0.0,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_repeated_school0.3_seed201",
+      "parent_case": "QTRAIN_repeated_school0.3_seed201",
+      "init_seed": 201,
+      "policy": "repeated",
+      "school_weight": 0.3,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_paired_school0.0_seed202",
+      "parent_case": "QTRAIN_paired_school0.0_seed202",
+      "init_seed": 202,
+      "policy": "paired",
+      "school_weight": 0.0,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_paired_school0.3_seed202",
+      "parent_case": "QTRAIN_paired_school0.3_seed202",
+      "init_seed": 202,
+      "policy": "paired",
+      "school_weight": 0.3,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_repeated_school0.0_seed202",
+      "parent_case": "QTRAIN_repeated_school0.0_seed202",
+      "init_seed": 202,
+      "policy": "repeated",
+      "school_weight": 0.0,
+      "updates": 16384
+    },
+    {
+      "run_id": "QTRAIN_U16_repeated_school0.3_seed202",
+      "parent_case": "QTRAIN_repeated_school0.3_seed202",
+      "init_seed": 202,
+      "policy": "repeated",
+      "school_weight": 0.3,
+      "updates": 16384
+    }
+  ],
+  "evaluation_mask_seeds": [
+    79000,
+    79001,
+    79002,
+    79003,
+    79004,
+    79005,
+    79006,
+    79007
+  ],
+  "probe_n": 2048,
+  "validation_n": 4096,
+  "primary_continuous_contrast": "budget16k_minus8k averaged over four query/school cells within each seed",
+  "statistical_family": "budget/query/school full factorial, seven exploratory paired contrasts, n3 df2, no multiplicity adjustment",
+  "competence_gate": {
+    "probe_joint": 0.95,
+    "validation_joint": 0.9,
+    "all_three_initializations": true,
+    "endpoint": 16384
+  },
+  "new_initializations": 0,
+  "new_updates_total": 98304,
+  "test_access": false,
+  "source_sha256": {
+    "docs/research/OPT03_QTRAIN_protocol.md": "69e96c2e5cafbf6da0d32b61ae5dd3605fd23e6ffdf5f402747be1ed81dda690",
+    "neuropixel/research/qtrain.py": "06ea39527ee662ce7796572e11ef646fda55a18c2f3fd8edabf92da3d4cb4515",
+    "scripts/research_OPT03_qtrain.py": "4c0f4d368a5101a41847422b28f9ff76794a35cc961cf65ebbc4c3c6c34b9a8c",
+    "scripts/test_OPT03_qtrain.py": "5a31906bebe197d3b5440fabcde6cee20e41154da585bea3b71a5be0cd215d6b",
+    "scripts/archive_OPT03_QTRAIN_case.py": "50f655b2a95e931a7d4aed8efb78c527a1e5fd012f9103809c70261f83ec8381",
+    "neuropixel/research/OPT03_role_views.py": "990ce2532c2e19916fbe9bc8197da917b6c55ff2c80c654c6c6be5aa3fef5db2",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "docs/research/OPT03_QTRAIN_plan.json": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5",
+    "docs/research/OPT03_QTRAIN_U16_parent_inventory.json": "d615b37f76abe2fe4aa6419350801e10654438d2b4bde9ebaa67557b30af3b94",
+    "docs/research/OPT03_QTRAIN_U16_protocol.md": "342f6c3670d60d7e7dda8a088edd7b32bea3c4242dbcdc9cf760d1dce7bc6193",
+    "neuropixel/research/qtrain_budget.py": "91e4f93faeefc3e48987262b521be7d46edc7fe5162c9ece6741d7cdbc82d678",
+    "neuropixel/research/qtrain_budget_transport.py": "948776751723654beabe09e6396bd1582c2f948852130a86d7dad1890566a21e",
+    "scripts/research_OPT03_qtrain_u16.py": "f0fad7632ac755c1a3baa8e11d47f2b0e2a0f2eca9f889cb48b20ef53978a1f6",
+    "scripts/test_OPT03_qtrain_u16.py": "7980416810b6ab0d013c45c850a80e9863886380ca05062cbbeb1e22d3d14cdd",
+    "scripts/test_QTRAIN_U16_transport.py": "1a4f41d149c6a059782d3c3521720a2b39807ec4e94a29939fa66368e4e60ca1"
+  },
+  "workflow_governance": "Workflow SHA bound separately by executor_manifest to avoid circular plan-hash reference",
+  "preflight_run": 37770211221,
+  "preflight_source": "9d0bd82530d361778e62c517cd05941b5fb99e63"
+}

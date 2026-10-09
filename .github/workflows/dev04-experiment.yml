@@ -1,0 +1,82 @@
+name: NeuroPixel DEV04 prospective fresh-body replication
+on:
+  push:
+    branches: [research/dev04-development-2026-10-08]
+    paths:
+      - .github/workflows/dev04-experiment.yml
+      - docs/research/DEV04_execution_plan.json
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-dev04-science-20261008
+  cancel-in-progress: false
+jobs:
+  replicate:
+    name: ${{ matrix.case }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        case:
+          - DEV04_partition101_seed400
+          - DEV04_partition101_seed401
+          - DEV04_partition101_seed402
+          - DEV04_partition101_seed403
+          - DEV04_partition102_seed404
+          - DEV04_partition102_seed405
+          - DEV04_partition102_seed406
+          - DEV04_partition102_seed407
+          - DEV04_partition103_seed408
+          - DEV04_partition103_seed409
+          - DEV04_partition103_seed410
+          - DEV04_partition103_seed411
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+      DEV04_PUBLISH: "1"
+      DEV04_CASE: ${{ matrix.case }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed scientific CPU dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Independent frozen manifest and actual RAM admission
+        run: |
+          python - <<'PY'
+          import hashlib,json,psutil
+          from pathlib import Path
+          assert psutil.virtual_memory().available/2**30>=8
+          receipt=json.loads(Path('docs/research/DEV04_executor_manifest.json').read_text())
+          assert hashlib.sha256(Path('.github/workflows/dev04-experiment.yml').read_bytes()).hexdigest()==receipt['workflow_sha256']
+          from scripts.research_DEV04 import load_plan
+          load_plan(Path('docs/research/DEV04_execution_plan.json'),receipt['plan_sha256'])
+          print('Frozen sources,12newbodies/24heads and RAM>=8 admitted; no historical weights')
+          PY
+      - name: Fresh body and paired frozen-body readouts for registered case
+        run: |
+          plan_hash=$(python -c "import json;print(json.load(open('docs/research/DEV04_executor_manifest.json'))['plan_sha256'])")
+          python scripts/research_DEV04.py --case "$DEV04_CASE" --recover-cloud --expected-plan-sha256 "$plan_hash"
+      - name: Preserve every durable case stage
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          from neuropixel.research import dev04_transport as archive
+          case=os.environ['DEV04_CASE'];branch=archive.select_case_archive_branch(case)
+          root=Path('results/research/DEV04');folder=root/case
+          available=any((folder/stage/'progress.json').exists() for stage in ('body','query_attention','local_query'))
+          if available:archive.publish_case(root,case,Path('docs/research/DEV04_execution_plan.json'))
+          receipt={'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'case_run_id':case,'archive_branch':branch,'durable_evidence_available':available,'completed':(folder/'result.json').exists(),'historical_checkpoint_loaded':False,'test_scored':False,'scientific_task3_complete':False}
+          archive.old.publish_immutable('results/research/DEV04_cloud/'+archive.REG+'/attempts/'+os.environ['GITHUB_RUN_ID']+'/'+case+'/attempt_receipt.json',(json.dumps(receipt,indent=2)+'\n').encode())
+          print(json.dumps(receipt))
+          PY

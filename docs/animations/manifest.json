@@ -1,0 +1,44 @@
+{
+  "status": "scientific_animations_from_actual_complete_data",
+  "sources_sha256": {
+    "results\\research\\VIS07_learned_gpu\\actual_rendered_train0_seed240_frames.npz": "c1a3897d16f31247abdc6bab099adc564c8f98090bece195b45112efe77c6c8f",
+    "results\\research\\SPRINT_review\\RENDER09_summary.json": "bd3e4a50890b808b909b69d9a029855ebd4ef630937140fac3dd9d4936f15528",
+    "results\\research\\SPRINT_review\\VIS07_summary.json": "4b1ffb9e7dac915eeb037f8c1d8867347142c8d3630ed2ddf78d9aa237a967ea"
+  },
+  "artifacts": {
+    "actual_neural_trajectory.gif": {
+      "bytes": 347712,
+      "sha256": "3cc78dacc2d151d37632a2d8fe4b677afa4c23c625c315b764a1f2ddb6fc73d2"
+    },
+    "actual_neural_trajectory.png": {
+      "bytes": 45851,
+      "sha256": "6a21fb93437b13ed5112fcf079b068f0bae5c24b1e9f52e6484b17692a8a6d0c"
+    },
+    "all_GPU_workloads.gif": {
+      "bytes": 165242,
+      "sha256": "87a3572584c10d60be06b3dab8c0f3b9e675dbbfd8dbb574fb84b3e08b192bc9"
+    },
+    "all_GPU_workloads.png": {
+      "bytes": 46148,
+      "sha256": "2ca925a3655514d383e6a39a96880acda72032962e87c803ef8c191653746e07"
+    },
+    "depth_limits_and_state_growth.gif": {
+      "bytes": 136859,
+      "sha256": "09e0cca973006ed2d6cd1ed86bd4a1850e5cc08d926a230c77e5903d864c0f73"
+    },
+    "depth_limits_and_state_growth.png": {
+      "bytes": 56220,
+      "sha256": "96ce6bef7f35b16a965a7fdb86dca5b1acf122f1f82567add10f79a342c210fd"
+    },
+    "external_vision_all_seeds.gif": {
+      "bytes": 129648,
+      "sha256": "50243fe28a7c4c9489ea396755b0f8ba5156e2adbc616cc3dce9d42dd9819666"
+    },
+    "external_vision_all_seeds.png": {
+      "bytes": 43545,
+      "sha256": "6cca1fdf3d773d8cd50bab47f6c0d0a28f22cfe2b8141006a466dee39c6b198b"
+    }
+  },
+  "neural_capture": "actual GPU-rendered selected model frames, explicitly labelled; no synthetic brain artwork",
+  "display_transform": "RGB raw channels linear mapped to fixed all-frame range; RMS shown separately; model data unchanged"
+}

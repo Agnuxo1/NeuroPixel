@@ -1,0 +1,380 @@
+{
+  "registration_id": "NP-GLOB05-20261009",
+  "status": "prospective_parent_inventory_admitted_before_new_control_training",
+  "created_utc": "2026-10-09T03:58:15.711278+00:00",
+  "parent_plan_sha256": "2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a",
+  "parent_closure_sha256": "15f0a37dd931f08de651486e35e8b3d921928a9b99896205ec8dbdafc5a6bf83",
+  "parents": [
+    {
+      "case": "DEV04_partition101_seed400",
+      "config": {
+        "run_id": "DEV04_partition101_seed400",
+        "partition_seed": 101,
+        "init_seed": 400,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "4e3ff031ee8efaa0c135575916330fecb97ea5c7",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed400/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed400/receipt.json",
+      "original_zip_sha256": "0752914226f0b674c73166c058823824748e077e4e805ee3a139e39a2b5e31d1",
+      "original_zip_bytes": 4511795,
+      "actual_scientific_run": "37871777801",
+      "actual_scientific_source": "81cf94e8f2a089b0d695f5fd465c6daaff50c6f1",
+      "body_checkpoint_sha256": "d2fae42bba6f69eab0bbfc744a9f1c4875f27dbb0747f61c4ca85a520138ec04",
+      "frozen_body_digest": "3e4efa2a3fa43f0c5d33233eedda774e8372301c62f3a601fb78c50a432289e4",
+      "dataset_sha256": {
+        "head_train": "75e7f476d8bdb26120eb2239c9eeb25679acb568b08f6c1b6d6e8734126a06c3",
+        "probe": "bbcdd9e74f2f3ba506c6f9eb47671d6d466725ba4a84ae9807bfdf81ee218561",
+        "validation": "2f3ee3d4740192d7a5ccdb366e9d9df1608822d98799dc6eaadeacf681f5e06d"
+      },
+      "closed_attention_result_sha256": "7433c802064ed9b163dcfdd44c28e949d57dd2278025ea246a4c1fb3a50072c4",
+      "closed_local_result_sha256": "0741d971303f7390cacdb26e5a70a098d5648070c6af665f99b604a9478fce41",
+      "neural_replay_proof_sha256": "bb696fc4dd48d3e8a60c220d1581553d1cc2e8e58e5a9a37ac8d254839286545",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition101_seed401",
+      "config": {
+        "run_id": "DEV04_partition101_seed401",
+        "partition_seed": 101,
+        "init_seed": 401,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "7534fb52ef53f17f51366f4d19e0460d087af4be",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed401/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed401/receipt.json",
+      "original_zip_sha256": "2fae00cad164880562e4b27e00a10d6eafb1355501be306d653f13fe28d01339",
+      "original_zip_bytes": 4464678,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "6a7a22a24f3ef138f11a7a5f4a95c014fd2f8f1ec74ff43400aa7f59e819f7fa",
+      "frozen_body_digest": "f8518c995690784d711e497d6762de33a102bff89f6598608384ac3888e3771e",
+      "dataset_sha256": {
+        "head_train": "75e7f476d8bdb26120eb2239c9eeb25679acb568b08f6c1b6d6e8734126a06c3",
+        "probe": "bbcdd9e74f2f3ba506c6f9eb47671d6d466725ba4a84ae9807bfdf81ee218561",
+        "validation": "2f3ee3d4740192d7a5ccdb366e9d9df1608822d98799dc6eaadeacf681f5e06d"
+      },
+      "closed_attention_result_sha256": "8517c93a486b2291f9121809094aaecbd21cc75e12944438fde84b7755406e39",
+      "closed_local_result_sha256": "5c7f8335203829b2179db3b87733c57e90e54d58d29e2409b7ad29dfe7f458ae",
+      "neural_replay_proof_sha256": "b4f5f2a777f69f3209f723e2b3bec9567a09d82a12544846cd984cd1a47e6023",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition101_seed402",
+      "config": {
+        "run_id": "DEV04_partition101_seed402",
+        "partition_seed": 101,
+        "init_seed": 402,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "0edf5ca1b0231d6887160150f6b3a2a684771a11",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed402/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed402/receipt.json",
+      "original_zip_sha256": "009c1129a543ae93802bc7966e5ea96adbd5aa7143375ab42df02307e0c93f36",
+      "original_zip_bytes": 3937848,
+      "actual_scientific_run": "37871777801",
+      "actual_scientific_source": "81cf94e8f2a089b0d695f5fd465c6daaff50c6f1",
+      "body_checkpoint_sha256": "14d7d997af38f0f43334f8107553dcd02c420f9c86a15708cd7053e922dbbfda",
+      "frozen_body_digest": "4e3c88006bd545dc9b4cef7ac4f270da547c48011099078c927fcf42535718eb",
+      "dataset_sha256": {
+        "head_train": "75e7f476d8bdb26120eb2239c9eeb25679acb568b08f6c1b6d6e8734126a06c3",
+        "probe": "bbcdd9e74f2f3ba506c6f9eb47671d6d466725ba4a84ae9807bfdf81ee218561",
+        "validation": "2f3ee3d4740192d7a5ccdb366e9d9df1608822d98799dc6eaadeacf681f5e06d"
+      },
+      "closed_attention_result_sha256": "f46f514b053340fa81b9c56d11e165a4381557c712b98e3d8f2f960086ad776e",
+      "closed_local_result_sha256": "5fb6fd8e1f2c93928c783ef05d39ad416377fee194921a3d2657fbd8d266a527",
+      "neural_replay_proof_sha256": "50a0fe2f3182f9c344becff081bf40a152b1a238e46a382b7dfdab0167d43508",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition101_seed403",
+      "config": {
+        "run_id": "DEV04_partition101_seed403",
+        "partition_seed": 101,
+        "init_seed": 403,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "328f2bba686b95c024ea2661d6d541376cbc26d5",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed403/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition101_seed403/receipt.json",
+      "original_zip_sha256": "ccb151bded3df9c4fcc2c046a95f346c933cf11d97fc5fdc8d1ed867565fe3a7",
+      "original_zip_bytes": 4210493,
+      "actual_scientific_run": "37871777801",
+      "actual_scientific_source": "81cf94e8f2a089b0d695f5fd465c6daaff50c6f1",
+      "body_checkpoint_sha256": "8591f6496ecfe0b2d534a905a59c3f2a5083b0f40fe45027ba6fe1ec684b0019",
+      "frozen_body_digest": "f541318c99d30ef5c797746aa772d58ab49e0a063dee3b36fa62b50d7703f64c",
+      "dataset_sha256": {
+        "head_train": "75e7f476d8bdb26120eb2239c9eeb25679acb568b08f6c1b6d6e8734126a06c3",
+        "probe": "bbcdd9e74f2f3ba506c6f9eb47671d6d466725ba4a84ae9807bfdf81ee218561",
+        "validation": "2f3ee3d4740192d7a5ccdb366e9d9df1608822d98799dc6eaadeacf681f5e06d"
+      },
+      "closed_attention_result_sha256": "52e23582b118b0328ead1f5a5ed2dd6f230fd463d0b7f58e88c23b7860e1085b",
+      "closed_local_result_sha256": "4dd4a0f42a93d79e64e53c95fc91b803a580a9237e6b454dc0b9aede2754cbdc",
+      "neural_replay_proof_sha256": "a35bd32e812127ce06a874cc10909a2d06fec279177df2c325502bd385ac82a4",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition102_seed404",
+      "config": {
+        "run_id": "DEV04_partition102_seed404",
+        "partition_seed": 102,
+        "init_seed": 404,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "389421f98c1fe56d00d4635165d13b5c8268ec73",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed404/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed404/receipt.json",
+      "original_zip_sha256": "f86dbc8341486834d4c7e5f2dc706049761b7c343817a5149d01983f1ca695a6",
+      "original_zip_bytes": 4578386,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "8c72be5dacc3674fdca132b186e36605ab733041fa9844b612ffc21c0e8b81be",
+      "frozen_body_digest": "4c2fc85ccb8a53d601b09b4bfcdac5ab9f0a5fae5428198eb615320c19459cd4",
+      "dataset_sha256": {
+        "head_train": "6df53b5e3bdc4c400e491acf91cf7e8a45e35661d88f095c87b42df81b16c1d9",
+        "probe": "a0b3a80c18ffd4a73bf814208ab1aa86e6bed947508d614d300d92d7c7fcc86c",
+        "validation": "cfeb904b5f4ca9470b1e81166efb95a75303fb76f290d52886b2f1e477f13fa7"
+      },
+      "closed_attention_result_sha256": "c0306dd2c73451c5446ca4fb9e44baaa680870688e38c88a511d0526f4457464",
+      "closed_local_result_sha256": "f6341960bdf0a15ec26bc39e381a8ea40a6b20033fba5589b16ab9360e4ecdea",
+      "neural_replay_proof_sha256": "4eb6665d4200602c601a999f863cafff05dbdee610c8102c622997373030cadc",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition102_seed405",
+      "config": {
+        "run_id": "DEV04_partition102_seed405",
+        "partition_seed": 102,
+        "init_seed": 405,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "27811bd5d6f0005ba6cb94500f7e959378cec3de",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed405/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed405/receipt.json",
+      "original_zip_sha256": "899cbdaf4939c34b44f7db0216d68f0c9ad6843cefd8347193149b7c127096b0",
+      "original_zip_bytes": 4532409,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "cd7256b212b765b0911a05960e5d97fa54f661d165235334aa4ff36bdd52daf8",
+      "frozen_body_digest": "9442236dff1d8238e11144d051b47f3279151362debf8e24c2ff6e56f51a6a09",
+      "dataset_sha256": {
+        "head_train": "6df53b5e3bdc4c400e491acf91cf7e8a45e35661d88f095c87b42df81b16c1d9",
+        "probe": "a0b3a80c18ffd4a73bf814208ab1aa86e6bed947508d614d300d92d7c7fcc86c",
+        "validation": "cfeb904b5f4ca9470b1e81166efb95a75303fb76f290d52886b2f1e477f13fa7"
+      },
+      "closed_attention_result_sha256": "7c4f6101b6f7d1de159a7a6d41ca02a4ff11c394c2857158904a50e28d3a5927",
+      "closed_local_result_sha256": "f465771976fb1b7de0536bd8c9785ee40bd78e56d57193ae088e702132837e21",
+      "neural_replay_proof_sha256": "7fb8c749b0475de181653db8a5823854a455d335cba12949f9bd8b3206ed90a0",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition102_seed406",
+      "config": {
+        "run_id": "DEV04_partition102_seed406",
+        "partition_seed": 102,
+        "init_seed": 406,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "ff349ee62e16bcb27dd6489ea5ac691615c131ae",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed406/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed406/receipt.json",
+      "original_zip_sha256": "08990b1c9785e8ef23fea5b59a5054f293ef8c0b53a2dc3cb1c7e66cbe3a397b",
+      "original_zip_bytes": 4162700,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "5dd53622aaee93620625851811aee3315dc5346603f9b15cb9aedfb03f43c426",
+      "frozen_body_digest": "657b834f5c0e44d40d9410a5f3439b98c0bf5a3a7911b0d81f7d89e951fb9026",
+      "dataset_sha256": {
+        "head_train": "6df53b5e3bdc4c400e491acf91cf7e8a45e35661d88f095c87b42df81b16c1d9",
+        "probe": "a0b3a80c18ffd4a73bf814208ab1aa86e6bed947508d614d300d92d7c7fcc86c",
+        "validation": "cfeb904b5f4ca9470b1e81166efb95a75303fb76f290d52886b2f1e477f13fa7"
+      },
+      "closed_attention_result_sha256": "190789205d362a8778c8407fef8fc09c49c77a85d03addf3450fb66699ac0237",
+      "closed_local_result_sha256": "7847c4a99c56403485bc6154b159ffc3e5feb65993eac14a0fbfb825074f842d",
+      "neural_replay_proof_sha256": "e17dd7179af5b3df99907dcb7f6b732b46d50853106bf0552d375587c1991b3b",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition102_seed407",
+      "config": {
+        "run_id": "DEV04_partition102_seed407",
+        "partition_seed": 102,
+        "init_seed": 407,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "e5a8b5dbd7bafb1453d3abf3bdb75e9569c9c458",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed407/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition102_seed407/receipt.json",
+      "original_zip_sha256": "a02edf1f7f8cc248bd6f00d82ddf1068d13171f8064b96a023bfc1a5f5ca2587",
+      "original_zip_bytes": 4041672,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "f2069406db72659f79041615f488a452abcd74f6831f204eb1c7fc725c0f9b64",
+      "frozen_body_digest": "415fd1ebf053c5d05f5636325384290bb3b98ba8b6fafcf09ac7cca64cb868e7",
+      "dataset_sha256": {
+        "head_train": "6df53b5e3bdc4c400e491acf91cf7e8a45e35661d88f095c87b42df81b16c1d9",
+        "probe": "a0b3a80c18ffd4a73bf814208ab1aa86e6bed947508d614d300d92d7c7fcc86c",
+        "validation": "cfeb904b5f4ca9470b1e81166efb95a75303fb76f290d52886b2f1e477f13fa7"
+      },
+      "closed_attention_result_sha256": "8b01aedd047cedf4732f88a1b5669b5c78a8c4b85631f602556c49a9f20e70bc",
+      "closed_local_result_sha256": "f35a2d008670299abeb0e008d99cc25d1eb72e86795d854234b1e7ac42c752a0",
+      "neural_replay_proof_sha256": "ec9b0e5877d9ad4d3851e9bbe5710eb14f815a515ae96aa5f7f8201d95a8065f",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition103_seed408",
+      "config": {
+        "run_id": "DEV04_partition103_seed408",
+        "partition_seed": 103,
+        "init_seed": 408,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "b49777300f81cb61fa48ae8c2583fa9ab6d56631",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed408/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed408/receipt.json",
+      "original_zip_sha256": "5b8c9984fae3c1426d5feacb0f6601ec7f080b396b52449d51741dd71d3c7c43",
+      "original_zip_bytes": 4630064,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "cbb3e773bc19ed0b0ce76c620554c82dd88e21bca73ddb7f493b6498679bb7b7",
+      "frozen_body_digest": "6bb6e808e710d7ee5927ba2fdd0c17635ebc25f409c5a1c90e8a6e5fad8d5128",
+      "dataset_sha256": {
+        "head_train": "81362f315532adc7ab505a53fc9ee542e3c4152255524d2245ed66499b7560cd",
+        "probe": "71575414558b1f66378187693e4cc75aafc3f877f5861f10deb7dc92ec21b376",
+        "validation": "922036812cf107d9cfdc21ebb8d5e51a26f4de169d2d485b937ded34b33164f0"
+      },
+      "closed_attention_result_sha256": "5e499ab84f1390f80b69fe5793cee44408dbe0e5e2fae0edf391b3c37f2e20c8",
+      "closed_local_result_sha256": "d40fa9c60c150949531839b47f566752e3fb55f6e39657d797b8b30839ce6067",
+      "neural_replay_proof_sha256": "83ab6e10fb8bdc954275d53946417b6a81213065fa2502a6b7f889948da16e0e",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition103_seed409",
+      "config": {
+        "run_id": "DEV04_partition103_seed409",
+        "partition_seed": 103,
+        "init_seed": 409,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "6ba450cac72d8be2fa07a9ca6f45413ec434a2ef",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed409/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed409/receipt.json",
+      "original_zip_sha256": "3762db5180753e0ebf4be7ad4d71d47f6dcc58b242703603f57c8894bef025fd",
+      "original_zip_bytes": 4004262,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "580bc8e3c7a03ea69f3ff20ff326f760eda8f62b3c953d791aba3fe3bce3d14b",
+      "frozen_body_digest": "70273a3b6090889f4ccc8085a1ddf2e3dcf50599678957d59a7f3c22d71dc92b",
+      "dataset_sha256": {
+        "head_train": "81362f315532adc7ab505a53fc9ee542e3c4152255524d2245ed66499b7560cd",
+        "probe": "71575414558b1f66378187693e4cc75aafc3f877f5861f10deb7dc92ec21b376",
+        "validation": "922036812cf107d9cfdc21ebb8d5e51a26f4de169d2d485b937ded34b33164f0"
+      },
+      "closed_attention_result_sha256": "7c68285e2f38b31313c67a3f139b4aba16a85bd265ac081ea408c77af42db45a",
+      "closed_local_result_sha256": "9ff768523972782fded8d864373ebd7332d3410b816d8fd9b2f297b434484eba",
+      "neural_replay_proof_sha256": "08ad57b02915c8463020454d750476c3530f6198e9062ec23cd0894d638e83d5",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition103_seed410",
+      "config": {
+        "run_id": "DEV04_partition103_seed410",
+        "partition_seed": 103,
+        "init_seed": 410,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "e79b66a0c97df56f135417cc66efd2bc6f0dedc5",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed410/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed410/receipt.json",
+      "original_zip_sha256": "8231c4c6f4efaf128b92cedece8fd70981678d46e00067476e52e5b09183db84",
+      "original_zip_bytes": 4200547,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "dddb643deb597922b9a7dfe8ab3c56670812ce5ce07731fc51bef9cc77216515",
+      "frozen_body_digest": "7e66ce34237787329a7bc3b975275365292a25001fe5aaf594916c62ced82ce3",
+      "dataset_sha256": {
+        "head_train": "81362f315532adc7ab505a53fc9ee542e3c4152255524d2245ed66499b7560cd",
+        "probe": "71575414558b1f66378187693e4cc75aafc3f877f5861f10deb7dc92ec21b376",
+        "validation": "922036812cf107d9cfdc21ebb8d5e51a26f4de169d2d485b937ded34b33164f0"
+      },
+      "closed_attention_result_sha256": "0e67f0bf2bcd5dee3a004a996e73bf52e7c80a83d7e3ee8f41e44d94f375e3cc",
+      "closed_local_result_sha256": "409515db067ac529850f3c986209741c7bd71e8b518988ee5ab82f4769cf29a2",
+      "neural_replay_proof_sha256": "a82b79a622af926d4eab1b79a1e4ab9885385a009e85680e718c0f9de2fe9d28",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    },
+    {
+      "case": "DEV04_partition103_seed411",
+      "config": {
+        "run_id": "DEV04_partition103_seed411",
+        "partition_seed": 103,
+        "init_seed": 411,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 16384
+      },
+      "archive_git_commit": "9cdfac501288b2a9d546eb37c149cf00ac61964d",
+      "remote_zip_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed411/raw.zip",
+      "remote_receipt_path": "results/research/DEV04_cloud/NP-DEV04-20261008/DEV04_partition103_seed411/receipt.json",
+      "original_zip_sha256": "6e3cd52f91a03aeb5ed9d7648443a57d15a1086b662d8313e6b8204d57df6397",
+      "original_zip_bytes": 4090527,
+      "actual_scientific_run": "37845945011",
+      "actual_scientific_source": "b9431e9b927ba5b6539a172d4b27fe6199776462",
+      "body_checkpoint_sha256": "017959467663b3fbc09373ef809c4cb213b30582b718e01d066bf6c7ace0ca64",
+      "frozen_body_digest": "e8e80fb75ec1f303ed25bd03d73e4bde0d4727b3385478e1b78e3694265b945c",
+      "dataset_sha256": {
+        "head_train": "81362f315532adc7ab505a53fc9ee542e3c4152255524d2245ed66499b7560cd",
+        "probe": "71575414558b1f66378187693e4cc75aafc3f877f5861f10deb7dc92ec21b376",
+        "validation": "922036812cf107d9cfdc21ebb8d5e51a26f4de169d2d485b937ded34b33164f0"
+      },
+      "closed_attention_result_sha256": "0d840b19389cf849d9ea074482e6992ede97b9bc9fd52d3deeca7c76897ea06e",
+      "closed_local_result_sha256": "ce4e9a951b9c062772c683da774ac24d9cff4204fd0d647ab8754b64b7725fbb",
+      "neural_replay_proof_sha256": "af2fc82c81e9047a1757e355d2714901f2e71fc312758977722d11303cde1988",
+      "new_body_training_updates": 0,
+      "old_head_trainings_repeated": 0
+    }
+  ],
+  "parent_count": 12,
+  "new_body_initializations": 0,
+  "new_head_fits_planned": 12,
+  "old_closed_head_fits_to_reuse": 24,
+  "original_DEV04_precision_target": "failed_preserved",
+  "original_test_scored": false,
+  "scientific_training_started": false,
+  "parent_verification_git_commit": "05bc8357eb367c47cd1ac75e81c716279b047c4f",
+  "parent_verification_run": 37876687599,
+  "parent_verification_source": "0ef7446ff8a0b872b3d2f85d5deb11d387ac4375",
+  "parent_replay_prefix": "results/research/DEV04_replay_cloud/37845945011/37876687599/"
+}

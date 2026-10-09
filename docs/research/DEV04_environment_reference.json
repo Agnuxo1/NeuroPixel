@@ -1,0 +1,47 @@
+{
+  "scope": "DEV04 specific software/determinism reference from currently completed body records; full cohort replay remains pending",
+  "plan_sha256": "2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a",
+  "observed_utc": "2026-10-09T03:33:02.772590+00:00",
+  "available_completed_records": 12,
+  "expected_scientific_environment": {
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.6.0+cpu",
+      "psutil": "6.1.1",
+      "pytest": null,
+      "scipy": "1.15.1"
+    },
+    "device": "cpu",
+    "threads": 2,
+    "cuda_runtime": null,
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "additional_protocol_package": {
+    "pillow": "11.3.0"
+  },
+  "historical_general_environment_file": "docs/research/container_environment.json",
+  "historical_general_environment_applicable_to_DEV04": false,
+  "software_differences": {},
+  "per_case_platform": {
+    "DEV04_partition101_seed400": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition101_seed401": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition101_seed402": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition101_seed403": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition102_seed404": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition102_seed405": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition102_seed406": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition102_seed407": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition103_seed408": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition103_seed409": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition103_seed410": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "DEV04_partition103_seed411": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39"
+  },
+  "independent_external_replication": false,
+  "scientific_task3_complete": false
+}

@@ -1,0 +1,36 @@
+{
+  "observed_at_utc": "2026-10-06T21:37:37.695917+00:00",
+  "public_source_commit": "7da18d1cbd36c40c48228118abb20a7b5ab032f4",
+  "local_core_identical_to_public": true,
+  "local_inventory_commit": "1a26daa64228a375aafa77f3cef613c8af84133d",
+  "container": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "pytest": "9.1.1",
+    "original_suite": {
+      "passed": 12,
+      "skipped": 1,
+      "failed": 0,
+      "skip_reason": "CIFAR-10 dataset unavailable"
+    }
+  },
+  "workstation": {
+    "python": "3.13.7",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_queue_initially_empty": true,
+    "historical_checkpoints_available": true
+  },
+  "historical_results_reproduced": false,
+  "routing": {
+    "requested": "JEV through installed Codex Cognition engine",
+    "remote_decision": false,
+    "provenance": "local_fallback",
+    "process_exit_code": 3,
+    "recovery_stage": "doctor",
+    "doctor_exit_code": 2,
+    "decision": "Proceed with sequential evidence-first validation in isolated workspaces; use existing GPU queue for measured runs.",
+    "retry_condition": "Recheck when JEV configuration or availability changes."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "status": "verified_independent_SCN06_saved_array_arithmetic",
+  "checks": [
+    {
+      "name": "coupled whole retained native state",
+      "passed": true
+    },
+    {
+      "name": "coupled full raw logits independent",
+      "passed": true
+    },
+    {
+      "name": "coupled categorical summary independent",
+      "passed": true
+    },
+    {
+      "name": "coupled probability summary independent",
+      "passed": true
+    },
+    {
+      "name": "coupled complete final native answer",
+      "passed": true
+    },
+    {
+      "name": "inactive whole retained native state",
+      "passed": true
+    },
+    {
+      "name": "inactive full raw logits independent",
+      "passed": true
+    },
+    {
+      "name": "inactive categorical summary independent",
+      "passed": true
+    },
+    {
+      "name": "inactive probability summary independent",
+      "passed": true
+    },
+    {
+      "name": "inactive complete final native answer",
+      "passed": true
+    },
+    {
+      "name": "compression argmax",
+      "passed": true
+    },
+    {
+      "name": "compression confidence",
+      "passed": true
+    },
+    {
+      "name": "pad argmax",
+      "passed": true
+    },
+    {
+      "name": "pad confidence",
+      "passed": true
+    }
+  ],
+  "input_sha256": "5dc8b6910e5d0ff1d7c89c5fb282210671225e56be9920812bfd6b7673372d6d",
+  "issues": [],
+  "model_loads": 0,
+  "training_updates": 0
+}

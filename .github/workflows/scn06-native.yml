@@ -1,0 +1,42 @@
+name: SCN06 native scanner witnesses
+on:
+  push:
+    branches: [research/scn06-causal-2026-10-09]
+permissions:
+  contents: write
+concurrency:
+  group: SCN06-native-scanner
+  cancel-in-progress: false
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed CPU environment
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: New frozen native counterexamples only
+        run: python scripts/research_SCN06.py --output results/research/SCN06/native
+      - name: Independent complete saved-array arithmetic
+        run: python scripts/audit_SCN06.py --input results/research/SCN06/native
+      - name: Preserve exact evidence or original failure
+        if: always()
+        run: |
+          mkdir -p results/research/SCN06
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('results/research/SCN06/attempt.json').write_text(json.dumps(dict(source_commit=os.environ['GITHUB_SHA'],run_id=os.environ['GITHUB_RUN_ID'],native_completed=Path('results/research/SCN06/native/result.json').exists(),independent_audit_completed=Path('results/research/SCN06/native/independent_audit.json').exists()),indent=2)+'\n')
+          PY
+          python scripts/publish_sprint_evidence.py --root results/research/SCN06 --registration SCN06 --branch research/scn06-evidence-2026-10-09

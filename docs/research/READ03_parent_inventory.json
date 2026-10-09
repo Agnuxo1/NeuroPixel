@@ -1,0 +1,631 @@
+{
+  "status": "all_twelve_closed_parents_pinned_no_head_fitting",
+  "scientific_source_commit": "adab1f3dc0ded9da3c42a3e7e5adcb96cdaba67e",
+  "scientific_run_id": 37771588722,
+  "parent_plan_sha256": "a4093bb8d559404b9f68587b753f8cea180a1e75d33363a04c1f2c7ebcb22dc0",
+  "closure_receipt_sha256": "346f7b3c48edacbb351998ce858da91cbc192729fec7be0a1721661e2815b4f3",
+  "parents": [
+    {
+      "parent_case": "QTRAIN_U16_paired_school0.0_seed200",
+      "init_seed": 200,
+      "parent_policy": "paired",
+      "parent_school_weight": 0.0,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_paired_school0.0_seed200/checkpoint_u16384.pt",
+      "checkpoint_sha256": "93688aa7ec1b82d4c9aa20edb828199bb3a87a9afb5710c23712b2e0912a72eb",
+      "result_sha256": "f92f67edf858d52fba2dd157fb834c823909487c79a494db58a19a39ad531d93",
+      "endpoint_replay_sha256": "53264ebba71ec637bcae728d568d7cff3348b3e9bfdf2a780a1246460cc4d77a",
+      "recovery_receipt_sha256": "b4bb382603ddf2796f4add72afb834809745a981466adf989b7e2ce4a3360649",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_paired_school0.3_seed200",
+      "init_seed": 200,
+      "parent_policy": "paired",
+      "parent_school_weight": 0.3,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_paired_school0.3_seed200/checkpoint_u16384.pt",
+      "checkpoint_sha256": "729bf7d8539f52db72aa70868471e2b405e7d5010e699641d35646e9de3e8acb",
+      "result_sha256": "48ea8d0874467ccd5d7135f0b43ae44fb7aa9c176c85c59303acda3c6c8d5007",
+      "endpoint_replay_sha256": "bc916d3be60ed0594c0cd005ce0ec899a78af76cd4c5672ecae06d08a287c1f1",
+      "recovery_receipt_sha256": "7eae58a93ed41ff3b127768ae0a2aa1070624a084a5d708a9ccec659a9f0aed5",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_repeated_school0.0_seed200",
+      "init_seed": 200,
+      "parent_policy": "repeated",
+      "parent_school_weight": 0.0,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_repeated_school0.0_seed200/checkpoint_u16384.pt",
+      "checkpoint_sha256": "55a7ea779c02de38b6e6ecaeb5c4b0ce5ba674f7b01da9ac3fa766b758d4c814",
+      "result_sha256": "69b87f64cd815390c2cac216ace79497bad75c6bceba763db832f2f70f1cf71b",
+      "endpoint_replay_sha256": "f97fd7658f9dc0c69e66981d04e02ea478d57bff46b3cb2d41dcba1b91e779b1",
+      "recovery_receipt_sha256": "c2da1b20a6baa743bc6b3c5d0c9d61446a8c4b7a7b242f5d1696294dde320c1e",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_repeated_school0.3_seed200",
+      "init_seed": 200,
+      "parent_policy": "repeated",
+      "parent_school_weight": 0.3,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_repeated_school0.3_seed200/checkpoint_u16384.pt",
+      "checkpoint_sha256": "d8a8754a7676097b2f80535cd238447ca3416c1bec7fe4a585b956c467b936f6",
+      "result_sha256": "49d96ff7395266c1bbe0737f0d418226c2865aa2be1772fb4ae068d74d0de457",
+      "endpoint_replay_sha256": "8e77d8921d6fba6efd7518c488d8c0aaf86f301e460d5769931b76d373e1fc50",
+      "recovery_receipt_sha256": "935defc439990353021667ffbcaf14763f437ff4737aec984eb96ea36df41fa5",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_paired_school0.0_seed201",
+      "init_seed": 201,
+      "parent_policy": "paired",
+      "parent_school_weight": 0.0,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_paired_school0.0_seed201/checkpoint_u16384.pt",
+      "checkpoint_sha256": "58cd58d92b6693bce2698e763790598808c8bd2bd067ebcdd6f3c1675130458c",
+      "result_sha256": "9954b700b3cf47702231bc69563b19ea79a8a14c429fd45e8a0085cde7d05c66",
+      "endpoint_replay_sha256": "fdd28d7dcd52c8d470f4a8c17aff622b8ce2466dfee4922b7ef2bf655ad8e99e",
+      "recovery_receipt_sha256": "e042bbd0b31e0e5ac683f9fbcfb0d4c91ad3ffd2b023439da7758284fb17a1e5",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_paired_school0.3_seed201",
+      "init_seed": 201,
+      "parent_policy": "paired",
+      "parent_school_weight": 0.3,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_paired_school0.3_seed201/checkpoint_u16384.pt",
+      "checkpoint_sha256": "f36b697504d4a7cb4953a06909f71670f209404f3541beb2d891c40d373e33ba",
+      "result_sha256": "7c207d84f4266e9354eda11526d28fe0c45866543fd7d93e40b9c8e7a3cabfed",
+      "endpoint_replay_sha256": "375d0d37a45db91a86049d6a69ed4ea1cf87e200af4a8d74a3610330d61d976b",
+      "recovery_receipt_sha256": "331157bd34389d2f07b932c7715d10e02340b19547ac39be19e32ad06c9b8c81",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_repeated_school0.0_seed201",
+      "init_seed": 201,
+      "parent_policy": "repeated",
+      "parent_school_weight": 0.0,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_repeated_school0.0_seed201/checkpoint_u16384.pt",
+      "checkpoint_sha256": "fc95c8b0274cc88cb8a266cc9724e577a15cb65320dc6d9143295cb8cfe05be3",
+      "result_sha256": "f1863e1df54ade799e7fede54f6a94dbe0f827b44fd6191a75cc596400f2ae62",
+      "endpoint_replay_sha256": "2cb094709d6adc6260aaaf0e26cedd26a66b27e18fdb84b6e929c1ad9305febb",
+      "recovery_receipt_sha256": "52998109d1fe9ef3458f39d66f41cfc6c5840c63c2c7e42d0ea3f5913b05bb86",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_repeated_school0.3_seed201",
+      "init_seed": 201,
+      "parent_policy": "repeated",
+      "parent_school_weight": 0.3,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_repeated_school0.3_seed201/checkpoint_u16384.pt",
+      "checkpoint_sha256": "0c7769822f8997f3515a9364254453abc41684b7fad23474c1314e4d0458c5e0",
+      "result_sha256": "bf4cbc50d6a1df8add01b4dfc319fdc79080d5d3d1d72d2bfe4721686c813b95",
+      "endpoint_replay_sha256": "920a920045661dcb2df6bb0d1179f9bf63e7066597fd99f317f78d7b195d9be8",
+      "recovery_receipt_sha256": "c766c2091a0e4be888a801e2c58988247c948c9c9a43680b871521e032108afa",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_paired_school0.0_seed202",
+      "init_seed": 202,
+      "parent_policy": "paired",
+      "parent_school_weight": 0.0,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_paired_school0.0_seed202/checkpoint_u16384.pt",
+      "checkpoint_sha256": "c3ede0109239aa9408171cfb63910ee31a1c97aa8ff0055363d65b25e679c8d1",
+      "result_sha256": "1fdda454b37227a54613f5e50f50fb10be5d2cdbae405f04b3102eb8105dc44c",
+      "endpoint_replay_sha256": "dfeabf83da4d97b00217007f68b18b01514339b4f868dc5a8b0b0f4d2a48725b",
+      "recovery_receipt_sha256": "281ff16b6406e9f5035a6afddd1bf9d4cc913fa8ce1e0544734adec33908ec93",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_paired_school0.3_seed202",
+      "init_seed": 202,
+      "parent_policy": "paired",
+      "parent_school_weight": 0.3,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_paired_school0.3_seed202/checkpoint_u16384.pt",
+      "checkpoint_sha256": "6217a3effe44d6e31c156d6575b1d9e91c03ddcb794d499e631f2a07bb66317a",
+      "result_sha256": "cf7e2afa2d081522bec6adfa089c44d5771ea29b85e1226d9c2aa986cb12bd33",
+      "endpoint_replay_sha256": "ca60f50b9763d6e3eea6908a923aa36780170f9e9f31ef87db1d5c5e305d1174",
+      "recovery_receipt_sha256": "9b3a290bb9cc5e23b65354470c66ecde729f28c3942ba2f59efcade44f636a17",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_repeated_school0.0_seed202",
+      "init_seed": 202,
+      "parent_policy": "repeated",
+      "parent_school_weight": 0.0,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_repeated_school0.0_seed202/checkpoint_u16384.pt",
+      "checkpoint_sha256": "ebddda81e39b3279413098a0c3ea84c2e3f706c82e1f92ea9bc1f7cf2871cba8",
+      "result_sha256": "107abf33afdcb42703da4960aad98b43510ab8ad82091a070f123b3d1b759aec",
+      "endpoint_replay_sha256": "78329a8a095d436347f55314d31096fe4c0623ae6de081d46fd22b6631f48d1a",
+      "recovery_receipt_sha256": "3bbbcee5c8edf39b0b5026668edcb190b57614973eafad95e7c6f1bce1f8f7d9",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_U16_repeated_school0.3_seed202",
+      "init_seed": 202,
+      "parent_policy": "repeated",
+      "parent_school_weight": 0.3,
+      "parent_updates": 16384,
+      "checkpoint_path": "results/research/OPT03_QTRAIN_U16_recovery/37771588722/cohort/QTRAIN_U16_repeated_school0.3_seed202/checkpoint_u16384.pt",
+      "checkpoint_sha256": "e842db7188b13ac5ab4cdd40b1f289701012c5adee1195ab64db151aa7724ebc",
+      "result_sha256": "7b4c31ebede697fcd40493dc51a2e50d6a2ee71f46fcee0121c1c92e3fe1f85c",
+      "endpoint_replay_sha256": "d53ed0132d0c55068815a51c29fdc74cbb8a84c095f83fd95aa0ea2a6dd415ee",
+      "recovery_receipt_sha256": "f61c3eeb056b8589c299e2ca3ba46e89035b8196b16789a62c5931c935747997",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      },
+      "environment": {
+        "cublas_workspace_config": ":4096:8",
+        "cuda_runtime": null,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_tf32": false,
+        "deterministic_algorithms": true,
+        "device": "cpu",
+        "gpu_name": null,
+        "matmul_tf32": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+        "python": "3.12.14",
+        "threads": 2,
+        "versions": {
+          "numpy": "2.2.6",
+          "psutil": "6.1.1",
+          "pytest": null,
+          "scipy": "1.15.1",
+          "torch": "2.6.0+cpu"
+        }
+      }
+    }
+  ],
+  "backbone_initializations": 3,
+  "head_variants": [
+    "query_attention",
+    "uniform_global",
+    "local_query"
+  ],
+  "prospective_head_fits": 36,
+  "selected_parent_subset": false,
+  "head_fitting_started": false,
+  "new_backbone_updates": 0
+}

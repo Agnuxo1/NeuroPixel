@@ -1,0 +1,1026 @@
+{
+  "schema_version": "1.0",
+  "review_id": "SCI-001",
+  "title": "NeuroPixel: primary prior-art and contribution-boundary review",
+  "language": "en",
+  "date_verified": "2026-10-06",
+  "cutoff_date": "2026-10-06",
+  "repository": {
+    "name": "Agnuxo1/NeuroPixel",
+    "source_commit": "7da18d1cbd36c40c48228118abb20a7b5ab032f4",
+    "working_branch": "research/scientific-validation-2026-10-06",
+    "scope": "The audited symbolic core and connected school-loss, growth and HRR mechanisms; not every historical experimental variant."
+  },
+  "method": {
+    "review_type": "targeted scoping review and primary-source citation audit",
+    "preregistered": false,
+    "search_engines": {
+      "S1": "system1_search_query",
+      "S2": "system2_search_query"
+    },
+    "search_reproduction_note": "Queries, filters and retrieval URLs are recorded. Search rankings and availability may change. Exhaustive hit counts were not retained, so no PRISMA flow counts are asserted.",
+    "inclusion_criteria": [
+      "Primary research available on or before the cutoff date.",
+      "An identifiable mechanism relevant to local shared recurrence, input preservation, tied decoding, binding, repair, memory, novelty allocation, NCA language or symbolic reasoning.",
+      "A readable primary full text or author abstract sufficient to support the specific recorded claim.",
+      "Version and publication metadata can be distinguished sufficiently to avoid unsupported chronology claims."
+    ],
+    "exclusion_criteria": [
+      "Secondary summaries as independent evidence of a scientific result.",
+      "Keyword collisions with unrelated hardware, biology or other uses of NCA.",
+      "Unverifiable titles, identifiers or results.",
+      "Implementation-only grey literature as evidence of peer-reviewed or independently replicated performance.",
+      "Claims requiring inaccessible full-text details when only the abstract was verified."
+    ],
+    "deduplication": "One record per research work; preprint revisions and proceedings are recorded within that work rather than counted as independent studies.",
+    "evidence_levels": {
+      "primary_full_text": "Primary manuscript inspected at mechanism and experiment level.",
+      "primary_abstract": "Primary author abstract and bibliographic record verified; detailed claims restricted accordingly."
+    },
+    "review_limitations": [
+      "Not an exhaustive systematic review, patent search or legal opinion on priority.",
+      "No independent replication of the cited experiments or of NeuroPixel was performed.",
+      "Recent preprints may change; full-text access was incomplete for HRR and Active NCA.",
+      "The exact first public release date of NeuroPixel's claimed contribution was not reconstructed, so later papers are current comparators rather than automatic proof of chronological precedence."
+    ]
+  },
+  "references": [
+    {
+      "id": "R01",
+      "title": "Growing Neural Cellular Automata",
+      "authors": [
+        "Alexander Mordvintsev",
+        "Ettore Randazzo",
+        "Eyvind Niklasson",
+        "Michael Levin"
+      ],
+      "year": 2020,
+      "first_public_date": "2020-02-11",
+      "date_precision": "day",
+      "publication": {
+        "status": "published research article",
+        "venue": "Distill",
+        "volume": "5",
+        "issue": "2",
+        "date": "2020-02-11"
+      },
+      "doi": "10.23915/distill.00023",
+      "url": "https://distill.pub/2020/growing-ca/",
+      "primary_urls": [
+        "https://distill.pub/2020/growing-ca/"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "The Model",
+          "Experiment 1: Learning to Grow",
+          "Experiment 2: What persists",
+          "Experiment 3: Learning to Regenerate"
+        ],
+        "limitations": "Results concern trained visual morphogenesis and repair, not general cognition."
+      },
+      "summary": "A shared local neural rule evolves a multichannel grid using perception filters, a pointwise network, residual updates and randomly selected cells. Training from seeds, maintaining a state pool and exposing patterns to damage produces growth, persistence and regeneration in the demonstrated visual tasks.",
+      "claim": "Local shared NCA dynamics, stochastic residual updates and learned repair precede NeuroPixel.",
+      "relevance_to_neuropixel": "Direct architectural antecedent. NeuroPixel learns its depthwise perception filters and adds a token dictionary, repeated input conditioning and a task readout.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 43,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R02",
+      "title": "Self-classifying MNIST Digits",
+      "authors": [
+        "Ettore Randazzo",
+        "Alexander Mordvintsev",
+        "Eyvind Niklasson",
+        "Michael Levin",
+        "Sam Greydanus"
+      ],
+      "year": 2020,
+      "first_public_date": "2020-08-27",
+      "date_precision": "day",
+      "publication": {
+        "status": "published research article",
+        "venue": "Distill",
+        "date": "2020-08-27"
+      },
+      "doi": "10.23915/distill.00027.002",
+      "url": "https://distill.pub/2020/selforg/mnist/",
+      "primary_urls": [
+        "https://distill.pub/2020/selforg/mnist/"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Model description",
+          "Training",
+          "Experiments with changing inputs"
+        ],
+        "limitations": "Digit classification and adaptation to changed images; no language or general reasoning claim follows."
+      },
+      "summary": "Cells classify a digit through repeated local communication while the image input remains fixed in a dedicated channel. Learned local perception and mutable hidden and class channels support classification and adaptation when the visible digit changes. The article examines how training choices affect stable classification.",
+      "claim": "NCA classification and preserving external input while internal states evolve were demonstrated before NeuroPixel.",
+      "relevance_to_neuropixel": "A close comparator for persistent input availability. An immutable input channel is not identical to NeuroPixel's auxiliary token reconstruction loss.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 45,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R03",
+      "title": "Using the Output Embedding to Improve Language Models",
+      "authors": [
+        "Ofir Press",
+        "Lior Wolf"
+      ],
+      "year": 2017,
+      "first_public_date": null,
+      "date_precision": "month",
+      "publication": {
+        "status": "published conference paper",
+        "venue": "Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers",
+        "date": "2017-04",
+        "pages": "157–163"
+      },
+      "url": "https://aclanthology.org/E17-2025/",
+      "primary_urls": [
+        "https://aclanthology.org/E17-2025/",
+        "https://aclanthology.org/E17-2025.pdf"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Abstract",
+          "Tying the input and output embeddings",
+          "Experiments"
+        ],
+        "limitations": "The verified date here is the proceedings date; an exact earliest preprint date was not audited."
+      },
+      "summary": "The paper studies the output classifier as a word embedding and shares its weights with the input embedding in language models. Its experiments examine parameter savings, embedding behavior and language-model performance under this constraint.",
+      "claim": "Sharing a vocabulary matrix between input embedding and output prediction is established prior work.",
+      "relevance_to_neuropixel": "NeuroPixel uses a learned state projection followed by the same dictionary transpose. The NCA context and low-rank projection are separate experimental factors.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 34,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R04",
+      "title": "A Massively Parallel Architecture for a Self-Organizing Neural Pattern Recognition Machine",
+      "authors": [
+        "Gail A. Carpenter",
+        "Stephen Grossberg"
+      ],
+      "year": 1987,
+      "first_public_date": "1987",
+      "date_precision": "year",
+      "publication": {
+        "status": "published journal article",
+        "venue": "Computer Vision, Graphics, and Image Processing",
+        "volume": "37",
+        "pages": "54–115",
+        "date": "1987"
+      },
+      "doi": "10.1016/S0734-189X(87)80014-2",
+      "url": "https://sites.bu.edu/steveg/files/2016/06/CarGro1987CVGIP.pdf",
+      "primary_urls": [
+        "https://sites.bu.edu/steveg/files/2016/06/CarGro1987CVGIP.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0734189X87800142"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Abstract",
+          "Recognition and search dynamics",
+          "Vigilance and category learning"
+        ],
+        "limitations": "Formal properties depend on the ART model and its assumptions; NeuroPixel has not been shown equivalent to ART."
+      },
+      "summary": "Adaptive resonance theory uses bottom-up recognition, top-down expectations and vigilance-dependent search to distinguish acceptable category matches from mismatch. The architecture can recruit a new category while retaining earlier learning, addressing the stability–plasticity problem within its specified dynamics.",
+      "claim": "Mismatch-controlled category recruitment and the stability–plasticity problem have longstanding primary antecedents.",
+      "relevance_to_neuropixel": "Conceptual comparator for novelty-based allocation. NeuroPixel's external selection among independent canvases uses a different score and mechanism.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 37,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R05",
+      "title": "Holographic Reduced Representations",
+      "authors": [
+        "Tony A. Plate"
+      ],
+      "year": 1995,
+      "first_public_date": "1995-05",
+      "date_precision": "month",
+      "publication": {
+        "status": "published journal article",
+        "venue": "IEEE Transactions on Neural Networks",
+        "volume": "6",
+        "issue": "3",
+        "pages": "623–641",
+        "date": "1995-05"
+      },
+      "doi": "10.1109/72.377968",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18263348/",
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/18263348/"
+      ],
+      "verification": {
+        "level": "primary_abstract",
+        "locators": [
+          "Author abstract indexed with the article record"
+        ],
+        "limitations": "A university-hosted PDF had unusable text extraction. Claims are restricted to the verified article abstract; full derivations were not audited."
+      },
+      "summary": "Distributed fixed-width vectors encode associations through circular convolution. Approximate retrieval and an associative cleanup mechanism recover elements, allowing representations of variable bindings, short sequences and nested structures.",
+      "claim": "Circular-convolution binding and approximate unbinding of distributed representations precede NeuroPixel.",
+      "relevance_to_neuropixel": "The repository contains an HRR helper. Static inspection does not find it in the audited NeuroPixel.forward path, so availability and actual model use must be distinguished.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 27,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R06",
+      "title": "Neural GPUs Learn Algorithms",
+      "authors": [
+        "Łukasz Kaiser",
+        "Ilya Sutskever"
+      ],
+      "year": 2015,
+      "first_public_date": "2015-11-25",
+      "date_precision": "day",
+      "publication": {
+        "status": "arXiv manuscript; inspected version v3",
+        "date": "2016-03-15",
+        "version": "v3"
+      },
+      "arxiv_id": "1511.08228",
+      "doi": "10.48550/arXiv.1511.08228",
+      "url": "https://arxiv.org/abs/1511.08228",
+      "primary_urls": [
+        "https://arxiv.org/abs/1511.08228",
+        "https://arxiv.org/html/1511.08228v3"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "2 The Neural GPU",
+          "3.1 Addition and Multiplication",
+          "3.3 Training Techniques"
+        ],
+        "limitations": "Long-length successes depend on training procedures and model selection; the paper reports a substantial hyperparameter search."
+      },
+      "summary": "A convolutional gated recurrent unit repeatedly updates a two-dimensional state to learn algorithmic tasks, including binary addition and multiplication. The reported experiments examine generalization beyond training lengths and the importance of curriculum, recurrent dropout, gradient noise and parameter-sharing relaxation.",
+      "claim": "Shared local recurrent computation on a spatial state for algorithm learning predates recent NCA language work.",
+      "relevance_to_neuropixel": "A mechanism-level comparator for local recurrence and algorithmic generalization; theoretical computational expressivity does not establish a trained model's generalization.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 39,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R07",
+      "title": "NCAdapt: Dynamic Adaptation with Domain-Specific Neural Cellular Automata for Continual Hippocampus Segmentation",
+      "authors": [
+        "Amin Ranem",
+        "John Orlando Kalkhof",
+        "Anirban Mukhopadhyay"
+      ],
+      "year": 2024,
+      "first_public_date": "2024-10-30",
+      "date_precision": "day",
+      "publication": {
+        "status": "published conference paper",
+        "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+        "date": "2025-02",
+        "pages": "3834–3843",
+        "inspected_preprint_version": "v1"
+      },
+      "arxiv_id": "2410.23368",
+      "doi": "10.48550/arXiv.2410.23368",
+      "url": "https://arxiv.org/abs/2410.23368",
+      "primary_urls": [
+        "https://arxiv.org/abs/2410.23368",
+        "https://arxiv.org/html/2410.23368v1",
+        "https://openaccess.thecvf.com/content/WACV2025/html/Ranem_NCAdapt_Dynamic_Adaptation_with_Domain-Specific_Neural_Cellular_Automata_for_Continual_WACV_2025_paper.html"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Methods: domain-specific NCA adaptation",
+          "Domain inference with NQM",
+          "Experiments on HarP, Dryad and DecathHip"
+        ],
+        "limitations": "Full text was verified on arXiv. Official CVF search metadata verified the proceedings entry; direct CVF retrieval returned HTTP 403. Domains and evaluation are task-specific."
+      },
+      "summary": "NCAdapt freezes an initial NCA backbone and introduces small domain-specific adaptations for subsequent segmentation domains. It evaluates knowledge retention and adaptation on hippocampus MRI datasets and proposes an uncertainty-based mechanism for choosing the relevant domain adaptation.",
+      "claim": "Freezing an NCA backbone and expanding its domain-specific capacity for continual adaptation predates this review.",
+      "relevance_to_neuropixel": "Direct recent comparator for expansion and retention. Adapter allocation and domain scoring differ from allocating whole independent token canvases.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 36,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R08",
+      "title": "Sensor movement drives emergent attention and scalability in active neural cellular automata",
+      "authors": [
+        "Mia-Katrin Kvalsund",
+        "Kai Olav Ellefsen",
+        "Kyrre Glette",
+        "Sidney Pontes-Filho",
+        "Mikkel Elle Lepperød"
+      ],
+      "year": 2026,
+      "first_public_date": null,
+      "date_precision": "day",
+      "publication": {
+        "status": "published journal article",
+        "venue": "Neural Networks",
+        "volume": "200",
+        "article_number": "108798",
+        "online_date": "2026-03-03",
+        "issue_date": "2026-08"
+      },
+      "doi": "10.1016/j.neunet.2026.108798",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41807901/",
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/41807901/",
+        "https://www.sciencedirect.com/science/article/pii/S0893608026002601"
+      ],
+      "earlier_preprint": {
+        "identifier": "10.1101/2024.12.06.627209",
+        "url": "https://www.biorxiv.org/content/10.1101/2024.12.06.627209v2.full",
+        "verified_revision_date": "2025-03-28",
+        "revision": "v2",
+        "note": "The exact initial posting date was not independently recovered. The date embedded in the DOI is not treated as proof of the first posting date."
+      },
+      "verification": {
+        "level": "primary_abstract",
+        "locators": [
+          "Journal article abstract and publication record",
+          "bioRxiv March 2025 archive for revision metadata"
+        ],
+        "limitations": "Detailed protocol claims are restricted to the accessible primary abstract. Its robustness demonstration is a three-class MNIST setting.",
+        "metadata_urls": [
+          "https://connect.biorxiv.org/archive/2025-03"
+        ]
+      },
+      "summary": "Active NCA couples the cellular system to movable sensors, allowing cells to change which image regions they observe. The authors report emergent attention and resilience to resizing or sensor loss in their classification setting.",
+      "claim": "Active sensing and attention-like behavior have been studied within NCA systems before this review.",
+      "relevance_to_neuropixel": "Sensor movement changes the information-gathering mechanism. It is distinct from NeuroPixel's ordinary fixed-coordinate token input and from attention pooling.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 34,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R09",
+      "title": "Neural Cellular Automata for ARC-AGI",
+      "authors": [
+        "Kevin Xu",
+        "Risto Miikkulainen"
+      ],
+      "year": 2025,
+      "first_public_date": "2025-06-18",
+      "date_precision": "day",
+      "publication": {
+        "status": "ALIFE 2025 proceedings entry reported in the primary arXiv record and author publication record",
+        "venue": "ALIFE 2025: Proceedings of the 2025 Artificial Life Conference",
+        "pages": "127–134",
+        "latest_arxiv_version_verified": "v3",
+        "inspected_text": "Author-hosted ALIFE paper PDF; arXiv abstract record used for version history",
+        "version_date": "2025-12-02"
+      },
+      "arxiv_id": "2506.15746",
+      "doi": "10.48550/arXiv.2506.15746",
+      "url": "https://arxiv.org/abs/2506.15746",
+      "primary_urls": [
+        "https://arxiv.org/abs/2506.15746",
+        "https://nn.cs.utexas.edu/downloads/papers/xu.alife25.pdf",
+        "https://www.cs.utexas.edu/~ai-lab/pub-view.php?PubID=128129"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "NCA architecture",
+          "ARC task selection",
+          "Results and limitations"
+        ],
+        "limitations": "The reported 23 solved tasks use a filtered set of 172 feasible tasks from 400 public training tasks; this is not an unrestricted ARC-AGI benchmark score."
+      },
+      "summary": "The study trains task-specific cellular rules for ARC grid transformations. It reports solutions within a filtered feasible subset and examines extrapolation as well as failures caused by coordination and structural overfitting.",
+      "claim": "NCA-based symbolic grid transformation and limited task generalization were studied before this review.",
+      "relevance_to_neuropixel": "Relevant to local computation on discrete symbols. Task-specific training and selected grid tasks do not establish general language understanding.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 31,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R10",
+      "title": "Attention Pooling Enhances NCA-Based Classification of Microscopy Images",
+      "authors": [
+        "Chen Yang",
+        "Michael Deutges",
+        "Jingsong Liu",
+        "Han Li",
+        "Nassir Navab",
+        "Carsten Marr",
+        "Ario Sadafi"
+      ],
+      "year": 2025,
+      "first_public_date": "2025-08-17",
+      "date_precision": "day",
+      "publication": {
+        "status": "published conference proceedings chapter",
+        "venue": "Machine Learning in Medical Imaging (MLMI 2025)",
+        "series": "Lecture Notes in Computer Science",
+        "volume": "16241",
+        "pages": "583–593",
+        "online_date": "2026-01-02"
+      },
+      "arxiv_id": "2508.12324",
+      "doi": "10.1007/978-3-032-09513-8_56",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-032-09513-8_56",
+      "primary_urls": [
+        "https://link.springer.com/chapter/10.1007/978-3-032-09513-8_56",
+        "https://arxiv.org/abs/2508.12324",
+        "https://arxiv.org/html/2508.12324v1"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Method: NCA update and attention pooling",
+          "Microscopy classification experiments",
+          "Publisher bibliographic record"
+        ],
+        "limitations": "The final pooling head aggregates spatial evidence globally; locality of the cellular update should not be attributed to the whole predictor."
+      },
+      "summary": "A microscopy classifier combines a local stochastic NCA with a learned attention-pooling readout. The study evaluates classification across eight microscopy datasets and compares pooling choices, extending NCA classification beyond the standard digit examples.",
+      "claim": "Modern NCA classifiers already combine local recurrent feature construction with task-specific learned readouts.",
+      "relevance_to_neuropixel": "A relevant efficiency and readout comparator. This attention-pooling model is a different work from Active NCA's movable sensors.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 33,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R11",
+      "title": "EngramNCA: a Neural Cellular Automaton Model of Memory Transfer",
+      "authors": [
+        "Etienne Guichard",
+        "Felix Reimers",
+        "Mia Kvalsund",
+        "Mikkel Lepperød",
+        "Stefano Nichele"
+      ],
+      "year": 2025,
+      "first_public_date": "2025-04-16",
+      "date_precision": "day",
+      "publication": {
+        "status": "arXiv full text verified; associated ALIFE 2025 publication reported by the authors",
+        "inspected_version": "v1"
+      },
+      "arxiv_id": "2504.11855",
+      "doi": "10.48550/arXiv.2504.11855",
+      "url": "https://arxiv.org/abs/2504.11855",
+      "primary_urls": [
+        "https://arxiv.org/abs/2504.11855",
+        "https://arxiv.org/html/2504.11855v1",
+        "https://etimush.github.io/EngramNCA/"
+      ],
+      "author_reported_publication": {
+        "venue": "ALIFE 2025",
+        "doi": "10.1162/ISAL.a.831",
+        "note": "Author page verified; direct publisher retrieval did not establish the proceedings text."
+      },
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "GeneCA and GenePropCA architecture",
+          "Training procedure",
+          "Morphology transfer and composition experiments"
+        ],
+        "limitations": "The demonstrated memories encode target morphologies. They are not measurements of linguistic factual recall or proof of biological memory mechanisms."
+      },
+      "summary": "EngramNCA separates visible state from private cellular information representing morphology. A growth model and a separately trained propagation mechanism allow changes to these internal codes to transfer or combine target forms, with regeneration used to reveal the retained information.",
+      "claim": "Memory-bearing internal channels and transfer of represented information are explicit NCA research topics.",
+      "relevance_to_neuropixel": "Comparator for claims of cellular memory and repair. The stored object, access protocol and training stages differ from symbolic role retrieval.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 39,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R12",
+      "title": "TextNCA: Neural Cellular Automata for Language Modeling via Hierarchical Local Attention",
+      "authors": [
+        "Avni Mittal",
+        "Avinash Anand",
+        "Ashutosh Kumar",
+        "Dikshant Kukreja",
+        "Kritarth Prasad",
+        "Sushane Dulloo",
+        "Erik Cambria",
+        "Timothy Liu",
+        "Zhengkui Wang",
+        "Rajiv Ratn Shah"
+      ],
+      "year": 2026,
+      "first_public_date": "2026-08-03",
+      "date_precision": "day",
+      "publication": {
+        "status": "arXiv preprint verified",
+        "inspected_version": "v1"
+      },
+      "arxiv_id": "2608.02050",
+      "doi": "10.48550/arXiv.2608.02050",
+      "url": "https://arxiv.org/abs/2608.02050",
+      "primary_urls": [
+        "https://arxiv.org/abs/2608.02050",
+        "https://arxiv.org/html/2608.02050v1"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Architecture: hierarchical local attention and gated updates",
+          "Training setup",
+          "Main results and ablations"
+        ],
+        "limitations": "Official EMNLP proceedings were not verified. Author-reported forthcoming acceptance is not used as the publication status. The authors' own priority claim is not adopted."
+      },
+      "summary": "TextNCA models language with one-dimensional causal local attention, gated recurrent updates and stages with increasing attention windows. Parameters are shared across iterations within a stage. It trains on a SlimPajama subset and evaluates on WikiText-103; reported perplexity remains worse than its Transformer references.",
+      "claim": "A primary 2026 paper explicitly evaluates an NCA-style language-model architecture; arXiv:2608.02050 is real and accessible.",
+      "relevance_to_neuropixel": "Directly defeats a broad present-day claim that NCA language modeling is an unexplored category. It differs from NeuroPixel's two-dimensional depthwise-convolution update and synthetic role task.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 43,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R13",
+      "title": "Training Language Models via Neural Cellular Automata",
+      "authors": [
+        "Dan Lee",
+        "Seungwook Han",
+        "Akarsh Kumar",
+        "Pulkit Agrawal"
+      ],
+      "year": 2026,
+      "first_public_date": "2026-03-09",
+      "date_precision": "day",
+      "publication": {
+        "status": "arXiv preprint verified",
+        "inspected_version": "v1"
+      },
+      "arxiv_id": "2603.10055",
+      "doi": "10.48550/arXiv.2603.10055",
+      "url": "https://arxiv.org/abs/2603.10055",
+      "primary_urls": [
+        "https://arxiv.org/abs/2603.10055",
+        "https://arxiv.org/html/2603.10055v1",
+        "https://hanseungwook.github.io/blog/nca-pre-pre-training/"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "NCA-generated synthetic data",
+          "Pre-pretraining setup",
+          "Language and reasoning evaluations"
+        ],
+        "limitations": "The language model being trained is a Transformer. Conference-template text is not treated as proof of venue acceptance."
+      },
+      "summary": "Randomly parameterized cellular rules generate discrete grid trajectories, which are converted into synthetic token sequences. Transformer language models train on this material before natural-language training, and the study evaluates the consequences for subsequent language and reasoning tasks.",
+      "claim": "NCA-generated training data has been investigated for language models, without replacing the Transformer architecture with an NCA.",
+      "relevance_to_neuropixel": "Relevant to the wider NCA–language connection, but not a direct architectural replication or validation of NeuroPixel.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 37,
+      "independent_replication_of_neuropixel": false
+    },
+    {
+      "id": "R14",
+      "title": "Online Task Adaptation via Self-Organisation",
+      "authors": [
+        "Krsto Proroković"
+      ],
+      "year": 2026,
+      "first_public_date": "2026-09-24",
+      "date_precision": "day",
+      "publication": {
+        "status": "arXiv preprint verified",
+        "inspected_version": "v1"
+      },
+      "arxiv_id": "2609.29281",
+      "url": "https://arxiv.org/html/2609.29281v1",
+      "primary_urls": [
+        "https://arxiv.org/html/2609.29281v1",
+        "https://arxiv.org/abs/2609.29281"
+      ],
+      "verification": {
+        "level": "primary_full_text",
+        "locators": [
+          "Method: cellular dynamics and associative memory",
+          "Online adaptation rule",
+          "Held-out classification experiments"
+        ],
+        "limitations": "Adaptation is supervised and relies on previously meta-trained slow parameters. Initial retrieval failures were resolved by opening the versioned HTML full text.",
+        "access_record": {
+          "method": "Search-service open of the explicit versioned primary HTML URL, followed by text inspection",
+          "successful_url": "https://arxiv.org/html/2609.29281v1",
+          "successful_retrieval_refs": [
+            "turn38view1",
+            "turn39view0",
+            "turn39view1"
+          ],
+          "date": "2026-10-06",
+          "note": "Other review participants encountered DisabledError or recovered only the abstract. Those failures do not negate this successful retrieval; availability was inconsistent."
+        }
+      },
+      "summary": "A two-dimensional NCA has per-cell associative memory matrices in addition to recurrent state. Slow parameters are meta-trained; during task adaptation, supervised local errors update fast memory while slow parameters remain fixed. Experiments evaluate adaptation to held-out image-classification tasks.",
+      "claim": "A recent primary paper combines local NCA dynamics, persistent input conditioning and fast associative memory for online adaptation.",
+      "relevance_to_neuropixel": "A close memory-mechanism comparator. Recurrent state, per-cell fast memory, slow learned weights and an external expert bank must be measured separately.",
+      "date_verified": "2026-10-06",
+      "summary_word_count": 38,
+      "independent_replication_of_neuropixel": false
+    }
+  ],
+  "excluded_or_deferred": [
+    {
+      "title": "neural-hard-drive repository",
+      "url": "https://github.com/jareddumont/neural-hard-drive",
+      "decision": "excluded from core academic evidence",
+      "reason": "Author implementation and README claims; no verified peer-reviewed evaluation or completed independent replication used here."
+    },
+    {
+      "title": "Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling",
+      "url": "https://arxiv.org/abs/1611.01462",
+      "decision": "verified corroborating work, not a separate core row",
+      "reason": "Related weight-tying work by Hakan Inan, Khashayar Khosravi and Richard Socher; R03 suffices for the narrow component-level claim."
+    },
+    {
+      "title": "Secondary search aggregators and social posts",
+      "decision": "discovery only",
+      "reason": "Not counted as independent support for architecture, performance or publication status."
+    },
+    {
+      "title": "Unrelated NCA and Neuropixels keyword matches",
+      "decision": "excluded",
+      "reason": "Subject mismatch."
+    },
+    {
+      "title": "TextNCA alleged nonexistence or inaccessible identifier",
+      "url": "https://arxiv.org/html/2608.02050v1",
+      "decision": "lead resolved; paper included as R12",
+      "reason": "Primary abstract, author list, date and full text were accessible and mutually consistent."
+    }
+  ],
+  "search_log": [
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q01",
+      "engine": "S1",
+      "queries": [
+        "site.distill.pub 2020 growing neural cellular automata Mordvintsev",
+        "\"Active Neural Cellular Automata\" paper"
+      ],
+      "purpose": "Foundational NCA and active sensing"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q02",
+      "engine": "S2",
+      "queries": [
+        "\"Active Neural Cellular Automata\"",
+        "\"Holographic reduced representations\" Plate 1995 PDF",
+        "\"adaptive resonance theory\" \"1987\" Carpenter Grossberg novelty category"
+      ],
+      "purpose": "Active NCA, distributed binding, novelty allocation"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q03",
+      "engine": "S2",
+      "queries": [
+        "Carpenter Grossberg 1987 massively parallel architecture self organizing neural pattern recognition machine vigilance PDF site:bu.edu",
+        "Press Wolf Using Output Embedding to Improve Language Models 2017 ACL"
+      ],
+      "purpose": "Author-hosted ART paper and official tied-embedding paper"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q04",
+      "engine": "S2",
+      "queries": [
+        "\"Holographic reduced representations\" \"circular convolution\" Plate 1995",
+        "\"Holographic reduced representations\" \"role\" \"1995\" pdf",
+        "\"Holographic reduced representations\" \"nested\" pubmed",
+        "site:pubmed.ncbi.nlm.nih.gov/18263348/ \"Arbitrary\" \"variable\""
+      ],
+      "purpose": "Constrain HRR claims to a readable primary abstract"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q05",
+      "engine": "S2",
+      "queries": [
+        "\"neural cellular automata\" \"continual learning\" 2024 2025 2026",
+        "\"Neural Cellular Automata\" \"associative memory\""
+      ],
+      "purpose": "Recent expansion and memory research"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": 730,
+      "domains": [],
+      "batch": "Q06",
+      "engine": "S1",
+      "queries": [
+        "\"Neural cellular automata\" \"language\" \"2024\" \"2025\""
+      ],
+      "purpose": "Recent NCA language coverage"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q07",
+      "engine": "S1",
+      "queries": [
+        "\"Attention Pooling Enhances NCA-based Classification of Microscopy Images\" publication"
+      ],
+      "purpose": "Publication verification"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q08",
+      "engine": "S2",
+      "queries": [
+        "\"Sensor Movement Drives Emergent Attention\" \"2024.12.06.627209\" date",
+        "\"Attention Pooling Enhances NCA-Based Classification of Microscopy Images\" site:link.springer.com"
+      ],
+      "purpose": "Separate preprint, revision and proceedings dates"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q09",
+      "engine": "S2",
+      "queries": [
+        "\"Neural Cellular Automata for ARC-AGI\" Xu Miikkulainen 2025",
+        "\"EngramNCA\" ALIFE 2025 publication",
+        "\"Growing Neural Cellular Automata\" 2020 doi",
+        "\"A Massively Parallel Architecture for a Self-Organizing Neural Pattern Recognition Machine\" doi"
+      ],
+      "purpose": "Resolve bibliographic identities"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q10",
+      "engine": "S1",
+      "queries": [
+        "\"2609.29281\" site:arxiv.org",
+        "\"Sensor Movement\" \"2024.12.06.627209\" site:biorxiv.org/content"
+      ],
+      "purpose": "Verify recent primary source and preprint history"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q11",
+      "engine": "S1",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"TextNCA\"",
+        "\"2608.02050\" arxiv",
+        "neural cellular automata language associative memory 2024 2025 2026 arxiv"
+      ],
+      "purpose": "Verify potentially incorrect TextNCA lead"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q12",
+      "engine": "S1",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"neural cellular automata\" \"associative memory\"",
+        "\"neural cellular automata\" \"language\" \"2024\"",
+        "\"neural cellular automata\" \"language\" \"2025\""
+      ],
+      "purpose": "Cross-check recent coverage"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q13",
+      "engine": "S2",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"neural cellular automata\" \"associative memory\""
+      ],
+      "purpose": "Second-engine coverage check"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [
+        "arxiv.org",
+        "openreview.net",
+        "aclanthology.org"
+      ],
+      "batch": "Q14",
+      "engine": "S2",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"neural cellular automata\" language 2024 2025"
+      ],
+      "purpose": "Primary-source language literature search"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q15",
+      "engine": "S1",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"2609.29281\"",
+        "\"Online Task Adaptation via Self-Organisation\"",
+        "\"TextNCA\" site:aclanthology.org",
+        "\"jareddumont\" \"neural-hard-drive\""
+      ],
+      "purpose": "Resolve online adaptation, venue status and a repository lead"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q16",
+      "engine": "S2",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"Online Task Adaptation via Self-Organisation\" \"Proroković\"",
+        "\"2609.29281\" pdf",
+        "\"TextNCA\" \"EMNLP\""
+      ],
+      "purpose": "Retrieve primary text and distinguish author claims from proceedings"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q17",
+      "engine": "S1",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "\"Krsto Proroković\" \"Online Task\" github",
+        "\"2609.29281\" site:arxiv.org/pdf",
+        "\"Training Language Models via Neural Cellular Automata\" ICML 2026"
+      ],
+      "purpose": "Check accompanying implementation and venue claims"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "Q18",
+      "engine": "S2",
+      "reviewer": "independent verification subtask",
+      "queries": [
+        "site:github.com/krstopro \"cellular\"",
+        "\"Online Task Adaptation\" \"github\"",
+        "\"2609.29281\" \"classification\" \"memory\""
+      ],
+      "purpose": "Cross-check adaptation claims"
+    },
+    {
+      "date": "2026-10-06",
+      "recency_days": null,
+      "domains": [],
+      "batch": "D01",
+      "engine": "direct_primary_retrieval",
+      "queries": [],
+      "targets": [
+        {
+          "id": "R01",
+          "urls": [
+            "https://distill.pub/2020/growing-ca/"
+          ]
+        },
+        {
+          "id": "R02",
+          "urls": [
+            "https://distill.pub/2020/selforg/mnist/"
+          ]
+        },
+        {
+          "id": "R03",
+          "urls": [
+            "https://aclanthology.org/E17-2025/",
+            "https://aclanthology.org/E17-2025.pdf"
+          ]
+        },
+        {
+          "id": "R04",
+          "urls": [
+            "https://sites.bu.edu/steveg/files/2016/06/CarGro1987CVGIP.pdf",
+            "https://www.sciencedirect.com/science/article/pii/S0734189X87800142"
+          ]
+        },
+        {
+          "id": "R05",
+          "urls": [
+            "https://pubmed.ncbi.nlm.nih.gov/18263348/"
+          ]
+        },
+        {
+          "id": "R06",
+          "urls": [
+            "https://arxiv.org/abs/1511.08228",
+            "https://arxiv.org/html/1511.08228v3"
+          ]
+        },
+        {
+          "id": "R07",
+          "urls": [
+            "https://arxiv.org/abs/2410.23368",
+            "https://arxiv.org/html/2410.23368v1",
+            "https://openaccess.thecvf.com/content/WACV2025/html/Ranem_NCAdapt_Dynamic_Adaptation_with_Domain-Specific_Neural_Cellular_Automata_for_Continual_WACV_2025_paper.html"
+          ]
+        },
+        {
+          "id": "R08",
+          "urls": [
+            "https://pubmed.ncbi.nlm.nih.gov/41807901/",
+            "https://www.sciencedirect.com/science/article/pii/S0893608026002601"
+          ]
+        },
+        {
+          "id": "R09",
+          "urls": [
+            "https://arxiv.org/abs/2506.15746",
+            "https://nn.cs.utexas.edu/downloads/papers/xu.alife25.pdf",
+            "https://www.cs.utexas.edu/~ai-lab/pub-view.php?PubID=128129"
+          ]
+        },
+        {
+          "id": "R10",
+          "urls": [
+            "https://link.springer.com/chapter/10.1007/978-3-032-09513-8_56",
+            "https://arxiv.org/abs/2508.12324",
+            "https://arxiv.org/html/2508.12324v1"
+          ]
+        },
+        {
+          "id": "R11",
+          "urls": [
+            "https://arxiv.org/abs/2504.11855",
+            "https://arxiv.org/html/2504.11855v1",
+            "https://etimush.github.io/EngramNCA/"
+          ]
+        },
+        {
+          "id": "R12",
+          "urls": [
+            "https://arxiv.org/abs/2608.02050",
+            "https://arxiv.org/html/2608.02050v1"
+          ]
+        },
+        {
+          "id": "R13",
+          "urls": [
+            "https://arxiv.org/abs/2603.10055",
+            "https://arxiv.org/html/2603.10055v1",
+            "https://hanseungwook.github.io/blog/nca-pre-pre-training/"
+          ]
+        },
+        {
+          "id": "R14",
+          "urls": [
+            "https://arxiv.org/html/2609.29281v1",
+            "https://arxiv.org/abs/2609.29281"
+          ]
+        }
+      ],
+      "purpose": "Open author manuscripts, official article records and version histories; citation-chain Neural GPU and EngramNCA"
+    }
+  ],
+  "conclusion": {
+    "literature_review": "complete for the stated scoped task",
+    "established": "The audited design has identifiable antecedents at the component level.",
+    "candidate_contribution": "The particular combination and its measured consequences are hypotheses.",
+    "empirical_novelty": "not established; requires later matched comparisons, replication and causal ablations",
+    "priority": "No worldwide-first or exclusive-priority conclusion.",
+    "later_programme_items_executed": false
+  }
+}

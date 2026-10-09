@@ -1,0 +1,15 @@
+# Qué aislará OPT03-D y qué seguirá requiriendo controles
+
+Nota previa a la inspección de nuevos resultados, 8 de octubre de 2026. La cohorte sigue ejecutando la receta congelada. Esta nota no añade brazos ni cambia thresholds.
+
+El factorial puede medir el efecto condicionado de proyectar la identidad efectiva de PAD a cero y de entrenar con firing1,0 frente a0,5, manteniendo widths, número nominal de parámetros, batch, updates, escuela y datos declarados. No basta para atribuir un eventual cambio a una explicación única.
+
+**PAD y capacidad:** las cuatro condiciones tienen29824 parámetros nominales. Proyectar la fila PAD elimina su influencia y el gradiente de sus16 componentes efectivos. Igualar parámetros nominales no iguala grados de libertad funcionales. Además, el mismo diccionario aparece en lookup de entrada, decoder compartido y lens escolar. El efecto de esa proyección puede implicar los tres caminos; no es una intervención aislada en la entrada. Para distinguirlos harían falta controles separados previamente especificados, no una explicación retrospectiva del ganador.
+
+**Firing y dosis de actualización:** con residual `estado += máscara × incremento`, pasar de Bernoulli0,5 a1,0 cambia tanto la aleatoriedad como el incremento esperado por paso. Con T16 fijo, cada celda recibe en promedio8 frente a16 updates activos durante entrenamiento. La percepción y la red densa se calculan antes de aplicar la máscara: firing0,5 no demuestra50% de cómputo omitido. Un efecto favorable de firing1,0 no se puede presentar como beneficio aislado de reducir ruido ni como ahorro energético. Un control del incremento esperado necesitaría una escala adicional y su propio protocolo.
+
+**Supervisión:** todos los brazos reciben escuela0,3. Esto controla la presencia nominal de ese objetivo entre los cuatro brazos, pero no mide su efecto frente a entrenar sin escuela ni elimina la interacción entre PAD y logits escolares. La futura atribución de supervisión requiere esa comparación a competencia y coste adecuados. Las pérdidas respuesta/escuela separadas ayudarán a describir el comportamiento; no identifican causalidad por sí solas.
+
+**Precisión y datos:** las tres semillas son inicializaciones independientes dentro de un único split y un único entorno medido. Los datasets de desarrollo proceden de pools históricamente expuestos. Las4celdas y los3endpoints no crean36réplicas. Los intervalos df2 expresan variación de esas tres inicializaciones; no acreditan precisión poblacional elevada, custodia independiente ni generalización a otro generador. Ni un gate95%/90% superado permitiría rescatar H1.
+
+La tarea3 completa requiere, además de una fase de desarrollo auditada, evidencia sobre competencia suficiente y contrastes de capacidad/supervisión con incertidumbre útil. Si OPT03-D resulta negativo, se conservará como tal y la causa general seguirá sin resolverse. Si resulta positivo, solo abrirá la siguiente fase prospectiva especificada; no hará que el objetivo amplio esté completado automáticamente.

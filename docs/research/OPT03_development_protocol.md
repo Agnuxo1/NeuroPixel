@@ -1,0 +1,21 @@
+# OPT03-D: competencia y dinámica de optimización, fase de desarrollo
+
+Registro prospectivo local NP-OPT03-D-20261008. Esta fase se congela por SHA256 y commit antes de entrenamientos nuevos. No se declara registro externo ni CID IPFS; el control de custodia es local. A06.1 y H1 se mantienen cerrados y sus recetas no se modifican.
+
+Pregunta: ¿la proyección efectiva de PAD a cero y/o la actualización celular plenamente síncrona mejora la adquisición de binding respecto a la receta con PAD legado y firing 0,5, bajo el mismo presupuesto nominal y supervisión?
+
+Este experimento es de desarrollo, no confirmatorio. Usa el generador histórico con split0 y sus pools train/validation ya expuestos. Ninguna muestra del pool test se genera o evalúa. Un resultado positivo no permite reabrir H1 ni afirmar generalización fuera del generador.
+
+Diseño completo: factorial 2×2, freeze_pad=false/true × fire_rate=0,5/1,0, semillas de inicialización100/101/102. Doce entrenamientos nuevos de8192updates, batch64, T16, tying/reinjection activos, escuela0,3 PRE3/7/11/15 y AdamW LR0,003, decay0,0001, clip1,0. Cada condición parte de cero; no se toma un checkpoint de A06.1. Firing RNG y minibatch RNG están separados, con los mismos seeds9001/9002 en todas las condiciones. Las variantes no cambian el número nominal de parámetros. El firing0,5 no omite el cálculo denso de updates y no constituye ahorro físico probado.
+
+Métricas de desarrollo: binding de AGENTE/PACIENTE, exactitud global y por rol, NLL y pérdidas escolares/respuesta separadas. Curvas y parámetros completos, tiempo, recursos y RNG se guardan cada128updates. Evaluación de train-probe y validación en endpoints1024/4096/8192, con tamaños2048/4096 y seeds76001/76002. Las evaluaciones intermedias no seleccionan ni paran por rendimiento. Se conserva cada condición, semilla y fallo.
+
+Gate de competencia fijado antes de resultados: para una condición, train-probe binding≥95% y validation binding≥90% en **las tres semillas** al endpoint8192. También se exigen pérdida/gradientes/pesos finitos y ausencia de intervención no declarada. Si ninguna condición pasa, la competencia sigue sin establecerse y no se abre una prueba final; el resultado negativo se informa y cualquier diagnóstico posterior se identifica como una fase nueva de desarrollo.
+
+La selección para una fase posterior, si se cumple el gate, usaría únicamente validación: máximo de la peor exactitud de binding entre las tres semillas; empate resuelto por menor NLL media, después menor coste medido y orden lexical del ID. La fase posterior requiere un nuevo protocolo, una evaluación realmente nueva y mayor número de inicializaciones; no está autorizada por un resultado de test de este estudio. Un diseño pareado de20semillas tendría semiancho t95 aproximado4,68pp si SD de diferencias=10pp; esto es una **hipótesis de planificación**, no precisión observada. Debe contrastarse con su incertidumbre y el coste real antes de congelar esa fase.
+
+Análisis: efectos factoriales e interacción dentro de cada semilla; informar tres valores, media, SD e ICt95df2, sin tratar endpoints o ejemplos como nuevas réplicas. Intervalos por ejemplo se mantienen separados. No declarar ventaja causal universal, biológica o arquitectónica por tres semillas de desarrollo. Registrar desigualdad de coste real, efecto de PAD en gradientes y cambio de distribución de firing entrenamiento/evaluación.
+
+Recursos: cola GPU FIFO única; mínimo8GiB disponibles antes de cada entrenamiento y durante su ejecución; VRAM libre≥3,5GiB y temperatura<83°C. Ningún límite se reduce. Un checkpoint conserva modelo, optimizador y RNG de CPU/CUDA/minibatches; ante parada por recursos, se reanuda el próximo update en el mismo entorno. Una condición terminada no se repite. Un checkpoint o fuente no concordante se conserva y se investiga, sin sobreescritura.
+
+Entorno: runtime existente, versiones registradas al iniciar. CPU/GPU no se consideran pruebas de física óptica. Archivos en D:, sin gasto ni cuentas nuevas. Entregables: manifiesto congelado, snapshots de fuente, doce directorios de ejecución, curvas, checkpoints, métricas de desarrollo, auditoría independiente y conclusión del gate. El plan se congela después de verificar los contratos del runner y antes de cualquier entrenamiento científico.

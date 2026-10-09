@@ -1,0 +1,399 @@
+{
+  "observed_utc": "2026-10-09T03:44:02.466481+00:00",
+  "scope": "Registered descriptive endpoints/curves only; no new fitting, seed expansion, convergence proof or precision-threshold change",
+  "cases": [
+    {
+      "case": "DEV04_partition101_seed400",
+      "body_last512_answer_loss": 0.28178488633420784,
+      "body_last512_school_loss": 0.009254612427127995,
+      "body_last512_gradient": 5.123276770114899,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.9971923828125,
+          "validation_joint_8192": 0.997802734375,
+          "validation_gain_4096_to8192_pp": 0.06103515625,
+          "probe_joint_8192": 0.9981689453125,
+          "last512_training_loss": 5.500731871083131e-06,
+          "last512_gradient": 0.0003471301151876105,
+          "loss_3585_to4096": 5.2259836301526974e-05,
+          "loss_7681_to8192": 5.500731871083131e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.7442626953125,
+          "validation_joint_8192": 0.7525634765625,
+          "validation_gain_4096_to8192_pp": 0.830078125,
+          "probe_joint_8192": 0.7877197265625,
+          "last512_training_loss": 0.1345187064835045,
+          "last512_gradient": 0.8253488838672638,
+          "loss_3585_to4096": 0.15051423075783532,
+          "loss_7681_to8192": 0.1345187064835045
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition101_seed401",
+      "body_last512_answer_loss": 0.2519848261581501,
+      "body_last512_school_loss": 0.0077567202914679,
+      "body_last512_gradient": 7.87714159488678,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99774169921875,
+          "validation_joint_8192": 0.9979248046875,
+          "validation_gain_4096_to8192_pp": 0.018310546875,
+          "probe_joint_8192": 0.9986572265625,
+          "last512_training_loss": 4.287085475007668e-06,
+          "last512_gradient": 0.0005370484936975117,
+          "loss_3585_to4096": 5.414991037233641e-05,
+          "loss_7681_to8192": 4.287085475007668e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.79913330078125,
+          "validation_joint_8192": 0.81488037109375,
+          "validation_gain_4096_to8192_pp": 1.57470703125,
+          "probe_joint_8192": 0.830810546875,
+          "last512_training_loss": 0.0994330839093891,
+          "last512_gradient": 0.8085154443979263,
+          "loss_3585_to4096": 0.12320883585925912,
+          "loss_7681_to8192": 0.0994330839093891
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition101_seed402",
+      "body_last512_answer_loss": 0.16640706094949564,
+      "body_last512_school_loss": 0.016050201902771732,
+      "body_last512_gradient": 6.792319238185883,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99749755859375,
+          "validation_joint_8192": 0.99810791015625,
+          "validation_gain_4096_to8192_pp": 0.06103515625,
+          "probe_joint_8192": 0.9970703125,
+          "last512_training_loss": 4.121807770859909e-06,
+          "last512_gradient": 0.00012499367403506767,
+          "loss_3585_to4096": 4.0580318196051235e-05,
+          "loss_7681_to8192": 4.121807770859909e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.90240478515625,
+          "validation_joint_8192": 0.89910888671875,
+          "validation_gain_4096_to8192_pp": -0.32958984375,
+          "probe_joint_8192": 0.894287109375,
+          "last512_training_loss": 0.07292504058341365,
+          "last512_gradient": 0.3697362318634987,
+          "loss_3585_to4096": 0.07986323220097802,
+          "loss_7681_to8192": 0.07292504058341365
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition101_seed403",
+      "body_last512_answer_loss": 0.17347503519886232,
+      "body_last512_school_loss": 0.01617814893108971,
+      "body_last512_gradient": 5.779785752296448,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99725341796875,
+          "validation_joint_8192": 0.99761962890625,
+          "validation_gain_4096_to8192_pp": 0.03662109375,
+          "probe_joint_8192": 0.998046875,
+          "last512_training_loss": 6.7882146340611516e-06,
+          "last512_gradient": 0.0001237555102306942,
+          "loss_3585_to4096": 8.941668237238964e-05,
+          "loss_7681_to8192": 6.7882146340611516e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.88861083984375,
+          "validation_joint_8192": 0.8853759765625,
+          "validation_gain_4096_to8192_pp": -0.323486328125,
+          "probe_joint_8192": 0.8812255859375,
+          "last512_training_loss": 0.07896411217598143,
+          "last512_gradient": 0.5690127983689308,
+          "loss_3585_to4096": 0.09316239957979633,
+          "loss_7681_to8192": 0.07896411217598143
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition102_seed404",
+      "body_last512_answer_loss": 0.3110081348422682,
+      "body_last512_school_loss": 0.010994299844696798,
+      "body_last512_gradient": 7.839187264442444,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99737548828125,
+          "validation_joint_8192": 0.99835205078125,
+          "validation_gain_4096_to8192_pp": 0.09765625,
+          "probe_joint_8192": 0.9974365234375,
+          "last512_training_loss": 4.8715974837187925e-06,
+          "last512_gradient": 0.0002481874080331181,
+          "loss_3585_to4096": 8.191104550236972e-05,
+          "loss_7681_to8192": 4.8715974837187925e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.78106689453125,
+          "validation_joint_8192": 0.77313232421875,
+          "validation_gain_4096_to8192_pp": -0.79345703125,
+          "probe_joint_8192": 0.8021240234375,
+          "last512_training_loss": 0.13424234502599575,
+          "last512_gradient": 0.7475370541214943,
+          "loss_3585_to4096": 0.1531811835593544,
+          "loss_7681_to8192": 0.13424234502599575
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition102_seed405",
+      "body_last512_answer_loss": 0.3644266338669695,
+      "body_last512_school_loss": 0.01020346881949763,
+      "body_last512_gradient": 6.609124004840851,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99853515625,
+          "validation_joint_8192": 0.99884033203125,
+          "validation_gain_4096_to8192_pp": 0.030517578125,
+          "probe_joint_8192": 0.9979248046875,
+          "last512_training_loss": 6.501794432317576e-06,
+          "last512_gradient": 0.00013256626334623434,
+          "loss_3585_to4096": 7.336823140446924e-05,
+          "loss_7681_to8192": 6.501794432317576e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.70611572265625,
+          "validation_joint_8192": 0.701171875,
+          "validation_gain_4096_to8192_pp": -0.494384765625,
+          "probe_joint_8192": 0.733642578125,
+          "last512_training_loss": 0.17670023923710687,
+          "last512_gradient": 0.781741201877594,
+          "loss_3585_to4096": 0.19437055991147645,
+          "loss_7681_to8192": 0.17670023923710687
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition102_seed406",
+      "body_last512_answer_loss": 0.1520463065135118,
+      "body_last512_school_loss": 0.016301336468472982,
+      "body_last512_gradient": 6.65944716334343,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99456787109375,
+          "validation_joint_8192": 0.9970703125,
+          "validation_gain_4096_to8192_pp": 0.250244140625,
+          "probe_joint_8192": 0.9945068359375,
+          "last512_training_loss": 2.4265139656712287e-05,
+          "last512_gradient": 0.0007346787861024495,
+          "loss_3585_to4096": 0.00033325466411038285,
+          "loss_7681_to8192": 2.4265139656712287e-05
+        },
+        "local_query": {
+          "validation_joint_4096": 0.88922119140625,
+          "validation_joint_8192": 0.88458251953125,
+          "validation_gain_4096_to8192_pp": -0.4638671875,
+          "probe_joint_8192": 0.8917236328125,
+          "last512_training_loss": 0.07090028002244253,
+          "last512_gradient": 0.5083988681435585,
+          "loss_3585_to4096": 0.08209644941098304,
+          "loss_7681_to8192": 0.07090028002244253
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition102_seed407",
+      "body_last512_answer_loss": 0.13870289376109213,
+      "body_last512_school_loss": 0.012196565777685464,
+      "body_last512_gradient": 7.636633396148682,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99652099609375,
+          "validation_joint_8192": 0.996826171875,
+          "validation_gain_4096_to8192_pp": 0.030517578125,
+          "probe_joint_8192": 0.9979248046875,
+          "last512_training_loss": 6.068218135448639e-06,
+          "last512_gradient": 6.399263929779408e-05,
+          "loss_3585_to4096": 0.0001825400293888335,
+          "loss_7681_to8192": 6.068218135448639e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.8909912109375,
+          "validation_joint_8192": 0.88665771484375,
+          "validation_gain_4096_to8192_pp": -0.433349609375,
+          "probe_joint_8192": 0.88623046875,
+          "last512_training_loss": 0.0770767871181306,
+          "last512_gradient": 0.40998242422938347,
+          "loss_3585_to4096": 0.08403645606244936,
+          "loss_7681_to8192": 0.0770767871181306
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition103_seed408",
+      "body_last512_answer_loss": 0.3904405871289782,
+      "body_last512_school_loss": 0.009898170478891188,
+      "body_last512_gradient": 6.407631754875183,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99395751953125,
+          "validation_joint_8192": 0.99517822265625,
+          "validation_gain_4096_to8192_pp": 0.1220703125,
+          "probe_joint_8192": 0.99560546875,
+          "last512_training_loss": 1.5737168685414638e-05,
+          "last512_gradient": 0.0005581069362960989,
+          "loss_3585_to4096": 0.0011091668064846516,
+          "loss_7681_to8192": 1.5737168685414638e-05
+        },
+        "local_query": {
+          "validation_joint_4096": 0.67169189453125,
+          "validation_joint_8192": 0.672607421875,
+          "validation_gain_4096_to8192_pp": 0.091552734375,
+          "probe_joint_8192": 0.7137451171875,
+          "last512_training_loss": 0.16677564277051715,
+          "last512_gradient": 0.9482129812240601,
+          "loss_3585_to4096": 0.18961528458748944,
+          "loss_7681_to8192": 0.16677564277051715
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition103_seed409",
+      "body_last512_answer_loss": 0.12025406815064343,
+      "body_last512_school_loss": 0.012471696782426989,
+      "body_last512_gradient": 5.324680924415588,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99554443359375,
+          "validation_joint_8192": 0.9923095703125,
+          "validation_gain_4096_to8192_pp": -0.323486328125,
+          "probe_joint_8192": 0.9931640625,
+          "last512_training_loss": 0.00045739480778073105,
+          "last512_gradient": 0.0009361207121401094,
+          "loss_3585_to4096": 0.0003668184020078624,
+          "loss_7681_to8192": 0.00045739480778073105
+        },
+        "local_query": {
+          "validation_joint_4096": 0.9244384765625,
+          "validation_joint_8192": 0.92138671875,
+          "validation_gain_4096_to8192_pp": -0.30517578125,
+          "probe_joint_8192": 0.91943359375,
+          "last512_training_loss": 0.05040904185511863,
+          "last512_gradient": 0.3863029330968857,
+          "loss_3585_to4096": 0.05518706084308178,
+          "loss_7681_to8192": 0.05040904185511863
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition103_seed410",
+      "body_last512_answer_loss": 0.13731415764505073,
+      "body_last512_school_loss": 0.014107929882698045,
+      "body_last512_gradient": 5.388288348913193,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99249267578125,
+          "validation_joint_8192": 0.99578857421875,
+          "validation_gain_4096_to8192_pp": 0.32958984375,
+          "probe_joint_8192": 0.9940185546875,
+          "last512_training_loss": 2.1846537552258627e-05,
+          "last512_gradient": 0.0004536920205282513,
+          "loss_3585_to4096": 0.0002982425759892049,
+          "loss_7681_to8192": 2.1846537552258627e-05
+        },
+        "local_query": {
+          "validation_joint_4096": 0.90313720703125,
+          "validation_joint_8192": 0.89794921875,
+          "validation_gain_4096_to8192_pp": -0.518798828125,
+          "probe_joint_8192": 0.9002685546875,
+          "last512_training_loss": 0.05814771713767186,
+          "last512_gradient": 0.33466633409261703,
+          "loss_3585_to4096": 0.0664707452967832,
+          "loss_7681_to8192": 0.05814771713767186
+        }
+      }
+    },
+    {
+      "case": "DEV04_partition103_seed411",
+      "body_last512_answer_loss": 0.13590358602777997,
+      "body_last512_school_loss": 0.010571400162575628,
+      "body_last512_gradient": 6.999443501234055,
+      "head": {
+        "query_attention": {
+          "validation_joint_4096": 0.99920654296875,
+          "validation_joint_8192": 0.999267578125,
+          "validation_gain_4096_to8192_pp": 0.006103515625,
+          "probe_joint_8192": 0.99951171875,
+          "last512_training_loss": 3.375112835983518e-06,
+          "last512_gradient": 0.00023789560418663314,
+          "loss_3585_to4096": 4.30771391046747e-05,
+          "loss_7681_to8192": 3.375112835983518e-06
+        },
+        "local_query": {
+          "validation_joint_4096": 0.934326171875,
+          "validation_joint_8192": 0.9263916015625,
+          "validation_gain_4096_to8192_pp": -0.79345703125,
+          "probe_joint_8192": 0.9276123046875,
+          "last512_training_loss": 0.056976866987270114,
+          "last512_gradient": 0.278524924069643,
+          "loss_3585_to4096": 0.05927295791639153,
+          "loss_7681_to8192": 0.056976866987270114
+        }
+      }
+    }
+  ],
+  "head_descriptive_means": {
+    "query_attention": {
+      "validation_gain_4096_to8192_pp": 0.060017903645833336,
+      "last512_training_loss": 4.672985135946642e-05,
+      "last512_gradient": 0.0003748473469234644,
+      "loss_3585_to4096": 0.0002270654701028961,
+      "loss_7681_to8192": 4.672985135946642e-05
+    },
+    "local_query": {
+      "validation_gain_4096_to8192_pp": -0.16326904296875,
+      "last512_training_loss": 0.09808915527554518,
+      "last512_gradient": 0.580665006612738,
+      "loss_3585_to4096": 0.11091494966548983,
+      "loss_7681_to8192": 0.09808915527554518
+    }
+  },
+  "input_sha256": {
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed400\\body\\result.json": "37bf5b94b8c16932cae989e967d32f97dfc8df2874d605f50754412a2d0fec4a",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed400\\query_attention\\result.json": "7433c802064ed9b163dcfdd44c28e949d57dd2278025ea246a4c1fb3a50072c4",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed400\\local_query\\result.json": "0741d971303f7390cacdb26e5a70a098d5648070c6af665f99b604a9478fce41",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed401\\body\\result.json": "9600154c39ba8069b33b7e069f74ec018ceb0b3191604cb397b116fc3fb10324",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed401\\query_attention\\result.json": "8517c93a486b2291f9121809094aaecbd21cc75e12944438fde84b7755406e39",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed401\\local_query\\result.json": "5c7f8335203829b2179db3b87733c57e90e54d58d29e2409b7ad29dfe7f458ae",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed402\\body\\result.json": "b9d561c0dabf9e6d4466ebd7ed7a76d76daa8a5093d8284d952411ab58af4c7c",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed402\\query_attention\\result.json": "f46f514b053340fa81b9c56d11e165a4381557c712b98e3d8f2f960086ad776e",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed402\\local_query\\result.json": "5fb6fd8e1f2c93928c783ef05d39ad416377fee194921a3d2657fbd8d266a527",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed403\\body\\result.json": "3b774f949db2a3c9ef02434489dd42965c52932eb6434418f68373d5253b9087",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed403\\query_attention\\result.json": "52e23582b118b0328ead1f5a5ed2dd6f230fd463d0b7f58e88c23b7860e1085b",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition101_seed403\\local_query\\result.json": "4dd4a0f42a93d79e64e53c95fc91b803a580a9237e6b454dc0b9aede2754cbdc",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed404\\body\\result.json": "4ee5072706a34588bcd902d3340248f9d7afd7fcb0985290b9abab36b78f4d76",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed404\\query_attention\\result.json": "c0306dd2c73451c5446ca4fb9e44baaa680870688e38c88a511d0526f4457464",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed404\\local_query\\result.json": "f6341960bdf0a15ec26bc39e381a8ea40a6b20033fba5589b16ab9360e4ecdea",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed405\\body\\result.json": "be022a39ab36b04a644e1b34bbf3024e47d449562bb92b67848850119c926f46",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed405\\query_attention\\result.json": "7c4f6101b6f7d1de159a7a6d41ca02a4ff11c394c2857158904a50e28d3a5927",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed405\\local_query\\result.json": "f465771976fb1b7de0536bd8c9785ee40bd78e56d57193ae088e702132837e21",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed406\\body\\result.json": "8168aefb07baa0a3f253bad52c430f0b0068f9605ef4dd647fb6afa9e2a74766",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed406\\query_attention\\result.json": "190789205d362a8778c8407fef8fc09c49c77a85d03addf3450fb66699ac0237",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed406\\local_query\\result.json": "7847c4a99c56403485bc6154b159ffc3e5feb65993eac14a0fbfb825074f842d",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed407\\body\\result.json": "4c097849c96869fb379c859d4c046f422303b3c69c41fc5a91a40b15fd591d59",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed407\\query_attention\\result.json": "8b01aedd047cedf4732f88a1b5669b5c78a8c4b85631f602556c49a9f20e70bc",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition102_seed407\\local_query\\result.json": "f35a2d008670299abeb0e008d99cc25d1eb72e86795d854234b1e7ac42c752a0",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed408\\body\\result.json": "d37fb4188d863b1b9a16e9d40f6ac67ad9323a7214b22ac3d3b315184ab6b182",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed408\\query_attention\\result.json": "5e499ab84f1390f80b69fe5793cee44408dbe0e5e2fae0edf391b3c37f2e20c8",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed408\\local_query\\result.json": "d40fa9c60c150949531839b47f566752e3fb55f6e39657d797b8b30839ce6067",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed409\\body\\result.json": "a1e75ca1b1fdbe387e34ffb3c21baa28281b9dce566dd7f943c5a59503ffe067",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed409\\query_attention\\result.json": "7c68285e2f38b31313c67a3f139b4aba16a85bd265ac081ea408c77af42db45a",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed409\\local_query\\result.json": "9ff768523972782fded8d864373ebd7332d3410b816d8fd9b2f297b434484eba",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed410\\body\\result.json": "a4faf4f94092ff08292df127bfc4b4ad370e43226af2311fbd2eaa34dc75033f",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed410\\query_attention\\result.json": "0e67f0bf2bcd5dee3a004a996e73bf52e7c80a83d7e3ee8f41e44d94f375e3cc",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed410\\local_query\\result.json": "409515db067ac529850f3c986209741c7bd71e8b518988ee5ab82f4769cf29a2",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed411\\body\\result.json": "9c129fdea0931d8996cd56bdc221eab090b35591aeb2348323cd0556578156d5",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed411\\query_attention\\result.json": "0d840b19389cf849d9ea074482e6992ede97b9bc9fd52d3deeca7c76897ea06e",
+    "results\\research\\DEV04_recovery\\37845945011\\cohort\\DEV04_partition103_seed411\\local_query\\result.json": "ce4e9a951b9c062772c683da774ac24d9cff4204fd0d647ab8754b64b7725fbb"
+  },
+  "new_training_updates": 0,
+  "original_test_scored": false,
+  "scientific_task3_complete": false
+}

@@ -1,0 +1,48 @@
+{
+  "status": "complete_registered_GLOB05_internal_analysis",
+  "plan_sha256": "b26f17cec8a98fda6dbd5aa128d67501fd2273bf07718300c1c865391985e0b2",
+  "new_heads": 12,
+  "new_body_initializations": 0,
+  "old_head_trainings_repeated": 0,
+  "effects": {
+    "attention_minus_active_global": {
+      "policy_means_pp": [
+        5.6121826171875,
+        7.26776123046875,
+        5.95550537109375
+      ],
+      "mean_pp": 6.278483072916667,
+      "t95_pp": [
+        4.10792222928584,
+        8.449043916547494
+      ],
+      "half_width_pp": 2.170560843630827,
+      "df": 2,
+      "lower_bound_positive": true,
+      "descriptive_new_contrast_precision_target_passed": true
+    },
+    "active_global_minus_local": {
+      "policy_means_pp": [
+        10.3759765625,
+        11.370849609375,
+        8.14971923828125
+      ],
+      "mean_pp": 9.96551513671875,
+      "t95_pp": [
+        5.868360037909837,
+        14.062670235527662
+      ],
+      "half_width_pp": 4.097155098808913,
+      "df": 2,
+      "lower_bound_positive": true,
+      "descriptive_new_contrast_precision_target_passed": true
+    }
+  },
+  "global_gate_all_twelve": false,
+  "original_DEV04_precision_target": "failed_preserved",
+  "original_H1": "not_supported_under_original_recipe",
+  "original_test_scored": false,
+  "external_replication": false,
+  "scientific_task3_complete": false,
+  "interpretation": "Development comparison of per-cell query selection against query-gated global uniform moments. Shared frozen bodies/labels/initial head tensors/batches/masks/update budgets; functional space and arithmetic differ. Three overlapping-policy means; exploratory df2 unadjusted/untruncated intervals; no equivalence inference."
+}

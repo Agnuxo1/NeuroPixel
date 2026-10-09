@@ -1,0 +1,25 @@
+{
+  "item": 4,
+  "incidents": [
+    {
+      "attempt": "item4_pilot",
+      "source_commit": "cc8836c0914e1727326422ac2fcdbe799d480569",
+      "observed_at_utc": "2026-10-06T22:23:20+00:00",
+      "phase": "pytest plugin discovery before test collection",
+      "status": "failed before scientific training",
+      "error_type": "pluggy.PluginValidationError",
+      "error_summary": "Unrelated installed nengo plugin declares obsolete startdir argument for pytest_report_collectionfinish.",
+      "evidence": [
+        "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_queue.log",
+        "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_pilot_worker_status.json"
+      ],
+      "scientific_training_started": false,
+      "final_evaluation_accessed": false,
+      "remedy": "Set PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 in the isolated worker. No installed package is removed or changed.",
+      "reference": "https://docs.pytest.org/en/stable/how-to/plugins.html#disabling-plugins-from-autoloading",
+      "scientific_configuration_changed": false,
+      "retry_directory": "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_pilot_retry1",
+      "retry_rule": "Preserve original logs/status and use a new attempt directory; rerun compatibility gate before training."
+    }
+  ]
+}

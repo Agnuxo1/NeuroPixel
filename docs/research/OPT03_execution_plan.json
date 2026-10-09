@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "local_registration_id": "NP-OPT03-D-20261008",
+  "external_preregistration": null,
+  "frozen_utc": "2026-10-07T22:24:29.104048+00:00",
+  "phase": "development only",
+  "runs": [
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed100",
+      "seed": 100,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed100",
+      "seed": 100,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed100",
+      "seed": 100,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed100",
+      "seed": 100,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed101",
+      "seed": 101,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed101",
+      "seed": 101,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed101",
+      "seed": 101,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed101",
+      "seed": 101,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed102",
+      "seed": 102,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed102",
+      "seed": 102,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed102",
+      "seed": 102,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed102",
+      "seed": 102,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    }
+  ],
+  "training_count": 12,
+  "optimizer_updates": 98304,
+  "batch": 64,
+  "school_weight": 0.3,
+  "learning_rate": 0.003,
+  "steps": 16,
+  "training_sample_seed": 9002,
+  "firing_seed": 9001,
+  "probe_n": 2048,
+  "probe_seed": 76001,
+  "validation_n": 4096,
+  "validation_seed": 76002,
+  "test_access": false,
+  "competence_gate": {
+    "probe_binding_minimum": 0.95,
+    "validation_binding_minimum": 0.9,
+    "all_initialization_seeds_must_pass": true
+  },
+  "minimum_available_ram_gib": 8,
+  "queue_admission_ram_gib": 9,
+  "queue_admission_margin_is_not_a_lowered_scientific_limit": true,
+  "maximum_cpu_threads": 2,
+  "source_sha256": {
+    "docs/research/OPT03_development_protocol.md": "c34e3f260ca975c044e492a76c1750244257791a3c5df0b61b231f2a75e19fd8",
+    "scripts/research_OPT03_development.py": "cea6b8444fe8605993ca6a51bf1875909cbdac912240265fdef44e931045b79d",
+    "scripts/test_OPT03_contracts.py": "d266049c13f868d13122bfef2f473c23cbb237e40a3e44d316362ff9124297ff",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290"
+  },
+  "contract_tests": {
+    "status": "passed",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "scope": "Synthetic tiny-model operational contracts; no NeuroPixel scientific development training"
+  },
+  "expected_environment": {
+    "torch": "2.6.0+cu124",
+    "numpy": "2.2.6",
+    "psutil": "6.1.1"
+  },
+  "resume": "same frozen plan, config and measured environment; checkpoints every128updates; completed runs reused without retraining",
+  "analysis": "three independent initializations; paired factorial effects; df2 t intervals; developmental scope, no H1 reinterpretation"
+}

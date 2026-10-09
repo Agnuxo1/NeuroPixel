@@ -1,0 +1,270 @@
+{
+  "status": "verified_complete_registered_benchmark",
+  "source_receipt_sha256": "281d37c83f541f3fd2fbcf89b6453ddb441bf82770112512780ef75812dd98b6",
+  "cases": [
+    {
+      "case": "C16_grid8",
+      "method": "cuda_eager",
+      "median_host_ms": 3.9251666676136665,
+      "min_host_ms": 3.753366666690757,
+      "max_host_ms": 4.550333333706173,
+      "median_device_ms": 3.5898027420043945
+    },
+    {
+      "case": "C16_grid8",
+      "method": "cuda_graph",
+      "median_host_ms": 2.406933332774012,
+      "min_host_ms": 0.5078333318427516,
+      "max_host_ms": 2.4553000015051416,
+      "median_device_ms": 2.0302507082621255
+    },
+    {
+      "case": "C16_grid8",
+      "method": "render",
+      "median_host_ms": 2.316866666660644,
+      "min_host_ms": 0.8769000002454655,
+      "max_host_ms": 2.728733333545582,
+      "median_device_ms": 1.7053013333333331
+    },
+    {
+      "case": "C16_grid8",
+      "method": "scalar_render",
+      "median_host_ms": 11.651066665460045,
+      "min_host_ms": 2.1734000013869568,
+      "max_host_ms": 12.013333335441226,
+      "median_device_ms": 10.978645333333333
+    },
+    {
+      "case": "C16_grid8",
+      "method": "best_cuda_over_render",
+      "ratio": 1.0388743415447308
+    },
+    {
+      "case": "C16_grid32",
+      "method": "cuda_eager",
+      "median_host_ms": 4.290866667967445,
+      "min_host_ms": 3.999933333640608,
+      "max_host_ms": 4.8877666680103475,
+      "median_device_ms": 3.805866559346517
+    },
+    {
+      "case": "C16_grid32",
+      "method": "cuda_graph",
+      "median_host_ms": 2.488366667724525,
+      "min_host_ms": 2.4183000011059144,
+      "max_host_ms": 2.5470333324240833,
+      "median_device_ms": 2.099541346232096
+    },
+    {
+      "case": "C16_grid32",
+      "method": "render",
+      "median_host_ms": 2.5380666678150496,
+      "min_host_ms": 2.510766666091513,
+      "max_host_ms": 2.6155999997475496,
+      "median_device_ms": 1.821696
+    },
+    {
+      "case": "C16_grid32",
+      "method": "scalar_render",
+      "median_host_ms": 12.859600001926689,
+      "min_host_ms": 12.652800001281625,
+      "max_host_ms": 12.962866666687964,
+      "median_device_ms": 12.099242666666667
+    },
+    {
+      "case": "C16_grid32",
+      "method": "best_cuda_over_render",
+      "ratio": 0.9804181660313478
+    },
+    {
+      "case": "C16_grid128",
+      "method": "cuda_eager",
+      "median_host_ms": 10.225600000315657,
+      "min_host_ms": 10.115199998836033,
+      "max_host_ms": 11.096999999911835,
+      "median_device_ms": 9.711615880330404
+    },
+    {
+      "case": "C16_grid128",
+      "method": "cuda_graph",
+      "median_host_ms": 10.717400000430644,
+      "min_host_ms": 10.21739999850979,
+      "max_host_ms": 10.810599999482898,
+      "median_device_ms": 10.32703971862793
+    },
+    {
+      "case": "C16_grid128",
+      "method": "render",
+      "median_host_ms": 6.658499999806129,
+      "min_host_ms": 6.399066667654552,
+      "max_host_ms": 7.218133333177927,
+      "median_device_ms": 5.947392
+    },
+    {
+      "case": "C16_grid128",
+      "method": "scalar_render",
+      "median_host_ms": 32.91639999952167,
+      "min_host_ms": 28.38049999991199,
+      "max_host_ms": 33.39099999963461,
+      "median_device_ms": 32.14813866666667
+    },
+    {
+      "case": "C16_grid128",
+      "method": "best_cuda_over_render",
+      "ratio": 1.5357212586338347
+    },
+    {
+      "case": "C48_grid8",
+      "method": "cuda_eager",
+      "median_host_ms": 4.069866665910619,
+      "min_host_ms": 3.7231333335512318,
+      "max_host_ms": 4.505666666470158,
+      "median_device_ms": 3.6324691772460938
+    },
+    {
+      "case": "C48_grid8",
+      "method": "cuda_graph",
+      "median_host_ms": 3.298233333528818,
+      "min_host_ms": 2.4595333331186944,
+      "max_host_ms": 3.3673333333960422,
+      "median_device_ms": 2.9259093602498374
+    },
+    {
+      "case": "C48_grid8",
+      "method": "render",
+      "median_host_ms": 4.000466668609685,
+      "min_host_ms": 3.5232333345144675,
+      "max_host_ms": 5.729500000597909,
+      "median_device_ms": 3.355648
+    },
+    {
+      "case": "C48_grid8",
+      "method": "scalar_render",
+      "median_host_ms": 40.0137333344901,
+      "min_host_ms": 27.394066666602157,
+      "max_host_ms": 42.368400000365604,
+      "median_device_ms": 39.218176
+    },
+    {
+      "case": "C48_grid8",
+      "method": "best_cuda_over_render",
+      "ratio": 0.8244621457313829
+    },
+    {
+      "case": "C48_grid32",
+      "method": "cuda_eager",
+      "median_host_ms": 4.846033332190321,
+      "min_host_ms": 4.078833335370291,
+      "max_host_ms": 4.940733332963039,
+      "median_device_ms": 4.360191980997722
+    },
+    {
+      "case": "C48_grid32",
+      "method": "cuda_graph",
+      "median_host_ms": 3.9967333335274207,
+      "min_host_ms": 2.7246333338553086,
+      "max_host_ms": 4.038166667063099,
+      "median_device_ms": 3.5959466298421225
+    },
+    {
+      "case": "C48_grid32",
+      "method": "render",
+      "median_host_ms": 4.0834666676043225,
+      "min_host_ms": 3.9471666677854955,
+      "max_host_ms": 5.812166666146368,
+      "median_device_ms": 3.4194773333333335
+    },
+    {
+      "case": "C48_grid32",
+      "method": "scalar_render",
+      "median_host_ms": 44.662566666374914,
+      "min_host_ms": 27.6593333328492,
+      "max_host_ms": 44.71189999943211,
+      "median_device_ms": 43.883861333333336
+    },
+    {
+      "case": "C48_grid32",
+      "method": "best_cuda_over_render",
+      "ratio": 0.9787598770512834
+    },
+    {
+      "case": "C48_grid128",
+      "method": "cuda_eager",
+      "median_host_ms": 4.3203333334531635,
+      "min_host_ms": 4.152800000156276,
+      "max_host_ms": 69.04293333354872,
+      "median_device_ms": 4.030122756958008
+    },
+    {
+      "case": "C48_grid128",
+      "method": "cuda_graph",
+      "median_host_ms": 9.794499999164449,
+      "min_host_ms": 3.7215333334946386,
+      "max_host_ms": 29.363633332347188,
+      "median_device_ms": 9.601365407307943
+    },
+    {
+      "case": "C48_grid128",
+      "method": "render",
+      "median_host_ms": 5.600366666233943,
+      "min_host_ms": 5.319633334390043,
+      "max_host_ms": 5.6202333338054205,
+      "median_device_ms": 5.144917333333333
+    },
+    {
+      "case": "C48_grid128",
+      "method": "scalar_render",
+      "median_host_ms": 74.94380000086191,
+      "min_host_ms": 34.08853333530715,
+      "max_host_ms": 110.07396666536806,
+      "median_device_ms": 74.40145066666666
+    },
+    {
+      "case": "C48_grid128",
+      "method": "best_cuda_over_render",
+      "ratio": 0.7714375845248792
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "cuda_eager",
+      "median_host_ms": 5.387933333016311,
+      "min_host_ms": 4.710066668242992,
+      "max_host_ms": 5.830799998269261,
+      "median_device_ms": 4.847957293192546
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "cuda_graph",
+      "median_host_ms": 2.859699998225551,
+      "min_host_ms": 0.552733331763496,
+      "max_host_ms": 2.9576000015367754,
+      "median_device_ms": 2.4893439610799155
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "render",
+      "median_host_ms": 2.6677000011356236,
+      "min_host_ms": 1.781333334899197,
+      "max_host_ms": 2.733733332812941,
+      "median_device_ms": 1.8903040000000002
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "scalar_render",
+      "median_host_ms": 13.890800000808667,
+      "min_host_ms": 7.769999998951486,
+      "max_host_ms": 14.248666666389909,
+      "median_device_ms": 13.142357333333335
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "best_cuda_over_render",
+      "ratio": 1.0719721096855697
+    }
+  ],
+  "checks": 56,
+  "timing_rows": 196,
+  "energy_per_inference": "unknown_due_short_counter_resolution",
+  "independent_gpu_devices": 1,
+  "technical_repeats_not_independent": true
+}

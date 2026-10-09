@@ -1,0 +1,432 @@
+{
+  "status": "draft_parent_inventory_verified_from_closed_QTRAIN",
+  "utc": "2026-10-08T10:15:10.080988+00:00",
+  "parent_scientific_run": 37728384380,
+  "parent_source_commit": "6a5af5b68aaa9173edf46658dd8f9d16845fbad6",
+  "parent_archive_git_commit": "fd800145917408d19b01e15b1ed8edc2f81ad433",
+  "parent_plan_sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5",
+  "parents": [
+    {
+      "parent_case": "QTRAIN_paired_school0.0_seed200",
+      "extension_case": "QTRAIN_U16_paired_school0.0_seed200",
+      "parent_config": {
+        "run_id": "QTRAIN_paired_school0.0_seed200",
+        "init_seed": 200,
+        "policy": "paired",
+        "school_weight": 0.0,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "017f1d108eac80755d3583e27696ee2809ee08a2de685624f57410fc0f7585fa",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "8f996cd061605742a59b22680cb5b2a6904082076f95d0689d0abb7a5bdc99de",
+      "zip_sha256": "74d9bf53f034665db1a925673970b9c74a254ccfecd719b02a552aa84c7c317c",
+      "zip_bytes": 2165666,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_paired_school0.0_seed200/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_paired_school0.3_seed200",
+      "extension_case": "QTRAIN_U16_paired_school0.3_seed200",
+      "parent_config": {
+        "run_id": "QTRAIN_paired_school0.3_seed200",
+        "init_seed": 200,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "7bf202f6ab7a790ea62458c79ee2e5cff348097a5944063bcc5823dfa99102a1",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "31ec85b420a7f98058a4a9b12014332676c6d6c2d11494b67c403599471eb9fe",
+      "zip_sha256": "aca81c3692eaa1b34dc02836730f9f5cf0426720a739fe9fb0b049f261308837",
+      "zip_bytes": 2115293,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_paired_school0.3_seed200/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_repeated_school0.0_seed200",
+      "extension_case": "QTRAIN_U16_repeated_school0.0_seed200",
+      "parent_config": {
+        "run_id": "QTRAIN_repeated_school0.0_seed200",
+        "init_seed": 200,
+        "policy": "repeated",
+        "school_weight": 0.0,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "5e0dd331a6e15d907bfd735b5127a392e22166c0017dc726141f3f8e5e3a9c33",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "c5192b3eb56369e611313aaf6e780fc8519d345b157b176002ac0f6cd6119f65",
+      "zip_sha256": "c72aeb7f09f226817b79d859f65cb3d14a04bf482dadf52bc48c7b8cc3a99fbf",
+      "zip_bytes": 2172983,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_repeated_school0.0_seed200/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_repeated_school0.3_seed200",
+      "extension_case": "QTRAIN_U16_repeated_school0.3_seed200",
+      "parent_config": {
+        "run_id": "QTRAIN_repeated_school0.3_seed200",
+        "init_seed": 200,
+        "policy": "repeated",
+        "school_weight": 0.3,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "262397de01193ecf4d64c45efcef72d84ef5c385fd634decc086968abb62f9e2",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "b53f32aa534a5e555378a89df22b57f7284bba0dcae84c8dc503ba2b29556d28",
+      "zip_sha256": "cf84cbb10ef805493ee0288b7de5758a22d919c6be76eb9e29cc3d11bf441cbb",
+      "zip_bytes": 2102511,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_repeated_school0.3_seed200/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_paired_school0.0_seed201",
+      "extension_case": "QTRAIN_U16_paired_school0.0_seed201",
+      "parent_config": {
+        "run_id": "QTRAIN_paired_school0.0_seed201",
+        "init_seed": 201,
+        "policy": "paired",
+        "school_weight": 0.0,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "246086a6b601c988d3880c812b77fd6b97c39490861baeb71d96903af4749dcb",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "c8b6fa38dde0e10a1bf6e2ad0d580bc3b7bdffdb55a60637c15472f0f915b471",
+      "zip_sha256": "b3dead513fc480006e580eea1d16e9f529f711ed0d0987c712764d8c4bbd519f",
+      "zip_bytes": 2123202,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_paired_school0.0_seed201/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_paired_school0.3_seed201",
+      "extension_case": "QTRAIN_U16_paired_school0.3_seed201",
+      "parent_config": {
+        "run_id": "QTRAIN_paired_school0.3_seed201",
+        "init_seed": 201,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "11e834e94a8b0218733fccbfe3880ff2475786feba117abda2d36288923b88a5",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "2c1ec61397b20b1c018121438e0b17f176c584154862046e37dc4bbbb7530638",
+      "zip_sha256": "aada6de3c2c2e61a3e9cdf843067233dc79c40438dc59de46eabeaa91e8d94ea",
+      "zip_bytes": 2161343,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_paired_school0.3_seed201/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_repeated_school0.0_seed201",
+      "extension_case": "QTRAIN_U16_repeated_school0.0_seed201",
+      "parent_config": {
+        "run_id": "QTRAIN_repeated_school0.0_seed201",
+        "init_seed": 201,
+        "policy": "repeated",
+        "school_weight": 0.0,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "74ab6ebf3d6af221bc29fad5eaa0226464c29e50d489e6c51b0d3a56feff9605",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "9aebfb67e9872bca446805770c8bb9315bae7133a29246c6d25661765fc0f2c2",
+      "zip_sha256": "4a2bfb4a5235141e652182f89ff7425d2ea0c65615f2dee8839ba04fce708666",
+      "zip_bytes": 2134049,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_repeated_school0.0_seed201/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_repeated_school0.3_seed201",
+      "extension_case": "QTRAIN_U16_repeated_school0.3_seed201",
+      "parent_config": {
+        "run_id": "QTRAIN_repeated_school0.3_seed201",
+        "init_seed": 201,
+        "policy": "repeated",
+        "school_weight": 0.3,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "964e50006cf3dceda670e8d5e9d527cb69c2c2d402bfdc81a7975a24c4da13c0",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "04d053f77a04fbfc07868760519c9418f796b4cabc1ac32c8cbe8e3cdb4a5882",
+      "zip_sha256": "e8d400e692cd4d941586b70f2dede8c181f9a6d1705dcc0e069887a2026de397",
+      "zip_bytes": 2156126,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_repeated_school0.3_seed201/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_paired_school0.0_seed202",
+      "extension_case": "QTRAIN_U16_paired_school0.0_seed202",
+      "parent_config": {
+        "run_id": "QTRAIN_paired_school0.0_seed202",
+        "init_seed": 202,
+        "policy": "paired",
+        "school_weight": 0.0,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "e4fa659de0efce3415a59e8034129801244beda6a4241d1edb57a22e23839c86",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "ceba9b3f738e15497c625f52c4a6bff1a59848fd95df5a8b98ea0de9ec9ed8a3",
+      "zip_sha256": "dbc585ae701ca470281dd9a81713aa2f83d1152aa2e1f5cd4d4dbb129b5363ae",
+      "zip_bytes": 2143060,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_paired_school0.0_seed202/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_paired_school0.3_seed202",
+      "extension_case": "QTRAIN_U16_paired_school0.3_seed202",
+      "parent_config": {
+        "run_id": "QTRAIN_paired_school0.3_seed202",
+        "init_seed": 202,
+        "policy": "paired",
+        "school_weight": 0.3,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "72172bff4693c45d5e523c80c8d898da9f8e638f4b865ced8eb5a53e78979b92",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "bbd6b9456809b2a1940cab89c4c790e74fa0bdb9a61f7343eafbaae6345f027f",
+      "zip_sha256": "b46997144f87eba986b32045067e31f0c31a8f06a7d13a54590817594f1a777b",
+      "zip_bytes": 2165541,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_paired_school0.3_seed202/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_repeated_school0.0_seed202",
+      "extension_case": "QTRAIN_U16_repeated_school0.0_seed202",
+      "parent_config": {
+        "run_id": "QTRAIN_repeated_school0.0_seed202",
+        "init_seed": 202,
+        "policy": "repeated",
+        "school_weight": 0.0,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "ab676dab62231a7060991a7123020cca3b2eda128d94b1180c0c7dcb5db39d2f",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "68133e17390c76fd258871b2a2d7463ddc22fcbe70bbc2a9d81dd64fb3159cc7",
+      "zip_sha256": "7535d4aded095240903def09dbeea7f85110fb761ebfdae6fc514f38b44180bc",
+      "zip_bytes": 2117003,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_repeated_school0.0_seed202/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    },
+    {
+      "parent_case": "QTRAIN_repeated_school0.3_seed202",
+      "extension_case": "QTRAIN_U16_repeated_school0.3_seed202",
+      "parent_config": {
+        "run_id": "QTRAIN_repeated_school0.3_seed202",
+        "init_seed": 202,
+        "policy": "repeated",
+        "school_weight": 0.3,
+        "updates": 8192
+      },
+      "checkpoint_sha256": "0fc58e2e24af8b2f65736f864358a8be7e4a133bde50cf48541361cb3690d188",
+      "checkpoint_bytes": 410389,
+      "result_sha256": "287d4ae08a54c539e7ca3f21a7e5ec05be9783508fb09aebbf7d23daa4203c65",
+      "zip_sha256": "03ce0cbe426b450d82bc9f8b10f4ad98298551da23131be9f18f7b4f85566a7d",
+      "zip_bytes": 2151244,
+      "remote_zip_path": "results/research/OPT03_QTRAIN_cloud/37728384380/QTRAIN_repeated_school0.3_seed202/raw.zip",
+      "datasets": {
+        "probe": {
+          "content_sha256": "5bb55e59560c3676451d35de50f3c0a9b3f66b8be788f1be3a6914605c224e02",
+          "file": "probe_n2048_seed77001.npz",
+          "n": 2048,
+          "sample_seed": 77001,
+          "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+          "split": "train"
+        },
+        "validation": {
+          "content_sha256": "b71e3227f8cbe871d1e1aad3973b11164f9cea59393c0cd982cdfbd93491b923",
+          "file": "validation_n4096_seed77002.npz",
+          "n": 4096,
+          "sample_seed": 77002,
+          "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+          "split": "validation"
+        }
+      }
+    }
+  ],
+  "expected_parents": 12,
+  "new_training_started": false
+}
