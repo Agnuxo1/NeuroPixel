@@ -9,7 +9,8 @@ permissions:
   contents: write
 concurrency:
   group: neuropixel-dev04-readonly-20261009
-  cancel-in-progress: false
+  # Replaces only this project's own observe-only run; runtime fences its termination.
+  cancel-in-progress: true
 jobs:
   readonly-verification:
     runs-on: ubuntu-24.04
@@ -40,5 +41,6 @@ jobs:
           python -c "import scripts.verify_DEV04_archived_cases; import scripts.recover_DEV04_snapshot; import scripts.replay_DEV04; print('Read-only import closure present')"
           python scripts/test_DEV04_body_recount.py -v
           python scripts/test_DEV04_execution_registry.py -v
+          python scripts/test_DEV04_free_slot_guards.py -v
       - name: Wait for scientific slots then recover and replay twelve cases serially
         run: python scripts/verify_DEV04_archived_cases.py

@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import json
 import pathlib
+import subprocess
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('archive',ROOT/'neuropixel/research/dev04_transport.py')
@@ -19,12 +20,23 @@ REPO='Agnuxo1/NeuroPixel'
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--tree-snapshot',type=pathlib.Path,required=True);parser.add_argument('--case',required=True);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--tree-snapshot',type=pathlib.Path,required=True);parser.add_argument('--case',required=True)
+    parser.add_argument('--git-object-cache',type=pathlib.Path);args=parser.parse_args()
     plan_path=ROOT/'docs/research/DEV04_execution_plan.json'
     if hashlib.sha256(plan_path.read_bytes()).hexdigest()!=PLAN:raise ValueError('Exact DEV04 plan differs')
     plan=json.loads(plan_path.read_text(encoding='utf-8'));expected={r['run_id']:r for r in plan['runs']}
     if args.case not in expected:raise ValueError('Unknown case')
     snapshot=load_snapshot(args.tree_snapshot,REPO);commit=snapshot['commit']['sha'];tree=snapshot['tree']
+    entries_by_path={entry['path']:entry for entry in tree['tree'] if entry['type']=='blob'}
+    def pinned_bytes(path):
+        entry=entries_by_path.get(path)
+        if entry is None:raise ValueError('Required archive path absent from pinned Git tree')
+        if args.git_object_cache:
+            raw=subprocess.check_output(['git','-c','safe.directory='+args.git_object_cache.resolve().as_posix(),
+                '--git-dir='+str(args.git_object_cache.resolve()),'cat-file','blob',entry['sha']])
+        else:raw=get(f'https://raw.githubusercontent.com/{REPO}/{commit}/{path}')
+        if hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()!=entry['sha']:raise ValueError('Pinned Git blob differs')
+        return raw
     prefix=f'results/research/DEV04_cloud/{archive.REG}/'
     candidates=[]
     entries=[e for e in tree['tree'] if e['type']=='blob' and e['path'].startswith(prefix+args.case) and e['path'].endswith('/receipt.json')]
@@ -33,7 +45,7 @@ def main():
     for entry in completed or entries:
         path=entry['path']
         if entry['type']!='blob' or not path.startswith(prefix) or not path.endswith('/receipt.json'):continue
-        raw=get(f'https://raw.githubusercontent.com/{REPO}/{commit}/{path}')
+        raw=pinned_bytes(path)
         blob=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
         if blob!=entry['sha']:raise ValueError('Pinned receipt Git blob differs')
         receipt=json.loads(raw)
@@ -43,7 +55,7 @@ def main():
         print(json.dumps(dict(case=args.case,status='no_durable_archive_yet',training_restarted=False)));return
     _,path,receipt,receipt_raw,blob=max(candidates,key=lambda row:row[0]);folder_name=path.rsplit('/',2)[1]
     dest=ROOT/f'results/research/DEV04_recovery/{RUN}';original=dest/'originals'/folder_name;zipped=original/'original.zip'
-    raw=zipped.read_bytes() if zipped.exists() else get(f'https://raw.githubusercontent.com/{REPO}/{commit}/{path.rsplit("/",1)[0]}/raw.zip')
+    raw=zipped.read_bytes() if zipped.exists() else pinned_bytes(path.rsplit('/',1)[0]+'/raw.zip')
     if len(raw)!=receipt['zip_bytes'] or hashlib.sha256(raw).hexdigest()!=receipt['zip_sha256']:raise ValueError('Original archive size/hash differs')
     archive.old.immutable(zipped,raw);archive.old.immutable(original/'receipt.json',receipt_raw)
     target=dest/'cohort' if receipt['case_status']=='completed' else ROOT.parent/'.cognition/dev04-partials'/str(RUN)/folder_name
