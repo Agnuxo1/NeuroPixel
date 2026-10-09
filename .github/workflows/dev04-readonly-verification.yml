@@ -1,0 +1,43 @@
+name: NeuroPixel DEV04 serial independent read-only verification
+on:
+  push:
+    branches: [research/dev04-readonly-verification-2026-10-09]
+    paths:
+      - .github/workflows/dev04-readonly-verification.yml
+      - scripts/verify_DEV04_archived_cases.py
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-dev04-readonly-20261009
+  cancel-in-progress: false
+jobs:
+  readonly-verification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Identical frozen CPU software
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Verify governance and independent recount contracts
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from scripts.research_DEV04 import load_plan
+          load_plan(Path('docs/research/DEV04_execution_plan.json'),'2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a')
+          print('Forty-three governing files intact; no scientific updates')
+          PY
+          python scripts/test_DEV04_body_recount.py -v
+          python scripts/test_DEV04_execution_registry.py -v
+      - name: Wait for scientific slots then recover and replay twelve cases serially
+        run: python scripts/verify_DEV04_archived_cases.py
