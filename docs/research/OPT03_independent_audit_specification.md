@@ -1,0 +1,17 @@
+# Auditoría independiente de OPT03-D
+
+Especificación del 8 de octubre de 2026, preparada mientras el job113050279929 seguía vivo y antes de inspeccionar endpoints nuevos. No modifica la receta congelada ni adelanta etapas4–8.
+
+El recibo de datos crudos debe fijar ejecución37696760073 y fuente59c0dbdc9107176f4f6759172c4b7de60d9f6a3e. Se comprobarán SHA256/bytes del ZIP original y sus archivos, inventario exacto, planbf54be3c4c8e30885b330e67e92195622e28c85a49e317358d106699d40008df y nueve hashes de fuentes congeladas. Ningún artefacto derivado se escribe dentro del archivo original.
+
+El recuento aritmético independiente verifica por endpoint: denominadores enteros y balanceados, aciertos por rol, sumas, exactitud global, binding equiponderado de AGENTE/PACIENTE, NLL finita/no negativa y Wilson cuando exista. Una bandera global de `test_accessed=false` no puede ocultar una bandera distinta en un endpoint. Se rechazan ventanas ausentes, reordenadas o repetidas, recursos sin evidencia o bajo8GiB y un gate reportado discordante con sus métricas. La igualdad de pérdidas respuesta+0,3×escuela se verifica con un margen de redondeo float32 escalado, declarado antes de resultados.
+
+Los dos datasets train/validation se regeneran con los seeds originales y se comparan bit a bit en canvas/targets/roles. No se generan ejemplos de test. Se verifica identidad, finitud y número nominal de parámetros29824 en cada checkpoint; optimizador8192steps, LR0,003, decay0,0001, betas(0,9;0,999), eps1e-8 y sus tensores finitos.
+
+Cada checkpoint final se evalúa sobre ambos datasets guardados con inferencia CPU y dos threads. Las métricas de aciertos y exactitudes deben concordar con tolerancia absoluta1e-12; la NLL media admite1e-4, como política numérica previa de la auditoría. Se conservan discrepancias y entorno de replay. Esta tolerancia no cambia el criterio de competencia95%/90% ni la receta. Los resultados numéricos se distinguen del recuento exacto de decisiones/etiquetas, especialmente ante un cambio de plataforma.
+
+**Límite de procedencia:** el runner no archivó decisiones por ejemplo ni checkpoints históricos de cada endpoint. La auditoría puede recontar métricas finales desde el checkpoint final y verificar aritmética de las métricas intermedias, pero no demostrar equivalencia por ejemplo de decisiones archivadas que no existen ni re-ejecutar un endpoint anterior desde pesos ausentes. Las nuevas predicciones de replay se guardan como derivados, sin presentar su origen como original. Esta auditoría de proyecto tampoco es replicación externa independiente.
+
+Nueve contratos con fixtures de recuentos enteros y corrupción deliberada pasaron: binding confundido con accuracy global, NaN/Inf/booleanos, denominadores incorrectos, aciertos contradictorios, Wilson falsificado, exposición de test en un endpoint, gate falso, ventanas ausentes y objetivo inconsistente. También se verificó una cohorte construida de tres semillas con efectos calculables y el rechazo de selección cuando falta una réplica. Esos tests verifican el auditor, no el rendimiento aprendido.
+
+Scripts: `scripts/analyze_OPT03_development.py`, `neuropixel/research/OPT03_audit_math.py`, `scripts/test_OPT03_audit_math.py` y `scripts/audit_OPT03_checkpoint_results.py`. El estado de tarea3 solo se decide después de recibir la cohorte, completar esta auditoría y aplicar el gate congelado. Ningún éxito de tests o workflow establece por sí mismo competencia o beneficio general.

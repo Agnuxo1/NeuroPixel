@@ -1,0 +1,74 @@
+{
+  "observed_utc": "2026-10-09T03:09:37.313205+00:00",
+  "status": "verified_available_partial_endpoint_replay",
+  "verification_run_id": 37876687599,
+  "verification_source_commit": "0ef7446ff8a0b872b3d2f85d5deb11d387ac4375",
+  "records": [
+    {
+      "case": "DEV04_partition101_seed400",
+      "verified": true,
+      "checks": 831,
+      "decisions": 811008,
+      "max_mean_nll_error": 2.220446049250313e-16,
+      "archive_git_commit": "24524057d285449cb2d3adf5b928a72b76f12c40",
+      "git_blob": "bbefb6648df043857cd27c34b3040c843f452c45",
+      "remote_path": "results/research/DEV04_replay_cloud/37845945011/37876687599/DEV04_partition101_seed400/replay.json",
+      "sha256": "bb696fc4dd48d3e8a60c220d1581553d1cc2e8e58e5a9a37ac8d254839286545",
+      "bytes": 11603
+    },
+    {
+      "case": "DEV04_partition101_seed401",
+      "verified": true,
+      "checks": 831,
+      "decisions": 811008,
+      "max_mean_nll_error": 8.149072527885437e-10,
+      "archive_git_commit": "24524057d285449cb2d3adf5b928a72b76f12c40",
+      "git_blob": "e1f9295df13894309cadd1b4e8684102d6941ca1",
+      "remote_path": "results/research/DEV04_replay_cloud/37845945011/37876687599/DEV04_partition101_seed401/replay.json",
+      "sha256": "b4f5f2a777f69f3209f723e2b3bec9567a09d82a12544846cd984cd1a47e6023",
+      "bytes": 11603
+    },
+    {
+      "case": "DEV04_partition101_seed402",
+      "verified": true,
+      "checks": 831,
+      "decisions": 811008,
+      "max_mean_nll_error": 2.220446049250313e-16,
+      "archive_git_commit": "24524057d285449cb2d3adf5b928a72b76f12c40",
+      "git_blob": "35a543253056a0a31f6ed0e6f7ade2410605f3e7",
+      "remote_path": "results/research/DEV04_replay_cloud/37845945011/37876687599/DEV04_partition101_seed402/replay.json",
+      "sha256": "50a0fe2f3182f9c344becff081bf40a152b1a238e46a382b7dfdab0167d43508",
+      "bytes": 11608
+    },
+    {
+      "case": "DEV04_partition102_seed404",
+      "verified": true,
+      "checks": 831,
+      "decisions": 811008,
+      "max_mean_nll_error": 1.7334620272535517e-07,
+      "archive_git_commit": "24524057d285449cb2d3adf5b928a72b76f12c40",
+      "git_blob": "c1e4fcf0abb277180b9a1acb1b869605e5814705",
+      "remote_path": "results/research/DEV04_replay_cloud/37845945011/37876687599/DEV04_partition102_seed404/replay.json",
+      "sha256": "4eb6665d4200602c601a999f863cafff05dbdee610c8102c622997373030cadc",
+      "bytes": 11604
+    }
+  ],
+  "missing": [
+    "DEV04_partition101_seed403",
+    "DEV04_partition102_seed405",
+    "DEV04_partition102_seed406",
+    "DEV04_partition102_seed407",
+    "DEV04_partition103_seed408",
+    "DEV04_partition103_seed409",
+    "DEV04_partition103_seed410",
+    "DEV04_partition103_seed411"
+  ],
+  "issues": [],
+  "verified_cases": 4,
+  "checks": 3324,
+  "individual_decisions_replayed": 3244032,
+  "tree_snapshot_sha256": "b3f758dd8e69b4640dc80cea4c0419478ce7cdb26223f595be8dc0955944a2e5",
+  "new_training_updates": 0,
+  "cohort_effects_estimated": false,
+  "scientific_task3_complete": false
+}

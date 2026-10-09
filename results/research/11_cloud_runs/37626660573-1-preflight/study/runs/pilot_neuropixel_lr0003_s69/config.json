@@ -1,0 +1,91 @@
+{
+  "batch_size": 32,
+  "family": "neuropixel",
+  "firing_seed": 110069,
+  "gradient_clip": 1.0,
+  "index_seed": 100069,
+  "initialization_seed": 69,
+  "kind": "pilot",
+  "learning_rate": 0.003,
+  "loss": "answer_cross_entropy_only",
+  "model": {
+    "c": 48,
+    "c_id": 16,
+    "fire_rate": 0.5,
+    "grounded": false,
+    "hidden": 128,
+    "parameters": 29392,
+    "retina": false,
+    "state_payload_bytes_float32": 1728,
+    "state_values_per_example": 432
+  },
+  "optimizer": "AdamW",
+  "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+  "run_id": "pilot_neuropixel_lr0003_s69",
+  "schedule": "constant",
+  "seed": 69,
+  "task": {
+    "answer_tokens": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "census_n": 48,
+    "census_order": "target token outer; row-major cue position inner",
+    "cue_positions": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "fact_updates": 3,
+    "gap_updates": 3,
+    "height": 3,
+    "out_pos": [
+      2,
+      2
+    ],
+    "pad": 0,
+    "query": 1,
+    "query_pos": [
+      2,
+      1
+    ],
+    "query_updates": 10,
+    "vocab": 8,
+    "width": 3
+  },
+  "updates": 1024,
+  "weight_decay": 0.0001
+}

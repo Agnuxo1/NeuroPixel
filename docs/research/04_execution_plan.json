@@ -1,0 +1,130 @@
+{
+  "item": 4,
+  "frozen_implementation_at_utc": "2026-10-06T22:20:54.022916+00:00",
+  "protocol_id": "NP-SCI-20261006-v1",
+  "protocol_sha256": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+  "scientific_training_started": false,
+  "families": {
+    "neuropixel": {
+      "family": "neuropixel",
+      "vocab": 35,
+      "h": 8,
+      "w": 8,
+      "steps": 16,
+      "recurrent_steps": 16,
+      "out_pos": [
+        7,
+        7
+      ],
+      "kwargs": {
+        "c_id": 16,
+        "c": 48,
+        "hidden": 128,
+        "fire_rate": 0.5,
+        "tied": true,
+        "reinject": true,
+        "freeze_pad": false
+      },
+      "parameters": 29824,
+      "dropout": 0.0,
+      "primary_supervision": "answer_cross_entropy_only"
+    },
+    "standard_nca": {
+      "family": "standard_nca",
+      "vocab": 35,
+      "h": 8,
+      "w": 8,
+      "steps": 16,
+      "recurrent_steps": 16,
+      "out_pos": [
+        7,
+        7
+      ],
+      "kwargs": {
+        "c_id": 16,
+        "c": 48,
+        "hidden": 128,
+        "fire_rate": 0.5,
+        "tied": false,
+        "reinject": false,
+        "freeze_pad": false
+      },
+      "parameters": 30384,
+      "dropout": 0.0,
+      "primary_supervision": "answer_cross_entropy_only"
+    },
+    "convgru": {
+      "family": "convgru",
+      "vocab": 35,
+      "h": 8,
+      "w": 8,
+      "steps": 16,
+      "recurrent_steps": 16,
+      "out_pos": [
+        7,
+        7
+      ],
+      "kwargs": {
+        "c_id": 16,
+        "c": 24
+      },
+      "parameters": 27835,
+      "dropout": 0.0,
+      "primary_supervision": "answer_cross_entropy_only"
+    },
+    "relative_transformer": {
+      "family": "relative_transformer",
+      "vocab": 35,
+      "h": 8,
+      "w": 8,
+      "steps": 16,
+      "recurrent_steps": null,
+      "out_pos": [
+        7,
+        7
+      ],
+      "kwargs": {
+        "d": 32,
+        "layers": 2,
+        "heads": 4,
+        "ff": 128
+      },
+      "parameters": 29547,
+      "dropout": 0.0,
+      "primary_supervision": "answer_cross_entropy_only"
+    }
+  },
+  "learning_rates": [
+    0.001,
+    0.003
+  ],
+  "initialization_seed": 7,
+  "updates": 1024,
+  "batch_size": 64,
+  "optimizer": {
+    "name": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": null
+  },
+  "cpu_compatibility": {
+    "passed": 87,
+    "skipped": 2,
+    "seconds": 2.67,
+    "torch": "2.14.1+cpu"
+  },
+  "cuda_compatibility": "pending queued preflight",
+  "test_access_policy": "Persist selection and source hashes before first final dataset construction",
+  "queue": {
+    "name": "NeuroPixel:SCI-004 pilot",
+    "nominal_vram_gib": 6,
+    "admission_available_ram_gib": 9,
+    "runtime_minimum_available_ram_gib": 8,
+    "minimum_free_vram_gib": 3.5,
+    "maximum_temperature_c": 83,
+    "cpu_threads": 4
+  }
+}

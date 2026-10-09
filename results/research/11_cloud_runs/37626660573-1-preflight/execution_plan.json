@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "item": 11,
+  "phase": "preflight",
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T13:11:49+00:00",
+  "freeze_parent_commit": "bf8e4829ef609df3d7487bfe18ceaf6be24f949f",
+  "scope": "Eight focused controller contracts and four complete 1024-update seed69 delayed-copy pilots; select two rates by development only. A completed negative competence result blocks all main/final work. Known task census, not a blind content holdout.",
+  "runtime": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.1",
+      "Pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "torch": "2.6.0+cpu"
+    },
+    "threads": 2,
+    "interop_threads": 1
+  },
+  "limits": {
+    "worker_seconds": 1800,
+    "archive_reserve_seconds": 180,
+    "workflow_minutes": 40,
+    "minimum_available_ram_gib": 8,
+    "aggregate_active_cpu_threads": 4,
+    "numerical_threads": 2,
+    "git_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "heartbeat_interval_seconds": 60,
+    "archive_interval_seconds": 300,
+    "git_timeout_seconds": 60
+  },
+  "stages": [
+    {
+      "name": "contract_tests",
+      "seconds": 180,
+      "files": [
+        "tests/test_memory_study.py"
+      ],
+      "expected_count": 8
+    },
+    {
+      "name": "preflight",
+      "seconds": 1440,
+      "script": "scripts/research_memory_study.py"
+    }
+  ],
+  "recipe": {
+    "schema_version": 1,
+    "task": {
+      "vocab": 8,
+      "pad": 0,
+      "query": 1,
+      "answer_tokens": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "height": 3,
+      "width": 3,
+      "out_pos": [
+        2,
+        2
+      ],
+      "query_pos": [
+        2,
+        1
+      ],
+      "cue_positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "census_order": "target token outer; row-major cue position inner",
+      "census_n": 48,
+      "fact_updates": 3,
+      "gap_updates": 3,
+      "query_updates": 10
+    },
+    "models": {
+      "neuropixel": {
+        "c_id": 16,
+        "c": 48,
+        "hidden": 128,
+        "fire_rate": 0.5,
+        "grounded": false,
+        "retina": false,
+        "parameters": 29392,
+        "state_values_per_example": 432,
+        "state_payload_bytes_float32": 1728
+      },
+      "gru": {
+        "e": 8,
+        "d": 48,
+        "hid": 70,
+        "parameters": 29336,
+        "state_values_per_example": 70,
+        "state_payload_bytes_float32": 280
+      }
+    },
+    "optimization": {
+      "optimizer": "AdamW",
+      "weight_decay": 0.0001,
+      "gradient_clip": 1.0,
+      "batch_size": 32,
+      "schedule": "constant",
+      "loss": "answer_cross_entropy_only"
+    },
+    "randomness": {
+      "generator": "PCG64",
+      "index_seed_offset": 100000,
+      "firing_seed_offset": 110000,
+      "train_delays": [
+        0,
+        1,
+        2
+      ],
+      "delay_unit": "one independently sampled delay per minibatch",
+      "sample_unit": "uniform replacement from 48 target-position pairs"
+    },
+    "preflight": {
+      "seed": 69,
+      "updates": 1024,
+      "learning_rates": [
+        0.001,
+        0.003
+      ],
+      "development_delays": [
+        3,
+        4
+      ],
+      "competence_delay": 2,
+      "competence_threshold": 0.95,
+      "selection": [
+        "mean_dev_accuracy_desc",
+        "mean_dev_ce_asc",
+        "lr_asc"
+      ],
+      "admission": "both selected pilots pass the full 48-row delay-2 census"
+    },
+    "main": {
+      "seeds": [
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      "updates": 2048
+    },
+    "evaluation": {
+      "normal_delays": [
+        0,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "intervention_delays": [
+        2,
+        8
+      ],
+      "interventions": [
+        "cue_erased",
+        "zero",
+        "swap"
+      ],
+      "state_boundary": "immediately before query, after all cue and gap frames",
+      "swap": "state[recipient] = state[donor]; next cyclic target at same cue position",
+      "interference_delay": 8,
+      "interference_cases": [
+        "blank_repeated",
+        "same_position",
+        "next_position"
+      ],
+      "distractors": "all 6 target x 8 cue-position x 6 independent distractor labels",
+      "distractor_frame": "replace first blank frame; unchanged frame/update inventory",
+      "interference_strata": [
+        "all",
+        "same_label",
+        "different_label"
+      ],
+      "case_count_per_checkpoint": 16,
+      "primary_delay": 8,
+      "primary": "five paired NeuroPixel-minus-GRU normal-delay8 accuracy differences",
+      "near_competence_threshold": 0.95,
+      "retention_threshold": 0.95
+    }
+  },
+  "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+  "inputs": {
+    "probe": {
+      "archive_commit": "ae82b5154c8d3d7da132c4b95ff05009be253437",
+      "path": "results/research/11_cloud_runs/37624600542-1-probe",
+      "files_sha256": {
+        "archive_manifest.json": "147e82bd0325d43683338ee18bd40809006921f27f569ff48342753853d91f62",
+        "contract_tests_environment.json": "05a2c6132a0676c2dbdc5a1c2c18d870decf57686ce42d85ba502e7446fc7bab",
+        "contract_tests_resource_monitor.json": "a366e0bec89aba15c672ba82262c96a06b02d4df69bf65ba875c967e24712395",
+        "contract_tests_status.json": "e5769b7fae5bebd503a2818d00b3e1131a227efe0247e56a2c1c65a89961e115",
+        "contract_tests.log": "dfc667dcd4bd3dd35fc871104df537a31ee2dce82951666d8d7ad5260ddd323d",
+        "execution_plan.json": "e93c42d0a6c62f4870f26d360dbdc9d877fe0d5196e5d207db86ce1b65db8bc5",
+        "memory_probe_environment.json": "96f23184bbd50a69dfcc109e5a0c03c801ce2c125a0f56be12b8d0dbf63a7198",
+        "memory_probe_status.json": "94f84a55fe6492a04bb81b1a76d38c5335043da4f1457fc0018797476b8acd67",
+        "probe_environment.json": "0b0049261356c7a08bf1c096bcbad0496a6292452a0a5f76042bf212519c6c82",
+        "probe_resource_monitor.json": "e070631a2e9a66b142d25fce3ae628a22d099d6c6b63b318d6b0e585dd1fceea",
+        "probe_status.json": "98cf2edc9ee0f2126981e9803ad6ae60dd4497acc00e1157d13708d3412d9a42",
+        "probe.log": "acc6ba03f3370488979e4777b331d9147eb853485ca881cca0e88f34891cb623",
+        "probe/default_query_reference.npz": "f2b13be72f0f10a48467f0af878216922468403782aa578a08d44d4c3a173760",
+        "probe/diagnostic_buffers.npz": "f60ccbf70401ed3e0a1c8ef71973c3d3b300f8bb61fb0287ff3ee4b1da92857e",
+        "probe/diagnostic_parameters.npz": "a569e0629a927982c62007744f576d102e4c391ff9ec04cd91526730e4a88d97",
+        "probe/final_rng.npz": "b438a798a42292c12498acacb63fed7666913edc4e85d79a88623a23e056d4aa",
+        "probe/grounded_parameters_only.pt": "d60a4500eb624282533f4b01c7fe77d534e1500123c66dc5bd77893b752b510d",
+        "probe/grounding_serialization.npz": "81fb4a8cc63f9840598ef8d924e052261035c1fd3f77f3b31f7a1f11ea2b6a76",
+        "probe/initial_rng.npz": "2a9962ed555be0b10b52ba4895e5042cc337b30c9ccb1ddaafbae7badf4f657e",
+        "probe/inputs.npz": "93e033dc8500c86b412296f3ded578564e6eb63392636d2c42f792cac27a8b37",
+        "probe/probe_report.json": "f324040a53f010dee9193446bf2102ef34825d6ec344eac356a273ad5111a386",
+        "probe/returned_state_ownership.npz": "658f2be4f5ce9cfe2ba9b7c7ce8458ab08deaf8445161385764594350d9c10d4",
+        "probe/separate_calls_cue_delay16.npz": "6197be3711b2676f0b7e56dabbda22a3fb58390b033cb1c432270d3d9d0eada5",
+        "probe/separate_calls_cue_delay4.npz": "42d21a2d6207e10c6bc7af430697f1263277b383c8332eafc07eb1d6bfd34633",
+        "probe/separate_calls_cue_distractor_delay4.npz": "a5b95761d1606c601c7a03f7d0be15a5da0ad04b654af4f5ca0d8201f6b8e4b1",
+        "probe/separate_calls_cue.npz": "7554b8f0f066dd8515471582bfab3d96c0e765a29111c8f32a9f1365fcc1213e",
+        "probe/separate_calls_empty.npz": "4660d17121b2d178f746831a05af3440b0fd939c2e30bdf936fc5a081b189e5c",
+        "probe/stream_delay0.npz": "aaf8b9f241358530a887b64cd0849bdc70885504ac7f5ccf3f58eb648e4ac213",
+        "probe/stream_delay16.npz": "0919c799913fe4f3cdbf885fac95869f71d30fbe861d5a3fa37879a9526cf38c",
+        "probe/stream_delay32.npz": "9db86a18faf0a5fac6aa378489af46267c5d5b90bc046e7a1016a13c2473fcef",
+        "probe/stream_delay4.npz": "0e47a002ac129e82bbb17b4608e97cbc786c3ab31f3270c2e793f3a05f0ee3e4",
+        "source_before.json": "a7318b62a8a15b4a380582faa41d415d8b9c701f79dfe25c55e098cd7aafcbf6",
+        "source.zip": "241c554ee63647ae82bdf70156337abc96b7486ca1d3e23588ae5720d6444f61",
+        "test_collection.json": "8286d5c9d379a3a09ecadc61cdb69974ab553a969b594d7b49a6f6c9d9397981",
+        "test_results.json": "46d2b82e4bc730139e888fa1a7ecaa1bf537eeb9e92286f05058d5bbc01c8eef",
+        "tests.xml": "17de8ddc3da0c28486a1445d9db5841a983c13c86cdfdd6735b0f70b88255048",
+        "worker_status.json": "cfed04129f285b7d8712c2cf47fc54aaa6245d5cbcfe413e5b557e2e4c32bbae"
+      }
+    }
+  },
+  "analysis": {
+    "primary": "mean five paired NeuroPixel-minus-GRU normal-delay8 accuracy differences",
+    "confidence_interval": "nominal two-sided Student t95,df4,unclipped; only primary",
+    "secondary": "all five values, means and sampleSD; no intervals or decisions",
+    "event_level_resampling": false,
+    "main_admission": "both DEV-selected pilots normal_d2 correct>=46 of48 AND verified probe/preflight saved-array/source/operational audits AND timing admission",
+    "main_training_projection": "20 * (maximum complete pilot elapsed_total_seconds in NeuroPixel + maximum complete pilot elapsed_total_seconds in GRU) + 60 <= 2400",
+    "main_limits_ceiling": {
+      "worker_seconds": 3000,
+      "archive_reserve_seconds": 180,
+      "tests_seconds": 180,
+      "train_seconds": 2400,
+      "final_seconds": 180,
+      "workflow_minutes": 60
+    }
+  },
+  "implementation_sha256": {
+    ".github/workflows/research-item11-audit.yml": "71ab1235084dfa2577cd2df0a52173b159a6b34939f92f63ec5fa53b32e0bc37",
+    ".github/workflows/research-item11-preflight.yml": "87ae242509a681bbbf01bde35813351c02ecafe2cef560a6305aad22b4b6182d",
+    "docs/research/11_memory_implementation.md": "623635d235b03df18b599909d1013809056857200a0ada07bc196a6a35359b96",
+    "docs/research/11_memory_protocol.md": "642f5cbbbdc6f1ab259a63e8dd09bff4bc2f4314d6054674c97e86c99cb98a69",
+    "docs/research/11_offline_derivation.json": "d99571c1fe898c0d02e6943de42d0b0224d306a88472b9232135024cd1551a16",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+    "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "results/research/11_validation/memory_audit_delta.json": "d901d3e0fe500c2cbed20bdacb771d4bcfc0e85b311f9d3965e8cf25e563ec38",
+    "results/research/11_validation/memory_source_corrections.json": "dcec2b90c5fa4f76691d4f8ba10aae826f7a6cd79adb6e16ea8ed2612df63396",
+    "results/research/11_validation/memory_static_review.json": "239cd81975cf060c9cb4bb984285ce624a35e635991cf7d863c81e87460ad671",
+    "results/research/11_validation/probe_completion_receipt.json": "adb1df26e1e910757b501b42e82fa240e5271a0630922f1e2477643a67af104b",
+    "scripts/research_item11_inputs.py": "a947dbfb7d6ea0a677a83b2cbd4dc8b1b58cf1e803d8b1a0e8cca2857d021e6b",
+    "scripts/research_item11_offline.py": "a01a341c4dde6a492aa40ad48549067bcc7dfe8185ebf4aaaf6e97f7f18761b8",
+    "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "scripts/research_memory_audit.py": "2d5996e5566c058abd2f49f1cded6ab2a9c635b10d4aea301490859a5b04991d",
+    "scripts/research_memory_probe_audit.py": "7f7917826929529db5744431b99656f227c932981e536eef3985ff1dfb7766cb",
+    "scripts/research_memory_study.py": "f5b19486fdb9990a711071e17c344efebd9e7aa473580b11e13ab65b317c7c9a",
+    "tests/test_memory_study.py": "4d7ff980840ba6308d0a16e23e35e8c9506955aec1ed550b60869cd35aeeaa7b"
+  }
+}
+

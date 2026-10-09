@@ -1,0 +1,36 @@
+{
+  "item": 4,
+  "execution_commit": "5ab415ec825e931b69fc22571c47cdb74a4fc592",
+  "base_archive": {
+    "commit": "cc8836c0914e1727326422ac2fcdbe799d480569",
+    "bytes": 160810,
+    "sha256": "76cec83093db5b11a117b4344f6e4a1e9b53ff3cdb148f8e74cb9145501f3215"
+  },
+  "retry_patch_archive": {
+    "bytes": 6718,
+    "sha256": "b7fe0ba5444685f479fd6d1e2d3afff62e90f342bb327008a102998478db0321"
+  },
+  "target_preflight": {
+    "observed_at_utc": "2026-10-06T22:25:59.416706+00:00",
+    "tests_passed": 88,
+    "tests_skipped": 1,
+    "seconds": 9.38,
+    "skip": "CIFAR dataset unavailable",
+    "python": "3.13.7",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "available_ram_gib": 9.252601623535156,
+    "free_gpu_gib": 22.9150390625,
+    "temperature_c": 29.0,
+    "threads": 4
+  },
+  "status": "completed and transferred",
+  "run_directory": "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_pilot_retry1",
+  "log": "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_retry1_queue.log",
+  "export": {
+    "sha256": "522e90d90d480e73658086920f4cdc9baf38906feec3c5185658774afbe0198a",
+    "bytes": 1343722,
+    "verified_files": 60
+  }
+}

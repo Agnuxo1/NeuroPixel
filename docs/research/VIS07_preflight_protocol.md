@@ -1,0 +1,13 @@
+# VIS07 preflight: píxeles externos y aprendizaje supervisado
+
+Se usa el dataset oficial Optical Recognition of Handwritten Digits, Alpaydin/Kaynak (1998), UCI, DOI10.24432/C50P49, licencia CC BY4.0. Fuente primaria y licencia: https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits . La documentación separa autores de escritura entre TRAIN/TEST. Este estudio usa datos públicos expuestos y no reclama custodia ciega, replicación externa ni IDs de autores verificados individualmente.
+
+ZIP original SHA2560d7b054fea010270e9b3f06411c654c5e59547732ad626381980baffe0a23fb0,591292bytes. TRAIN3823, TEST1797,64pixeles8×8, valores enteros0–16, diez clases. Censo previo al entrenamiento: cero imágenes idénticas dentro de cada split o entre ellos. DEV30porclase=300 tomado únicamente de TRAIN con RNG888000; quedan3523 TRAIN. Escala fija pixel/16, repetida a tres canales RGB. No normalización ajustada con test.
+
+Dos modelos nuevos: núcleo NeuroPixel congelado, retina width8/c_id8, estado16, hidden32,8updates,fire1,salida(4,4),vocab11/PAD0 y clases1–10; CNN3→18→26, convoluciones3×3, ReLU, promedio espacial y linear26→11. Comparación de capacidad nominal derivada5056 vs5039, diferencia0.34%; comprobar en ejecución, sin equiparar funciones/FLOPs. El único input es la imagen. Etiquetas se usan como supervisión de una respuesta, nunca como píxeles/tokens de entrada.
+
+Preflight congelado antes de ajustar:50 imágenes TRAIN, cinco porclase, semilla83999. Cada familia512updates completos/fullbatch50/AdamLR.001/clipgrad1; sin ampliación, búsqueda deLR ni earlystop. Requisito45/50 correctas en ambas y pérdida decreciente/gradientes finitos. Publicar fallos y no admitir estudio principal si el gate falla. No se lee/predice el TEST oficial ni el test original264composiciones. Guardar logits, predicciones, índices, pesos, AdamW/Adam yRNG auténticos; fuente/entorno/hashes y costes medidos.
+
+CPU2/minRAM8GiB/Python3.12.14/Torch2.6.0+cpu/NumPy2.2.6/SciPy1.15.1/psutil6.1.1/Pillow11.3. Uno científico durante preflight. Inferencia futura por renderizado se valida independientemente: entrenamiento actual es PyTorchCPU. NCAclasificación tiene antecedentes (Randazzo etal.,2020, https://distill.pub/2020/selforg/mnist/); clasificación de dígitos por sí sola no establece originalidad excepcional.
+
+Si admitida, nueva receta principal separada:cinco semillas pareadas240–244,40épocas, batch64,misma secuencia/labels paraambas familias; selección porDEV antes de gate definitivo sobre diez modelos. Comparar exactitud/NLL ytransformaciones/control temporal de alcance declarado. Es preparación; todavía no existe entrenamiento principal ni resultado oficialtest deVIS07.

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "protocol_id": "NP-SCI-20261006-v1",
+  "source_commit": "7da18d1cbd36c40c48228118abb20a7b5ab032f4",
+  "scope": "Prospective resource-bounded pilot; original results already known",
+  "data": {
+    "split_seeds": [
+      0,
+      101,
+      202
+    ],
+    "train_fraction": 0.7,
+    "validation_fraction": 0.1,
+    "test_fraction": 0.2,
+    "validation_n": 2048,
+    "test_n": 4096,
+    "balanced_roles": true,
+    "validation_sample_seed": 61001,
+    "test_sample_seed": 61002,
+    "train_sample_seed": 9002,
+    "primary_task": "adjacent",
+    "height": 8,
+    "width": 8
+  },
+  "training": {
+    "families": [
+      "neuropixel",
+      "standard_nca",
+      "convgru",
+      "relative_transformer"
+    ],
+    "learning_rates": [
+      0.001,
+      0.003
+    ],
+    "updates": 1024,
+    "batch_size": 64,
+    "steps": 16,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "primary_school_weight": 0.0,
+    "pilot_init_seed": 7,
+    "update_random_seed": 9001,
+    "checkpoint_selection": "final",
+    "lr_selection": [
+      "validation_binding_accuracy_desc",
+      "validation_cross_entropy_asc",
+      "learning_rate_asc"
+    ],
+    "optimization_diagnostic": {
+      "probe_split": "train",
+      "n": 512,
+      "sample_seed": 61006,
+      "budget_limited_below_binding_accuracy": 0.95
+    }
+  },
+  "replication": {
+    "initialization_panel": {
+      "init_seeds": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "split_seed": 0
+    },
+    "split_panel": {
+      "init_seed": 10,
+      "split_seeds": [
+        0,
+        101,
+        202
+      ]
+    },
+    "panels_are_iid": false
+  },
+  "factorial": {
+    "tying": [
+      false,
+      true
+    ],
+    "school_weight": [
+      0.0,
+      0.3
+    ],
+    "reinjection": [
+      false,
+      true
+    ],
+    "init_seeds": [
+      20,
+      21
+    ],
+    "split_seed": 0,
+    "learning_rate": 0.003,
+    "analysis": "exploratory"
+  },
+  "decision": {
+    "primary_metric": "macro_agent_patient_accuracy",
+    "minimum_np_accuracy": 0.9,
+    "point_estimate_advantage_screen": 0.05,
+    "directional_ci_lower_bound": 0.0,
+    "confidence_level": 0.95,
+    "baseline_selection": {
+      "stage": "pilot initialization 7 validation; frozen for all replications",
+      "exclude": "neuropixel",
+      "order": [
+        "binding_accuracy_desc",
+        "cross_entropy_asc",
+        "parameters_asc",
+        "family_name_asc"
+      ]
+    },
+    "bootstrap_seed": 61003,
+    "bootstrap_repetitions": 2000,
+    "primary_panel": "initialization",
+    "required_complete_pairs": 5,
+    "macro_interval": "paired bootstrap stratified by role"
+  },
+  "historical": {
+    "task_split_seeds": [
+      0,
+      1,
+      2
+    ],
+    "sample_seed": 5,
+    "test_n": 2000,
+    "provenance": "retrospective"
+  },
+  "control": {
+    "task_types": [
+      "adjacent",
+      "far"
+    ],
+    "split_seeds": [
+      0,
+      101,
+      202
+    ],
+    "sampling_seed": 61004,
+    "examples_per_role": 1024,
+    "splits": [
+      "train",
+      "test"
+    ],
+    "random_category_seed": 61005
+  },
+  "resource_policy": {
+    "cpu_threads_max": 4,
+    "gpu_queue_required": true,
+    "preserve_available_ram_gib": 8,
+    "preserve_gpu_memory_gib": 3.5,
+    "max_gpu_temperature_c": 83,
+    "paid_compute": false
+  }
+}

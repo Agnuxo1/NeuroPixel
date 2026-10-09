@@ -1,0 +1,128 @@
+{
+  "observed_utc": "2026-10-09T02:30:23.612775+00:00",
+  "completed_execution_cases": 9,
+  "completed_body_training_records": 10,
+  "completed_head_training_records": 19,
+  "rows": [
+    {
+      "case": "DEV04_partition101_seed400",
+      "stage": "query_attention",
+      "update": 8192,
+      "case_status": "partial",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention"
+      ]
+    },
+    {
+      "case": "DEV04_partition101_seed401",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition101_seed402",
+      "stage": "body",
+      "update": 11264,
+      "case_status": "partial",
+      "body_training_record_completed": false,
+      "head_training_records_completed": []
+    },
+    {
+      "case": "DEV04_partition102_seed404",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition102_seed405",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition102_seed406",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition102_seed407",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition103_seed408",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition103_seed409",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition103_seed410",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    },
+    {
+      "case": "DEV04_partition103_seed411",
+      "stage": "complete",
+      "update": 8192,
+      "case_status": "completed",
+      "body_training_record_completed": true,
+      "head_training_records_completed": [
+        "query_attention",
+        "local_query"
+      ]
+    }
+  ],
+  "nn_replay_completed": false,
+  "effects_estimated": false,
+  "scientific_task3_complete": false
+}

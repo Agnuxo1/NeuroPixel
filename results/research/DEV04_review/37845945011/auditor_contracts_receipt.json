@@ -1,0 +1,19 @@
+{
+  "tests_passed": 8,
+  "receipts": [
+    {
+      "script": "test_DEV04_dataset_audit.py",
+      "source_sha256": "e5351727c074bbf7ec09b877a59f7d2c5e167e028c4c2d0e6f669e4be715fcc6",
+      "exit_code": 0,
+      "output": "{\"status\": \"passed\", \"tests\": 4, \"failures\": 0, \"errors\": 0, \"scientific_training_updates\": 0, \"nn_replay_completed\": false}\ntest_actual_four_query_groups_accepted (__main__.Contracts.test_actual_four_query_groups_accepted) ... ok\ntest_native_role_block_probe_remains_valid (__main__.Contracts.test_native_role_block_probe_remains_valid) ... ok\ntest_role_order_preserved_but_context_group_broken_rejected (__main__.Contracts.test_role_order_preserved_but_context_group_broken_rejected) ... ok\ntest_valid_individual_samples_sorted_into_role_blocks_rejected (__main__.Contracts.test_valid_individual_samples_sorted_into_role_blocks_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.619s\n\nOK\n"
+    },
+    {
+      "script": "test_DEV04_body_recount.py",
+      "source_sha256": "1eef97ade0d1618f3bd8cc399e018cf0a6dd5eaf22506ea951cc6afd4bfb2f68",
+      "exit_code": 0,
+      "output": "test_dense_and_matched_perfect (__main__.Contracts.test_dense_and_matched_perfect) ... ok\ntest_individual_masks_not_ensemble (__main__.Contracts.test_individual_masks_not_ensemble) ... ok\ntest_nominal_correct_but_query_joint_failure (__main__.Contracts.test_nominal_correct_but_query_joint_failure) ... ok\ntest_unchanged_control_and_nonfinite_nll_rejected (__main__.Contracts.test_unchanged_control_and_nonfinite_nll_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n"
+    }
+  ],
+  "scientific_training_updates": 0,
+  "nn_replay_executed": false
+}

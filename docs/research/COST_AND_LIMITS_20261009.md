@@ -1,0 +1,21 @@
+# Measured cost and unresolved claims
+
+## Additional pipeline and storage accounting
+
+The authenticated VIS07 main-job log spans **542.928 seconds** from its first logged event to its final logged event. The main-script bracket spans **494.302 seconds**, including data admission, the ten fits, DEV selection, model sealing, final scoring and internal bookkeeping. These intervals are broader than the **447.555 seconds** recorded for the two families' training and DEV selection combined. They exclude provider queue time before the first log, later independent replays, GPU work and publication; they are not a complete whole-program wall-time or energy measurement. [Provider run](https://github.com/Agnuxo1/NeuroPixel/actions/runs/37908785698); [timestamp evidence](../../results/research/SPRINT_review/VIS07_job_cost_timeline.json).
+
+At published commit `42a5c753`, `git ls-tree -rl` counts **2,325 tracked files**, **1,436,304,202 logical file bytes** and **1,409,959,791 bytes of unique uncompressed Git blob payloads**. Preserving raw archives, unpacked arrays, intermediate states and failed attempts has substantial storage cost. These counts exclude Git compression/index overhead, external caches, ignored files and transient allocations. The five learned NCA JSON exports separately record both serialized size and their float32 tensor payload; storage serialization is not a parameter-count benefit. [Storage receipt](../../results/research/SPRINT_review/publication_storage_cost.json).
+
+Reproduce the storage count at the exact commit with `git ls-tree -rlz 42a5c7533ae4bc2f5eca8f4e0fe7b9d2b5f7977b`: sum sizes for logical file bytes and deduplicate blob SHA before summing unique payload bytes. The reported commit is fixed, so future additions do not silently change this inventory. This accounting reduces omitted-cost uncertainty; complete system energy, all scheduling and all runtime allocations remain unmeasured.
+
+VIS07 recorded training plus DEV selection for all ten fixed fits: NCA413.318s wall/826.410s processCPU; CNN34.237s wall/68.427s processCPU. Near nominal parameters5056vs5039 did not equalize operations or time: NCA cost about12.07× more training walltime in this recipe. Data download, package installation, provider scheduling, checkpoint/Git archival and subsequent verification add cost and are retained in workflow/provider evidence; they are not silently counted as zero.
+
+GPU benchmarks RENDER08/09 include resident-input seeding,16updates and complete scanner, explicit synchronization, device/host timings, recorded setup and shader compilation. They exclude training, network transport, installation and new input/output transfer from the primary resident timing. The full cost of deploying/training a complete system is larger. Technical timing blocks, masks, pixels and endpoints are not independent scientific replicates.
+
+NVML is an actual whole-device energy counter on the measuredRTX3090; short-call zero deltas have insufficient temporal resolution. Per-inference energy remains unknown until an adequate sustained-block protocol. GPU device energy also excludesCPU,RAM,PSU/wallpower. VirtualCPU runner energy was not measured; no TDP×time estimate is presented as measurement.
+
+Learned checkpoint storage, datasets, raw predictions, states and archives are retained with sizes andSHA256 in the publication manifest. Copying experts preserves old weights at growing storage cost; this does not prove effective continual acquisition/routing. Caches and selected best DEV checkpoints are part of the pipeline, not free intelligence.
+
+Scientific boundary: originalH1 unsupported; DEV04precision targetfailed; public/exposed datasets and internal replays do not create blind external replication. The pixel-based vision result is useful on the declared UCI task. Rendering fidelity and a conditional measured speedup do not establish a biological brain, consciousness, clinically meaningful brain scanning or a Nobel-level discovery. Attribution of learned mechanisms, all-time stability, fullwallenergy and independent reproduction remain open.
+
+No photonic simulation was added without an equal-input/output/precision and full-cost hypothesis. This preserves the separate opticalNeuro3D project and its evidence.

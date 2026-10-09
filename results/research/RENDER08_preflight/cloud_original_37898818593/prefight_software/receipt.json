@@ -1,0 +1,833 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "0/full/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002874087658710778
+      }
+    },
+    {
+      "name": "0/full/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002873371704481542
+      }
+    },
+    {
+      "name": "0/full/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002872648765332997
+      }
+    },
+    {
+      "name": "0/full/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002871918259188533
+      }
+    },
+    {
+      "name": "0/full/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/full/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002874087658710778
+      }
+    },
+    {
+      "name": "0/checkerboard/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002874087658710778
+      }
+    },
+    {
+      "name": "0/checkerboard/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002873371704481542
+      }
+    },
+    {
+      "name": "0/checkerboard/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.9802322387695312e-08,
+        "max_ratio": 0.0002873371704481542
+      }
+    },
+    {
+      "name": "0/checkerboard/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "0/checkerboard/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.0019660501275211573
+      }
+    },
+    {
+      "name": "1/full/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.0019671712070703506
+      }
+    },
+    {
+      "name": "1/full/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.001968290191143751
+      }
+    },
+    {
+      "name": "1/full/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.0019694070797413588
+      }
+    },
+    {
+      "name": "1/full/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/full/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.0019660501275211573
+      }
+    },
+    {
+      "name": "1/checkerboard/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.0019660501275211573
+      }
+    },
+    {
+      "name": "1/checkerboard/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.384185791015625e-07,
+        "max_ratio": 0.0019671712070703506
+      }
+    },
+    {
+      "name": "1/checkerboard/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 4.76837158203125e-07,
+        "max_ratio": 0.003932352643460035
+      }
+    },
+    {
+      "name": "1/checkerboard/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1/checkerboard/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0031873127445578575
+      }
+    },
+    {
+      "name": "2/full/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0031871076207607985
+      }
+    },
+    {
+      "name": "2/full/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.003186970017850399
+      }
+    },
+    {
+      "name": "2/full/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 4.76837158203125e-07,
+        "max_ratio": 0.004236846696585417
+      }
+    },
+    {
+      "name": "2/full/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/full/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0031875604763627052
+      }
+    },
+    {
+      "name": "2/checkerboard/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0031873101834207773
+      }
+    },
+    {
+      "name": "2/checkerboard/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0031873101834207773
+      }
+    },
+    {
+      "name": "2/checkerboard/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0031871020328253508
+      }
+    },
+    {
+      "name": "2/checkerboard/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "2/checkerboard/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.980232238769531e-07,
+        "max_ratio": 0.002744293073192239
+      }
+    },
+    {
+      "name": "3/full/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.003296660026535392
+      }
+    },
+    {
+      "name": "3/full/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.003299983683973551
+      }
+    },
+    {
+      "name": "3/full/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.003303094068542123
+      }
+    },
+    {
+      "name": "3/full/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/full/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/seed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/step1/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 2.980232238769531e-07,
+        "max_ratio": 0.002744293073192239
+      }
+    },
+    {
+      "name": "3/checkerboard/step1/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/step2/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.0030214532744139433
+      }
+    },
+    {
+      "name": "3/checkerboard/step2/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/step3/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.003127363743260503
+      }
+    },
+    {
+      "name": "3/checkerboard/step3/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/step4/native",
+      "passed": true,
+      "detail": {
+        "max_abs": 3.5762786865234375e-07,
+        "max_ratio": 0.003127363743260503
+      }
+    },
+    {
+      "name": "3/checkerboard/step4/oracle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/mask_reset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/complete_logits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/all_decisions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "3/checkerboard/pack_roundtrip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_unchanged_during_fixture",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "rows": [
+    {
+      "case": 0,
+      "channels": 4,
+      "identity": 3,
+      "hidden": 8,
+      "width": 1,
+      "height": 1,
+      "mode": "full",
+      "shader": {
+        "state_channels": 4,
+        "identity_channels": 3,
+        "hidden": 8,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "a1fc670ac2ab8f5c5ea641af42adc5d3628ca7b01a8e5474366dba8116d09ad0",
+          "9471dd3470aa74a461095ac10a5104d733d870a75f0fa56bb51f78f7bb70d805",
+          "6681801f67fc411aed221bfbe4684b363bf89b771e3250862ae3cf21d0825869",
+          "a8e247dd7ed83feb07553e21139bd6c1060997f723eb80a9bd99c74432984e41"
+        ],
+        "compile_seconds": 0.14739485099998717
+      }
+    },
+    {
+      "case": 0,
+      "channels": 4,
+      "identity": 3,
+      "hidden": 8,
+      "width": 1,
+      "height": 1,
+      "mode": "checkerboard",
+      "shader": {
+        "state_channels": 4,
+        "identity_channels": 3,
+        "hidden": 8,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "a1fc670ac2ab8f5c5ea641af42adc5d3628ca7b01a8e5474366dba8116d09ad0",
+          "9471dd3470aa74a461095ac10a5104d733d870a75f0fa56bb51f78f7bb70d805",
+          "6681801f67fc411aed221bfbe4684b363bf89b771e3250862ae3cf21d0825869",
+          "a8e247dd7ed83feb07553e21139bd6c1060997f723eb80a9bd99c74432984e41"
+        ],
+        "compile_seconds": 0.14739485099998717
+      }
+    },
+    {
+      "case": 1,
+      "channels": 5,
+      "identity": 3,
+      "hidden": 7,
+      "width": 5,
+      "height": 3,
+      "mode": "full",
+      "shader": {
+        "state_channels": 5,
+        "identity_channels": 3,
+        "hidden": 7,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "c827ce29eadba674dfc44fdeae515b51bf3198814ff8bd3f8f834202b278609c",
+          "3e4f85e6a239d39db18a4847ce32fae557f9a9cbf0f9e5d51cbc5aafe3e7a4c7",
+          "52ee6d90d8111cef5bd924fd158ec7b8ce007b808537a45535b9228bd7419927",
+          "c25fa3df7c389b927ec66cdffeb5b76f3429c687e83e845a1ea6198a14f8d805"
+        ],
+        "compile_seconds": 0.018483151999987513
+      }
+    },
+    {
+      "case": 1,
+      "channels": 5,
+      "identity": 3,
+      "hidden": 7,
+      "width": 5,
+      "height": 3,
+      "mode": "checkerboard",
+      "shader": {
+        "state_channels": 5,
+        "identity_channels": 3,
+        "hidden": 7,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "c827ce29eadba674dfc44fdeae515b51bf3198814ff8bd3f8f834202b278609c",
+          "3e4f85e6a239d39db18a4847ce32fae557f9a9cbf0f9e5d51cbc5aafe3e7a4c7",
+          "52ee6d90d8111cef5bd924fd158ec7b8ce007b808537a45535b9228bd7419927",
+          "c25fa3df7c389b927ec66cdffeb5b76f3429c687e83e845a1ea6198a14f8d805"
+        ],
+        "compile_seconds": 0.018483151999987513
+      }
+    },
+    {
+      "case": 2,
+      "channels": 16,
+      "identity": 8,
+      "hidden": 32,
+      "width": 8,
+      "height": 8,
+      "mode": "full",
+      "shader": {
+        "state_channels": 16,
+        "identity_channels": 8,
+        "hidden": 32,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "4123da532281680a29dd472e58af23da8a239e2d7fe8dd008524e2e4ff01059b",
+          "570546589750f9876ef577539e7067acfbeea67cfe4df55a91d5dba0d87c9c64",
+          "f7c2af7b347eb0570eb8881a6476d34976a8e403b96f251ce8eab49ee42dcbb0",
+          "94ef47c8784683535d92b76aec2422de21dc2b86b093cc6b1898b43a320d7432"
+        ],
+        "compile_seconds": 0.017711153000007585
+      }
+    },
+    {
+      "case": 2,
+      "channels": 16,
+      "identity": 8,
+      "hidden": 32,
+      "width": 8,
+      "height": 8,
+      "mode": "checkerboard",
+      "shader": {
+        "state_channels": 16,
+        "identity_channels": 8,
+        "hidden": 32,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "4123da532281680a29dd472e58af23da8a239e2d7fe8dd008524e2e4ff01059b",
+          "570546589750f9876ef577539e7067acfbeea67cfe4df55a91d5dba0d87c9c64",
+          "f7c2af7b347eb0570eb8881a6476d34976a8e403b96f251ce8eab49ee42dcbb0",
+          "94ef47c8784683535d92b76aec2422de21dc2b86b093cc6b1898b43a320d7432"
+        ],
+        "compile_seconds": 0.017711153000007585
+      }
+    },
+    {
+      "case": 3,
+      "channels": 48,
+      "identity": 16,
+      "hidden": 128,
+      "width": 10,
+      "height": 8,
+      "mode": "full",
+      "shader": {
+        "state_channels": 48,
+        "identity_channels": 16,
+        "hidden": 128,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "259a615847b7bb0d16031f7d02454420491751bcb8594bebe360ccc937922f85",
+          "f66895c99c82d9cd6f29592327fdff8a7f8919f685c528bfb938fa7e27395e82",
+          "cde5749776d1d20cd5493984e52f8575d75ad4cf67926a0d85755220c5f0feec",
+          "d48276edf88a9dea1fe7df5de7799ea31c1acbcad90dc288ccb759cd19e4dc4a"
+        ],
+        "compile_seconds": 0.014877031999986912
+      }
+    },
+    {
+      "case": 3,
+      "channels": 48,
+      "identity": 16,
+      "hidden": 128,
+      "width": 10,
+      "height": 8,
+      "mode": "checkerboard",
+      "shader": {
+        "state_channels": 48,
+        "identity_channels": 16,
+        "hidden": 128,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "259a615847b7bb0d16031f7d02454420491751bcb8594bebe360ccc937922f85",
+          "f66895c99c82d9cd6f29592327fdff8a7f8919f685c528bfb938fa7e27395e82",
+          "cde5749776d1d20cd5493984e52f8575d75ad4cf67926a0d85755220c5f0feec",
+          "d48276edf88a9dea1fe7df5de7799ea31c1acbcad90dc288ccb759cd19e4dc4a"
+        ],
+        "compile_seconds": 0.014877031999986912
+      }
+    }
+  ],
+  "graphics": {
+    "GL_VENDOR": "Mesa",
+    "GL_RENDERER": "llvmpipe (LLVM 20.1.2, 256 bits)",
+    "GL_VERSION": "4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4",
+    "GL_MAX_TEXTURE_SIZE": 16384
+  },
+  "physical_gpu": false,
+  "tensor_device": "cpu",
+  "torch_version": "2.6.0+cpu",
+  "python": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]",
+  "available_ram_start_gib": 14.379497528076172,
+  "available_ram_end_gib": 14.299110412597656,
+  "wall_seconds": 2.4148583420000023,
+  "source_sha256": {
+    "neuropixel/rendering/nca_gl.py": "182c36aa15f9790eb1040161566f0b3033f25a86f95020de6246a991415b5e32",
+    "scripts/preflight_RENDER08.py": "f6b7259ec1effb0b8a84664179d5332c0d3a210ade1f8bca6bd3336d8ed79128",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701"
+  },
+  "trained_models_loaded": 0,
+  "training_updates": 0,
+  "scientific_speed_benchmark": false
+}

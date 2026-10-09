@@ -1,0 +1,74 @@
+{
+  "status": "completed_fixed_learned_GPU_fidelity_capture",
+  "checks": [
+    {
+      "seed": 240,
+      "categorical_exact": true,
+      "cuda_original_CPU_decisions_exact": true,
+      "mean_nll_error": 1.3553653843700886e-07,
+      "raw_logit_tolerance_passed": true,
+      "max_raw_logit_error": 2.288818359375e-05,
+      "max_raw_logit_ratio": 0.12563851475715637,
+      "cuda_original_CPU_max_raw_logit_error": 3.814697265625e-05
+    },
+    {
+      "seed": 241,
+      "categorical_exact": true,
+      "cuda_original_CPU_decisions_exact": true,
+      "mean_nll_error": 2.246815711259842e-08,
+      "raw_logit_tolerance_passed": true,
+      "max_raw_logit_error": 1.52587890625e-05,
+      "max_raw_logit_ratio": 0.12381832301616669,
+      "cuda_original_CPU_max_raw_logit_error": 1.6689300537109375e-05
+    },
+    {
+      "seed": 242,
+      "categorical_exact": true,
+      "cuda_original_CPU_decisions_exact": true,
+      "mean_nll_error": 2.8812792152166367e-07,
+      "raw_logit_tolerance_passed": true,
+      "max_raw_logit_error": 2.09808349609375e-05,
+      "max_raw_logit_ratio": 0.1319301277399063,
+      "cuda_original_CPU_max_raw_logit_error": 3.0517578125e-05
+    },
+    {
+      "seed": 243,
+      "categorical_exact": true,
+      "cuda_original_CPU_decisions_exact": true,
+      "mean_nll_error": 1.5530531527474523e-07,
+      "raw_logit_tolerance_passed": true,
+      "max_raw_logit_error": 3.814697265625e-05,
+      "max_raw_logit_ratio": 0.23821401596069336,
+      "cuda_original_CPU_max_raw_logit_error": 4.57763671875e-05
+    },
+    {
+      "seed": 244,
+      "categorical_exact": true,
+      "cuda_original_CPU_decisions_exact": true,
+      "mean_nll_error": 1.1050724424421787e-07,
+      "raw_logit_tolerance_passed": true,
+      "max_raw_logit_error": 2.288818359375e-05,
+      "max_raw_logit_ratio": 0.10445383936166763,
+      "cuda_original_CPU_max_raw_logit_error": 2.09808349609375e-05
+    }
+  ],
+  "subset": "first64 official TEST rows, every seed, fixed before execution",
+  "frame_example": "first original TRAIN class0, registered seed240",
+  "source_weight_hashes": {
+    "weights_seed240.json": "0d9eb9646609a435e7560e4dd1b97a47aa94fd4ed6c4c87f37d807b6e991d0d5",
+    "weights_seed241.json": "2645a69ee6837485d82fa5f891ca89058f63690f077595d51393774fb91666cb",
+    "weights_seed242.json": "7b090da4f361917a365e2f71bef64b70b06107cfed9b78f506c4da5439338da1",
+    "weights_seed243.json": "f0d40c9d76d5ccef18052ed118c891f672937037aaf3d578b3f8a707a750621b",
+    "weights_seed244.json": "e42c15f5dc705088d0daf296edc1e6acf72e6c2c47ecf22013c3efe24ff96570"
+  },
+  "hardware": {
+    "GL_VENDOR": "NVIDIA Corporation",
+    "GL_RENDERER": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+    "GL_VERSION": "3.3.0 NVIDIA 581.29"
+  },
+  "training_updates": 0,
+  "tolerance_unchanged": true,
+  "all_decisions_exact": true,
+  "all_mean_nll_within_1e4": true,
+  "all_pointwise_logit_checks_passed": true
+}
