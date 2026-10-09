@@ -77,3 +77,7 @@ Runtime guards require at least 8 GiB available host RAM before heavy neural loa
 Code is MIT licensed; UCI optical digits is attributed under CC BY 4.0. See [the evidence index](../research/RESULTS_INDEX_20261009.md), [reproduction guide](../research/REPRODUCE_20261009.md) and [cost and limits](../research/COST_AND_LIMITS_20261009.md).
 
 The implemented neural field demonstrates bounded fidelity, competence on the specified visual task and workload-dependent acceleration after vectorization. Independent outside replication, complete energy accounting, robust continual memory and an exceptional original contribution confirmed by others remain unestablished.
+
+## Final engineering update — 9 October 2026
+
+The recovered RENDER10 cohort is complete:245 registered rows,77 output gates,143 original rows preserved exactly and0 repeated timing keys. OpenGL4.6 compute measures2.084x forC16/grid128 relative to the bestCUDA comparator and loses forC48/grid128; interruption separates sessions and qualifies interpretation. Live physical viewer integration passed27 trajectory gates plus52 HTTP checks; CPU/Mesa passed the same separate internal endpoint. RENDER11 retained100/105 original energy blocks after RAM8 stopped it; no complete comparative energy or wall-energy claim follows. See RENDER10_results.md, VIS07_viewer.md and RENDER11_results.md.

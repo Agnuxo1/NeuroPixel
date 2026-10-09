@@ -11,3 +11,7 @@ OpenGL 4.6 compute execution passed 21 Torch-free checks across all seven archiv
 The publication manifest maps all raw archives to their original Gitblobs, source commits, sizes andSHA256. GitHub main receives original immutable blobs plus documentation; rawbytes are not regenerated to disguise discrepancies. CodeMIT; UCI digitdataCCBY4.0, Alpaydin/Kaynak1998 DOI10.24432/C50P49. No originaltest264compositions were opened by new studies.
 
 Independent external replication has not yet occurred. This package makes reproduction possible; it does not certify an outside laboratory result or a Nobel-level contribution.
+
+## Final engineering update — 9 October 2026
+
+The recovered RENDER10 cohort is complete:245 registered rows,77 output gates,143 original rows preserved exactly and0 repeated timing keys. OpenGL4.6 compute measures2.084x forC16/grid128 relative to the bestCUDA comparator and loses forC48/grid128; interruption separates sessions and qualifies interpretation. Live physical viewer integration passed27 trajectory gates plus52 HTTP checks; CPU/Mesa passed the same separate internal endpoint. RENDER11 retained100/105 original energy blocks after RAM8 stopped it; no complete comparative energy or wall-energy claim follows. See RENDER10_results.md, VIS07_viewer.md and RENDER11_results.md.
