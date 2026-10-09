@@ -1,0 +1,591 @@
+{
+  "at_utc": "2026-10-07T13:14:26.557104+00:00",
+  "checkpoint": {
+    "bytes": 120316,
+    "path": "study/runs/pilot_gru_lr0001_s69/checkpoint.pt",
+    "sha256": "118758dfb889574007e87c65e31829a3ddf3cd591102182b29338ad70c12d1ea"
+  },
+  "completed_updates": 1024,
+  "config": {
+    "batch_size": 32,
+    "family": "gru",
+    "firing_seed": 110069,
+    "gradient_clip": 1.0,
+    "index_seed": 100069,
+    "initialization_seed": 69,
+    "kind": "pilot",
+    "learning_rate": 0.001,
+    "loss": "answer_cross_entropy_only",
+    "model": {
+      "d": 48,
+      "e": 8,
+      "hid": 70,
+      "parameters": 29336,
+      "state_payload_bytes_float32": 280,
+      "state_values_per_example": 70
+    },
+    "optimizer": "AdamW",
+    "recipe_sha256": "b3c397b106c9c40776f13db7c5f45f1455d821be27474aa845f772c8a5c7e82f",
+    "run_id": "pilot_gru_lr0001_s69",
+    "schedule": "constant",
+    "seed": 69,
+    "task": {
+      "answer_tokens": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "census_n": 48,
+      "census_order": "target token outer; row-major cue position inner",
+      "cue_positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "fact_updates": 3,
+      "gap_updates": 3,
+      "height": 3,
+      "out_pos": [
+        2,
+        2
+      ],
+      "pad": 0,
+      "query": 1,
+      "query_pos": [
+        2,
+        1
+      ],
+      "query_updates": 10,
+      "vocab": 8,
+      "width": 3
+    },
+    "updates": 1024,
+    "weight_decay": 0.0001
+  },
+  "config_artifact": {
+    "bytes": 1375,
+    "path": "study/runs/pilot_gru_lr0001_s69/config.json",
+    "sha256": "c8e9f958de2059be9cd2b39bcd49647eddfda4c31489c2ef18006871183f07ed"
+  },
+  "config_sha256": "45f121f97acf657a7599619eb4187d78b1a37c6e213fc506f966342744158964",
+  "cost_scope": "State payload excludes allocator/autograd overhead and is not information capacity or peak RSS; parameter matching does not match state size or compute.",
+  "development": {
+    "normal_d2": {
+      "case_id": "normal_d2",
+      "metadata": {
+        "bytes": 21347,
+        "path": "study/runs/pilot_gru_lr0001_s69/normal_d2.json",
+        "sha256": "a4a5aea1ebbff778e083e64cd2c7e3afe6f71c0a4e8121068044ca6c1bb5e420"
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "correct": 48,
+        "cross_entropy": 0.0011122604112102509,
+        "cross_entropy_n": 48,
+        "n": 48,
+        "per_position": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011473605457637788,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.001093407447192657,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011192498240825055,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011091424154723022,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011102302754464608,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011000375790155977,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0010965784592550053,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011220767434536984,
+            "cross_entropy_n": 6,
+            "n": 6
+          }
+        },
+        "per_target": {
+          "2": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0009703552986398131,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0011631458920141234,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0011567800357363163,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0011342010741931339,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0013186645652459143,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0009304156014322037,
+            "cross_entropy_n": 8,
+            "n": 8
+          }
+        }
+      },
+      "predictions": {
+        "bytes": 27516,
+        "path": "study/runs/pilot_gru_lr0001_s69/normal_d2.npz",
+        "sha256": "3e8a6d7e48368564dcdbf5e9f8af4c42de82e3cc8950d0bfb90e5af9630459ba"
+      }
+    },
+    "normal_d3": {
+      "case_id": "normal_d3",
+      "metadata": {
+        "bytes": 21345,
+        "path": "study/runs/pilot_gru_lr0001_s69/normal_d3.json",
+        "sha256": "197e1dc873849f9eedd0e9a8cada2b223c4da18df16ed0c47ae110c8f1ffe905"
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "correct": 48,
+        "cross_entropy": 0.0011638468793292286,
+        "cross_entropy_n": 48,
+        "n": 48,
+        "per_position": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011962521239880246,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011478481559389373,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.001168432194565903,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011612425467792957,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.001163707588466713,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011513463638673086,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.001153914286723073,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0011680317743045735,
+            "cross_entropy_n": 6,
+            "n": 6
+          }
+        },
+        "per_target": {
+          "2": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0009997088066528805,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0011781653794070682,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0011793577124449544,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0013588321278570408,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0013184303480525427,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0009485869015608853,
+            "cross_entropy_n": 8,
+            "n": 8
+          }
+        }
+      },
+      "predictions": {
+        "bytes": 27279,
+        "path": "study/runs/pilot_gru_lr0001_s69/normal_d3.npz",
+        "sha256": "064b4dfddbda8e0731d8103fde073e4d085857bae52312e62d8d26990d50278a"
+      }
+    },
+    "normal_d4": {
+      "case_id": "normal_d4",
+      "metadata": {
+        "bytes": 21345,
+        "path": "study/runs/pilot_gru_lr0001_s69/normal_d4.json",
+        "sha256": "63e764cd9d4c4b440453fc123bf9f07fc504b00bb0af769200b7a33408cade30"
+      },
+      "metrics": {
+        "accuracy": 1.0,
+        "correct": 48,
+        "cross_entropy": 0.0012273740820906121,
+        "cross_entropy_n": 48,
+        "n": 48,
+        "per_position": {
+          "0": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012567570148080335,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012132401624991372,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "2": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012352619038568673,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012257568477475774,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012278220582611764,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.001214807099860125,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012192097778825314,
+            "cross_entropy_n": 6,
+            "n": 6
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "cross_entropy": 0.0012261377918094487,
+            "cross_entropy_n": 6,
+            "n": 6
+          }
+        },
+        "per_target": {
+          "2": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0010480194283285797,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "3": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.001191454166980569,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "4": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0011935386825278151,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "5": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.001623606956668952,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "6": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0013231736811688188,
+            "cross_entropy_n": 8,
+            "n": 8
+          },
+          "7": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "cross_entropy": 0.0009844515768689382,
+            "cross_entropy_n": 8,
+            "n": 8
+          }
+        }
+      },
+      "predictions": {
+        "bytes": 27155,
+        "path": "study/runs/pilot_gru_lr0001_s69/normal_d4.npz",
+        "sha256": "de7acbfac1515b693f622b9c1a6328c8bd3fcaf4478b833427133c927831816d"
+      }
+    }
+  },
+  "elapsed_total_seconds": 2.8205532909999818,
+  "item": 11,
+  "mean_update_seconds": 0.0027133937490237126,
+  "median_update_seconds": 0.0027124239999949395,
+  "minibatch_indices": {
+    "bytes": 262272,
+    "path": "study/runs/pilot_gru_lr0001_s69/train_indices.npy",
+    "sha256": "7ce4e317d24df244d58435513a789842a7a832269339f7669ea327ebafb51086"
+  },
+  "nonpersistent_buffers": {
+    "bytes": 3,
+    "path": "study/runs/pilot_gru_lr0001_s69/nonpersistent_buffers.json",
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  "parameter_count": 29336,
+  "resource_samples": [
+    {
+      "at_utc": "2026-10-07T13:14:23.740140+00:00",
+      "available_ram_gib": 14.442020416259766,
+      "update": 0
+    },
+    {
+      "at_utc": "2026-10-07T13:14:24.088477+00:00",
+      "available_ram_gib": 14.43963623046875,
+      "update": 128
+    },
+    {
+      "at_utc": "2026-10-07T13:14:24.435082+00:00",
+      "available_ram_gib": 14.43963623046875,
+      "update": 256
+    },
+    {
+      "at_utc": "2026-10-07T13:14:24.787994+00:00",
+      "available_ram_gib": 14.439643859863281,
+      "update": 384
+    },
+    {
+      "at_utc": "2026-10-07T13:14:25.135463+00:00",
+      "available_ram_gib": 14.439643859863281,
+      "update": 512
+    },
+    {
+      "at_utc": "2026-10-07T13:14:25.483300+00:00",
+      "available_ram_gib": 14.439403533935547,
+      "update": 640
+    },
+    {
+      "at_utc": "2026-10-07T13:14:25.827166+00:00",
+      "available_ram_gib": 14.439403533935547,
+      "update": 768
+    },
+    {
+      "at_utc": "2026-10-07T13:14:26.179292+00:00",
+      "available_ram_gib": 14.439403533935547,
+      "update": 896
+    }
+  ],
+  "run_id": "pilot_gru_lr0001_s69",
+  "runtime": {
+    "available_ram_gib": 14.408504486083984,
+    "cuda_version": null,
+    "interop_threads": 1,
+    "packages": {
+      "Pillow": "12.3.0",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cpu"
+    },
+    "python": "3.12.14",
+    "threads": 2
+  },
+  "schema_version": 1,
+  "source": {
+    "implementation_sha256": {
+      ".github/workflows/research-item11-audit.yml": "71ab1235084dfa2577cd2df0a52173b159a6b34939f92f63ec5fa53b32e0bc37",
+      ".github/workflows/research-item11-preflight.yml": "87ae242509a681bbbf01bde35813351c02ecafe2cef560a6305aad22b4b6182d",
+      "docs/research/11_memory_implementation.md": "623635d235b03df18b599909d1013809056857200a0ada07bc196a6a35359b96",
+      "docs/research/11_memory_protocol.md": "642f5cbbbdc6f1ab259a63e8dd09bff4bc2f4314d6054674c97e86c99cb98a69",
+      "docs/research/11_offline_derivation.json": "d99571c1fe898c0d02e6943de42d0b0224d306a88472b9232135024cd1551a16",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/phase3.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+      "neuropixel/research/stream_memory.py": "22aa1fcb209a96efc384badbfd70069711604272fe717c5da62a53bc7c21b3bf",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/11_validation/memory_audit_delta.json": "d901d3e0fe500c2cbed20bdacb771d4bcfc0e85b311f9d3965e8cf25e563ec38",
+      "results/research/11_validation/memory_source_corrections.json": "dcec2b90c5fa4f76691d4f8ba10aae826f7a6cd79adb6e16ea8ed2612df63396",
+      "results/research/11_validation/memory_static_review.json": "239cd81975cf060c9cb4bb984285ce624a35e635991cf7d863c81e87460ad671",
+      "results/research/11_validation/probe_completion_receipt.json": "adb1df26e1e910757b501b42e82fa240e5271a0630922f1e2477643a67af104b",
+      "scripts/research_item11_inputs.py": "a947dbfb7d6ea0a677a83b2cbd4dc8b1b58cf1e803d8b1a0e8cca2857d021e6b",
+      "scripts/research_item11_offline.py": "a01a341c4dde6a492aa40ad48549067bcc7dfe8185ebf4aaaf6e97f7f18761b8",
+      "scripts/research_item11_worker.py": "4cc1f371ec0af3c683d88bca79d34b9ed9da58c71527410dbc1ce41690831082",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_memory_audit.py": "2d5996e5566c058abd2f49f1cded6ab2a9c635b10d4aea301490859a5b04991d",
+      "scripts/research_memory_probe_audit.py": "7f7917826929529db5744431b99656f227c932981e536eef3985ff1dfb7766cb",
+      "scripts/research_memory_study.py": "f5b19486fdb9990a711071e17c344efebd9e7aa473580b11e13ab65b317c7c9a",
+      "tests/test_memory_study.py": "4d7ff980840ba6308d0a16e23e35e8c9506955aec1ed550b60869cd35aeeaa7b"
+    },
+    "plan_sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5",
+    "recorded_at_utc": "2026-10-07T13:13:10.613386+00:00",
+    "source_commit": "cef4e67358ca5c344cd4154a7f641feefeb406ae",
+    "tracked_source_clean": true
+  },
+  "state_payload_bytes_float32": 280,
+  "state_values_per_example": 70,
+  "status": "completed",
+  "training_delays": {
+    "bytes": 8320,
+    "path": "study/runs/pilot_gru_lr0001_s69/training_delays.npy",
+    "sha256": "578ae6a72ca66ccb7ce3cada58576312559d2d3b9c01c9a4b9eae15e21fda012"
+  },
+  "training_log": {
+    "bytes": 2132,
+    "path": "study/runs/pilot_gru_lr0001_s69/training_log.jsonl",
+    "sha256": "b1e415418b6a1fa7162726d22e5d91ef1219b18d128646d7579c785b4f731e54"
+  },
+  "training_seconds": 2.7895523630000127
+}

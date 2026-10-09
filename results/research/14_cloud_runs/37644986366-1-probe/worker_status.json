@@ -1,0 +1,121 @@
+{
+  "admission": {
+    "at_utc": "2026-10-07T15:34:58.739562+00:00",
+    "available_ram_gib": 14.250717163085938,
+    "phase": "admission"
+  },
+  "completed_at_utc": "2026-10-07T15:35:13.137879+00:00",
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T15:35:13.137802+00:00",
+    "available_ram_gib": 14.306209564208984,
+    "phase": "before_final_archive"
+  },
+  "gpu_requested": false,
+  "item": 14,
+  "paid_compute": false,
+  "phase": "probe",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 900,
+    "workflow_minutes": 20
+  },
+  "run_key": "37644986366-1-probe",
+  "schema_version": 1,
+  "source_after": {
+    "all_bindings_verified": true,
+    "at_utc": "2026-10-07T15:35:13.137710+00:00",
+    "implementation_sha256": {
+      ".github/workflows/research-item14-probe.yml": "fd9b5cb946eb7474b289f2bab3ed7b0e068fed5b0d4de1d67340c05596cc3547",
+      "docs/research/14_historical_evidence_audit.md": "b263c2f297ee6a70bb651df755d81533f3eb7329a3d6fae1dd702151732bf3eb",
+      "docs/research/14_probe_protocol.md": "4c8cce29253a0d74f0f7c070c11d1cfe94cdd2adf21308767463f17edd40085a",
+      "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+      "neuropixel/research/repair_trace.py": "d94e6b6b673c712dd9fb428d0d959e120bb8698253b566ff26fe8052e9ad2c5a",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+      "results/research/14_validation/audit_before_count_label.py": "8d9bfb0330703200f48515eea4c1797c483cae3d992a3a3115539847c06e5247",
+      "results/research/14_validation/native_before_count_label.py": "3874bfcea37c622de862d208178752e35f2a81820091de71cb8abb72c05001a6",
+      "results/research/14_validation/native_before_extra_witness.py": "0ad9d4cec3a9492861a9bf6e1d1e5cfe94b58d307534b8231ee7c9c6bc477621",
+      "results/research/14_validation/native_before_failure_retention.py": "50e5e0950fe6530fccf37f37bbfead3ddc04f35f1430a9bac7172e2e82d8243f",
+      "results/research/14_validation/native_before_import_alignment.py": "f8a4eaff0b0ef3651820c19fff269b1e938b2713bbe9d774d39ae59a0a8c3159",
+      "results/research/14_validation/pre_execution_corrections.json": "6747207636761ca6fe17107605fca4bec337c9d47be5dc947a119ad20486a4f5",
+      "results/research/14_validation/static_review.json": "ac79ac49103772a9c8e7033a103f68fc290559ed3e969b8e8014bf215df67c45",
+      "results/research/14_validation/worker_derivation.json": "079c3e00897015245c64ee5c7294a26dc79de160f28741979567884c33fa2f1f",
+      "scripts/research_item14_root_recount.js": "ffd5278082913ce2754239279478e02035b36c5d115b61b0ad63a0b8228f397c",
+      "scripts/research_item14_worker.py": "ac1a6a79dff9c73b8d2206ee85995b3425e3a77156c3d692b4312007b53b7af8",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+      "scripts/research_repair_audit.py": "7cecfcc3d9d10cae4e9830fee3a038e3eeb2805de8d21e11e5ed264d2b81b201",
+      "scripts/research_repair_native.py": "ff3dc172304a31a3089fc80a1fdf828a93ff06224d6255bd9666d24835ae41c3",
+      "scripts/research_repair_probe.py": "dd1a69ef14ce2c34bd311314dc71360f7985bc7d9dab4e3184eed03a1a00604a",
+      "tests/test_repair_trace.py": "1462d8af779432b0f61fe94d90d5fe0975b1bcff3b50154b4c12f576affdedf4"
+    },
+    "plan_sha256": "013863bb2d99277864e2c26e02c2c2d32f689b0dc3b92e6962bd7d3191384447",
+    "source_commit": "844f4dfae1cb8909d4f87c0c8cfd96b965590adf",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
+  "source_commit": "844f4dfae1cb8909d4f87c0c8cfd96b965590adf",
+  "stages": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T15:35:03.808731+00:00",
+        "available_ram_gib": 14.208663940429688,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item14_worker.py",
+        "--phase",
+        "probe",
+        "--child",
+        "contract_tests",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/14_cloud_runs/37644986366-1-probe"
+      ],
+      "completed_at_utc": "2026-10-07T15:35:05.311981+00:00",
+      "log_sha256": "bc3306f38e847279cb10e65fc23a89c6bcbd146227b0dfa166c52a411ccb6d2b",
+      "name": "contract_tests",
+      "return_code": 0,
+      "stage_limit_seconds": 120,
+      "started_at_utc": "2026-10-07T15:35:03.808864+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 1.5021405049999998
+    },
+    {
+      "admission": {
+        "at_utc": "2026-10-07T15:35:08.472018+00:00",
+        "available_ram_gib": 14.316886901855469,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item14_worker.py",
+        "--phase",
+        "probe",
+        "--child",
+        "probe",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/14_cloud_runs/37644986366-1-probe"
+      ],
+      "completed_at_utc": "2026-10-07T15:35:10.977206+00:00",
+      "log_sha256": "7fb5d612aa07bbd9bdd34bf77b12ddec540273db5e6b50573de6e5d2470545a2",
+      "name": "probe",
+      "return_code": 0,
+      "stage_limit_seconds": 540,
+      "started_at_utc": "2026-10-07T15:35:08.472149+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 2.5023631560000013
+    }
+  ],
+  "started_at_utc": "2026-10-07T15:34:58.720052+00:00",
+  "status": "completed",
+  "wall_seconds_before_final_archive": 14.418820603
+}

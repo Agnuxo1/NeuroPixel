@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "item": 13,
+  "phase": "probe",
+  "status": "frozen",
+  "freeze_utc": "2026-10-07T14:55:04+00:00",
+  "freeze_parent_commit": "3058665ffcaf8a0c4c1d91313cf598d42fabee1a",
+  "scope": "Twelve focused regression contracts; saved item9 irrelevant-event transition recount with an independent NumPy audit; constructed label, split, softmax and joint-renaming witnesses. No task-learning study.",
+  "runtime": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.1",
+      "Pillow": "12.3.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "torch": "2.6.0+cpu"
+    },
+    "threads": 1,
+    "interop_threads": 1
+  },
+  "limits": {
+    "worker_seconds": 900,
+    "archive_reserve_seconds": 180,
+    "workflow_minutes": 20,
+    "minimum_available_ram_gib": 8,
+    "aggregate_active_cpu_threads": 4,
+    "numerical_threads": 1,
+    "git_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "heartbeat_interval_seconds": 60,
+    "archive_interval_seconds": 300,
+    "git_timeout_seconds": 60
+  },
+  "stages": [
+    {
+      "name": "contract_tests",
+      "seconds": 120,
+      "files": [
+        "tests/test_vocab_expansion.py",
+        "tests/test_battery_vocab.py"
+      ],
+      "expected_count": 12
+    },
+    {
+      "name": "probe",
+      "seconds": 540,
+      "script": "scripts/research_vocab_probe.py"
+    }
+  ],
+  "evidence_recipe": {
+    "secondary": {
+      "original_source_commit": "83fe135e301f76bc0c74e30c66bb18e067ca5959",
+      "seeds": [
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "families": [
+        "neuropixel",
+        "relative_transformer"
+      ],
+      "contrast": [
+        "base",
+        "swap_other_agent_patient"
+      ],
+      "paired_examples_per_run": 2048,
+      "shared_bags": 256,
+      "selected_input_files": 12,
+      "new_model_inference": false,
+      "new_confidence_intervals": false
+    },
+    "native": {
+      "seed": 130002,
+      "renaming_seed_per_family": 130003,
+      "scenes": 32,
+      "queries_per_scene": 4,
+      "conditions": [
+        "base",
+        "new_agent",
+        "new_patient",
+        "two_new",
+        "irrelevant_old",
+        "irrelevant_new"
+      ],
+      "fixture_examples": 768,
+      "original_split_seed": 0,
+      "softmax_fixtures": 2,
+      "softmax_rows": 4,
+      "untrained_renaming_families": 2,
+      "optimization_steps": 0,
+      "task_competence_assay": false
+    },
+    "components": [
+      "secondary",
+      "native",
+      "secondary_audit"
+    ],
+    "component_limit_seconds": 120,
+    "shared_probe_limit_seconds": 540,
+    "condition_mapping": [
+      "base",
+      "swap_queried_agent_patient",
+      "swap_other_agent_patient",
+      "relabel_events",
+      "query_switch",
+      "layout_permutation"
+    ]
+  },
+  "inputs": {
+    "distractor": {
+      "archive_commit": "b64d0e2ba222df76caf72bc9870c7602873e7236",
+      "path": "results/research/09_cloud_runs/37593731891-1-study",
+      "files_sha256": {
+        "archive_manifest.json": "49cda016746d6f020e22da2e10e09f8706b1f17f15491baf438d6952484f78e6",
+        "study/final_data/examples.npz": "b52b895652db3fcdb0a057a8ba270893a9099c6d9fac609efa02b4a7fb895ea9",
+        "study/final_predictions/neuropixel_seed40.npz": "96c10bd4f482d8d9f9f339be5634097b4a91925cc5a75be883ca62eb84236544",
+        "study/final_predictions/neuropixel_seed41.npz": "2afe04293fc1d45ff59663dc6de424b546d0ed3e5496b862c64a9c07867b7b4a",
+        "study/final_predictions/neuropixel_seed42.npz": "cddd3e8ac6793189a2ddd56c008e7e5e52679989697ee585c7962e3410dd2917",
+        "study/final_predictions/neuropixel_seed43.npz": "a0d0fd57e8907224a5769f2b2b76b87366ad34d499319daf2d3286343eb19eec",
+        "study/final_predictions/neuropixel_seed44.npz": "57268e2f94dfa05d4af01180afd5fe93fd2ddcd6422e1705a818658c128b60df",
+        "study/final_predictions/relative_transformer_seed40.npz": "f7e14ab8f2b99da4241a2d5e280eeb51b5a2f2224cc94ab1f107246a9f93c495",
+        "study/final_predictions/relative_transformer_seed41.npz": "af8b9a8953baad05e09c133a090c72069a9b7e0729d725e4b65d81650a2d641f",
+        "study/final_predictions/relative_transformer_seed42.npz": "75a38973268530c217c6a8227e7861ef30e871306c29dcc29b53388c4e5385d3",
+        "study/final_predictions/relative_transformer_seed43.npz": "6fd5e3f3d7f28dda6ee8026163fa1a1f9a100abbccaf4a9b5e997caa4bd0947e",
+        "study/final_predictions/relative_transformer_seed44.npz": "fde7a170e9a23ea9635d1f7500aebbeb42a2573a372492e12f3b80c905537252"
+      }
+    }
+  },
+  "implementation_sha256": {
+    ".github/workflows/research-item13-probe.yml": "8a80562474ee2208633423aca0e362237377beb4c8437b5ee0e63d226267f5d0",
+    "docs/research/13_probe_protocol.md": "cefed9ad7d3d9ff04ac1dd9f3d36efc7d897860a3d1e0ae5d934a0a43f1b9c92",
+    "neuropixel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neuropixel/model.py": "677f3aab045fc6e0ae73ccc19e7093c1b8211e939dcadbe36db8a793130cd345",
+    "neuropixel/phase3.py": "72299cf2e0c8fe789c1b570c1f8ea5499d87eeda8a86ec47deafc31d5cb3edbe",
+    "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+    "pytest.ini": "ea4aa39d222e9cd3db8e633f2d1070367430d4f70c79798377c1ba31c7f7cbd0",
+    "results/research/13_validation/auditor_centering_correction.json": "dc4c43a6fae33c854b656d0d608ed4c5a1dea0afc44c9abe4506d8817a631716",
+    "results/research/13_validation/battery_before.py": "15f0cd9e6a0986f950c8bb6a142dc4c198b902ec256d2b844bd4ce7f8f5c0dad",
+    "results/research/13_validation/distractor_auditor_before_centering.py": "28e33b3c84fbd6c4afc9a19b01bb959d1123fc0c37b0f2afb56d39dca45e0e64",
+    "results/research/13_validation/optional_dtype_fix.json": "bbea57526b9f0fff1312ecf044aef106350ad0f8182e8386f24e1ea528318dc9",
+    "results/research/13_validation/phase3_before.py": "57c177757b333ee5ba9fdc953cbbd7ef284892edee612e234cca1df83b6814d0",
+    "results/research/13_validation/probe_static_review.json": "6dc8f92a421cadc2f399b6636c9ab407d183199f01c1e35d5fec3012a334826c",
+    "results/research/13_validation/root_canonical_correction.json": "066a1e55eeb36586c98f8fef9072bad8b32af98ff1da4aa2d141f44a294f3dca",
+    "results/research/13_validation/root_recount_before_canonical_objects.js": "aa95f3af5222b1590d251c1cbe917ed4634e9f0c623177cde155a58b2550d0f3",
+    "results/research/13_validation/session_pre_execution_events.json": "f6766fedf52583f669d3b3eb8c9a9d4337a1dbab3b2dda0f170ad1eb9a847a03",
+    "results/research/13_validation/test_vocab_before_optional_dtype_fix.py": "870c5c21791efa41327e0248c7d6e4644fb581c0ad440a443b92ed52dbf70291",
+    "results/research/13_validation/worker_derivation.json": "ccfc6ccc456da00d125af34317b29bf08483d2ab94473643cd65756a7c270b03",
+    "scripts/battery.py": "61b826412710d1ae6792d66a0c057164960a0c7d02e421fb34a82af40cca3666",
+    "scripts/research_distractor_recount_audit.py": "f1343f06b06e89e67f1f67f93ed12da4e15673c42bf3547c419972adfc1d2bc1",
+    "scripts/research_distractor_recount.py": "efa1b7cde56d3f72f13012eabb7005512c6ad600e850d22ddd716ba96b5289f0",
+    "scripts/research_item13_inputs.py": "8aa5fab742111f0fa39edca3731d3f9085e930bbde5a3177266776afcaca2ba6",
+    "scripts/research_item13_root_recount.js": "876fac0eaf475552d4ff3d36f71057412576d93eb47ff7ea11045a09801907ce",
+    "scripts/research_item13_worker.py": "a4b79d610a617d34654ca9dfee9881f553159af4a755581937a3b50df4c8b28a",
+    "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5",
+    "scripts/research_vocab_native.py": "35242a74f8f79ba0570ab0ef14bd5a252b54474592f358bcceb2317c25e360b0",
+    "scripts/research_vocab_probe.py": "e4a4e4e673225ac15075fe22161146e8fbb5120ab30183dafdda28956d1ed32d",
+    "tests/test_battery_vocab.py": "976eb0c9ea8f6d20676afb79df268c5a4b382c15212d1517b8721b3adb71a19a",
+    "tests/test_vocab_expansion.py": "fd03a07df553fc4c8ff1391fa19f68f45117b0d5fe922d8c7d95714b9a7a2189"
+  }
+}

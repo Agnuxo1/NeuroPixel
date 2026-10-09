@@ -1,0 +1,433 @@
+{
+  "issues": [],
+  "limitations": "Thread counts are boundary observations, not continuous utilization.",
+  "records": [
+    {
+      "at_utc": "2026-10-07T07:51:59.959667+00:00",
+      "phase": "before_stage",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "python": "3.12.8",
+      "thread_environment": {
+        "BLIS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "torch_cuda_version": null,
+      "torch_interop_threads": 1,
+      "torch_threads": 2,
+      "versions": {
+        "Pillow": "12.3.0",
+        "numpy": "2.2.6",
+        "psutil": "7.2.2",
+        "pytest": "9.1.1",
+        "scipy": "1.15.1",
+        "torch": "2.6.0+cpu"
+      }
+    },
+    {
+      "at_utc": "2026-10-07T07:52:01.555174+00:00",
+      "phase": "after_stage_or_exception",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "python": "3.12.8",
+      "thread_environment": {
+        "BLIS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "VECLIB_MAXIMUM_THREADS": "2"
+      },
+      "torch_cuda_version": null,
+      "torch_interop_threads": 1,
+      "torch_threads": 2,
+      "versions": {
+        "Pillow": "12.3.0",
+        "numpy": "2.2.6",
+        "psutil": "7.2.2",
+        "pytest": "9.1.1",
+        "scipy": "1.15.1",
+        "torch": "2.6.0+cpu"
+      }
+    }
+  ],
+  "skipped_nodeids": [],
+  "test_thread_boundaries": [
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_all_transform_targets_match_independent_semantic_fixture"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_canonical_group_hash_and_membership_ignore_order"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_controls_are_probabilities_with_exact_conditional_expectations"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_explicit_group_exclusion_and_fixture_ledger"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_group_rejects_category_collision_and_wrong_cardinality"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_input_only_controls_cannot_read_targets_or_scenario_metadata"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_invalid_canvas_shapes_query_and_output"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_invalid_generation_inputs_and_finite_rejection_bound"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_invalid_renderer_query_and_condition"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_invalid_scenario_truth_layout_and_group_hash"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_invalid_visible_fact_grammar_categories_and_duplicates"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_json_roundtrip_preserves_all_fixture_semantics"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_pair_ids_and_legitimate_duplicate_records"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_parser_matches_manual_truth_for_all_eight_queries"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_randomization_preserves_bag_split_and_original"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_renderer_geometry_and_shared_query_layouts"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_same_shortcut_distribution_faces_changed_counterfactual_gold"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_scene_bag_invariant_but_query_switch_changes_full_input_bag"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_seeded_generation_reproducible_and_global_rng_independent"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_data.py::ComplexBindingDataTests::test_small_fixture_partitions_unique_and_disjoint"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::PilotSelectionTests::test_authenticated_copy_must_recompute_the_same_winners"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::PilotSelectionTests::test_rejects_incomplete_duplicate_failed_or_mixed_source_pilot"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::PilotSelectionTests::test_score_then_ce_then_lower_rate_without_cherry_picking"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_all_four_artifact_types_rechecked_after_inventory"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_artifact_outside_output_is_rejected"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_changed_training_identity_blocks_gate"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_complete_ten_run_inventory_and_consumption_precede_data"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_existing_final_data_blocks_gate_and_access"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_incomplete_panel_blocks_gate"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::FinalGateTests::test_wrong_remote_inventory_receipt_blocks_access"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::ScenarioMetricTests::test_balanced_scenario_metrics_match_hand_calculation"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::ScenarioMetricTests::test_pseudoreplication_and_missing_role_blocks_are_rejected"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::ModelIntegrationTests::test_actual_model_classes_and_corrected_pad_on_new_grid"
+    },
+    {
+      "after": [
+        2,
+        1
+      ],
+      "before": [
+        2,
+        1
+      ],
+      "nodeid": "tests/test_complex_binding_protocol.py::ModelIntegrationTests::test_one_update_driver_and_checkpoint_prediction_roundtrip"
+    }
+  ]
+}

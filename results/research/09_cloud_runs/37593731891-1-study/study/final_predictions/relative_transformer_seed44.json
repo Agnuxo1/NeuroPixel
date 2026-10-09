@@ -1,0 +1,114 @@
+{
+  "checkpoint": {
+    "bytes": 131001,
+    "path": "runs/relative_transformer_seed44/checkpoint.pt",
+    "sha256": "7b5d68573ba0a4aafcff3d2c8913df65b5e4894bb9f6c6ba05ecb2ab960f2128"
+  },
+  "condition_metrics": {
+    "base": {
+      "all_eight": 0.0,
+      "binding": 0.484375,
+      "correct": 1499,
+      "cross_entropy": 0.518980388586315,
+      "global": 0.73193359375,
+      "groups": 256,
+      "macro": 0.73193359375,
+      "n": 2048,
+      "per_role": [
+        0.4921875,
+        0.994140625,
+        0.4765625,
+        0.96484375
+      ]
+    },
+    "layout_permutation": {
+      "all_eight": 0.0,
+      "binding": 0.486328125,
+      "correct": 1501,
+      "cross_entropy": 0.5032920704348243,
+      "global": 0.73291015625,
+      "groups": 256,
+      "macro": 0.73291015625,
+      "n": 2048,
+      "per_role": [
+        0.48828125,
+        0.99609375,
+        0.484375,
+        0.962890625
+      ]
+    },
+    "query_switch": {
+      "all_eight": 0.0,
+      "binding": 0.484375,
+      "correct": 1499,
+      "cross_entropy": 0.518980388586315,
+      "global": 0.73193359375,
+      "groups": 256,
+      "macro": 0.73193359375,
+      "n": 2048,
+      "per_role": [
+        0.4921875,
+        0.994140625,
+        0.4765625,
+        0.96484375
+      ]
+    },
+    "relabel_events": {
+      "all_eight": 0.0,
+      "binding": 0.4853515625,
+      "correct": 1504,
+      "cross_entropy": 0.5089920874760279,
+      "global": 0.734375,
+      "groups": 256,
+      "macro": 0.734375,
+      "n": 2048,
+      "per_role": [
+        0.4921875,
+        0.9921875,
+        0.478515625,
+        0.974609375
+      ]
+    },
+    "swap_other_agent_patient": {
+      "all_eight": 0.0,
+      "binding": 0.486328125,
+      "correct": 1499,
+      "cross_entropy": 0.519598226924691,
+      "global": 0.73193359375,
+      "groups": 256,
+      "macro": 0.73193359375,
+      "n": 2048,
+      "per_role": [
+        0.490234375,
+        0.9921875,
+        0.482421875,
+        0.962890625
+      ]
+    },
+    "swap_queried_agent_patient": {
+      "all_eight": 0.0,
+      "binding": 0.484375,
+      "correct": 1499,
+      "cross_entropy": 0.5099378320506571,
+      "global": 0.73193359375,
+      "groups": 256,
+      "macro": 0.73193359375,
+      "n": 2048,
+      "per_role": [
+        0.498046875,
+        0.994140625,
+        0.470703125,
+        0.96484375
+      ]
+    }
+  },
+  "evaluation_wall_seconds": 3.2499809200003256,
+  "family": "relative_transformer",
+  "initialization": 44,
+  "predictions": {
+    "bytes": 2355865,
+    "path": "final_predictions/relative_transformer_seed44.npz",
+    "sha256": "fde7a170e9a23ea9635d1f7500aebbeb42a2573a372492e12f3b80c905537252"
+  },
+  "run_id": "relative_transformer_seed44"
+}

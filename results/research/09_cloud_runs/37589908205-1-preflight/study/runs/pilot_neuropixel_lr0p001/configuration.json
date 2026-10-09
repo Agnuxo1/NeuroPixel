@@ -1,0 +1,30 @@
+{
+  "batch_size": 32,
+  "family": "neuropixel",
+  "gradient_clip": 1.0,
+  "height": 10,
+  "initialization": 39,
+  "learning_rate": 0.001,
+  "loss": "answer_cross_entropy_only",
+  "memorization": false,
+  "model": {
+    "c": 48,
+    "c_id": 16,
+    "class": "neuropixel.model.NeuroPixel",
+    "fire_rate": 0.5,
+    "grounded": null,
+    "hidden": 128,
+    "retina": false,
+    "steps": 16
+  },
+  "optimizer": "AdamW",
+  "out_pos": [
+    9,
+    7
+  ],
+  "scheduled_updates": 1024,
+  "trainable_parameters": 29856,
+  "vocab": 37,
+  "weight_decay": 0.0001,
+  "width": 8
+}

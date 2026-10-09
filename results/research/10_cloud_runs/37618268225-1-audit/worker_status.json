@@ -1,0 +1,83 @@
+{
+  "admission": {
+    "at_utc": "2026-10-07T12:03:24.721899+00:00",
+    "available_ram_gib": 14.595592498779297,
+    "phase": "admission"
+  },
+  "completed_at_utc": "2026-10-07T12:03:40.644141+00:00",
+  "final_resource_observation": {
+    "at_utc": "2026-10-07T12:03:40.644040+00:00",
+    "available_ram_gib": 14.460807800292969,
+    "phase": "before_final_archive"
+  },
+  "gpu_requested": false,
+  "item": 10,
+  "paid_compute": false,
+  "phase": "audit",
+  "resource_policy": {
+    "aggregate_active_cpu_threads": 4,
+    "archive_interval_seconds": 300,
+    "archive_reserve_seconds": 180,
+    "git_threads": 1,
+    "git_timeout_seconds": 60,
+    "heartbeat_interval_seconds": 60,
+    "minimum_available_ram_gib": 8,
+    "numerical_threads": 1,
+    "supervisor_interval_seconds": 1,
+    "worker_seconds": 1500,
+    "workflow_minutes": 30
+  },
+  "run_key": "37618268225-1-audit",
+  "schema_version": 1,
+  "source_after": {
+    "all_bindings_verified": true,
+    "at_utc": "2026-10-07T12:03:40.643904+00:00",
+    "implementation_sha256": {
+      ".github/workflows/research-item10-audit.yml": "cc8646f3d9cfd02a4d9628b6f0d572067b463d64a7d0e314fae0ebf204d1f794",
+      "docs/research/10_study_plan.json": "571dd747cb9649bc435ffb006afc6558132b82e0d1c40e7b251827c51821b6f0",
+      "results/research/10_validation/preflight_completion_receipt.json": "acc7f4c0cd2c800243f28c5f4668a2768b3b76fb9beda92ccdde8ef6c0ded594",
+      "results/research/10_validation/preflight_json_review.json": "ba37775a7f92ddf158304d4044a26a83d7177402bb103419b50b8e96bec3f262",
+      "results/research/10_validation/study_completion_receipt.json": "9342a11ae66a42a79bba090f1fb592aa5141bf3ed71627d2b7b314d3583713d1",
+      "scripts/research_babi_audit.py": "d16aeb308029df8ac80716efbe84f524e6aa7680b259746c9102bd82293ce949",
+      "scripts/research_item10_inputs.py": "2cc0d5dd96fc7140a5480b1337632d79d96a3efb0f453f44e0947d4ed47a3102",
+      "scripts/research_item10_offline.py": "eb25635f69848d99bb508ea697392b224d1ad5cd43f23b1b742b236e3afc9bc2",
+      "scripts/research_item10_worker.py": "6256f5f90cfa945c05829e23c30f4f24b05b0d92f0d7f4ac8830feac0e184537",
+      "scripts/research_item9_worker.py": "a9012e556337c51d49a1fa95db60f166d6dec78669440fdca1a084f90cb190d5"
+    },
+    "plan_sha256": "670c1999a60a4a0d213ca430a633613d43b10f4aa36db7192760ba578e5244bc",
+    "source_commit": "3417e8287f76a13e94293f0affcf2c10887fe768",
+    "tracked_source_clean": true,
+    "unexpected_untracked_files": []
+  },
+  "source_commit": "3417e8287f76a13e94293f0affcf2c10887fe768",
+  "stages": [
+    {
+      "admission": {
+        "at_utc": "2026-10-07T12:03:29.188463+00:00",
+        "available_ram_gib": 14.540355682373047,
+        "phase": "admission"
+      },
+      "command": [
+        "/opt/hostedtoolcache/Python/3.12.14/x64/bin/python",
+        "/home/runner/work/NeuroPixel/NeuroPixel/scripts/research_item10_worker.py",
+        "--phase",
+        "audit",
+        "--child",
+        "audit",
+        "--output",
+        "/home/runner/work/NeuroPixel/NeuroPixel/results/research/10_cloud_runs/37618268225-1-audit"
+      ],
+      "completed_at_utc": "2026-10-07T12:03:37.194242+00:00",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "audit",
+      "return_code": 0,
+      "stage_limit_seconds": 1200,
+      "started_at_utc": "2026-10-07T12:03:29.188679+00:00",
+      "status": "completed",
+      "wall_seconds_including_shutdown": 8.004131518999998
+    }
+  ],
+  "started_at_utc": "2026-10-07T12:03:24.720545+00:00",
+  "status": "completed",
+  "wall_seconds_before_final_archive": 15.924905383999999
+}
