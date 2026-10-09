@@ -1,0 +1,83 @@
+software_renderer	Software shader computation and bounded HTTP parity	﻿2026-10-09T13:03:34.6796694Z ##[group]Run python scripts/verify_live_VIS07_viewer.py --software
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6797261Z ^[[36;1mpython scripts/verify_live_VIS07_viewer.py --software^[[0m
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6841491Z shell: /usr/bin/bash -e {0}
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6841855Z env:
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6842138Z   OMP_NUM_THREADS: 2
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6842468Z   MKL_NUM_THREADS: 2
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6842823Z   OPENBLAS_NUM_THREADS: 2
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6843139Z   LIBGL_ALWAYS_SOFTWARE: 1
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6843441Z   LP_NUM_THREADS: 2
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6843716Z   PYTHONUTF8: 1
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6846292Z   QTRAIN_U16_ARCHIVE_TOKEN: ***
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6846735Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6847216Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6847707Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6848153Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6848607Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6849176Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.6849591Z ##[endgroup]
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8628971Z Traceback (most recent call last):
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8635905Z   File "/home/runner/work/NeuroPixel/NeuroPixel/scripts/verify_live_VIS07_viewer.py", line 51, in <module>
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8636761Z     if __name__=='__main__':main()
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8637168Z                             ^^^^^^
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8637762Z   File "/home/runner/work/NeuroPixel/NeuroPixel/scripts/verify_live_VIS07_viewer.py", line 23, in main
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8638538Z     if not line:raise RuntimeError('Live viewer failed before serving: '+process.stderr.read()[-700:])
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8639132Z                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8640021Z RuntimeError: Live viewer failed before serving: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=digest:raise ValueError('Frozen viewer source changed '+name)
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8640812Z                       ^^^^^^^^^^^^^^^^^^^^^^^^
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8641616Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/pathlib.py", line 1019, in read_bytes
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8642155Z     with self.open(mode='rb') as f:
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8642497Z          ^^^^^^^^^^^^^^^^^^^^
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8642989Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/pathlib.py", line 1013, in open
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8643611Z     return io.open(self, mode, buffering, encoding, errors, newline)
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8644061Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8644712Z FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/NeuroPixel/NeuroPixel/data/vis07_models/weights_seed240.json'
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8645212Z 
+software_renderer	Software shader computation and bounded HTTP parity	2026-10-09T13:03:34.8818664Z ##[error]Process completed with exit code 1.
+software_renderer	Preserve actual success or failure	﻿2026-10-09T13:03:34.8872015Z ##[group]Run mkdir -p results/research/VIS07_live_viewer/software_20261009A
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8872717Z ^[[36;1mmkdir -p results/research/VIS07_live_viewer/software_20261009A^[[0m
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8873642Z ^[[36;1mpython scripts/publish_sprint_evidence.py --root results/research/VIS07_live_viewer/software_20261009A --registration VIS07VIEWER --branch research/vis07-viewer-software-evidence-2026-10-09^[[0m
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8917438Z shell: /usr/bin/bash -e {0}
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8917815Z env:
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8918120Z   OMP_NUM_THREADS: 2
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8918440Z   MKL_NUM_THREADS: 2
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8918726Z   OPENBLAS_NUM_THREADS: 2
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8919077Z   LIBGL_ALWAYS_SOFTWARE: 1
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8919373Z   LP_NUM_THREADS: 2
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8919665Z   PYTHONUTF8: 1
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8922634Z   QTRAIN_U16_ARCHIVE_TOKEN: ***
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8923013Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8923532Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8924102Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8924596Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8925032Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8925472Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:34.8925866Z ##[endgroup]
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6501071Z Traceback (most recent call last):
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6502371Z   File "/home/runner/work/NeuroPixel/NeuroPixel/scripts/publish_sprint_evidence.py", line 20, in <module>
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6503152Z     if __name__=='__main__':main()
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6511660Z                             ^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6512510Z   File "/home/runner/work/NeuroPixel/NeuroPixel/scripts/publish_sprint_evidence.py", line 17, in main
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6513270Z     publish_immutable(base+'raw.zip',body)
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6513914Z   File "/home/runner/work/NeuroPixel/NeuroPixel/neuropixel/research/qtrain_budget_transport.py", line 154, in publish_immutable
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6514648Z     with urllib.request.urlopen(request, timeout=60) as response:
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6515086Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6515654Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6516205Z     return opener.open(url, data, timeout)
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6516591Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6517643Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 521, in open
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6518371Z     response = meth(req, response)
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6518703Z                ^^^^^^^^^^^^^^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6519311Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6519854Z     response = self.parent.error(
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6520268Z                ^^^^^^^^^^^^^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6520778Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 559, in error
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6521667Z     return self._call_chain(*args)
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6522229Z            ^^^^^^^^^^^^^^^^^^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6522752Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6523305Z     result = func(*args)
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6523675Z              ^^^^^^^^^^^
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6551896Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6553003Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6553783Z urllib.error.HTTPError: HTTP Error 404: Not Found
+software_renderer	Preserve actual success or failure	2026-10-09T13:03:35.6675248Z ##[error]Process completed with exit code 1.
