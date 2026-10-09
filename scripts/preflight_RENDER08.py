@@ -32,6 +32,7 @@ def main():
             m=NeuroPixel(7,(0,0),c_id=cid,c=c,hidden=hidden,steps=4,fire_rate=1).eval()
             with torch.no_grad():m.f2.weight.copy_(torch.from_numpy(rng.normal(0,.01,size=tuple(m.f2.weight.shape)).astype(np.float32)));m.f2.bias.copy_(torch.from_numpy(rng.normal(0,.01,size=c).astype(np.float32)))
             weights={k:v.detach().cpu().numpy().copy() for k,v in m.state_dict().items()};gl=GLNCA(ctx,w,h,weights)
+            gl.install_readout(weights['read.weight'],weights['read.bias'],m.dictionary().detach().numpy())
             canvas=torch.from_numpy(rng.integers(0,7,size=(1,h,w),dtype=np.int64));ids=m.dictionary().detach()[canvas][0].numpy().transpose(2,0,1).copy();present=(canvas[0].numpy()!=0).astype(np.float32)
             for mode in ['full','checkerboard']:
                 gl.initialize(ids,present);model=m.to(device)
@@ -53,10 +54,30 @@ def main():
                     check(f'{case}/{mode}/mask_reset',np.allclose(gl.state(),state[0].cpu().numpy(),atol=1e-4,rtol=1e-5))
                     raw=model.lens_logits(state)[0].cpu().numpy();r=gl.state().transpose(1,2,0).astype(np.float64)@weights['read.weight'].astype(np.float64).T+weights['read.bias'].astype(np.float64);ours=r@model.dictionary().detach().cpu().numpy().astype(np.float64).T
                     check(f'{case}/{mode}/complete_logits',np.allclose(ours,raw,atol=1e-4,rtol=1e-5));ours[...,0]=-10000;raw[...,0]=-10000;check(f'{case}/{mode}/all_decisions',np.array_equal(ours.argmax(-1),raw.argmax(-1)))
+                    render_raw=gl.logits(mask_pad=False);native_raw=model.lens_logits(state)[0].cpu().numpy()
+                    check(f'{case}/{mode}/rendered_complete_raw_logits',np.allclose(render_raw,native_raw,atol=1e-4,rtol=1e-5))
+                    rendered=gl.logits(mask_pad=True);check(f'{case}/{mode}/rendered_complete_masked_logits',np.allclose(rendered,raw,atol=1e-4,rtol=1e-5))
+                    check(f'{case}/{mode}/rendered_all_decisions',np.array_equal(rendered.argmax(-1),raw.argmax(-1)))
+                    arrays[f'case{case}_{mode}_rendered_logits']=rendered
                     check(f'{case}/{mode}/pack_roundtrip',np.array_equal(unpack(pack(native).tobytes(),c,h,w),native))
                     rows.append(dict(case=case,channels=c,identity=cid,hidden=hidden,width=w,height=h,mode=mode,shader=gl.metadata()))
                 model=m.cpu()
             gl.release();ram()
+        # A full pixel-only retina -> seed -> NCA -> dictionary path, no label input.
+        from neuropixel.model import Retina
+        rng=np.random.default_rng(84200);torch.manual_seed(84200);m=NeuroPixel(11,(4,4),c_id=8,c=16,hidden=32,steps=4,fire_rate=1,retina=True).eval();m.retina=Retina(8,w=8)
+        with torch.no_grad():m.f2.weight.copy_(torch.from_numpy(rng.normal(0,.01,size=tuple(m.f2.weight.shape)).astype(np.float32)))
+        weights={k:v.detach().cpu().numpy().copy() for k,v in m.state_dict().items()};gl=GLNCA(ctx,8,8,weights);gl.install_retina(weights);gl.install_readout(weights['read.weight'],weights['read.bias'],m.dictionary().detach().numpy())
+        rgb=rng.uniform(0,1,size=(3,8,8)).astype(np.float32);gl.initialize_image(rgb);model=m.to(device)
+        with torch.inference_mode():
+            canvas=torch.zeros((1,8,8),dtype=torch.long,device=device);image=torch.from_numpy(rgb[None]).to(device);cam=torch.ones((1,8,8),dtype=torch.bool,device=device)
+            native=model(canvas,rgb=image,cam=cam,trace=True,steps=4)
+            check('pixel retina seed',np.allclose(gl.state(),native['frames'][0,0].cpu().numpy(),atol=1e-4,rtol=1e-5))
+            for step in range(1,5):
+                gl.step();check(f'pixel retina state{step}',np.allclose(gl.state(),native['frames'][0,step].cpu().numpy(),atol=1e-4,rtol=1e-5))
+            rendered=gl.logits(True);native_logits=model.lens_logits(native['state'])[0].cpu().numpy();native_logits[...,0]=-10000
+            check('pixel retina complete rendered logits',np.allclose(rendered,native_logits,atol=1e-4,rtol=1e-5));check('pixel retina all decisions',np.array_equal(rendered.argmax(-1),native_logits.argmax(-1)));arrays['pixel_retina_logits']=rendered;arrays['pixel_retina_state']=gl.state()
+        gl.release();ram()
         check('source_unchanged_during_fixture',initial_source=={k:hashlib.sha256((ROOT/k).read_bytes()).hexdigest() for k in source_files})
     finally:
         ctx.release()

@@ -83,6 +83,7 @@ class GLNCA:
         self.c=f2.shape[0];self.hidden=f2.shape[1];self.cid=f1.shape[1]-3*self.c
         if self.cid<=0:raise ValueError('Native concatenation dimensions')
         self.ids=field_texture(ctx,self.cid,height,width)
+        self.active_ids=self.ids
         self.present=ctx.texture((width,height),1,dtype='f4');self.present.filter=(9728,9728)
         self.fire=ctx.texture((width,height),1,np.ones((height,width),np.float32).tobytes(),dtype='f4');self.fire.filter=(9728,9728)
         self.seed=ConvPass(ctx,width,height,weights['seed.weight'],weights['seed.bias'],present=True)
@@ -114,6 +115,7 @@ v=cell(x1,pixel,output_c)+v*texelFetch(mask,pixel,0).r;'''
         ids=np.asarray(ids,np.float32);present=np.asarray(present,np.float32)
         if ids.shape!=(self.cid,self.h,self.w) or present.shape!=(self.h,self.w):raise ValueError('Input geometry differs')
         self.ids.write(pack(ids).tobytes());self.present.write(present.tobytes());self.current=0
+        self.active_ids=self.ids
         self.fire.write(np.ones((self.h,self.w),np.float32).tobytes());self.fire_changed=False
         self.seed.draw(self.ids,mask=self.present,target=self.fbos[0])
     def set_state(self,state):
@@ -127,13 +129,53 @@ v=cell(x1,pixel,output_c)+v*texelFetch(mask,pixel,0).r;'''
             self.fire_changed=True
         elif self.fire_changed:
             self.fire.write(np.ones((self.h,self.w),np.float32).tobytes());self.fire_changed=False
-        p=self.perceive.draw(self.states[self.current]);h=self.f1.draw(self.states[self.current],p,self.ids)
+        p=self.perceive.draw(self.states[self.current]);h=self.f1.draw(self.states[self.current],p,self.active_ids)
         nxt=1-self.current;self.f2.draw(h,self.states[self.current],mask=self.fire,target=self.fbos[nxt]);self.current=nxt
     def state(self):return unpack(self.states[self.current].read(),self.c,self.h,self.w)
-    def metadata(self):return dict(state_channels=self.c,identity_channels=self.cid,hidden=self.hidden,passes_per_update=3,storage='RGBA32F banked textures',shader_sha256=[p.shader_sha256 for p in self.passes],compile_seconds=sum(p.compile_seconds for p in self.passes))
+    def install_retina(self,weights):
+        if hasattr(self,'retina_passes'):raise ValueError('Retina already installed')
+        self.rgb=field_texture(self.ctx,3,self.h,self.w);self.retina_passes=[]
+        for index,dilation in [(0,1),(2,2),(4,4),(6,8),(8,1)]:
+            p=ConvPass(self.ctx,self.w,self.h,weights[f'retina.net.{index}.weight'],weights[f'retina.net.{index}.bias'],dilation=dilation,relu=index!=8)
+            self.retina_passes.append(p)
+        if self.retina_passes[-1].channels!=self.cid:raise ValueError('Retina output identity dimension')
+        self.passes.extend(self.retina_passes)
+    def initialize_image(self,rgb):
+        """Pixel-only input; every pixel is a camera location, no class tokens."""
+        rgb=np.asarray(rgb,np.float32)
+        if rgb.shape!=(3,self.h,self.w) or not hasattr(self,'retina_passes'):raise ValueError('Image/retina contract')
+        self.rgb.write(pack(rgb).tobytes());texture=self.rgb
+        for p in self.retina_passes:texture=p.draw(texture)
+        self.active_ids=texture;self.present.write(np.ones((self.h,self.w),np.float32).tobytes());self.current=0
+        self.fire.write(np.ones((self.h,self.w),np.float32).tobytes());self.fire_changed=False
+        self.seed.draw(self.active_ids,mask=self.present,target=self.fbos[0])
+    def install_readout(self,read_weight,read_bias,dictionary):
+        """The shared lens and final decoder also execute as rendering passes."""
+        if hasattr(self,'read_pass'):raise ValueError('Readout already installed')
+        read_weight=np.asarray(read_weight,np.float32);dictionary=np.asarray(dictionary,np.float32)
+        if read_weight.shape!=(self.cid,self.c) or dictionary.shape[1]!=self.cid:raise ValueError('Readout dimensions')
+        self.vocab=len(dictionary)
+        self.read_pass=ConvPass(self.ctx,self.w,self.h,read_weight[:,:,None,None],read_bias)
+        expression=f'''for(int identity_c=0;identity_c<{self.cid};identity_c++){{
+ v+=scalar(weights,output_c*{self.cid}+identity_c)*cell(x0,pixel,identity_c);
+}}'''
+        self.raw_decode_pass=Pass(self.ctx,self.w,self.h,self.vocab,expression,dictionary,np.zeros(self.vocab,np.float32))
+        self.decode_pass=Pass(self.ctx,self.w,self.h,self.vocab,expression+'\nif(output_c==0)v=-10000.0;',dictionary,np.zeros(self.vocab,np.float32))
+        self.passes.extend([self.read_pass,self.raw_decode_pass,self.decode_pass])
+    def readout_texture(self,mask_pad=True):
+        if not hasattr(self,'read_pass'):raise ValueError('Install exact decoder first')
+        latent=self.read_pass.draw(self.states[self.current])
+        return (self.decode_pass if mask_pad else self.raw_decode_pass).draw(latent)
+    def logits(self,mask_pad=True):
+        return unpack(self.readout_texture(mask_pad).read(),self.vocab,self.h,self.w).transpose(1,2,0)
+    def restart(self):
+        """Reuse resident input; both inference references must include seeding."""
+        self.current=0;self.seed.draw(self.active_ids,mask=self.present,target=self.fbos[0])
+    def metadata(self):return dict(state_channels=self.c,identity_channels=self.cid,hidden=self.hidden,passes_per_update=3,storage='RGBA32F banked textures',shader_sha256=[p.shader_sha256 for p in self.passes],compile_seconds=sum(p.compile_seconds for p in self.passes),readout_installed=hasattr(self,'read_pass'))
     def release(self):
         for p in self.passes:p.release()
         for obj in self.fbos+self.states+[self.ids,self.present,self.fire]:obj.release()
+        if hasattr(self,'rgb'):self.rgb.release()
 
 def numpy_update(state,ids,weights,fire=None):
     """Independent scalar-kernel indexing; vectorized only over cell positions."""
