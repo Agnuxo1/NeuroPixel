@@ -1,0 +1,36 @@
+{
+  "registration": "NP-VIS07-VIEWER-INTEGRATION-20261009",
+  "frozen_utc": "2026-10-09T12:58:09.916288+00:00",
+  "source_sha256": {
+    "scripts/live_VIS07_viewer.py": "785a3f2dd9aa92df7f8a5b22560975c1b3a010d6b64a5a78b99efcc72cf6b85f",
+    "scripts/verify_live_VIS07_viewer.py": "06b6f9d147cc605fea39e3ab210ee8cd160bd51d894f6f0c71ed9476f6606618",
+    "docs/viewer/index.html": "2014dcbf4d416e0fb54e22ca72777cb2898bb834e4038b9b037243d2eb250221",
+    "docs/research/VIS07_viewer_protocol.md": "a99c7ce851be082c51e3a8abb40fdf084d62bcbfba0eb0533f28515e764e2ee9",
+    "neuropixel/rendering/nca_gl.py": "ed8ac459e5ba2dfd9a3f1cff63f0bd5a2084a8e86b78d9df67647da53889d2dc",
+    "neuropixel/rendering/nca_gl_vector.py": "9ad10872c87b8ecf8215cb40713fe151b0b9d901b4574d0e03387f653304f721",
+    "data/vis07_models/weights_seed240.json": "0d9eb9646609a435e7560e4dd1b97a47aa94fd4ed6c4c87f37d807b6e991d0d5",
+    "data/vis07_models/gallery_train.json": "c52678291d5df17090d7ae935e730482ab80d845c78a55097cf549885b7038d9",
+    "results/research/VIS07_learned_gpu/actual_rendered_train0_seed240_frames.npz": "c1a3897d16f31247abdc6bab099adc564c8f98090bece195b45112efe77c6c8f"
+  },
+  "depths": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "selected_seed": 240,
+  "reference_example": "first original TRAIN class0",
+  "continuous_rule": "abs(actual-reference)<=1e-4+1e-5*abs(reference)",
+  "categorical_rule": "all scanner decisions exact",
+  "endpoints": [
+    "physical NVIDIA GPU",
+    "CPU/Mesa software renderer"
+  ],
+  "new_training": 0,
+  "independent_external_replication": false
+}
