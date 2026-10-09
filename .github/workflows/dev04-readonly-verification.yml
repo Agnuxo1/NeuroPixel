@@ -37,6 +37,7 @@ jobs:
           load_plan(Path('docs/research/DEV04_execution_plan.json'),'2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a')
           print('Forty-three governing files intact; no scientific updates')
           PY
+          python -c "import scripts.verify_DEV04_archived_cases; import scripts.recover_DEV04_snapshot; import scripts.replay_DEV04; print('Read-only import closure present')"
           python scripts/test_DEV04_body_recount.py -v
           python scripts/test_DEV04_execution_registry.py -v
       - name: Wait for scientific slots then recover and replay twelve cases serially
