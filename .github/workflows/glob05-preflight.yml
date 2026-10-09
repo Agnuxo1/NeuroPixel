@@ -6,6 +6,11 @@ on:
       - .github/workflows/glob05-preflight.yml
       - neuropixel/research/query_gated_uniform.py
       - scripts/test_GLOB05_control.py
+      - scripts/test_GLOB05_resume.py
+      - scripts/test_GLOB05_transport.py
+      - scripts/research_GLOB05.py
+      - neuropixel/research/glob05_experiment.py
+      - neuropixel/research/glob05_transport.py
 permissions:
   contents: write
 concurrency:
@@ -40,3 +45,16 @@ jobs:
           print('43 governors intact; zero real scientific body/head fits')
           PY
           python scripts/test_GLOB05_control.py -v
+          python scripts/test_GLOB05_transport.py -v
+          python scripts/test_GLOB05_resume.py -v
+      - name: Admit twelve actual immutable parents with zero scientific fits
+        run: python scripts/research_GLOB05.py --preflight --expected-parent-inventory-sha256 e0f3c16b0ec18b2b6d33c53f67fa26bc9f3fde69b6396fd9dcef8aa002a09949
+      - name: Preserve exact parent admission receipt
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from neuropixel.research.qtrain_budget_transport import publish_immutable
+          path=Path('results/research/GLOB05_preflight/parent_admission_receipt.json')
+          publish_immutable('results/research/GLOB05_preflight_cloud/'+os.environ['GITHUB_RUN_ID']+'/parent_admission_receipt.json',path.read_bytes())
+          PY
