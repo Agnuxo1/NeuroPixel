@@ -1,0 +1,123 @@
+{
+  "status": "admitted",
+  "checks": [
+    {
+      "name": "exact sample/group separation",
+      "passed": true
+    },
+    {
+      "name": "balanced fifty TRAIN-only images",
+      "passed": true
+    },
+    {
+      "name": "image-only sample dimensions",
+      "passed": true
+    },
+    {
+      "name": "nca finite learning",
+      "passed": true
+    },
+    {
+      "name": "nca admission45of50",
+      "passed": true
+    },
+    {
+      "name": "cnn finite learning",
+      "passed": true
+    },
+    {
+      "name": "cnn admission45of50",
+      "passed": true
+    },
+    {
+      "name": "near nominal parameter count within one percent",
+      "passed": true
+    },
+    {
+      "name": "RAM8 finish",
+      "passed": true
+    },
+    {
+      "name": "frozen preflight source remains unchanged",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "family": "nca",
+      "parameters": 5056,
+      "accuracy": 1.0,
+      "correct": 50,
+      "updates": 512,
+      "curve": [
+        {
+          "update": 1,
+          "loss": 2.38529896736145,
+          "gradient": 3.017888069152832
+        },
+        {
+          "update": 128,
+          "loss": 0.00015137484297156334,
+          "gradient": 0.03240147605538368
+        },
+        {
+          "update": 256,
+          "loss": 4.17467254010262e-06,
+          "gradient": 0.00032471338636241853
+        },
+        {
+          "update": 512,
+          "loss": 1.8191273056800128e-06,
+          "gradient": 0.00013146016863174736
+        }
+      ],
+      "wall_seconds": 16.198746766,
+      "cpu_seconds": 32.351262935
+    },
+    {
+      "family": "cnn",
+      "parameters": 5039,
+      "accuracy": 1.0,
+      "correct": 50,
+      "updates": 512,
+      "curve": [
+        {
+          "update": 1,
+          "loss": 2.306889295578003,
+          "gradient": 0.04205375164747238
+        },
+        {
+          "update": 128,
+          "loss": 1.1978296041488647,
+          "gradient": 0.27509286999702454
+        },
+        {
+          "update": 256,
+          "loss": 0.22205810248851776,
+          "gradient": 0.1281147301197052
+        },
+        {
+          "update": 512,
+          "loss": 0.019242651760578156,
+          "gradient": 0.020256590098142624
+        }
+      ],
+      "wall_seconds": 1.5346317779999907,
+      "cpu_seconds": 3.0683326350000044
+    }
+  ],
+  "source_commit": "5757a498971f9eff8ae98e5b52b89a9a673250f6",
+  "workflow_run_id": "37901902313",
+  "plan_sha256": "1f6b1bace9665860f114fda5eca60c0aec72f20e98b6d505eeedc06df5bbeb64",
+  "original_test_scored": false,
+  "official_UCI_test_scored": false,
+  "main_trainings": 0,
+  "scientific_pilot_trainings": 2,
+  "software": {
+    "python": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]",
+    "torch": "2.6.0+cpu",
+    "numpy": "2.2.6"
+  },
+  "wall_seconds": 18.448080755000007,
+  "available_ram_finish_gib": 14.371620178222656
+}

@@ -1,0 +1,95 @@
+{
+  "registration": "NP-RENDER08-BENCH-20261009",
+  "frozen_utc": "2026-10-09T08:23:24.100306+00:00",
+  "source_sha256": {
+    "scripts/benchmark_RENDER08.py": "cf1859692860fa2fd1fd2e5dcd5c7febe8616d52775d1da140990567930b6805",
+    "neuropixel/rendering/nca_gl.py": "ed8ac459e5ba2dfd9a3f1cff63f0bd5a2084a8e86b78d9df67647da53889d2dc",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "docs/research/RENDER08_benchmark_protocol.md": "d9939de0241e8a064ad86966bcd3b78cedd6bc8460a41407feaf283a95f2802e"
+  },
+  "cases": [
+    {
+      "name": "C16_grid8",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 8,
+      "height": 8,
+      "pixel": false
+    },
+    {
+      "name": "C16_grid32",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 32,
+      "height": 32,
+      "pixel": false
+    },
+    {
+      "name": "C16_grid128",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 128,
+      "height": 128,
+      "pixel": false
+    },
+    {
+      "name": "C48_grid8",
+      "c": 48,
+      "cid": 16,
+      "hidden": 128,
+      "vocab": 35,
+      "width": 8,
+      "height": 8,
+      "pixel": false
+    },
+    {
+      "name": "C48_grid32",
+      "c": 48,
+      "cid": 16,
+      "hidden": 128,
+      "vocab": 35,
+      "width": 32,
+      "height": 32,
+      "pixel": false
+    },
+    {
+      "name": "C48_grid128",
+      "c": 48,
+      "cid": 16,
+      "hidden": 128,
+      "vocab": 35,
+      "width": 128,
+      "height": 128,
+      "pixel": false
+    },
+    {
+      "name": "RGB8_retina_C16",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 8,
+      "height": 8,
+      "pixel": true
+    }
+  ],
+  "technical_blocks": 7,
+  "inner_repetitions": 3,
+  "idle_bracket_seconds": 0.25,
+  "parity_abs": 0.0001,
+  "parity_relative": 1e-05,
+  "categorical_exact": true,
+  "training_updates": 0,
+  "resources": {
+    "actual_min_ram_gib": 8,
+    "bootstrap_ram_gib": 9,
+    "vram_gib": 4,
+    "cpu_threads": 2
+  }
+}

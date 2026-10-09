@@ -1,0 +1,40 @@
+name: VIS07 external pixel-only prerequisite
+on:
+  push:
+    branches: [research/vis07-preflight-2026-10-09]
+permissions:
+  contents: write
+concurrency:
+  group: vis07-frozen-preflight
+  cancel-in-progress: false
+jobs:
+  prerequisite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed standard CPU software
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Frozen two pilot fits and no official test scoring
+        run: python scripts/preflight_VIS07.py --output results/research/VIS07/preflight
+      - name: Archive original success or negative/partial outcome
+        if: always()
+        run: |
+          mkdir -p results/research/VIS07
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('results/research/VIS07/attempt.json').write_text(json.dumps(dict(source_commit=os.environ['GITHUB_SHA'],run_id=os.environ['GITHUB_RUN_ID'],preflight_receipt_exists=Path('results/research/VIS07/preflight/receipt.json').exists()),indent=2)+'\n')
+          PY
+          python scripts/publish_sprint_evidence.py --root results/research/VIS07 --registration VIS07PREFLIGHT --branch research/vis07-preflight-evidence-2026-10-09

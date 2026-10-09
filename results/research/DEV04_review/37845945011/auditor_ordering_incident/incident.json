@@ -1,0 +1,34 @@
+{
+  "status": "false_positive_from_auditor_numpy_repeat_semantics",
+  "initial_checks": 51,
+  "initial_accepted_dataset_panels": 6,
+  "initial_issues": [
+    "DEV04_partition101_seed401_body_u2048 dataset head_train Four-query context grouping differs",
+    "DEV04_partition101_seed401_body_u5120 dataset head_train Four-query context grouping differs",
+    "DEV04_partition102_seed404_body_u3072 dataset head_train Four-query context grouping differs"
+  ],
+  "actual_first16_roles": [
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3
+  ],
+  "fix": "NumPy tile(arange4,1024); the experiment uses Torch repeat whose semantics differ",
+  "experiment_files_modified": 0,
+  "training_restarted": false,
+  "corrected_checks": 60,
+  "corrected_issues": [],
+  "not_a_scientific_model_failure": true
+}

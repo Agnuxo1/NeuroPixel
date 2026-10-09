@@ -1,0 +1,42 @@
+{
+  "registration": "NP-SCN06-RANK-20261009",
+  "frozen_utc": "2026-10-09T07:26:34.804827+00:00",
+  "input_root": "D:\\PROJECTS\\NP-T4-20261009\\205507b7",
+  "input_archive_commit": "205507b71e2f7abb00ce97aa1dbec8321fc0af26",
+  "source_sha256": {
+    "scripts/census_SCN06_ranks.py": "0c4f2bcfad3dc5683d6de23b1c29c135e8f632aef52d04b5cb096a781a77ba73"
+  },
+  "input_sha256": {
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\archive_manifest.json": "a7fc7460987028d3074b0985a232288c71236dbf80310d94429899ac57ebca01",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\binding\\checkpoint_binding.json": "64686a77c9938cf30a3521815c9e1d4f9bf3a5ccb18f0410521d45bda269b268",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed40.npz": "554341c71aa9de467d8096ff9127774a4dcddf8981a0855a926ed134bb27a44a",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed40.json": "a36287e03a5d8029837f8e0498e626d4908db1fed9c380301b1f69439e777e5a",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed41.npz": "943044f129045e58194daabb4e71baccfc8117dd44c92e94feed7955812d8a5c",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed41.json": "8e577845a2da70adc6532741729e11963c123755cdd4422c8614c408d3e3e666",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed42.npz": "79e32915b6f9ad928ac62c43ebfaef26e18ada6448574c8cc87b4163d9510ef5",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed42.json": "d370ab3ad921b3305b49a0e36b6c58c47149f0f76b976d9bd3670f041013c038",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed43.npz": "e2095ebf01edbff682fdc6e073a92c8545f66232464f255890a3b0037e1b8bd8",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed43.json": "32b9f801e59f4a77b70a45753ab16782930b297d1e6f17b08265367d0953d589",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed44.npz": "f5a0207769e031697137310fecb5a1cf610a2cbf54a9b2e8d376b8a59f6bb554",
+    "D:\\PROJECTS\\NP-T4-20261009\\205507b7\\native\\gates\\seed44.json": "d5c16a3bd68105cb36eb143b320ec6753f81e7ae1d8ad81cb454304e184d5f44"
+  },
+  "seeds": [
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "threshold": "float64epsilon * max(shape) * max_singular_value",
+  "sensitivity_factors": [
+    0.1,
+    1,
+    10,
+    100
+  ],
+  "learned_forward_calls": 0,
+  "training_updates": 0,
+  "heavy_neural_loads": 0,
+  "cpu_threads": 2,
+  "scope": "Small authenticated parameter arrays only; no neural deserialization or prediction"
+}

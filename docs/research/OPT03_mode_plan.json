@@ -1,0 +1,129 @@
+{
+  "status": "frozen",
+  "local_registration_id": "NP-OPT03-MODE-20261008-D1",
+  "frozen_utc": "2026-10-08T02:53:52.793850+00:00",
+  "archive": "results/research/OPT03_cloud_recovery/37696760073/archive",
+  "runs": [
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed100",
+      "seed": 100,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed100",
+      "seed": 100,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed100",
+      "seed": 100,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed100",
+      "seed": 100,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed101",
+      "seed": 101,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed101",
+      "seed": 101,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed101",
+      "seed": 101,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed101",
+      "seed": 101,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire0.5_seed102",
+      "seed": 102,
+      "freeze_pad": false,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad0_fire1.0_seed102",
+      "seed": 102,
+      "freeze_pad": false,
+      "fire_rate": 1.0,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire0.5_seed102",
+      "seed": 102,
+      "freeze_pad": true,
+      "fire_rate": 0.5,
+      "updates": 8192
+    },
+    {
+      "run_id": "OPT03D_pad1_fire1.0_seed102",
+      "seed": 102,
+      "freeze_pad": true,
+      "fire_rate": 1.0,
+      "updates": 8192
+    }
+  ],
+  "mask_seeds": [
+    78000,
+    78001,
+    78002,
+    78003,
+    78004,
+    78005,
+    78006,
+    78007
+  ],
+  "examples_per_role": 128,
+  "trainings": 0,
+  "test_access": false,
+  "threads": 2,
+  "minimum_available_ram_gib": 8,
+  "input_sha256": {
+    "docs/research/OPT03_mode_protocol.md": "8c7ff60908f0fbaac6229a80c5dda5b89204a9a74942eeb3bc54c0092ed0c414",
+    "scripts/diagnose_OPT03_modes.py": "6a1806efd42a52a212ca6dcd67391b54765865e51b8b633d4c7a011e659e3c75",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+    "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire0.5_seed100/checkpoint.pt": "6b7c80112b40ab9cb534ec9c1dce59fd0bb1eb1bad986bdf91c7366d6f08483e",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire0.5_seed101/checkpoint.pt": "6918be4c11004f677f9d42ab9fcfbbb2d4ebcd6a1245e1b1db5cf811054e8525",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire0.5_seed102/checkpoint.pt": "9c00a3968fc9a7c415774346de58bd2d691a0edcec3b2d0022293ac866e47841",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire1.0_seed100/checkpoint.pt": "b696ba50dd1013a90953a382423d9d8650984ebe4e35b7edff5a4b45a0e66d3e",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire1.0_seed101/checkpoint.pt": "b51868468dafc0398a11bee48dba159b738748d27a57c13ae1afde238a858b77",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad0_fire1.0_seed102/checkpoint.pt": "082405aad912e69d13b51a002b49e7be559e5a341e7e6d7582a56f8a07d5e771",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire0.5_seed100/checkpoint.pt": "f28bf96835ec38188e6256ad6fca2a3a7d3cd131f99b7ee56bd44e313f3fcf39",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire0.5_seed101/checkpoint.pt": "359dbbad76522e1fb070b72d2f4171304d3169c1366759c97440fb85258cf809",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire0.5_seed102/checkpoint.pt": "87605aeac4c1bfcea6d1f0162a542f416c51bb83dd05e4eda3eaf467c7fee5b2",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire1.0_seed100/checkpoint.pt": "3827e992a0cc0cd011a2c79dba700fdab7e2bfa07549a87a368d92308657c253",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire1.0_seed101/checkpoint.pt": "e1b20e563ee2f61082cc5ccf61335377ad2a4224b4cd4ca0feb9998f51ada751",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/OPT03D_pad1_fire1.0_seed102/checkpoint.pt": "3ae5f7083e87a2f40830f2a14dfc745b683940448d295b32646e70c15f95d4b9",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/datasets/split0_train_n2048_seed76001.npz": "642878876f1dfda7e8556b01b7db5e0b1e539c30b87278960173ed394b225221",
+    "results/research/OPT03_cloud_recovery/37696760073/archive/datasets/split0_validation_n4096_seed76002.npz": "0792c986ee22f22a4ff94dcd1e231fddb2aefd31107dcf4dfa2e51ee5269b497"
+  },
+  "analysis": "mode contrast per existing checkpoint, then firingtrain x firingeval interaction in3paired initializations; descriptive5pp screen, no confirmation or competency-gate change"
+}

@@ -1,0 +1,214 @@
+{
+  "status": "verified_complete_registered_benchmark",
+  "source_receipt_sha256": "6393fb4e618faf5235054cae466819808df0da19c12024b6581c7b1da81f7c3f",
+  "cases": [
+    {
+      "case": "C16_grid8",
+      "method": "cuda_eager",
+      "median_host_ms": 4.315733332380963,
+      "min_host_ms": 3.647199999250006,
+      "max_host_ms": 4.988766665822671,
+      "median_device_ms": 3.842048009236654
+    },
+    {
+      "case": "C16_grid8",
+      "method": "cuda_graph",
+      "median_host_ms": 2.3779666662449017,
+      "min_host_ms": 0.5175333329437611,
+      "max_host_ms": 2.44846666707114,
+      "median_device_ms": 2.012159983317057
+    },
+    {
+      "case": "C16_grid8",
+      "method": "render",
+      "median_host_ms": 11.764399998355657,
+      "min_host_ms": 2.1894666667018705,
+      "max_host_ms": 11.904700001953946,
+      "median_device_ms": 11.060906666666668
+    },
+    {
+      "case": "C16_grid8",
+      "method": "best_cuda_over_render",
+      "ratio": 0.20213242210204319
+    },
+    {
+      "case": "C16_grid32",
+      "method": "cuda_eager",
+      "median_host_ms": 3.768233334994875,
+      "min_host_ms": 3.5168999990370744,
+      "max_host_ms": 4.641066666711898,
+      "median_device_ms": 3.2863572438557944
+    },
+    {
+      "case": "C16_grid32",
+      "method": "cuda_graph",
+      "median_host_ms": 2.469366666142984,
+      "min_host_ms": 2.4342333320722296,
+      "max_host_ms": 2.480433334615858,
+      "median_device_ms": 2.0906666119893393
+    },
+    {
+      "case": "C16_grid32",
+      "method": "render",
+      "median_host_ms": 12.751600001744615,
+      "min_host_ms": 12.643699999898672,
+      "max_host_ms": 12.972500000614673,
+      "median_device_ms": 12.072618666666665
+    },
+    {
+      "case": "C16_grid32",
+      "method": "best_cuda_over_render",
+      "ratio": 0.19365151555923465
+    },
+    {
+      "case": "C16_grid128",
+      "method": "cuda_eager",
+      "median_host_ms": 10.93876666467016,
+      "min_host_ms": 10.105800000019372,
+      "max_host_ms": 11.099333334035085,
+      "median_device_ms": 10.429781595865885
+    },
+    {
+      "case": "C16_grid128",
+      "method": "cuda_graph",
+      "median_host_ms": 10.593733333128815,
+      "min_host_ms": 10.045566666425051,
+      "max_host_ms": 10.686200000539733,
+      "median_device_ms": 10.253994623819986
+    },
+    {
+      "case": "C16_grid128",
+      "method": "render",
+      "median_host_ms": 33.24676666670712,
+      "min_host_ms": 26.69953333194523,
+      "max_host_ms": 33.46720000020772,
+      "median_device_ms": 32.55364266666667
+    },
+    {
+      "case": "C16_grid128",
+      "method": "best_cuda_over_render",
+      "ratio": 0.3186395067926182
+    },
+    {
+      "case": "C48_grid8",
+      "method": "cuda_eager",
+      "median_host_ms": 4.053033335367218,
+      "min_host_ms": 3.7264666655876986,
+      "max_host_ms": 4.183099998044781,
+      "median_device_ms": 3.590144157409668
+    },
+    {
+      "case": "C48_grid8",
+      "method": "cuda_graph",
+      "median_host_ms": 2.8594999991279715,
+      "min_host_ms": 2.3994666674601226,
+      "max_host_ms": 3.3088666677940637,
+      "median_device_ms": 2.5094827016194663
+    },
+    {
+      "case": "C48_grid8",
+      "method": "render",
+      "median_host_ms": 35.01289999985602,
+      "min_host_ms": 26.327633332887974,
+      "max_host_ms": 41.40596666790467,
+      "median_device_ms": 34.35758933333333
+    },
+    {
+      "case": "C48_grid8",
+      "method": "best_cuda_over_render",
+      "ratio": 0.08166989878415472
+    },
+    {
+      "case": "C48_grid32",
+      "method": "cuda_eager",
+      "median_host_ms": 3.956366667504578,
+      "min_host_ms": 3.582033333562625,
+      "max_host_ms": 4.441200001262284,
+      "median_device_ms": 3.60209051767985
+    },
+    {
+      "case": "C48_grid32",
+      "method": "cuda_graph",
+      "median_host_ms": 3.9656666679851087,
+      "min_host_ms": 2.7269333319660896,
+      "max_host_ms": 4.381066668429412,
+      "median_device_ms": 3.588778813680013
+    },
+    {
+      "case": "C48_grid32",
+      "method": "render",
+      "median_host_ms": 44.17133333239084,
+      "min_host_ms": 29.877233333536424,
+      "max_host_ms": 44.52866666542832,
+      "median_device_ms": 43.44456533333334
+    },
+    {
+      "case": "C48_grid32",
+      "method": "best_cuda_over_render",
+      "ratio": 0.08956864937113805
+    },
+    {
+      "case": "C48_grid128",
+      "method": "cuda_eager",
+      "median_host_ms": 4.184133334395786,
+      "min_host_ms": 4.124800000378552,
+      "max_host_ms": 58.5270000010496,
+      "median_device_ms": 3.919189453125
+    },
+    {
+      "case": "C48_grid128",
+      "method": "cuda_graph",
+      "median_host_ms": 4.019499998927738,
+      "min_host_ms": 3.7119333355803974,
+      "max_host_ms": 9.882499999851765,
+      "median_device_ms": 3.815765380859375
+    },
+    {
+      "case": "C48_grid128",
+      "method": "render",
+      "median_host_ms": 43.92629999832328,
+      "min_host_ms": 33.61396666635604,
+      "max_host_ms": 114.00606666575186,
+      "median_device_ms": 43.39131733333334
+    },
+    {
+      "case": "C48_grid128",
+      "method": "best_cuda_over_render",
+      "ratio": 0.09150554449341662
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "cuda_eager",
+      "median_host_ms": 4.7211666678776965,
+      "min_host_ms": 4.627333335520234,
+      "max_host_ms": 5.193999999998293,
+      "median_device_ms": 4.2799787521362305
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "cuda_graph",
+      "median_host_ms": 2.815066667002005,
+      "min_host_ms": 0.5451666681134762,
+      "max_host_ms": 2.875533333281055,
+      "median_device_ms": 2.4654506047566733
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "render",
+      "median_host_ms": 13.833933332837963,
+      "min_host_ms": 2.4744333325846433,
+      "max_host_ms": 14.126999999765152,
+      "median_device_ms": 13.114367999999999
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "method": "best_cuda_over_render",
+      "ratio": 0.20348996914130046
+    }
+  ],
+  "checks": 35,
+  "timing_rows": 147,
+  "energy_per_inference": "unknown_due_short_counter_resolution",
+  "independent_gpu_devices": 1,
+  "technical_repeats_not_independent": true
+}
