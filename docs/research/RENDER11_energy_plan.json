@@ -1,0 +1,121 @@
+{
+  "registration": "NP-RENDER11-ENERGY-20261009",
+  "frozen_utc": "2026-10-09T12:36:29.692752+00:00",
+  "cases": [
+    {
+      "name": "C16_grid8",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 8,
+      "height": 8,
+      "pixel": false
+    },
+    {
+      "name": "C16_grid32",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 32,
+      "height": 32,
+      "pixel": false
+    },
+    {
+      "name": "C16_grid128",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 128,
+      "height": 128,
+      "pixel": false
+    },
+    {
+      "name": "C48_grid8",
+      "c": 48,
+      "cid": 16,
+      "hidden": 128,
+      "vocab": 35,
+      "width": 8,
+      "height": 8,
+      "pixel": false
+    },
+    {
+      "name": "C48_grid32",
+      "c": 48,
+      "cid": 16,
+      "hidden": 128,
+      "vocab": 35,
+      "width": 32,
+      "height": 32,
+      "pixel": false
+    },
+    {
+      "name": "C48_grid128",
+      "c": 48,
+      "cid": 16,
+      "hidden": 128,
+      "vocab": 35,
+      "width": 128,
+      "height": 128,
+      "pixel": false
+    },
+    {
+      "name": "RGB8_retina_C16",
+      "c": 16,
+      "cid": 8,
+      "hidden": 32,
+      "vocab": 11,
+      "width": 8,
+      "height": 8,
+      "pixel": true
+    }
+  ],
+  "technical_blocks": 7,
+  "inner_repetitions": 3,
+  "idle_bracket_seconds": 0.25,
+  "parity_abs": 0.0001,
+  "parity_relative": 1e-05,
+  "categorical_exact": true,
+  "training_updates": 0,
+  "resources": {
+    "actual_min_ram_gib": 8,
+    "bootstrap_ram_gib": 9,
+    "vram_gib": 4,
+    "cpu_threads": 2
+  },
+  "source_sha256": {
+    "scripts/benchmark_RENDER10.py": "c42d23ecb1f69d8c36606e9830adc0d727f98e0b00df3867ab31065749b82dd2",
+    "neuropixel/rendering/nca_gl.py": "ed8ac459e5ba2dfd9a3f1cff63f0bd5a2084a8e86b78d9df67647da53889d2dc",
+    "neuropixel/rendering/nca_gl_vector.py": "9ad10872c87b8ecf8215cb40713fe151b0b9d901b4574d0e03387f653304f721",
+    "neuropixel/rendering/nca_gl_compute.py": "555d9b2204e88f2b013c99ebb94157dd96ef264fa72e335d98dd11efc69f4ff3",
+    "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+    "docs/research/RENDER10_protocol.md": "450aada31b05dac9035cf0cab62e4f80564021f894764e49baef6e2562bd44ea",
+    "scripts/measure_RENDER11_energy.py": "1db2ed110b9d4de437f787e1a359c06667be9b8212ed24a51018ad3959c7f978",
+    "docs/research/RENDER11_energy_protocol.md": "df484a719b8aba780c8d8933d1972b71d1d1b630d30aec49c1bc11ceea89bfd4"
+  },
+  "methods": [
+    "cuda_eager",
+    "cuda_graph",
+    "scalar_render",
+    "vector_render",
+    "render"
+  ],
+  "short_block_energy_attribution": "not_validated_due_counter_resolution; raw_observations_only",
+  "render_label": "OpenGL4.6 graphics-compute withsharedtile/SSBO, distinctfromfragmentrender",
+  "energy_technical_blocks": 3,
+  "energy_active_seconds": 3,
+  "energy_idle_seconds": 1,
+  "endpoint": "Sustained actual whole-GPU-device joules per complete resident inference; complete wall energy excluded",
+  "input_sha256": {
+    "results/research/RENDER09_benchmark/original_20261009A/case0_inputs.npz": "c98a60d39c46bc3da0924744ec81ef18679d8d50e0d52693fbbf4662bbf4ce3b",
+    "results/research/RENDER09_benchmark/original_20261009A/case1_inputs.npz": "e7c735494f6e77b0167d9f603e10226582b512066e7cb0496fe05092f2a1cc0e",
+    "results/research/RENDER09_benchmark/original_20261009A/case2_inputs.npz": "7c28699fa2cae8425623cf8d6dc7cb55db9438b1544ac62ed33529d91a1435ad",
+    "results/research/RENDER09_benchmark/original_20261009A/case3_inputs.npz": "37d016426401ed3ca546e2f58e857c1e10e54ca41b84a87e736c9688410ab3a1",
+    "results/research/RENDER09_benchmark/original_20261009A/case4_inputs.npz": "b8b0fc36b30263e83eefe85a69b134cafc058a962f9062d9ad79ac3d997d07a9",
+    "results/research/RENDER09_benchmark/original_20261009A/case5_inputs.npz": "08f463107f418e99eb671b663ac11d3a605ea3c55937a80a92d45fe7b11d552b",
+    "results/research/RENDER09_benchmark/original_20261009A/case6_inputs.npz": "cb7b447b99b03ef9f06dd4632d9ea16f78725fd0834e8a1ccbe08d90d6074b5f"
+  }
+}

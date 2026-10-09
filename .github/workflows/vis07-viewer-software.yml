@@ -1,0 +1,38 @@
+name: VIS07 viewer software integration
+on:
+  push:
+    branches: ['research/vis07-viewer-software-2026-10-09']
+permissions:
+  contents: write
+concurrency:
+  group: vis07-viewer-software-20261009
+  cancel-in-progress: false
+jobs:
+  software_renderer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      LIBGL_ALWAYS_SOFTWARE: '1'
+      LP_NUM_THREADS: '2'
+      PYTHONUTF8: '1'
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Fixed lightweight software environment
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libgl1-mesa-dri
+          python -m pip install numpy==2.2.6 psutil==6.1.1 moderngl==5.12.0 glcontext==3.0.0
+      - name: Software shader computation and bounded HTTP parity
+        run: python scripts/verify_live_VIS07_viewer.py --software
+      - name: Preserve actual success or failure
+        if: always()
+        run: |
+          mkdir -p results/research/VIS07_live_viewer/software_20261009A
+          python scripts/publish_sprint_evidence.py --root results/research/VIS07_live_viewer/software_20261009A --registration VIS07VIEWER --branch research/vis07-viewer-software-evidence-2026-10-09

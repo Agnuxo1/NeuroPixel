@@ -1,0 +1,25 @@
+{
+  "status": "HTTP_and_browser_controls_verified_archive_only",
+  "mode": "archive_replay",
+  "http_checks_passed": 50,
+  "gpu_inference_in_this_UI_session": false,
+  "source_sha256": {
+    "docs/viewer/index.html": "2014dcbf4d416e0fb54e22ca72777cb2898bb834e4038b9b037243d2eb250221",
+    "scripts/live_VIS07_viewer.py": "6fe1a3f9b76fa631f5b0f3462ee0d56bc313c3a05a1fb7b83b0e44f888fd9961",
+    "scripts/verify_VIS07_viewer_http.py": "c35ceb042ed78166b6698d0eaa6d788b4298421ec2b5e67fdb2758456fb670e4"
+  },
+  "timestamp_utc": "2026-10-09T12:46:02.644967+00:00",
+  "scope": "Startup receipt preserves its earlier client-template revision; this receipt identifies current corrected UI source. Live GPU mode remains unexecuted.",
+  "browser_checks": [
+    "reset T0",
+    "select visible channel15",
+    "playback reaches T8",
+    "mode warning visible",
+    "input and scanner panels labelled"
+  ],
+  "current_source_sha256": {
+    "docs/viewer/index.html": "2014dcbf4d416e0fb54e22ca72777cb2898bb834e4038b9b037243d2eb250221",
+    "scripts/live_VIS07_viewer.py": "5b96788e13f7a42e4f4ab833786d2f42f562198b57ac907147a9fcaab69e4d4f"
+  },
+  "checked_utc": "2026-10-09T12:52:15.505218+00:00"
+}

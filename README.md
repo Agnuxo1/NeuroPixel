@@ -48,6 +48,10 @@ The scanner projects state through a learned decoder. [SCN06](docs/research/SCN0
 
 ## Reproduce and inspect every result
 
+An [interactive local viewer](docs/research/VIS07_viewer.md) exposes all sixteen raw channels, selectable RGB projection, per-cell decoder probabilities and reset/depth controls. Archive mode has passed fifty HTTP checks and browser control checks; it is explicitly labelled as playback of actual GPU states. The new live GPU integration is prepared and awaiting resource admission, while a separate CPU/Mesa integration endpoint is registered. No playback or software-renderer check is presented as physical GPU execution.
+
+The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) is frozen for all seven workloads and five comparators. It uses actual board counters over multi-second blocks; execution is pending resource admission. Full wall energy remains unmeasured.
+
 - [Reproduction instructions and environments](docs/research/REPRODUCE_20261009.md)
 - [All-study evidence index](docs/research/RESULTS_INDEX_20261009.md)
 - [Scientific manuscript: methods, results and open requirements](docs/papers/NeuroPixel_manuscript_20261009.md)
