@@ -1,0 +1,44 @@
+name: RENDER08 software graphics engineering parity
+on:
+  push:
+    branches: [research/render08-preflight-2026-10-09]
+permissions:
+  contents: write
+concurrency:
+  group: render08-software-preflight
+  cancel-in-progress: false
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      LP_NUM_THREADS: "1"
+      LIBGL_ALWAYS_SOFTWARE: "1"
+      PYTHONUTF8: "1"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed software graphics and tensor runtime
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libgl1-mesa-dri
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0 moderngl==5.12.0 glcontext==3.0.0
+      - name: Software render parity, no speed or physical GPU claim
+        run: python scripts/preflight_RENDER08.py --software --output results/research/RENDER08/prefight_software
+      - name: Archive original outcome
+        if: always()
+        run: |
+          mkdir -p results/research/RENDER08
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('results/research/RENDER08/attempt.json').write_text(json.dumps(dict(source_commit=os.environ['GITHUB_SHA'],run_id=os.environ['GITHUB_RUN_ID'],preflight_receipt_exists=Path('results/research/RENDER08/prefight_software/receipt.json').exists()),indent=2)+'\n')
+          PY
+          python scripts/publish_sprint_evidence.py --root results/research/RENDER08 --registration RENDER08 --branch research/render08-preflight-evidence-2026-10-09
