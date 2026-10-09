@@ -1,0 +1,74 @@
+name: NeuroPixel frozen all-parent budget continuation U16
+on:
+  push:
+    branches: [research/query-budget-continuation-2026-10-08]
+    paths:
+      - .github/workflows/opt03-qtrain-u16.yml
+      - docs/research/OPT03_QTRAIN_U16_plan.json
+      - neuropixel/research/qtrain_budget.py
+      - neuropixel/research/qtrain_budget_transport.py
+      - scripts/research_OPT03_qtrain_u16.py
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-qtrain-u16-20261008
+  cancel-in-progress: false
+jobs:
+  continuation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+      QTRAIN_U16_PUBLISH_AFTER_CASE: "1"
+      EXPECTED_PLAN_SHA256: "a4093bb8d559404b9f68587b753f8cea180a1e75d33363a04c1f2c7ebcb22dc0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed parent scientific CPU dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Frozen plan, governing sources, Git blob and actual RAM admission
+        run: |
+          python - <<'PY'
+          import hashlib,importlib.util,json,os,psutil,urllib.request
+          from pathlib import Path
+          path=Path('docs/research/OPT03_QTRAIN_U16_plan.json');raw=path.read_bytes()
+          assert b'\r\n' not in raw and hashlib.sha256(raw).hexdigest()==os.environ['EXPECTED_PLAN_SHA256']
+          s=importlib.util.spec_from_file_location('u16','scripts/research_OPT03_qtrain_u16.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+          plan,parents=m.load_plan(path,os.environ['EXPECTED_PLAN_SHA256'])
+          request=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/'+str(path)+'?ref='+os.environ['GITHUB_SHA'],headers={'Authorization':'Bearer '+os.environ['QTRAIN_U16_ARCHIVE_TOKEN'],'Accept':'application/vnd.github+json'})
+          with urllib.request.urlopen(request,timeout=30) as response:meta=json.load(response)
+          assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()==meta['sha']
+          ram=psutil.virtual_memory().available/2**30;assert ram>=8
+          print(json.dumps({'plan_sha256':os.environ['EXPECTED_PLAN_SHA256'],'git_blob':meta['sha'],'parents':len(parents['parents']),'available_ram_gib':ram,'scientific_updates':0}))
+          PY
+      - name: Continuation and immutable transport contracts on this executor
+        run: |
+          python scripts/test_QTRAIN_U16_transport.py
+          python scripts/test_OPT03_qtrain_u16.py
+      - name: Continue twelve original states, omit completed extensions
+        run: python scripts/research_OPT03_qtrain_u16.py --expected-plan-sha256 "$EXPECTED_PLAN_SHA256"
+      - name: Preserve completed and durable partial extensions
+        if: always()
+        run: |
+          python - <<'PY'
+          import importlib.util,json,os
+          from pathlib import Path
+          s=importlib.util.spec_from_file_location('u16','scripts/research_OPT03_qtrain_u16.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+          path=Path('docs/research/OPT03_QTRAIN_U16_plan.json');plan,parents=m.load_plan(path,os.environ['EXPECTED_PLAN_SHA256']);root=Path('results/research/OPT03_QTRAIN_U16/cohort')
+          completed=[];partial=[]
+          for config in plan['runs']:
+              case=config['run_id'];folder=root/case
+              if (folder/'result.json').exists():completed.append(case);m.transport.publish_case(root,case,path,m.REGISTRATION)
+              elif (folder/'progress.json').exists():partial.append(case);m.transport.publish_case(root,case,path,m.REGISTRATION,allow_partial=True)
+          receipt={'registration_id':m.REGISTRATION,'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'plan_sha256':os.environ['EXPECTED_PLAN_SHA256'],'completed_cases':completed,'partial_cases':partial,'expected_cases':12,'new_initializations':0,'closed_prefix_repeated':False,'test_accessed':False,'scientific_task3_complete':False}
+          output='results/research/OPT03_QTRAIN_U16_cloud/'+m.REGISTRATION+'/attempts/'+os.environ['GITHUB_RUN_ID']+'/cohort_receipt.json'
+          m.transport.publish_immutable(output,(json.dumps(receipt,indent=2)+'\n').encode());print(json.dumps(receipt))
+          PY

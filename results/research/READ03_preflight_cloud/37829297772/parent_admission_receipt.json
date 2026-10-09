@@ -1,0 +1,104 @@
+{
+  "status": "verified_twelve_actual_frozen_bodies_no_inference_or_fitting",
+  "parents": [
+    {
+      "case": "QTRAIN_U16_paired_school0.0_seed200",
+      "actual_body_digest": "17536ade699a6755becfb7a4bcdfa9dc5c18316c86cc1f7223b2b2ddd0cdca6e",
+      "checkpoint_sha256": "93688aa7ec1b82d4c9aa20edb828199bb3a87a9afb5710c23712b2e0912a72eb",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_paired_school0.3_seed200",
+      "actual_body_digest": "c762c6896c822d5f8b442e4b430a552c37d6b5d406433a34689c44ba7b5e6020",
+      "checkpoint_sha256": "729bf7d8539f52db72aa70868471e2b405e7d5010e699641d35646e9de3e8acb",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.0_seed200",
+      "actual_body_digest": "2555900f9f3f5d9caf43063288188375980565f38c1e3f9eb776db2eaed5e83b",
+      "checkpoint_sha256": "55a7ea779c02de38b6e6ecaeb5c4b0ce5ba674f7b01da9ac3fa766b758d4c814",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.3_seed200",
+      "actual_body_digest": "f5f2fe3d030f487f6636b35ac126cb471630ea51f2e7713c13f411ccec7df0be",
+      "checkpoint_sha256": "d8a8754a7676097b2f80535cd238447ca3416c1bec7fe4a585b956c467b936f6",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_paired_school0.0_seed201",
+      "actual_body_digest": "144a358ef4a65b5ee6e8d398962af7213ce1b0d4da4b9d8308b9ae6842698013",
+      "checkpoint_sha256": "58cd58d92b6693bce2698e763790598808c8bd2bd067ebcdd6f3c1675130458c",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_paired_school0.3_seed201",
+      "actual_body_digest": "466b122f124a51498be80d575803d0460524a449f94b7a03a6e5d663f34fa8dc",
+      "checkpoint_sha256": "f36b697504d4a7cb4953a06909f71670f209404f3541beb2d891c40d373e33ba",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.0_seed201",
+      "actual_body_digest": "998efb7f1195836fce54bc58d226001d44341b01acdc7dd0e86cf3e2ad367b6c",
+      "checkpoint_sha256": "fc95c8b0274cc88cb8a266cc9724e577a15cb65320dc6d9143295cb8cfe05be3",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.3_seed201",
+      "actual_body_digest": "0a72e8ae9581ad74ad873b2f984ee1b6bcd9908bb1d76486fffc83f295ca12b9",
+      "checkpoint_sha256": "0c7769822f8997f3515a9364254453abc41684b7fad23474c1314e4d0458c5e0",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_paired_school0.0_seed202",
+      "actual_body_digest": "f1b62f91ac9df6d1395ab70b4e2a9d0686e89ef97e0d0bbe2c52cc2ce349a204",
+      "checkpoint_sha256": "c3ede0109239aa9408171cfb63910ee31a1c97aa8ff0055363d65b25e679c8d1",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_paired_school0.3_seed202",
+      "actual_body_digest": "9c2adf160b716bfca7d03dac061637c95f58e410ec1abdcc8dcef7072ef286b0",
+      "checkpoint_sha256": "6217a3effe44d6e31c156d6575b1d9e91c03ddcb794d499e631f2a07bb66317a",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.0_seed202",
+      "actual_body_digest": "ffb07fb44d657b610c6584c1f4016635b0a4df342f3f7f4119dd34e804bd1413",
+      "checkpoint_sha256": "ebddda81e39b3279413098a0c3ea84c2e3f706c82e1f92ea9bc1f7cf2871cba8",
+      "environment_differences": {}
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.3_seed202",
+      "actual_body_digest": "a8366c745e45a2b67ff6c324f7ee104955aaace20de76cf05dfd13f815ad8ffa",
+      "checkpoint_sha256": "e842db7188b13ac5ab4cdd40b1f289701012c5adee1195ab64db151aa7724ebc",
+      "environment_differences": {}
+    }
+  ],
+  "inventory_sha256": "f2574cabde30ff6a613ddbae591646efb4dc4aba6124e99761ade7c140637414",
+  "available_ram_before_torch_gib": 14.581897735595703,
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.6.0+cpu",
+      "psutil": "6.1.1",
+      "pytest": null,
+      "scipy": "1.15.1"
+    },
+    "device": "cpu",
+    "threads": 2,
+    "cuda_runtime": null,
+    "gpu_name": null,
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "new_backbone_updates": 0,
+  "scientific_head_fits": 0,
+  "scientific_dataset_evaluations": 0,
+  "test_accessed": false
+}

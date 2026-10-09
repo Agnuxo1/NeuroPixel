@@ -1,0 +1,125 @@
+{
+  "status": "verified_twelve_initialization_and_three_development_partition_inventory",
+  "partitions": {
+    "101": {
+      "partition_seed": 101,
+      "counts": {
+        "train": 924,
+        "validation": 132,
+        "test": 264
+      },
+      "composition_sha256": {
+        "train": "75a1ab7a080a0c9747abc4d2c7c0af767b2c49f18a685801f3ff8e534cdfa2aa",
+        "validation": "cbe8998c52320b986c6113d51d459e79a0d4e4ac5ae07d57482c2992a890bd7b",
+        "test": "61ef7bb041c303fd5c9311a955ec33e9c0dd20f8fdc80b68312cf4f2d97169ee"
+      },
+      "test_original_seed": 0,
+      "test_sampled": false
+    },
+    "102": {
+      "partition_seed": 102,
+      "counts": {
+        "train": 924,
+        "validation": 132,
+        "test": 264
+      },
+      "composition_sha256": {
+        "train": "8e2a9be71958a4f23971231613817621e1a0064000dfbb015b3139ddc881aea2",
+        "validation": "ebd2e657c33fb18efe136475baa19717e6ae6b75b239e5bdd32f802398da26c2",
+        "test": "61ef7bb041c303fd5c9311a955ec33e9c0dd20f8fdc80b68312cf4f2d97169ee"
+      },
+      "test_original_seed": 0,
+      "test_sampled": false
+    },
+    "103": {
+      "partition_seed": 103,
+      "counts": {
+        "train": 924,
+        "validation": 132,
+        "test": 264
+      },
+      "composition_sha256": {
+        "train": "e277b08496a5ffc2158cc38a6027dc17f37cd02ecd38b5acaa6a04cc956aa170",
+        "validation": "e73904cf6615db113ac1cf0c4e36dd16b70a5299b53b70859dc4a14180ee3eef",
+        "test": "61ef7bb041c303fd5c9311a955ec33e9c0dd20f8fdc80b68312cf4f2d97169ee"
+      },
+      "test_original_seed": 0,
+      "test_sampled": false
+    }
+  },
+  "overlaps": {
+    "101_101": {
+      "train_train": 924,
+      "train_validation": 0,
+      "validation_train": 0,
+      "validation_validation": 132
+    },
+    "101_102": {
+      "train_train": 809,
+      "train_validation": 115,
+      "validation_train": 115,
+      "validation_validation": 17
+    },
+    "101_103": {
+      "train_train": 810,
+      "train_validation": 114,
+      "validation_train": 114,
+      "validation_validation": 18
+    },
+    "102_101": {
+      "train_train": 809,
+      "train_validation": 115,
+      "validation_train": 115,
+      "validation_validation": 17
+    },
+    "102_102": {
+      "train_train": 924,
+      "train_validation": 0,
+      "validation_train": 0,
+      "validation_validation": 132
+    },
+    "102_103": {
+      "train_train": 809,
+      "train_validation": 115,
+      "validation_train": 115,
+      "validation_validation": 17
+    },
+    "103_101": {
+      "train_train": 810,
+      "train_validation": 114,
+      "validation_train": 114,
+      "validation_validation": 18
+    },
+    "103_102": {
+      "train_train": 809,
+      "train_validation": 115,
+      "validation_train": 115,
+      "validation_validation": 17
+    },
+    "103_103": {
+      "train_train": 924,
+      "train_validation": 0,
+      "validation_train": 0,
+      "validation_validation": 132
+    }
+  },
+  "initial_body_model_digests": {
+    "DEV04_partition101_seed400": "228a467d64f31302421de4abaa79a926c25d51be5857ccaf7d2ca07049823a68",
+    "DEV04_partition101_seed401": "e29991cf63de2a103c1358cab15bef0f417c68a5d72bb0153373df4eff035838",
+    "DEV04_partition101_seed402": "5df4e23bba454b8288d21e2545f7de53f142b0fc21fef55817237ab9ddc5302a",
+    "DEV04_partition101_seed403": "3f17ca9c56c64a3a261f36cbff3ba366426a4f936552f9cf4db2db94a11ddd5d",
+    "DEV04_partition102_seed404": "554b1a9e6de4efd88ae332cf4196c82e0408d28785aefc8d868bdad71e6f5839",
+    "DEV04_partition102_seed405": "71af9422ed3a65921c2cdeecd53d785c211d0c151b70e72ccf8f4984cbd9cff1",
+    "DEV04_partition102_seed406": "985c9ff8ba716b041db631add9bdbd5ce820987e9cedad17c9dccd891c42fabb",
+    "DEV04_partition102_seed407": "8c804d86bd437f79cb8973f0e900f895760c67631422dae103b0da4501df4ee6",
+    "DEV04_partition103_seed408": "38ed521e8f5b5466f3d55117d52e2266362fbb988dbb58530dd47f9cfc197caf",
+    "DEV04_partition103_seed409": "87bd4f1718ad6d107e6e92f5c561dd7559590bca042c8a84307454d9f46ab71d",
+    "DEV04_partition103_seed410": "4488133f6638c57114c0a021097ccd0dc3d3326128aa6bd90aa01f7298179df1",
+    "DEV04_partition103_seed411": "94e46f9da186533e0d9f90acadd4a29d6c53a215b7b7746639c8a4c7228d93c7"
+  },
+  "body_fits": 12,
+  "head_fits": 24,
+  "scientific_training_updates": 0,
+  "test_sampled": false,
+  "scope": "Fresh constructor and partition metadata inventory before scientific recipe freeze, not twelve scientific fits"
+}

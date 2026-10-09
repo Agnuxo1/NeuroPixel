@@ -1,0 +1,64 @@
+name: NeuroPixel frozen all-parent causal readout diagnostic
+on:
+  push:
+    branches: [research/frozen-readout-development-2026-10-08]
+    paths:
+      - .github/workflows/readout-experiment.yml
+      - docs/research/READ03_execution_plan.json
+permissions:
+  contents: write
+concurrency:
+  group: neuropixel-read03-scientific-20261008
+  cancel-in-progress: false
+jobs:
+  readout:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      PYTHONUTF8: "1"
+      CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+      QTRAIN_U16_ARCHIVE_TOKEN: ${{ github.token }}
+      READ03_PUBLISH_AFTER_FIT: "1"
+      EXPECTED_READ03_PLAN: d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.14"
+      - name: Fixed original scientific CPU dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install numpy==2.2.6 scipy==1.15.1 psutil==6.1.1 pillow==11.3.0
+      - name: Independent frozen plan and actual RAM admission
+        run: |
+          python - <<'PY'
+          import importlib.util,os,psutil
+          from pathlib import Path
+          assert psutil.virtual_memory().available/2**30>=8
+          spec=importlib.util.spec_from_file_location('recipe','scripts/research_READ03.py')
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          plan,parents=m.load_plan(Path('docs/research/READ03_execution_plan.json'),os.environ['EXPECTED_READ03_PLAN'])
+          assert len(parents['parents'])==12 and len(plan['runs'])==36
+          print('All32governing hashes and12parents admitted before fitting')
+          PY
+      - name: Extract states once per parent and fit three frozen-body readouts
+        run: python scripts/research_READ03.py --recover-cloud --expected-plan-sha256 "$EXPECTED_READ03_PLAN"
+      - name: Preserve every available partial and completed fit
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          from neuropixel.research import readout_transport as archive
+          plan=Path('docs/research/READ03_execution_plan.json');p=json.loads(plan.read_text());root=Path('results/research/READ03')
+          completed=[];partial=[]
+          for row in p['runs']:
+              folder=root/row['parent_case']/row['mode']
+              if (folder/'result.json').exists():completed.append(row['run_id']);archive.publish_fit(root,row['parent_case'],row['mode'],plan)
+              elif (folder/'progress.json').exists():partial.append(row['run_id']);archive.publish_fit(root,row['parent_case'],row['mode'],plan)
+          receipt={'registration_id':archive.REGISTRATION,'plan_sha256':os.environ['EXPECTED_READ03_PLAN'],'source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'completed_fits':completed,'partial_fits':partial,'expected_fits':36,'new_backbone_updates':0,'test_accessed':False,'scientific_task3_complete':False}
+          archive.old.publish_immutable('results/research/READ03_cloud/'+archive.REGISTRATION+'/attempts/'+os.environ['GITHUB_RUN_ID']+'/cohort_receipt.json',(json.dumps(receipt,indent=2)+'\n').encode())
+          print(json.dumps(receipt))
+          PY

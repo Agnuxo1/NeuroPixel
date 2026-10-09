@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "programme": "NeuroPixel scientific validation",
+  "started_at_utc": "2026-10-06T21:36:23.990229+00:00",
+  "source_commit": "7da18d1cbd36c40c48228118abb20a7b5ab032f4",
+  "local_inventory_commit": "1a26daa64228a375aafa77f3cef613c8af84133d",
+  "request_sha256": "f04e21cf44ff2560bb8c5cb45d2268f2c6f7f50802afd774e1f5eb03ac7eeed0",
+  "current_item": 6,
+  "status_semantics": {
+    "in_progress": "Work on this numbered item is active.",
+    "completed": "Defined work and acceptance checks completed; claims limited to evidence.",
+    "not_established": "Investigation completed but the scientific claim is unsupported or rejected.",
+    "blocked_external": "Requires an independently supplied resource, measurement or third-party act.",
+    "pending": "Not started."
+  },
+  "items": [
+    {
+      "number": 1,
+      "title": "Prior art and contribution boundaries",
+      "status": "completed",
+      "evidence": [
+        "docs/research/01_prior_art.md",
+        "docs/research/references.json",
+        "docs/research/01_mechanism_specification.md"
+      ],
+      "conclusion": "Fourteen primary works reviewed; equations and contribution boundaries specified. The ingredients have antecedents. Distinctive empirical benefit and worldwide priority are not established.",
+      "remaining_dependencies": [
+        "Matched comparisons, replication and ablations in items 4\u00e2\u20ac\u201c6."
+      ],
+      "closed_at_utc": "2026-10-06T21:46:04.322461+00:00"
+    },
+    {
+      "number": 2,
+      "title": "Falsifiable central hypotheses",
+      "status": "completed",
+      "evidence": [
+        "docs/research/02_protocol.md",
+        "docs/research/protocol.json",
+        "docs/research/protocol_frozen.json"
+      ],
+      "conclusion": "Prospective pilot protocol frozen before new outcomes, with falsifiable hypotheses, role-specific endpoints, separate randomness panels, fixed tuning and failure rules.",
+      "remaining_dependencies": [],
+      "closed_at_utc": "2026-10-06T21:49:55.774713+00:00"
+    },
+    {
+      "number": 3,
+      "title": "Elementary controls",
+      "status": "completed",
+      "evidence": [
+        "docs/research/03_controls.md",
+        "results/research/03_controls.json",
+        "neuropixel/research/controls.py",
+        "scripts/research_controls.py",
+        "tests/test_research_controls.py"
+      ],
+      "conclusion": "Exact schema-aware controls solved 51,152/51,152 inputs and both members of 25,523 nominal swap pairs. Category-only control has 75% expectation when roles are balanced and 50% nominal binding. Prediction artifact integrity verified after a documented atomic-write recovery.",
+      "remaining_dependencies": [
+        "Richer tasks in item9 are needed to remove the original schema shortcuts."
+      ],
+      "closed_at_utc": "2026-10-06T22:04:08.519842+00:00"
+    },
+    {
+      "number": 4,
+      "title": "Stronger matched baselines",
+      "status": "completed",
+      "evidence": [
+        "docs/research/04_results.md",
+        "docs/research/04_model_specification.md",
+        "docs/research/04_data_specification.md",
+        "results/research/04_experiment/pilot/pilot_summary.json",
+        "results/research/04_verification.json",
+        "results/research/04_validation_diagnostics.json"
+      ],
+      "conclusion": "All eight matched pilot runs completed and were independently recounted with no artifact discrepancy. NP binding 9.326%, adapted NCA 11.914%, ConvGRU 13.574%, relative Transformer 48.389%; all eight training probes below the declared sufficiency threshold. No NP advantage established; no implementation fault justifies discarding results.",
+      "remaining_dependencies": [
+        "Initialization/split replication in item 5 and mechanism attribution in item 6.",
+        "A competitive fully optimized benchmark and broad architectural claims are not established by this short pilot."
+      ],
+      "closed_at_utc": "2026-10-06T22:35:19.510539+00:00"
+    },
+    {
+      "number": 5,
+      "title": "Replication and uncertainty",
+      "status": "completed",
+      "evidence": [
+        "docs/research/05_results.md",
+        "coord/recovery/item5_recovery_receipt_20261007.json",
+        "coord/recovery/migration_20261007.json"
+      ],
+      "conclusion": "All 28 replications completed with zero failures. Two independent integrity audits reported verified with zero issues. H1 is not_supported under the frozen protocol: the five-pair mean binding difference against the selected relative Transformer is -0.37001953125 (95% paired t interval [-0.42030141465134446, -0.3197376478486555]). All 28 training probes were budget_limited. Item 5 work is complete; optimization sufficiency, mechanism attribution, and external independent replication remain unresolved. Closure is reconstructed from the reviewed recovered report and verified continuity receipt without assuming a Linux closure commit.",
+      "remaining_dependencies": [
+        "Optimization sufficiency remains unresolved under the fixed budget.",
+        "Mechanism attribution is unestablished; item 6 has not been opened.",
+        "External independent replication remains pending.",
+        "Original Linux predictions, checkpoints, and audit artifacts are inaccessible, not demonstrated lost; receipt preserves their reported provenance."
+      ],
+      "closed_at_utc": "2026-10-07T00:44:04.8593721Z",
+      "h1_status": "not_supported",
+      "closure_provenance": {
+        "mode": "reconstructed_from_continuity",
+        "report_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+        "receipt_sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+        "linux_closing_commit": "unknown",
+        "authorized_by": "Parent task instruction",
+        "completed_runs": 28,
+        "failed_runs": 0,
+        "verified_audits": 2,
+        "audit_issues": 0,
+        "budget_limited_training_probes": 28
+      }
+    },
+    {
+      "number": 6,
+      "title": "Mechanism ablations",
+      "status": "completed",
+      "evidence": [
+        "docs/research/06_A06_1_results.md",
+        "results/research/06_A06_1_recovery/closure_receipt.json"
+      ],
+      "conclusion": "Exact A06.1 inventory completed and recovered. 4362 independent saved checks and204 interval checks verified. All34 core and8 growth banks reproduce discrete decisions. Five continuous-output comparisons fail the original1e-4 replay tolerance; preserved and diagnosed without changing primary decisions. All26 probes budget_limited; general component benefit unestablished. H1 unchanged.",
+      "remaining_dependencies": [
+        "New prospective high-competence optimization study",
+        "More independent initializations and capacity/supervision controls",
+        "External independent replication"
+      ],
+      "started_at_utc": "2026-10-07T00:45:08.486515+00:00",
+      "execution_context": "Isolated Windows continuation after reconstructed scientific closure of item5. Original frozen protocol remains unchanged. No item6 outcomes obtained before opening.",
+      "closed_at_utc": "2026-10-07T22:11:58.838939+00:00"
+    },
+    {
+      "number": 7,
+      "title": "Development, selection and final evaluation splits",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 8,
+      "title": "Measurement and invariant corrections",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 9,
+      "title": "Complex relational binding",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 10,
+      "title": "Out-of-generator generalization",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 11,
+      "title": "Durable memory and interference",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 12,
+      "title": "Continual learning at larger scale",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 13,
+      "title": "Novel-token distractor tests",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 14,
+      "title": "Assisted repair versus stored-memory recovery",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 15,
+      "title": "Dynamical stability",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 16,
+      "title": "Causal scanner fidelity",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 17,
+      "title": "Visual domain generalization",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 18,
+      "title": "Perception, symbols and time",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 19,
+      "title": "Complete computational cost",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 20,
+      "title": "Physical energy measurement",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 21,
+      "title": "Actually skipped computation",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 22,
+      "title": "Multidimensional scaling",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 23,
+      "title": "Optimization validation",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 24,
+      "title": "Optional photonic feasibility",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 25,
+      "title": "External reproducibility package",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 26,
+      "title": "Independent replication",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 27,
+      "title": "Scientific manuscript",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 28,
+      "title": "Explanatory and predictive principles",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 29,
+      "title": "Independent utility and impact",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    },
+    {
+      "number": 30,
+      "title": "Qualified nomination, if scientifically warranted",
+      "status": "pending",
+      "evidence": [],
+      "conclusion": null,
+      "remaining_dependencies": []
+    }
+  ],
+  "continuation_status": "A06.1 closed as a limited exploratory investigation; reconcile cloud continuation before importing further closures."
+}
