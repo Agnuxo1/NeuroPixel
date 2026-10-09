@@ -12,7 +12,7 @@ python scripts/live_VIS07_viewer.py --offline-replay --output results/research/V
 
 Open `http://127.0.0.1:8767`. Use a fresh output directory for each session. The default session lasts ten minutes and releases its resources afterward. This mode reads actual archived GPU states and complete logits for T0–8; it performs **no neural GPU inference**. The interface labels that distinction prominently. Fifty HTTP checks verified exact state/logit serialization, all-channel RMS, reset, depth cap and local-session admission. Browser checks verified the controls and completed eight-step playback. [HTTP evidence](../../results/research/VIS07_live_viewer/offline_20261009A/http_verification.json).
 
-## Live GPU mode: implementation prepared, physical integration pending
+## Verified live physical GPU mode
 
 The live mode uses the verified vector fragment renderer, fixed exported weights, learned retina and shared decoder. Each requested step computes a new GPU state. Startup first compares the complete T0–8 trajectory to the original GPU archive through 27 registered state/logit/decision checks, then resets to T0. No label token enters the model. All ten fixed TRAIN images can be selected.
 
@@ -22,7 +22,7 @@ Run under a shared GPU reservation, with at least 8 GiB available host RAM throu
 python scripts/live_VIS07_viewer.py --output results/research/VIS07_live_viewer/my_live_session
 ```
 
-On the project machine, use the shared `gpuq.py` FIFO before this command. The integration verifier is `scripts/verify_live_VIS07_viewer.py`; it checks real GPU HTTP responses against the archived full trajectory and releases its bounded server. Its physical execution is currently awaiting resource admission. Existing renderer fidelity does not automatically certify the new complete viewer integration. Until that verifier runs successfully, the live implementation remains **prepared, not physically verified**.
+On the project machine, use the shared `gpuq.py` FIFO before this command. The integration verifier passed **27 startup trajectory gates and 52 HTTP checks** on the physical RTX 3090, including all nine states, logits, decisions, ten TRAIN resets, depth cap and clean resource release. [Physical receipt](../../results/research/VIS07_live_viewer/live_20261009A/http_verification.json). A separate CPU/Mesa llvmpipe execution passed the same registered gates: [software archive](../../results/research/VIS07_viewer_software_review/37936500542/recovery_receipt.json). That software execution and archive playback remain separately labelled; neither is an outside investigator's independent replication.
 
 ## Interpretation
 
