@@ -11,6 +11,6 @@
 | Real trained trajectory | [Animation provenance](../animations/manifest.json) |CPUsource37915284630andseparateactualGPUcapture, registeredseed240/fixedTRAINclass0. |
 | RENDER08 | [Report](RENDER08_results.md) |35fullparitychecks/147timingrows, scalarnegative, all7workloads. |
 | RENDER09 | [Report](RENDER09_results.md) |56fullparitychecks/196timingrows, vector/scalar/strongCUDAcomparators, conditionalresults. |
-| Advanced graphics | Source `neuropixel/rendering/nca_gl_compute.py` |OpenGL4.6/SSBO/sharedtile candidate; exact engineering receipts govern its status. No result assumed from code alone. |
+| RENDER10 advanced graphics | [Report](RENDER10_results.md) |OpenGL 4.6/SSBO/shared tiles: 21 Torch-free output checks across seven workloads; 77 full benchmark gates passed; 143/245 timing rows retained after RAM interruption. Complete speed comparison pending. |
 
 All raw archives and their original Gitblobs are included/indexed by the publication manifest. Separate recipes retain their own source commits, plans, run IDs, hashes and failed attempts. Early status notes and technical retries are not scientific replications. The original test264compositions stays excluded in new studies. Publication in main does not convert an internal check into external replication.

@@ -1,0 +1,20 @@
+{
+  "status": "failed_preserved",
+  "checks": [],
+  "rows": [],
+  "hardware": {
+    "GL_VENDOR": "NVIDIA Corporation",
+    "GL_RENDERER": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+    "GL_VERSION": "4.6.0 NVIDIA 581.29"
+  },
+  "actual_shared_memory_limit": 49152,
+  "available_ram_start_gib": 9.004138946533203,
+  "available_ram_end_gib": 8.936199188232422,
+  "torch_imported": false,
+  "training_updates": 0,
+  "source_comparison": "Exact immutable inputs/nativeCUDAarrays from RENDER09; no altered workload or precision",
+  "error": {
+    "type": "Error",
+    "message": "GLSL Compiler failed\n\ncompute_shader\n==============\n0(12) : error C1115: unable to find compatible overloaded function \"imageLoad(struct image2D_bindless, ivec2)\"\n\n"
+  }
+}
