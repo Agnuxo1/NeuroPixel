@@ -22,7 +22,7 @@ These are results of the specified recipes and device. They do not establish gen
 
 ## Graphics backends and fair acceleration controls
 
-The original scalar renderer uses RGBA32F textures and framebuffer passes. The separately verified vector renderer packs coefficients and performs four-channel fetches/DOT4 with shared perception taps. The advanced OpenGL4.6 candidate uses compute shaders, SSBO weights and shared pixel tiles; its validation status is recorded separately. A compute shader is labelled as graphics-compute, not silently presented as fragment rasterization.
+The original scalar renderer uses RGBA32F textures and framebuffer passes. The separately verified vector renderer packs coefficients and performs four-channel fetches/DOT4 with shared perception taps. The advanced OpenGL 4.6 backend uses compute shaders, SSBO weights and shared pixel tiles. It passed **21 checks across all seven workloads** against archived CUDA outputs. Its full timing comparison remains incomplete after a RAM guard interruption and a queue timeout; no speed claim follows from partial rows. [RENDER10 evidence](docs/research/RENDER10_results.md) distinguishes graphics compute from fragment rasterization.
 
 ![All graphics workloads and comparators](docs/animations/all_GPU_workloads.gif)
 
@@ -50,6 +50,7 @@ The scanner projects state through a learned decoder. [SCN06](docs/research/SCN0
 
 - [Reproduction instructions and environments](docs/research/REPRODUCE_20261009.md)
 - [All-study evidence index](docs/research/RESULTS_INDEX_20261009.md)
+- [Scientific manuscript: methods, results and open requirements](docs/papers/NeuroPixel_manuscript_20261009.md)
 - Frozen plans, original checkpoints, datasets, raw predictions/states, failed attempts and hash manifests under `results/research/`.
 - Scientific animation provenance: [manifest](docs/animations/manifest.json). Animations derive from actual data; no synthetic brain artwork.
 - Original README and prior versions are retained in the archive and Git history.

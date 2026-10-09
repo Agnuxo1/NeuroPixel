@@ -34,8 +34,6 @@ layout(std430,binding=4)readonly buffer Coefficients{{vec4 coefficients[];}};
 layout(std430,binding=5)readonly buffer BiasValues{{vec4 biases[];}};
 #define WIDTH {w}
 #define HEIGHT {h}
-vec4 bank(readonly image2D t,ivec2 p,int b){{if(p.x<0||p.x>=WIDTH||p.y<0||p.y>=HEIGHT)return vec4(0);return imageLoad(t,ivec2(p.x,p.y+b*HEIGHT));}}
-float cell(readonly image2D t,ivec2 p,int c){{return bank(t,p,c/4)[c%4];}}
 vec4 product(int k,vec4 v){{return vec4(dot(coefficients[k],v),dot(coefficients[k+1],v),dot(coefficients[k+2],v),dot(coefficients[k+3],v));}}
 {declarations}
 void main(){{
@@ -49,6 +47,13 @@ vec4 value=biases[output_bank];
 imageStore(target,ivec2(pixel.x,pixel.y+output_bank*HEIGHT),value);
 }}
 '''
+        # Keep explicit image formats visible to drivers that reject opaque
+        # image parameters (NVIDIA image2D_bindless overload ambiguity).
+        helpers=''
+        for i in range(3):
+            helpers+=f'\nvec4 bank{i}(ivec2 p,int b){{if(p.x<0||p.x>=WIDTH||p.y<0||p.y>=HEIGHT)return vec4(0);return imageLoad(x{i},ivec2(p.x,p.y+b*HEIGHT));}}\nfloat cell{i}(ivec2 p,int c){{return bank{i}(p,c/4)[c%4];}}\n'
+            source=source.replace(f'bank(x{i},',f'bank{i}(').replace(f'cell(x{i},',f'cell{i}(')
+        source=source.replace('vec4 product(',helpers+'\nvec4 product(')
         start=time.perf_counter();self.program=ctx.compute_shader(source);self.compile_seconds=time.perf_counter()-start;self.shader_sha256=hashlib.sha256(source.encode()).hexdigest()
     def draw(self,x0,x1=None,x2=None,mask=None,target=None):
         for name,tex,unit in [('x0',x0,0),('x1',x1,1),('x2',x2,2),('mask',mask,3)]:

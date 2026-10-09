@@ -1,0 +1,360 @@
+{
+  "status": "verified_all_seven_GL46_compute_workloads",
+  "checks": [
+    {
+      "case": "C16_grid8",
+      "name": "state",
+      "passed": true,
+      "maxabs": 1.1920928955078125e-07
+    },
+    {
+      "case": "C16_grid8",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 2.384185791015625e-07
+    },
+    {
+      "case": "C16_grid8",
+      "name": "all_decisions",
+      "passed": true
+    },
+    {
+      "case": "C16_grid32",
+      "name": "state",
+      "passed": true,
+      "maxabs": 1.341104507446289e-07
+    },
+    {
+      "case": "C16_grid32",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 4.76837158203125e-07
+    },
+    {
+      "case": "C16_grid32",
+      "name": "all_decisions",
+      "passed": true
+    },
+    {
+      "case": "C16_grid128",
+      "name": "state",
+      "passed": true,
+      "maxabs": 1.7881393432617188e-07
+    },
+    {
+      "case": "C16_grid128",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 5.960464477539062e-07
+    },
+    {
+      "case": "C16_grid128",
+      "name": "all_decisions",
+      "passed": true
+    },
+    {
+      "case": "C48_grid8",
+      "name": "state",
+      "passed": true,
+      "maxabs": 1.7881393432617188e-07
+    },
+    {
+      "case": "C48_grid8",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 3.5762786865234375e-07
+    },
+    {
+      "case": "C48_grid8",
+      "name": "all_decisions",
+      "passed": true
+    },
+    {
+      "case": "C48_grid32",
+      "name": "state",
+      "passed": true,
+      "maxabs": 1.7881393432617188e-07
+    },
+    {
+      "case": "C48_grid32",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 7.152557373046875e-07
+    },
+    {
+      "case": "C48_grid32",
+      "name": "all_decisions",
+      "passed": true
+    },
+    {
+      "case": "C48_grid128",
+      "name": "state",
+      "passed": true,
+      "maxabs": 2.086162567138672e-07
+    },
+    {
+      "case": "C48_grid128",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 5.960464477539062e-07
+    },
+    {
+      "case": "C48_grid128",
+      "name": "all_decisions",
+      "passed": true
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "name": "state",
+      "passed": true,
+      "maxabs": 1.1920928955078125e-07
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "name": "all_logits",
+      "passed": true,
+      "maxabs": 2.2351741790771484e-07
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "name": "all_decisions",
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "case": "C16_grid8",
+      "input_sha256": "c98a60d39c46bc3da0924744ec81ef18679d8d50e0d52693fbbf4662bbf4ce3b",
+      "reference_sha256": "8964f91bc8bc216acbee34394c23767893c0eca8d6cb6ad59a217e714fe2446d",
+      "metadata": {
+        "state_channels": 16,
+        "identity_channels": 8,
+        "hidden": 32,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "0eb0834ef18e86d212e485b4f26c38d35ad3bb2d23adf34481ce521a666fa8f2",
+          "3305447d83cf43037cc2f335e4b4dfc5d2a3d1a412414b4762cb1e19fd38fd05",
+          "df02680f523ff689f8ede4ea645ed33c0a6fa8e11cc611533b5e6d6f5bbc6323",
+          "b25b1319025b7bef5daf2786af068bc69252249e5a7fe65343b0223099996cca",
+          "90c9c3f8b810c1efe2ff3616aa6c6274a911e780838e72761c745871df74debd",
+          "5869ebb43274645c4e2b47b0f04e4ce62c15842a699906ec0cba470bcfd59b84",
+          "f9a5b762a2857f1299b39d2144aa03d27ad09ac9c445e79f1f67a91d7e67bac5"
+        ],
+        "compile_seconds": 0.18775630000891397,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    },
+    {
+      "case": "C16_grid32",
+      "input_sha256": "e7c735494f6e77b0167d9f603e10226582b512066e7cb0496fe05092f2a1cc0e",
+      "reference_sha256": "8155b60b18e46a30b4d7157ead514db74fb37c0f2e9995b9382e065f3b7be1db",
+      "metadata": {
+        "state_channels": 16,
+        "identity_channels": 8,
+        "hidden": 32,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "f2ce5f4a7f9a96dbb30286ddd3ba655a466d48b73c2dca93fec06a8de28996e0",
+          "efc7a51cb88b6e90acbf3fa38a89dd4362f740da65a38d8e0f5bc99eabb634ab",
+          "83511fa6ce57ad14abf7b638cbee5243f3121e6969824c6c86e88bdf91feeab2",
+          "e838b1616128ec5c7514cbe6f1f7abfffda9e5fe3e2166384d4411b96743169c",
+          "b1d9170d4fb7f54b5e4048488c3558e4dfd58eed88d3f7d093bf4d9b531253d6",
+          "f370bd3637dbf73466f70ace47afb5efbb6210753cac44d22ccd30e3919df992",
+          "9995d4b85d82cb0777a4fcb4547c45227e1ac745d6edcdfb9cc90caf6c168b52"
+        ],
+        "compile_seconds": 0.13998500000161584,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    },
+    {
+      "case": "C16_grid128",
+      "input_sha256": "7c28699fa2cae8425623cf8d6dc7cb55db9438b1544ac62ed33529d91a1435ad",
+      "reference_sha256": "4ff2991f478f43b87a25b61329a0259095d2a6eb7e70df58ebf18f0817b48545",
+      "metadata": {
+        "state_channels": 16,
+        "identity_channels": 8,
+        "hidden": 32,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "9745c893135f92d444189f1b8f689bf9340e0b46c61bb73a433d8a06ca9c1e99",
+          "8e472b819802fdaebd90c16a5070e859137262919d87514838c460daba66fbd0",
+          "ccd072c3b5bd10013f7d86cd2dbb7dd38448ea6eedb036c7307cfdb699774bb8",
+          "f7799d5661b468f3d63372c6277b0774d07a27adeb4fe5d81658ec1fa49b8c21",
+          "317c0e6b8ba39d484ad9ec5dae7546cf81a4bd988366650f9f2ffec1342bba4e",
+          "3e558b0d81f0224242516c1dd1b47a041172626bb2d5d91582769507c0dc7db3",
+          "c7a955730a7d8ffc3c7c608be833d8ead0a3ea1e024fc1bf5a7eb944a0c95708"
+        ],
+        "compile_seconds": 0.1352989000006346,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    },
+    {
+      "case": "C48_grid8",
+      "input_sha256": "37d016426401ed3ca546e2f58e857c1e10e54ca41b84a87e736c9688410ab3a1",
+      "reference_sha256": "d6a22f7701845e7fb6b9692d955f3e59405f315cd598fc7973e8d40ceb25ae91",
+      "metadata": {
+        "state_channels": 48,
+        "identity_channels": 16,
+        "hidden": 128,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "4c72f239c18151b0a39ffdca297de4e8b2194a3224e11cfa1ae60c37d74d2b41",
+          "379ce132a1bb4176bac52855e5c451dffd3413b49f76721e952fc6aa1ac5518b",
+          "fa3515cea41e895f479c2f716f27ddfd4e314341b303be8f624219f65428e835",
+          "e47eea5c204b5be43fb8ae24242d0c784d5248d83176997858439ec2a9a9f608",
+          "4419a94dea910d16b8c1b4e2791d3d6d0d97e4bd50bae41f2427931ce00e79e9",
+          "728310c418c53d5214565323d3af9e68aeb265f8ff48a07d6b3254b3ac76b20b",
+          "cc22055b9d979ae31f03a1e64a553925e4f99c1f85d820ff890e805dc1f43886"
+        ],
+        "compile_seconds": 0.14442200000485172,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    },
+    {
+      "case": "C48_grid32",
+      "input_sha256": "b8b0fc36b30263e83eefe85a69b134cafc058a962f9062d9ad79ac3d997d07a9",
+      "reference_sha256": "5f44e8829b1e1ed4e4858a25d59563c53e62e505923b6bf1525d024a61ec1236",
+      "metadata": {
+        "state_channels": 48,
+        "identity_channels": 16,
+        "hidden": 128,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "8fd39c12f7a25438a6eafecb8847c386b840f5759c635d7e9eba12962886f8ab",
+          "77ba0357ec0619a1c8d5e67abb96be71e8843ae366d4de31b0228e4d2da1ec9a",
+          "50332abdd546b736456fcb36d701b189bd11187fe3776305f939893ac648e0ed",
+          "a652f1791a1ea79aeb8998f35f4009ea753ce6f81cd934b2aee0a9f9c272cd44",
+          "3d79feb48cbd129d08f2f93d18ddd608c1b6373db6cd40ef959e55baa9558c96",
+          "02812116016d8708f3c144049c516876357dacab3ed621a5416ac257f7873ca4",
+          "f4b2d0aafc9d587e8d827e0626ab35cdcb219c0541f857780e1a5b3cb240748f"
+        ],
+        "compile_seconds": 0.14234729999589035,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    },
+    {
+      "case": "C48_grid128",
+      "input_sha256": "08f463107f418e99eb671b663ac11d3a605ea3c55937a80a92d45fe7b11d552b",
+      "reference_sha256": "5ba888511107c28c51b21a84d60171bad2f09aaaa932ab3de1f08ff991bbdf1a",
+      "metadata": {
+        "state_channels": 48,
+        "identity_channels": 16,
+        "hidden": 128,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "ec981cd2b6ffacb336d1f24302cb63e12071f5e3fc3ef73567ddd8928f5fe4f2",
+          "f82b2e1ce8cbb14d64f5eafaa2c71e969382fafeed1084ab3650d87a91c0d7c1",
+          "1b34b8c1f7c446247429a0ed6f4b14514d7d07edb039603d1c93d2b7ac949517",
+          "55c9a5e206f1db60d75c448547958e0569cb97601df6307c00acf8f37bce729a",
+          "ef6b6112bacd5bcd390fc97d9db0973d61d46e7ebb2a21addeb1c335a9b3c352",
+          "2233c7c95da66499118e5c939c7bb2e513201c02b2653b5c616ced3c87f7acf6",
+          "f68a7a7b08d02311211af4da4e09351f0ca3296c24b5f6be23b7e602d58b00eb"
+        ],
+        "compile_seconds": 0.14283549999527168,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    },
+    {
+      "case": "RGB8_retina_C16",
+      "input_sha256": "cb7b447b99b03ef9f06dd4632d9ea16f78725fd0834e8a1ccbe08d90d6074b5f",
+      "reference_sha256": "c719a5e913541206bc564221563ba2e6041e2f76f980dc0b690b323831e4657a",
+      "metadata": {
+        "state_channels": 16,
+        "identity_channels": 8,
+        "hidden": 32,
+        "passes_per_update": 3,
+        "storage": "RGBA32F banked textures",
+        "shader_sha256": [
+          "0eb0834ef18e86d212e485b4f26c38d35ad3bb2d23adf34481ce521a666fa8f2",
+          "3305447d83cf43037cc2f335e4b4dfc5d2a3d1a412414b4762cb1e19fd38fd05",
+          "df02680f523ff689f8ede4ea645ed33c0a6fa8e11cc611533b5e6d6f5bbc6323",
+          "b25b1319025b7bef5daf2786af068bc69252249e5a7fe65343b0223099996cca",
+          "90c9c3f8b810c1efe2ff3616aa6c6274a911e780838e72761c745871df74debd",
+          "5869ebb43274645c4e2b47b0f04e4ce62c15842a699906ec0cba470bcfd59b84",
+          "f9a5b762a2857f1299b39d2144aa03d27ad09ac9c445e79f1f67a91d7e67bac5",
+          "7fd77d9adfa6dec05a62bbdd21b360b7dc2da4e89853426b034f99744f6b081d",
+          "1747fa50f7b87962c6ba4db689ab53271b889f984c2fd9df6962cf258fdc5cbc",
+          "c052ee025cd740cf0c94a80125492d531faa32394b78a7d24cdcfa4f2e793def",
+          "2eba9cdc57226cd6f6ce7744736d16d8e0802c89188746457e1060c94ce26aab",
+          "f3c641d2bc63ed6ab7b7a0068601eb50fb5887bc19aa08015c5a38afd1c97e0d"
+        ],
+        "compile_seconds": 0.1808080000046175,
+        "readout_installed": true,
+        "execution": "OpenGL4.6 compute shaders",
+        "coefficient_storage": "SSBO vec4",
+        "workgroup": [
+          4,
+          4,
+          4
+        ],
+        "shared_pixel_tiles": true
+      }
+    }
+  ],
+  "hardware": {
+    "GL_VENDOR": "NVIDIA Corporation",
+    "GL_RENDERER": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+    "GL_VERSION": "4.6.0 NVIDIA 581.29"
+  },
+  "actual_shared_memory_limit": 49152,
+  "available_ram_start_gib": 8.749923706054688,
+  "available_ram_end_gib": 8.614330291748047,
+  "torch_imported": false,
+  "training_updates": 0,
+  "source_comparison": "Exact immutable inputs/nativeCUDAarrays from RENDER09; no altered workload or precision",
+  "error": null
+}
