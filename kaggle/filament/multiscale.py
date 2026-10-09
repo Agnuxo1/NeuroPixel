@@ -122,28 +122,33 @@ class MultiScale(nn.Module):
             nn.init.zeros_(self.f2_f.bias)
 
 
-def _run(s, ids, perceive, f1, f2, steps, ckpt, damage=None):
+def _run(s, ids, perceive, f1, f2, steps, ckpt, damage=None, collect=None, got=None):
     def step(s):
         return s + f2(F.relu(f1(torch.cat([s, perceive(s), ids], 1))))
     for t in range(1, steps + 1):
         s = checkpoint(step, s, use_reentrant=False) if ckpt else step(s)
         if damage is not None and t == damage[0]:
             s = s * F.interpolate(damage[1], size=s.shape[-2:], mode="nearest")
+        if collect and t in collect:                                  # P7: estados intermedios para pérdida auxiliar
+            got.append(s)
     return s
 
 
-def ms_forward(model, ms, rgb, steps, steps_fine=6, ckpt=True, damage=None):
+def ms_forward(model, ms, rgb, steps, steps_fine=6, ckpt=True, damage=None, aux_steps=None):
     """rgb [B,3,H,W] (H,W múltiplos de s) -> logits [B,2,H,W]."""
     train = model.training and ckpt
     s_ = ms.scale
     ids = model.retina(rgb)                                          # B,c_id,H,W
     ids_c = ms.down(F.pixel_unshuffle(ids, s_))                       # B,c_id,H/s,W/s
-    st = _run(model.seed(ids_c), ids_c, model.perceive, model.f1, model.f2, steps, train, damage)
+    got = []
+    st = _run(model.seed(ids_c), ids_c, model.perceive, model.f1, model.f2, steps, train, damage, aux_steps, got)
     w = model.dictionary()[1:3]
     read = lambda z: torch.einsum("bchw,kc->bkhw", model.read(z.permute(0, 2, 3, 1)).permute(0, 3, 1, 2), w)
     if ms.mode == "learned":
         up = F.interpolate(st, scale_factor=s_, mode="bilinear", align_corners=False)
         sf = _run(up + ms.seed_f(ids), ids, ms.perceive_f, ms.f1_f, ms.f2_f, steps_fine, train)
+        if aux_steps:
+            return read(sf), [read(z) for z in got]                   # logits finos + logits gruesos intermedios
         return read(sf)
     p = read(st).float().softmax(1)                                   # B,2,h,w
     if ms.mode == "bilinear":
@@ -170,3 +175,20 @@ if __name__ == "__main__":                                           # prueba de
     const = torch.full((1, 3, 8, 8), 0.3)
     assert torch.allclose(easu(const, const[:, :1], 4), torch.full((1, 3, 32, 32), 0.3), atol=1e-5)
     print("easu/rcas ok; borde vertical conservado:", round(float(up[0, 0, 32, 20]), 3), round(float(up[0, 0, 32, 44]), 3))
+
+
+class SmallUNet(nn.Module):
+    """P5 (RES-001, control honesto): U-Net de ~91 k parámetros, 3 niveles, mismos datos/pérdida que el lienzo."""
+
+    def __init__(self, w=14, cin=3, ncls=2):
+        super().__init__()
+        c = lambda i, o: nn.Sequential(nn.Conv2d(i, o, 3, padding=1), nn.ReLU(), nn.Conv2d(o, o, 3, padding=1), nn.ReLU())
+        self.e1, self.e2, self.e3, self.b = c(cin, w), c(w, 2 * w), c(2 * w, 4 * w), c(4 * w, 4 * w)
+        self.d3, self.d2, self.d1 = c(8 * w, 2 * w), c(4 * w, w), c(2 * w, w)
+        self.out = nn.Conv2d(w, ncls, 1)
+
+    def forward(self, x):
+        e1 = self.e1(x); e2 = self.e2(F.max_pool2d(e1, 2)); e3 = self.e3(F.max_pool2d(e2, 2)); b = self.b(F.max_pool2d(e3, 2))
+        up = lambda z: F.interpolate(z, scale_factor=2, mode="bilinear", align_corners=False)
+        d3 = self.d3(torch.cat([up(b), e3], 1)); d2 = self.d2(torch.cat([up(d3), e2], 1)); d1 = self.d1(torch.cat([up(d2), e1], 1))
+        return self.out(d1)

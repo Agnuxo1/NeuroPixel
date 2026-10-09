@@ -20,12 +20,15 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parents[1]))
 import fil  # noqa: E402
+import multiscale  # noqa: E402
+import filters3  # noqa: E402
+import sdo_channels  # noqa: E402
 from neuropixel.model import NeuroPixel  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
 
 
 @torch.no_grad()
-def prob_1024(model, img_u8, steps, dev, tta):
+def prob_1024(model, img_u8, steps, dev, tta, fwd=None):
     x = fil.norm_img(torch.from_numpy(img_u8)[None].to(dev))
     views = [(0, False)] + ([(1, False), (2, True), (3, True)] if tta else [])
     acc = 0
@@ -33,7 +36,7 @@ def prob_1024(model, img_u8, steps, dev, tta):
         v = torch.rot90(x, r, (2, 3))
         v = v.flip(3) if fl else v
         with torch.autocast("cuda", dtype=torch.bfloat16, enabled=dev.type == "cuda"):
-            p = fil.seg_forward(model, v, steps, ckpt=False).float().softmax(1)[:, 1:2]
+            p = (fwd or fil.seg_forward)(model, v, steps, ckpt=False).float().softmax(1)[:, 1:2]
         p = p.flip(3) if fl else p
         acc = acc + torch.rot90(p, -r, (2, 3))
     return acc / len(views)
@@ -51,11 +54,20 @@ def main():
     model = NeuroPixel(len(fil.VOCAB), (0, 0), c=args["c"], hidden=args["hidden"], retina=not args["no_retina"]).to(dev)
     model.load_state_dict(torch.load(rd / "best.pt", map_location=dev))
     model.eval()
+    fwd = None
+    if args.get("ms"):                                    # FIL-002: lienzo multiescala
+        ms = multiscale.MultiScale(args["ms"], c=args["c"], hidden=args["hidden"], scale=args["scale"]).to(dev)
+        ms.load_state_dict(torch.load(rd / "best_ms.pt", map_location=dev))
+        fwd = lambda m, x, st, ckpt=False: multiscale.ms_forward(m, ms, x, st, args["steps_fine"], ckpt)
     files = sorted((fil.DATA / "test" / "test_images").glob("*.jp*g"))
     rows, t0 = [], time.time()
     for f in files:
         im = np.asarray(Image.open(f).convert("L").resize((fil.RES, fil.RES), Image.BILINEAR))
-        p = prob_1024(model, im, args["steps"], dev, a.tta)
+        if args.get("filters"):
+            im = filters3.three(im)
+        elif args.get("sdo"):
+            im = sdo_channels.sdo3(f.stem, im)
+        p = prob_1024(model, im, args["steps"], dev, a.tta, fwd)
         p2 = F.interpolate(p, size=(2048, 2048), mode="bilinear", align_corners=False)[0, 0].cpu().numpy()
         lab = fil.instances(p2, pp["thr"], pp["min_area"] * 4, pp["close"] * 2)
         for n in range(1, lab.max() + 1):
