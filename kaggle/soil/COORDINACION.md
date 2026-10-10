@@ -29,3 +29,4 @@
 - La CV se hizo SIN espejo; `--submit` si lo usa. Pliegues aleatorios por muestra (mezclan Motorola/Samsung).
 - GPU liberada. SOIL-002 (Codex) LISTA: auditar split, CV dejando fuera un telefono y/o con espejo, envio.
 - 20:16: cadena del chat anterior (Claude) en marcha: soil.py --submit (pid 20144) + envio automatico a Kaggle; resultado se anotara aqui
+- 20:47: envio base publico 98,44 (peor que DINOv2 60,80); CV por muestra no transfiere a iPhone. Ver TABLON.

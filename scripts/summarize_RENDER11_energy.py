@@ -1,9 +1,11 @@
 """Complete-cohort admission and independent arithmetic recount of device energy."""
-import hashlib,json,statistics
+import hashlib,json,statistics,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def main():
-    folder=ROOT/'results/research/RENDER11_energy/original_20261009A';record=json.loads((folder/'receipt.json').read_bytes());plan=json.loads((ROOT/'docs/research/RENDER11_energy_plan.json').read_bytes())
+    # Por defecto, el recibo original; para la cohorte recuperada: python summarize_RENDER11_energy.py <carpeta>
+    folder=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'results/research/RENDER11_energy/original_20261009A'
+    record=json.loads((folder/'receipt.json').read_bytes());plan=json.loads((ROOT/'docs/research/RENDER11_energy_plan.json').read_bytes())
     assert record['status']=='completed_all_registered_RENDER11_energy_workloads'
     assert len(record['checks'])==77 and all(c['passed'] for c in record['checks'])
     assert record['plan_sha256']==hashlib.sha256((ROOT/'docs/research/RENDER11_energy_plan.json').read_bytes()).hexdigest()

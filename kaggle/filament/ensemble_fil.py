@@ -21,6 +21,8 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE.parents[1]))
 import fil  # noqa: E402
+import multiscale  # noqa: E402
+import filters3  # noqa: E402
 from neuropixel.model import NeuroPixel  # noqa: E402
 from neuropixel.safety import choose_device  # noqa: E402
 from predict_fil import prob_1024  # noqa: E402
@@ -31,11 +33,17 @@ def load(run, dev):
     a = res["args"]
     m = NeuroPixel(len(fil.VOCAB), (0, 0), c=a["c"], hidden=a["hidden"], retina=not a["no_retina"]).to(dev)
     m.load_state_dict(torch.load(HERE / "runs" / run / "best.pt", map_location=dev))
-    return m.eval(), a["steps"]
+    fwd = None
+    if a.get("ms"):                                        # FIL-002: lienzo multiescala
+        ms = multiscale.MultiScale(a["ms"], c=a["c"], hidden=a["hidden"], scale=a["scale"]).to(dev)
+        ms.load_state_dict(torch.load(HERE / "runs" / run / "best_ms.pt", map_location=dev))
+        fwd = lambda mm, x, st, ckpt=False, ms=ms, sf=a["steps_fine"]: multiscale.ms_forward(mm, ms, x, st, sf, ckpt)
+    return m.eval(), a["steps"], fwd, bool(a.get("filters"))
 
 
 def ens_prob(models, img_u8, dev, tta):
-    return sum(prob_1024(m, img_u8, st, dev, tta) for m, st in models) / len(models)
+    f3 = filters3.three(img_u8) if any(fl for *_, fl in models) else None
+    return sum(prob_1024(m, f3 if fl else img_u8, st, dev, tta, fwd) for m, st, fwd, fl in models) / len(models)
 
 
 def main():
@@ -44,8 +52,9 @@ def main():
     ap.add_argument("--tta", action="store_true")
     ap.add_argument("--val", action="store_true")
     ap.add_argument("--test", action="store_true")
+    ap.add_argument("--cpu-ok", action="store_true", help="permitir CPU si la GPU esta ocupada")
     a = ap.parse_args()
-    dev = choose_device("cuda", threads=4, force_gpu=True, vram_cap_gib=6)
+    dev = choose_device("cuda", threads=4, force_gpu=not a.cpu_ok, vram_cap_gib=6)
     models = [load(r, dev) for r in a.runs]
     name = "ens_" + "+".join(a.runs) + ("_tta" if a.tta else "")
     out = HERE / "runs" / name
