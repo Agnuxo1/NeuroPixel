@@ -1,6 +1,6 @@
 # Coste de la cadena NeuroPixel (punto 7, 2026-10-09)
 
-Estado: inventario de lo medido frente a lo no medido. Las cifras de energía de RENDER11 son **parciales** (103 de 105 filas; faltan RGB8_retina_C16, bloque 2, vector_render y render), en espera de la medición encolada en gpuq.
+Estado: inventario de lo medido frente a lo no medido. La cohorte de RENDER11 está **completa** (105 de 105 filas, 77 controles, 0 repeticiones) desde la recuperación de las filas RGB8_retina_C16, bloque 2, vector_render y render (2026-10-10).
 
 ## Corrección previa
 
@@ -20,8 +20,8 @@ Una lectura inicial sobre la carpeta compartida dio por inexistente el recibo de
 | TF en CPU (v1) | Medido (tiempo) | 317,1 s | `runs/tf_v1/result.json` |
 | VIS07 NCA, 10 ajustes train + DEV | Medido (tiempo y CPU) | 413,318 s de pared; 826,410 s de CPU | `docs/research/COST_AND_LIMITS_20261009.md:11` |
 | VIS07 CNN, 10 ajustes train + DEV | Medido (tiempo y CPU) | 34,237 s de pared; 68,427 s de CPU | `docs/research/COST_AND_LIMITS_20261009.md:11` |
-| **RENDER11, energía sostenida por inferencia** | **Medido, parcial (103/105)** | Mediana por llamada: vector_render 0,358 J; render 0,376 J; cuda_graph 0,405 J; cuda_eager 0,419 J; scalar_render 1,555 J | `results/research/RENDER11_energy/original_20261009A/receipt.json` (`gpu_gross_j_per_call`) |
-| RENDER11, rango de energía por llamada | Medido, parcial | Entre 0,28 y 12,6 J según caso y método | mismo recibo |
+| **RENDER11, energía sostenida por inferencia** | **Medido, completo (105/105)** | Mediana por llamada: vector_render 0,365 J; render 0,374 J; cuda_graph 0,405 J; cuda_eager 0,419 J; scalar_render 1,555 J; total activo 17 521 J y 20 167 llamadas completas | `results/research/RENDER11_energy/original_20261009A/receipt.json` (`gpu_gross_j_per_call`) |
+| RENDER11, rango de energía por llamada | Medido, completo | Entre 0,18 y 12,6 J según caso y método | mismo recibo |
 | RENDER11, línea base inactiva | Medido, con dispersión | `idle_before_w` entre 18 y 113 W: la GPU no estuvo en reposo homogéneo | mismo recibo |
 | RENDER11, RAM disponible en admisión | Medido | Mínimo 8,03 GiB (guard RAM8 = 8 GiB) | mismo recibo |
 | RENDER09 y RENDER08 (render y cuda_graph) | Medido (energía bruta) | 27,795 J (método render, 49 filas); 187,681 J y 10,814 J | `results/research/RENDER09_benchmark/...`, `RENDER08_benchmark/...` |
@@ -41,12 +41,12 @@ Una lectura inicial sobre la carpeta compartida dio por inexistente el recibo de
 | Transferencias host-GPU y readbacks | **No medido** | — | Excluidos en `COST_AND_LIMITS_20261009.md:9` |
 | Coste económico o cuota de GPU | **No medido** | — | — |
 
-## Lo que dice el recibo parcial y sus límites
+## Lo que dice la cohorte completa y sus límites
 
-- Son 103 de 105 filas. Las dos que faltan son las del bloque 2 de RGB8 (vector_render y render). **No se debe sacar conclusión comparativa de la cohorte hasta completarla y verificarla** (105 filas, 77 controles, las 103 originales intactas).
-- Alcance: dispositivo GPU completo, incluido el tráfico de fondo y el inactivo. Excluye CPU, RAM, PSU y pared.
-- La línea base inactiva varía entre 18 y 113 W, lo que indica que la GPU no estuvo en reposo homogéneo entre filas. Eso limita la comparación entre métodos y hay que tratarlo como incertidumbre.
-- El recibo declara que la atribución de energía en bloques cortos **no está validada** por la resolución del contador (`short_block_energy_attribution`). Las cifras por llamada son observaciones crudas, no atribuciones.
+- Cohorte de 105 filas, 77 controles de salida y cero repeticiones. Análisis por `scripts/summarize_RENDER11_energy.py` sobre `recovered_20261009B`.
+- Alcance: dispositivo GPU completo, incluidos el tráfico de fondo y el inactivo. Excluye CPU, RAM, PSU y pared.
+- La línea base inactiva varía entre 18 y 113 W entre filas. Eso limita la comparación entre métodos; las cifras ajustadas por línea base están en `independent_summary.json`.
+- El recibo declara que la atribución de energía en bloques cortos **no está validada** por la resolución del contador (`short_block_energy_attribution`). Las cifras por llamada son observaciones de dispositivo, no atribuciones por componente.
 
 ## Cifras que no se pueden dar hoy
 
