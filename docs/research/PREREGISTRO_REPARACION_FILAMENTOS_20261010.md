@@ -19,7 +19,7 @@ El resto de la receta es la de `cv0_base` (fold 0, 8000 iteraciones, lr 1e-3, lo
 ## Lesión de evaluación (fija, preregistrada)
 
 - En el test de fold 0 (heldout), en el paso t = 12 de 24, cada celda del estado se anula con probabilidad 0,3 (máscara Bernoulli por píxel, una por muestra).
-- Semilla de la máscara fija (0) para todos los brazos, para que la lesión sea idéntica.
+- Semilla de la máscara: 1000 + id de imagen de test, por imagen; las anotaciones que comparten imagen usan la misma máscara. Enmienda 2026-10-10, antes de cualquier evaluación de lesión: la versión original decía semilla global 0. El cambio asegura que la lesión sea idéntica en los tres brazos aunque cambie el orden o el tamaño de los lotes. No cambia la probabilidad de anulación, el instante ni la métrica.
 - El post-proceso (umbral, área mínima, cierre) es el fijado por calibración en cada modelo. No se reajusta sobre el test.
 - Pasos de evaluación: 24 para los tres brazos (no los pasos variables del entrenamiento), para que la comparación no dependa del reposo.
 - La lesión de evaluación no es la del entrenamiento (que cae en un instante aleatorio y con la misma probabilidad de anulación): se fija aquí para comparar los tres brazos con la misma perturbación.
