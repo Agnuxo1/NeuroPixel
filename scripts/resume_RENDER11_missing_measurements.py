@@ -6,6 +6,9 @@ import measure_RENDER11_energy as frozen
 EXPECTED_MISSING={('RGB8_retina_C16',2,'vector_render'),('RGB8_retina_C16',2,'render')}
 TOTAL_ROWS=105
 def main():
+    # Guard: la cohorte ya esta recuperada y verificada (commit 87c60227); relanzar sobrescribiria el recibo.
+    if (ROOT/'results/research/RENDER11_energy/recovered_20261009B/receipt.json').exists():
+        raise SystemExit('Recuperacion ya verificada (commit 87c60227): no se relanza')
     old=ROOT/'results/research/RENDER11_energy/original_20261009A';record=json.loads((old/'receipt.json').read_bytes());plan=json.loads((ROOT/'docs/research/RENDER11_energy_plan.json').read_bytes())
     orig={(r['case'],r['block'],r['method']):json.dumps(r,sort_keys=True) for r in record['rows']}
     assert record['status']=='failed_preserved' and len(record['rows'])==TOTAL_ROWS-len(EXPECTED_MISSING) and len(orig)==len(record['rows']) and len(record['checks'])==77 and all(c['passed'] for c in record['checks'])
