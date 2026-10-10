@@ -1,8 +1,16 @@
+<p align="center">
+  <img src="docs/img/banner.png" alt="NeuroPixel — a neural network that thinks in pixels" width="100%">
+</p>
+
 # NeuroPixel
 
 ### Neural fields executed as images — visible states, measured results
 
 NeuroPixel represents a recurrent neural state on a spatial canvas. Local learned updates evolve the field; a shared dictionary reads the result. The graphics implementation executes perception, local updates, retina and decoding through floating-point image passes. It provides an inspectable artificial neural process, rather than a claim of a biological brain or a complete causal explanation.
+
+<p align="center">
+  <img src="docs/img/architecture.svg" alt="NeuroPixel architecture" width="100%">
+</p>
 
 ![Actual learned network trajectory](docs/animations/actual_neural_trajectory.gif)
 
@@ -19,6 +27,18 @@ NeuroPixel represents a recurrent neural state on a spatial canvas. Local learne
 | Are the negative results preserved? | Yes. OriginalH1 remains unsupported; DEV04 original precision target failed; long continuations are not stable. | [DEV04](docs/research/DEV04_results.md), [historical audit](docs/research/TASK4_historical_capabilities_audit_20261009.md), [limits](docs/research/COST_AND_LIMITS_20261009.md). |
 
 These are results of the specified recipes and device. They do not establish general architectural superiority, independent external replication or a Nobel-level discovery.
+
+<p align="center">
+  <img src="docs/img/capabilities_en.png" alt="Rest-state, memory, growing canvases and cost" width="100%">
+</p>
+
+*Capability figure from the pre-scientific README. Memory and rest-state behaviour are not established by the current evidence; see the manuscript for the bounded claims.*
+
+<p align="center">
+  <img src="docs/img/scaling_en.png" alt="Scaling curves: NeuroPixel vs transformer" width="100%">
+</p>
+
+*Scaling comparison. The original hypothesis H1 was not supported; see the results index.*
 
 ## Graphics backends and fair acceleration controls
 
@@ -45,6 +65,10 @@ The corpus is public UCI optical digits. The metadata documents separate writers
 ![Finite-depth limits](docs/animations/depth_limits_and_state_growth.gif)
 
 Eight updates are trained. Extending the same input to sixteen or thirty-two updates degrades accuracy and grows the recorded state magnitude. Ten extended-logit comparisons failed the original replay tolerance and remain archived, even though categorical decisions matched. A fixed same-host128-row diagnostic reproduced both code paths and archived values; it does not erase the earlier failed execution.
+
+<p align="center">
+  <img src="docs/img/thinking.gif" alt="The dictionary scanner reading every pixel while the canvas answers a question" width="760">
+</p>
 
 The scanner projects state through a learned decoder. [SCN06](docs/research/SCN06_results.md) demonstrates that identical present displays can hide state differences that affect a future answer. Seeing a colour is useful observability, not unique causal circuit identification or biological equivalence.
 
