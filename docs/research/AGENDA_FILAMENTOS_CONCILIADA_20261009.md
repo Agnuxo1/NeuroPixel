@@ -40,3 +40,9 @@ La COLA está fechada el 2026-09-28 y el tablón llega al 2026-10-09. Hay que ac
 - Estado actual de la cola de gpuq para filamentos (no consultado en esta fase).
 - Publicación DOC-002 en Kaggle.
 - Resultados de skel, aux, small, consw y de los folds 1-4.
+
+## Correccion de ruido (2026-10-10)
+
+- El ruido de ±0,005 de la seccion inicial era demasiado optimista. Con el protocolo estricto (fold 0, test heldout), las tres semillas del baseline dan 0,3850, 0,3878 y 0,4015: media 0,3948 y desviacion tipica ~0,0097.
+- Consenso ponderado (w 0,7), semilla 0: 0,3867. Consenso suave, semilla 0: 0,3953. Ninguna de las dos se separa del baseline con una semilla.
+- Las cifras de test se toman de `result.json` (bloque `heldout`). La linea `RESULT` de los logs es la metrica de validacion y no se usa para comparar variantes.
