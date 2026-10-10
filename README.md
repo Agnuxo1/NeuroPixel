@@ -52,7 +52,7 @@ The scanner projects state through a learned decoder. [SCN06](docs/research/SCN0
 
 An [interactive local viewer](docs/research/VIS07_viewer.md) exposes all sixteen raw channels, selectable RGB projection, per-cell decoder probabilities and reset/depth controls. Archive mode passed fifty HTTP checks and browser controls. Live physical GPU integration passed **27 trajectory gates plus 52 HTTP checks**, including all ten TRAIN resets and clean release. A separate CPU/Mesa execution passed the same integration checks; software and archive modes are labelled explicitly and are not presented as physical GPU execution.
 
-The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) uses actual board counters over multi-second blocks. Its original execution passed all 77 output gates and preserved 100/105 blocks before the unchanged RAM floor stopped it. Complete comparative energy conclusions remain pending; full wall energy is unmeasured.
+The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) uses actual board counters over multi-second blocks. Its first execution passed all 77 output gates and preserved 103 of 105 blocks before the unchanged RAM floor stopped it. A recovery measured the two missing RGB8 block-2 keys; the completed cohort has 105 rows, 77 gates and zero repeated keys, with the per-case table in the recovered receipt folder. Full wall energy is unmeasured.
 
 - [Reproduction instructions and environments](docs/research/REPRODUCE_20261009.md)
 - [All-study evidence index](docs/research/RESULTS_INDEX_20261009.md)
