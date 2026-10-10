@@ -39,3 +39,9 @@ Leyenda: **Hecho** = verificado con evidencia en el repositorio. **Parcial** = a
 - Ningún cambio en la carpeta compartida (Codex trabaja en ella).
 - Ningún cambio en permisos, configuración del sistema ni procesos ajenos.
 - Ningún dato descargado.
+
+## Actualizacion 2026-10-10 (05:20 Madrid)
+
+- **Punto 5: hecho.** `results/research/RENDER11_energy/recovered_20261009B/receipt.json`: 105 filas, 77 controles, 0 repeticiones. `summarize_RENDER11_energy.py` sobre esa carpeta pasa todas las aserciones. Energia activa total 17 521 J y 20 167 llamadas completas (salida del resumen independiente).
+- **Punto 7:** la cadena de coste de RENDER11 pasa de parcial a completa para la energia por inferencia. Sigue sin medirse el consumo total del equipo (punto 6).
+- **Filamentos (punto 20):** cadena de GPU en curso. `cv0_base_s1_rerun1` heldout 0,3878 frente a 0,3850 de la semilla 0.
