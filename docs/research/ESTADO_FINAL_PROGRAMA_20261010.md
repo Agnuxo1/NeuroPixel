@@ -16,7 +16,7 @@ Leyenda: **Hecho** = verificado con evidencia en el repositorio. **Parcial** = a
 | 6 | Consumo total del equipo | **Bloqueado** | Sin medidor de pared. El "Medidor de energía" de Windows no se lee sin permisos elevados | Requiere medidor de pared o un cambio de permisos del sistema, que no hago |
 | 7 | Coste de la cadena completa | **Parcial** | `docs/research/COSTE_CADENA_20261009.md` (`a1f05088`) | Energía por inferencia del render: completa. Energía de entrenamiento, supervisión, cachés, routing y transferencias: no medidas |
 | 8 | Escalabilidad | **Parcial** | `docs/research/ESCALADO_OBSERVADO_20261009.md` (`fe64f862`) | Resolución (grid 8 a 128) y canales (C16 y C48): medidos. Pasos, batch, expertos, datos y otros dispositivos: no medidos |
-| 9 | Baselines fuertes con presupuesto comparable | **Parcial** | VIS07: CNN frente a NeuroPixel, 5 semillas, +3,52 pp (ya existente). Filamentos: baseline en 3 semillas; consenso en curso con preregistro `0796d702` | Comparación 3 frente a 3 en curso. Con 3 semillas no se declara mejora |
+| 9 | Baselines fuertes con presupuesto comparable | **Parcial** | VIS07: CNN frente a NeuroPixel, 5 semillas, +3,52 pp (ya existente). Filamentos: baseline en 3 semillas; consenso en curso con preregistro `0796d702` | Veredicto preregistrado: sin apoyo (Δ medio +0,0078; semilla 2: −0,0001). Ver VEREDICTO_CONSENSO_FILAMENTOS_20261010.md |
 | 10 | Nuevas comparaciones sin repetir cerrados | **Pendiente** | Lista de cerrados en `docs/research/PROTOCOLOS_PUNTOS_8_19_20261009.md` (`0979b04a`) | Requiere diseño previo y revisión de la lista de cerrados |
 | 11 | Generalización con datos realmente nuevos | **Bloqueado** | Protocolo en `0979b04a` | Requiere descargar datos nuevos y código de adaptación que no existe. JEV: no descargar en esta ventana |
 | 12 | Percepción, símbolos y tiempo | **Pendiente** | Protocolo con controles de atajos | No hay ejecución en la ventana |
@@ -27,7 +27,7 @@ Leyenda: **Hecho** = verificado con evidencia en el repositorio. **Parcial** = a
 | 17 | Entrega reproducible y replicación independiente | **Parcial** | `requirements-measured-20261009.txt` y `docs/reproducibility/ENTORNO_MEDIDO_20261009.md` (`fa91ba3b`), marcado como no probado desde cero | Instalación limpia: JEV la pospone a después de la cadena de GPU. Replicación independiente: fuera del plazo |
 | 18 | Revisión del manuscrito | **Parcial** | `6be4025a`: tres estados obsoletos corregidos (R10 incompleto, RENDER11 100/105, energía) | Revisión científica externa pendiente |
 | 19 | Originalidad, predicciones distintivas y utilidad externa | **Parcial** | `docs/research/01_prior_art.md` (14 fuentes primarias, sección 7). Predicciones distintivas: sección 5 | Originalidad no establecida. Confirmación externa de utilidad: fuera de alcance |
-| 20 | Agenda de filamentos | **Parcial** | `ad360fbf` y `d8c65192`: agenda conciliada y ruido corregido. Baseline en 3 semillas (0,3850; 0,3878; 0,4015) | Consenso en 3 semillas en curso. `aux` y `small` con una semilla. FIL-010 sin ejecutar |
+| 20 | Agenda de filamentos | **Parcial** | `ad360fbf` y `d8c65192`: agenda conciliada y ruido corregido. Baseline en 3 semillas (0,3850; 0,3878; 0,4015) | Consenso en 3 semillas: sin apoyo (ver veredicto). `aux` y `small` con una semilla. FIL-010 sin ejecutar |
 
 ## Decisiones tomadas por JEV en esta ventana
 
