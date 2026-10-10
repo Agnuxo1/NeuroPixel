@@ -1,10 +1,20 @@
+<p align="center">
+  <img src="docs/img/banner.png" alt="NeuroPixel — a neural network that thinks in pixels" width="100%">
+</p>
+
 # NeuroPixel
 
 ### Neural fields executed as images — visible states, measured results
 
 NeuroPixel represents a recurrent neural state on a spatial canvas. Local learned updates evolve the field; a shared dictionary reads the result. The graphics implementation executes perception, local updates, retina and decoding through floating-point image passes. It provides an inspectable artificial neural process, rather than a claim of a biological brain or a complete causal explanation.
 
+<p align="center">
+  <img src="docs/img/architecture.svg" alt="NeuroPixel architecture" width="100%">
+</p>
+
 ![Actual learned network trajectory](docs/animations/actual_neural_trajectory.gif)
+
+*Actual learned network trajectory of the selected VIS07 model. File `docs/animations/actual_neural_trajectory.gif` (339.6 KiB, SHA-256 `3cc78dacc2d1…`). Frames are actual GPU-rendered states of the selected model, labelled as such; no synthetic artwork. See the [manifest](docs/animations/manifest.json).*
 
 **Actual GPU-rendered states**, selected VIS07 model, registered seed240 and fixed original TRAIN digit0. Playback is slowed for inspection. Colours display a projection of raw channels; magnitude is shown separately. The validated classifier uses eight updates and resets for each new input.
 
@@ -20,13 +30,29 @@ NeuroPixel represents a recurrent neural state on a spatial canvas. Local learne
 
 These are results of the specified recipes and device. They do not establish general architectural superiority, independent external replication or a Nobel-level discovery.
 
+<p align="center">
+  <img src="docs/img/capabilities_en.png" alt="Rest-state, memory, growing canvases and cost" width="100%">
+</p>
+
+*Capability figure from the pre-scientific README. Memory and rest-state behaviour are not established by the current evidence; see the manuscript for the bounded claims.*
+
+<p align="center">
+  <img src="docs/img/scaling_en.png" alt="Scaling curves: NeuroPixel vs transformer" width="100%">
+</p>
+
+*Scaling comparison. The original hypothesis H1 was not supported; see the results index.*
+
 ## Graphics backends and fair acceleration controls
 
 The original scalar renderer uses RGBA32F textures and framebuffer passes. The vector renderer packs coefficients and performs four-channel fetches/DOT4. The advanced OpenGL 4.6 backend uses compute shaders, SSBO weights and shared pixel tiles. Its complete comparison passed **77 output gates and all 245 timing rows**, preserving the original 143 rows without repeating them. Compute measures **2.084×** relative to the best CUDA comparator for C16/grid128, and loses for C48/grid128. Recovery interrupted measurement sessions; results are descriptive technical measurements, not independent replications. [All RENDER10 cases and limits](docs/research/RENDER10_results.md).
 
 ![All five advanced GPU backends](docs/animations/advanced_GPU_backends.gif)
 
+*The five advanced GPU backends on the same network state; provenance in [advanced_GPU_backends_provenance.json](docs/animations/advanced_GPU_backends_provenance.json). File `docs/animations/advanced_GPU_backends.gif` (71.3 KiB, SHA-256 `efe22459cffc…`). Frames are actual GPU-rendered states of the selected model, labelled as such; no synthetic artwork. See the [manifest](docs/animations/manifest.json).*
+
 ![All graphics workloads and comparators](docs/animations/all_GPU_workloads.gif)
+
+*All graphics workloads and their comparators. File `docs/animations/all_GPU_workloads.gif` (161.4 KiB, SHA-256 `87a3572584c1…`). Frames are actual GPU-rendered states of the selected model, labelled as such; no synthetic artwork. See the [manifest](docs/animations/manifest.json).*
 
 The first scalar implementation was **3.14–12.25× slower** than the best measured CUDA comparator. It is retained as a within-run control. The vector variant improves that implementation; advantages are workload-dependent. CUDA Graph is included to reduce avoidable Python launch overhead. Technical timing blocks are not independent scientific replications.
 
@@ -38,13 +64,23 @@ RGB pixels feed a learned retina, neural state and shared decoder. No target lab
 
 ![All five visual realizations](docs/animations/external_vision_all_seeds.gif)
 
+*All five visual realizations of the VIS07 pairs. File `docs/animations/external_vision_all_seeds.gif` (126.6 KiB, SHA-256 `50243fe28a7c…`). Frames are actual GPU-rendered states of the selected model, labelled as such; no synthetic artwork. See the [manifest](docs/animations/manifest.json).*
+
 The corpus is public UCI optical digits. The metadata documents separate writers for official TRAIN/TEST; exact input-image identities were disjoint. It is a bounded recognition benchmark, not natural-language reasoning, blind custody or independent laboratory confirmation. NCAclassification and WebGL execution have [primary antecedents](https://distill.pub/2020/growing-ca/).
 
 ## Time, stability and honest introspection
 
 ![Finite-depth limits](docs/animations/depth_limits_and_state_growth.gif)
 
+*Finite-depth limits: state growth when the same input is extended beyond the eight trained updates. File `docs/animations/depth_limits_and_state_growth.gif` (133.7 KiB, SHA-256 `09e0cca97300…`). Frames are actual GPU-rendered states of the selected model, labelled as such; no synthetic artwork. See the [manifest](docs/animations/manifest.json).*
+
 Eight updates are trained. Extending the same input to sixteen or thirty-two updates degrades accuracy and grows the recorded state magnitude. Ten extended-logit comparisons failed the original replay tolerance and remain archived, even though categorical decisions matched. A fixed same-host128-row diagnostic reproduced both code paths and archived values; it does not erase the earlier failed execution.
+
+<p align="center">
+  <img src="docs/img/thinking.gif" alt="The dictionary scanner reading every pixel while the canvas answers a question" width="760">
+</p>
+
+*Dictionary scanner reading the canvas while it answers a question. File `docs/img/thinking.gif` (1315.2 KiB, SHA-256 `339b5dcf6cd5…`), generated by `scripts/make_readme_figures.py`.*
 
 The scanner projects state through a learned decoder. [SCN06](docs/research/SCN06_results.md) demonstrates that identical present displays can hide state differences that affect a future answer. Seeing a colour is useful observability, not unique causal circuit identification or biological equivalence.
 
@@ -52,7 +88,7 @@ The scanner projects state through a learned decoder. [SCN06](docs/research/SCN0
 
 An [interactive local viewer](docs/research/VIS07_viewer.md) exposes all sixteen raw channels, selectable RGB projection, per-cell decoder probabilities and reset/depth controls. Archive mode passed fifty HTTP checks and browser controls. Live physical GPU integration passed **27 trajectory gates plus 52 HTTP checks**, including all ten TRAIN resets and clean release. A separate CPU/Mesa execution passed the same integration checks; software and archive modes are labelled explicitly and are not presented as physical GPU execution.
 
-The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) uses actual board counters over multi-second blocks. Its original execution passed all 77 output gates and preserved 100/105 blocks before the unchanged RAM floor stopped it. Complete comparative energy conclusions remain pending; full wall energy is unmeasured.
+The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) uses actual board counters over multi-second blocks. Its first execution passed all 77 output gates and preserved 103 of 105 blocks before the unchanged RAM floor stopped it. A recovery measured the two missing RGB8 block-2 keys; the completed cohort has 105 rows, 77 gates and zero repeated keys, with the per-case table in the recovered receipt folder. Full wall energy is unmeasured.
 
 - [Reproduction instructions and environments](docs/research/REPRODUCE_20261009.md)
 - [All-study evidence index](docs/research/RESULTS_INDEX_20261009.md)
