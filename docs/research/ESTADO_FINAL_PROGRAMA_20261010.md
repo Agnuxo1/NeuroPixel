@@ -1,5 +1,7 @@
 # Estado de los 20 puntos del programa (2026-10-10, 06:00 Madrid)
 
+Plazo ampliado por Fran +24 h: **2026-10-11 09:00 Europe/Madrid**.
+
 Rama: `integracion/neuropixel-main-20261010` (worktree `D:/PROJECTS/196_NeuroPixel_int`), sobre `origin/main` 6f1c7b7. Commits locales, sin push. El push y el PR esperan a la revisión D4 de Fran.
 
 Leyenda: **Hecho** = verificado con evidencia en el repositorio. **Parcial** = avance real con límite declarado. **Bloqueado** = requiere algo fuera de nuestro alcance. **Pendiente** = posible, no iniciado.
