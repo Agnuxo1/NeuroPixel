@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T22:03:03+00:00
+- Actualizado (UTC): 2026-10-12T22:05:30+00:00
 - Tarea en curso o siguiente: A18.3, Auditar ledger y coherencia de afirmaciones publicas; intento 1; presupuesto 120 minutos.
 - Criterio de cierre: claims_ledger ejecutado sobre registro completo sin violaciones; revision de cobertura y textos actuales sin sobreafirmaciones, cambios archivados; clasificacion revisada mas alla de los checks sintacticos del validador.
-- Hecho en esta tarea: A18.2.P y A18.2 cerradas (commit 5324db22): registro 73 afirmaciones, 795/795, validador valido
-- Falta en esta tarea: 1 verificacion independiente de la clasificacion (cog-verifier); 2 barrido determinista de terminos de sobreafirmacion; 3 correcciones archivadas de textos publicos; 4 revalidar registro y cobertura; 5 cierre
-- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.3
+- Hecho en esta tarea: Barrido determinista de sobreafirmaciones (137 terminos, 2 por encima del nivel); 18 correcciones archivadas aplicadas (commit 51afbdea); verificador independiente en curso
+- Falta en esta tarea: Incorporar hallazgos del verificador; reconstruir registro y validador; cerrar A18.3 y A18
+- Siguiente comando exacto: esperar informe docs/execplan/evidence/A18.3_independent_review.json y aplicar correcciones
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: Correcciones de textos publicos deben conservar originales (A18_sources) y no tocar resultados
+- Dudas o riesgos abiertos: Cambios a textos publicos posteriores al paquete G1.3.ext (ba9f3f84): el propietario debe publicar la version mas reciente
 
 ## Propósito
 
@@ -197,6 +197,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:03:03+00:00) A18.2: done; commit 5324db225181a010b0ebb01915b409e3208b2ae4; Registro completo: 73 afirmaciones vinculadas a artefactos (L0:10, L1:33, L2:30); 795 candidatos cubiertos; exclusiones editoriales justificadas; sin timestamps ni independencia inventados.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T22:03:03+00:00) A18.3, intento 1: hecho A18.2.P y A18.2 cerradas (commit 5324db22): registro 73 afirmaciones, 795/795, validador valido; falta 1 verificacion independiente de la clasificacion (cog-verifier); 2 barrido determinista de terminos de sobreafirmacion; 3 correcciones archivadas de textos publicos; 4 revalidar registro y cobertura; 5 cierre. Siguiente: `python docs/execplan/plan_status.py start A18.3`.
+
+- [ ] (2026-10-12T22:05:30+00:00) A18.3, intento 1: hecho Barrido determinista de sobreafirmaciones (137 terminos, 2 por encima del nivel); 18 correcciones archivadas aplicadas (commit 51afbdea); verificador independiente en curso; falta Incorporar hallazgos del verificador; reconstruir registro y validador; cerrar A18.3 y A18. Siguiente: `esperar informe docs/execplan/evidence/A18.3_independent_review.json y aplicar correcciones`.
 
 ## Sorpresas y hallazgos
 
