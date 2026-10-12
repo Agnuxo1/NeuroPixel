@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:38:44+00:00
+- Actualizado (UTC): 2026-10-12T11:42:44+00:00
 - Tarea en curso o siguiente: G0, Congelar inventario y restaurar trazabilidad; intento 1; presupuesto 30 minutos.
 - Criterio de cierre: cero discrepancias no explicadas en los originales y un mapa de afirmación → protocolo → fuente → ejecución → datos → recuento. Las dependencias faltantes se identifican, sin inventar archivos ni valores. [guía §5]
-- Hecho en esta tarea: P0 completa, 4 tareas cerradas; 63 pruebas OK.
-- Falta en esta tarea: Congelar inventario y verificar originales y trazabilidad.
-- Siguiente comando exacto: python docs/execplan/plan_status.py section 5
+- Hecho en esta tarea: Blobs 1797/1797 OK; auditoria editorial rechaza correctamente con 4 incidencias, guardadas.
+- Falta en esta tarea: Inventario adicional, procedencia Git y mapa afirmacion-protocolo-fuente-ejecucion-datos-recuento.
+- Siguiente comando exacto: python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_inventory.txt --timeout 600 -- python scripts/completion_G0_inventory.py
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -147,6 +147,12 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:38:44+00:00) P0.4: done; commit 2ec302d252d8e1bcf40636537209d5790a0011fe; Sistema persistente validado sin problemas, checklist y AGENTS instalados.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T11:38:44+00:00) G0, intento 1: hecho P0 completa, 4 tareas cerradas; 63 pruebas OK.; falta Congelar inventario y verificar originales y trazabilidad.. Siguiente: `python docs/execplan/plan_status.py section 5`.
+
+- [ ] (2026-10-12T11:39:36+00:00) G0, intento 1: hecho §5 leida; 1797 blobs a autenticar; JEV consultado; se conservaran fallos numericos y exposicion.; falta Auditar blobs y paquete; inventario extra y ascendencia; mapa trazabilidad.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_blob_audit.txt --timeout 600 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.publication_manifest --root . --output results/research/COMPLETION20261012/original_blob_audit.json`.
+
+- [ ] (2026-10-12T11:41:04+00:00) G0, intento 1: hecho 1797/1797 originales verificados, cero discrepancias; JEV recomienda auditoria acotada (1,0).; falta Auditoria editorial con rechazo esperado, ascendencia independiente y mapa de trazabilidad.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_release_before.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.audit_release --root . --output results/research/COMPLETION20261012/release_audit_before.json`.
+
+- [ ] (2026-10-12T11:42:44+00:00) G0, intento 1: hecho Blobs 1797/1797 OK; auditoria editorial rechaza correctamente con 4 incidencias, guardadas.; falta Inventario adicional, procedencia Git y mapa afirmacion-protocolo-fuente-ejecucion-datos-recuento.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_inventory.txt --timeout 600 -- python scripts/completion_G0_inventory.py`.
 
 ## Sorpresas y hallazgos
 
