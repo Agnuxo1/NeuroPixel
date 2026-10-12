@@ -68,39 +68,51 @@ class NeuroPixel(nn.Module):
     def forward(self, canvas: torch.Tensor, trace: bool = False, lens_every: int = 0,
                 rgb: torch.Tensor | None = None, cam: torch.Tensor | None = None,
                 out_pos: tuple[int, int] | None = None, steps: int | None = None, hook=None):
-        ids = F.embedding(canvas, self.dictionary()).permute(0, 3, 1, 2)  # B,c_id,H,W (color)
+        """Run the requested finite depth, including a valid zero-update diagnostic."""
+        depth = self.steps if steps is None else steps
+        if isinstance(depth, bool) or not isinstance(depth, int) or depth < 0:
+            raise ValueError("steps must be a nonnegative integer or None")
+        if isinstance(lens_every, bool) or not isinstance(lens_every, int) or lens_every < 0:
+            raise ValueError("lens_every must be a nonnegative integer")
+        ids = F.embedding(canvas, self.dictionary()).permute(0, 3, 1, 2)
         present = canvas != 0
-        if rgb is not None:  # píxeles de cámara: solo el color percibido, sin palabra
-            cm = cam.unsqueeze(1)
-            if self.retina is not None:   # L2: la retina da el color completo del píxel
-                ids = torch.where(cm, self.retina(rgb), ids)
-            else:                          # L1: solo el color percibido, en 3 canales
-                ids = torch.cat([torch.where(cm, rgb, ids[:, :3]), ids[:, 3:] * ~cm], 1)
+        if rgb is not None:
+            if cam is None:
+                raise ValueError("Camera pixels require an explicit camera mask")
+            camera_mask = cam.unsqueeze(1)
+            if self.retina is not None:
+                ids = torch.where(camera_mask, self.retina(rgb), ids)
+            else:
+                ids = torch.cat([torch.where(camera_mask, rgb, ids[:, :3]),
+                                 ids[:, 3:] * ~camera_mask], 1)
             present = present | cam
-        s = self.seed(ids) * present.unsqueeze(1)               # activa solo píxeles con dato
-        frames, act, lens = [s.detach()] if trace else None, [], []
-        for t in range(1, (steps or self.steps) + 1):
-            if lens_every and t % lens_every == 0:
-                lens.append(self.lens_logits(s))
-            h = torch.cat([s, self.perceive(s), ids], 1)
-            ds = self.f2(F.relu(self.f1(h)))
+        state = self.seed(ids) * present.unsqueeze(1)
+        frames = [state.detach()] if trace else None
+        activity, lens = [], []
+        for time_step in range(1, depth + 1):
+            if lens_every and time_step % lens_every == 0:
+                lens.append(self.lens_logits(state))
+            hidden = torch.cat([state, self.perceive(state), ids], 1)
+            increment = self.f2(F.relu(self.f1(hidden)))
             if self.training and self.fire_rate < 1:
-                ds = ds * (torch.rand_like(ds[:, :1]) < self.fire_rate)
-            s = s + ds
-            if hook is not None:          # p. ej. daño a mitad de pensar (autorreparación)
-                s = hook(t, s)
-            act.append(ds.abs().mean())
+                increment = increment * (torch.rand_like(increment[:, :1]) < self.fire_rate)
+            state = state + increment
+            if hook is not None:
+                state = hook(time_step, state)
+            activity.append(increment.abs().mean())
             if trace:
-                frames.append(s.detach())
-        r, c = out_pos or self.out_pos
-        logits = self.read(s[:, :, r, c]) @ self.dictionary().T  # traducir con el diccionario
-        logits[:, 0] = -1e4                                      # 'vacío' nunca es respuesta
-        out = {"logits": logits, "activity": torch.stack(act).mean(), "state": s}
+                frames.append(state.detach())
+        row, column = self.out_pos if out_pos is None else out_pos
+        logits = self.read(state[:, :, row, column]) @ self.dictionary().T
+        logits[:, 0] = -1e4
+        result = {"logits": logits,
+                  "activity": torch.stack(activity).mean() if activity else state.new_zeros(()),
+                  "state": state}
         if lens:
-            out["lens"] = torch.stack(lens, 1)                    # B,L,H,W,vocab
+            result["lens"] = torch.stack(lens, 1)
         if trace:
-            out["frames"] = torch.stack(frames, 1)               # B,T+1,C,H,W
-        return out
+            result["frames"] = torch.stack(frames, 1)
+        return result
 
 
 class TinyTransformer(nn.Module):

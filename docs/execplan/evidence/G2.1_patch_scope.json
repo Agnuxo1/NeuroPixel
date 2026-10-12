@@ -1,0 +1,18 @@
+{
+  "status": "scoped_AST_patch_verified_runtime_pending",
+  "frozen_checkout": "D:\\PROJECTS\\NeuroPixel-Frozen-d8721a59",
+  "frozen_commit": "d8721a59d36d127642a5664c0c41e6091296ba21",
+  "frozen_status_clean": true,
+  "original_model_sha256": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+  "new_model_sha256": "bbad5a53208d1cb5fa41ea33925196fe1447710ff5fbcd4c201fb4f09a0d9db8",
+  "only_NeuroPixel_forward_AST_changed": true,
+  "new_source_syntax_valid": true,
+  "Torch_imported": false,
+  "runtime_tests_executed": false,
+  "positive_depth_runtime_parity_established": false,
+  "remaining_gates": [
+    "G2.2 real Torch and CPU regressions",
+    "G2.3 affected physical backend checks"
+  ],
+  "scope": "Source identity and patch scope only; does not close G2 runtime criteria."
+}
