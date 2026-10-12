@@ -202,3 +202,44 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+def make_family_test(output: Path, *, seed: int, families: int, variants: int, examples_per_variant: int,
+                     excluded: list[str], entities: int = 12, relations: int = 3) -> dict:
+    """Evaluator-side TEST: new structural families only (every listed family is rejected); base and long panels paired."""
+    if output.exists():
+        raise FileExistsError("Use a new registered directory")
+    excluded_set = set(excluded)
+    output.mkdir(parents=True)
+    rng = np.random.default_rng(seed)
+    used, panels = set(), {"test_base": [], "test_long": []}
+    for _ in range(families):
+        while True:
+            base = np.stack([rng.permutation(entities) for _ in range(relations)])
+            fam = family_id(base)
+            if fam not in excluded_set and fam not in used:
+                used.add(fam)
+                break
+        for _ in range(variants):
+            variant = rename(base, rng.permutation(entities), rng.permutation(relations))
+            for name in panels:
+                for _ in range(examples_per_variant):
+                    depth = 4 if name == "test_long" else int(rng.integers(2, 4))
+                    query = rng.integers(0, relations, size=depth).tolist()
+                    start = int(rng.integers(entities))
+                    field = encode(variant, start, query, rng)
+                    answer = oracle(variant, start, query)
+                    if decode_oracle(field, entities, relations) != answer:
+                        raise AssertionError("Encoded-input oracle differs")
+                    panels[name].append((field.astype(np.uint8), answer, fam, depth))
+    metadata = {}
+    for name, rows in panels.items():
+        path = output / (name + ".npz")
+        np.savez_compressed(path, inputs=np.stack([r[0] for r in rows]), targets=np.array([r[1] for r in rows], dtype=np.int64),
+                            families=np.array([r[2] for r in rows]), depths=np.array([r[3] for r in rows], dtype=np.int64))
+        metadata[name] = dict(path=path.name, sha256=sha256_file(path), examples=len(rows), families=len({r[2] for r in rows}))
+    document = dict(schema=1, seed=seed, families=families, variants=variants, examples_per_variant=examples_per_variant,
+                    excluded_families_sha256=identity(sorted(excluded_set)), overlap_with_excluded=len(used & excluded_set),
+                    panels=metadata, long_test_is_independent_replication=False)
+    write_json(output / "manifest.json", document, exclusive=True)
+    return document
