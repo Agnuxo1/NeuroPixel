@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T12:11:47+00:00
-- Tarea en curso o siguiente: A18.2.H, Revisar afirmaciones historicas y sus discrepancias; intento 1; presupuesto 45 minutos.
+- Actualizado (UTC): 2026-10-12T21:26:05+00:00
+- Tarea en curso o siguiente: A18.2.H, Revisar afirmaciones historicas y sus discrepancias; intento 1; presupuesto 90 minutos.
 - Criterio de cierre: Cada candidato del grupo A18.2.H se divide semanticamente o se excluye con razon editorial; afirmaciones inglesas vinculadas a poblacion, limites, protocolos y recibos existentes, sin sustituir faltantes por resumen ni reabrir estudios.
-- Hecho en esta tarea: Sesion1 registrada:10/48 cerradas; 37 originales y criterios intactos; 25 fuentes/795 unidades congeladas; sin tareas activas propias.
-- Falta en esta tarea: Iniciar revision de305 unidades historicas y vincular evidencia real; no asignar L3 sin compromiso publico externo.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.H
+- Hecho en esta tarea: JEV provenance=jev: importar recibos historicos autenticados (0,98), estudio05 L0 blocked_external (0,96), auditorias L1 (1,0); recibos 04/06/continuaciones localizados en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; seleccion 04 SHA a62300cf coincide
+- Falta en esta tarea: 1 importar con manifiesto; 2 verificar transfer_manifest 04; 3 tabla de revision 305 candidatos y reclamaciones; 4 comprobar valores contra recibos; 5 validador parcial; 6 evidencia y cierre
+- Siguiente comando exacto: python scripts/completion_import_historical_receipts.py
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: G2.2 RAM<8GiB; G1.3.ext requiere publicacion del propietario del commitba9f3f84; G2 runtime y ledger de afirmaciones aun pendientes.
+- Dudas o riesgos abiertos: 05 sin archivo crudo (paquete propietario); RAM<8GiB bloquea G2.2
 
 ## Propósito
 
@@ -189,6 +189,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [ ] (2026-10-12T12:09:13+00:00) A18.2.H, intento 1: hecho 795 candidatos particionados sin omisiones; revision H/D/G/P separada antes de iniciar; G1 paquete anclado al commit inmutable previo aT0.; falta Leer solo candidatos del grupoH y verificar artefactos de cada afirmacion; clasificar semanticamente en ingles; cerrar con evidencia.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
 
 - [ ] (2026-10-12T12:11:47+00:00) A18.2.H, intento 1: hecho Sesion1 registrada:10/48 cerradas; 37 originales y criterios intactos; 25 fuentes/795 unidades congeladas; sin tareas activas propias.; falta Iniciar revision de305 unidades historicas y vincular evidencia real; no asignar L3 sin compromiso publico externo.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
+
+- [ ] (2026-10-12T21:26:05+00:00) A18.2.H, intento 1: hecho JEV provenance=jev: importar recibos historicos autenticados (0,98), estudio05 L0 blocked_external (0,96), auditorias L1 (1,0); recibos 04/06/continuaciones localizados en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; seleccion 04 SHA a62300cf coincide; falta 1 importar con manifiesto; 2 verificar transfer_manifest 04; 3 tabla de revision 305 candidatos y reclamaciones; 4 comprobar valores contra recibos; 5 validador parcial; 6 evidencia y cierre. Siguiente: `python scripts/completion_import_historical_receipts.py`.
 
 ## Sorpresas y hallazgos
 

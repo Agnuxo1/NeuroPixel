@@ -40,7 +40,7 @@
 
 ## 18A Afirmaciones historicas
 
-- [ ] A18.2.H Revisar afirmaciones historicas y sus discrepancias (§18A)
+- [ ] **IN PROGRESS** A18.2.H Revisar afirmaciones historicas y sus discrepancias (§18A) (attempt 1)
 
 ## 18A Desarrollo y vision
 
