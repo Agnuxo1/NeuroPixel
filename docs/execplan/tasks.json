@@ -314,12 +314,48 @@
       "note": "Documentacion local reconciliada, auditoria sin incidencias; publicacion preparada y separada como dependencia externa."
     },
     {
+      "id": "G2.1",
+      "title": "Conservar checkout congelado y aplicar parche T0 en version nueva",
+      "phase": "G2 Contrato T0: CPU ligera",
+      "section": "7",
+      "acceptance": "Checkout exacto d8721a59 conservado sin cambios; fuente original hash564045ff verificada; parche AST aplicado solo a rama nueva, sintaxis y alcance verificados con evidencia y commit.",
+      "depends_on": [
+        "G1.2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "G2.2",
+      "title": "Ejecutar Torch historico y regresiones CPU relevantes",
+      "phase": "G2 Contrato T0: Torch real",
+      "section": "7",
+      "acceptance": "Tres pruebas Torch en entorno real y regresiones PAD, denominadores, routing, clases, mascaras, logits completos, finitud y persistencia ejecutadas. Paridad positiva original/nuevo con mismos pesos, entradas y RNG; evidencia y versiones guardadas; guard8GiB.",
+      "depends_on": [
+        "G2.1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "G2.3",
+      "title": "Repetir controles fisicos del backend afectado sin nuevas cohortes",
+      "phase": "G2 Contrato T0: GPU",
+      "section": "7",
+      "acceptance": "Controles del backend afectado en version nueva ejecutados por gpuq y guard8GiB con pesos e inputs fijados y tolerancias originales, versiones y discrepancias guardadas; ninguna cohorte cientifica reabierta.",
+      "depends_on": [
+        "G2.2"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "G2",
       "phase": "G2 Contratos de software",
       "section": "7",
       "title": "Corregir el contrato T0 y repetir la reproducción pertinente",
       "depends_on": [
-        "G1.2"
+        "G1.2",
+        "G2.1",
+        "G2.2",
+        "G2.3"
       ],
       "acceptance": "contrato T0 correcto; comparaciones positivas preservadas; regresiones pertinentes aprobadas; versiones y discrepancias documentadas. Las tres pruebas Torch incluidas deben ejecutarse en el entorno real: no se ejecutaron al escribir esta guía. [guía §7]",
       "status": "pending"
@@ -673,5 +709,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T11:55Z"
+  "updated": "2026-10-12T11:57Z"
 }

@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:55:36+00:00
-- Tarea en curso o siguiente: G2, Corregir el contrato T0 y repetir la reproducción pertinente; intento 1; presupuesto 15 minutos.
-- Criterio de cierre: contrato T0 correcto; comparaciones positivas preservadas; regresiones pertinentes aprobadas; versiones y discrepancias documentadas. Las tres pruebas Torch incluidas deben ejecutarse en el entorno real: no se ejecutaron al escribir esta guía. [guía §7]
-- Hecho en esta tarea: G1 local cerrada, 8 tareas cerradas; G1.3.ext bloqueada con paquete; sin GPU ejecutada.
-- Falta en esta tarea: Leer §7 y preparar contrato T0; reproduccion historica requiere recursos reales.
-- Siguiente comando exacto: python docs/execplan/plan_status.py section 7
+- Actualizado (UTC): 2026-10-12T11:57:56+00:00
+- Tarea en curso o siguiente: G2.1, Conservar checkout congelado y aplicar parche T0 en version nueva; intento 1; presupuesto 20 minutos.
+- Criterio de cierre: Checkout exacto d8721a59 conservado sin cambios; fuente original hash564045ff verificada; parche AST aplicado solo a rama nueva, sintaxis y alcance verificados con evidencia y commit.
+- Hecho en esta tarea: G2 dividida antes de empezar: CPU ligera, Torch real y backend GPU; criterio original intacto.
+- Falta en esta tarea: Consulta JEV; conservar worktree congelado; aplicar patch y verificar AST.
+- Siguiente comando exacto: python docs/execplan/plan_status.py start G2.1
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -118,7 +118,7 @@ Rellenar en P0 y mantener al día:
 - Rama: research/completion-20261012.
 - Commit base: d8721a59d36d127642a5664c0c41e6091296ba21.
 - Python del kit: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe (Python 3.13.7); NumPy 2.2.6, SciPy 1.15.1, ModernGL 5.12.0, glcontext 3.1.0.
-- Python GPU histórico (`$GpuPython`): pendiente inventario §4.3.
+- Python GPU histórico: C:/Python313/python.exe, metadatos verificados Torch 2.6.0+cu124/Python 3.13.7; coincide con software del recibo. Carga GPU actual pendiente de RAM >=8 GiB.
 - Recursos medidos: RAM libre 4.92 GiB, CPU 20 hilos / 10 núcleos (34,2 %); disco D: 347,29 / E: 215,64 GiB libres; gpuq con trabajo compartido y cola ajenos.
 - Rutas de resultados: results/completion/; evidencia del plan docs/execplan/evidence/.
 - Evaluador designado: no designado; custodia/replicación se prepararán y bloquearán si necesitan propietario.
@@ -169,11 +169,17 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [ ] (2026-10-12T11:55:36+00:00) G2, intento 1: hecho G1 local cerrada, 8 tareas cerradas; G1.3.ext bloqueada con paquete; sin GPU ejecutada.; falta Leer §7 y preparar contrato T0; reproduccion historica requiere recursos reales.. Siguiente: `python docs/execplan/plan_status.py section 7`.
 
+- [ ] (2026-10-12T11:57:56+00:00) G2.1, intento 1: hecho G2 dividida antes de empezar: CPU ligera, Torch real y backend GPU; criterio original intacto.; falta Consulta JEV; conservar worktree congelado; aplicar patch y verificar AST.. Siguiente: `python docs/execplan/plan_status.py start G2.1`.
+
 ## Sorpresas y hallazgos
 
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
 
 ## Registro de decisiones
+
+- G0: JEV connected/provenance=jev, bounded_readonly_audit (1,0); evidencia G0_jev.txt.
+- G1: JEV connected/provenance=jev: inspect CPU (0,98), admitir recovery exacta (0,92), reconciliar localmente (1,0); G1_jev.txt.
+- G1.2: §6.2 permite admitir recovery completa autentica sin repetir; fuentes y 103 originales verificadas, commit87c60227; energy_recovery_admission.json.
 
 Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia o regla de la guía).
 
@@ -182,6 +188,8 @@ Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia
 ## Pendiente del propietario
 
 Acciones externas preparadas y no ejecutadas.
+
+- G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (106 archivos; consultar recuento exacto del manifiesto). Rama local research/completion-20261012; no push ni publicacion ejecutados.
 
 ## Resultados y retrospectiva
 

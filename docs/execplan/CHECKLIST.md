@@ -18,6 +18,18 @@
 - [x] ~~G1.2 Recuperación de las dos claves físicas pendientes (GPU, solo por gpuq) (§6.2)~~ 2026-10-12T11:50Z `ee7f886c5e`
 - [x] ~~G1.3 Reconciliación editorial y auditoría documental posterior (§6)~~ 2026-10-12T11:55Z `ba9f3f84e4`
 
+## G2 Contrato T0: CPU ligera
+
+- [ ] G2.1 Conservar checkout congelado y aplicar parche T0 en version nueva (§7)
+
+## G2 Contrato T0: Torch real
+
+- [ ] G2.2 Ejecutar Torch historico y regresiones CPU relevantes (§7)
+
+## G2 Contrato T0: GPU
+
+- [ ] G2.3 Repetir controles fisicos del backend afectado sin nuevas cohortes (§7)
+
 ## G2 Contratos de software
 
 - [ ] G2 Corregir el contrato T0 y repetir la reproducción pertinente (§7)
