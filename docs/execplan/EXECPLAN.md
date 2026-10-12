@@ -206,6 +206,7 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - A18.2.H (2026-10-12, Claude): los recibos de 04, A06.1 y conciliacion no estaban en el arbol publicado pero si, intactos, en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; se importaron autenticados (seleccion 04 a62300cf, original.zip 61cbc148 y closure_receipt A06.1). El archivo crudo del estudio 05 no existe en ningun sitio local ni remoto. Discrepancia: informe A06.1 linea 38 da -0,272 pero el recibo da -0,27145 (redondea a -0,271).
 - A18.2.D (2026-10-12, Claude): varias cifras resumen de los informes (medias, IC, sumas) no se guardan en recibos; se recalculan desde los recibos por semilla (VIS07, MODE, U16, QTRAIN). Dos valores no se reproducen: columna RMS de VIS07 (recibo de 128 filas da 0,543...134.843) y admision 8,6749 GiB de ROLE (ausente).
 - A18.2.P (2026-10-13, Claude): el registro completo cubre 795/795 candidatos con 73 afirmaciones (L0:10, L1:33, L2:30). Textos publicos con discrepancias pendientes de correccion archivada en A18.3: disponibilidad sobredeclarada (README 96, manuscrito 73, indice 17, REPRODUCE 11), REPRODUCE 17 dice 100/105, README/manuscrito 12.25x (recibo 12.24), RENDER08 etiqueta, RENDER09 frase, A06.1 -0,272, VIS07 RMS, ROLE 8,6749, figuras precientificas del README.
+- A18.3 (2026-10-13, Claude): el verificador independiente encontro que VIS07 tenia dos condiciones de test registradas sin publicar: desplazamiento de una columna NeuroPixel 55,826% frente a CNN 85,120% (-29,293 pp) y media intensidad 88,737% frente a 67,056% (+21,681 pp). Registradas como D-VIS07-05 y publicadas en README, manuscrito e informe.
 
 ## Registro de decisiones
 
@@ -220,6 +221,7 @@ Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia
 
 - 2026-10-12T11:31:06.027278+00:00 · bootstrap ligero sin carga neural · RAM <8 GiB · JEV connected/provenance=jev, route lightweight_isolated_bootstrap, confianza 1,0; evidence/P0.1_jev.json.
 - 2026-10-12 · A18.2.H: importar recibos historicos autenticados a rutas documentadas (0,98), estudio05 en L0 blocked_external sin sustituir por resumen (0,96), auditorias sin protocolo congelado en L1 (1,0) · JEV provenance=jev · docs/execplan/evidence/A18.2.H_jev.txt.
+- 2026-10-13 · A18.3: subcomando verificable `supersede` para evidencia cerrada que debe evolucionar (0,97) y registrar como L2 los negativos omitidos de VIS07 con correcciones de texto (1,0) · JEV provenance=jev · docs/execplan/evidence/A18.3_jev.txt.
 
 ## Pendiente del propietario
 
@@ -227,6 +229,7 @@ Acciones externas preparadas y no ejecutadas.
 
 - G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Version publicable anclada al commit ba9f3f84 y verificada en G1_owner_publication_locator.json; la rama actual contiene el parche T0 separado. No push ni publicacion ejecutados.
 - A18.2.H.ext: recuperar del ejecutor Linux (commit 0a56621; workspace /workspace/scratch/61d6e3e6e688) el archivo crudo del estudio 05: 05_experiment/ (215 archivos), 05_analysis.json (11fd91ee...), 05_independent_check.json (adef6b11...), salidas historicas 05_historical*. Paquete: results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json. Sin contacto ni accion externa.
+- Publicacion: los textos publicos corregidos en A18.3 (commits 51afbdea y 78ebf8cb; registro docs/research/claims_ledger.json) son posteriores al paquete G1.3.ext (ba9f3f84). Al publicar, usar la version mas reciente de la rama research/completion-20261012 tras su revision. Sin push ejecutado.
 
 ## Resultados y retrospectiva
 
@@ -244,3 +247,4 @@ Se escribe al cerrar cada fase.
 
 Formato: fecha · qué cambió · por qué.
 - 2026-10-13 · plan_status rechazo cerrar A18.2.P porque regenerar D/G cambio evidencia cerrada; se restauraron los bytes de cierre y la biblioteca de revision es ahora idempotente · integridad del ledger.
+- 2026-10-13 · plan_status.py gana `supersede` (snapshot con hash de cierre identico, traza en la tarea); evidencia de A18.2/A18.2.P redirigida a docs/archive/completion_20261012/ledger_snapshots/A18.2/ · el registro canonico debe evolucionar con las fases nuevas. Regla nueva: cerrar tareas con snapshots, nunca con archivos que evolucionan.
