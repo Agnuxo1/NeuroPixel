@@ -66,6 +66,8 @@ NEW_CLAIMS = [
                  "Not reported in the public texts until the A18.3 correction (omitted, not withheld by selection)",
                  "Depth, geometry and FLOPs differ between the models", NO_EXT],
          protocol=dict(path="docs/research/VIS07_execution_plan.json"), receipts=[VIS], source_units=[],
+         public_text_after_A18_3=[dict(path="docs/research/VIS07_results.md", line=15), dict(path="README.md", line=26),
+                                  dict(path="README.md", line=29), dict(path="docs/papers/NeuroPixel_manuscript_20261009.md", line=49)],
          checks=[("recount:half_intensity|nca|mean", "88.737"), ("recount:half_intensity|cnn|mean", "67.056"),
                  ("recount:half_intensity|diff|mean", "21.681"), ("recount:shift_right_crop|nca|mean", "55.826"),
                  ("recount:shift_right_crop|cnn|mean", "85.120"), ("recount:shift_right_crop|diff|mean", "-29.293"), ("recount:shift_right_crop|diff|lo", "-45.696"),
@@ -84,7 +86,7 @@ EDITS = {
                    ("units", ["S001-L0063", "S003-L0037", "S003-L0039"])],
     "D-VIS07-03": [("receipt", RR + "VIS07REPLAY_cloud/37911162172/raw.zip")],
     "D-VIS07-04": [("receipt", VIS), ("receipt", RR + "SPRINT_review/VIS07_summary.json")],
-    "D-SCN06-01": [("receipt", RR + "SCN06_review/recovery_receipt.json"),
+    "D-SCN06-01": [("receipt", RR + "SCN06_review/recovery_receipt.json"), ("receipt", RR + "SCN06_cloud/37896280187/raw.zip"),
                    ("limit", "A single constructed (assigned-state) experiment; there are no statistical units")],
     "D-SCN06-02": [("replace", "A separately frozen matrix census", "A separately frozen retrospective matrix census"),
                    ("level", "engineering_complete", 1),
@@ -101,6 +103,7 @@ EDITS = {
                ("check", "14.416", RR + "06_A06_1_recovery/audit_saved.json")],
     "H04-03": [("level", "engineering_complete", 1),
                ("limit", "Recount of retained predictions performed in the completion phase; level lowered to L1 by the A18.3 review")],
+    "HT-09": [("remove_receipt", RR + "09_cloud_runs/37593731891-1-study/study/final_summary.json")],
     "D-QT-02": [("receipt", RR + "OPT03_QTRAIN_review/37728384380/closure_receipt.json")],
     "D-QT-03": [("limit", "Descriptive curve values from one seed; no statistical inference")],
     "P-COST-01": [("limit", "Sums of recorded timers; no statistical units")],
@@ -188,6 +191,11 @@ def apply(claims: list[dict]) -> tuple[list[dict], dict]:
             elif kind == "receipt":
                 if edit[1] not in {r["path"] for r in item["receipts"]}:
                     item["receipts"].append(dict(path=edit[1], sha256=sha256(ROOT / edit[1])))
+            elif kind == "remove_receipt":
+                kept = [r for r in item["receipts"] if r["path"] != edit[1]]
+                if len(kept) != len(item["receipts"]) - 1 or not kept:
+                    problems.append(f"{cid}: receipt to remove not found or last receipt")
+                item["receipts"] = kept
             elif kind == "units":
                 item["source_units"] = sorted(set(item.get("source_units", [])) | set(edit[1]))
             elif kind == "check":

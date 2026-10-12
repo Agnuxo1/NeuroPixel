@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:23:29.059851+00:00",
+  "archived_pre_round_bytes": "docs/archive/completion_20261012/A18_round3",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256_before": "4f2daa6a5e78c9e4d9d4af01f6a010e9436297003edfb76152578b288a41e2af",
+      "sha256_after": "efd482bac460b4d37f166f44198d2fd4b30a3c67dc8d967b3356871e8afb9970"
+    }
+  ],
+  "corrections": [
+    {
+      "file": "README.md",
+      "line": 29,
+      "claim": "D-VIS07-05",
+      "before": "| Yes. OriginalH1 remains unsupported; DEV04 original precision target failed; long continuations are not stable. |",
+      "after": "| Yes. OriginalH1 remains unsupported; DEV04 original precision target failed; long continuations are not stable; VIS07 accuracy collapses under a one-column shift (55.83% versus 85.12% for the CNN). |",
+      "reason": "Negatives row did not mention the VIS07 shift weakness"
+    }
+  ]
+}

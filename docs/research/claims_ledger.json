@@ -1045,10 +1045,6 @@
       ],
       "receipts": [
         {
-          "path": "results/research/09_cloud_runs/37593731891-1-study/study/final_summary.json",
-          "sha256": "b19f9ddf21724bca64abfe5b3b8425721423b3f703011cfd94bda5b92e65dc84"
-        },
-        {
           "path": "results/research/09_offline_runs/37603398040-1-offline/scientific_audit_summary.json",
           "sha256": "97d5e1c348343e7a08856d46a5bd67baa5858cdfd27e70e155988cbb869fee89"
         },
@@ -1067,7 +1063,10 @@
       "protocol": {
         "path": "results/research/09_cloud_runs/37593731891-1-study/execution_plan.json",
         "sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "HT-10",
@@ -1456,6 +1455,10 @@
         {
           "path": "results/research/SCN06_review/recovery_receipt.json",
           "sha256": "72256b5c37de5e5c09f6c3f1984c49f999968204a733ce961fd1df6f4882b4fc"
+        },
+        {
+          "path": "results/research/SCN06_cloud/37896280187/raw.zip",
+          "sha256": "5ad5b9c30f7886a1ac71f21026d07fa817269dea5f0c8acb9a931190785eaef2"
         }
       ],
       "stop_reason": null,
@@ -2970,6 +2973,24 @@
         }
       ],
       "source_units": [],
+      "public_text_after_A18_3": [
+        {
+          "path": "docs/research/VIS07_results.md",
+          "line": 15
+        },
+        {
+          "path": "README.md",
+          "line": 26
+        },
+        {
+          "path": "README.md",
+          "line": 29
+        },
+        {
+          "path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+          "line": 49
+        }
+      ],
       "stop_reason": null
     }
   ]

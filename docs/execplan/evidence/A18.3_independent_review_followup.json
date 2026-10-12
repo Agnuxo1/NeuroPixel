@@ -1,0 +1,35 @@
+{
+ "findings_resolved": [
+  "F1 (high) VIS07 shift/half-intensity omission: new claim D-VIS07-05 (L2, frozen VIS07 plan sha acb20b8e..., raw.zip receipt) states half-intensity 88.737 vs 67.056 and shift 55.826 vs 85.120; I recomputed from raw.zip result.json: means, paired differences (+21.681 [8.440, 34.921]; -29.293 [-45.696, -12.890], t95 df4) and NeuroPixel shift range 42.7-70.2 all match. D-VIS07-01 gained the shift limit. README row 26, VIS07_results.md line 15 and manuscript line 49 now report the shift result (round-1/round-2 corrections archived).",
+  "F2 (medium) 'writer-separated' qualifier: D-VIS07-01 statement now says 'according to the UCI metadata, individual writer identifiers not independently verified'.",
+  "F3 (low) uncovered method lines: S001-L0063, S003-L0037, S003-L0039 added to D-VIS07-01 source_units; S003-L0075 kept as governance with a recorded reason (acceptable).",
+  "F4 (medium) H06-06: statement now gives the random-router interval (-2.434 to +34.791, including zero) and a Holm limit (uniform contrast p=0.0413, Holm 1.0; none of 40 survives), both with value checks against audit_saved.json / multiplicity_sensitivity.json. H06-03 now carries the T1-vs-T16 interval (-14.123 to +14.416).",
+  "F5 (medium) H04-03 lowered to engineering_complete / L1 with an explanatory limit.",
+  "F6 (low) over-levelled L2: D-SCN06-02 lowered to L1 and 'retrospective' added; D-SCN06-01, D-QT-03 and P-COST-01 stay L2 but now carry limits that there are no statistical units. Acceptable since the frozen plans exist.",
+  "F7 (medium) custody-only receipts: raw.zip added to D-VIS07-01/-03/-04 and SPRINT_review/VIS07_summary.json added to D-VIS07-01/-04 (it holds the 110 checks and timings).",
+  "F8 (low) receipt gaps: closure_receipt.json + analysis/summary.json added to D-QT-02; original.zip to D-OPT03D-02; partial_audit.json to D-ROLE-02 (I confirmed 1050 and 162816 are in it); HT-10 gained source.zip and 10_cloud_runs/.../scientific_audit.json (contains the 0.8866 Transformer mean).",
+  "F9 (low) D-READ03-01 now says '+54.225 pp averaged over the four original conditions' and that attention failed the gate in the other three.",
+  "F10 (low) D-U16-01 now has the matched-mode / dense-mode limit (80.176/79.785/63.184%), with a value check.",
+  "F11 (low) G-R11-01 overlap limit added. My earlier '5 of 7' was wrong, the coordinator's 4 of 7 is right: I recomputed with both pairings (best render-family vs best CUDA by median, and by minimum) and both give overlap in C16/grid8, C48/grid8, C48/grid32 and RGB8 only; C48/grid128 does not overlap (my hand count wrongly counted it). The 'C48 grid8/grid32 differ by about 1%' remark also checks out. The G-R10-01 range remark was an optional suggestion and is not applied.",
+  "F12 (low) H05-05: three limits added (coupled seeds, not Transformers as a family, normalized seed-2 snapshots).",
+  "F13 (low) H04-01: limits added (not proof of incapacity, NCA/ConvGRU also low, NCA mask difference).",
+  "F14 (low) D-OPT03D-01: CRLF/LF protocol-hash limit added.",
+  "F15 (low) P-MATH-01 reworded to 'kit test suites ... which include tests of these modules'; P-T0-01 limit says it is a new-phase claim not yet in public texts (still has no source_units, which the limit now explains).",
+  "F16 (info) H05-01..H05-09 L0 blocked_external: unchanged and still justified."
+ ],
+ "findings_open": [
+  {
+   "finding": "README.md:29 'Are the negative results preserved? Yes.' row",
+   "why": "The row still lists only H1, DEV04 and long continuations; the shift result is now in row 26 of the same table, so the contradiction is gone, but a cross-reference in row 29 would close the loop. Cosmetic."
+  },
+  {
+   "finding": "D-SCN06-01 and HT-09 receipts",
+   "why": "D-SCN06-01 still binds only the custody receipt and recovery_receipt.json, not SCN06_cloud/.../raw.zip that holds the NPZ with the answer changes; HT-09 still cites 09 final_summary.json, which has no binding results (they are in the cited scientific_audit_summary.json and saved_evidence_audit.json). Low; values are correct."
+  }
+ ],
+ "new_issues": [
+  "D-VIS07-05 has empty source_units (it is based on the A18.3 corrections, not on a frozen candidate line). Reasonable, but the ledger has no pointer to the corrected public lines (README row 26, VIS07_results.md:15, manuscript:49); add a note or a post-correction source reference. Low.",
+  "Claim count is now 74 (73 + D-VIS07-05); D-VIS07-05 is L2 on a test-time transformation of already-trained models. Frozen plan exists, so the rule is met; its limit already says descriptive five-pair results and the omission history. No action needed."
+ ],
+ "verdict": "pass_with_fixes"
+}
