@@ -1,0 +1,13 @@
+
+--- stderr ---
+Traceback (most recent call last):
+  File "D:\PROJECTS\NeuroPixel-Completion-20261012\scripts\preflight_RENDER09.py", line 89, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\PROJECTS\NeuroPixel-Completion-20261012\scripts\preflight_RENDER09.py", line 20, in main
+    ram();torch.set_num_threads(1 if a.software else 2);torch.set_num_interop_threads(1 if a.software else 2);torch.use_deterministic_algorithms(True)
+    ~~~^^
+  File "D:\PROJECTS\NeuroPixel-Completion-20261012\scripts\preflight_RENDER09.py", line 12, in ram
+    if v<8:raise RuntimeError('RAM8 refused')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: RAM8 refused
