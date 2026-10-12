@@ -402,9 +402,30 @@
       "depends_on": [
         "G0"
       ],
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T12:04Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/claim_source_inventory.json",
+          "sha256_lf": "abb12dec7f3ba1402df9909aa90172f36b2f5aa7c964b1705e0179b1905f6660"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claim_candidates.json",
+          "sha256_lf": "c932d0919a597834faf85702b864ddcea9ad70353ce8bdd21642d5210d49534b"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.1_inventory_verification.json",
+          "sha256_lf": "d04f9bc09069cfead3687e3c00c0dbf19ae577b98eaa835f587f3a284457fefe"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.1_inventory.txt",
+          "sha256_lf": "9c97fbed5a2d78345b92885f00e3c6d1937e0a69ea2cad2142cf8ed1afccb5bb"
+        }
+      ],
+      "commit": "887aff487fb010e13ae0aeaeefc637fb45b11002",
+      "closed": "2026-10-12T12:05Z",
+      "note": "Fuentes actuales congeladas por hash, cobertura completa de lineas; clasificacion y niveles aun pendientes."
     },
     {
       "id": "A18.2",
@@ -780,5 +801,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T12:04Z"
+  "updated": "2026-10-12T12:05Z"
 }
