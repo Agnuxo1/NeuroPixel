@@ -1,0 +1,31 @@
+UTC: 2026-10-12T22:26:54.665738+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g3_audit.py
+
+{
+ "train": {
+  "examples": 1152,
+  "families": 96
+ },
+ "dev": {
+  "examples": 288,
+  "families": 24
+ },
+ "test_base": {
+  "examples": 288,
+  "families": 24
+ },
+ "test_long": {
+  "examples": 288,
+  "families": 24
+ },
+ "overlaps": {
+  "dev|test_base": 0,
+  "dev|test_long": 0,
+  "dev|train": 0,
+  "test_base|test_long": 24,
+  "test_base|train": 0,
+  "test_long|train": 0
+ }
+}
+
+EXIT_CODE: 0

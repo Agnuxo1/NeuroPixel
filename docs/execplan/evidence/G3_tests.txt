@@ -1,0 +1,17 @@
+UTC: 2026-10-12T22:28:26.291120+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m unittest tests/test_completion_g3_splits.py -v
+
+test_distinct_structures_differ (tests.test_completion_g3_splits.G3Contracts.test_distinct_structures_differ) ... ok
+test_family_invariant_under_renaming (tests.test_completion_g3_splits.G3Contracts.test_family_invariant_under_renaming) ... ok
+test_family_is_complete_invariant_on_small_graphs (tests.test_completion_g3_splits.G3Contracts.test_family_is_complete_invariant_on_small_graphs) ... ok
+test_maps_recovered_from_input_alone (tests.test_completion_g3_splits.G3Contracts.test_maps_recovered_from_input_alone) ... ok
+test_rejects_non_permutation (tests.test_completion_g3_splits.G3Contracts.test_rejects_non_permutation) ... ok
+test_selector_order (tests.test_completion_g3_splits.G3Contracts.test_selector_order) ... ok
+test_small_dataset_has_no_family_leakage (tests.test_completion_g3_splits.G3Contracts.test_small_dataset_has_no_family_leakage) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.033s
+
+OK
+
+EXIT_CODE: 0

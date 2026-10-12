@@ -1,0 +1,32 @@
+{
+  "generator": "completion_kit.datasets.make_dataset (default seed 20261012, 96/24/24 graphs)",
+  "kit_grouping": "Exact relation-map identities; not an isomorphism-class guarantee",
+  "panels": {
+    "train": {
+      "examples": 1152,
+      "families": 96
+    },
+    "dev": {
+      "examples": 288,
+      "families": 24
+    },
+    "test_base": {
+      "examples": 288,
+      "families": 24
+    },
+    "test_long": {
+      "examples": 288,
+      "families": 24
+    },
+    "overlaps": {
+      "dev|test_base": 0,
+      "dev|test_long": 0,
+      "dev|train": 0,
+      "test_base|test_long": 24,
+      "test_base|train": 0,
+      "test_long|train": 0
+    }
+  },
+  "interpretation": "test_base and test_long share graphs by design (paired diagnostics). Overlap counts between train/dev/test families measure leakage under the structural-family unit; exact-identity grouping alone does not guarantee zero.",
+  "scratch_dataset_not_retained": "D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp/G3_kit_audit"
+}

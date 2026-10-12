@@ -1,0 +1,19 @@
+{
+  "train": {
+    "examples": 2304,
+    "families": 96
+  },
+  "dev": {
+    "examples": 576,
+    "families": 24
+  },
+  "dev_long": {
+    "examples": 576,
+    "families": 24
+  },
+  "overlaps": {
+    "dev|dev_long": 24,
+    "dev|train": 0,
+    "dev_long|train": 0
+  }
+}
