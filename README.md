@@ -18,7 +18,7 @@ NeuroPixel represents a recurrent neural state on a spatial canvas. Local learne
 
 **Actual GPU-rendered states**, selected VIS07 model, registered seed240 and fixed original TRAIN digit0. Playback is slowed for inspection. Colours display a projection of raw channels; magnitude is shown separately. The validated classifier uses eight updates and resets for each new input.
 
-## What is demonstrated
+## What has been measured (internal evidence, levels L1–L2)
 
 | Question | Complete measured result | Evidence and scope |
 |---|---|---|
@@ -34,13 +34,13 @@ These are results of the specified recipes and device. They do not establish gen
   <img src="docs/img/capabilities_en.png" alt="Rest-state, memory, growing canvases and cost" width="100%">
 </p>
 
-*Capability figure from the pre-scientific README. Memory and rest-state behaviour are not established by the current evidence; see the manuscript for the bounded claims.*
+*Capability figure from the pre-scientific README (illustrative, level L0, not registered evidence). Memory, rest-state and growth behaviour are not established by the current evidence; see the manuscript and the claims ledger for the bounded claims.*
 
 <p align="center">
   <img src="docs/img/scaling_en.png" alt="Scaling curves: NeuroPixel vs transformer" width="100%">
 </p>
 
-*Scaling comparison. The original hypothesis H1 was not supported; see the results index.*
+*Historical retrospective scaling comparison (level L0: its reassessment outputs are not retained). The prospective test of the original hypothesis H1 was not supported (-37.0 pp versus the fixed Transformer); see the results index.*
 
 ## Graphics backends and fair acceleration controls
 
@@ -54,7 +54,7 @@ The original scalar renderer uses RGBA32F textures and framebuffer passes. The v
 
 *All graphics workloads and their comparators. File `docs/animations/all_GPU_workloads.gif` (161.4 KiB, SHA-256 `87a3572584c1…`). Frames are actual GPU-rendered states of the selected model, labelled as such; no synthetic artwork. See the [manifest](docs/animations/manifest.json).*
 
-The first scalar implementation was **3.14–12.25× slower** than the best measured CUDA comparator. It is retained as a within-run control. The vector variant improves that implementation; advantages are workload-dependent. CUDA Graph is included to reduce avoidable Python launch overhead. Technical timing blocks are not independent scientific replications.
+The first scalar implementation was **3.14–12.24× slower** than the best measured CUDA comparator. It is retained as a within-run control. The vector variant improves that implementation; advantages are workload-dependent. CUDA Graph is included to reduce avoidable Python launch overhead. Technical timing blocks are not independent scientific replications.
 
 Timing uses resident inputs, sixteen updates and the complete scanner. Setup/compilation, transfers, training and archival are distinct costs. Short NVML counter deltas cannot establish per-inference energy savings; zero readings are not zero consumption. Whole-system wall energy has not been measured.
 
@@ -93,7 +93,7 @@ The [sustained energy protocol](docs/research/RENDER11_energy_protocol.md) uses 
 - [Reproduction instructions and environments](docs/research/REPRODUCE_20261009.md)
 - [All-study evidence index](docs/research/RESULTS_INDEX_20261009.md)
 - [Scientific manuscript: methods, results and open requirements](docs/papers/NeuroPixel_manuscript_20261009.md)
-- Frozen plans, original checkpoints, datasets, raw predictions/states, failed attempts and hash manifests under `results/research/`.
+- Frozen plans, original checkpoints, datasets, raw predictions/states, failed attempts and hash manifests under `results/research/`, except the item-5 CPU archive and the historical reassessment outputs, which are unavailable; large recovery archives remain on local disks outside the Git tree. Evidence levels: [claims ledger](docs/research/claims_ledger.json).
 - Scientific animation provenance: [manifest](docs/animations/manifest.json). Animations derive from actual data; no synthetic brain artwork.
 - Original README and prior versions are retained in the archive and Git history.
 

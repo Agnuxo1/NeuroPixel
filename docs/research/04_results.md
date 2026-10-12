@@ -75,5 +75,5 @@ Item 4 closes implementation, limited tuning, execution and verification of the 
 - `results/research/04_experiment/pilot/pilot_summary.json`: selected results and timing.
 - `results/research/04_experiment/pilot/`: all eight weights, validation predictions, selected final predictions, curves, datasets and configurations.
 - `results/research/04_experiment/metadata/`: first-attempt and successful-retry logs/status.
-- `results/research/04_verification.json`: independent artifact audit.
+- `results/research/04_verification.json`: independent artifact audit. Evidence-level note (A18.3, 2026-10-13): this file is not retained; the 60-file transfer bundle `results/research/04_experiment/item4_evidence.zip` was re-verified against its own manifest.
 - `docs/research/04_runtime_incidents.json`, `04_deployment.json`, `04_reference_checks.md`: incident, deployment and primary reference records.

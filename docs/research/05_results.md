@@ -4,6 +4,8 @@
 
 **Report status: 28 final evaluations and both artifact checks verified. H1: `not_supported`. Updated 2026-10-07.**
 
+> Evidence-level note (A18.3, 2026-10-13): the analysis, independent recount, run tables, CSV, diagnostics, replication records and archive linked in this report are not present in this repository, on the project's local disks or on the remote branches. The executor archive (commit 0a56621) must be recovered by the owner; until then these claims are registered at level L0 (`blocked_external`) in `docs/research/claims_ledger.json`.
+
 The prospective CPU recovery completed all 28 declared runs. On the primary five-initialization panel, mean binding was **12.393% for NeuroPixel and 49.395% for the fixed relative Transformer**. The paired NeuroPixel-minus-reference difference was **−37.002 percentage points**, with a two-sided 95% t interval of **−42.030 to −31.974 pp**. H1 is not supported under the frozen recipe and budget. Both artifact checks found zero discrepancies. [Verified analysis][analysis] [Independent recount][independent]
 
 All 28 fixed training probes also trigger the predefined budget-limited flag. This is an operational optimization diagnostic, not an isolated causal explanation for the outcome. Separately, all six historical checkpoints reproduce their recorded clean global accuracy at four-decimal precision; those results remain retrospective and excluded from H1. [Run tables][tables] [Historical results][hist-results]

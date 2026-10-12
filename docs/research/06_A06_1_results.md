@@ -35,7 +35,7 @@ Valores en puntos porcentuales; signo positivo favorece el primer término. Se c
 | Mismos pesos T16: evaluar T4 frente a T16 | +0,293 | [−9,013; +9,599] |
 | Entrenar con daño: efecto en evaluación limpia | +0,732 | [−38,974; +40,439] |
 | Entrenar con daño: efecto bajo lesión | +1,392 | [−37,385; +40,168] |
-| Interacción entrenamiento con daño × lesión | +0,659 | [−0,272; +1,590] |
+| Interacción entrenamiento con daño × lesión | +0,659 | [−0,271; +1,590] |
 | 8.192 frente a 1.024 updates, escuela 0 | +17,310 | [+0,868; +33,751] |
 | 8.192 frente a 1.024 updates, escuela 0,3 | +15,283 | [−48,620; +79,186] |
 | Banco fijo: router histórico frente a aleatorio | +16,178 | [−2,434; +34,791] |

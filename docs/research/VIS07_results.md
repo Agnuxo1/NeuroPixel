@@ -22,6 +22,8 @@ El intervalo describe variación de cinco entrenamientos sobre la misma poblaci�
 | 16 | 53.100% | 150.423 |
 | 32 | 16.661% | 138914 |
 
+> Evidence-level note (A18.3, 2026-10-13): the RMS column above is not reproducible from retained receipts; the retained 128-row depth diagnostic gives mean state RMS 0.543 (T0), 149.3 (T16) and 134,843 (T32). Accuracy values are reproduced exactly.
+
 T8 es el punto entrenado. Extender aT16/T32 degrada fuertemente exactitud y magnitud observada; no hay estabilidad arbitraria ni memoria duradera demostrada. Los endpoints son diagnósticos finitos, no prueba de divergencia infinita.
 
 El replay funcional conserva **98.835 decisiones exactas** y pasa los logits/NLL de las30condiciones base/transformación. **Diez comparaciones continuas deT16/T32 fallan la tolerancia congelada**, aunque sus decisiones coinciden. El recibo fallido se conserva; no se declara replay completo exitoso ni se aumenta la tolerancia. Diagnóstico de caminos en un mismo host separado.
