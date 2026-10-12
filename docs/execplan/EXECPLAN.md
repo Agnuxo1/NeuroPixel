@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T22:05:30+00:00
-- Tarea en curso o siguiente: A18.3, Auditar ledger y coherencia de afirmaciones publicas; intento 1; presupuesto 120 minutos.
-- Criterio de cierre: claims_ledger ejecutado sobre registro completo sin violaciones; revision de cobertura y textos actuales sin sobreafirmaciones, cambios archivados; clasificacion revisada mas alla de los checks sintacticos del validador.
-- Hecho en esta tarea: Barrido determinista de sobreafirmaciones (137 terminos, 2 por encima del nivel); 18 correcciones archivadas aplicadas (commit 51afbdea); verificador independiente en curso
-- Falta en esta tarea: Incorporar hallazgos del verificador; reconstruir registro y validador; cerrar A18.3 y A18
-- Siguiente comando exacto: esperar informe docs/execplan/evidence/A18.3_independent_review.json y aplicar correcciones
+- Actualizado (UTC): 2026-10-12T22:24:17+00:00
+- Tarea en curso o siguiente: G3, Separar desarrollo, validación y evaluación final; intento 1; presupuesto 120 minutos.
+- Criterio de cierre: splits y derivados sin contaminación según la unidad declarada; selector y cohortes fijados; exposición final registrada; afirmaciones de custodia acordes a la operación real. [guía §8]
+- Hecho en esta tarea: A18 cerrada; checkpoint de sesion escrito
+- Falta en esta tarea: Leer seccion 8 (lineas 218-232); disenar unidad de separacion (familia canonica de grafos), generador por familias, selector DEV, registro de exposicion de TEST, auditoria de fugas Kapoor-Narayanan
+- Siguiente comando exacto: python docs/execplan/plan_status.py start G3
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: Cambios a textos publicos posteriores al paquete G1.3.ext (ba9f3f84): el propietario debe publicar la version mas reciente
+- Dudas o riesgos abiertos: Sin evaluador designado: la custodia ciega de TEST queda para G17.1 como dependencia externa
 
 ## Propósito
 
@@ -178,7 +178,6 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [ ] (2026-10-12T12:02:10+00:00) G2.2, intento 2: hecho Guard real rechazo2,039GiB; intento1 no guardo JSON porque el helper esperaba MemoryError. Cambio: capturar RuntimeError exacto del guard, sin modificar umbral.; falta Guardar rechazo estructurado, bloquear y continuar A18.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_admission_v2.txt -- python scripts/completion_resource_admission.py docs/execplan/evidence/G2.2_admission_v2.json`.
 
-- [ ] (2026-10-12T12:02:12+00:00) A18, intento 1: hecho G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.; falta Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.. Siguiente: `python docs/execplan/plan_status.py section 18A`.
 
 
 
@@ -196,9 +195,11 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:03:03+00:00) A18.2.P: done; commit 5324db225181a010b0ebb01915b409e3208b2ae4; 182/182 candidatos P; 10 afirmaciones nuevas incl. T0 pendiente explicito; 7 discrepancias de redaccion; registro integrado 795/795, 73 afirmaciones, validador valido.; detalle en archive/PROGRESS_ARCHIVE.md.
 - [x] (2026-10-12T22:03:03+00:00) A18.2: done; commit 5324db225181a010b0ebb01915b409e3208b2ae4; Registro completo: 73 afirmaciones vinculadas a artefactos (L0:10, L1:33, L2:30); 795 candidatos cubiertos; exclusiones editoriales justificadas; sin timestamps ni independencia inventados.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T22:03:03+00:00) A18.3, intento 1: hecho A18.2.P y A18.2 cerradas (commit 5324db22): registro 73 afirmaciones, 795/795, validador valido; falta 1 verificacion independiente de la clasificacion (cog-verifier); 2 barrido determinista de terminos de sobreafirmacion; 3 correcciones archivadas de textos publicos; 4 revalidar registro y cobertura; 5 cierre. Siguiente: `python docs/execplan/plan_status.py start A18.3`.
 
-- [ ] (2026-10-12T22:05:30+00:00) A18.3, intento 1: hecho Barrido determinista de sobreafirmaciones (137 terminos, 2 por encima del nivel); 18 correcciones archivadas aplicadas (commit 51afbdea); verificador independiente en curso; falta Incorporar hallazgos del verificador; reconstruir registro y validador; cerrar A18.3 y A18. Siguiente: `esperar informe docs/execplan/evidence/A18.3_independent_review.json y aplicar correcciones`.
+- [x] (2026-10-12T22:24:17+00:00) A18.3: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Validador valido sobre 74 afirmaciones (max L2); verificacion independiente pass_with_fixes con 16 hallazgos corregidos (incl. negativos VIS07 omitidos); 22 correcciones de texto archivadas en 3 rondas.; detalle en archive/PROGRESS_ARCHIVE.md.
+- [x] (2026-10-12T22:24:17+00:00) A18: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Registro docs/research/claims_ledger.json: 795 candidatos publicos cubiertos, 74 afirmaciones (L0:10, L1:35, L2:29), validador valido; textos corregidos para no superar su nivel; L0 del estudio 05 pendiente del propietario.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T22:24:17+00:00) G3, intento 1: hecho A18 cerrada; checkpoint de sesion escrito; falta Leer seccion 8 (lineas 218-232); disenar unidad de separacion (familia canonica de grafos), generador por familias, selector DEV, registro de exposicion de TEST, auditoria de fugas Kapoor-Narayanan. Siguiente: `python docs/execplan/plan_status.py start G3`.
 
 ## Sorpresas y hallazgos
 

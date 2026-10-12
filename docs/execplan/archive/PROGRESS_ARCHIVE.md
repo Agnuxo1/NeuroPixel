@@ -74,3 +74,10 @@
 
 ## A18.2
 - [ ] (2026-10-12T12:05:41+00:00) A18.2, intento 1: hecho Inventario A18.1 cerrado; guard Torch rechazado y publicacion externa retenida.; falta Clasificar todas las unidades, separar afirmaciones y exclusions editoriales; vincular protocolo, recibos, poblacion y limites; dividir por grupos antes de empezar.. Siguiente: `python docs/execplan/plan_status.py next`.
+
+## A18.3
+- [ ] (2026-10-12T22:03:03+00:00) A18.3, intento 1: hecho A18.2.P y A18.2 cerradas (commit 5324db22): registro 73 afirmaciones, 795/795, validador valido; falta 1 verificacion independiente de la clasificacion (cog-verifier); 2 barrido determinista de terminos de sobreafirmacion; 3 correcciones archivadas de textos publicos; 4 revalidar registro y cobertura; 5 cierre. Siguiente: `python docs/execplan/plan_status.py start A18.3`.
+- [ ] (2026-10-12T22:05:30+00:00) A18.3, intento 1: hecho Barrido determinista de sobreafirmaciones (137 terminos, 2 por encima del nivel); 18 correcciones archivadas aplicadas (commit 51afbdea); verificador independiente en curso; falta Incorporar hallazgos del verificador; reconstruir registro y validador; cerrar A18.3 y A18. Siguiente: `esperar informe docs/execplan/evidence/A18.3_independent_review.json y aplicar correcciones`.
+
+## A18
+- [ ] (2026-10-12T12:02:12+00:00) A18, intento 1: hecho G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.; falta Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.. Siguiente: `python docs/execplan/plan_status.py section 18A`.

@@ -720,9 +720,58 @@
       "depends_on": [
         "A18.2"
       ],
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T22:03Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.3/claims_ledger.json",
+          "sha256_lf": "9861068f7cdde3eb717243eb3a509f6741bfe1018c77bfbb156b9186a9778a6b"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.3/claims_audit.json",
+          "sha256_lf": "9931521cd4f1490e43cb315af71d4a93cc6c234335374a1ae6ae98e21e531f0a"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.3/claims_ledger_build.json",
+          "sha256_lf": "edfd7209c56b52a9b0ec559c2c312fbd3168fcb343409b3ad2e9443675fcb4ff"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_amendments_A18.3.json",
+          "sha256_lf": "c11eabdd14c89c81007c39197473a5e3f0baefb45da6105f1e891e2fd48695c5"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/A18_text_corrections.json",
+          "sha256_lf": "b0aeeaf07ab5408435771816c545c36db95bdf097212c5f6f2d89124f944ffac"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/A18_text_corrections_round2.json",
+          "sha256_lf": "6f20d5587eaf5badcca53c3ace88a9b780bc2d856600c0d7a755a260bf85b1eb"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/A18_text_corrections_round3.json",
+          "sha256_lf": "cf1ee2cab4877531a6ca113937b4e783617a84866797e427860d1d0e36e7518f"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_independent_review.json",
+          "sha256_lf": "faf18873cb07d520962533a53f911993ce846846449ef1cda060e8de970dae26"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_independent_review_followup.json",
+          "sha256_lf": "bea0b302b05009e4eea928632cf2876cceac72dad16ed0e5ef9d611eb6e3f89b"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_overclaim_scan.txt",
+          "sha256_lf": "f750840e0dea379f89b1381f2f6ce5059e5c9e24b2d7139bb8f19d4c3490c726"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_validator.txt",
+          "sha256_lf": "d068b3b8cb47b6246d90c322f417efd9ac88960750de472dedc1ebd67d879efb"
+        }
+      ],
+      "commit": "3e808a44012ebd9caac8112f550750457e6d18a7",
+      "closed": "2026-10-12T22:23Z",
+      "note": "Validador valido sobre 74 afirmaciones (max L2); verificacion independiente pass_with_fixes con 16 hallazgos corregidos (incl. negativos VIS07 omitidos); 22 correcciones de texto archivadas en 3 rondas."
     },
     {
       "id": "A18",
@@ -736,7 +785,62 @@
         "A18.3"
       ],
       "acceptance": "registro creado con todas las afirmaciones públicas, cada una en el nivel que justifican sus artefactos; ningún texto público por encima de su nivel. [guía §18A]",
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:23Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.3/claims_ledger.json",
+          "sha256_lf": "9861068f7cdde3eb717243eb3a509f6741bfe1018c77bfbb156b9186a9778a6b"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.3/claims_audit.json",
+          "sha256_lf": "9931521cd4f1490e43cb315af71d4a93cc6c234335374a1ae6ae98e21e531f0a"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.3/claims_ledger_build.json",
+          "sha256_lf": "edfd7209c56b52a9b0ec559c2c312fbd3168fcb343409b3ad2e9443675fcb4ff"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_amendments_A18.3.json",
+          "sha256_lf": "c11eabdd14c89c81007c39197473a5e3f0baefb45da6105f1e891e2fd48695c5"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/A18_text_corrections.json",
+          "sha256_lf": "b0aeeaf07ab5408435771816c545c36db95bdf097212c5f6f2d89124f944ffac"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/A18_text_corrections_round2.json",
+          "sha256_lf": "6f20d5587eaf5badcca53c3ace88a9b780bc2d856600c0d7a755a260bf85b1eb"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/A18_text_corrections_round3.json",
+          "sha256_lf": "cf1ee2cab4877531a6ca113937b4e783617a84866797e427860d1d0e36e7518f"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_independent_review.json",
+          "sha256_lf": "faf18873cb07d520962533a53f911993ce846846449ef1cda060e8de970dae26"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_independent_review_followup.json",
+          "sha256_lf": "bea0b302b05009e4eea928632cf2876cceac72dad16ed0e5ef9d611eb6e3f89b"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_overclaim_scan.txt",
+          "sha256_lf": "f750840e0dea379f89b1381f2f6ce5059e5c9e24b2d7139bb8f19d4c3490c726"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.3_validator.txt",
+          "sha256_lf": "d068b3b8cb47b6246d90c322f417efd9ac88960750de472dedc1ebd67d879efb"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger.json",
+          "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9"
+        }
+      ],
+      "commit": "3e808a44012ebd9caac8112f550750457e6d18a7",
+      "closed": "2026-10-12T22:23Z",
+      "note": "Registro docs/research/claims_ledger.json: 795 candidatos publicos cubiertos, 74 afirmaciones (L0:10, L1:35, L2:29), validador valido; textos corregidos para no superar su nivel; L0 del estudio 05 pendiente del propietario."
     },
     {
       "id": "G3",
@@ -1099,5 +1203,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T22:16Z"
+  "updated": "2026-10-12T22:23Z"
 }

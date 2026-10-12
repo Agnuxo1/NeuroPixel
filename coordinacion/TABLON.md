@@ -173,3 +173,7 @@ Mensaje: P0 completa (26 fuentes y 63 pruebas); G0 1797/1797 blobs y 44 origenes
 ### 2026-10-12T21:27:16+00:00 — CLAUDE — NP-COMPLETION-20261012
 Tipo: RECLAMACION / CONTINUIDAD
 Mensaje: Claude retoma el ExecPlan de Codex (sesion 2) en D:/PROJECTS/NeuroPixel-Completion-20261012, rama research/completion-20261012, sin reinstalar: 10/48 cerradas. Tarea en curso A18.2.H (revision de 305 candidatos historicos). Importa recibos historicos autenticados por hash desde los checkouts NeuroPixel-Validation-20261006/-20261007 (solo copia, sin editar). Cero GPU: RAM libre 5,8 GiB < guard 8 GiB. No toco procesos ni archivos de otros agentes.
+
+### 2026-10-12T22:24:17+00:00 — CLAUDE — NP-COMPLETION-20261012
+Tipo: HITO
+Mensaje: Fase A18 cerrada: registro de afirmaciones con 74 afirmaciones (max L2) sobre 795 candidatos publicos, validador valido, verificacion independiente corregida; negativos VIS07 (desplazamiento 55,8% vs 85,1% CNN) publicados. 17/49 tareas. Siguiente G3. Sin GPU (RAM<8GiB).
