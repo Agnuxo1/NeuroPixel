@@ -280,9 +280,38 @@
         "G1.2"
       ],
       "acceptance": "105 claves únicas admitidas, 103 originales conservadas byte a byte, cero mediciones cerradas repetidas, fuentes y entradas coincidentes, y ningún texto que declare más evidencia de la disponible. [guía §6]",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:53Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/energy_recovery_admission.json",
+          "sha256_lf": "bc5bb4fc5d28b1a6bf1dfcf4001f0cd64b5b6472b0f321b4bb22482d87af397d"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/release_audit_after.json",
+          "sha256_lf": "0da3a7b1bb3f9069268f772c5ae0b75780e4805d3a2c30b0656122e8c1eb8876"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G1_owner_publication_package.json",
+          "sha256_lf": "63b1f0009a34760f83e03a88ad5a8cfa0f287bcc8e678ede4e792b15999b9295"
+        },
+        {
+          "path": "docs/archive/completion_20261012/G1_before/manifest.json",
+          "sha256_lf": "061c0a85c08408d1f8eac2db5a3e459045cd89e9186cb24cfda2c96c8ebc9176"
+        },
+        {
+          "path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+          "sha256_lf": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94"
+        },
+        {
+          "path": "docs/execplan/evidence/G1.3_audit_after.txt",
+          "sha256_lf": "44a4f291cd75206eee09b53c516ccafce98cef08b3f89896d1532bc6403b6ddb"
+        }
+      ],
+      "commit": "ba9f3f84e4a779919bddb6119ef9eb99125f2f84",
+      "closed": "2026-10-12T11:55Z",
+      "note": "Documentacion local reconciliada, auditoria sin incidencias; publicacion preparada y separada como dependencia externa."
     },
     {
       "id": "G2",
@@ -623,7 +652,26 @@
       ],
       "acceptance": "claims_ledger válido; entrega con la lista del §19 más puerta (§18N), nivel L de cada afirmación, apuesta y criterios activados; plan_status.py status sin tareas pending ni in_progress.",
       "status": "pending"
+    },
+    {
+      "id": "G1.3.ext",
+      "title": "Publicacion por el propietario del paquete G1 reconciliado",
+      "phase": "G1 Dependencia externa",
+      "section": "6.3",
+      "acceptance": "Paquete local completo revisado y publicacion con enlace a originales, recovery y hashes realizada por propietario; no ejecutar en este agente.",
+      "depends_on": [
+        "G1.3"
+      ],
+      "status": "blocked_external",
+      "note": "Paquete preparado; el propietario debe revisar y publicar. Ningun push ni publicacion ejecutados.",
+      "blocked": "2026-10-12T11:55Z",
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/G1_owner_publication_package.json",
+          "sha256_lf": "63b1f0009a34760f83e03a88ad5a8cfa0f287bcc8e678ede4e792b15999b9295"
+        }
+      ]
     }
   ],
-  "updated": "2026-10-12T11:53Z"
+  "updated": "2026-10-12T11:55Z"
 }

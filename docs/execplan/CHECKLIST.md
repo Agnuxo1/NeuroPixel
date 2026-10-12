@@ -16,7 +16,7 @@
 
 - [x] ~~G1.1 Inspección del recibo RENDER11 e inventario energético (CPU) (§6.2)~~ 2026-10-12T11:47Z `6344902cc8`
 - [x] ~~G1.2 Recuperación de las dos claves físicas pendientes (GPU, solo por gpuq) (§6.2)~~ 2026-10-12T11:50Z `ee7f886c5e`
-- [ ] **IN PROGRESS** G1.3 Reconciliación editorial y auditoría documental posterior (§6) (attempt 1)
+- [x] ~~G1.3 Reconciliación editorial y auditoría documental posterior (§6)~~ 2026-10-12T11:55Z `ba9f3f84e4`
 
 ## G2 Contratos de software
 
@@ -127,3 +127,7 @@
 ## Entrega
 
 - [ ] FINAL Entrega final al propietario y puerta alcanzada (§19)
+
+## G1 Dependencia externa
+
+- [ ] BLOCKED (external) G1.3.ext Publicacion por el propietario del paquete G1 reconciliado (§6.3): Paquete preparado; el propietario debe revisar y publicar. Ningun push ni publicacion ejecutados.
