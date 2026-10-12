@@ -2994,6 +2994,39 @@
         }
       ],
       "stop_reason": null
+    },
+    {
+      "id": "ANT01-01",
+      "study": "ANT01",
+      "review_batch": "G20",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "statement": "At equal state size (64 binary cells), a global Hebbian Hopfield network exactly repaired 85-95.5% of erased and noisy cues with eight stored i.i.d. patterns, while restricting the same Hebbian coupling to 3x3 neighbourhoods failed from four patterns (0-2%) and to 5x5 neighbourhoods from eight (0-1.5%); spatially smooth patterns degraded all variants (global 13.5-26% at eight patterns), and an explicit nearest-pattern decoder identified the target in every condition. Both registered predictions held.",
+      "population": "Synthetic binary patterns (i.i.d. and smoothed) on an 8x8 grid; K 1-12, erased fraction 0.1-0.5, noise 0-0.5; 20 memory instances x 10 cues per condition",
+      "limits": [
+        "Binary Hebbian Hopfield variants, not the learned NeuroPixel rule with hidden channels",
+        "Exploratory antecedent comparison; spends no alpha; no external custody",
+        "Cues within a memory instance are not independent; instances are the units",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "protocol": {
+        "path": "docs/research/ANT01_plan.json",
+        "sha256": "38436579c892e3f2fcd216d6bce32e814f49034ea526b9b2d6cd63f9d0f655b6"
+      },
+      "receipts": [
+        {
+          "path": "results/research/ANT01/results.json",
+          "sha256": "9face54a64b494d0fa6536a25b19f2d02b21551be1587327e5a8610e965ded22"
+        }
+      ],
+      "stop_reason": null,
+      "source_units": [],
+      "public_text_after_G20": [
+        {
+          "path": "docs/research/ANT01_results.md",
+          "line": 7
+        }
+      ]
     }
   ]
 }
