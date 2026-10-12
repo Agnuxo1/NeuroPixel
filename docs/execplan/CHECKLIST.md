@@ -52,11 +52,11 @@
 
 ## 18A Registro publico
 
-- [ ] A18.2.P Revisar README, manuscritos y documentos nuevos e integrar registro (§18A)
+- [x] ~~A18.2.P Revisar README, manuscritos y documentos nuevos e integrar registro (§18A)~~ 2026-10-12T22:02Z `5324db2251`
 
 ## 18A Registro cientifico
 
-- [ ] A18.2 Vincular todas las afirmaciones a artefactos y nivel justificable (§18A)
+- [x] ~~A18.2 Vincular todas las afirmaciones a artefactos y nivel justificable (§18A)~~ 2026-10-12T22:02Z `5324db2251`
 
 ## 18A Verificacion final
 

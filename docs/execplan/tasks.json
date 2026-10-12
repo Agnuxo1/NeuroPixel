@@ -566,7 +566,42 @@
       "depends_on": [
         "A18.2.G"
       ],
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T21:55Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/research/claims_ledger.json",
+          "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_audit.json",
+          "sha256_lf": "2497d43c059cff4b5217b8b5b726e993508d8b12ea1728300770e141f43e06f9"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_ledger_build.json",
+          "sha256_lf": "afa3dadc407937d49b5adc9d3f906c7453509dbd8278dc8ce36342287da58c0b"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_P.json",
+          "sha256_lf": "ff79f1a749a76aa09ec922baf80765b3a9d3e9bf8efb3987e911fd68df5657cf"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.P_review.txt",
+          "sha256_lf": "998244411292e69d39dbb9925d553a576a6cf7859b528c11673d7933a2868879"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.P_validator.txt",
+          "sha256_lf": "f3579d82bf022a4ff0e72ee0683cce685621c1024e67fe2fcd5437bc5bce883c"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.P_build_ledger.txt",
+          "sha256_lf": "5d63410bad7fa185c7550059cff20abf69fa42c94614d2bf94642a7f78a0c3ca"
+        }
+      ],
+      "commit": "5324db225181a010b0ebb01915b409e3208b2ae4",
+      "closed": "2026-10-12T22:02Z",
+      "note": "182/182 candidatos P; 10 afirmaciones nuevas incl. T0 pendiente explicito; 7 discrepancias de redaccion; registro integrado 795/795, 73 afirmaciones, validador valido."
     },
     {
       "id": "A18.2",
@@ -581,7 +616,54 @@
         "A18.2.G",
         "A18.2.P"
       ],
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:02Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/research/claims_ledger.json",
+          "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_audit.json",
+          "sha256_lf": "2497d43c059cff4b5217b8b5b726e993508d8b12ea1728300770e141f43e06f9"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_ledger_build.json",
+          "sha256_lf": "afa3dadc407937d49b5adc9d3f906c7453509dbd8278dc8ce36342287da58c0b"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_P.json",
+          "sha256_lf": "ff79f1a749a76aa09ec922baf80765b3a9d3e9bf8efb3987e911fd68df5657cf"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.P_review.txt",
+          "sha256_lf": "998244411292e69d39dbb9925d553a576a6cf7859b528c11673d7933a2868879"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.P_validator.txt",
+          "sha256_lf": "f3579d82bf022a4ff0e72ee0683cce685621c1024e67fe2fcd5437bc5bce883c"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.P_build_ledger.txt",
+          "sha256_lf": "5d63410bad7fa185c7550059cff20abf69fa42c94614d2bf94642a7f78a0c3ca"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_H.json",
+          "sha256_lf": "f23e2ffe95688293fa527632e30ffcb0ced9415dbd95e0cae58db50c4932ce33"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_D.json",
+          "sha256_lf": "238f80605d4bfe50c52fc9d9b1f4348806c86e373629ada267420679a09feb42"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_G.json",
+          "sha256_lf": "9a8f68d36382f143fab36d8075537fa009b56657996a6bd4959f95b4f510933b"
+        }
+      ],
+      "commit": "5324db225181a010b0ebb01915b409e3208b2ae4",
+      "closed": "2026-10-12T22:02Z",
+      "note": "Registro completo: 73 afirmaciones vinculadas a artefactos (L0:10, L1:33, L2:30); 795 candidatos cubiertos; exclusiones editoriales justificadas; sin timestamps ni independencia inventados."
     },
     {
       "id": "A18.3",
@@ -969,5 +1051,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T21:55Z"
+  "updated": "2026-10-12T22:02Z"
 }
