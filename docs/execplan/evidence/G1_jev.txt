@@ -1,0 +1,6 @@
+UTC: 2026-10-12T11:47:34.521896+00:00
+COMMAND: python D:/PROJECTS/.cognition/jev_health_bridge.py v2-query --state-file D:/PROJECTS/NeuroPixel-Completion-20261012/docs/execplan/evidence/G1_jev_state.json --questions-file D:/PROJECTS/NeuroPixel-Completion-20261012/docs/execplan/evidence/G1_jev_questions.json
+
+{"mode": "v2-query", "exit_code": 0, "provenance": "jev", "status": "connected", "connected": null, "configured": null, "model": "jev-1.13.0", "decision_source": null, "error_type": null, "decisions": {"inspection": {"value": "cpu_receipt_inspection", "confidence": 0.98}, "admission": {"value": "admit_saved_if_exact", "confidence": 0.92}, "editorial": {"value": "reconcile_locally", "confidence": 1.0}}, "usage": {"input_tokens": 765, "output_tokens": 128, "cached_tokens": 0}}
+
+EXIT_CODE: 0
