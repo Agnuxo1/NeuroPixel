@@ -1,0 +1,44 @@
+{
+  "status": "verified_readonly_fit_replay",
+  "cases": [
+    "QTRAIN_U16_repeated_school0.3_seed202__local_query"
+  ],
+  "checks": 329,
+  "issues": [],
+  "individual_decisions_replayed": 294912,
+  "max_mean_nll_error": 0.0,
+  "plan_sha256": "d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.6.0+cpu",
+      "psutil": "6.1.1",
+      "pytest": null,
+      "scipy": "1.15.1"
+    },
+    "device": "cpu",
+    "threads": 2,
+    "cuda_runtime": null,
+    "gpu_name": null,
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "elapsed_seconds": 2.381028543999946,
+  "new_training_updates": 0,
+  "new_backbone_updates": 0,
+  "test_accessed": false,
+  "independent_external_replication": false,
+  "scientific_task3_complete": false,
+  "scope": "Within-project fixed-head endpoint replay and independent metric recount; no new scientific replication",
+  "scientific_run_id": 37831051538,
+  "scientific_source_commit": "a19c0000b4175984c14cd4eaf08392ceffd9e917",
+  "verification_run_id": "37834470656",
+  "verification_source_commit": "ce0bdc7ab3080fe851cfe0134b7a68ffc4ec7b98",
+  "verification_returncode": 0
+}

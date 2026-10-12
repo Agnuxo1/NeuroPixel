@@ -1,0 +1,30 @@
+{
+  "tests_passed": 16,
+  "new_training_updates": 0,
+  "contracts": [
+    {
+      "script": "test_READ03_recount.py",
+      "sha256": "3ef308e3a9e0f677d85f7ce008238520e81a8f369468d381f2fb1fe0181b9c1a",
+      "exit_code": 0,
+      "output": "test_invalid_bank_and_nll_rejected (__main__.RecountContracts.test_invalid_bank_and_nll_rejected) ... ok\ntest_joint_is_not_nominal_or_ensemble (__main__.RecountContracts.test_joint_is_not_nominal_or_ensemble) ... ok\ntest_perfect_joint (__main__.RecountContracts.test_perfect_joint) ... ok\ntest_unchanged_control_rejected (__main__.RecountContracts.test_unchanged_control_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "script": "test_READ03_contrasts.py",
+      "sha256": "1b29535afa87a2c9507674d6bb5b82d51ee2b407f2cb0e322b1205ab397d3712",
+      "exit_code": 0,
+      "output": "test_average_within_seed (__main__.Contrasts.test_average_within_seed) ... ok\ntest_five_paired_effects (__main__.Contrasts.test_five_paired_effects) ... ok\ntest_interval_not_truncated_or_inflated (__main__.Contrasts.test_interval_not_truncated_or_inflated) ... ok\ntest_missing_condition_rejected (__main__.Contrasts.test_missing_condition_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "script": "test_READ03_final_receipts.py",
+      "sha256": "aeaffba41b2c553f3371a5a29300a0310a15e01554ec2214d30c8f571e943065",
+      "exit_code": 0,
+      "output": "test_active_or_failed_job_rejected (__main__.ClosureContracts.test_active_or_failed_job_rejected) ... ok\ntest_duplicate_or_missing_fit_rejected (__main__.ClosureContracts.test_duplicate_or_missing_fit_rejected) ... ok\ntest_exact_complete (__main__.ClosureContracts.test_exact_complete) ... ok\ntest_failed_replay_or_scope_rejected (__main__.ClosureContracts.test_failed_replay_or_scope_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "script": "test_READ03_analysis_integrity.py",
+      "sha256": "436ac9cd515f328677ef179ef0c8567f68e008cd3b056ec448ceb4e5660085b7",
+      "exit_code": 0,
+      "output": "test_changed_archive_rejected (__main__.InputIntegrity.test_changed_archive_rejected) ... ok\ntest_changed_scalar_json_rejected (__main__.InputIntegrity.test_changed_scalar_json_rejected) ... ok\ntest_exact_original (__main__.InputIntegrity.test_exact_original) ... ok\ntest_wrong_recipe_or_seed_rejected (__main__.InputIntegrity.test_wrong_recipe_or_seed_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.049s\n\nOK\n"
+    }
+  ]
+}

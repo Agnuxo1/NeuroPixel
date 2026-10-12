@@ -1,0 +1,111 @@
+{
+  "status": "closed_exact_READ03_development_diagnostic",
+  "closed_utc": "2026-10-08T20:33:29.551611+00:00",
+  "scientific_run_id": 37831051538,
+  "verification_run_id": 37834470656,
+  "plan_sha256": "d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0",
+  "head_fits": 36,
+  "frozen_parent_states": 12,
+  "distinct_backbone_initialization_seeds": 3,
+  "initializations_per_condition": 3,
+  "new_backbone_initializations": 0,
+  "independent_splits": 1,
+  "new_backbone_updates": 0,
+  "archive_integrity_checks": 792,
+  "endpoint_replay_checks": 11981,
+  "individual_decisions_replayed": 10616832,
+  "max_mean_nll_error": 0.0,
+  "independent_statistical_recount_checks": 27,
+  "registered_effects": {
+    "query_attention_minus_local_query": {
+      "values_pp": [
+        48.2177734375,
+        53.0029296875,
+        61.45477294921875
+      ],
+      "mean_pp": 54.22515869140625,
+      "t95_pp": [
+        37.5749633550254,
+        70.8753540277871
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "query_attention_minus_uniform_global": {
+      "values_pp": [
+        49.73907470703125,
+        52.83050537109375,
+        62.640380859375
+      ],
+      "mean_pp": 55.069986979166664,
+      "t95_pp": [
+        38.33707736757604,
+        71.80289659075729
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "query_attention_minus_parent": {
+      "values_pp": [
+        53.79180908203125,
+        56.201171875,
+        65.399169921875
+      ],
+      "mean_pp": 58.46405029296875,
+      "t95_pp": [
+        43.24717676477698,
+        73.68092382116052
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "local_query_minus_parent": {
+      "values_pp": [
+        5.57403564453125,
+        3.1982421875,
+        3.94439697265625
+      ],
+      "mean_pp": 4.2388916015625,
+      "t95_pp": [
+        1.2207471361509348,
+        7.257036066974065
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "uniform_global_minus_parent": {
+      "values_pp": [
+        4.052734375,
+        3.37066650390625,
+        2.7587890625
+      ],
+      "mean_pp": 3.3940633138020835,
+      "t95_pp": [
+        1.7861061370033904,
+        5.002020490600777
+      ],
+      "n": 3,
+      "df": 2
+    }
+  },
+  "eligible_development_conditions": [
+    {
+      "condition": "paired0.3",
+      "mode": "query_attention"
+    }
+  ],
+  "report": "docs/research/READ03_results.md",
+  "evidence_sha256": {
+    "final_receipts_verification.json": "8457863c50a8a8bf0dbf005d260ddbf4141fdfcba5dcef5edaa02cb7179f3254",
+    "archive_integrity.json": "8de239573bfe310258c809c3bfa925df627370871e539552c13d56c82168930a",
+    "analysis/summary.json": "60aed96225919b77930e7df72b2669d82ff7e22095ecac000f2572b315e37675",
+    "analysis/analysis_manifest.json": "68b8baeae39b5d3e164f396c45ec89e6c11b22f09625f50882edddde70f340cb",
+    "analysis/report_manifest.json": "98a4fb3a5f05597503d8172baaaa56f47666b65ae509bf4d20d936bb37139eeb"
+  },
+  "scope": "Exact frozen-readout development recipe only; conditional exploratory effects with nominal/effective capacity limitations",
+  "H1": "not_supported_under_original_recipe",
+  "test_accessed": false,
+  "independent_external_replication": false,
+  "scientific_task3_complete": false,
+  "full_programme_complete": false
+}

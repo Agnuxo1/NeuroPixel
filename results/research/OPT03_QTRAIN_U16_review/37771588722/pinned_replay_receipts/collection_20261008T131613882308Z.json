@@ -1,0 +1,61 @@
+{
+  "observed_utc": "2026-10-08T13:16:13.882274+00:00",
+  "archive_git_commit": "6e3d29aae6f488dc2401309a545864ecca46bd17",
+  "scientific_run_id": 37771588722,
+  "verification_run_id": 37774614332,
+  "receipts": [
+    {
+      "case": "QTRAIN_U16_paired_school0.0_seed200",
+      "verified": true,
+      "checks": 183,
+      "decisions": 221184,
+      "max_mean_nll_error": 0.0,
+      "archive_git_commit": "6e3d29aae6f488dc2401309a545864ecca46bd17",
+      "git_blob": "c916b6f08a82932639f3aa5c17385f33fc75ed94",
+      "remote_path": "results/research/U16_replay_cloud/37771588722/37774614332/QTRAIN_U16_paired_school0.0_seed200/replay.json",
+      "sha256": "53264ebba71ec637bcae728d568d7cff3348b3e9bfdf2a780a1246460cc4d77a",
+      "bytes": 1342
+    },
+    {
+      "case": "QTRAIN_U16_paired_school0.3_seed200",
+      "verified": true,
+      "checks": 183,
+      "decisions": 221184,
+      "max_mean_nll_error": 0.0,
+      "archive_git_commit": "6e3d29aae6f488dc2401309a545864ecca46bd17",
+      "git_blob": "afcfe6ba227c2a0c6ff9848bbbf8641e6a0b31de",
+      "remote_path": "results/research/U16_replay_cloud/37771588722/37774614332/QTRAIN_U16_paired_school0.3_seed200/replay.json",
+      "sha256": "bc916d3be60ed0594c0cd005ce0ec899a78af76cd4c5672ecae06d08a287c1f1",
+      "bytes": 1346
+    },
+    {
+      "case": "QTRAIN_U16_repeated_school0.0_seed200",
+      "verified": true,
+      "checks": 183,
+      "decisions": 221184,
+      "max_mean_nll_error": 0.0,
+      "archive_git_commit": "6e3d29aae6f488dc2401309a545864ecca46bd17",
+      "git_blob": "cf5aab946d4d4ac18fb79ccf001986606d48ece5",
+      "remote_path": "results/research/U16_replay_cloud/37771588722/37774614332/QTRAIN_U16_repeated_school0.0_seed200/replay.json",
+      "sha256": "f97fd7658f9dc0c69e66981d04e02ea478d57bff46b3cb2d41dcba1b91e779b1",
+      "bytes": 1348
+    }
+  ],
+  "missing": [
+    "QTRAIN_U16_paired_school0.0_seed201",
+    "QTRAIN_U16_paired_school0.0_seed202",
+    "QTRAIN_U16_paired_school0.3_seed201",
+    "QTRAIN_U16_paired_school0.3_seed202",
+    "QTRAIN_U16_repeated_school0.0_seed201",
+    "QTRAIN_U16_repeated_school0.0_seed202",
+    "QTRAIN_U16_repeated_school0.3_seed200",
+    "QTRAIN_U16_repeated_school0.3_seed201",
+    "QTRAIN_U16_repeated_school0.3_seed202"
+  ],
+  "issues": [],
+  "checks": 549,
+  "individual_decisions_replayed": 663552,
+  "status": "verified_partial_internal_endpoint_replay",
+  "independent_external_replication": false,
+  "complete_scientific_task3": false
+}

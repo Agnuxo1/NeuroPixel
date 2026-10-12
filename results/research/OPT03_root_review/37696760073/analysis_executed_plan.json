@@ -1,0 +1,196 @@
+{
+  "status": "reported_outcome_analysis_pending_independent_audit",
+  "missing": [],
+  "issues": [],
+  "final_test_accessed": false,
+  "conditions": {
+    "pad0_fire0.5": {
+      "validation_binding": {
+        "values": [
+          0.2177734375,
+          0.26708984375,
+          0.22216796875
+        ],
+        "n_initializations": 3,
+        "mean": 0.23567708333333334,
+        "sample_sd": 0.027292839976319462,
+        "t95": [
+          0.16787791028823137,
+          0.30347625637843534
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "probe_binding": {
+        "values": [
+          0.2158203125,
+          0.248046875,
+          0.2490234375
+        ],
+        "n_initializations": 3,
+        "mean": 0.23763020833333334,
+        "sample_sd": 0.01889423419392116,
+        "t95": [
+          0.19069432863815283,
+          0.28456608802851385
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "gate_all_three_seeds": false,
+      "mean_validation_nll": 1.786760117961462
+    },
+    "pad0_fire1.0": {
+      "validation_binding": {
+        "values": [
+          0.1748046875,
+          0.11767578125,
+          0.20947265625
+        ],
+        "n_initializations": 3,
+        "mean": 0.16731770833333334,
+        "sample_sd": 0.04635415523686072,
+        "t95": [
+          0.052167603214545555,
+          0.28246781345212113
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "probe_binding": {
+        "values": [
+          0.150390625,
+          0.1142578125,
+          0.240234375
+        ],
+        "n_initializations": 3,
+        "mean": 0.16829427083333334,
+        "sample_sd": 0.06486855151321923,
+        "t95": [
+          0.00715185571472346,
+          0.3294366859519432
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "gate_all_three_seeds": false,
+      "mean_validation_nll": 1.2588104168619016
+    },
+    "pad1_fire0.5": {
+      "validation_binding": {
+        "values": [
+          0.2685546875,
+          0.26171875,
+          0.32958984375
+        ],
+        "n_initializations": 3,
+        "mean": 0.28662109375,
+        "sample_sd": 0.03736867160868649,
+        "t95": [
+          0.19379216736999838,
+          0.3794500201300016
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "probe_binding": {
+        "values": [
+          0.2548828125,
+          0.31640625,
+          0.3291015625
+        ],
+        "n_initializations": 3,
+        "mean": 0.3001302083333333,
+        "sample_sd": 0.039696194554918324,
+        "t95": [
+          0.2015193944277046,
+          0.398741022238962
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "gate_all_three_seeds": false,
+      "mean_validation_nll": 1.5436363053548277
+    },
+    "pad1_fire1.0": {
+      "validation_binding": {
+        "values": [
+          0.12353515625,
+          0.25244140625,
+          0.41064453125
+        ],
+        "n_initializations": 3,
+        "mean": 0.26220703125,
+        "sample_sd": 0.14380359479843724,
+        "t95": [
+          -0.09502090166963467,
+          0.6194349641696346
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "probe_binding": {
+        "values": [
+          0.0986328125,
+          0.2197265625,
+          0.3740234375
+        ],
+        "n_initializations": 3,
+        "mean": 0.23079427083333334,
+        "sample_sd": 0.13802851049796364,
+        "t95": [
+          -0.11208755738713536,
+          0.573676099053802
+        ],
+        "scope": "Development-only; unadjusted interval, not final-test confirmation"
+      },
+      "gate_all_three_seeds": false,
+      "mean_validation_nll": 1.4111378926153055
+    }
+  },
+  "factorial_effects": {
+    "PAD": {
+      "values": [
+        -0.000244140625,
+        0.064697265625,
+        0.154296875
+      ],
+      "n_initializations": 3,
+      "mean": 0.07291666666666667,
+      "sample_sd": 0.077597682263805,
+      "t95": [
+        -0.11984666218688227,
+        0.2656799955202156
+      ],
+      "scope": "Development-only; unadjusted interval, not final-test confirmation"
+    },
+    "synchronous_firing": {
+      "values": [
+        -0.093994140625,
+        -0.079345703125,
+        0.0341796875
+      ],
+      "n_initializations": 3,
+      "mean": -0.04638671875,
+      "sample_sd": 0.07015592307373542,
+      "t95": [
+        -0.22066369295796157,
+        0.12789025545796157
+      ],
+      "scope": "Development-only; unadjusted interval, not final-test confirmation"
+    },
+    "interaction": {
+      "values": [
+        -0.10205078125,
+        0.14013671875,
+        0.09375
+      ],
+      "n_initializations": 3,
+      "mean": 0.0439453125,
+      "sample_sd": 0.12854600912432868,
+      "t95": [
+        -0.2753806764567897,
+        0.3632713014567897
+      ],
+      "scope": "Development-only; unadjusted interval, not final-test confirmation"
+    }
+  },
+  "selected_condition": null,
+  "complete_scientific_task3": false,
+  "raw_checkpoint_and_dataset_audit": "required separately; recorded report arithmetic alone is insufficient",
+  "eligible_conditions": [],
+  "verdict": "No condition passed competence gate; high-competence effects and optimization sufficiency remain unestablished"
+}

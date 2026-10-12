@@ -1,0 +1,40 @@
+UTC: 2026-10-12T21:52:30.132002+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_review_claims_D.py
+
+{
+ "task": "A18.2.D",
+ "candidates": 234,
+ "classified": 234,
+ "classes": {
+  "claim": 54,
+  "editorial": 28,
+  "data_row": 90,
+  "method": 22,
+  "provenance": 17,
+  "limit": 18,
+  "governance": 5
+ },
+ "claims": 24,
+ "recounts": {
+  "vis07_nca_mean": 94.35726210350585,
+  "vis07_cnn_mean": 90.84028937117418,
+  "vis07_diff_mean": 3.5169727323316637,
+  "vis07_diff_lo": 1.9304594487954911,
+  "vis07_diff_hi": 5.103486015867836,
+  "vis07_wall": 447.5551254929999,
+  "vis07_cpu": 894.8373666919999,
+  "vis07_depth0": 22.58208124652198,
+  "vis07_depth4": 78.21925431274346,
+  "vis07_depth8": 94.35726210350585,
+  "vis07_depth16": 53.099610461880914,
+  "vis07_depth32": 16.66110183639399,
+  "vis07_rms0": 0.5430672464456949,
+  "vis07_rms16": 149.26239389670232,
+  "vis07_rms32": 134843.49384504196,
+  "qtrain_s200_loss_prev": 0.37615710274258163,
+  "qtrain_s200_loss_last": 0.29008569303914555
+ },
+ "problems": []
+}
+
+EXIT_CODE: 0

@@ -1,0 +1,913 @@
+{
+  "schema": 1,
+  "authors": [
+    "Francisco Angulo de Lafuente"
+  ],
+  "claims": [
+    {
+      "id": "D-DEV04-01",
+      "statement": "DEV04 reproduced the READ03-selected recipe on 12 new bodies with 24 readouts: query attention minus the local control gave +16.244 pp mean validation accuracy (exploratory t95 interval 10.586 to 21.902 pp, half-width 5.658 pp); the competence gate passed (12/12 candidates with probe >=95% and validation >=90%) but the registered precision target (half-width <=5 pp with a positive lower bound) was not met.",
+      "population": "Internal development RoleTask universe (partitions/policies 101-103, body initializations 400-411), four queries per context, school 0.3, recipe selected after READ03; the 264 original test compositions excluded",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Internal development result on an exposed universe; not a fair new comparison against the Transformer and no final test",
+        "Original H1 remains not supported under its recipe; this result does not reinterpret it",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Three policy means with df=2; policies reuse one development semantic universe and overlap",
+        "Both readouts have 3,168 nominal active parameters but different functional spaces and FLOPs; shortcuts not excluded",
+        "Attention over visible state has prior art; a gain does not demonstrate exceptional originality",
+        "Update timers exclude other operations; complete cost and physical energy not measured"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/DEV04_review/37845945011/closure_receipt.json",
+          "sha256": "15f0a37dd931f08de651486e35e8b3d921928a9b99896205ec8dbdafc5a6bf83"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/final_receipts_verification.json",
+          "sha256": "d74a3e02e54c2d5df76502f923d9bae4cb9aa04472da32a77c2f0ee292934fbc"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "DEV04",
+      "source_units": [
+        "S009-L0003",
+        "S009-L0005",
+        "S009-L0011",
+        "S009-L0012",
+        "S009-L0013",
+        "S009-L0014",
+        "S009-L0015",
+        "S009-L0016",
+        "S009-L0017",
+        "S009-L0018",
+        "S009-L0019",
+        "S009-L0020",
+        "S009-L0021",
+        "S009-L0022",
+        "S009-L0028",
+        "S009-L0029",
+        "S009-L0030",
+        "S009-L0032",
+        "S009-L0044",
+        "S009-L0046",
+        "S009-L0048"
+      ],
+      "protocol": {
+        "path": "docs/research/DEV04_execution_plan.json",
+        "sha256": "2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a"
+      }
+    },
+    {
+      "id": "D-DEV04-02",
+      "statement": "DEV04 provenance and audit: original run 37845945011 (nine successes and three transport failures before training), operational recovery 37871777801 retraining only the three failures and internal endpoint verification 37876687599; an independent replay matched all 9,732,096 individual decisions exactly with mean NLL within 1e-4, and an orthogonal integer-denominator recount passed 41 checks without discrepancy.",
+      "population": "Internal development RoleTask universe (partitions/policies 101-103, body initializations 400-411), four queries per context, school 0.3, recipe selected after READ03; the 264 original test compositions excluded",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal verification within the project, not external replication",
+        "9,732,096 decisions are not experimental subjects",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/DEV04_review/37845945011/closure_receipt.json",
+          "sha256": "15f0a37dd931f08de651486e35e8b3d921928a9b99896205ec8dbdafc5a6bf83"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/final_receipts_verification.json",
+          "sha256": "d74a3e02e54c2d5df76502f923d9bae4cb9aa04472da32a77c2f0ee292934fbc"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "DEV04",
+      "source_units": [
+        "S009-L0036",
+        "S009-L0038",
+        "S009-L0040",
+        "S009-L0048"
+      ]
+    },
+    {
+      "id": "D-GLOB05-01",
+      "statement": "GLOB05 trained 12 new global heads on the 12 frozen DEV04 bodies: query attention minus query-conditioned uniform global aggregation gave +6.278 pp (exploratory t95 4.108 to 8.449 pp, half-width 2.171 pp), and the active global control minus the original local control gave +9.966 pp (5.868 to 14.063 pp, descriptive); the global control failed the joint gate on 8 of the 12 bodies.",
+      "population": "Internal development RoleTask universe (partitions/policies 101-103, body initializations 400-411), four queries per context, school 0.3, recipe selected after READ03; the 264 original test compositions excluded; 12 frozen DEV04 bodies",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Internal development result on an exposed universe; not a fair new comparison against the Transformer and no final test",
+        "Original H1 remains not supported under its recipe; this result does not reinterpret it",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Not an identified causal mediation: aggregation, gating and readout functions differ",
+        "The DEV04 attention-local precision failure (half-width 5.658 > 5 pp) is preserved, not repaired; intervals not combined",
+        "Masks, examples, heads and stages are not independent replicates"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/GLOB05_review/37887762153/closure_receipt.json",
+          "sha256": "cd49bfc5c05967ecf1d948340f598dfbbc656ab52bef4977206fe5709f26ac01"
+        },
+        {
+          "path": "results/research/GLOB05_review/37887762153/final_receipts_verification.json",
+          "sha256": "3fdba2ca57105c8d7aecfd93ff0892154ffd8a12f234343dd85ba768c79f10e9"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "GLOB05",
+      "source_units": [
+        "S010-L0003",
+        "S010-L0005",
+        "S010-L0007",
+        "S010-L0013",
+        "S010-L0014",
+        "S010-L0015",
+        "S010-L0016",
+        "S010-L0017",
+        "S010-L0018",
+        "S010-L0019",
+        "S010-L0020",
+        "S010-L0021",
+        "S010-L0022",
+        "S010-L0023",
+        "S010-L0024",
+        "S010-L0028",
+        "S010-L0030",
+        "S010-L0032",
+        "S010-L0042"
+      ],
+      "protocol": {
+        "path": "docs/research/GLOB05_execution_plan.json",
+        "sha256": "b26f17cec8a98fda6dbd5aa128d67501fd2273bf07718300c1c865391985e0b2"
+      }
+    },
+    {
+      "id": "D-GLOB05-02",
+      "statement": "GLOB05 independent replay verified 3,538,944 exact decisions in 3,120 checks with zero incidents and maximum mean-NLL error 0, and an orthogonal statistical recount passed 52 checks.",
+      "population": "Internal development RoleTask universe (partitions/policies 101-103, body initializations 400-411), four queries per context, school 0.3, recipe selected after READ03; the 264 original test compositions excluded",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal verification, not external replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/GLOB05_review/37887762153/closure_receipt.json",
+          "sha256": "cd49bfc5c05967ecf1d948340f598dfbbc656ab52bef4977206fe5709f26ac01"
+        },
+        {
+          "path": "results/research/GLOB05_review/37887762153/final_receipts_verification.json",
+          "sha256": "3fdba2ca57105c8d7aecfd93ff0892154ffd8a12f234343dd85ba768c79f10e9"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "GLOB05",
+      "source_units": [
+        "S010-L0036",
+        "S010-L0038",
+        "S010-L0040"
+      ]
+    },
+    {
+      "id": "D-SCN06-01",
+      "statement": "In the SCN06 assigned-control experiment (canonical run 37896280187), two assigned states with identical current scanner outputs changed the next answer only under the assigned hidden-to-visible coupling, while the inactive-coupling control stayed unchanged; top-token/confidence views also compressed distinct logit vectors; 13 native and 14 independent arithmetic checks passed. The scanner therefore shows a useful but incomplete view of the artificial state.",
+      "population": "Assigned (hand-set) NeuroPixel states and couplings; scanner outputs versus next-step answers",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Assigned counterexamples prove instrument limits; they do not discover a learned semantic circuit",
+        "A redundant dispatch (run 37896335193) trained nothing and produced identical NPZ bytes: one experiment, not two replications",
+        "PAD -10000 is finite suppression, not absolute exclusion",
+        "Not a biological brain scan or complete causal explanation",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/SCN06_cloud/37896280187/receipt.json",
+          "sha256": "273ca38447581bf9f917de9b980c976f3a37d0fd7cd1c79385ca53da11f6eb42"
+        },
+        {
+          "path": "results/research/SCN06_review/recovery_receipt.json",
+          "sha256": "72256b5c37de5e5c09f6c3f1984c49f999968204a733ce961fd1df6f4882b4fc"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "SCN06",
+      "source_units": [
+        "S023-L0003",
+        "S023-L0005",
+        "S023-L0009"
+      ],
+      "protocol": {
+        "path": "docs/research/SCN06_execution_plan.json",
+        "sha256": "ec9b7e3e3d232adaf716378364378ce5b2c9b3685572bea5b6d9a5cabaad1917"
+      }
+    },
+    {
+      "id": "D-SCN06-02",
+      "statement": "A separately frozen matrix census of five authenticated old learned models passed 75 checks: all read/non-PAD decoder matrices had rank 16 and ambient nullity 32 at the declared float64 threshold.",
+      "population": "Five authenticated historical learned NeuroPixel models; decoder matrices",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Measures ambient instantaneous projections, not reached-state dimensionality or learned semantic directions",
+        "Multi-time observability is a different question",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/SCN06_rank_census/receipt.json",
+          "sha256": "d3cc722c61c9d110311dd2ef7ecc5f5a0e4cb22279bd1868fea6dd83fceaa636"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "SCN06",
+      "source_units": [
+        "S023-L0007",
+        "S023-L0009"
+      ],
+      "protocol": {
+        "path": "docs/research/SCN06_rank_execution_plan.json",
+        "sha256": "0df3469ce888da19fc49d7ed72c2fcedd53ef1713705ec204a4a8206dee1335e"
+      }
+    },
+    {
+      "id": "D-VIS07-01",
+      "statement": "On the public UCI optical handwritten-digits test set (1,797 images, writer-separated; selection on DEV300 only before TEST), five NeuroPixel NCA realizations averaged 94.357% accuracy versus 90.840% for a CNN of close nominal size (5,056 versus 5,039 parameters): paired difference +3.517 pp, exploratory t95 interval 1.930 to 5.103 pp; all five NCA realizations exceeded 90%.",
+      "population": "UCI optdigits public data, writer-separated test set of 1,797 images; five paired training seeds 240-244",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Interval over five trainings on the same population; no blind custody and no independent replication",
+        "TEST was opened by the project itself, not by an external custodian",
+        "Depth, geometry and FLOPs differ despite close nominal parameter counts",
+        "Not universal superiority over CNNs",
+        "Does not rescue the binding H1",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/VIS07MAIN_cloud/37908785698/receipt.json",
+          "sha256": "4599d1a9feeff28c2aaf8aa23bf6081fd500b855dfd1ea6653a0eda068adb71f"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "VIS07",
+      "source_units": [
+        "S025-L0003",
+        "S025-L0007",
+        "S025-L0008",
+        "S025-L0009",
+        "S025-L0010",
+        "S025-L0011",
+        "S025-L0013",
+        "S025-L0031"
+      ],
+      "protocol": {
+        "path": "docs/research/VIS07_execution_plan.json",
+        "sha256": "acb20b8edfeea6c287531ee14924a19b258de6377ed93c24da49667263f3bd3e"
+      }
+    },
+    {
+      "id": "D-VIS07-02",
+      "statement": "With trained VIS07 weights, retaining 0, 4, 8, 16 or 32 updates gave 22.582%, 78.219%, 94.357%, 53.100% and 16.661% mean test accuracy over the five seeds; in the retained 128-row depth diagnostic the mean state RMS grew from 0.543 at T0 to 149.3 at T16 and 134,843 at T32: extending beyond the trained T8 strongly degrades accuracy and magnitude.",
+      "population": "The ten VIS07 models evaluated at alternative update depths on the same test images",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Finite diagnostic endpoints, not proof of infinite divergence",
+        "The report RMS column (0.540034 ... 138914) is not reproducible from retained receipts; the retained diagnostic covers the first 128 official test rows",
+        "No arbitrary stability or durable memory shown",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/VIS07_depth_review/37913653666/receipt.json",
+          "sha256": "4ec2f342ee7ec4ec18a43531cdb3273e153969dec18ec1fd0891f2806aa09229"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "VIS07",
+      "source_units": [
+        "S025-L0019",
+        "S025-L0020",
+        "S025-L0021",
+        "S025-L0022",
+        "S025-L0023",
+        "S025-L0025"
+      ],
+      "protocol": {
+        "path": "docs/research/VIS07_execution_plan.json",
+        "sha256": "acb20b8edfeea6c287531ee14924a19b258de6377ed93c24da49667263f3bd3e"
+      }
+    },
+    {
+      "id": "D-VIS07-03",
+      "statement": "VIS07 functional replay preserved 98,835 exact decisions and passed logits/NLL for the 30 base/transformation conditions, but ten continuous T16/T32 comparisons failed the frozen tolerance although their decisions matched; the failed receipt is preserved and the tolerance was not raised.",
+      "population": "VIS07 checkpoints replayed under base and transformation conditions",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Replay is not declared fully successful",
+        "Same-host path diagnostic is separate",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/VIS07REPLAY_cloud/37911162172/receipt.json",
+          "sha256": "da53f8b4c944589f443f16d214acdb77b5f9580fc526b8bcad65b115c60871cb"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "VIS07",
+      "source_units": [
+        "S025-L0027"
+      ]
+    },
+    {
+      "id": "D-VIS07-04",
+      "statement": "VIS07 saved-file recount passed 110 checks with zero discrepancies over ten new models trained for 40 epochs (2,240 updates each); recorded training+DEV wall time was 447.555 s and CPU process time 894.837 s.",
+      "population": "VIS07 main cohort",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Update timers exclude other operations; complete cost and physical energy not measured",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/VIS07MAIN_cloud/37908785698/receipt.json",
+          "sha256": "4599d1a9feeff28c2aaf8aa23bf6081fd500b855dfd1ea6653a0eda068adb71f"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "VIS07",
+      "source_units": [
+        "S025-L0029"
+      ]
+    },
+    {
+      "id": "D-OPT03D-01",
+      "statement": "OPT03-D (12 new trainings: seeds 100-102 x effective PAD zero yes/no x firing 0.5/1.0, 8,192 updates, school 0.3): no condition passed the frozen gate (95% probe and 90% validation in three seeds); mean validation binding was 23.568%, 16.732%, 28.662% and 26.221%, and the factorial contrasts PAD zero minus legacy +7.292 pp, firing 1.0 minus 0.5 -4.639 pp and their interaction +4.395 pp all had paired 95% intervals (df=2) including zero.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; seeds 100-102",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Original H1 remains not supported under its recipe; this result does not reinterpret it",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Negative development result: neither PAD projection nor higher firing resolved low competence",
+        "PAD also removes 16 effective degrees of freedom; firing changes randomness and expected dose"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_root_review/37696760073/analysis_executed_plan.json",
+          "sha256": "467eec52ffa88530cedb79cddbb3cec1f83a52307b10e81ba71a47e2bf128eb0"
+        },
+        {
+          "path": "results/research/OPT03_root_review/37696760073/development_phase_receipt.json",
+          "sha256": "6518581dc3ee8ed1baf26f549bb76cbfd0cf9e2a566804d690066b4bd22ec0dc"
+        },
+        {
+          "path": "results/research/OPT03_cloud_recovery/37696760073/original.zip",
+          "sha256": "ce0ab91443fc36575d9c7b71f835a4b31dae3df59f4df73f7de10887d42fbcff"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_D",
+      "source_units": [
+        "S011-L0003",
+        "S011-L0007",
+        "S011-L0019",
+        "S011-L0023",
+        "S011-L0024",
+        "S011-L0025",
+        "S011-L0026",
+        "S011-L0028",
+        "S011-L0032",
+        "S011-L0033",
+        "S011-L0034",
+        "S011-L0036",
+        "S011-L0046",
+        "S011-L0048"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_execution_plan.json",
+        "sha256": "bf54be3c4c8e30885b330e67e92195622e28c85a49e317358d106699d40008df"
+      }
+    },
+    {
+      "id": "D-OPT03D-02",
+      "statement": "OPT03-D provenance: the local plan (sha256 bf54be3c..., 141 CRLF line endings) equals the executed plan (sha256 f1caada1..., LF) byte for byte after the single CRLF-to-LF conversion; a complementary audit passed 860 checks and recounted final metrics from the twelve final checkpoints (73,728 replay predictions); minimum observed RAM was 14.2327 GiB and recorded training times sum to 14,763.44 s.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Per-example original decisions and intermediate endpoint weights were not archived: no example-level equivalence is claimed",
+        "Training times are not complete cost or physical energy",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_root_review/37696760073/plan_byte_provenance_check.json",
+          "sha256": "858aa8b05e2507e667589d8dfebb884e2e1a681ceb4383308566cb088b356595"
+        },
+        {
+          "path": "results/research/OPT03_root_review/37696760073/checkpoint_audit_executed_plan.json",
+          "sha256": "9db562e62dfa87f8971197626e540f9a556d27786cf067e7735547a9e1c8d89a"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_D",
+      "source_units": [
+        "S011-L0009",
+        "S011-L0013",
+        "S011-L0015",
+        "S011-L0040",
+        "S011-L0042"
+      ]
+    },
+    {
+      "id": "D-MODE-01",
+      "statement": "OPT03-MODE (12 existing OPT03-D checkpoints, no new training): evaluating with firing 0.5 instead of full updates changed validation-subset binding by +11.100 pp for models trained at 0.5 and -5.200 pp for models trained at 1.0; the train-firing x evaluation-mode interaction was +16.300 pp (t95 df2 -4.107 to +36.708 pp); the preregistered descriptive screen (>=5 pp, three positive signs) passed on both panels while the intervals include zero, and the best subset value, 53.711%, stays far below the 90% gate.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; first 128 examples per role of each development pool",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Eight masks are not new initializations; rollouts are averaged, not ensembled or selected",
+        "Does not identify a single cause of insufficient learning; data subset historically exposed",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_modes_review/audit.json",
+          "sha256": "cd5bfc41b24e99249c25828c185e6db31d3f6de78fb5c9a985ff454a4a163cfc"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_MODE",
+      "source_units": [
+        "S012-L0003",
+        "S012-L0005",
+        "S012-L0011",
+        "S012-L0012",
+        "S012-L0013",
+        "S012-L0015",
+        "S012-L0019",
+        "S012-L0020",
+        "S012-L0021",
+        "S012-L0022",
+        "S012-L0024",
+        "S012-L0030",
+        "S012-L0034"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_mode_plan.json",
+        "sha256": "198407ac903f34113d29b96d2197423270a462ce3d296aa04a7ebe2a6ba1f1f9"
+      }
+    },
+    {
+      "id": "D-MODE-02",
+      "statement": "The OPT03-MODE audit independently recounted 110,592 decisions and NLL values from the saved arrays in 1,052 checks with no incidents; checkpoints were hash-verified before and after and no optimizer or gradient was created.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal audit, not external replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_modes_review/audit.json",
+          "sha256": "cd5bfc41b24e99249c25828c185e6db31d3f6de78fb5c9a985ff454a4a163cfc"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_MODE",
+      "source_units": [
+        "S012-L0028"
+      ]
+    },
+    {
+      "id": "D-ROLE-01",
+      "statement": "OPT03-ROLE (12 existing weights, no training): joint accuracy on the original and the AGENT<->PATIENT flipped query over the same context stayed low - 7.503%, 0.521%, 2.572% and 2.344% for the four PAD/firing conditions - while 13.2-63.7% of predictions changed under the flip and 29.6-80.5% named one of the two candidate nouns; relocating whole pairs kept 49.9-82.3% of nominal predictions unchanged.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; validation subset of 512 examples (128 per role)",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Query sensitivity alone is not correct role assignment; no single cause attributed to all models",
+        "Measures geometry dependence of these weights and subsets; does not separate key reading, propagation or noise",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_roles_review/audit.json",
+          "sha256": "61fc0a0708f5d5b41cab70f1dde21fd80da35d5c506c13546ce1231ec5112575"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_ROLE",
+      "source_units": [
+        "S015-L0003",
+        "S015-L0005",
+        "S015-L0009",
+        "S015-L0011",
+        "S015-L0015",
+        "S015-L0016",
+        "S015-L0017",
+        "S015-L0018",
+        "S015-L0020",
+        "S015-L0024",
+        "S015-L0026",
+        "S015-L0038",
+        "S015-L0042"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_role_plan.json",
+        "sha256": "06de45dfd8d861dfd6bfb49ef05c217dfb8b36a744fec7740fbd25ab84cd470d"
+      }
+    },
+    {
+      "id": "D-ROLE-02",
+      "statement": "OPT03-ROLE stopped by RAM after 11 checkpoints; a partial audit recounted 1,050 checks/162,816 predictions, the resume evaluated only the pending checkpoint with the operational start margin lowered from 8.75 to 8.5 GiB while keeping the 8 GiB scientific minimum, and the full-cohort audit passed 1,384 checks with zero incidents over 165,888 newly recounted predictions.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal audit; incident, first refusal and resume transcript preserved",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_roles_review/audit.json",
+          "sha256": "61fc0a0708f5d5b41cab70f1dde21fd80da35d5c506c13546ce1231ec5112575"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_ROLE",
+      "source_units": [
+        "S015-L0030",
+        "S015-L0032",
+        "S015-L0034"
+      ]
+    },
+    {
+      "id": "D-QT-01",
+      "statement": "OPT03-QTRAIN (12 new trainings: seeds 200-202 x four queries per context versus one repeated query x school 0/0.3, 8,192 updates): no condition met the frozen joint-query competence criterion; mean joint validation accuracy was 1.428%, 28.225%, 0.138% and 0.220%, with four queries/school 0.3 reaching 74.677% on seed 200 but 2.466% and 7.532% on seeds 201/202; the three prospective contrasts (queries +14.647 pp, school +13.439 pp, interaction +26.715 pp) were positive on all seeds but their intervals include zero.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; seeds 200-202",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Contrasts dominated by seed 200; no reproducible population benefit or equivalence",
+        "Original H1 remains not supported under its recipe; this result does not reinterpret it",
+        "Equal updates do not mean equal FLOPs; school adds supervision and compute",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/summary.json",
+          "sha256": "d750292e7b3f88862d4a5566e35dbaa94702a552b30e4c9b426a0bdbb4f9389c"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/audit_full.json",
+          "sha256": "a500fafd684316937c44c1f64ec0798119ca51af141645c53e847eecb6a44611"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/closure_receipt.json",
+          "sha256": "4bfce4dcb991b4f4b176719e3b7d9173cce1eaf27ebd75323ef558d26658de61"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_QTRAIN",
+      "source_units": [
+        "S014-L0003",
+        "S014-L0007",
+        "S014-L0009",
+        "S014-L0011",
+        "S014-L0020",
+        "S014-L0024",
+        "S014-L0025",
+        "S014-L0026",
+        "S014-L0027",
+        "S014-L0029",
+        "S014-L0031",
+        "S014-L0035",
+        "S014-L0039",
+        "S014-L0040",
+        "S014-L0041",
+        "S014-L0043",
+        "S014-L0045",
+        "S014-L0071"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_QTRAIN_plan.json",
+        "sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5"
+      }
+    },
+    {
+      "id": "D-QT-02",
+      "statement": "OPT03-QTRAIN verification: the full audit passed 4,338 checks with zero incidents over 1,622,016 recounted decisions; checkpoint replay at 1,024/4,096/8,192 updates reproduced all decisions exactly (1,932 checks, maximum mean-NLL error 0); a supplementary recount passed 28 checks at 1e-12, and the first analytic recount failure (critical-value difference up to 1.254e-11) is preserved.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal verification; a second executor and recount algorithm are not external replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/audit_full.json",
+          "sha256": "a500fafd684316937c44c1f64ec0798119ca51af141645c53e847eecb6a44611"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/final_receipts_verification.json",
+          "sha256": "3a61c49a864839e85403f488f3c3a5ff79013d800b82ebffc4129f3fbad5a28e"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/statistics_initial_failure.json",
+          "sha256": "216210e94573076a77fb1432882a56017bd39479b2fd1102f7f54ecdc33f52c9"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_QTRAIN",
+      "source_units": [
+        "S014-L0013",
+        "S014-L0014",
+        "S014-L0015",
+        "S014-L0016",
+        "S014-L0055",
+        "S014-L0056",
+        "S014-L0057",
+        "S014-L0058",
+        "S014-L0059"
+      ]
+    },
+    {
+      "id": "D-QT-03",
+      "statement": "In OPT03-QTRAIN the mean answer loss fell between the last two 1,024-update windows in all twelve cases (four queries/school 0.3: seed 200 0.376 to 0.290), and seed 200's dense joint endpoint rose from 1.904% at 4,096 updates to 60.010% at 8,192.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Curves do not demonstrate convergence, a single cause or architectural incapacity; dense and matched modes kept separate",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/summary.json",
+          "sha256": "d750292e7b3f88862d4a5566e35dbaa94702a552b30e4c9b426a0bdbb4f9389c"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_recovery/37728384380/cohort/QTRAIN_paired_school0.3_seed200/progress.json",
+          "sha256": "03fca1fd6bbd377594b4b7997fa571875c3f510e6a00a88e64de9e51b5a2053f"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_QTRAIN",
+      "source_units": [
+        "S014-L0049",
+        "S014-L0051"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_QTRAIN_plan.json",
+        "sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5"
+      }
+    },
+    {
+      "id": "D-U16-01",
+      "statement": "OPT03-QTRAIN-U16 continued the 12 QTRAIN states from 8,192 to 16,384 updates (exact optimizer and RNG restoration): the additional budget improved the joint primary endpoint by +19.554 pp (exploratory paired t95 df2 14.862 to 24.247 pp), positive in all three seeds, yet no condition met the competence gate; four queries/school 0.3 rose from 28.225% to 84.674% joint validation (88.593/80.621/84.808%) with probes 88.086/80.469/84.607%, all below 95%.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; continued QTRAIN states, seeds 200-202",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Budget jointly changes updates, example exposure and compute; not a pure optimizer improvement",
+        "The favorable cell's 92.069% single-query accuracy is not compared as a win over the historical Transformer",
+        "Original H1 remains not supported under its recipe; this result does not reinterpret it",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/summary.json",
+          "sha256": "45c78687cf654daa037420693f2a5d398660109190d0d0e437de9d80499fb7ec"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/audit_full.json",
+          "sha256": "9c13c6b04243ce00ae3f57292639e9f5da13d02c17f8091f6a2aaa3891eac5c9"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/closure_receipt.json",
+          "sha256": "346f7b3c48edacbb351998ce858da91cbc192729fec7be0a1721661e2815b4f3"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_QTRAIN_U16",
+      "source_units": [
+        "S013-L0003",
+        "S013-L0007",
+        "S013-L0009",
+        "S013-L0011",
+        "S013-L0017",
+        "S013-L0018",
+        "S013-L0019",
+        "S013-L0020",
+        "S013-L0022",
+        "S013-L0024",
+        "S013-L0034",
+        "S013-L0050",
+        "S013-L0052",
+        "S013-L0069"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_QTRAIN_U16_plan.json",
+        "sha256": "a4093bb8d559404b9f68587b753f8cea180a1e75d33363a04c1f2c7ebcb22dc0"
+      }
+    },
+    {
+      "id": "D-U16-02",
+      "statement": "Among the seven prospective OPT03-QTRAIN-U16 contrasts, school 0.3 minus 0 (+24.144 pp, t95 10.353 to 37.934), queries x school (+44.821 pp, 23.666 to 65.976) and budget x queries (+34.274 pp, 13.967 to 54.581) excluded zero, while four minus one query (+31.785 pp, -8.128 to 71.697), budget x school (+21.410 pp) and the triple interaction (+36.212 pp) included zero.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; continued QTRAIN states",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Seven unadjusted intervals are not seven independent confirmations; including zero is not absence of effect",
+        "Tying, reinjection, recurrence, damage and growth were not intervened in this phase",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/summary.json",
+          "sha256": "45c78687cf654daa037420693f2a5d398660109190d0d0e437de9d80499fb7ec"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_QTRAIN_U16",
+      "source_units": [
+        "S013-L0030",
+        "S013-L0035",
+        "S013-L0036",
+        "S013-L0037",
+        "S013-L0038",
+        "S013-L0039",
+        "S013-L0040",
+        "S013-L0042",
+        "S013-L0044"
+      ],
+      "protocol": {
+        "path": "docs/research/OPT03_QTRAIN_U16_plan.json",
+        "sha256": "a4093bb8d559404b9f68587b753f8cea180a1e75d33363a04c1f2c7ebcb22dc0"
+      }
+    },
+    {
+      "id": "D-U16-03",
+      "statement": "OPT03-QTRAIN-U16 verification: audit 4,105 checks with zero incidents over 2,654,208 decisions; replay 2,196 checks with all decisions exact and maximum mean-NLL error 0; independent statistical recount 60 checks at 1e-12; minimum available RAM 14.172 GiB and timed windows summing to 16,464.282 s.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Update timers exclude other operations; complete cost and physical energy not measured",
+        "Internal verification, not external replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/audit_full.json",
+          "sha256": "9c13c6b04243ce00ae3f57292639e9f5da13d02c17f8091f6a2aaa3891eac5c9"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/final_receipts_verification.json",
+          "sha256": "a5ee2bb37d3014f78f5e80e692fb63d24241ecc1ef1eb188d6831a718c7032e5"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/closure_receipt.json",
+          "sha256": "346f7b3c48edacbb351998ce858da91cbc192729fec7be0a1721661e2815b4f3"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "OPT03_QTRAIN_U16",
+      "source_units": [
+        "S013-L0054",
+        "S013-L0060",
+        "S013-L0061",
+        "S013-L0062",
+        "S013-L0063",
+        "S013-L0064",
+        "S013-L0065"
+      ]
+    },
+    {
+      "id": "D-READ03-01",
+      "statement": "READ03 fitted 36 new heads on 12 frozen U16 states: query attention minus the query-conditioned local control gave +54.225 pp (exploratory t95 37.575 to 70.875 pp), minus uniform global aggregation +55.070 pp and minus the parent readout +58.464 pp, while local minus parent was +4.239 pp and uniform minus parent +3.394 pp; only four-queries/school-0.3 attention passed the joint gate in all three seeds.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; 12 frozen U16 states, bodies/dictionaries/decoder frozen",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Replication unit is the initialization (n=3 per condition); exploratory t95 df2 intervals, unadjusted, untruncated",
+        "Original H1 remains not supported under its recipe; this result does not reinterpret it",
+        "Head-versus-parent comparisons combine reading capacity and extra labels; not a pure attention effect",
+        "No equivalence margin was registered; no final test opened; not a confirmatory winner",
+        "Update timers exclude other operations; complete cost and physical energy not measured",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/READ03_review/37831051538/analysis/summary.json",
+          "sha256": "60aed96225919b77930e7df72b2669d82ff7e22095ecac000f2572b315e37675"
+        },
+        {
+          "path": "results/research/READ03_review/37831051538/closure_receipt.json",
+          "sha256": "c295d415b1eaeb9d997ff72f23cdf0adbe4cad45a1e601f897a35712aa258b8b"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "READ03",
+      "source_units": [
+        "S016-L0003",
+        "S016-L0005",
+        "S016-L0011",
+        "S016-L0012",
+        "S016-L0013",
+        "S016-L0014",
+        "S016-L0015",
+        "S016-L0017",
+        "S016-L0023",
+        "S016-L0024",
+        "S016-L0025",
+        "S016-L0026",
+        "S016-L0027",
+        "S016-L0028",
+        "S016-L0029",
+        "S016-L0030",
+        "S016-L0031",
+        "S016-L0032",
+        "S016-L0033",
+        "S016-L0034",
+        "S016-L0036",
+        "S016-L0040",
+        "S016-L0046"
+      ],
+      "protocol": {
+        "path": "docs/research/READ03_execution_plan.json",
+        "sha256": "d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0"
+      }
+    },
+    {
+      "id": "D-READ03-02",
+      "statement": "READ03 replay reproduced the 1,024/4,096/8,192 endpoints and recounted predictions and metrics with exact decisions and unchanged 1e-4 NLL tolerance; an independent statistical recount passed 27 checks with zero discrepancies, and the initial verifier packaging and Windows-path failures are preserved.",
+      "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal verification, not external scientific replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/READ03_review/37831051538/closure_receipt.json",
+          "sha256": "c295d415b1eaeb9d997ff72f23cdf0adbe4cad45a1e601f897a35712aa258b8b"
+        },
+        {
+          "path": "results/research/READ03_review/37831051538/final_receipts_verification.json",
+          "sha256": "8457863c50a8a8bf0dbf005d260ddbf4141fdfcba5dcef5edaa02cb7179f3254"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.D",
+      "study": "READ03",
+      "source_units": [
+        "S016-L0042",
+        "S016-L0044",
+        "S016-L0050",
+        "S016-L0054"
+      ]
+    }
+  ]
+}

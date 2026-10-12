@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-10-08T03:18:37.412782+00:00",
+  "status": "resource_stopped_between_checkpoints",
+  "complete_checkpoints": [
+    "OPT03D_pad0_fire0.5_seed100",
+    "OPT03D_pad0_fire0.5_seed101",
+    "OPT03D_pad0_fire0.5_seed102",
+    "OPT03D_pad0_fire1.0_seed100",
+    "OPT03D_pad0_fire1.0_seed101",
+    "OPT03D_pad0_fire1.0_seed102",
+    "OPT03D_pad1_fire0.5_seed100",
+    "OPT03D_pad1_fire0.5_seed101",
+    "OPT03D_pad1_fire0.5_seed102",
+    "OPT03D_pad1_fire1.0_seed100",
+    "OPT03D_pad1_fire1.0_seed101"
+  ],
+  "complete_count": 11,
+  "expected": 12,
+  "minimum_ram_gib": 8,
+  "available_ram_after_process_exit_gib": 7.570106506347656,
+  "new_trainings": 0,
+  "originals_preserved": true,
+  "resume": "Reuse same plan/environment completed cases; execute only missing checkpoint afterRAMgate"
+}

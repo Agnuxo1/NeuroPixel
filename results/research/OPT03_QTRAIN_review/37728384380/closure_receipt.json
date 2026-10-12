@@ -1,0 +1,41 @@
+{
+  "closed_utc": "2026-10-08T09:59:01.462537+00:00",
+  "status": "completed_development_recipe_with_no_eligible_condition",
+  "scientific_run": 37728384380,
+  "verification_run": 37732670363,
+  "source_commit": "6a5af5b68aaa9173edf46658dd8f9d16845fbad6",
+  "plan_sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5",
+  "completed_trainings": 12,
+  "repeated_closed_trainings": 0,
+  "initializations_per_condition": 3,
+  "array_checks": 4338,
+  "array_issues": [],
+  "replay_checks": 1932,
+  "replay_issues": [],
+  "individual_decisions_replayed_exactly": 1622016,
+  "statistical_recount_checks": 28,
+  "supplemental_precision_issue": {
+    "initial_failed_interval_checks": 4,
+    "max_analytic_interval_difference_proportion": 1.2535750215647568e-11,
+    "initial_failure_preserved": true,
+    "initial_tolerance_raised": false,
+    "diagnosis": "Independent analytic df2 quantile versus frozen SciPy numerical quantile; frozen CI retained, analytic CDF residual verified; no decision impact"
+  },
+  "eligible_conditions": [],
+  "selected_condition": null,
+  "test_opened": false,
+  "h1_status": "not_supported_unchanged",
+  "external_independent_replication": false,
+  "scientific_task3_complete": false,
+  "proof_sha256": {
+    "results/research/OPT03_QTRAIN_review/37728384380/audit_full.json": "a500fafd684316937c44c1f64ec0798119ca51af141645c53e847eecb6a44611",
+    "results/research/OPT03_QTRAIN_review/37728384380/final_receipts_verification.json": "3a61c49a864839e85403f488f3c3a5ff79013d800b82ebffc4129f3fbad5a28e",
+    "results/research/OPT03_QTRAIN_review/37728384380/final_receipt_anchors.json": "ba4afad4a96c29b92545321e55a21b1f7111f1463960753894634db081f6a7fc",
+    "results/research/OPT03_QTRAIN_review/37728384380/science_cohort_receipt.json": "4cf4d2d944cccfe7e33ec794584a88271b3dba3b39d664f9cbd27c97b594ea3a",
+    "results/research/OPT03_QTRAIN_review/37728384380/verification_cohort_receipt.json": "5d2f6887eb6951ffb41bb2026d895b6098899a6cb968e9c5866db2a8d3da321b",
+    "results/research/OPT03_QTRAIN_review/37728384380/analysis/summary.json": "d750292e7b3f88862d4a5566e35dbaa94702a552b30e4c9b426a0bdbb4f9389c",
+    "results/research/OPT03_QTRAIN_review/37728384380/analysis/analysis_manifest.json": "82534529dacaadc110967eb5af2a410bba9c8cfdd278c24f14bcdf829e149bc2",
+    "results/research/OPT03_QTRAIN_review/37728384380/statistics_initial_failure.json": "216210e94573076a77fb1432882a56017bd39479b2fd1102f7f54ecdc33f52c9",
+    "docs/research/OPT03_QTRAIN_results.md": "d14170174001689bde735ead59291ff60b585baa0386356cda706ec086577f79"
+  }
+}

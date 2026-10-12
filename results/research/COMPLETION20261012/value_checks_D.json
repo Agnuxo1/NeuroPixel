@@ -1,0 +1,1012 @@
+{
+  "schema": 1,
+  "task": "A18.2.D",
+  "recounts": {
+    "vis07_nca_mean": 94.35726210350585,
+    "vis07_cnn_mean": 90.84028937117418,
+    "vis07_diff_mean": 3.5169727323316637,
+    "vis07_diff_lo": 1.9304594487954911,
+    "vis07_diff_hi": 5.103486015867836,
+    "vis07_wall": 447.5551254929999,
+    "vis07_cpu": 894.8373666919999,
+    "vis07_depth0": 22.58208124652198,
+    "vis07_depth4": 78.21925431274346,
+    "vis07_depth8": 94.35726210350585,
+    "vis07_depth16": 53.099610461880914,
+    "vis07_depth32": 16.66110183639399,
+    "vis07_rms0": 0.5430672464456949,
+    "vis07_rms16": 149.26239389670232,
+    "vis07_rms32": 134843.49384504196,
+    "qtrain_s200_loss_prev": 0.37615710274258163,
+    "qtrain_s200_loss_last": 0.29008569303914555
+  },
+  "claims": [
+    {
+      "claim": "D-DEV04-01",
+      "checks": [
+        {
+          "check": "16.244",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "10.586",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "21.902",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "5.658",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "15.988",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "18.639",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "14.105",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "24.524",
+          "source": "results/research/DEV04_review",
+          "ok": true
+        },
+        {
+          "check": "32.257",
+          "source": "results/research/DEV04_review",
+          "ok": true
+        },
+        {
+          "check": "99.780",
+          "source": "results/research/DEV04_review",
+          "ok": true
+        },
+        {
+          "check": "67.261",
+          "source": "results/research/DEV04_review",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-DEV04-02",
+      "checks": [
+        {
+          "check": "9732096",
+          "source": "results/research/DEV04_review/37845945011/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "41",
+          "source": "results/research/DEV04_review/37845945011/",
+          "ok": true
+        },
+        {
+          "check": "text:2484f3c5917e474ca3755bcdbbaca7d322077615ba47d51653116042d980f20a",
+          "source": "results/research/DEV04_review/37845945011/closure_receipt.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-GLOB05-01",
+      "checks": [
+        {
+          "check": "6.278",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "4.108",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "8.449",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "2.171",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "9.966",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "5.868",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "14.063",
+          "source": "results/research/GLOB05_review/37887762153/",
+          "ok": true
+        },
+        {
+          "check": "86.072",
+          "source": "results/research/GLOB05_review",
+          "ok": true
+        },
+        {
+          "check": "98.767",
+          "source": "results/research/GLOB05_review",
+          "ok": true
+        },
+        {
+          "check": "text:\"global_gate_all_twelve\": false",
+          "source": "results/research/GLOB05_review/37887762153/closure_receipt.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-GLOB05-02",
+      "checks": [
+        {
+          "check": "3538944",
+          "source": "results/research/GLOB05_review/37887762153/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "3120",
+          "source": "results/research/GLOB05_review/37887762153/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "52",
+          "source": "results/research/GLOB05_review/37887762153/closure_receipt.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-SCN06-01",
+      "checks": [
+        {
+          "check": "13",
+          "source": "results/research/SCN06_review",
+          "ok": true
+        },
+        {
+          "check": "14",
+          "source": "results/research/SCN06_review",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-SCN06-02",
+      "checks": [
+        {
+          "check": "75",
+          "source": "results/research/SCN06_rank_census/receipt.json",
+          "ok": true
+        },
+        {
+          "check": "16",
+          "source": "results/research/SCN06_rank_census/receipt.json",
+          "ok": true
+        },
+        {
+          "check": "32",
+          "source": "results/research/SCN06_rank_census/receipt.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-VIS07-01",
+      "checks": [
+        {
+          "check": "recount:vis07_nca_mean",
+          "expected": "94.357",
+          "observed": 94.35726210350585,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_cnn_mean",
+          "expected": "90.840",
+          "observed": 90.84028937117418,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_diff_mean",
+          "expected": "3.517",
+          "observed": 3.5169727323316637,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_diff_lo",
+          "expected": "1.930",
+          "observed": 1.9304594487954911,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_diff_hi",
+          "expected": "5.103",
+          "observed": 5.103486015867836,
+          "ok": true
+        },
+        {
+          "check": "1715",
+          "source": "results/research/VIS07MAIN_cloud",
+          "ok": true
+        },
+        {
+          "check": "1614",
+          "source": "results/research/VIS07MAIN_cloud",
+          "ok": true
+        },
+        {
+          "check": "1697",
+          "source": "results/research/VIS07MAIN_cloud",
+          "ok": true
+        },
+        {
+          "check": "5056",
+          "source": "results/research/VIS07MAIN_cloud",
+          "ok": true
+        },
+        {
+          "check": "5039",
+          "source": "results/research/VIS07MAIN_cloud",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-VIS07-02",
+      "checks": [
+        {
+          "check": "recount:vis07_depth0",
+          "expected": "22.582",
+          "observed": 22.58208124652198,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_depth4",
+          "expected": "78.219",
+          "observed": 78.21925431274346,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_depth8",
+          "expected": "94.357",
+          "observed": 94.35726210350585,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_depth16",
+          "expected": "53.100",
+          "observed": 53.099610461880914,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_depth32",
+          "expected": "16.661",
+          "observed": 16.66110183639399,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_rms0",
+          "expected": "0.543",
+          "observed": 0.5430672464456949,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_rms16",
+          "expected": "149.3",
+          "observed": 149.26239389670232,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_rms32",
+          "expected": "134843",
+          "observed": 134843.49384504196,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-VIS07-03",
+      "checks": [
+        {
+          "check": "98835",
+          "source": "results/research/VIS07REPLAY_cloud",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-VIS07-04",
+      "checks": [
+        {
+          "check": "recount:vis07_wall",
+          "expected": "447.555",
+          "observed": 447.5551254929999,
+          "ok": true
+        },
+        {
+          "check": "recount:vis07_cpu",
+          "expected": "894.837",
+          "observed": 894.8373666919999,
+          "ok": true
+        },
+        {
+          "check": "2240",
+          "source": "results/research/VIS07MAIN_cloud",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-OPT03D-01",
+      "checks": [
+        {
+          "check": "23.568",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "16.732",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "28.662",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "26.221",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "7.292",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "-4.639",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "4.395",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "-11.985",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "26.568",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "23.763",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "30.013",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-OPT03D-02",
+      "checks": [
+        {
+          "check": "860",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true
+        },
+        {
+          "check": "calc:73728=12*(2048+4096)",
+          "source": "results/research/OPT03_root_review/37696760073/",
+          "ok": true,
+          "detail": {
+            "value": 73728,
+            "missing_literals": [],
+            "tolerance": 0.500000000001
+          }
+        },
+        {
+          "check": "text:f1caada1af01d0078877b55800e3e7928e7bc8832993b8c189e0ffae2cdadb67",
+          "source": "results/research/OPT03_root_review/37696760073/plan_byte_provenance_check.json",
+          "ok": true
+        },
+        {
+          "check": "text:bf54be3c4c8e30885b330e67e92195622e28c85a49e317358d106699d40008df",
+          "source": "results/research/OPT03_root_review/37696760073/plan_byte_provenance_check.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-MODE-01",
+      "checks": [
+        {
+          "check": "calc:11.100~0.001=mean([20.361-17.969, 53.711-27.344, 31.982-23.047, 35.107-26.953, 39.844-27.734, 41.846-33.203])",
+          "source": "results/research/OPT03_modes",
+          "ok": true,
+          "detail": {
+            "value": 11.100166666666665,
+            "missing_literals": [],
+            "tolerance": 0.001
+          }
+        },
+        {
+          "check": "calc:-5.200~0.001=mean([8.398-14.844, 6.689-10.156, 13.672-17.188, 9.570-10.156, 14.844-23.047, 25.391-34.375])",
+          "source": "results/research/OPT03_modes",
+          "ok": true,
+          "detail": {
+            "value": -5.200333333333334,
+            "missing_literals": [],
+            "tolerance": 0.001
+          }
+        },
+        {
+          "check": "16.300",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "-4.107",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "36.708",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "8.789",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "15.592",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "53.711",
+          "source": "results/research/OPT03_modes",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-MODE-02",
+      "checks": [
+        {
+          "check": "110592",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "1052",
+          "source": "results/research/OPT03_modes_review/audit.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-ROLE-01",
+      "checks": [
+        {
+          "check": "7.503",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "0.521",
+          "source": "results/research/OPT03_roles_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "2.572",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "2.344",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "13.216",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "63.672",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "29.557",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "80.501",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "49.886",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        },
+        {
+          "check": "82.292",
+          "source": "results/research/OPT03_roles/summary.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-ROLE-02",
+      "checks": [
+        {
+          "check": "1384",
+          "source": "results/research/OPT03_roles_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "165888",
+          "source": "results/research/OPT03_roles_review/audit.json",
+          "ok": true
+        },
+        {
+          "check": "162816",
+          "source": "results/research/OPT03_roles_review",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-QT-01",
+      "checks": [
+        {
+          "check": "1.428",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "28.225",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "0.138",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "0.220",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "74.677",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "2.466",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "7.532",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "14.647",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "13.439",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "26.715",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "-35.416",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "64.711",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "76.599",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "86.865",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-QT-02",
+      "checks": [
+        {
+          "check": "4338",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/audit_full.json",
+          "ok": true
+        },
+        {
+          "check": "1622016",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/audit_full.json",
+          "ok": true
+        },
+        {
+          "check": "1932",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/",
+          "ok": true
+        },
+        {
+          "check": "text:1.2535750215647568e-11",
+          "source": "results/research/OPT03_QTRAIN_review/37728384380/statistics_initial_failure.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-QT-03",
+      "checks": [
+        {
+          "check": "recount:qtrain_s200_loss_prev",
+          "expected": "0.376",
+          "observed": 0.37615710274258163,
+          "ok": true
+        },
+        {
+          "check": "recount:qtrain_s200_loss_last",
+          "expected": "0.290",
+          "observed": 0.29008569303914555,
+          "ok": true
+        },
+        {
+          "check": "1.904",
+          "source": "results/research/OPT03_QTRAIN_recovery/37728384380/cohort/QTRAIN_paired_school0.3_seed200",
+          "ok": true
+        },
+        {
+          "check": "60.010",
+          "source": "results/research/OPT03_QTRAIN_recovery/37728384380/cohort/QTRAIN_paired_school0.3_seed200",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-U16-01",
+      "checks": [
+        {
+          "check": "19.554",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "14.862",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "24.247",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "84.674",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "88.593",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "80.621",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "84.808",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "18.361",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "0.903",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "4.289",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "88.086",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "80.469",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "84.607",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "calc:92.069~0.001=mean([94.287, 89.960, 91.962])",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true,
+          "detail": {
+            "value": 92.06966666666666,
+            "missing_literals": [],
+            "tolerance": 0.001
+          }
+        },
+        {
+          "check": "80.176",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "63.184",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "0.151",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "0.142",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-U16-02",
+      "checks": [
+        {
+          "check": "24.144",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "10.353",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "37.934",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "44.821",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "23.666",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "65.976",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "34.274",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "13.967",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "54.581",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "31.785",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "-8.128",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "71.697",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "21.410",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "36.212",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "-125.007",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "197.432",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-U16-03",
+      "checks": [
+        {
+          "check": "4105",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/audit_full.json",
+          "ok": true
+        },
+        {
+          "check": "2654208",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/audit_full.json",
+          "ok": true
+        },
+        {
+          "check": "2196",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "14.172",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        },
+        {
+          "check": "16464.282",
+          "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-READ03-01",
+      "checks": [
+        {
+          "check": "54.225",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "37.575",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "70.875",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "55.070",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "58.464",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "4.239",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "3.394",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "48.218",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "61.455",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "99.762",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "99.835",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "D-READ03-02",
+      "checks": [
+        {
+          "check": "27",
+          "source": "results/research/READ03_review/37831051538/",
+          "ok": true
+        },
+        {
+          "check": "text:d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0",
+          "source": "results/research/READ03_review/37831051538/closure_receipt.json",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

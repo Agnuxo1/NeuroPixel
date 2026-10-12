@@ -1,0 +1,276 @@
+{
+  "checkpoint_sha256": "87605aeac4c1bfcea6d1f0162a542f416c51bb83dd05e4eda3eaf467c7fee5b2",
+  "config": {
+    "fire_rate": 0.5,
+    "freeze_pad": true,
+    "run_id": "OPT03D_pad1_fire0.5_seed102",
+    "seed": 102,
+    "updates": 8192
+  },
+  "derived_sha256": {
+    "OPT03D_pad1_fire0.5_seed102_probe.npz": "b677278659b51c4ec53e415991800bf4e81a9224f0ed35e32cf377f0de79173e",
+    "OPT03D_pad1_fire0.5_seed102_validation.npz": "fb4f6f7aecbc188cb11e06f52e8e1806e228100d0f591379462498f95da0ab2e"
+  },
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": "12.4",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_tf32": true,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "gpu_name": null,
+    "matmul_tf32": false,
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.7",
+    "threads": 2,
+    "versions": {
+      "numpy": "2.2.6",
+      "psutil": "6.1.1",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cu124"
+    }
+  },
+  "no_optimizer_or_gradients": true,
+  "panels": {
+    "probe": {
+      "dense": {
+        "accuracy": 0.611328125,
+        "binding": 0.31640625,
+        "nll": 1.455937971707139,
+        "per_role": [
+          0.28125,
+          0.8984375,
+          0.3515625,
+          0.9140625
+        ]
+      },
+      "mask_binding_range": [
+        0.4140625,
+        0.4609375
+      ],
+      "masked": [
+        {
+          "accuracy": 0.708984375,
+          "binding": 0.45703125,
+          "nll": 0.8152406605630741,
+          "per_role": [
+            0.40625,
+            0.9453125,
+            0.5078125,
+            0.9765625
+          ],
+          "seed": 78000
+        },
+        {
+          "accuracy": 0.6875,
+          "binding": 0.43359375,
+          "nll": 0.8025471075773192,
+          "per_role": [
+            0.359375,
+            0.921875,
+            0.5078125,
+            0.9609375
+          ],
+          "seed": 78001
+        },
+        {
+          "accuracy": 0.6953125,
+          "binding": 0.453125,
+          "nll": 0.8240942762177553,
+          "per_role": [
+            0.46875,
+            0.9296875,
+            0.4375,
+            0.9453125
+          ],
+          "seed": 78002
+        },
+        {
+          "accuracy": 0.681640625,
+          "binding": 0.4140625,
+          "nll": 0.8411285202888915,
+          "per_role": [
+            0.390625,
+            0.9140625,
+            0.4375,
+            0.984375
+          ],
+          "seed": 78003
+        },
+        {
+          "accuracy": 0.697265625,
+          "binding": 0.4375,
+          "nll": 0.8201475615315258,
+          "per_role": [
+            0.390625,
+            0.953125,
+            0.484375,
+            0.9609375
+          ],
+          "seed": 78004
+        },
+        {
+          "accuracy": 0.697265625,
+          "binding": 0.4453125,
+          "nll": 0.7653023393830557,
+          "per_role": [
+            0.390625,
+            0.9453125,
+            0.5,
+            0.953125
+          ],
+          "seed": 78005
+        },
+        {
+          "accuracy": 0.69140625,
+          "binding": 0.4375,
+          "nll": 0.8273558341889065,
+          "per_role": [
+            0.3984375,
+            0.8984375,
+            0.4765625,
+            0.9921875
+          ],
+          "seed": 78006
+        },
+        {
+          "accuracy": 0.70703125,
+          "binding": 0.4609375,
+          "nll": 0.7995635010811192,
+          "per_role": [
+            0.40625,
+            0.9375,
+            0.515625,
+            0.96875
+          ],
+          "seed": 78007
+        }
+      ],
+      "masked_minus_dense_binding": 0.1259765625,
+      "mean_masked_binding": 0.4423828125
+    },
+    "validation": {
+      "dense": {
+        "accuracy": 0.630859375,
+        "binding": 0.33203125,
+        "nll": 1.3197053381359956,
+        "per_role": [
+          0.328125,
+          0.8984375,
+          0.3359375,
+          0.9609375
+        ]
+      },
+      "mask_binding_range": [
+        0.37109375,
+        0.46484375
+      ],
+      "masked": [
+        {
+          "accuracy": 0.71484375,
+          "binding": 0.46484375,
+          "nll": 0.7993344623753135,
+          "per_role": [
+            0.4453125,
+            0.984375,
+            0.484375,
+            0.9453125
+          ],
+          "seed": 78000
+        },
+        {
+          "accuracy": 0.671875,
+          "binding": 0.390625,
+          "nll": 0.8272308883540973,
+          "per_role": [
+            0.4140625,
+            0.9375,
+            0.3671875,
+            0.96875
+          ],
+          "seed": 78001
+        },
+        {
+          "accuracy": 0.693359375,
+          "binding": 0.42578125,
+          "nll": 0.8292746746099567,
+          "per_role": [
+            0.40625,
+            0.9765625,
+            0.4453125,
+            0.9453125
+          ],
+          "seed": 78002
+        },
+        {
+          "accuracy": 0.666015625,
+          "binding": 0.37109375,
+          "nll": 0.8048702540858924,
+          "per_role": [
+            0.390625,
+            0.9609375,
+            0.3515625,
+            0.9609375
+          ],
+          "seed": 78003
+        },
+        {
+          "accuracy": 0.68359375,
+          "binding": 0.40625,
+          "nll": 0.825090693207835,
+          "per_role": [
+            0.421875,
+            0.9609375,
+            0.390625,
+            0.9609375
+          ],
+          "seed": 78004
+        },
+        {
+          "accuracy": 0.708984375,
+          "binding": 0.45703125,
+          "nll": 0.758145047514438,
+          "per_role": [
+            0.4453125,
+            0.9609375,
+            0.46875,
+            0.9609375
+          ],
+          "seed": 78005
+        },
+        {
+          "accuracy": 0.6640625,
+          "binding": 0.3828125,
+          "nll": 0.8212725034441852,
+          "per_role": [
+            0.3828125,
+            0.953125,
+            0.3828125,
+            0.9375
+          ],
+          "seed": 78006
+        },
+        {
+          "accuracy": 0.69921875,
+          "binding": 0.44921875,
+          "nll": 0.8234580725591263,
+          "per_role": [
+            0.4609375,
+            0.953125,
+            0.4375,
+            0.9453125
+          ],
+          "seed": 78007
+        }
+      ],
+      "masked_minus_dense_binding": 0.08642578125,
+      "mean_masked_binding": 0.41845703125
+    }
+  },
+  "plan_sha256": "198407ac903f34113d29b96d2197423270a462ce3d296aa04a7ebe2a6ba1f1f9",
+  "seconds": 8.634150600002613,
+  "state_unchanged": true,
+  "test_accessed": false
+}

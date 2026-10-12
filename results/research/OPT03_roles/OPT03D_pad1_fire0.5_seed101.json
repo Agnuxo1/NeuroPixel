@@ -1,0 +1,152 @@
+{
+  "config": {
+    "fire_rate": 0.5,
+    "freeze_pad": true,
+    "run_id": "OPT03D_pad1_fire0.5_seed101",
+    "seed": 101,
+    "updates": 8192
+  },
+  "derived_sha256": {
+    "OPT03D_pad1_fire0.5_seed101_probe_both.npz": "1eed4f7ca13f599b630f5d925669b766d583f76863c00b3fa9c3281c05e1772e",
+    "OPT03D_pad1_fire0.5_seed101_probe_pair_relocate.npz": "5be2c64129351ae4d3c6d8c7b8be86d97484b9140415d7bf5aba40b337bd32b8",
+    "OPT03D_pad1_fire0.5_seed101_probe_query_flip.npz": "72b6e47bdeaae6eceecfb350582b619d3c5a4042790c846458eff0c0bc897e01",
+    "OPT03D_pad1_fire0.5_seed101_validation_both.npz": "fcb5ef7120b2ac356be8b23f3ac34b8bb752b89e5e3d26515942141fe05c3d16",
+    "OPT03D_pad1_fire0.5_seed101_validation_pair_relocate.npz": "edbfa540ee94f2fd1f9e1d8a9131cfeb1f78f62871f004283d6fdfb7018eef82",
+    "OPT03D_pad1_fire0.5_seed101_validation_query_flip.npz": "ced4a7e160ab63b9404ea1c16b90db1f15b037a90ae877f604de386eacd998ec"
+  },
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": "12.4",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_tf32": true,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "gpu_name": null,
+    "matmul_tf32": false,
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.7",
+    "threads": 2,
+    "versions": {
+      "numpy": "2.2.6",
+      "psutil": "6.1.1",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cu124"
+    }
+  },
+  "new_trainings": 0,
+  "original_decisions_reused": true,
+  "panels": {
+    "probe": {
+      "both": {
+        "accuracy": 0.685546875,
+        "binding": 0.41357421875,
+        "candidate_adherence": 0.83837890625,
+        "control_accuracy": 0.95751953125,
+        "control_joint_accuracy": 0.939453125,
+        "joint_binding": 0.16748046875,
+        "mean_nll": 0.8412089561755631,
+        "per_role": [
+          0.396484375,
+          0.9443359375,
+          0.4306640625,
+          0.970703125
+        ],
+        "query_prediction_change_rate": 0.51953125,
+        "unchanged_prediction_rate": 0.48046875
+      },
+      "pair_relocate": {
+        "accuracy": 0.69775390625,
+        "binding": 0.43798828125,
+        "candidate_adherence": 0.845703125,
+        "control_accuracy": 0.95751953125,
+        "control_joint_accuracy": 0.939453125,
+        "joint_binding": 0.2197265625,
+        "mean_nll": 0.8128629485101722,
+        "per_role": [
+          0.4482421875,
+          0.9443359375,
+          0.427734375,
+          0.970703125
+        ],
+        "query_prediction_change_rate": 0.51318359375,
+        "unchanged_prediction_rate": 0.48681640625
+      },
+      "query_flip": {
+        "accuracy": 0.69140625,
+        "binding": 0.42529296875,
+        "candidate_adherence": 0.8203125,
+        "control_accuracy": 0.95751953125,
+        "control_joint_accuracy": 0.95751953125,
+        "joint_binding": 0.03955078125,
+        "mean_nll": 0.8206109375619729,
+        "per_role": [
+          0.416015625,
+          0.939453125,
+          0.4345703125,
+          0.9755859375
+        ],
+        "query_prediction_change_rate": 0.14208984375,
+        "unchanged_prediction_rate": 0.85791015625
+      }
+    },
+    "validation": {
+      "both": {
+        "accuracy": 0.69189453125,
+        "binding": 0.4140625,
+        "candidate_adherence": 0.83837890625,
+        "control_accuracy": 0.9697265625,
+        "control_joint_accuracy": 0.95947265625,
+        "joint_binding": 0.1513671875,
+        "mean_nll": 0.8074329716932749,
+        "per_role": [
+          0.4130859375,
+          0.97265625,
+          0.4150390625,
+          0.966796875
+        ],
+        "query_prediction_change_rate": 0.52783203125,
+        "unchanged_prediction_rate": 0.47216796875
+      },
+      "pair_relocate": {
+        "accuracy": 0.693359375,
+        "binding": 0.4169921875,
+        "candidate_adherence": 0.830078125,
+        "control_accuracy": 0.9697265625,
+        "control_joint_accuracy": 0.95947265625,
+        "joint_binding": 0.197265625,
+        "mean_nll": 0.8134797031552108,
+        "per_role": [
+          0.4052734375,
+          0.97265625,
+          0.4287109375,
+          0.966796875
+        ],
+        "query_prediction_change_rate": 0.52099609375,
+        "unchanged_prediction_rate": 0.47900390625
+      },
+      "query_flip": {
+        "accuracy": 0.711181640625,
+        "binding": 0.44775390625,
+        "candidate_adherence": 0.84814453125,
+        "control_accuracy": 0.974609375,
+        "control_joint_accuracy": 0.974609375,
+        "joint_binding": 0.0322265625,
+        "mean_nll": 0.7670310833955695,
+        "per_role": [
+          0.3896484375,
+          0.9736328125,
+          0.505859375,
+          0.9755859375
+        ],
+        "query_prediction_change_rate": 0.13525390625,
+        "unchanged_prediction_rate": 0.86474609375
+      }
+    }
+  },
+  "plan_sha256": "06de45dfd8d861dfd6bfb49ef05c217dfb8b36a744fec7740fbd25ab84cd470d",
+  "seconds": 23.326296899991576,
+  "state_unchanged": true,
+  "test_accessed": false
+}
