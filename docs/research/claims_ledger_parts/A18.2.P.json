@@ -1,0 +1,367 @@
+{
+  "schema": 1,
+  "authors": [
+    "Francisco Angulo de Lafuente"
+  ],
+  "claims": [
+    {
+      "id": "P-ARCH-01",
+      "statement": "NeuroPixel represents a recurrent neural state on a spatial canvas updated by a learned local residual rule, s[t+1] = s[t] + W2 ReLU(W1 concat(s[t], K*s[t], u) + b1) + b2, with a learned depthwise 3x3 perception K, a learned seed, an RGB retina for identity channels and a shared projection/dictionary decoder; it is implemented in PyTorch and in three graphics backends: a scalar RGBA32F fragment renderer, a four-channel vector fragment renderer and an OpenGL 4.6 compute backend with SSBO weights and shared pixel tiles.",
+      "population": "The NeuroPixel software in this repository (PyTorch model and three OpenGL backends)",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Implementation description only; not a biological brain or a complete causal explanation",
+        "The scanner applies the decoder beyond the supervised output cell; semantic correctness at every displayed cell is not established",
+        "Learned cellular updates and GPU/WebGL image execution have primary antecedents (Mordvintsev et al., 2020); no priority is claimed",
+        "Memory and rest-state behaviour shown in pre-scientific figures are not established by current evidence",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "neuropixel/rendering/nca_gl.py",
+          "sha256": "ed8ac459e5ba2dfd9a3f1cff63f0bd5a2084a8e86b78d9df67647da53889d2dc"
+        },
+        {
+          "path": "neuropixel/rendering/nca_gl_vector.py",
+          "sha256": "9ad10872c87b8ecf8215cb40713fe151b0b9d901b4574d0e03387f653304f721"
+        },
+        {
+          "path": "neuropixel/rendering/nca_gl_compute.py",
+          "sha256": "555d9b2204e88f2b013c99ebb94157dd96ef264fa72e335d98dd11efc69f4ff3"
+        },
+        {
+          "path": "neuropixel/model.py",
+          "sha256": "bbad5a53208d1cb5fa41ea33925196fe1447710ff5fbcd4c201fb4f09a0d9db8"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "IMPLEMENTATION",
+      "source_units": [
+        "S001-L0009",
+        "S001-L0031",
+        "S001-L0037",
+        "S001-L0047",
+        "S003-L0013",
+        "S003-L0017",
+        "S003-L0019",
+        "S003-L0021",
+        "S003-L0023",
+        "S021-L0006"
+      ]
+    },
+    {
+      "id": "P-GPU-01",
+      "statement": "Graphics execution reproduces the neural computation within the registered checks: the extended fragment preflight passed 136 physical RTX 3090 checks (states, masks, retina, logits and decisions); learned deployment reproduced all 320 tested decisions of the five selected visual models (first 64 official test rows each) against native CUDA and original CPU predictions; the Torch-free compute preflight passed 21 checks across seven workloads.",
+      "population": "The NeuroPixel software in this repository (PyTorch model and three OpenGL backends); RTX 3090, FP32",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Engineering validations on fixed subsets, not new training realizations or outside replications",
+        "Pointwise logit and mean NLL limits as registered; no claim beyond the tested rows",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER09_preflight/original_20261009A/receipt.json",
+          "sha256": "81f8571c4605a5a040c9a3afb695a33e4420bd16837f9cee51d2c8decb759cf8"
+        },
+        {
+          "path": "results/research/RENDER08_preflight/local_gpu_20261009B/receipt.json",
+          "sha256": "2164934499e6757697694ee985ebf8be45731be095561773dc3995d241ca6b82"
+        },
+        {
+          "path": "results/research/VIS07_learned_gpu/receipt.json",
+          "sha256": "e6569cb60dfcd2c2b85399e91d07688c59cedc13f7b065e49ed27adf63978b02"
+        },
+        {
+          "path": "results/research/RENDER10_preflight/render_only_20261009B/receipt.json",
+          "sha256": "cbb00ff8aee3ae76159ad2ea964a5d00071080be32b41e8c5396a23c2bd3751d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "GPU_FIDELITY",
+      "source_units": [
+        "S001-L0025",
+        "S001-L0100",
+        "S003-L0007",
+        "S003-L0025",
+        "S003-L0079",
+        "S021-L0009",
+        "S022-L0014"
+      ]
+    },
+    {
+      "id": "P-VIEW-01",
+      "statement": "The interactive VIS07 viewer exposes all sixteen raw channels, an RGB projection, per-cell decoder probabilities and reset/depth controls; archive mode passed 50 HTTP checks and browser controls, live physical GPU integration passed 27 trajectory gates plus 52 HTTP checks including the ten TRAIN resets, and a separate CPU/Mesa execution passed the same internal endpoint.",
+      "population": "VIS07 viewer software on the RTX 3090 host and a separate CPU/Mesa runner",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Software integration checks; not evidence of semantic interpretability",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/VIS07_live_viewer/offline_20261009B/http_verification.json",
+          "sha256": "1e0c412de3689dd79543238e9a34ca44e5ae889664b3a42a3245cd9318b6f648"
+        },
+        {
+          "path": "results/research/VIS07_live_viewer/live_20261009A/http_verification.json",
+          "sha256": "e7caa15f946c135c8e0228bd57b5cee46f62bb93592444657ba3b7e0f26a8dcc"
+        },
+        {
+          "path": "results/research/VIS07_live_viewer/live_20261009A/server/receipt.json",
+          "sha256": "e81a35aa1af5bb34eeae9a77fe745dbb962746d010709081c4ecfbf0ea619ee5"
+        },
+        {
+          "path": "results/research/VIS07_viewer_software_review/37936500542/http_verification.json",
+          "sha256": "93be72594021677cec3404e751c847da1240720917c512dade737620eaa3f574"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "VIEWER",
+      "source_units": [
+        "S001-L0089",
+        "S003-L0083",
+        "S021-L0017",
+        "S022-L0021"
+      ]
+    },
+    {
+      "id": "P-ANIM-01",
+      "statement": "The README animations are captures of actual model states linked by SHA-256 in docs/animations/manifest.json, not synthetic artwork; the trained-trajectory GIF is an actual GPU-rendered capture of the selected VIS07 model (registered seed 240, fixed TRAIN digit 0), slowed for inspection, with colours projecting raw channels.",
+      "population": "Five README GIFs under docs/animations/",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Display colours do not change model states or prove semantic causality",
+        "The separate scanner figure docs/img/thinking.gif comes from the pre-scientific figure script and is not in the scientific manifest",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "docs/animations/manifest.json",
+          "sha256": "da89d5efc4670a19a76eea193faa3e5245fa687ee084d5eaf43e0857a5376c78"
+        },
+        {
+          "path": "results/research/VIS07_learned_gpu/receipt.json",
+          "sha256": "e6569cb60dfcd2c2b85399e91d07688c59cedc13f7b065e49ed27adf63978b02"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "ANIMATIONS",
+      "source_units": [
+        "S001-L0017",
+        "S001-L0019",
+        "S001-L0051",
+        "S001-L0055",
+        "S001-L0067",
+        "S001-L0075",
+        "S001-L0083",
+        "S001-L0097",
+        "S003-L0073",
+        "S021-L0007",
+        "S022-L0011"
+      ]
+    },
+    {
+      "id": "P-COST-01",
+      "statement": "VIS07 training plus DEV selection cost 413.318 s wall and 826.410 s process CPU time for the five NeuroPixel runs versus 34.237 s and 68.427 s for the five CNN runs: the visual accuracy advantage carried a greater measured training cost.",
+      "population": "VIS07 main cohort, five paired seeds",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Excludes installation, scheduling, compilation, transfers, storage and verification; no energy measurement",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/VIS07MAIN_cloud/37908785698/raw.zip",
+          "sha256": "6677eb3c5d8e04fad5d6ed2947c707bc5ab0761a12f654b4b5972cf9bd648ca3"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "VIS07",
+      "source_units": [
+        "S003-L0067"
+      ],
+      "protocol": {
+        "path": "docs/research/VIS07_execution_plan.json",
+        "sha256": "acb20b8edfeea6c287531ee14924a19b258de6377ed93c24da49667263f3bd3e"
+      }
+    },
+    {
+      "id": "P-AVAIL-01",
+      "statement": "Frozen plans, source commits, checkpoints, datasets, saved predictions or states, failed attempts and SHA-256 manifests are retained for the indexed studies - in this repository or, for large recovery archives, on the project's local disks - except the item-5 CPU archive, its analysis files and the historical reassessment outputs, which are unavailable.",
+      "population": "All indexed NeuroPixel study reports",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Large recovery archives (for example OPT03_QTRAIN_U16_recovery and READ03_recovery) remain outside the Git tree",
+        "Publication and internal replay are not peer review or outside replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/COMPLETION20261012/G0_inventory_summary.json",
+          "sha256": "080f96d385046270e0a3179cb9f45b956c461505e999b7f3ccec275a83a8859c"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/historical_receipt_import.json",
+          "sha256": "5ff6f2c7a97c3f49fbfab8dfd024ee41089253a9c0a535449b62bd3f6dd31927"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/dependency_import_A18.2.D.json",
+          "sha256": "ee20a67bdd3b66db6a93ac955d914ef82048e582d5becd2b665768a4d5443867"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json",
+          "sha256": "e11cb8a0f53263d71cddb7c6bd8622fd772320d6e05ff5a540899c3d3e0ccade"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "AVAILABILITY",
+      "source_units": [
+        "S001-L0096",
+        "S001-L0098",
+        "S003-L0073",
+        "S021-L0003",
+        "S021-L0005",
+        "S021-L0011",
+        "S021-L0013",
+        "S022-L0017"
+      ]
+    },
+    {
+      "id": "P-MATH-01",
+      "statement": "The completion kit implements nonnormal-Jacobian diagnostics motivated by the Crouzeix result (openai/math family 325), exact finite Boolean-noise controls (family 119) and a leaky-tanh reference field with an exact-weight contraction certificate; its 38 contract and 25 extension tests passed in the pinned environment.",
+      "population": "completion_kit modules in this repository",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Applicability requires the stated hypotheses",
+        "The certificate concerns ideal real arithmetic and fixed input",
+        "No useful indefinite memory, all-time GPU roundoff control or empirical advantage of the new mathematics is shown",
+        "Formal proof rebuilding is a separate gate (task M3)",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "completion_kit/math_diagnostics.py",
+          "sha256": "07c1cfb04b2ec9bff090a2b257e6fbeb0e5b3ad3a90145d08d77f96fd91ae2ed"
+        },
+        {
+          "path": "completion_kit/stable_field.py",
+          "sha256": "e3f70403f3c88590812fd6470f89df49ee5d5ab3512f103b44fefc80dd204a5c"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_contracts.txt",
+          "sha256": "40552ed1ca22c54b8be5dba98bf476d1920651fd95cb5e327c0fdad51c9b4da2"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_extensions.txt",
+          "sha256": "82cccdc12db6e7a738c5da84e888402caa3f0c5514c2bb9f1431e1dd6354db9c"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "COMPLETION_KIT",
+      "source_units": [
+        "S002-L0085"
+      ]
+    },
+    {
+      "id": "P-G0-01",
+      "statement": "At base commit d8721a59 all 1,797 raw blobs of the publication manifest match their Git blob identities and SHA-256 values, all 44 declared origin commits are available with the registered blobs, 417 further artifacts are hashed and 19 historical reports are linked to plans, governors, execution identifiers and saved recounts, with missing dependencies named.",
+      "population": "Frozen publication tree at commit d8721a59",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Archive commits are not ancestors of main; preservation copies blobs and does not establish replication",
+        "A report or source commit is not a substitute for missing original data",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/COMPLETION20261012/G0_inventory_summary.json",
+          "sha256": "080f96d385046270e0a3179cb9f45b956c461505e999b7f3ccec275a83a8859c"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/original_blob_audit.json",
+          "sha256": "6ed396891b8231c7a5186f4dd302d801f98065c6e8cd6cd690c891e195dff8f3"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/origin_provenance.json",
+          "sha256": "f23f1c10cf8974c57c3238d9ee973ebfb297281dcafd4d116bc2f2b044681b90"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/study_traceability_map_checked.json",
+          "sha256": "83eb02fe413888c3722ab9c6f73ba1dfb33feaba14016da44621b9edc8cb06a4"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "G0",
+      "source_units": [
+        "S007-L0003",
+        "S007-L0005"
+      ]
+    },
+    {
+      "id": "P-G0-02",
+      "statement": "The release audit at the G0 baseline correctly exited with status 1 and preserved four issues (incomplete published energy evidence, 105 announced energy rows without an admitted receipt, a narrative stating 100 original rows against 103 stored, and incompatible RENDER10 statements in the manuscript).",
+      "population": "Frozen publication tree at commit d8721a59",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Issues later reconciled in G1 are preserved in the before-audit; some stale wording remains (see A18.2.P discrepancies)",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/COMPLETION20261012/release_audit_before.json",
+          "sha256": "ea831f2c6dec8b0b1940c40be9692ca5805315cb2a17854b12acfa5779b76a57"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "G0",
+      "source_units": [
+        "S007-L0007"
+      ]
+    },
+    {
+      "id": "P-T0-01",
+      "statement": "A scoped zero-depth (T=0) forward contract is installed in a new model version with its AST scope verified; its runtime behaviour in the historical Torch environment and the related CPU regressions have not been executed (task G2.2, blocked by the unchanged 8 GiB RAM guard), so no behavioural claim is made.",
+      "population": "NeuroPixel model forward pass at T=0 in the completion branch",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Runtime pending: implementation receipts only",
+        "The frozen original checkout is preserved separately",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "completion_kit/model_forward_fix.py",
+          "sha256": "9276cedeb0d9fb13faa15198ffdfcfb0ec0d896b775d2854fad0f9ddefafd07e"
+        },
+        {
+          "path": "docs/execplan/evidence/G2.1_patch_scope.json",
+          "sha256": "6f881c1bb74453a24cead3e98099b31fd7d0076fc6b795b6f85149f6d81d63c2"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.P",
+      "study": "T0",
+      "source_units": []
+    }
+  ]
+}

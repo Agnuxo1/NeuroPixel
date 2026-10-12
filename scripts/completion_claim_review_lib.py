@@ -101,7 +101,7 @@ def evidence(rel: str) -> tuple[list[float], str]:
                 for name in bundle.namelist():
                     if name.endswith((".json", ".jsonl", ".log", ".txt", ".csv")):
                         _load(name, bundle.read(name), numbers, texts)
-        elif file.suffix in (".json", ".jsonl", ".log", ".txt", ".csv") and file.stat().st_size < 8_000_000:
+        elif (path.is_file() or file.suffix in (".json", ".jsonl", ".log", ".txt", ".csv")) and file.stat().st_size < 8_000_000:
             _load(file.name, file.read_bytes(), numbers, texts)
     _cache[rel] = (numbers, "\n".join(texts))
     return _cache[rel]
@@ -141,14 +141,45 @@ def calc_ok(body: str, rel: str) -> tuple[bool, dict]:
     return ok, dict(value=value, missing_literals=missing, tolerance=tolerance)
 
 
+def single_check(spec: str, rel: str) -> tuple[bool, dict]:
+    """text:, len: (rel 'path#key' list length), calc: or a plain number at its printed precision."""
+    if spec.startswith("text:"):
+        ok = spec[5:] in evidence(rel)[1]
+        return ok, dict(check=spec, source=rel, ok=ok)
+    if spec.startswith("len:"):
+        path, _, key = rel.partition("#")
+        data = json.loads((ROOT / path).read_text(encoding="utf-8"))
+        for part in key.split("/"):
+            data = data[part]
+        ok = len(data) == int(spec[4:])
+        return ok, dict(check=spec, source=rel, observed=len(data), ok=ok)
+    if spec.startswith("calc:"):
+        ok, detail = calc_ok(spec[5:], rel)
+        return ok, dict(check=spec, source=rel, ok=ok, detail=detail)
+    ok = number_ok(spec, evidence(rel)[0])
+    return ok, dict(check=spec, source=rel, ok=ok)
+
+
+def ledger_ids(*names: str) -> set:
+    ids = set()
+    for name in names:
+        data = json.loads((ROOT / "docs/research/claims_ledger_parts" / name).read_text(encoding="utf-8"))
+        ids |= {item["id"] for item in data["claims"]}
+    return ids
+
+
 def run_review(task: str, claims: list[dict], decisions: Decisions, discrepancies: list[dict],
-               part_name: str, scope: str, recounts: dict | None = None) -> int:
+               part_name: str, scope: str, recounts: dict | None = None, external_ids: set | None = None,
+               restatements: list | None = None, unsourced: set | None = None) -> int:
     candidates = json.loads((OUT / "claim_candidates.json").read_text(encoding="utf-8"))["candidates"]
     batches = json.loads((OUT / "claim_review_batches.json").read_text(encoding="utf-8"))["batches"]
     batch = next(b["candidate_ids"] for b in batches if b["task"] == task)
     by_id = {cand["id"]: cand for cand in candidates}
     claim_ids = {item["id"] for item in claims}
     assert len(claim_ids) == len(claims), "duplicate claim ids"
+    external_ids = set(external_ids or ())
+    assert not claim_ids & external_ids, "claim id reused from another batch"
+    known_ids = claim_ids | external_ids
     problems, rows, used = [], [], set()
     units: dict[str, list[str]] = {cid: [] for cid in claim_ids}
     for cid in batch:
@@ -164,7 +195,7 @@ def run_review(task: str, claims: list[dict], decisions: Decisions, discrepancie
         if cls in EDITORIAL:
             row["exclusion_reason"] = target
         else:
-            unknown = [t for t in target if t not in claim_ids]
+            unknown = [t for t in target if t not in known_ids]
             if unknown:
                 problems.append(f"{cid}: unknown claim ids {unknown}")
             row["claims"] = list(target)
@@ -175,7 +206,7 @@ def run_review(task: str, claims: list[dict], decisions: Decisions, discrepancie
         for line in lines:
             if (src, line) not in used:
                 problems.append(f"decision without candidate {src}:{line}")
-    for cid in claim_ids:
+    for cid in claim_ids - set(unsourced or ()):
         if not any(row["classification"] in ("claim", "data_row") and cid in row.get("claims", []) for row in rows):
             problems.append(f"{cid}: no asserting source unit in this batch")
 
@@ -194,18 +225,26 @@ def run_review(task: str, claims: list[dict], decisions: Decisions, discrepancie
             elif spec.startswith("calc:"):
                 ok, detail = calc_ok(spec[5:], rel)
                 results.append(dict(check=spec, source=rel, ok=ok, detail=detail))
-            elif spec.startswith("text:"):
-                ok = spec[5:] in evidence(rel)[1]
-                results.append(dict(check=spec, source=rel, ok=ok))
             else:
-                ok = number_ok(spec, evidence(rel)[0])
-                results.append(dict(check=spec, source=rel, ok=ok))
+                ok, result = single_check(spec, rel)
+                results.append(result)
             if not ok:
                 problems.append(f"{item['id']}: value check failed {spec} in {rel}")
         checks_out.append(dict(claim=item["id"], checks=results))
+    restated = []
+    for label, spec, rel in restatements or []:
+        if spec.startswith("recount:"):
+            observed = recounts[spec[8:]]
+            ok = number_ok(rel, [float(observed)])
+            result = dict(check=spec, expected=rel, observed=observed, ok=ok)
+        else:
+            ok, result = single_check(spec, rel)
+        restated.append(dict(label=label, **result))
+        if not ok:
+            problems.append(f"restatement {label}: check failed {spec} in {rel}")
     tag = task.split(".")[-1]
     (OUT / f"value_checks_{tag}.json").write_text(
-        json.dumps(dict(schema=1, task=task, recounts=recounts, claims=checks_out), indent=2) + "\n",
+        json.dumps(dict(schema=1, task=task, recounts=recounts, claims=checks_out, restatements=restated), indent=2) + "\n",
         encoding="utf-8", newline="\n")
 
     ledger_claims = []
