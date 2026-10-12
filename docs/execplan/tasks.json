@@ -162,9 +162,46 @@
         "P0.4"
       ],
       "acceptance": "cero discrepancias no explicadas en los originales y un mapa de afirmación → protocolo → fuente → ejecución → datos → recuento. Las dependencias faltantes se identifican, sin inventar archivos ni valores. [guía §5]",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:39Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/original_blob_audit.json",
+          "sha256_lf": "6ed396891b8231c7a5186f4dd302d801f98065c6e8cd6cd690c891e195dff8f3"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/origin_provenance.json",
+          "sha256_lf": "f23f1c10cf8974c57c3238d9ee973ebfb297281dcafd4d116bc2f2b044681b90"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/additional_artifact_inventory.json",
+          "sha256_lf": "2b7e39ffce76c05471c4bd07cb0128c428d415b8fa95175ded5754ef5873e15a"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/frozen_system_inventory.json",
+          "sha256_lf": "5d4afdda028b6dc810ca3bf1989bdfa78b17cb7247d696af1ce27cae2e087b47"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/study_traceability_map_checked.json",
+          "sha256_lf": "83eb02fe413888c3722ab9c6f73ba1dfb33feaba14016da44621b9edc8cb06a4"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/traceability_dependencies.json",
+          "sha256_lf": "4faccae89cc983b77e7d13e04b12b0339f4ed6cde3aa2e72bb581832233a1c81"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G0_inventory_summary.json",
+          "sha256_lf": "080f96d385046270e0a3179cb9f45b956c461505e999b7f3ccec275a83a8859c"
+        },
+        {
+          "path": "docs/research/COMPLETION_G0_inventory_20261012.md",
+          "sha256_lf": "0d8e28b944f2450e38f6719ab32cdef2977f9437321e3e8fac7ddfbb1c1021fc"
+        }
+      ],
+      "commit": "9bb4645443129a3987b036cb86199a3736a6e9b2",
+      "closed": "2026-10-12T11:45Z",
+      "note": "1797 originales y 44 arboles sin discrepancias; 417 extras y 19 informes mapeados; dependencias explicitas."
     },
     {
       "id": "G1.1",
@@ -540,5 +577,5 @@
       "status": "pending"
     }
   ],
-  "updated": "2026-10-12T11:39Z"
+  "updated": "2026-10-12T11:45Z"
 }
