@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T12:02:12+00:00
-- Tarea en curso o siguiente: A18, Crear el registro de afirmaciones con todo lo público actual; intento 1; presupuesto 30 minutos.
-- Criterio de cierre: registro creado con todas las afirmaciones públicas, cada una en el nivel que justifican sus artefactos; ningún texto público por encima de su nivel. [guía §18A]
-- Hecho en esta tarea: G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.
-- Falta en esta tarea: Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.
-- Siguiente comando exacto: python docs/execplan/plan_status.py section 18A
+- Actualizado (UTC): 2026-10-12T12:05:39+00:00
+- Tarea en curso o siguiente: A18.1, Congelar inventario completo de textos y candidatos a afirmacion publica; intento 1; presupuesto 15 minutos.
+- Criterio de cierre: Fuentes actuales README/manuscritos/informes indexados y fases nuevas congeladas por SHA256; candidatos narrativos, bullets y tablas con lineas y cobertura registrados, incluyendo negativos; no se asignan niveles por inventario.
+- Hecho en esta tarea: Fuentes congeladas y todas sus lineas contabilizadas; candidatos incluyen negativos, tablas y formulas; ningun nivel asignado.
+- Falta en esta tarea: Commit y cierre inventario; seguir con clasificacion semantica y vinculos reales.
+- Siguiente comando exacto: git add scripts/completion_inventory_claims.py docs/archive/completion_20261012/A18_sources docs/execplan results/research/COMPLETION20261012/claim_candidates.json results/research/COMPLETION20261012/claim_source_inventory.json
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -179,6 +179,12 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [ ] (2026-10-12T12:02:10+00:00) G2.2, intento 2: hecho Guard real rechazo2,039GiB; intento1 no guardo JSON porque el helper esperaba MemoryError. Cambio: capturar RuntimeError exacto del guard, sin modificar umbral.; falta Guardar rechazo estructurado, bloquear y continuar A18.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_admission_v2.txt -- python scripts/completion_resource_admission.py docs/execplan/evidence/G2.2_admission_v2.json`.
 
 - [ ] (2026-10-12T12:02:12+00:00) A18, intento 1: hecho G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.; falta Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.. Siguiente: `python docs/execplan/plan_status.py section 18A`.
+
+- [ ] (2026-10-12T12:04:20+00:00) A18.1, intento 1: hecho §18A leida y schema revisado; A18 dividida en inventario, clasificacion y revision; criterio padre intacto.; falta JEV, snapshot de fuentes, inventario y cobertura ejecutada; commit y cierre.. Siguiente: `python docs/execplan/plan_status.py start A18.1`.
+
+- [ ] (2026-10-12T12:05:38+00:00) A18.1, intento 1: hecho Fuentes definidas: README, todos los manuscritos actuales, 19 informes del mapa y documentos nuevos; JEV consultado.; falta Congelar bytes, inventariar lineas candidatas y verificar cobertura; commit y cierre.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/A18.1_inventory.txt -- python scripts/completion_inventory_claims.py`.
+
+- [ ] (2026-10-12T12:05:39+00:00) A18.1, intento 1: hecho Fuentes congeladas y todas sus lineas contabilizadas; candidatos incluyen negativos, tablas y formulas; ningun nivel asignado.; falta Commit y cierre inventario; seguir con clasificacion semantica y vinculos reales.. Siguiente: `git add scripts/completion_inventory_claims.py docs/archive/completion_20261012/A18_sources docs/execplan results/research/COMPLETION20261012/claim_candidates.json results/research/COMPLETION20261012/claim_source_inventory.json`.
 
 ## Sorpresas y hallazgos
 

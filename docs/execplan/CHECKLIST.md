@@ -34,6 +34,18 @@
 
 - [ ] G2 Corregir el contrato T0 y repetir la reproducción pertinente (§7)
 
+## 18A Inventario documental
+
+- [ ] **IN PROGRESS** A18.1 Congelar inventario completo de textos y candidatos a afirmacion publica (§18A) (attempt 1)
+
+## 18A Registro cientifico
+
+- [ ] A18.2 Vincular todas las afirmaciones a artefactos y nivel justificable (§18A)
+
+## 18A Verificacion final
+
+- [ ] A18.3 Auditar ledger y coherencia de afirmaciones publicas (§18A)
+
 ## 18A Registro de afirmaciones
 
 - [ ] A18 Crear el registro de afirmaciones con todo lo público actual (§18A)

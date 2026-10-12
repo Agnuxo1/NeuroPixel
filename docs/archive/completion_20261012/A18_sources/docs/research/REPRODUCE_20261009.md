@@ -1,0 +1,27 @@
+# Reproduction and evidence
+
+1. Use the exact source/plan perstudy; do not combine recipes. Keep historical checkpoints/datasets and all failed attempts. Python3.12.14/Torch2.6.0+cpu/NumPy2.2.6/SciPy1.15.1/psutil6.1.1/Pillow11.3 reproduce cloud CPU studies. GPU rendering used localTorch2.6.0+cu124/ModernGL5.12/glcontext3/NVIDIA581.29 RTX3090; runtime fingerprints andprecision flags are archived.
+2. RAMavailable≥8GiB before heavy neural loading/training, twoCPUthreads and at mosttwo scientific executors. Use the shared GPUFIFO locally; never interrupt unrelated workloads. Do not rerun closed fits. Replays and summaries do not count as new training realizations.
+3. `scripts/summarize_sprint_results.py` independently recounts complete saved cohorts. `scripts/replay_VIS07_functional.py` replays saved models through indexedfunctionalconv operations without fitting. It preserves ten extended-logit tolerance failures. `scripts/diagnose_VIS07_depth.py` tests the original andfunctional paths on the fixed128-row subset in a same-host run; a successful subset does not erase the failed broader attempt.
+4. `neuropixel/rendering/nca_gl.py` is the original scalarRGBA32Ffragment backend. `nca_gl_vector.py` is the separately verified vector variant. `nca_gl_compute.py` is the advanced OpenGL4.6/SSBO/shared-memory candidate; its engineering status must be read from the exact receipt, not assumed from its existence. Benchmarks check output parity before timing and retain all seven workloads and bothCUDA comparators.
+5. `docs/animations/manifest.json` links every animation to actual data by hash. The trained trajectory is an actual GPU-rendered capture of registered seed240/fixed TRAIN class0, explicitly labelled and slowed for inspection. Its source is `results/research/VIS07_learned_gpu/actual_rendered_train0_seed240_frames.npz`; the earlier CPU animation is preserved separately. Display colours do not change model states or prove semantic causality. GPU fidelity proofs and benchmark rows are separate evidence.
+
+OpenGL 4.6 compute execution passed 21 Torch-free checks across all seven archived workloads. Its five-method timing study is complete: 245 registered rows, 77 output gates, 143 original rows unchanged and zero repeated timing keys. The original RAM-floor interruption and queue timeout remain archived history. Read [RENDER10](RENDER10_results.md) and its admitted recovery before using the compute backend. Workload-dependent point comparisons across interrupted sessions do not establish universal acceleration or independent replication.
+
+The publication manifest maps all raw archives to their original Gitblobs, source commits, sizes andSHA256. GitHub main receives original immutable blobs plus documentation; rawbytes are not regenerated to disguise discrepancies. CodeMIT; UCI digitdataCCBY4.0, Alpaydin/Kaynak1998 DOI10.24432/C50P49. No originaltest264compositions were opened by new studies.
+
+Independent external replication has not yet occurred. This package makes reproduction possible; it does not certify an outside laboratory result or a Nobel-level contribution.
+
+## Final engineering update — 9 October 2026
+
+The recovered RENDER10 cohort is complete:245 registered rows,77 output gates,143 original rows preserved exactly and0 repeated timing keys. OpenGL4.6 compute measures2.084x forC16/grid128 relative to the bestCUDA comparator and loses forC48/grid128; interruption separates sessions and qualifies interpretation. Live physical viewer integration passed27 trajectory gates plus52 HTTP checks; CPU/Mesa passed the same separate internal endpoint. RENDER11 retained100/105 original energy blocks after RAM8 stopped it; no complete comparative energy or wall-energy claim follows. See RENDER10_results.md, VIS07_viewer.md and RENDER11_results.md.
+
+## Admitted sustained-energy recovery — 12 October 2026
+
+Do not rerun the completed RENDER11 measurements. The original contains 103 rows; the admitted saved recovery contains 105 unique registered keys and preserves all original rows. Use the kit environment in E: to verify or summarize saved receipts:
+
+```powershell
+& E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.energy summarize --root . --original results/research/RENDER11_energy/original_20261009A/receipt.json --recovery results/research/RENDER11_energy/recovered_20261009B/receipt.json
+```
+
+See `results/research/COMPLETION20261012/energy_recovery_admission.json` for original and recovered SHA-256 identities, archived commit 87c60227, matching sources/inputs and exact original-row preservation. This is saved board-energy evidence, not a new physical run, independent replication or wall-energy measurement.

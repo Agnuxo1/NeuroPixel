@@ -1,0 +1,11 @@
+# Frozen evidence inventory
+
+The examined baseline is commit `d8721a59d36d127642a5664c0c41e6091296ba21`. The publication manifest contains 1,797 raw blobs. Their actual Git blob identities and SHA-256 values match every registered entry. All 44 declared origin commit objects are available locally and their trees contain the corresponding registered blobs. These archive commits are not ancestors of the examined main branch; preservation copied original blobs from evidence branches and does not establish independent replication.
+
+The inventory additionally hashes 417 artifacts outside that manifest and links 19 historical reports to frozen plans, source governors, documented execution identifiers, raw artifact directories and saved recounts. Exact directory prefixes and cited paths are checked separately in `study_traceability_map_checked.json`. Missing historical data or receipts are named explicitly; a report or a source commit is not a substitute for the original data. Later scientific tasks must resolve the relevant dependency before replaying anything.
+
+The release audit correctly returned exit status 1 and preserved four issues: the published energy cohort is incomplete, the README announces 105 rows without an admitted recovery, the energy narrative says 100 original rows while the receipt stores 103, and the manuscript contains incompatible RENDER10 timing statements. These are downstream reconciliation work, rather than unexplained original-byte discrepancies.
+
+The saved VIS07 integer recount is +3.5169727323 percentage points with an exploratory t95 interval [1.9304594488, 5.1034860159], five training pairs. Ten T16/T32 continuous replay failures remain under their original tolerances. A06.1 and the cloud continuation retain their distinct identities and numerical discrepancies. No historical fit, checkpoint load, physical measurement or external replication occurred in this inventory.
+
+Evidence is under `results/research/COMPLETION20261012/`: `original_blob_audit.json`, `origin_provenance.json`, `additional_artifact_inventory.json`, `frozen_system_inventory.json`, `study_traceability_map_checked.json`, `traceability_dependencies.json`, `release_audit_before.json`, and `G0_inventory_summary.json`.
