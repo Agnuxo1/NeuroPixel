@@ -44,7 +44,7 @@
 
 ## 18A Desarrollo y vision
 
-- [ ] A18.2.D Revisar afirmaciones de desarrollo, scanner y vision (§18A)
+- [x] ~~A18.2.D Revisar afirmaciones de desarrollo, scanner y vision (§18A)~~ 2026-10-12T21:52Z `dd728c279c`
 
 ## 18A Graficos y energia
 

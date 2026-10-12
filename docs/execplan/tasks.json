@@ -482,7 +482,38 @@
       "depends_on": [
         "A18.2.H"
       ],
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T21:38Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_D.json",
+          "sha256_lf": "238f80605d4bfe50c52fc9d9b1f4348806c86e373629ada267420679a09feb42"
+        },
+        {
+          "path": "docs/research/claims_ledger_parts/A18.2.D.json",
+          "sha256_lf": "1df263ea47e01f0197a669a1d1a3e72b317fb657b3a4cffa635af6d6cef3f1b6"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_audit_D.json",
+          "sha256_lf": "743837ac0733a1b65c9a1fb08593133e70258b11a58944f2bfb9b0da770b2d02"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/value_checks_D.json",
+          "sha256_lf": "4b1ede720311a3bfa2fab44bc6a421d452c97b0b22bce6b5703909acabafd73c"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.D_review.txt",
+          "sha256_lf": "a29423242cba82d315ce740f2d37f8286481e8e94096e96b515cb50a2ce62b9f"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.D_validator.txt",
+          "sha256_lf": "3bcf4cd49938f571295e0ac477910e4a21ec2eb55d92381019b8a33c436232d8"
+        }
+      ],
+      "commit": "dd728c279cbaf2d28925d7ec6f553bbbd2a4e847",
+      "closed": "2026-10-12T21:52Z",
+      "note": "234/234 candidatos; 24 afirmaciones (14 L2, 10 L1); validador valido; 2 discrepancias (RMS VIS07 y admision ROLE) registradas."
     },
     {
       "id": "A18.2.G",
@@ -907,5 +938,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T21:37Z"
+  "updated": "2026-10-12T21:52Z"
 }
