@@ -1,0 +1,55 @@
+UTC: 2026-10-12T11:36:23.744682+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m unittest completion_kit.test_contracts -v
+
+test_complete_reference_pipeline_and_closed_fit_guard (completion_kit.test_contracts.DatasetAndCohortContracts.test_complete_reference_pipeline_and_closed_fit_guard) ... {"epoch": 1, "updates": 1, "mean_batch_loss": 2.46749664498548, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.4960983068077227, "maximum_state": 0.5235874005970231}}
+{"epoch": 1, "updates": 1, "mean_batch_loss": 2.46749664498548, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.4960983068077227, "maximum_state": 0.5235874005970231}}
+{"epoch": 1, "updates": 1, "mean_batch_loss": 2.48058701137478, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.4903608262719716, "maximum_state": 0.4628111408066416}}
+{"epoch": 1, "updates": 1, "mean_batch_loss": 2.48058701137478, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.4903608262719716, "maximum_state": 0.4628111408066416}}
+ok
+test_epoch_resume_matches_uninterrupted_weights (completion_kit.test_contracts.DatasetAndCohortContracts.test_epoch_resume_matches_uninterrupted_weights) ... {"epoch": 2, "updates": 2, "mean_batch_loss": 2.4651891067785505, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.495572734153285, "maximum_state": 0.5213673756195658}}
+{"epoch": 1, "updates": 1, "mean_batch_loss": 2.46749664498548, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.4960983068077227, "maximum_state": 0.5235874005970231}}
+{"epoch": 2, "updates": 2, "mean_batch_loss": 2.4651891067785505, "dev": {"correct": 0, "n": 2, "accuracy": 0.0, "mean_nll": 2.495572734153285, "maximum_state": 0.5213673756195658}}
+ok
+test_graph_groups_and_encoded_oracles (completion_kit.test_contracts.DatasetAndCohortContracts.test_graph_groups_and_encoded_oracles) ... ok
+test_repeated_relation_oracle (completion_kit.test_contracts.DatasetAndCohortContracts.test_repeated_relation_oracle) ... ok
+test_boolean_constant_and_half_noise (completion_kit.test_contracts.DynamicsContracts.test_boolean_constant_and_half_noise) ... ok
+test_boolean_coordinate_attains_information_bound (completion_kit.test_contracts.DynamicsContracts.test_boolean_coordinate_attains_information_bound) ... ok
+test_boolean_parity_loses_more_information (completion_kit.test_contracts.DynamicsContracts.test_boolean_parity_loses_more_information) ... ok
+test_current_display_can_hide_future_observable_state (completion_kit.test_contracts.DynamicsContracts.test_current_display_can_hide_future_observable_state) ... ok
+test_finite_difference_matches_known_map (completion_kit.test_contracts.DynamicsContracts.test_finite_difference_matches_known_map) ... ok
+test_lyapunov_equation_residual (completion_kit.test_contracts.DynamicsContracts.test_lyapunov_equation_residual) ... ok
+test_nonnormal_transient_amplification_is_detected (completion_kit.test_contracts.DynamicsContracts.test_nonnormal_transient_amplification_is_detected) ... ok
+test_time_varying_product_order (completion_kit.test_contracts.DynamicsContracts.test_time_varying_product_order) ... ok
+test_changed_completed_row_is_rejected (completion_kit.test_contracts.EnergyContracts.test_changed_completed_row_is_rejected) ... ok
+test_duplicate_key_is_rejected (completion_kit.test_contracts.EnergyContracts.test_duplicate_key_is_rejected) ... ok
+test_incomplete_summary_is_rejected (completion_kit.test_contracts.EnergyContracts.test_incomplete_summary_is_rejected) ... ok
+test_negative_baseline_estimate_is_preserved (completion_kit.test_contracts.EnergyContracts.test_negative_baseline_estimate_is_preserved) ... ok
+test_partial_103_has_two_missing_keys (completion_kit.test_contracts.EnergyContracts.test_partial_103_has_two_missing_keys) ... ok
+test_recovery_preserves_original_and_recounts_complete (completion_kit.test_contracts.EnergyContracts.test_recovery_preserves_original_and_recounts_complete) ... ok
+test_unregistered_key_is_rejected (completion_kit.test_contracts.EnergyContracts.test_unregistered_key_is_rejected) ... ok
+test_atomic_exclusive_write_preserves_original (completion_kit.test_contracts.EvidenceContracts.test_atomic_exclusive_write_preserves_original) ... ok
+test_git_blob_identity_includes_header (completion_kit.test_contracts.EvidenceContracts.test_git_blob_identity_includes_header) ... ok
+test_hash_guard_rejects_modified_source (completion_kit.test_contracts.EvidenceContracts.test_hash_guard_rejects_modified_source) ... ok
+test_hash_guard_rejects_root_escape (completion_kit.test_contracts.EvidenceContracts.test_hash_guard_rejects_root_escape) ... ok
+test_publication_manifest_rejects_corrupted_blob (completion_kit.test_contracts.EvidenceContracts.test_publication_manifest_rejects_corrupted_blob) ... ok
+test_scoped_forward_patch_preserves_other_methods (completion_kit.test_contracts.EvidenceContracts.test_scoped_forward_patch_preserves_other_methods) ... ok
+test_scoped_forward_patch_rejects_stale_bytes (completion_kit.test_contracts.EvidenceContracts.test_scoped_forward_patch_rejects_stale_bytes) ... ok
+test_all_parameter_gradient_families (completion_kit.test_contracts.FieldContracts.test_all_parameter_gradient_families) ... ok
+test_bounded_long_rollout_and_repeat_reset (completion_kit.test_contracts.FieldContracts.test_bounded_long_rollout_and_repeat_reset) ... ok
+test_empirical_sup_norm_contraction (completion_kit.test_contracts.FieldContracts.test_empirical_sup_norm_contraction) ... ok
+test_export_roundtrip_and_certificate (completion_kit.test_contracts.FieldContracts.test_export_roundtrip_and_certificate) ... ok
+test_learning_improves_a_supervised_signal (completion_kit.test_contracts.FieldContracts.test_learning_improves_a_supervised_signal) ... ok
+test_projection_checks_exact_exported_weight_bound (completion_kit.test_contracts.FieldContracts.test_projection_checks_exact_exported_weight_bound) ... ok
+test_zero_steps_is_zero_initial_state (completion_kit.test_contracts.FieldContracts.test_zero_steps_is_zero_initial_state) ... ok
+test_factorial_known_interaction (completion_kit.test_contracts.StatisticsContracts.test_factorial_known_interaction) ... ok
+test_holm_original_order (completion_kit.test_contracts.StatisticsContracts.test_holm_original_order) ... ok
+test_missing_factorial_cell_rejected (completion_kit.test_contracts.StatisticsContracts.test_missing_factorial_cell_rejected) ... ok
+test_precision_is_a_new_fixed_cohort (completion_kit.test_contracts.StatisticsContracts.test_precision_is_a_new_fixed_cohort) ... ok
+test_vis07_integer_recount (completion_kit.test_contracts.StatisticsContracts.test_vis07_integer_recount) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 8.495s
+
+OK
+
+EXIT_CODE: 0

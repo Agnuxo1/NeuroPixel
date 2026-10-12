@@ -1,0 +1,25 @@
+UTC: 2026-10-12T11:35:28.367093+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m pip install -r requirements-completion.txt -r requirements-graphics.txt
+
+Collecting numpy==2.2.6 (from -r requirements-completion.txt (line 1))
+  Downloading numpy-2.2.6-cp313-cp313-win_amd64.whl.metadata (60 kB)
+Collecting scipy==1.15.1 (from -r requirements-completion.txt (line 2))
+  Downloading scipy-1.15.1-cp313-cp313-win_amd64.whl.metadata (60 kB)
+Collecting moderngl==5.12.0 (from -r requirements-graphics.txt (line 1))
+  Downloading moderngl-5.12.0-cp313-cp313-win_amd64.whl.metadata (8.0 kB)
+Collecting glcontext<4.0,>=3.0 (from -r requirements-graphics.txt (line 2))
+  Downloading glcontext-3.1.0-cp313-cp313-win_amd64.whl.metadata (6.4 kB)
+Downloading numpy-2.2.6-cp313-cp313-win_amd64.whl (12.6 MB)
+   ---------------------------------------- 12.6/12.6 MB 67.5 MB/s  0:00:00
+Downloading scipy-1.15.1-cp313-cp313-win_amd64.whl (43.6 MB)
+   ---------------------------------------- 43.6/43.6 MB 7.7 MB/s  0:00:05
+Downloading moderngl-5.12.0-cp313-cp313-win_amd64.whl (108 kB)
+Downloading glcontext-3.1.0-cp313-cp313-win_amd64.whl (12 kB)
+Installing collected packages: glcontext, numpy, moderngl, scipy
+
+Successfully installed glcontext-3.1.0 moderngl-5.12.0 numpy-2.2.6 scipy-1.15.1
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: E:\Proyecto-concursos\NeuroPixel-env-completion\Scripts\python.exe -m pip install --upgrade pip
+
+EXIT_CODE: 0
