@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T21:53:05+00:00
-- Tarea en curso o siguiente: A18.2.G, Revisar afirmaciones graficas y energia; intento 1; presupuesto 60 minutos.
-- Criterio de cierre: Todos los candidatos A18.2.G revisados con comparadores, precisiones y coste declarado; board energy separado de pared y repeticiones tecnicas de replicas; negativos y sesiones interrumpidas conservados.
-- Hecho en esta tarea: A18.2.D cerrada (commit dd728c27): 234/234, 24 afirmaciones, validador valido
-- Falta en esta tarea: Leer 74 candidatos RENDER, localizar recibos RENDER08-11, separar energia de placa y de pared, clasificar
-- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.G
+- Actualizado (UTC): 2026-10-12T21:55:53+00:00
+- Tarea en curso o siguiente: A18.2.P, Revisar README, manuscritos y documentos nuevos e integrar registro; intento 1; presupuesto 120 minutos.
+- Criterio de cierre: Todos los candidatos A18.2.P revisados y grupos H/D/G integrados; docs/research/claims_ledger.json completo, afirmaciones inglesas, limites y niveles artifact-bound; ninguna unidad omitida y T0 runtime pendiente explicito.
+- Hecho en esta tarea: A18.2.G cerrada: 74/74, 6 afirmaciones, 222 comprobaciones
+- Falta en esta tarea: Revisar 182 candidatos P (README, manuscritos, documentos nuevos); integrar H/D/G/P en docs/research/claims_ledger.json; T0 runtime pendiente explicito
+- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.P
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM<8GiB bloquea G2.2
 
@@ -192,7 +192,9 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [x] (2026-10-12T21:53:05+00:00) A18.2.D: done; commit dd728c279cbaf2d28925d7ec6f553bbbd2a4e847; 234/234 candidatos; 24 afirmaciones (14 L2, 10 L1); validador valido; 2 discrepancias (RMS VIS07 y admision ROLE) registradas.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T21:53:05+00:00) A18.2.G, intento 1: hecho A18.2.D cerrada (commit dd728c27): 234/234, 24 afirmaciones, validador valido; falta Leer 74 candidatos RENDER, localizar recibos RENDER08-11, separar energia de placa y de pared, clasificar. Siguiente: `python docs/execplan/plan_status.py start A18.2.G`.
+- [x] (2026-10-12T21:55:52+00:00) A18.2.G: done; commit f0609c064b2520b0ccde969e43130dab4f55613e; 74/74 candidatos; 6 afirmaciones (4 L2, 2 L1); todas las celdas recontadas; energia de placa separada de pared; 2 discrepancias de redaccion.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T21:55:53+00:00) A18.2.P, intento 1: hecho A18.2.G cerrada: 74/74, 6 afirmaciones, 222 comprobaciones; falta Revisar 182 candidatos P (README, manuscritos, documentos nuevos); integrar H/D/G/P en docs/research/claims_ledger.json; T0 runtime pendiente explicito. Siguiente: `python docs/execplan/plan_status.py start A18.2.P`.
 
 ## Sorpresas y hallazgos
 

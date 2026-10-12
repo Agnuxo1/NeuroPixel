@@ -48,7 +48,7 @@
 
 ## 18A Graficos y energia
 
-- [ ] A18.2.G Revisar afirmaciones graficas y energia (§18A)
+- [x] ~~A18.2.G Revisar afirmaciones graficas y energia (§18A)~~ 2026-10-12T21:55Z `f0609c064b`
 
 ## 18A Registro publico
 
