@@ -60,11 +60,11 @@
 
 ## 18A Verificacion final
 
-- [ ] **IN PROGRESS** A18.3 Auditar ledger y coherencia de afirmaciones publicas (§18A) (attempt 1)
+- [x] ~~A18.3 Auditar ledger y coherencia de afirmaciones publicas (§18A)~~ 2026-10-12T22:23Z `3e808a4401`
 
 ## 18A Registro de afirmaciones
 
-- [ ] A18 Crear el registro de afirmaciones con todo lo público actual (§18A)
+- [x] ~~A18 Crear el registro de afirmaciones con todo lo público actual (§18A)~~ 2026-10-12T22:23Z `3e808a4401`
 
 ## G3 Separación de datos
 
