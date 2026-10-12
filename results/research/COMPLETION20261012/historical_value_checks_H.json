@@ -1,0 +1,802 @@
+{
+  "schema": 1,
+  "item4_recount": {
+    "selected_reference": "relative_transformer_s0_i7_lr0.001",
+    "examples": 2048,
+    "visible_same_category": 2048,
+    "nominal_queries": 1024,
+    "nominal_correct": 491
+  },
+  "claims": [
+    {
+      "claim": "H04-01",
+      "checks": [
+        {
+          "check": "9.326",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "48.389",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "11.914",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "13.574",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "18.872",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "74.194",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "29824",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "30384",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "27835",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "29547",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "9.277",
+          "source": "results/research/04_experiment/pilot/selection.json",
+          "ok": true
+        },
+        {
+          "check": "47.949",
+          "source": "results/research/04_experiment/pilot/selection.json",
+          "ok": true
+        },
+        {
+          "check": "45.312",
+          "source": "results/research/04_experiment/item4_evidence.zip",
+          "ok": true
+        },
+        {
+          "check": "12.305",
+          "source": "results/research/04_experiment/pilot/selection.json",
+          "ok": true
+        },
+        {
+          "check": "2.444692",
+          "source": "results/research/04_experiment/item4_evidence.zip",
+          "ok": true
+        },
+        {
+          "check": "0.433867",
+          "source": "results/research/04_experiment/pilot/selection.json",
+          "ok": true
+        },
+        {
+          "check": "173.462",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H04-02",
+      "checks": [
+        {
+          "check": "53.906",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "42.871",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "100.000",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "46.240",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "50.586",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "30.859",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "25.977",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "8.789",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "9.863",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H04-03",
+      "checks": [
+        {
+          "check": "recount:item4_visible_category",
+          "expected": "2048",
+          "observed": 2048,
+          "ok": true
+        },
+        {
+          "check": "recount:item4_nominal_correct",
+          "expected": "491",
+          "observed": 491,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H04-04",
+      "checks": [
+        {
+          "check": "173.462",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "text:2026-10-06T22:28:58.539148",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "text:22:28:58.653985",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "text:23bca94c224b195da94ab1794801fdae131007a77bd594c2167a085227e7dba2",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "text:5ab415ec825e931b69fc22571c47cdb74a4fc592",
+          "source": "results/research/04_experiment/pilot/pilot_summary.json",
+          "ok": true
+        },
+        {
+          "check": "60",
+          "source": "results/research/COMPLETION20261012/item4_transfer_verification.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H05-01",
+      "checks": [
+        {
+          "check": "12.393",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        },
+        {
+          "check": "49.395",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        },
+        {
+          "check": "-37.002",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        },
+        {
+          "check": "-42.030",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        },
+        {
+          "check": "-31.974",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H05-02",
+      "checks": []
+    },
+    {
+      "claim": "H05-03",
+      "checks": []
+    },
+    {
+      "claim": "H05-04",
+      "checks": [
+        {
+          "check": "text:\"all_28_training_probes_below_0_95\": true",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H05-05",
+      "checks": []
+    },
+    {
+      "claim": "H05-06",
+      "checks": [
+        {
+          "check": "text:7.99",
+          "source": "results/research/05_experiment/item5_gpu_interrupted.zip",
+          "ok": true
+        },
+        {
+          "check": "text:768",
+          "source": "results/research/05_experiment/item5_gpu_interrupted.zip",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H05-07",
+      "checks": [
+        {
+          "check": "114688",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        },
+        {
+          "check": "text:11fd91ee4ddb8155fc9127e5f6b826535654842190f048fecd23c3dd6f31e436",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        },
+        {
+          "check": "text:adef6b11f29a0c00c58f1cb10a95453ba056eea5e711d8462179bcfafcff1453",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H05-08",
+      "checks": []
+    },
+    {
+      "claim": "H05-09",
+      "checks": [
+        {
+          "check": "2876.993",
+          "source": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-01",
+      "checks": [
+        {
+          "check": "text:not_established",
+          "source": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "4362",
+          "source": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "text:4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01",
+          "source": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-02",
+      "checks": [
+        {
+          "check": "2.014",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-10.394",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "14.423",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "0.439",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-1.135",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "8.791",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-03",
+      "checks": [
+        {
+          "check": "2.832",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-2.752",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "8.416",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "0.146",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "0.732",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "0.293",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-04",
+      "checks": [
+        {
+          "check": "-38.974",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "40.439",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "1.392",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "0.659",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-0.271",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "1.590",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-05",
+      "checks": [
+        {
+          "check": "17.310",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "0.868",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "33.751",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "15.283",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-48.620",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "79.186",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "27.832",
+          "source": "results/research/06_A06_1_recovery/original.zip",
+          "ok": true
+        },
+        {
+          "check": "34.082",
+          "source": "results/research/06_A06_1_recovery/original.zip",
+          "ok": true
+        },
+        {
+          "check": "24.951",
+          "source": "results/research/06_A06_1_recovery/original.zip",
+          "ok": true
+        },
+        {
+          "check": "18.115",
+          "source": "results/research/06_A06_1_recovery/original.zip",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-06",
+      "checks": [
+        {
+          "check": "25.651",
+          "source": "results/research/06_A06_1_recovery/original.zip",
+          "ok": true
+        },
+        {
+          "check": "23.242",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "28.060",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "26.335",
+          "source": "results/research/06_A06_1_recovery/original.zip",
+          "ok": true
+        },
+        {
+          "check": "17.546",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "3.069",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "32.022",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "16.178",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-0.684",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-0.163",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "-12.207",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-07",
+      "checks": [
+        {
+          "check": "40",
+          "source": "results/research/06_A06_1_recovery/multiplicity_sensitivity.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-08",
+      "checks": [
+        {
+          "check": "4362",
+          "source": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "204",
+          "source": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "139264",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "53248",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        },
+        {
+          "check": "98304",
+          "source": "results/research/06_A06_1_recovery/audit_saved.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "H06-09",
+      "checks": [
+        {
+          "check": "text:issues_found",
+          "source": "results/research/06_A06_1_recovery/audit_replay.json",
+          "ok": true
+        },
+        {
+          "check": "0.000413895",
+          "source": "results/research/06_A06_1_recovery/audit_replay.json",
+          "ok": true
+        },
+        {
+          "check": "0.000118315",
+          "source": "results/research/06_A06_1_recovery/audit_replay.json",
+          "ok": true
+        },
+        {
+          "check": "448",
+          "source": "results/research/06_A06_1_recovery/audit_replay.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HC-01",
+      "checks": [
+        {
+          "check": "400",
+          "source": "coord/recovery/reconciliation-20261008/reconciliation_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "37",
+          "source": "coord/recovery/reconciliation-20261008/reconciliation_receipt.json",
+          "ok": true
+        },
+        {
+          "check": "17",
+          "source": "coord/recovery/reconciliation-20261008/reconciliation_receipt.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-01",
+      "checks": [
+        {
+          "check": "984",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        },
+        {
+          "check": "2984",
+          "source": "results/research/TASK4_review/control_recount.json",
+          "ok": true
+        },
+        {
+          "check": "count:763",
+          "source": "results/research/TASK4_review/recovery_inventory.json",
+          "observed": 763,
+          "ok": true
+        },
+        {
+          "check": "sumbytes:401580342",
+          "source": "results/research/TASK4_review/recovery_inventory.json",
+          "observed": 401580342,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-07",
+      "checks": [
+        {
+          "check": "1319",
+          "source": "results/research/TASK4_review/control_recount.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-08",
+      "checks": [
+        {
+          "check": "186",
+          "source": "results/research/08_cloud_runs",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-09",
+      "checks": [
+        {
+          "check": "9.628906",
+          "source": "results/research/09_offline_runs/37603398040-1-offline/scientific_audit_summary.json",
+          "ok": true
+        },
+        {
+          "check": "49.355469",
+          "source": "results/research/09_offline_runs/37603398040-1-offline/scientific_audit_summary.json",
+          "ok": true
+        },
+        {
+          "check": "-39.726563",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        },
+        {
+          "check": "-41.254103",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        },
+        {
+          "check": "-38.199022",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-10",
+      "checks": [
+        {
+          "check": "50.40",
+          "source": "results/research/10_cloud_runs",
+          "ok": true
+        },
+        {
+          "check": "88.66",
+          "source": "results/research/10_cloud_runs",
+          "ok": true
+        },
+        {
+          "check": "-38.26",
+          "source": "results/research/10_cloud_runs",
+          "ok": true
+        },
+        {
+          "check": "-52.385695",
+          "source": "results/research/10_cloud_runs",
+          "ok": true
+        },
+        {
+          "check": "-24.134305",
+          "source": "results/research/10_cloud_runs",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-11",
+      "checks": [
+        {
+          "check": "38",
+          "source": "results/research/TASK4_review/control_recount.json",
+          "ok": true
+        },
+        {
+          "check": "48",
+          "source": "results/research/TASK4_review/control_recount.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-12",
+      "checks": [
+        {
+          "check": "count:8",
+          "source": "results/research/TASK4_review/control_recount.json#isolation_updated_tensor_counts",
+          "observed": 8,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-13",
+      "checks": []
+    },
+    {
+      "claim": "HT-14",
+      "checks": [
+        {
+          "check": "324",
+          "source": "results/research/TASK4_review/control_recount.json",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "claim": "HT-15",
+      "checks": [
+        {
+          "check": "4.293",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        },
+        {
+          "check": "18.431",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        },
+        {
+          "check": "1.557",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        },
+        {
+          "check": "6.059",
+          "source": "results/research/TASK4_review/saved_evidence_audit.json",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

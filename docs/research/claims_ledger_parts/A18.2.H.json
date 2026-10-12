@@ -1,0 +1,1206 @@
+{
+  "schema": 1,
+  "authors": [
+    "Francisco Angulo de Lafuente"
+  ],
+  "claims": [
+    {
+      "id": "H04-01",
+      "statement": "In the item-4 matched pilot (protocol NP-SCI-20261006-v1, initialization 7, two learning rates per family, 1,024 updates of 64 examples, answer-only cross-entropy), no NeuroPixel binding advantage was observed: the validation-selected NeuroPixel configuration reached 9.326% final binding versus 48.389% for the selected relative-position Transformer (descriptive difference -39.0625 percentage points), and none of the eight configurations reached the predeclared 95% training-probe binding threshold.",
+      "population": "Item-4 matched pilot on the synthetic RoleTask (8x8 grid, 35 tokens, split 0, initialization 7); NeuroPixel, adapted NCA, spatial ConvGRU and relative-position Transformer at 27,835-30,384 parameters; 2,048 validation and 4,096 final examples per selected checkpoint",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Descriptive pilot with one initialization; the H1 decision was reserved for item 5",
+        "Limited optimization budget: 1,024 updates of 64 examples and two learning rates per family",
+        "Similar parameter counts and equal sample exposure do not equalize capacity, receptive field, FLOPs or optimization difficulty",
+        "The independent verifier output results/research/04_verification.json cited by the report is not available; the transferred artifacts were re-verified here only by their transfer-manifest hashes"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/04_experiment/pilot/pilot_summary.json",
+          "sha256": "d9fe2da68e34d3f87dacbfa97fe86eebaefc3a70be1fdda288263ba5c7166910"
+        },
+        {
+          "path": "results/research/04_experiment/pilot/selection.json",
+          "sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/item4_transfer_verification.json",
+          "sha256": "4a1870e89b8a4b91f2b5fa53516864778ace526d757b873e583fea32bb5bbfc6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "04",
+      "source_units": [
+        "S004-L0005",
+        "S004-L0007",
+        "S004-L0011",
+        "S004-L0015",
+        "S004-L0016",
+        "S004-L0017",
+        "S004-L0018",
+        "S004-L0020",
+        "S004-L0041",
+        "S004-L0042",
+        "S004-L0043",
+        "S004-L0044",
+        "S004-L0045",
+        "S004-L0046",
+        "S004-L0047",
+        "S004-L0048",
+        "S004-L0050",
+        "S004-L0063",
+        "S004-L0067",
+        "S004-L0069",
+        "S004-L0071"
+      ],
+      "protocol": {
+        "path": "docs/research/04_execution_plan.json",
+        "sha256": "ba355d5c1803b661c7992c0f99a582a8cab54dbaf176cb0aca5b173d2ca02cfc"
+      }
+    },
+    {
+      "id": "H04-02",
+      "statement": "In the item-4 pilot, the selected relative Transformer answered every ACTION and PLACE final query correctly (100%) but reached only 48.389% mean nominal-role (AGENT/PATIENT) accuracy; its conditional example-bootstrap binding interval, 46.240-50.586%, includes the 50% category-only expectation.",
+      "population": "Item-4 matched pilot on the synthetic RoleTask (8x8 grid, 35 tokens, split 0, initialization 7); NeuroPixel, adapted NCA, spatial ConvGRU and relative-position Transformer at 27,835-30,384 parameters; 2,048 validation and 4,096 final examples per selected checkpoint",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Descriptive pilot with one initialization; the H1 decision was reserved for item 5",
+        "Limited optimization budget: 1,024 updates of 64 examples and two learning rates per family",
+        "Similar parameter counts and equal sample exposure do not equalize capacity, receptive field, FLOPs or optimization difficulty",
+        "The independent verifier output results/research/04_verification.json cited by the report is not available; the transferred artifacts were re-verified here only by their transfer-manifest hashes",
+        "The bootstrap interval is conditional on one checkpoint and its examples; it is not an interval over training runs"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/04_experiment/pilot/pilot_summary.json",
+          "sha256": "d9fe2da68e34d3f87dacbfa97fe86eebaefc3a70be1fdda288263ba5c7166910"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "04",
+      "source_units": [
+        "S004-L0005",
+        "S004-L0024",
+        "S004-L0028",
+        "S004-L0029",
+        "S004-L0030",
+        "S004-L0031",
+        "S004-L0033"
+      ],
+      "protocol": {
+        "path": "docs/research/04_execution_plan.json",
+        "sha256": "ba355d5c1803b661c7992c0f99a582a8cab54dbaf176cb0aca5b173d2ca02cfc"
+      }
+    },
+    {
+      "id": "H04-03",
+      "statement": "In a post hoc inspection of saved item-4 validation predictions, the selected relative Transformer chose a visible filler of the queried category in all 2,048 validation examples while answering 491 of 1,024 nominal (AGENT/PATIENT) queries correctly.",
+      "population": "Item-4 matched pilot on the synthetic RoleTask (8x8 grid, 35 tokens, split 0, initialization 7); NeuroPixel, adapted NCA, spatial ConvGRU and relative-position Transformer at 27,835-30,384 parameters; 2,048 validation and 4,096 final examples per selected checkpoint",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Descriptive pilot with one initialization; the H1 decision was reserved for item 5",
+        "Limited optimization budget: 1,024 updates of 64 examples and two learning rates per family",
+        "Similar parameter counts and equal sample exposure do not equalize capacity, receptive field, FLOPs or optimization difficulty",
+        "The independent verifier output results/research/04_verification.json cited by the report is not available; the transferred artifacts were re-verified here only by their transfer-manifest hashes",
+        "Post hoc descriptive diagnostic, not a frozen endpoint; it does not establish the internal computation or positional invariance",
+        "Recounted here from the retained validation predictions and dataset; the report's separate diagnostic file is not in the repository"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/04_experiment/item4_evidence.zip",
+          "sha256": "522e90d90d480e73658086920f4cdc9baf38906feec3c5185658774afbe0198a"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/historical_value_checks_H.json",
+          "sha256": "ec0815ccf6a26cdbbf1aad6e1cd15d62da25eb4b5940d06d6512651de7de91e7"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "04",
+      "source_units": [
+        "S004-L0035"
+      ],
+      "protocol": {
+        "path": "docs/research/04_execution_plan.json",
+        "sha256": "ba355d5c1803b661c7992c0f99a582a8cab54dbaf176cb0aca5b173d2ca02cfc"
+      }
+    },
+    {
+      "id": "H04-04",
+      "statement": "Item-4 execution provenance: training source 5ab415ec with protocol NP-SCI-20261006-v1 unchanged; the selection was frozen at 2026-10-06T22:28:58.539148Z before final data access at 22:28:58.653985Z (final dataset content sha256 23bca94c...); total recorded training time over the eight trials was 173.462 s, excluding setup, evaluation, queue waiting and tests; all 60 transferred files match their byte hashes.",
+      "population": "Item-4 matched pilot on the synthetic RoleTask (8x8 grid, 35 tokens, split 0, initialization 7); NeuroPixel, adapted NCA, spatial ConvGRU and relative-position Transformer at 27,835-30,384 parameters; 2,048 validation and 4,096 final examples per selected checkpoint",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Hash and timestamp agreement establishes internal artifact consistency only",
+        "Training time is not an end-to-end cost; inference latency and physical energy were not measured",
+        "The 88-test compatibility count, resource minima and the independent verifier's 20 fixture tests are reported by the report and worker records but were not re-executed here"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/04_experiment/pilot/pilot_summary.json",
+          "sha256": "d9fe2da68e34d3f87dacbfa97fe86eebaefc3a70be1fdda288263ba5c7166910"
+        },
+        {
+          "path": "results/research/04_experiment/item4_evidence.zip",
+          "sha256": "522e90d90d480e73658086920f4cdc9baf38906feec3c5185658774afbe0198a"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/item4_transfer_verification.json",
+          "sha256": "4a1870e89b8a4b91f2b5fa53516864778ace526d757b873e583fea32bb5bbfc6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "04",
+      "source_units": [
+        "S004-L0054",
+        "S004-L0055",
+        "S004-L0056",
+        "S004-L0057",
+        "S004-L0058",
+        "S004-L0059",
+        "S004-L0060",
+        "S004-L0061",
+        "S004-L0063"
+      ]
+    },
+    {
+      "id": "H05-01",
+      "statement": "Under the frozen protocol NP-SCI-20261006-v1 (RoleTask, 1,024 updates, answer-only cross-entropy, fixed item-4 recipes, CPU recovery), H1 - that NeuroPixel improves nominal role binding over the fixed relative Transformer - was not supported: across five primary initialization pairs, mean binding was 12.393% for NeuroPixel and 49.395% for the reference, paired difference -37.002 percentage points, 95% t interval -42.030 to -31.974 pp; NeuroPixel was below the reference in all five pairs.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Does not prove equivalence, universal inferiority or inability to learn; optimization adequacy unresolved",
+        "CPU recovery of a GPU-selected recipe; device invariance not established"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0005",
+        "S005-L0007",
+        "S005-L0015",
+        "S005-L0016",
+        "S005-L0022",
+        "S005-L0024",
+        "S005-L0026",
+        "S005-L0030",
+        "S005-L0031",
+        "S005-L0032",
+        "S005-L0033",
+        "S005-L0035",
+        "S005-L0037",
+        "S005-L0043",
+        "S005-L0044",
+        "S005-L0046",
+        "S005-L0050",
+        "S005-L0058",
+        "S005-L0060",
+        "S005-L0062",
+        "S005-L0115",
+        "S005-L0129",
+        "S005-L0130",
+        "S005-L0131",
+        "S005-L0132",
+        "S005-L0133",
+        "S005-L0137",
+        "S005-L0138",
+        "S005-L0139",
+        "S005-L0140",
+        "S005-L0143",
+        "S005-L0147",
+        "S005-L0148",
+        "S005-L0149",
+        "S005-L0150",
+        "S005-L0152",
+        "S005-L0224",
+        "S005-L0230",
+        "S005-L0234",
+        "S005-L0235",
+        "S005-L0236",
+        "S005-L0237",
+        "S005-L0238",
+        "S005-L0240",
+        "S005-L0244",
+        "S005-L0245",
+        "S005-L0246",
+        "S005-L0247",
+        "S005-L0248",
+        "S005-L0249",
+        "S005-L0251",
+        "S005-L0255",
+        "S005-L0259",
+        "S005-L0261",
+        "S005-L0263",
+        "S006-L0066",
+        "S024-L0019"
+      ],
+      "protocol": {
+        "path": "docs/research/05_execution_plan.json",
+        "sha256": "2002c427deec6272e98f4c36c45f98805b95285cdf0bd34300c644b3bbc33135"
+      },
+      "context_records": [
+        {
+          "path": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+          "role": "summary_record_not_raw_evidence"
+        }
+      ]
+    },
+    {
+      "id": "H05-02",
+      "statement": "In the item-5 exploratory split panel (splits 0, 101, 202 at initialization 10), the paired NeuroPixel-minus-Transformer binding difference was -34.375 pp (SD 0.517 pp; descriptive 95% t interval -35.659 to -33.091 pp, df=2), reported separately from H1.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Three conditional observations sharing the split-0 checkpoint; not pooled with the initialization panel"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0043",
+        "S005-L0044",
+        "S005-L0046",
+        "S005-L0156",
+        "S005-L0160",
+        "S005-L0161",
+        "S005-L0162",
+        "S005-L0166",
+        "S005-L0167",
+        "S005-L0168",
+        "S005-L0169",
+        "S005-L0172",
+        "S005-L0255"
+      ],
+      "protocol": {
+        "path": "docs/research/05_execution_plan.json",
+        "sha256": "2002c427deec6272e98f4c36c45f98805b95285cdf0bd34300c644b3bbc33135"
+      },
+      "context_records": [
+        {
+          "path": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+          "role": "summary_record_not_raw_evidence"
+        }
+      ]
+    },
+    {
+      "id": "H05-03",
+      "statement": "In item 5, NeuroPixel showed no stable advantage over the adapted NCA or the ConvGRU: all four descriptive t intervals of those contrasts cross zero (for example NP minus ConvGRU +2.676 pp, interval -2.354 to 7.705 pp, five initializations), while each of the seven per-checkpoint comparisons against the fixed Transformer has a negative conditional bootstrap interval.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "No multiplicity adjustment; conditional bootstrap intervals do not estimate training-run variance"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0176",
+        "S005-L0180",
+        "S005-L0181",
+        "S005-L0182",
+        "S005-L0183",
+        "S005-L0185",
+        "S005-L0253"
+      ],
+      "protocol": {
+        "path": "docs/research/05_execution_plan.json",
+        "sha256": "2002c427deec6272e98f4c36c45f98805b95285cdf0bd34300c644b3bbc33135"
+      },
+      "context_records": [
+        {
+          "path": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+          "role": "summary_record_not_raw_evidence"
+        }
+      ]
+    },
+    {
+      "id": "H05-04",
+      "statement": "All 28 item-5 training probes fell below the predeclared 95% training-binding threshold (budget-limited flag); NeuroPixel probe binding ranged 10.547-18.750% and the relative Transformer 47.656-58.984%.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "The flag is an operational optimization diagnostic; it does not identify the cause or show that more updates would solve the task"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0009",
+        "S005-L0052",
+        "S005-L0189",
+        "S005-L0193",
+        "S005-L0194",
+        "S005-L0195",
+        "S005-L0196",
+        "S005-L0198",
+        "S005-L0261"
+      ],
+      "protocol": {
+        "path": "docs/research/05_execution_plan.json",
+        "sha256": "2002c427deec6272e98f4c36c45f98805b95285cdf0bd34300c644b3bbc33135"
+      },
+      "context_records": [
+        {
+          "path": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+          "role": "summary_record_not_raw_evidence"
+        }
+      ]
+    },
+    {
+      "id": "H05-05",
+      "statement": "Retrospective reassessment of six retained historical scaling checkpoints: each reconstructed clean global score matched its historical value at four decimals; historical NeuroPixel reached 96.131% mean binding versus 7.320% for the original TinyTransformer (three coupled seeds), a result excluded from H1.",
+      "population": "Six retained historical checkpoints (NeuroPixel 29,824 and TinyTransformer 44,483 parameters, coupled seeds 0-2), 2,000 regenerated RoleTask examples per split",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: results/research/05_historical/ outputs, archived checkpoints and 05_historical_verification.json are absent from this repository and local disks",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Retrospective; historical recipe differs (80/20 split, school loss 0.3, different optimizer, batch and Transformer); no causal attribution to one component",
+        "Historical example hashes and package versions unavailable",
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0009",
+        "S005-L0013",
+        "S005-L0068",
+        "S005-L0070",
+        "S005-L0074",
+        "S005-L0078",
+        "S005-L0079",
+        "S005-L0080",
+        "S005-L0081",
+        "S005-L0082",
+        "S005-L0083",
+        "S005-L0085",
+        "S005-L0089",
+        "S005-L0093",
+        "S005-L0094",
+        "S005-L0095",
+        "S005-L0096",
+        "S005-L0100",
+        "S005-L0101",
+        "S005-L0103",
+        "S005-L0107",
+        "S005-L0109",
+        "S005-L0111",
+        "S005-L0263"
+      ]
+    },
+    {
+      "id": "H05-06",
+      "statement": "The item-5 GPU attempt stopped at recorded update 768 of its first run (NeuroPixel, initialization 10, split 0) through the unchanged 8 GiB RAM guard (available RAM 7.99 GiB), with zero completed training runs and no validation or final evaluation; it is preserved separately and excluded from all statistics.",
+      "population": "Item-5 GPU attempt, 2026-10-06 23:09:38-23:10:18 UTC",
+      "status": "programme_stopped",
+      "declared_level": 0,
+      "limits": [
+        "Incident record only; its cost is separate from the CPU panel",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/05_experiment/item5_gpu_interrupted.zip",
+          "sha256": "3b74eeb0605d769f7176adebdb2f4bec75761d473dce9c6598ba985e8af3468a"
+        },
+        {
+          "path": "results/research/05_experiment/item5_queue_exit.json",
+          "sha256": "64a1526b099d75eed9d9da41a5562dcc164b6ffddeb729dd371c4496bbcded05"
+        }
+      ],
+      "stop_reason": "ResourceStop: available RAM 7.99 GiB below the unchanged 8 GiB guard at update 768",
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0014",
+        "S005-L0056"
+      ],
+      "protocol": {
+        "path": "docs/research/05_execution_plan.json",
+        "sha256": "2002c427deec6272e98f4c36c45f98805b95285cdf0bd34300c644b3bbc33135"
+      }
+    },
+    {
+      "id": "H05-07",
+      "statement": "The item-5 analyzer verified 28 training and 28 final records with zero issues (analysis sha256 11fd91ee...), and a second implementation independently recounted 114,688 final predictions and reproduced the five paired differences, t interval and H1 decision within 1e-12.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Internal artifact consistency and a second recount implementation; not independent laboratory reproduction"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0005",
+        "S005-L0007",
+        "S005-L0050",
+        "S005-L0119",
+        "S005-L0121",
+        "S005-L0123"
+      ],
+      "context_records": [
+        {
+          "path": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+          "role": "summary_record_not_raw_evidence"
+        }
+      ]
+    },
+    {
+      "id": "H05-08",
+      "statement": "A post hoc item-5 validation diagnostic found that each of seven relative-Transformer checkpoints chose a visible filler of the queried category in all 2,048 validation examples while its nominal binding ranged 43.750-47.559%.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Post hoc descriptive diagnostic; does not alter selection or H1 and does not establish an internal mechanism"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0200"
+      ]
+    },
+    {
+      "id": "H05-09",
+      "statement": "The item-5 CPU recovery recorded 2,876.993 s of training timers over 28 runs, 2,979.207 s worker elapsed time and 0.518 GiB peak child RSS; inference latency and physical energy were not measured.",
+      "population": "Item-5 replication on the synthetic RoleTask (split 0, initializations 10-14; exploratory splits 0, 101, 202 at initialization 10); four fixed recipes from the item-4 pilot, 1,024 updates, answer-only cross-entropy, CPU",
+      "status": "blocked_external",
+      "declared_level": 0,
+      "limits": [
+        "Raw evidence unavailable: the 28-run CPU archive (215 files, executor commit 0a56621), 05_analysis.json (sha256 11fd91ee...) and 05_independent_check.json (sha256 adef6b11...) are absent from this repository, local disks and remote branches",
+        "docs/research/05_results.md is itself a 2026-10-07 recovery copy whose byte identity with the executor report could not be verified",
+        "Training timers exclude worker overhead, the GPU attempt, historical reassessment and auditing; not total project cost"
+      ],
+      "receipts": [],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "05",
+      "source_units": [
+        "S005-L0001",
+        "S005-L0212",
+        "S005-L0213",
+        "S005-L0214",
+        "S005-L0215",
+        "S005-L0216",
+        "S005-L0217",
+        "S005-L0218",
+        "S005-L0220"
+      ],
+      "context_records": [
+        {
+          "path": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+          "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+          "role": "summary_record_not_raw_evidence"
+        }
+      ]
+    },
+    {
+      "id": "H06-01",
+      "statement": "The exact frozen A06.1 ablation and attribution recipe (commit a009f2a9, manifest sha256 4bc25ed4...) completed its full inventory - 26 trainings, 34 evaluations, six growth trajectories with 18 stages and eight gate fits - and closed with general component benefit, optimization sufficiency and architectural competence not established; it does not rescue H1.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Replication unit is the initialization: n=2, one split; paired t95 intervals have df=1",
+        "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
+        "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "sha256": "a227f827f9a37afe177af75c0b2b279fa7c49651d44fa7177078f2e751bd5c4b"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/original.zip",
+          "sha256": "61cbc1484697b4004099e865a8fde1839a847d5bc40db1320fe475f44b57bf0f"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0003",
+        "S006-L0007",
+        "S006-L0008",
+        "S006-L0009",
+        "S006-L0010",
+        "S006-L0011",
+        "S006-L0012",
+        "S006-L0015",
+        "S006-L0019",
+        "S006-L0066"
+      ],
+      "protocol": {
+        "path": "docs/research/06_execution_plan.json",
+        "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
+      }
+    },
+    {
+      "id": "H06-02",
+      "statement": "In A06.1, none of the three factorial components established a benefit: shared dictionary/readout +2.014 pp (paired 95% CI -10.394 to +14.423, df=1), school 0.3 versus 0 +0.439 pp (-13.675 to +14.554), reinjection -1.135 pp (-11.062 to +8.791).",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Replication unit is the initialization: n=2, one split; paired t95 intervals have df=1",
+        "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
+        "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)",
+        "The tying ablation also changes the parameter count",
+        "Intervals including zero do not demonstrate equivalence"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/ci_receipt.json",
+          "sha256": "b5d3b90b856c3f4ef9edebb9c8141eef0eec6d343ec6c33dbc60eb535daf4689"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0021",
+        "S006-L0025",
+        "S006-L0029",
+        "S006-L0030",
+        "S006-L0031",
+        "S006-L0051",
+        "S006-L0052",
+        "S006-L0053",
+        "S006-L0064"
+      ],
+      "protocol": {
+        "path": "docs/research/06_execution_plan.json",
+        "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
+      }
+    },
+    {
+      "id": "H06-03",
+      "statement": "In A06.1, recurrent depth effects were not established: training at T4 versus T16 +2.832 pp (paired 95% CI -2.752 to +8.416, df=1), T1 versus T16 +0.146 pp; truncating the same T16 weights to T1 or T4 changed binding by +0.732 and +0.293 pp with intervals including zero.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Replication unit is the initialization: n=2, one split; paired t95 intervals have df=1",
+        "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
+        "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)",
+        "Training at another depth and truncating the same weights are different interventions"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0021",
+        "S006-L0032",
+        "S006-L0033",
+        "S006-L0034",
+        "S006-L0035",
+        "S006-L0054",
+        "S006-L0064"
+      ],
+      "protocol": {
+        "path": "docs/research/06_execution_plan.json",
+        "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
+      }
+    },
+    {
+      "id": "H06-04",
+      "statement": "In A06.1, training with damage produced small uncertain effects: +0.732 pp in clean evaluation (paired 95% CI -38.974 to +40.439), +1.392 pp under lesion, interaction +0.659 pp (-0.271 to +1.590); autonomous repair or recovery of useful memory was not demonstrated.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Replication unit is the initialization: n=2, one split; paired t95 intervals have df=1",
+        "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
+        "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0021",
+        "S006-L0036",
+        "S006-L0037",
+        "S006-L0038",
+        "S006-L0055",
+        "S006-L0064"
+      ],
+      "protocol": {
+        "path": "docs/research/06_execution_plan.json",
+        "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
+      }
+    },
+    {
+      "id": "H06-05",
+      "statement": "In A06.1, extending training from 1,024 to 8,192 updates raised binding by +17.310 pp with school 0 (paired 95% CI +0.868 to +33.751, df=1, unadjusted) and +15.283 pp with school 0.3 (-48.620 to +79.186); the four 8,192-update endpoints reached 27.832%, 34.082%, 24.951% and 18.115%, and all 26 probes remained budget_limited.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Replication unit is the initialization: n=2, one split; paired t95 intervals have df=1",
+        "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
+        "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)",
+        "No contrast remains below 0.05 after the retrospective Holm sensitivity",
+        "Greater exposure does not resolve competence or separate optimization, representation and dynamics"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0021",
+        "S006-L0039",
+        "S006-L0040",
+        "S006-L0060",
+        "S006-L0064"
+      ],
+      "protocol": {
+        "path": "docs/research/06_execution_plan.json",
+        "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
+      }
+    },
+    {
+      "id": "H06-06",
+      "statement": "In A06.1 growth and routing, the fixed bank with the historical router reached 25.651% mean binding (23.242% and 28.060%) and the learned gate 26.335%; the historical router exceeded a uniform mixture by +17.546 pp (paired 95% CI +3.069 to +32.022, unadjusted) and a random router by +16.178 pp, but not the learned gate (-0.684 pp); novelty (-0.163 pp) and resonance (-12.207 pp) did not improve on the fixed bank; no competent adaptive growth or general routing superiority was established.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic RoleTask generator only; no independently designed or external task",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Replication unit is the initialization: n=2, one split; paired t95 intervals have df=1",
+        "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
+        "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)",
+        "Gates learn with additional labels over frozen experts; topics carry lexical signals",
+        "Resonance and novelty banks differ in retained capacity and update policy"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0021",
+        "S006-L0041",
+        "S006-L0042",
+        "S006-L0043",
+        "S006-L0044",
+        "S006-L0045",
+        "S006-L0056",
+        "S006-L0064"
+      ],
+      "protocol": {
+        "path": "docs/research/06_execution_plan.json",
+        "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
+      }
+    },
+    {
+      "id": "H06-07",
+      "statement": "A retrospective Holm sensitivity over the 40 rederived A06.1 main and routing contrasts left none below 0.05.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "The contrast family was defined during the audit; it is not a preregistered confirmatory family",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/multiplicity_sensitivity.json",
+          "sha256": "a6451ead283b2694d36a4212e95ca3fc4f2cca8b21265258ae885ba4c36468ac"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0062"
+      ]
+    },
+    {
+      "id": "H06-08",
+      "statement": "The saved-evidence audit of A06.1 passed 4,362 checks with zero issues - recounting 139,264 final core, 53,248 validation and 98,304 router predictions - and its 204 Wilson and conditional-bootstrap interval controls also passed; an independent recomputation of the factorial effects matched the frozen analysis means.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal audit of saved evidence; no training, selection or new inference",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "The original 142-pass/2-skip regression count is reconstructed from a log excerpt without a JUnit file"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_saved.json",
+          "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/audit_intervals.json",
+          "sha256": "f76e221cf6b36f03387ea8ecebecd7efee4ea4f9e40e8d5cddbd37bd6de61265"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/closure_receipt.json",
+          "sha256": "a227f827f9a37afe177af75c0b2b279fa7c49651d44fa7177078f2e751bd5c4b"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/regression_excerpt.txt",
+          "sha256": "aa2a7ca6b9106dcc3f3764d5d35c3d32f0a0f7654a57b4640adb8a06b173efed"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0013",
+        "S006-L0014",
+        "S006-L0047",
+        "S006-L0076"
+      ]
+    },
+    {
+      "id": "H06-09",
+      "statement": "CPU replay of A06.1 checkpoints reproduced decisions exactly for 34/34 core evaluations and 8/8 routing banks, with 44 checkpoints and 448 tensors finite; the original 1e-4 tolerance failed in five continuous comparisons of four long checkpoints (maximum absolute NLL error 0.000413895, confidence 0.000118315), the cause was not isolated, and the tolerance was not relaxed retrospectively.",
+      "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Linux-Windows numerical reproduction is not bitwise",
+        "Replay uses CPU with two threads and no weight updates",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/06_A06_1_recovery/audit_replay.json",
+          "sha256": "203a17672cf04d83f5b7fcf7e0760c99b728ba78a32f2b885c2a61f058d363b1"
+        },
+        {
+          "path": "results/research/06_A06_1_recovery/numeric_diagnostic.json",
+          "sha256": "a3bc683c96c98700e6e09b40eb80b2988f54f489ac9e25004fbe3feeee6ad29e"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "06_A06_1",
+      "source_units": [
+        "S006-L0072",
+        "S006-L0074"
+      ]
+    },
+    {
+      "id": "HC-01",
+      "statement": "Reconciliation of the local A06.1 continuation with the cloud item-6 study recovered 400 files from the cloud archive pinned at commit 15e76456 without size or hash discrepancies; 37 cloud execution sources match their manifest and 17 files are identical to local equivalents; the 26 nominal configs, 34 cases and final core dataset coincide, while checkpoint bytes and recorded results differ between executions (mean tying effect +2.014 pp in A06.1 versus -0.244 pp in the cloud report) and neither value is selected or averaged.",
+      "population": "Local A06.1 run 37588312570 and cloud item-6 run 37566497890",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "The cause of the result differences is not identified",
+        "Seeds 20/21 are not counted as four independent initializations",
+        "No result merging, retraining or new prospective contrast",
+        "The cloud value -0.244 pp is quoted from the cloud report and not re-verified here",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "coord/recovery/reconciliation-20261008/reconciliation_receipt.json",
+          "sha256": "df195ffc434baf74b0a51bbadd22d86e235f6de4dd97ed0fa17391c49323bcfe"
+        },
+        {
+          "path": "coord/recovery/reconciliation-20261008/source_comparison.json",
+          "sha256": "56abb72f7ff1adad77916209886bf08de81d502bb47b14687b90572b776c46e8"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "CONTINUATIONS",
+      "source_units": [
+        "S008-L0003",
+        "S008-L0007",
+        "S008-L0008",
+        "S008-L0009",
+        "S008-L0010",
+        "S008-L0011",
+        "S008-L0012",
+        "S008-L0013",
+        "S008-L0014",
+        "S008-L0016",
+        "S008-L0018",
+        "S008-L0020"
+      ]
+    },
+    {
+      "id": "HT-01",
+      "statement": "The task-4 audit recovered 763 original files (401,580,342 bytes) from fifteen pinned commits, verified commits, Merkle trees, every blob and all original manifests, and two internal programs passed 984 and 2,984 checks with zero discrepancies without loading models, training or generating predictions.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Internal audit of saved evidence, not a new independent scientific replication",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/recovery_inventory.json",
+          "sha256": "672a1c92b447c679cf4ac893f33e88dbea02d5d3d9f94f963bce810c6774a10c"
+        },
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        },
+        {
+          "path": "results/research/TASK4_review/control_recount.json",
+          "sha256": "502e6025445752ad24d18d5eb2f9fb40a442bb414c684656a9039a2cc321071d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0003",
+        "S024-L0005"
+      ]
+    },
+    {
+      "id": "HT-07",
+      "statement": "Historical item 7: nine internally disjoint partitions were confirmed and the eligible TRAIN union covers 1,319 of 1,320 triples.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Does not identify the minibatches actually seen and does not create a historically clean holdout; contracts are optional",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/control_recount.json",
+          "sha256": "502e6025445752ad24d18d5eb2f9fb40a442bb414c684656a9039a2cc321071d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0009"
+      ]
+    },
+    {
+      "id": "HT-08",
+      "statement": "Historical item 8: metric and PAD corrections and regressions are documented, with the original suite recording 186 passes and one declared skip.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "No empirical improvement or competitive result; corrected historical sources and the current frozen core are different versions",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0010"
+      ]
+    },
+    {
+      "id": "HT-09",
+      "statement": "Historical item 9 (complex binding, five pairs): NeuroPixel 9.628906% versus relative Transformer 49.355469% binding, difference -39.726563 pp (nominal interval -41.254103 to -38.199022).",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits; item 9 synthetic complex-binding population",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Both recipes insufficiently competent",
+        "Nominal interval over training realizations of the same population; no multiplicity adjustment",
+        "Synthetic population with prior exposure",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/09_cloud_runs/37593731891-1-study/study/final_summary.json",
+          "sha256": "b19f9ddf21724bca64abfe5b3b8425721423b3f703011cfd94bda5b92e65dc84"
+        },
+        {
+          "path": "results/research/09_offline_runs/37603398040-1-offline/scientific_audit_summary.json",
+          "sha256": "97d5e1c348343e7a08856d46a5bd67baa5858cdfd27e70e155988cbb869fee89"
+        },
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0011",
+        "S024-L0019"
+      ],
+      "protocol": {
+        "path": "results/research/09_cloud_runs/37593731891-1-study/execution_plan.json",
+        "sha256": "7e9089ae013abbc4fa042e30606d5d1329dc8b7e89281fcab080addc832c7792"
+      }
+    },
+    {
+      "id": "HT-10",
+      "statement": "Historical item 10 (bAbI QA4, five pairs, trained from scratch): NeuroPixel 50.40% versus Transformer 88.66% accuracy, difference -38.26 pp (nominal interval -52.385695 to -24.134305).",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits; item 10 bAbI QA4 synthetic external task",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Synthetic external task learned from scratch; not zero-shot transfer or general language",
+        "Nominal interval without multiplicity adjustment",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/10_cloud_runs/37615277149-1-study/pre_final_archive_receipt.json",
+          "sha256": "9c3e92cc571a607d566d2e0ed96ee75fe5ed5ed4db130537a0ee6019937aa2a3"
+        },
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0012",
+        "S024-L0019"
+      ],
+      "protocol": {
+        "path": "results/research/10_cloud_runs/37615277149-1-study/execution_plan.json",
+        "sha256": "571dd747cb9649bc435ffb006afc6558132b82e0d1c40e7b251827c51821b6f0"
+      }
+    },
+    {
+      "id": "HT-11",
+      "statement": "Historical item 11 (memory): the selected NeuroPixel scored 38/48 versus 48/48 for the GRU against a 46/48 requirement, so admission was false; the main five-pair panel, the delay-8 contrast and learned interference were not executed.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits; item 11 memory admission",
+      "status": "programme_stopped",
+      "declared_level": 0,
+      "limits": [
+        "No figure is reported for the unexecuted panels",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/control_recount.json",
+          "sha256": "502e6025445752ad24d18d5eb2f9fb40a442bb414c684656a9039a2cc321071d"
+        },
+        {
+          "path": "results/research/11_cloud_runs/37626660573-1-preflight/preflight_summary.json",
+          "sha256": "1690d609f2d4b67faf88ddbad1e8f898c8884b13a44da494a8e5335bd3f5d660"
+        }
+      ],
+      "stop_reason": "Admission failed: selected NeuroPixel 38/48 below the 46/48 requirement; main panel not executed",
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0013"
+      ],
+      "protocol": {
+        "path": "results/research/11_cloud_runs/37626660573-1-preflight/execution_plan.json",
+        "sha256": "dbdd2e02da175522cff93323b32a89538b842423fe15eaef2c53d11a35aa25d5"
+      }
+    },
+    {
+      "id": "HT-12",
+      "statement": "Historical item 12 (continual learning): eight native copies preserve the old tensors exactly while the new expert changes, and a negative alias was detected.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Copying weights increases storage and does not demonstrate useful acquisition of eight tasks or competent routing",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/control_recount.json",
+          "sha256": "502e6025445752ad24d18d5eb2f9fb40a442bb414c684656a9039a2cc321071d"
+        },
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0014"
+      ]
+    },
+    {
+      "id": "HT-13",
+      "statement": "Historical item 13 (new symbols and distractors): original contracts and census are saved, and a presence shortcut solves the positive new-word panel.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "A new token is not a newly learned meaning; the transformation can break the original disjunction",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0015"
+      ]
+    },
+    {
+      "id": "HT-14",
+      "statement": "Historical item 14 (repair): an independent categorical recount of all 324 repair rows, with immediate damage and held, removed or changed sources, matches the saved evidence.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Assigned-weight controls separate assisted reconstruction, retention and redundancy; not learned autonomous repair",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/control_recount.json",
+          "sha256": "502e6025445752ad24d18d5eb2f9fb40a442bb414c684656a9039a2cc321071d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0016"
+      ]
+    },
+    {
+      "id": "HT-15",
+      "statement": "Historical item 15 (stability): over five checkpoints, one exposed scene and 256 additional steps, RMS growth ranged 4.293-18.431 and perturbation gain 1.557-6.059.",
+      "population": "Saved evidence of the historical cloud items 7-15 recovered from fifteen pinned commits",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Finite over the observed horizon only; no convergence, attraction, useful memory, asymptotic divergence or universal stability",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/TASK4_review/saved_evidence_audit.json",
+          "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.H",
+      "study": "TASK4",
+      "source_units": [
+        "S024-L0017"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "frozen_at_utc": "2026-10-06T22:28:58.528405+00:00",
+  "primary_reference_family": "relative_transformer",
+  "selected_configs": {
+    "convgru": {
+      "batch_size": 64,
+      "family": "convgru",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 7,
+      "learning_rate": 0.003,
+      "phase": "item4_pilot",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {},
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    "neuropixel": {
+      "batch_size": 64,
+      "family": "neuropixel",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 7,
+      "learning_rate": 0.003,
+      "phase": "item4_pilot",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {},
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    "relative_transformer": {
+      "batch_size": 64,
+      "family": "relative_transformer",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 7,
+      "learning_rate": 0.001,
+      "phase": "item4_pilot",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {},
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    },
+    "standard_nca": {
+      "batch_size": 64,
+      "family": "standard_nca",
+      "gradient_clip": 1.0,
+      "height": 8,
+      "init_seed": 7,
+      "learning_rate": 0.001,
+      "phase": "item4_pilot",
+      "protocol_id": "NP-SCI-20261006-v1",
+      "school_weight": 0.0,
+      "split_seed": 0,
+      "steps": 16,
+      "train_sample_seed": 9002,
+      "update_random_seed": 9001,
+      "updates": 1024,
+      "variant": {},
+      "vocab": 35,
+      "weight_decay": 0.0001,
+      "width": 8
+    }
+  },
+  "selected_validation": {
+    "convgru": {
+      "accuracy": 0.126953125,
+      "correct": 260,
+      "cross_entropy": 2.134307033062214,
+      "macro_agent_patient_accuracy": 0.123046875,
+      "macro_all_roles": 0.126953125,
+      "n": 2048,
+      "per_role": {
+        "ACCION": {
+          "accuracy": 0.103515625,
+          "correct": 53,
+          "n": 512,
+          "wilson_95": [
+            0.08001453353690521,
+            0.13292193549334946
+          ]
+        },
+        "AGENTE": {
+          "accuracy": 0.125,
+          "correct": 64,
+          "n": 512,
+          "wilson_95": [
+            0.0991166386113686,
+            0.15646859318079348
+          ]
+        },
+        "LUGAR": {
+          "accuracy": 0.158203125,
+          "correct": 81,
+          "n": 512,
+          "wilson_95": [
+            0.12915371515338725,
+            0.19234324090717714
+          ]
+        },
+        "PACIENTE": {
+          "accuracy": 0.12109375,
+          "correct": 62,
+          "n": 512,
+          "wilson_95": [
+            0.0956215685151347,
+            0.15220934277486237
+          ]
+        }
+      }
+    },
+    "neuropixel": {
+      "accuracy": 0.18896484375,
+      "correct": 387,
+      "cross_entropy": 2.4594267441189004,
+      "macro_agent_patient_accuracy": 0.0927734375,
+      "macro_all_roles": 0.18896484375,
+      "n": 2048,
+      "per_role": {
+        "ACCION": {
+          "accuracy": 0.32421875,
+          "correct": 166,
+          "n": 512,
+          "wilson_95": [
+            0.28511302588086085,
+            0.36594255152171506
+          ]
+        },
+        "AGENTE": {
+          "accuracy": 0.08984375,
+          "correct": 46,
+          "n": 512,
+          "wilson_95": [
+            0.0680328867914439,
+            0.11776346048123335
+          ]
+        },
+        "LUGAR": {
+          "accuracy": 0.24609375,
+          "correct": 126,
+          "n": 512,
+          "wilson_95": [
+            0.21076597685786014,
+            0.28520319050141624
+          ]
+        },
+        "PACIENTE": {
+          "accuracy": 0.095703125,
+          "correct": 49,
+          "n": 512,
+          "wilson_95": [
+            0.07314916891397412,
+            0.12427865911195062
+          ]
+        }
+      }
+    },
+    "relative_transformer": {
+      "accuracy": 0.73974609375,
+      "correct": 1515,
+      "cross_entropy": 0.43386730962083675,
+      "macro_agent_patient_accuracy": 0.4794921875,
+      "macro_all_roles": 0.73974609375,
+      "n": 2048,
+      "per_role": {
+        "ACCION": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "n": 512,
+          "wilson_95": [
+            0.9925530242771171,
+            0.9999999999999999
+          ]
+        },
+        "AGENTE": {
+          "accuracy": 0.474609375,
+          "correct": 243,
+          "n": 512,
+          "wilson_95": [
+            0.43170578221120814,
+            0.5178911345247195
+          ]
+        },
+        "LUGAR": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "n": 512,
+          "wilson_95": [
+            0.9925530242771171,
+            0.9999999999999999
+          ]
+        },
+        "PACIENTE": {
+          "accuracy": 0.484375,
+          "correct": 248,
+          "n": 512,
+          "wilson_95": [
+            0.4413643447142569,
+            0.5276183732770832
+          ]
+        }
+      }
+    },
+    "standard_nca": {
+      "accuracy": 0.1259765625,
+      "correct": 258,
+      "cross_entropy": 2.676159874261728,
+      "macro_agent_patient_accuracy": 0.0986328125,
+      "macro_all_roles": 0.1259765625,
+      "n": 2048,
+      "per_role": {
+        "ACCION": {
+          "accuracy": 0.1328125,
+          "correct": 68,
+          "n": 512,
+          "wilson_95": [
+            0.10613316057541458,
+            0.16496071222107742
+          ]
+        },
+        "AGENTE": {
+          "accuracy": 0.091796875,
+          "correct": 47,
+          "n": 512,
+          "wilson_95": [
+            0.06973502506867789,
+            0.11993848245508186
+          ]
+        },
+        "LUGAR": {
+          "accuracy": 0.173828125,
+          "correct": 89,
+          "n": 512,
+          "wilson_95": [
+            0.1434642173010417,
+            0.20905002076818258
+          ]
+        },
+        "PACIENTE": {
+          "accuracy": 0.10546875,
+          "correct": 54,
+          "n": 512,
+          "wilson_95": [
+            0.0817381468957351,
+            0.13507548238560207
+          ]
+        }
+      }
+    }
+  },
+  "selection_inputs": "validation only; no final test metrics",
+  "source": {
+    "git_commit": "5ab415ec825e931b69fc22571c47cdb74a4fc592",
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    }
+  }
+}

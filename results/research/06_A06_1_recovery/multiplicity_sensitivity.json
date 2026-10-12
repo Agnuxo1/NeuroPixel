@@ -1,0 +1,167 @@
+{
+  "scope": "Post hoc sensitivity across all 40 independently rederived core/growth contrasts; not a prospective confirmatory family",
+  "method": "Holm; df1 t tests on two paired seed differences; normality unassessable",
+  "contrasts": {
+    "tying": {
+      "unadjusted_p": 0.2874039643788279,
+      "holm_p": 1.0
+    },
+    "school": {
+      "unadjusted_p": 0.7601781195358935,
+      "holm_p": 1.0
+    },
+    "reinjection": {
+      "unadjusted_p": 0.38371846190443715,
+      "holm_p": 1.0
+    },
+    "tying x school": {
+      "unadjusted_p": 0.1241537582423859,
+      "holm_p": 1.0
+    },
+    "tying x reinjection": {
+      "unadjusted_p": 0.5374051184825537,
+      "holm_p": 1.0
+    },
+    "school x reinjection": {
+      "unadjusted_p": 0.6595318706981698,
+      "holm_p": 1.0
+    },
+    "tying x school x reinjection": {
+      "unadjusted_p": 0.6998592739117941,
+      "holm_p": 1.0
+    },
+    "damage train effect clean": {
+      "unadjusted_p": 0.8534376587532573,
+      "holm_p": 1.0
+    },
+    "damage train effect lesion": {
+      "unadjusted_p": 0.7276334910370079,
+      "holm_p": 1.0
+    },
+    "damage interaction": {
+      "unadjusted_p": 0.07044657495455453,
+      "holm_p": 1.0
+    },
+    "trained T1 minus T16": {
+      "unadjusted_p": 0.9174288003203055,
+      "holm_p": 1.0
+    },
+    "same weights evalT1 minus T16": {
+      "unadjusted_p": 0.6869045543337869,
+      "holm_p": 1.0
+    },
+    "trained T4 minus T16": {
+      "unadjusted_p": 0.0980042172446784,
+      "holm_p": 1.0
+    },
+    "same weights evalT4 minus T16": {
+      "unadjusted_p": 0.7577621168183133,
+      "holm_p": 1.0
+    },
+    "8192 minus 1024 school0.0": {
+      "unadjusted_p": 0.04750100063351615,
+      "holm_p": 1.0
+    },
+    "8192 minus 1024 school0.3": {
+      "unadjusted_p": 0.20238893880553113,
+      "holm_p": 1.0
+    },
+    "fixed legacy minus random": {
+      "unadjusted_p": 0.05748488265085667,
+      "holm_p": 1.0
+    },
+    "fixed legacy minus uniform": {
+      "unadjusted_p": 0.04128099006031969,
+      "holm_p": 1.0
+    },
+    "fixed legacy minus learned": {
+      "unadjusted_p": 0.204832764699135,
+      "holm_p": 1.0
+    },
+    "duplicate legacy minus random": {
+      "unadjusted_p": 0.031283963157902536,
+      "holm_p": 1.0
+    },
+    "duplicate legacy minus uniform": {
+      "unadjusted_p": 0.07157333443705588,
+      "holm_p": 1.0
+    },
+    "duplicate legacy minus learned": {
+      "unadjusted_p": 0.07044657495455056,
+      "holm_p": 1.0
+    },
+    "novelty legacy minus random": {
+      "unadjusted_p": 0.07633324786904741,
+      "holm_p": 1.0
+    },
+    "novelty legacy minus uniform": {
+      "unadjusted_p": 0.08759043685255255,
+      "holm_p": 1.0
+    },
+    "novelty legacy minus learned": {
+      "unadjusted_p": 0.1900303218783592,
+      "holm_p": 1.0
+    },
+    "resonance legacy minus random": {
+      "unadjusted_p": 0.49999999999999956,
+      "holm_p": 1.0
+    },
+    "resonance legacy minus uniform": {
+      "unadjusted_p": 0.49999999999999956,
+      "holm_p": 1.0
+    },
+    "resonance legacy minus learned": {
+      "unadjusted_p": 0.49999999999999956,
+      "holm_p": 1.0
+    },
+    "novelty minus fixed legacy": {
+      "unadjusted_p": 0.8913065885354752,
+      "holm_p": 1.0
+    },
+    "novelty minus fixed random": {
+      "unadjusted_p": 0.7422378831816864,
+      "holm_p": 1.0
+    },
+    "novelty minus fixed uniform": {
+      "unadjusted_p": 0.33049868107713587,
+      "holm_p": 1.0
+    },
+    "novelty minus fixed learned": {
+      "unadjusted_p": 0.999999999999998,
+      "holm_p": 1.0
+    },
+    "resonance minus fixed legacy": {
+      "unadjusted_p": 0.16114039866759067,
+      "holm_p": 1.0
+    },
+    "resonance minus fixed random": {
+      "unadjusted_p": 0.10513691342250649,
+      "holm_p": 1.0
+    },
+    "resonance minus fixed uniform": {
+      "unadjusted_p": 0.30717750404154004,
+      "holm_p": 1.0
+    },
+    "resonance minus fixed learned": {
+      "unadjusted_p": 0.1692271502178644,
+      "holm_p": 1.0
+    },
+    "duplicate minus fixed legacy": {
+      "unadjusted_p": 0.06985437068596083,
+      "holm_p": 1.0
+    },
+    "duplicate minus fixed random": {
+      "unadjusted_p": 0.24866816724399454,
+      "holm_p": 1.0
+    },
+    "duplicate minus fixed uniform": {
+      "unadjusted_p": 0.2117522723347591,
+      "holm_p": 1.0
+    },
+    "duplicate minus fixed learned": {
+      "unadjusted_p": 0.04612539184913009,
+      "holm_p": 1.0
+    }
+  },
+  "survive_holm_005": []
+}

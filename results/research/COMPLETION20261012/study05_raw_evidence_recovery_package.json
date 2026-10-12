@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "purpose": "Owner action required to raise item-5 claims H05-01..H05-05, H05-07..H05-09 from L0 blocked_external to their artifact-bound level. No re-execution: the completed runs must not be repeated to recover access.",
+  "missing_artifacts": [
+    {"path": "results/research/05_analysis.json", "expected_sha256": "11fd91ee4ddb8155fc9127e5f6b826535654842190f048fecd23c3dd6f31e436"},
+    {"path": "results/research/05_independent_check.json", "expected_sha256": "adef6b11f29a0c00c58f1cb10a95453ba056eea5e711d8462179bcfafcff1453"},
+    {"path": "results/research/05_experiment/", "expected": "215 files, 6,305,023 bytes, 28 checkpoints, with archive_manifest.json", "executor_commit": "0a56621"},
+    {"path": "results/research/05_validation_diagnostics.json"},
+    {"path": "results/research/05_replications.csv"},
+    {"path": "results/research/05_historical/ and results/research/05_historical_verification.json"},
+    {"path": "docs/research/05_runtime_decisions.json, docs/research/05_historical_reassessment_plan.md, docs/research/05_historical_results.md"}
+  ],
+  "where_it_was": "Linux executor workspace /workspace/scratch/61d6e3e6e688/NeuroPixel-research (last confirmed local commit 376e38a); recorded in results/research/05_experiment/item5_recovery_receipt_20261007.json",
+  "searched_without_success": ["all local refs of D:/PROJECTS/196_NeuroPixel", "remote branches research/scientific-validation-2026-10-07-{cloud,cloud-results,continuation}", "D:/PROJECTS and E:/Proyecto-concursos to depth 7"],
+  "acceptance_after_recovery": "Place the bytes at the listed paths, confirm both expected sha256 values, then bind them as receipts of H05-* in scripts/completion_review_claims_H.py (successor review) and rerun completion_kit.claims_ledger; the claims may then be declared L2 claim_not_supported / experiment_complete only if the validator accepts them.",
+  "no_action_taken": "No contact, push or external request was made."
+}

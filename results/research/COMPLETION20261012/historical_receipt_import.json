@@ -1,0 +1,278 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T21:27:06.669867+00:00",
+  "scope": "Byte copies of historical receipts that existed only outside the publication tree. No regeneration, training, inference or editing. Study 05 raw 28-run archive, 05_analysis.json, 05_independent_check.json and historical reassessment outputs were not found locally or on remote branches and are not substituted.",
+  "a06_1_report_matches_closure_receipt": true,
+  "not_imported": [
+    {
+      "path": "results/research/06_A06_1_recovery/archive/",
+      "reason": "extracted copy of original.zip; derivable from the authenticated original"
+    },
+    {
+      "path": "results/research/04_experiment/pilot/* weights",
+      "reason": "retained inside item4_evidence.zip; *.pt ignored by repository policy"
+    }
+  ],
+  "missing_everywhere": [
+    "results/research/04_verification.json",
+    "results/research/05_analysis.json (sha256 11fd91ee4ddb8155fc9127e5f6b826535654842190f048fecd23c3dd6f31e436)",
+    "results/research/05_independent_check.json (sha256 adef6b11f29a0c00c58f1cb10a95453ba056eea5e711d8462179bcfafcff1453)",
+    "results/research/05_experiment/ (215 files, executor commit 0a56621)",
+    "results/research/05_historical/ and 05_historical_verification.json",
+    "coord/recovery/TASK4_cloud_audit"
+  ],
+  "files": [
+    {
+      "study": "04",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261006/coord/item4_evidence.zip",
+      "destination": "results/research/04_experiment/item4_evidence.zip",
+      "bytes": 1343722,
+      "sha256": "522e90d90d480e73658086920f4cdc9baf38906feec3c5185658774afbe0198a",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "internal transfer_manifest.json, verified separately entry by entry",
+      "role": "original_transfer_bundle",
+      "action": "copied"
+    },
+    {
+      "study": "04",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_pilot_retry1/pilot_summary.json",
+      "destination": "results/research/04_experiment/pilot/pilot_summary.json",
+      "bytes": 23644,
+      "sha256": "d9fe2da68e34d3f87dacbfa97fe86eebaefc3a70be1fdda288263ba5c7166910",
+      "expected_sha256": "d9fe2da68e34d3f87dacbfa97fe86eebaefc3a70be1fdda288263ba5c7166910",
+      "authenticated": true,
+      "authority": "item4 transfer_manifest.json",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "04",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261006/runs/item4_pilot_retry1/selection.json",
+      "destination": "results/research/04_experiment/pilot/selection.json",
+      "bytes": 7609,
+      "sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+      "expected_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+      "authenticated": true,
+      "authority": "docs/research/04_results.md line 57 and git commit a009f2a9",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "05",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261006/coord/item5_recovery_receipt_20261007.json",
+      "destination": "results/research/05_experiment/item5_recovery_receipt_20261007.json",
+      "bytes": 2946,
+      "sha256": "d60252e176a28766b58bed3d431aa1ad6d17daa5eaf066f2d3053ede53d2f30d",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none; contemporaneous summary record, not raw evidence",
+      "role": "summary_record_not_raw_evidence",
+      "action": "copied"
+    },
+    {
+      "study": "05",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261006/coord/item5_gpu_interrupted.zip",
+      "destination": "results/research/05_experiment/item5_gpu_interrupted.zip",
+      "bytes": 49509,
+      "sha256": "3b74eeb0605d769f7176adebdb2f4bec75761d473dce9c6598ba985e8af3468a",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none; interrupted GPU attempt export",
+      "role": "incident_record",
+      "action": "copied"
+    },
+    {
+      "study": "05",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261006/coord/item5_queue_exit.json",
+      "destination": "results/research/05_experiment/item5_queue_exit.json",
+      "bytes": 17,
+      "sha256": "64a1526b099d75eed9d9da41a5562dcc164b6ffddeb729dd371c4496bbcded05",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none; queue exit record",
+      "role": "incident_record",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/original.zip",
+      "destination": "results/research/06_A06_1_recovery/original.zip",
+      "bytes": 7267197,
+      "sha256": "61cbc1484697b4004099e865a8fde1839a847d5bc40db1320fe475f44b57bf0f",
+      "expected_sha256": "61cbc1484697b4004099e865a8fde1839a847d5bc40db1320fe475f44b57bf0f",
+      "authenticated": true,
+      "authority": "closure_receipt.json and docs/research/06_A06_1_results.md line 10",
+      "role": "original_archive",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/closure_receipt.json",
+      "destination": "results/research/06_A06_1_recovery/closure_receipt.json",
+      "bytes": 1732,
+      "sha256": "a227f827f9a37afe177af75c0b2b279fa7c49651d44fa7177078f2e751bd5c4b",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "lists docs/research/06_A06_1_results.md sha256, compared below",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/audit_saved.json",
+      "destination": "results/research/06_A06_1_recovery/audit_saved.json",
+      "bytes": 21984,
+      "sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d",
+      "expected_sha256": "eef3b469c9513adfd21254fa3b2a89e7c0957244a87ccf8ce05bd3fb472d9d4d",
+      "authenticated": true,
+      "authority": "closure_receipt.json",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/audit_intervals.json",
+      "destination": "results/research/06_A06_1_recovery/audit_intervals.json",
+      "bytes": 224,
+      "sha256": "f76e221cf6b36f03387ea8ecebecd7efee4ea4f9e40e8d5cddbd37bd6de61265",
+      "expected_sha256": "f76e221cf6b36f03387ea8ecebecd7efee4ea4f9e40e8d5cddbd37bd6de61265",
+      "authenticated": true,
+      "authority": "closure_receipt.json",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/audit_replay.json",
+      "destination": "results/research/06_A06_1_recovery/audit_replay.json",
+      "bytes": 7476,
+      "sha256": "203a17672cf04d83f5b7fcf7e0760c99b728ba78a32f2b885c2a61f058d363b1",
+      "expected_sha256": "203a17672cf04d83f5b7fcf7e0760c99b728ba78a32f2b885c2a61f058d363b1",
+      "authenticated": true,
+      "authority": "closure_receipt.json",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/numeric_diagnostic.json",
+      "destination": "results/research/06_A06_1_recovery/numeric_diagnostic.json",
+      "bytes": 3072,
+      "sha256": "a3bc683c96c98700e6e09b40eb80b2988f54f489ac9e25004fbe3feeee6ad29e",
+      "expected_sha256": "a3bc683c96c98700e6e09b40eb80b2988f54f489ac9e25004fbe3feeee6ad29e",
+      "authenticated": true,
+      "authority": "closure_receipt.json",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/multiplicity_sensitivity.json",
+      "destination": "results/research/06_A06_1_recovery/multiplicity_sensitivity.json",
+      "bytes": 4611,
+      "sha256": "a6451ead283b2694d36a4212e95ca3fc4f2cca8b21265258ae885ba4c36468ac",
+      "expected_sha256": "a6451ead283b2694d36a4212e95ca3fc4f2cca8b21265258ae885ba4c36468ac",
+      "authenticated": true,
+      "authority": "closure_receipt.json",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/ci_receipt.json",
+      "destination": "results/research/06_A06_1_recovery/ci_receipt.json",
+      "bytes": 3141,
+      "sha256": "b5d3b90b856c3f4ef9edebb9c8141eef0eec6d343ec6c33dbc60eb535daf4689",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/results/research/06_A06_1_recovery/regression_excerpt.txt",
+      "destination": "results/research/06_A06_1_recovery/regression_excerpt.txt",
+      "bytes": 341,
+      "sha256": "aa2a7ca6b9106dcc3f3764d5d35c3d32f0a0f7654a57b4640adb8a06b173efed",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/scripts/audit_A06_1_saved.py",
+      "destination": "scripts/audit_A06_1_saved.py",
+      "bytes": 12448,
+      "sha256": "b04d17d3f25be9db5736dac086abcf506bb6d1ac13feb1a09b8d5682d7f69cf2",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "audit_source",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/scripts/audit_A06_1_intervals.py",
+      "destination": "scripts/audit_A06_1_intervals.py",
+      "bytes": 1741,
+      "sha256": "01425616c4e811ca0837529b2d8fe189fd13b07cd76f7c1a7d324e93d1f3b582",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "audit_source",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/scripts/replay_A06_1_checkpoints.py",
+      "destination": "scripts/replay_A06_1_checkpoints.py",
+      "bytes": 5993,
+      "sha256": "897e95d6306a209bf512964633f986f35f776101ca817bf0c8e5a3e934b60fa8",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "audit_source",
+      "action": "copied"
+    },
+    {
+      "study": "06_A06_1",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/scripts/diagnose_A06_1_numeric.py",
+      "destination": "scripts/diagnose_A06_1_numeric.py",
+      "bytes": 2544,
+      "sha256": "ccde77113d218454c84663755b88b2cf0a8879fb55f1f95f8bea1b848755c210",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "audit_source",
+      "action": "copied"
+    },
+    {
+      "study": "CONTINUATIONS_RECONCILED_20261008",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/coord/recovery/reconciliation-20261008/reconciliation_receipt.json",
+      "destination": "coord/recovery/reconciliation-20261008/reconciliation_receipt.json",
+      "bytes": 11062,
+      "sha256": "df195ffc434baf74b0a51bbadd22d86e235f6de4dd97ed0fa17391c49323bcfe",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "receipt",
+      "action": "copied"
+    },
+    {
+      "study": "CONTINUATIONS_RECONCILED_20261008",
+      "source": "D:/PROJECTS/NeuroPixel-Validation-20261007-continuation/coord/recovery/reconciliation-20261008/source_comparison.json",
+      "destination": "coord/recovery/reconciliation-20261008/source_comparison.json",
+      "bytes": 14434,
+      "sha256": "56abb72f7ff1adad77916209886bf08de81d502bb47b14687b90572b776c46e8",
+      "expected_sha256": null,
+      "authenticated": false,
+      "authority": "none stated",
+      "role": "receipt",
+      "action": "copied"
+    }
+  ]
+}
