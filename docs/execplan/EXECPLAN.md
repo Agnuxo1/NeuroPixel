@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:57:56+00:00
-- Tarea en curso o siguiente: G2.1, Conservar checkout congelado y aplicar parche T0 en version nueva; intento 1; presupuesto 20 minutos.
+- Actualizado (UTC): 2026-10-12T12:00:39+00:00
+- Tarea en curso o siguiente: G2.1, Conservar checkout congelado y aplicar parche T0 en version nueva; intento 1; presupuesto 15 minutos.
 - Criterio de cierre: Checkout exacto d8721a59 conservado sin cambios; fuente original hash564045ff verificada; parche AST aplicado solo a rama nueva, sintaxis y alcance verificados con evidencia y commit.
-- Hecho en esta tarea: G2 dividida antes de empezar: CPU ligera, Torch real y backend GPU; criterio original intacto.
-- Falta en esta tarea: Consulta JEV; conservar worktree congelado; aplicar patch y verificar AST.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start G2.1
+- Hecho en esta tarea: Parche instalado; solo AST de NeuroPixel.forward cambia; frozen HEAD exacto y limpio; sin importar Torch.
+- Falta en esta tarea: Commit y close del subpaso; G2 global sigue pendiente de paridad real y backend.
+- Siguiente comando exacto: git add neuropixel/model.py scripts/completion_verify_T0_scope.py docs/execplan
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -171,6 +171,12 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [ ] (2026-10-12T11:57:56+00:00) G2.1, intento 1: hecho G2 dividida antes de empezar: CPU ligera, Torch real y backend GPU; criterio original intacto.; falta Consulta JEV; conservar worktree congelado; aplicar patch y verificar AST.. Siguiente: `python docs/execplan/plan_status.py start G2.1`.
 
+- [ ] (2026-10-12T11:58:38+00:00) G2.1, intento 1: hecho JEV consultado; carpeta frozen nueva no existe; copia exacta se conserva antes del parche.; falta Crear worktree detached y verificar hash; aplicar parche solo a rama completion.. Siguiente: `git worktree add --detach D:/PROJECTS/NeuroPixel-Frozen-d8721a59 d8721a59d36d127642a5664c0c41e6091296ba21`.
+
+- [ ] (2026-10-12T12:00:38+00:00) G2.1, intento 1: hecho Checkout detached exacto conservado; JEV avala parche acotado (1,0) y bloqueo de cargas bajo guard (0,98).; falta Aplicar parche solo en rama nueva, comprobar AST, commit y cierre de subpaso.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.1_patch.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.model_forward_fix --model neuropixel/model.py --expected-sha256 564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701`.
+
+- [ ] (2026-10-12T12:00:39+00:00) G2.1, intento 1: hecho Parche instalado; solo AST de NeuroPixel.forward cambia; frozen HEAD exacto y limpio; sin importar Torch.; falta Commit y close del subpaso; G2 global sigue pendiente de paridad real y backend.. Siguiente: `git add neuropixel/model.py scripts/completion_verify_T0_scope.py docs/execplan`.
+
 ## Sorpresas y hallazgos
 
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
@@ -189,7 +195,7 @@ Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia
 
 Acciones externas preparadas y no ejecutadas.
 
-- G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (106 archivos; consultar recuento exacto del manifiesto). Rama local research/completion-20261012; no push ni publicacion ejecutados.
+- G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Rama local research/completion-20261012; no push ni publicacion ejecutados.
 
 ## Resultados y retrospectiva
 
