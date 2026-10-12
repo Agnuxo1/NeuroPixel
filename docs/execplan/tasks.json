@@ -56,9 +56,34 @@
         "P0.1"
       ],
       "acceptance": "Checkout en D:\\PROJECTS\\NeuroPixel-Completion-20261012, rama research/completion-20261012; git rev-parse HEAD registrado; si main cambió respecto de d8721a59, diferencias inventariadas sin aplicar parches por hashes antiguos.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:33Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/execplan/evidence/P0.2_checkout.json",
+          "sha256_lf": "3f6bbab96812beaadae14790bc183fff0e06af0909c57195bbf2efcc986dae02"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.2_HEAD.txt",
+          "sha256_lf": "157f64e464313da5395c0275637323bdf71a3ecf886d1d6059a49370f0a1230a"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.2_branch.txt",
+          "sha256_lf": "aa463c1136016d37bb1bc9d1bcc5899292f9abec3fc0291547e16d67245471e6"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.2_status.txt",
+          "sha256_lf": "8ec69c636f4265771308e78324cfea2e378ce9bac140c0fc1146130397d83616"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.2_worktrees.txt",
+          "sha256_lf": "706df7854cacc5cd77fbd2a847ccf7be74dcb77acc1496e9098c8736172edbbb"
+        }
+      ],
+      "commit": "92d5f3ae283d8a6554e87d2c2e8868369482495a",
+      "closed": "2026-10-12T11:33Z",
+      "note": "Checkout y rama aislados; main remoto coincide con base fijada."
     },
     {
       "id": "P0.3",
