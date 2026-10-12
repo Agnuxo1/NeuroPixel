@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:38:43+00:00
-- Tarea en curso o siguiente: P0.4, Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md); intento 1; presupuesto 15 minutos.
-- Criterio de cierre: docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.
-- Hecho en esta tarea: Plan validado, problems vacio, backup excluido y bloque AGENTS presente; checklist regenerado.
-- Falta en esta tarea: Commit y cierre.
-- Siguiente comando exacto: git add docs/execplan
+- Actualizado (UTC): 2026-10-12T11:38:44+00:00
+- Tarea en curso o siguiente: G0, Congelar inventario y restaurar trazabilidad; intento 1; presupuesto 30 minutos.
+- Criterio de cierre: cero discrepancias no explicadas en los originales y un mapa de afirmación → protocolo → fuente → ejecución → datos → recuento. Las dependencias faltantes se identifican, sin inventar archivos ni valores. [guía §5]
+- Hecho en esta tarea: P0 completa, 4 tareas cerradas; 63 pruebas OK.
+- Falta en esta tarea: Congelar inventario y verificar originales y trazabilidad.
+- Siguiente comando exacto: python docs/execplan/plan_status.py section 5
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -140,13 +140,13 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:36:59+00:00) P0.2: done; commit 92d5f3ae283d8a6554e87d2c2e8868369482495a; Checkout y rama aislados; main remoto coincide con base fijada.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 
-- [ ] (2026-10-12T11:37:33+00:00) P0.4, intento 1: hecho Plan instalado, 3 tareas cerradas, checklist generado y AGENTS operativo.; falta Validar sistema de reanudacion y guardar recibo; commit y close.. Siguiente: `python docs/execplan/plan_status.py section 1`.
 
 - [x] (2026-10-12T11:38:41+00:00) P0.3: done; commit 2a6199cb8558bb5dd6eabaee07b90eae95ff2533; 26 archivos autenticados; entorno E:; 38+25 pruebas aprobadas.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T11:38:41+00:00) P0.4, intento 1: hecho P0.3 realmente cerrada; plan y checklist operativos; correccion previa preservada en progreso.; falta Validar sistema de reanudacion y cerrar.. Siguiente: `python docs/execplan/plan_status.py start P0.4`.
 
-- [ ] (2026-10-12T11:38:43+00:00) P0.4, intento 1: hecho Plan validado, problems vacio, backup excluido y bloque AGENTS presente; checklist regenerado.; falta Commit y cierre.. Siguiente: `git add docs/execplan`.
+- [x] (2026-10-12T11:38:44+00:00) P0.4: done; commit 2ec302d252d8e1bcf40636537209d5790a0011fe; Sistema persistente validado sin problemas, checklist y AGENTS instalados.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T11:38:44+00:00) G0, intento 1: hecho P0 completa, 4 tareas cerradas; 63 pruebas OK.; falta Congelar inventario y verificar originales y trazabilidad.. Siguiente: `python docs/execplan/plan_status.py section 5`.
 
 ## Sorpresas y hallazgos
 

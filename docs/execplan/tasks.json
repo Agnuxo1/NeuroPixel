@@ -140,9 +140,18 @@
         "P0.3"
       ],
       "acceptance": "docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:38Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/execplan/evidence/P0.4_plan_validation.json",
+          "sha256_lf": "7f12cfa553a47b13d6d5b691df958d47f469e11ca5e40b4821176eec7580340d"
+        }
+      ],
+      "commit": "2ec302d252d8e1bcf40636537209d5790a0011fe",
+      "closed": "2026-10-12T11:38Z",
+      "note": "Sistema persistente validado sin problemas, checklist y AGENTS instalados."
     },
     {
       "id": "G0",
