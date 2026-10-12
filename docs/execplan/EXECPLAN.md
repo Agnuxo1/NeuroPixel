@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T22:47:16+00:00
-- Tarea en curso o siguiente: G2.2, Ejecutar Torch historico y regresiones CPU relevantes; intento 1; presupuesto 30 minutos tras admision.
-- Criterio de cierre: Tres pruebas Torch en entorno real y regresiones PAD, denominadores, routing, clases, mascaras, logits completos, finitud y persistencia ejecutadas. Paridad positiva original/nuevo con mismos pesos, entradas y RNG; evidencia y versiones guardadas; guard8GiB.
-- Hecho en esta tarea: 25/49 cerradas; sin tareas elegibles: todo depende de G2.2 (RAM>=8GiB) o de bloqueos externos; G2.2 preparada (tests/test_g2_runtime_contracts.py, scripts/completion_g2_runtime.py)
-- Falta en esta tarea: Cuando haya RAM: reopen G2.2, start, ejecutar runner, cerrar; luego G2.3 por gpuq y G2
-- Siguiente comando exacto: python docs/execplan/plan_status.py reopen G2.2 --note 'RAM disponible' && python docs/execplan/plan_status.py start G2.2 && python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_runtime.txt --timeout 2400 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g2_runtime.py
+- Actualizado (UTC): 2026-10-12T23:30:27+00:00
+- Tarea en curso o siguiente: G2.3, Repetir controles fisicos del backend afectado sin nuevas cohortes; intento 1; presupuesto 30 minutos.
+- Criterio de cierre: Controles del backend afectado en version nueva ejecutados por gpuq y guard8GiB con pesos e inputs fijados y tolerancias originales, versiones y discrepancias guardadas; ninguna cohorte cientifica reabierta.
+- Hecho en esta tarea: G2.2 cerrada (commit a0488649); ticket gpuq NeuroPixel:G2.3 lanzado en segundo plano: preflights RENDER08/09 con el modelo parcheado en results/research/G2.3_backend_controls/
+- Falta en esta tarea: Leer G2.3_backend_controls.json; cerrar G2.3 y G2; checkpoint de fase y chat nuevo antes de G13
+- Siguiente comando exacto: cat docs/execplan/evidence/G2.3_gpuq_run.txt && python docs/execplan/plan_status.py close G2.3 ...
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: RAM libre 3-6 GiB por procesos ajenos (no se detienen); GPU ocupada por la cola villa
+- Dudas o riesgos abiertos: Si los estados difieren de los originales: registrar discrepancia, no ampliar tolerancias
 
 ## Propósito
 
@@ -204,6 +204,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:38:34+00:00) G20.2: done; commit 4a68e382c66c3bd398534f1eb7ca079020f8a5dc; ANT01: plan congelado antes de ejecutar; Hopfield global domina al local con mismo estado y el decodificador explicito domina todo; PR1 24/24, PR2 60/60; afirmacion ANT01-01 L2.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T22:47:16+00:00) G2.2, intento 1: hecho 25/49 cerradas; sin tareas elegibles: todo depende de G2.2 (RAM>=8GiB) o de bloqueos externos; G2.2 preparada (tests/test_g2_runtime_contracts.py, scripts/completion_g2_runtime.py); falta Cuando haya RAM: reopen G2.2, start, ejecutar runner, cerrar; luego G2.3 por gpuq y G2. Siguiente: `python docs/execplan/plan_status.py reopen G2.2 --note 'RAM disponible' && python docs/execplan/plan_status.py start G2.2 && python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_runtime.txt --timeout 2400 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g2_runtime.py`.
+
+- [ ] (2026-10-12T23:30:27+00:00) G2.3, intento 1: hecho G2.2 cerrada (commit a0488649); ticket gpuq NeuroPixel:G2.3 lanzado en segundo plano: preflights RENDER08/09 con el modelo parcheado en results/research/G2.3_backend_controls/; falta Leer G2.3_backend_controls.json; cerrar G2.3 y G2; checkpoint de fase y chat nuevo antes de G13. Siguiente: `cat docs/execplan/evidence/G2.3_gpuq_run.txt && python docs/execplan/plan_status.py close G2.3 ...`.
 
 ## Sorpresas y hallazgos
 
