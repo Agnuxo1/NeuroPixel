@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "id": "ANT01",
+  "title": "Direct comparison with the closest antecedent: global versus locally coupled Hopfield memory and repair at equal state size",
+  "frozen_before_execution": true,
+  "question": "At equal state size (N = 64 binary cells on an 8x8 grid), how do a global Hopfield network and locally coupled Hopfield networks compare at storing K patterns and repairing them after erasure of a fraction f of cells and additive noise sigma, and how close do they come to an explicit nearest-pattern decoder?",
+  "role": "Antecedent comparison for the candidate central hypothesis on memory and repair (guide section 18I); exploratory, spends no alpha",
+  "patterns": {
+    "rand": "i.i.d. +/-1 cells with probability 1/2",
+    "smooth": "Gaussian-smoothed (sigma 1.5 cells, reflect boundary) i.i.d. normal field on the 8x8 grid, thresholded at its median"
+  },
+  "models": {
+    "global_hopfield": "W = (1/N) sum_k xi_k xi_k^T, zero diagonal",
+    "local_r1": "Same Hebbian weights restricted to the 3x3 Moore neighbourhood (open boundary), zero diagonal",
+    "local_r2": "Same Hebbian weights restricted to the 5x5 neighbourhood (open boundary), zero diagonal",
+    "explicit_decoder": "Output the stored pattern with maximal overlap with the cue on visible cells (maximum-likelihood identification for equiprobable patterns); the antecedent 'erasure code with explicit decoder'"
+  },
+  "dynamics": "Asynchronous deterministic sweeps in raster order, s_i <- sign(h_i), h_i = sum_j W_ij s_j; h_i = 0 keeps s_i, and a cell still at 0 becomes +1; at most 50 sweeps or until a sweep changes nothing",
+  "cue": "Target pattern; a uniformly chosen fraction f of cells erased to 0; Gaussian noise sigma added to visible cells; initial state sign(cue) on visible cells and 0 on erased cells",
+  "grid": {"K": [1, 2, 4, 8, 12], "f": [0.1, 0.25, 0.5], "sigma": [0.0, 0.5], "pattern_family": ["rand", "smooth"]},
+  "replication": {"memory_instances_per_cell": 20, "cues_per_instance": 10, "unit_of_analysis": "memory instance (pattern set); cues inside an instance are not independent", "seed_rule": "numpy default_rng(20261013 + 1000*cell_index + instance)"},
+  "endpoints": {
+    "E1_exact_repair": "fraction of cues whose final state equals the target exactly (decoder: target identified)",
+    "E2_final_overlap": "mean (1/N) sum_i s_i xi_i of the final state with the target",
+    "E3_storage": "fraction of stored patterns that are fixed points when started undamaged (Hopfield models only)",
+    "E4_basin_identification": "fraction of cues whose final state is closer (Hamming) to the target than to every other stored pattern"
+  },
+  "analysis": "Descriptive per grid cell: instance-level means with t95 across the 20 instances; paired differences global minus local_r1 and global minus local_r2 by instance with t95; no multiplicity adjustment; no confirmatory claim",
+  "registered_predictions": {
+    "PR1": "For rand patterns, global_hopfield E1 >= local_r1 and >= local_r2 in every cell with K >= 2 (locality lowers capacity)",
+    "PR2": "explicit_decoder E1 >= every Hopfield model in every cell",
+    "PR3": "For smooth patterns no direction is registered (exploratory)"
+  },
+  "interpretation_rule": "If the local fields are dominated by global Hopfield and by the explicit decoder in every cell, a memory-repair bet for local fields must justify locality by other gains (cost, locality of repair, persistence) and cannot claim superior storage at equal state size",
+  "limits": ["Binary Hopfield variants, not the learned NeuroPixel rule", "Synthetic patterns only", "No training: Hebbian storage", "Exploratory; no external custody"],
+  "resources": "CPU numpy only, two threads; no Torch, no GPU"
+}
