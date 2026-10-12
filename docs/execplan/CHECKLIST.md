@@ -68,19 +68,24 @@
 
 ## G3 Separación de datos
 
-- [ ] G3 Separar desarrollo, validación y evaluación final (§8)
+- [x] ~~G3 Separar desarrollo, validación y evaluación final (§8)~~ 2026-10-12T22:29Z `70f937dd61`
 
 ## G17 Custodia ciega
 
-- [ ] G17.1 Custodia commit-reveal operativa antes de abrir cualquier TEST nuevo (§18F)
+- [x] ~~G17.1 Custodia commit-reveal operativa antes de abrir cualquier TEST nuevo (§18F)~~ 2026-10-12T22:31Z `319accb52c`
 
 ## G18 Estadística de programa
 
-- [ ] G18 Registro de programa: hipótesis, alfa, márgenes y análisis (§18G)
+- [x] ~~G18 Registro de programa: hipótesis, alfa, márgenes y análisis (§18G)~~ 2026-10-12T22:33Z `3173abbdbd`
+
+## 18I Antecedentes
+
+- [x] ~~G20.1 Tabla de antecedentes en el borrador de manuscrito (§18I)~~ 2026-10-12T22:35Z `fb1ed71f7f`
+- [x] ~~G20.2 Comparacion directa con Hopfield: memoria y reparacion con el mismo estado (§18I)~~ 2026-10-12T22:38Z `4a68e382c6`
 
 ## G20 Antecedentes
 
-- [ ] G20 Tabla de antecedentes que pueden anular la novedad (§18I)
+- [x] ~~G20 Tabla de antecedentes que pueden anular la novedad (§18I)~~ 2026-10-12T22:38Z `4a68e382c6`
 
 ## G13 Apuesta central
 
@@ -121,8 +126,8 @@
 ## Matemáticas openai/math
 
 - [ ] M1 Experimento MATH325 (Crouzeix) (§14.1)
-- [ ] M2 Experimento MATH119 (Courtade-Kumar) (§14.2)
-- [ ] M3 Comprobar formalizaciones con Comparator (Linux/WSL) (§14.3)
+- [x] ~~M2 Experimento MATH119 (Courtade-Kumar) (§14.2)~~ 2026-10-12T22:41Z `0783e69d24`
+- [ ] **IN PROGRESS** M3 Comprobar formalizaciones con Comparator (Linux/WSL) (§14.3) (attempt 1)
 
 ## G9 Backend gráfico y coste
 
@@ -175,3 +180,11 @@
 ## 18A Afirmaciones historicas
 
 - [ ] BLOCKED (external) A18.2.H.ext Recuperacion por el propietario del archivo crudo del estudio 05 (§18A): Propietario debe recuperar del ejecutor Linux (commit 0a56621) el archivo crudo del estudio 05; ninguna accion externa ejecutada.
+
+## 18F Custodia
+
+- [ ] BLOCKED (external) G17.1.ext Evaluador independiente y sellado de tiempo externo para la custodia (§18F): Propietario: designar evaluador no autor y aprobar sellado de tiempo externo; nadie contactado.
+
+## 14.3 Formalizaciones
+
+- [ ] M3.ext Reconstruccion Lean/Comparator tras aprobacion de descargas (§14.3)

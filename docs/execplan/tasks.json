@@ -851,7 +851,46 @@
         "G0"
       ],
       "acceptance": "splits y derivados sin contaminación según la unidad declarada; selector y cohortes fijados; exposición final registrada; afirmaciones de custodia acordes a la operación real. [guía §8]",
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:24Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/G3_split_registry.json",
+          "sha256_lf": "bfe2767b7a4cae7cfb03440e858bf57999597d51efc5993ff5e6e2609ffc4503"
+        },
+        {
+          "path": "results/research/NEWREL20261013/manifest.json",
+          "sha256_lf": "20d8bf3a6c58ff1c1744ab8930118fbbe051763697a69cb3a3d56feec9ef2075"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G3_newrel_family_audit.json",
+          "sha256_lf": "8bbf2060373d618a3921fb8323553a1dbc523acb1f20cc7ce49be1097864c10c"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G3_kit_generator_family_audit.json",
+          "sha256_lf": "73792edee19d37bd5efeb2611305ffae6152f3d86d803af0223142545f65a15a"
+        },
+        {
+          "path": "docs/research/G3_separation_and_exposure_20261013.md",
+          "sha256_lf": "b9fc1fc8ec96a3ac79ae9dde552a223ac8e2a93c8f3f4c2b8251eb90fcb3b957"
+        },
+        {
+          "path": "docs/execplan/evidence/G3_tests.txt",
+          "sha256_lf": "92c176df869a8d8c575f81798c30f308b58ef366920bb5f3e6a54b79f89333aa"
+        },
+        {
+          "path": "docs/execplan/evidence/G3_registry.txt",
+          "sha256_lf": "0fcdc1a8fac8a62eb432eb293e70596417c535856bb66f9ab7d4e3ff99332cbe"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/G3/claims_ledger.json",
+          "sha256_lf": "a628acd1bcdedf36f3b110396c584e4cee8ddf588d53f379c3b764db86ecd806"
+        }
+      ],
+      "commit": "70f937dd61344e746108df5775f32e510b31cf5a",
+      "closed": "2026-10-12T22:29Z",
+      "note": "Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1)."
     },
     {
       "id": "G17.1",
@@ -862,7 +901,30 @@
         "G3"
       ],
       "acceptance": "Procedimiento de custodia probado de punta a punta en un ensayo sin datos reales (commit, digest, verify) y documentado; evaluador designado o bloqueo externo explícito para la custodia por terceros.",
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:30Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/G17_REHEARSAL_20261013/rehearsal_receipt.json",
+          "sha256_lf": "ffab7368c822dc3df8f3959c54e35ff3e5dd423c9e541dc9524e40277662f737"
+        },
+        {
+          "path": "docs/research/G17_custody_procedure_20261013.md",
+          "sha256_lf": "d9eeba5f4565f9fbbede0e84500f028654a3b514b837b37be153a6cb5eac86b7"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G17_evaluator_package.json",
+          "sha256_lf": "e4bd7c1511d7d7e1d1e02f1abe433c8801be51ffbd454598f7b7aabfadc874d2"
+        },
+        {
+          "path": "docs/execplan/evidence/G17.1_rehearsal.txt",
+          "sha256_lf": "c164383133165d8a9078c9d9ded0c620d1abf63f0b3fcdbd8be3a65e411412c5"
+        }
+      ],
+      "commit": "319accb52c4a08121ef6e4d0c2db1e0e982d771d",
+      "closed": "2026-10-12T22:31Z",
+      "note": "Ensayo commit/digest/verify 9/9 con material ficticio, manipulaciones rechazadas; procedimiento documentado; custodia por terceros en G17.1.ext."
     },
     {
       "id": "G18",
@@ -873,7 +935,88 @@
         "A18"
       ],
       "acceptance": "registro de programa con el α de cada hipótesis, márgenes de equivalencia para toda afirmación de igualdad, análisis jerárquico cuando corresponda y curva de especificaciones para cada resultado central. [guía §18G]",
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:33Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/G18/program_registry.json",
+          "sha256_lf": "92d199c922e8d6d36c83e7971ce2abea47125214a69f7b1805c6e247ad13a6eb"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G18_sensitivity.json",
+          "sha256_lf": "25398ec865a7780b1d184cc5adbb3c5a98c615eaa66fa86314d23cc14f4bca2a"
+        },
+        {
+          "path": "docs/research/G18_program_statistics_20261013.md",
+          "sha256_lf": "bb955479f84530ba2f138e85426aaa067168d3362fb6fef36e94d4e6b51a9933"
+        },
+        {
+          "path": "docs/execplan/evidence/G18_program_statistics.txt",
+          "sha256_lf": "325ec085574ef77f1d5ccbab0077daa23a26d8eab370eb163dc03003ba7ca5a0"
+        }
+      ],
+      "commit": "3173abbdbdc1545eae8597d1467ae29053cf5a33",
+      "closed": "2026-10-12T22:33Z",
+      "note": "Registro de programa (H1 alfa propio, flujo online Bonferroni 0,05 para lo siguiente), sin afirmaciones de igualdad, bootstrap jerarquico DEV04/GLOB05 y curvas de especificacion VIS07; 5 pares no bastan para test de signos."
+    },
+    {
+      "id": "G20.1",
+      "title": "Tabla de antecedentes en el borrador de manuscrito",
+      "phase": "18I Antecedentes",
+      "section": "18I",
+      "acceptance": "Tabla completa (Hopfield, Turing, reservorios, Boyd-Chua, Miller-Hardt, DEQ/monDEQ, Lohmiller-Slotine, Gilpin, Seung/Khona-Fiete, Kirkpatrick/van de Ven, NCA de Mordvintsev/Randazzo) con lo que establece cada uno, la pregunta para NeuroPixel y la respuesta actual con evidencia o 'no establecido'.",
+      "depends_on": [],
+      "status": "done",
+      "started": "2026-10-12T22:34Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/G20.1/NeuroPixel_manuscript_completion_draft.md",
+          "sha256_lf": "d0d89f0c12a2d72a78a8da138d44ac95344a5419d1a015c02f18fd554881cbb8"
+        }
+      ],
+      "commit": "fb1ed71f7f6dc59dd1a68342c6081dbc3b6f4ac7",
+      "closed": "2026-10-12T22:35Z",
+      "note": "Tabla de 12 antecedentes con pregunta y respuesta actual citando afirmaciones del registro; casi todas 'no establecido'."
+    },
+    {
+      "id": "G20.2",
+      "title": "Comparacion directa con Hopfield: memoria y reparacion con el mismo estado",
+      "phase": "18I Antecedentes",
+      "section": "18I",
+      "acceptance": "Plan congelado y fijado por hash antes de ejecutar; Hopfield global, Hopfield local y decodificador explicito evaluados en toda la rejilla registrada; resultados con negativos e informe en ingles.",
+      "depends_on": [
+        "G20.1"
+      ],
+      "status": "done",
+      "started": "2026-10-12T22:36Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/research/ANT01_plan.json",
+          "sha256_lf": "38436579c892e3f2fcd216d6bce32e814f49034ea526b9b2d6cd63f9d0f655b6"
+        },
+        {
+          "path": "results/research/ANT01/results.json",
+          "sha256_lf": "9face54a64b494d0fa6536a25b19f2d02b21551be1587327e5a8610e965ded22"
+        },
+        {
+          "path": "docs/research/ANT01_results.md",
+          "sha256_lf": "3bffddae2f4b035971a0aca39f078574979e48e7a1c294d89ae1600a54b74c5a"
+        },
+        {
+          "path": "docs/execplan/evidence/G20.2_run.txt",
+          "sha256_lf": "10a45df38dec5fea8cdc41628140d6c1c4ca8e99df3222305698929dd083a1bc"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/G20.2/claims_ledger.json",
+          "sha256_lf": "3faff705ad75d5edecda82d48e61de4eacab7d5e6ba998473e599275382b69f4"
+        }
+      ],
+      "commit": "4a68e382c66c3bd398534f1eb7ca079020f8a5dc",
+      "closed": "2026-10-12T22:38Z",
+      "note": "ANT01: plan congelado antes de ejecutar; Hopfield global domina al local con mismo estado y el decodificador explicito domina todo; PR1 24/24, PR2 60/60; afirmacion ANT01-01 L2."
     },
     {
       "id": "G20",
@@ -881,10 +1024,35 @@
       "section": "18I",
       "title": "Tabla de antecedentes que pueden anular la novedad",
       "depends_on": [
-        "A18"
+        "A18",
+        "G20.1",
+        "G20.2"
       ],
       "acceptance": "tabla completa en el manuscrito y al menos un experimento de comparación directa con el antecedente más cercano de la afirmación central. [guía §18I]",
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:38Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/G20.1/NeuroPixel_manuscript_completion_draft.md",
+          "sha256_lf": "d0d89f0c12a2d72a78a8da138d44ac95344a5419d1a015c02f18fd554881cbb8"
+        },
+        {
+          "path": "docs/research/ANT01_plan.json",
+          "sha256_lf": "38436579c892e3f2fcd216d6bce32e814f49034ea526b9b2d6cd63f9d0f655b6"
+        },
+        {
+          "path": "results/research/ANT01/results.json",
+          "sha256_lf": "9face54a64b494d0fa6536a25b19f2d02b21551be1587327e5a8610e965ded22"
+        },
+        {
+          "path": "docs/research/ANT01_results.md",
+          "sha256_lf": "3bffddae2f4b035971a0aca39f078574979e48e7a1c294d89ae1600a54b74c5a"
+        }
+      ],
+      "commit": "4a68e382c66c3bd398534f1eb7ca079020f8a5dc",
+      "closed": "2026-10-12T22:38Z",
+      "note": "Tabla de antecedentes en el borrador de manuscrito y comparacion directa con Hopfield (ANT01); la localidad no aporta almacenamiento a igual estado."
     },
     {
       "id": "G13",
@@ -1012,7 +1180,34 @@
         "G3"
       ],
       "acceptance": "MATH119 registrado y ejecutado con controles analíticos; sin aplicar la desigualdad fuera de sus hipótesis.",
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T22:39Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/research/MATH119_plan.json",
+          "sha256_lf": "2424396c0ccf022b0cec7b8bdfb4eea74dd5257134057b21557213acb5fa8d2a"
+        },
+        {
+          "path": "results/research/MATH119/results.json",
+          "sha256_lf": "99195913d3c229d78cdb7a118b57e4aa6e75e7e2b3760b63173944023170723b"
+        },
+        {
+          "path": "docs/research/MATH119_results.md",
+          "sha256_lf": "ebb7fb83805f59204cda3c7dc7d222291e167f0e66044d8ea4fba3f08edd1183"
+        },
+        {
+          "path": "docs/execplan/evidence/M2_run.txt",
+          "sha256_lf": "dbdebb7df7d716d439afef3c42a45ff8b8ac2741a5b4863f71f4fc95389a36a0"
+        },
+        {
+          "path": "docs/archive/completion_20261012/ledger_snapshots/M2/claims_ledger.json",
+          "sha256_lf": "15b0e746b917832129ecf422fe6412f2c16e75a130abbd32d1133c510e3a6cb4"
+        }
+      ],
+      "commit": "0783e69d249afa828d9a090fd683c6dd0dc234f4",
+      "closed": "2026-10-12T22:41Z",
+      "note": "MATH119 registrado y ejecutado: 27846 casos sin violacion, controles analiticos exactos, sin aplicar fuera de hipotesis; afirmacion MATH119-01 L2."
     },
     {
       "id": "M3",
@@ -1023,7 +1218,9 @@
         "P0.4"
       ],
       "acceptance": "Comparator ejecutado para DirectCrouzeix y CourtadeKumar con stdout/stderr, código de salida, versiones y axiomas guardados, o estado formalization_rebuild_pending documentado.",
-      "status": "pending"
+      "status": "in_progress",
+      "started": "2026-10-12T22:44Z",
+      "attempts": 1
     },
     {
       "id": "G9",
@@ -1201,7 +1398,37 @@
           "sha256_lf": "e11cb8a0f53263d71cddb7c6bd8622fd772320d6e05ff5a540899c3d3e0ccade"
         }
       ]
+    },
+    {
+      "id": "G17.1.ext",
+      "title": "Evaluador independiente y sellado de tiempo externo para la custodia",
+      "phase": "18F Custodia",
+      "section": "18F",
+      "acceptance": "Evaluador no autor designado y ruta de sello de tiempo externo aprobada por el propietario; primer compromiso publico registrado.",
+      "depends_on": [
+        "G17.1"
+      ],
+      "status": "blocked_external",
+      "note": "Propietario: designar evaluador no autor y aprobar sellado de tiempo externo; nadie contactado.",
+      "blocked": "2026-10-12T22:31Z",
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/G17_evaluator_package.json",
+          "sha256_lf": "e4bd7c1511d7d7e1d1e02f1abe433c8801be51ffbd454598f7b7aabfadc874d2"
+        }
+      ]
+    },
+    {
+      "id": "M3.ext",
+      "title": "Reconstruccion Lean/Comparator tras aprobacion de descargas",
+      "phase": "14.3 Formalizaciones",
+      "section": "14.3",
+      "acceptance": "Comparator ejecutado para DirectCrouzeix y CourtadeKumar con stdout/stderr, codigo de salida, versiones y axiomas guardados, tras aprobar el propietario las descargas en E:.",
+      "depends_on": [
+        "M3"
+      ],
+      "status": "pending"
     }
   ],
-  "updated": "2026-10-12T22:23Z"
+  "updated": "2026-10-12T22:44Z"
 }
