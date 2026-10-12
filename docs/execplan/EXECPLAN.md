@@ -199,7 +199,7 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:24:17+00:00) A18.3: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Validador valido sobre 74 afirmaciones (max L2); verificacion independiente pass_with_fixes con 16 hallazgos corregidos (incl. negativos VIS07 omitidos); 22 correcciones de texto archivadas en 3 rondas.; detalle en archive/PROGRESS_ARCHIVE.md.
 - [x] (2026-10-12T22:24:17+00:00) A18: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Registro docs/research/claims_ledger.json: 795 candidatos publicos cubiertos, 74 afirmaciones (L0:10, L1:35, L2:29), validador valido; textos corregidos para no superar su nivel; L0 del estudio 05 pendiente del propietario.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T22:24:17+00:00) G3, intento 1: hecho A18 cerrada; checkpoint de sesion escrito; falta Leer seccion 8 (lineas 218-232); disenar unidad de separacion (familia canonica de grafos), generador por familias, selector DEV, registro de exposicion de TEST, auditoria de fugas Kapoor-Narayanan. Siguiente: `python docs/execplan/plan_status.py start G3`.
+- [x] (2026-10-12T22:29:52+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
 
 ## Sorpresas y hallazgos
 
@@ -232,6 +232,7 @@ Acciones externas preparadas y no ejecutadas.
 - A18.2.H.ext: recuperar del ejecutor Linux (commit 0a56621; workspace /workspace/scratch/61d6e3e6e688) el archivo crudo del estudio 05: 05_experiment/ (215 archivos), 05_analysis.json (11fd91ee...), 05_independent_check.json (adef6b11...), salidas historicas 05_historical*. Paquete: results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json. Sin contacto ni accion externa.
 - Publicacion: los textos publicos corregidos en A18.3 (commits 51afbdea y 78ebf8cb; registro docs/research/claims_ledger.json) son posteriores al paquete G1.3.ext (ba9f3f84). Al publicar, usar la version mas reciente de la rama research/completion-20261012 tras su revision. Sin push ejecutado.
 - G3: aprobar la descarga de los archivos publicos UCI optdigits (optdigits.tra y optdigits.tes, ~0,6 MB, archive.ics.uci.edu, CC BY 4.0) para reverificar la unicidad y disjuncion de imagenes (fuga L1.4); hoy solo lo afirma el manuscrito.
+- G17.1.ext: designar un evaluador independiente (no autor) y aprobar la ruta de sellado de tiempo externo (p. ej. OpenTimestamps o deposito publico fechado) para cualquier TEST nuevo. Paquete: results/research/COMPLETION20261012/G17_evaluator_package.json. Nadie contactado.
 
 ## Resultados y retrospectiva
 

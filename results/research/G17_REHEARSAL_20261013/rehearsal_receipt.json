@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:31:04.261215+00:00",
+  "rehearsal": true,
+  "real_data": false,
+  "all_steps_ok": true,
+  "steps": [
+    {
+      "command": "commitments commit --value evaluator_spec.json --purpose REHEARSAL: TEST specification fixed by evaluator --public evaluator_commitment_public.json --private evaluator_opening.json",
+      "exit_code": 0,
+      "expected": 0,
+      "ok": true,
+      "stdout": "{\n  \"schema\": 1,\n  \"algorithm\": \"sha256(domain||len(salt)||salt||canonical_json)\",\n  \"commitment\": \"715a7e6c0588878212c32c55529b5aed8547e47c68d2ed8e2be74615bdbb1e0d\",\n  \"purpose\": \"REHEARSAL: TEST specification fixed by evaluator\",\n  \"claimed_time_utc\": \"2026-10-12T22:31:03+00:00\",\n  \"timestamp_evidence\": null,\n  \"scope\": \"Binding and hiding under SHA-256; the claimed time is not proof of time\"\n}"
+    },
+    {
+      "command": "commitments digest --root cohort --output cohort_digest.json",
+      "exit_code": 0,
+      "expected": 0,
+      "ok": true,
+      "stdout": "{\n  \"files\": 3,\n  \"digest\": \"cc8ee894dc746be1b76b0c0225f7c5512d44d22d4981039733f0b63f93b88dc9\"\n}"
+    },
+    {
+      "command": "commitments commit --value cohort_digest.json --purpose REHEARSAL: sealed dummy cohort before TEST reveal --public cohort_commitment_public.json --private cohort_opening.json",
+      "exit_code": 0,
+      "expected": 0,
+      "ok": true,
+      "stdout": "{\n  \"schema\": 1,\n  \"algorithm\": \"sha256(domain||len(salt)||salt||canonical_json)\",\n  \"commitment\": \"7da5e88b2165407e30df5515de3073f99e8e2493f96d05b69a65447081500c1f\",\n  \"purpose\": \"REHEARSAL: sealed dummy cohort before TEST reveal\",\n  \"claimed_time_utc\": \"2026-10-12T22:31:03+00:00\",\n  \"timestamp_evidence\": null,\n  \"scope\": \"Binding and hiding under SHA-256; the claimed time is not proof of time\"\n}"
+    },
+    {
+      "command": "commitments verify --public evaluator_commitment_public.json --private evaluator_opening.json",
+      "exit_code": 0,
+      "expected": 0,
+      "ok": true,
+      "stdout": "{\n  \"valid\": true\n}"
+    },
+    {
+      "command": "commitments verify --public cohort_commitment_public.json --private cohort_opening.json",
+      "exit_code": 0,
+      "expected": 0,
+      "ok": true,
+      "stdout": "{\n  \"valid\": true\n}"
+    },
+    {
+      "command": "commitments verify --public evaluator_commitment_public.json --private forged_seed.json",
+      "exit_code": 1,
+      "expected": 1,
+      "ok": true,
+      "stdout": "{\n  \"valid\": false\n}"
+    },
+    {
+      "command": "commitments verify --public evaluator_commitment_public.json --private forged_salt.json",
+      "exit_code": 1,
+      "expected": 1,
+      "ok": true,
+      "stdout": "{\n  \"valid\": false\n}"
+    },
+    {
+      "command": "regenerate TEST twice from the revealed spec",
+      "ok": true,
+      "overlap_with_excluded": 0,
+      "deterministic": true
+    },
+    {
+      "command": "score sealed dummy cohort; modify a file; recheck digest",
+      "ok": true,
+      "cohort_digest_matched_before_scoring": true,
+      "tampered_cohort_refused": true,
+      "dummy_scores": {
+        "dummy_model_0": 0.125,
+        "dummy_model_1": 0.041666666666666664,
+        "dummy_model_2": 0.041666666666666664
+      }
+    }
+  ],
+  "public_records": [
+    "cohort_commitment_public.json",
+    "cohort_digest.json",
+    "evaluator_commitment_public.json"
+  ],
+  "sealed_openings_location": "E:/Proyecto-concursos/NeuroPixel-sealed/G17_rehearsal_20261013",
+  "limits": [
+    "Roles played locally: not independent custody",
+    "claimed_time_utc is not proof of time; external timestamps (owner approval) are required for real use",
+    "Dummy predictors and dummy TEST; no scientific result"
+  ]
+}
