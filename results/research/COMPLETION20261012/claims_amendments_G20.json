@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "task": "G20.2",
+  "results": "results/research/ANT01/results.json",
+  "results_sha256": "9face54a64b494d0fa6536a25b19f2d02b21551be1587327e5a8610e965ded22",
+  "checks": [
+    {
+      "check": "PR1 held in 24/24",
+      "ok": true
+    },
+    {
+      "check": "PR2 held in 60/60",
+      "ok": true
+    },
+    {
+      "check": "rand K8 global",
+      "ok": true
+    },
+    {
+      "check": "rand K4 local r1",
+      "ok": true
+    },
+    {
+      "check": "rand K8 local r2",
+      "ok": true
+    },
+    {
+      "check": "smooth K8 global",
+      "ok": true
+    }
+  ],
+  "new_claims": [
+    "ANT01-01"
+  ],
+  "problems": []
+}
