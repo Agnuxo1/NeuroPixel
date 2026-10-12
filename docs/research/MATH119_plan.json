@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "id": "MATH119",
+  "title": "Courtade-Kumar one-bit information bound: exact finite checks, analytic controls and local-rule readouts",
+  "frozen_before_execution": true,
+  "setting": "X uniform on {0,1}^n (n independent fair bits); Y = X xor Z with Z i.i.d. Bernoulli(p) (BSC); f a deterministic one-bit function of X; quantity I(f(X); Y) in bits, exact by enumeration",
+  "bound_under_test": "I(f(X);Y) <= 1 - h2(p) for 0 <= p <= 1/2 (finite numerical checks only; the general theorem is not proven here)",
+  "n": [3, 4, 5, 6, 7, 8],
+  "p_dev": [0.1, 0.3],
+  "p_test": [0.02, 0.05, 0.2, 0.45],
+  "analytic_controls": {
+    "dictator": "f = x0: I = 1 - h2(p)",
+    "anti_dictator": "f = not x0: I = 1 - h2(p)",
+    "parity_k": "f = parity of the first k bits (k = 2 and k = n): I = 1 - h2((1 - (1 - 2p)^k) / 2)",
+    "constant": "f = 0: I = 0",
+    "majority": "odd n only: computed, no closed form; must respect the bound"
+  },
+  "candidate_readouts": "Elementary cellular-automaton rules 0-255 on a ring of n cells, T in {1, 2, 3} synchronous steps, readout = cell 0; only readouts whose truth table depends on at least two input bits are eligible (single-bit functions attain the bound trivially)",
+  "selection": "Choose the eligible (rule, T) with the highest mean efficiency I / (1 - h2(p)) over p_dev at n = 8; ties: lowest rule, then lowest T; TEST p values are never used for selection",
+  "endpoints": {
+    "E1": "number of evaluated (function, n, p) cases with I > 1 - h2(p) + 1e-12 (expected 0)",
+    "E2": "maximum absolute deviation of analytic controls from their closed forms (tolerance 1e-12)",
+    "E3": "efficiency of the selected readout at each p_test and n = 8 (descriptive)",
+    "E4": "distribution checks: the joint distribution sums to 1 and Y is uniform, within 1e-12",
+    "E5": "agreement between the vectorized evaluator and completion_kit.dynamics.boolean_noise_information on 300 registered random cases (tolerance 1e-12)"
+  },
+  "scope_limits": ["Exact Boolean/BSC assumptions only", "Not applied to ten-class labels, UCI images, spatial dropout or dependent neural states", "Any extension is a new hypothesis that needs its own proof"],
+  "resources": "CPU NumPy only"
+}
