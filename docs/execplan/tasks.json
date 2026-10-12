@@ -356,7 +356,17 @@
       "depends_on": [
         "G2.1"
       ],
-      "status": "pending"
+      "status": "blocked_resource",
+      "started": "2026-10-12T12:00Z",
+      "attempts": 1,
+      "note": "Admision ejecutada rechaza RAM libre inferior a8GiB; sin importarTorch. Reabrir al disponer>=8GiB; despues preparar y ejecutar regresiones CPU y tres pruebas reales.",
+      "blocked": "2026-10-12T12:02Z",
+      "evidence": [
+        {
+          "path": "docs/execplan/evidence/G2.2_admission_v2.json",
+          "sha256_lf": "e376af6724d1169db0c44cc33156b616e8a36c23e7aced460a9ccbcc180cfae0"
+        }
+      ]
     },
     {
       "id": "G2.3",
@@ -732,5 +742,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T12:00Z"
+  "updated": "2026-10-12T12:02Z"
 }
