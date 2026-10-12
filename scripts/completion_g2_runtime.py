@@ -13,8 +13,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GPU_PYTHON = "C:/Python313/python.exe"
-OUT = ROOT / "results/research/COMPLETION20261012/G2.2_runtime_receipt.json"
-ADMISSION = "results/research/COMPLETION20261012/G2.2_admission_runtime.json"
+ATTEMPT = sys.argv[1] if len(sys.argv) > 1 else "1"
+OUT = ROOT / f"results/research/COMPLETION20261012/G2.2_runtime_receipt_attempt{ATTEMPT}.json"
+ADMISSION = f"results/research/COMPLETION20261012/G2.2_admission_runtime_attempt{ATTEMPT}.json"
 
 
 def run(args: list[str], env: dict) -> dict:
@@ -34,7 +35,7 @@ def main() -> None:
                TEMP="D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp", TMP="D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp")
     steps = [run([GPU_PYTHON, "-c", "import sys,torch;print(sys.version.split()[0], torch.__version__, torch.get_num_threads())"], env),
              run([GPU_PYTHON, "-m", "unittest", "completion_kit.test_original_forward", "-v"], env),
-             run([GPU_PYTHON, "-m", "unittest", "tests.test_g2_runtime_contracts", "-v"], env),
+             run([GPU_PYTHON, "-m", "pytest", "tests/test_g2_runtime_contracts.py", "-v", "-p", "no:cacheprovider"], env),
              run([GPU_PYTHON, "-m", "pytest", "tests/test_core.py", "-q", "-p", "no:cacheprovider"], env)]
     receipt = dict(schema=1, created_utc=datetime.now(timezone.utc).isoformat(), admission=record, device="CPU (CUDA hidden)",
                    steps=steps, all_passed=all(s["exit_code"] == 0 for s in steps),

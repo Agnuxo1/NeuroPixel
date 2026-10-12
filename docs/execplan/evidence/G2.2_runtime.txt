@@ -1,0 +1,26 @@
+UTC: 2026-10-12T23:27:39.339915+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g2_runtime.py
+
+Traceback (most recent call last):
+  File "D:\PROJECTS\NeuroPixel-Completion-20261012\scripts\completion_resource_admission.py", line 6, in <module>
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+Traceback (most recent call last):
+  File "D:\PROJECTS\NeuroPixel-Completion-20261012\scripts\completion_g2_runtime.py", line 48, in <module>
+    main()
+    ~~~~^^
+  File "D:\PROJECTS\NeuroPixel-Completion-20261012\scripts\completion_g2_runtime.py", line 29, in main
+    record = json.loads((ROOT / ADMISSION).read_text(encoding="utf-8"))
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\PROJECTS\\NeuroPixel-Completion-20261012\\results\\research\\COMPLETION20261012\\G2.2_admission_runtime.json'
+
+EXIT_CODE: 1
