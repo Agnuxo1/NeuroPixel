@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:38:38+00:00
-- Tarea en curso o siguiente: P0.3, Materializar el kit de la guía ampliada y su entorno; intento 1; presupuesto 15 minutos.
-- Criterio de cierre: Extractor: 26 archivos autenticados; entorno en E: con versiones registradas; 38 + 25 pruebas aprobadas con salida guardada como evidencia.
-- Hecho en esta tarea: Reanudacion: ledger mantiene P0.3 en curso; 38+25 pruebas OK. Fallo de quoting impidio recibo y el ledger rechazo cierre; se cambia a verificador en archivo.
-- Falta en esta tarea: Ejecutar verificador de hashes y recibos; commit y cierre real.
-- Siguiente comando exacto: python docs/execplan/verify_bootstrap.py kit
+- Actualizado (UTC): 2026-10-12T11:38:41+00:00
+- Tarea en curso o siguiente: P0.4, Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md); intento 1; presupuesto 15 minutos.
+- Criterio de cierre: docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.
+- Hecho en esta tarea: P0.3 realmente cerrada; plan y checklist operativos; correccion previa preservada en progreso.
+- Falta en esta tarea: Validar sistema de reanudacion y cerrar.
+- Siguiente comando exacto: python docs/execplan/plan_status.py start P0.4
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -132,23 +132,19 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 
 
-- [ ] (2026-10-12T11:33:40+00:00) P0.3, intento 1: hecho P0.1 y P0.2 cerradas; §4.3 leida; se requieren 26 archivos y 63 pruebas.; falta Extraer kit autenticado; preparar entorno E:; ejecutar suites 38+25.. Siguiente: `python docs/execplan/plan_status.py section 20`.
 
-- [ ] (2026-10-12T11:34:25+00:00) P0.3, intento 1: hecho Extractor copiado desde lineas 1029-1084; 26 archivos autenticados y recibo guardado.; falta Crear entorno E:, instalar versiones fijadas y ejecutar 38+25 pruebas.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/P0.3_venv.txt -- python -m venv E:/Proyecto-concursos/NeuroPixel-env-completion`.
 
-- [ ] (2026-10-12T11:35:15+00:00) P0.3, intento 1: hecho 26 archivos autenticados incorporados a commit; venv E: en preparacion.; falta Instalar dependencias fijadas y guardar pruebas 38+25.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/P0.3_install.txt --timeout 900 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m pip install -r requirements-completion.txt -r requirements-graphics.txt`.
 
-- [ ] (2026-10-12T11:36:22+00:00) P0.3, intento 1: hecho Entorno E: listo, NumPy/SciPy/ModernGL/glcontext instalados; salida pip rc=0.; falta Registrar versiones y ejecutar suites 38+25; cerrar con commit.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/P0.3_contracts.txt --timeout 300 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m unittest completion_kit.test_contracts -v`.
 
-- [ ] (2026-10-12T11:36:40+00:00) P0.3, intento 1: hecho Dependencias registradas; suite original ejecutada, revisar recibo.; falta Suite ampliada y verificar recuentos 38+25.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/P0.3_extensions.txt --timeout 300 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m unittest completion_kit.test_extensions -v`.
 - [x] (2026-10-12T11:36:59+00:00) P0.1: done; commit f59c41a8b67c19395b87c48659384c6e467f8dd6; Lecturas, recursos reales y reclamacion verificados; sin carga neural.; detalle en archive/PROGRESS_ARCHIVE.md.
 - [x] (2026-10-12T11:36:59+00:00) P0.2: done; commit 92d5f3ae283d8a6554e87d2c2e8868369482495a; Checkout y rama aislados; main remoto coincide con base fijada.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T11:37:29+00:00) P0.3, intento 1: hecho 26 hashes verificados; 38+25 pruebas OK; entorno E: Python 3.13.7 y versiones guardadas.; falta Commit y close.. Siguiente: `git add completion_kit requirements-completion.txt requirements-graphics.txt extract_completion_kit.py docs/execplan`.
 
 - [ ] (2026-10-12T11:37:33+00:00) P0.4, intento 1: hecho Plan instalado, 3 tareas cerradas, checklist generado y AGENTS operativo.; falta Validar sistema de reanudacion y guardar recibo; commit y close.. Siguiente: `python docs/execplan/plan_status.py section 1`.
 
-- [ ] (2026-10-12T11:38:38+00:00) P0.3, intento 1: hecho Reanudacion: ledger mantiene P0.3 en curso; 38+25 pruebas OK. Fallo de quoting impidio recibo y el ledger rechazo cierre; se cambia a verificador en archivo.; falta Ejecutar verificador de hashes y recibos; commit y cierre real.. Siguiente: `python docs/execplan/verify_bootstrap.py kit`.
+- [x] (2026-10-12T11:38:41+00:00) P0.3: done; commit 2a6199cb8558bb5dd6eabaee07b90eae95ff2533; 26 archivos autenticados; entorno E:; 38+25 pruebas aprobadas.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T11:38:41+00:00) P0.4, intento 1: hecho P0.3 realmente cerrada; plan y checklist operativos; correccion previa preservada en progreso.; falta Validar sistema de reanudacion y cerrar.. Siguiente: `python docs/execplan/plan_status.py start P0.4`.
 
 ## Sorpresas y hallazgos
 
