@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T23:28:57.170707+00:00",
+  "admission": {
+    "utc": "2026-10-12T23:28:34.623925+00:00",
+    "required_ram_gib": 8.0,
+    "measured_available_ram_gib": 8.245983123779297,
+    "cpu_threads_limit": 2,
+    "neural_library_imported": false,
+    "foreign_process_interrupted": false,
+    "admitted_available_ram_gib": 8.24593734741211,
+    "status": "admitted"
+  },
+  "device": "CPU (CUDA hidden)",
+  "steps": [
+    {
+      "command": "C:/Python313/python.exe -c import sys,torch;print(sys.version.split()[0], torch.__version__, torch.get_num_threads())",
+      "exit_code": 0,
+      "stdout_tail": "3.13.7 2.6.0+cu124 2\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "C:/Python313/python.exe -m unittest completion_kit.test_original_forward -v",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_explicit_depth_and_default_have_equal_outputs (completion_kit.test_original_forward.OriginalForwardContracts.test_explicit_depth_and_default_have_equal_outputs) ... ok\ntest_invalid_depths_are_rejected (completion_kit.test_original_forward.OriginalForwardContracts.test_invalid_depths_are_rejected) ... ok\ntest_zero_depth_returns_seed_and_one_frame (completion_kit.test_original_forward.OriginalForwardContracts.test_zero_depth_returns_seed_and_one_frame) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.011s\n\nOK\n"
+    },
+    {
+      "command": "C:/Python313/python.exe -m pytest tests/test_g2_runtime_contracts.py -v -p no:cacheprovider",
+      "exit_code": 0,
+      "stdout_tail": "============================= test session starts =============================\nplatform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0\nrootdir: D:\\PROJECTS\\NeuroPixel-Completion-20261012\nconfigfile: pytest.ini\nplugins: anyio-4.15.1, langsmith-0.7.36, cov-6.2.1, typeguard-4.5.1, zarr-3.4.0\ncollected 7 items\n\ntests\\test_g2_runtime_contracts.py .......                               [100%]\n\n============================== 7 passed in 3.48s ==============================\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "C:/Python313/python.exe -m pytest tests/test_core.py -q -p no:cacheprovider",
+      "exit_code": 0,
+      "stdout_tail": "...........s.                                                            [100%]\n",
+      "stderr_tail": ""
+    }
+  ],
+  "all_passed": true,
+  "scope": "Runtime contracts of the T0 patch and project regressions in the historical Torch environment on CPU; physical backend checks are G2.3"
+}
