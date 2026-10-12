@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "purpose": "Instructions for a designated, independent evaluator of the next confirmatory NeuroPixel TEST",
+  "generator": {
+    "path": "scripts/completion_g3_splits.py",
+    "function": "make_family_test",
+    "commit": "7f6000fa8f1da1501fd66d7e99904a2ce1e55e8d"
+  },
+  "excluded_families": {
+    "path": "results/research/NEWREL20261013/excluded_families.json",
+    "sha256": "dee28f3b99d3ed73456b3de4ff21983a0c483f702c21f9ef3bf1e9e762435617",
+    "count": 120
+  },
+  "specification_template": {
+    "seed": "<secret integer chosen by the evaluator>",
+    "families": "<registered by the study protocol>",
+    "variants": "<registered>",
+    "examples_per_variant": "<registered>"
+  },
+  "steps": [
+    "evaluator: commitments commit --value spec.json --purpose '<study> TEST specification' --public <published> --private <kept sealed>",
+    "evaluator: publish the public record with external proof of time",
+    "team: after that publication, digest the sealed cohort and publish the digest commitment with external proof of time",
+    "evaluator: reveal the opening; anyone verifies, regenerates TEST and scores only digest-matching models"
+  ],
+  "procedure_doc": "docs/research/G17_custody_procedure_20261013.md",
+  "rehearsal_receipt": "results/research/G17_REHEARSAL_20261013/rehearsal_receipt.json",
+  "owner_actions_required": [
+    "designate an evaluator who is not an author",
+    "approve the external time-stamping route",
+    "approve any contact with the evaluator"
+  ],
+  "no_action_taken": "No evaluator was contacted and nothing was published."
+}
