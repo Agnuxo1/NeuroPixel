@@ -34,3 +34,7 @@ Evidence levels for every public claim are in `docs/research/claims_ledger.json`
 | `docs/papers/NeuroPixel_manuscript_20261009.md` | 49 | D-VIS07-05 | Registered transformation conditions were executed but not reported. |
 
 Pre-round bytes are archived in `docs/archive/completion_20261012/A18_round2/`; the log with hashes is `results/research/COMPLETION20261012/A18_text_corrections_round2.json`. The verifier report (`docs/execplan/evidence/A18.3_independent_review.json`) also led to registry amendments recorded in `results/research/COMPLETION20261012/claims_amendments_A18.3.json`.
+
+## Round 3 (verifier follow-up)
+
+| `README.md` | 29 | D-VIS07-05 | Negatives row now names the VIS07 shift weakness. |
