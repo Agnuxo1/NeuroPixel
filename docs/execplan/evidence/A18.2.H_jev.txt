@@ -1,0 +1,36 @@
+UTC: 2026-10-12T21:25:49.550788+00:00
+COMMAND: python C:/Users/Windows-500GB/.claude/skills/enrutador-jev/scripts/router.py jev --state docs/execplan/evidence/A18.2.H_jev_state.json --questions docs/execplan/evidence/A18.2.H_jev_questions.json
+
+{
+ "mode": "v2-query",
+ "exit_code": 0,
+ "provenance": "jev",
+ "status": "connected",
+ "connected": null,
+ "configured": null,
+ "model": "jev-1.13.0",
+ "decision_source": null,
+ "error_type": null,
+ "decisions": {
+  "import": {
+   "value": "hash_authenticated_import_to_documented_paths",
+   "confidence": 0.98
+  },
+  "study05": {
+   "value": "blocked_external_L0_with_recovery_package",
+   "confidence": 0.96
+  },
+  "audits": {
+   "value": "L1_engineering_complete_with_audit_receipts",
+   "confidence": 1.0
+  }
+ },
+ "usage": {
+  "input_tokens": 921,
+  "output_tokens": 159,
+  "cached_tokens": 0
+ },
+ "remote_decision": true
+}
+
+EXIT_CODE: 0
