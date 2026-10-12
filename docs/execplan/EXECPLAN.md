@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:42:44+00:00
-- Tarea en curso o siguiente: G0, Congelar inventario y restaurar trazabilidad; intento 1; presupuesto 30 minutos.
+- Actualizado (UTC): 2026-10-12T11:45:39+00:00
+- Tarea en curso o siguiente: G0, Congelar inventario y restaurar trazabilidad; intento 1; presupuesto 15 minutos.
 - Criterio de cierre: cero discrepancias no explicadas en los originales y un mapa de afirmación → protocolo → fuente → ejecución → datos → recuento. Las dependencias faltantes se identifican, sin inventar archivos ni valores. [guía §5]
-- Hecho en esta tarea: Blobs 1797/1797 OK; auditoria editorial rechaza correctamente con 4 incidencias, guardadas.
-- Falta en esta tarea: Inventario adicional, procedencia Git y mapa afirmacion-protocolo-fuente-ejecucion-datos-recuento.
-- Siguiente comando exacto: python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_inventory.txt --timeout 600 -- python scripts/completion_G0_inventory.py
+- Hecho en esta tarea: Mapa preciso y dependencias explicitas guardados; informe ingles escrito; 1797 blobs y 44 origenes OK.
+- Falta en esta tarea: Commit y cierre G0; seguir con inspeccion CPU RENDER11.
+- Siguiente comando exacto: git add scripts/completion_G0_traceability.py docs/research/COMPLETION_G0_inventory_20261012.md docs/execplan results/research/COMPLETION20261012
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -153,6 +153,10 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [ ] (2026-10-12T11:41:04+00:00) G0, intento 1: hecho 1797/1797 originales verificados, cero discrepancias; JEV recomienda auditoria acotada (1,0).; falta Auditoria editorial con rechazo esperado, ascendencia independiente y mapa de trazabilidad.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_release_before.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.audit_release --root . --output results/research/COMPLETION20261012/release_audit_before.json`.
 
 - [ ] (2026-10-12T11:42:44+00:00) G0, intento 1: hecho Blobs 1797/1797 OK; auditoria editorial rechaza correctamente con 4 incidencias, guardadas.; falta Inventario adicional, procedencia Git y mapa afirmacion-protocolo-fuente-ejecucion-datos-recuento.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_inventory.txt --timeout 600 -- python scripts/completion_G0_inventory.py`.
+
+- [ ] (2026-10-12T11:45:39+00:00) G0, intento 1: hecho 44 commits de origen y arboles verificados; 417 extras indexados; 19 informes mapeados; cero originales discrepantes.; falta Precisar referencias y dependencias faltantes sin coincidencias amplias por numeros; validar cierre.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G0_traceability.txt -- python scripts/completion_G0_traceability.py`.
+
+- [ ] (2026-10-12T11:45:39+00:00) G0, intento 1: hecho Mapa preciso y dependencias explicitas guardados; informe ingles escrito; 1797 blobs y 44 origenes OK.; falta Commit y cierre G0; seguir con inspeccion CPU RENDER11.. Siguiente: `git add scripts/completion_G0_traceability.py docs/research/COMPLETION_G0_inventory_20261012.md docs/execplan results/research/COMPLETION20261012`.
 
 ## Sorpresas y hallazgos
 
