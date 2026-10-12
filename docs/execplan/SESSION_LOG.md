@@ -13,3 +13,9 @@
 - Recibos historicos importados autenticados desde checkouts de validacion; estudio 05 sin archivo crudo -> A18.2.H.ext (propietario). 22 correcciones de texto archivadas en 3 rondas.
 - plan_status.py gana supersede verificable (JEV 0,97). Bloqueos: G2.2 RAM<8GiB; G1.3.ext y A18.2.H.ext externos.
 - Siguiente: python docs/execplan/plan_status.py start G3 (separacion por familias de grafos, registro de exposicion de TEST, auditoria de fugas).
+
+## 2026-10-12T22:47:16+00:00 — Sesion 2 (Claude), checkpoint sin tareas elegibles
+- Cerradas ademas G3, G17.1, G18, G20.1, G20.2, G20, M2 y M3: 25/49 hechas; bloqueos externos G1.3.ext, A18.2.H.ext, G17.1.ext, M3.ext; recurso G2.2.
+- Resultados: separacion por familias estructurales y NEWREL train/DEV; custodia commit-reveal ensayada 9/9; registro de programa con alfa online; ANT01 (Hopfield global domina a acoplamiento local; decodificador explicito domina todo); MATH119 sin violaciones en 27846 casos.
+- Registro de afirmaciones: 76 afirmaciones, max L2, validador valido.
+- Siguiente: esperar RAM>=8GiB (vigilante en segundo plano) y ejecutar G2.2 preparada; despues G2.3 por gpuq, G2 y G13 (apuesta central).

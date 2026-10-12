@@ -127,7 +127,7 @@
 
 - [ ] M1 Experimento MATH325 (Crouzeix) (§14.1)
 - [x] ~~M2 Experimento MATH119 (Courtade-Kumar) (§14.2)~~ 2026-10-12T22:41Z `0783e69d24`
-- [ ] **IN PROGRESS** M3 Comprobar formalizaciones con Comparator (Linux/WSL) (§14.3) (attempt 1)
+- [x] ~~M3 Comprobar formalizaciones con Comparator (Linux/WSL) (§14.3)~~ 2026-10-12T22:45Z `54773a837e`
 
 ## G9 Backend gráfico y coste
 
@@ -187,4 +187,4 @@
 
 ## 14.3 Formalizaciones
 
-- [ ] M3.ext Reconstruccion Lean/Comparator tras aprobacion de descargas (§14.3)
+- [ ] BLOCKED (external) M3.ext Reconstruccion Lean/Comparator tras aprobacion de descargas (§14.3): Propietario: aprobar descargas (toolchain, openai/math, cache Mathlib, comparator, landrun, lean4export) en E:.
