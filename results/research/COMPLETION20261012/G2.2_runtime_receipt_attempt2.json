@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T23:28:13.883038+00:00",
+  "admission": {
+    "utc": "2026-10-12T23:27:51.380641+00:00",
+    "required_ram_gib": 8.0,
+    "measured_available_ram_gib": 8.185314178466797,
+    "cpu_threads_limit": 2,
+    "neural_library_imported": false,
+    "foreign_process_interrupted": false,
+    "admitted_available_ram_gib": 8.188861846923828,
+    "status": "admitted"
+  },
+  "device": "CPU (CUDA hidden)",
+  "steps": [
+    {
+      "command": "C:/Python313/python.exe -c import sys,torch;print(sys.version.split()[0], torch.__version__, torch.get_num_threads())",
+      "exit_code": 0,
+      "stdout_tail": "3.13.7 2.6.0+cu124 2\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "C:/Python313/python.exe -m unittest completion_kit.test_original_forward -v",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "test_explicit_depth_and_default_have_equal_outputs (completion_kit.test_original_forward.OriginalForwardContracts.test_explicit_depth_and_default_have_equal_outputs) ... ok\ntest_invalid_depths_are_rejected (completion_kit.test_original_forward.OriginalForwardContracts.test_invalid_depths_are_rejected) ... ok\ntest_zero_depth_returns_seed_and_one_frame (completion_kit.test_original_forward.OriginalForwardContracts.test_zero_depth_returns_seed_and_one_frame) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.057s\n\nOK\n"
+    },
+    {
+      "command": "C:/Python313/python.exe -m unittest tests.test_g2_runtime_contracts -v",
+      "exit_code": 1,
+      "stdout_tail": "",
+      "stderr_tail": "test_g2_runtime_contracts (unittest.loader._FailedTest.test_g2_runtime_contracts) ... ERROR\n\n======================================================================\nERROR: test_g2_runtime_contracts (unittest.loader._FailedTest.test_g2_runtime_contracts)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_g2_runtime_contracts\nTraceback (most recent call last):\n  File \"C:\\Python313\\Lib\\unittest\\loader.py\", line 137, in loadTestsFromName\n    module = __import__(module_name)\nModuleNotFoundError: No module named 'tests.test_g2_runtime_contracts'\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n"
+    },
+    {
+      "command": "C:/Python313/python.exe -m pytest tests/test_core.py -q -p no:cacheprovider",
+      "exit_code": 0,
+      "stdout_tail": "...........s.                                                            [100%]\n",
+      "stderr_tail": ""
+    }
+  ],
+  "all_passed": false,
+  "scope": "Runtime contracts of the T0 patch and project regressions in the historical Torch environment on CPU; physical backend checks are G2.3"
+}
