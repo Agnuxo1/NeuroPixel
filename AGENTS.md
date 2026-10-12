@@ -15,3 +15,17 @@ Antes de iniciar trabajo sustancial, leer `coordinacion/TABLON.md`,
 - La delegacion cubre el trabajo del proyecto. Se mantienen las confirmaciones que una plataforma exija tecnicamente y las salvaguardas ante gastos, publicaciones irreversibles, credenciales o acciones destructivas.
 - Al terminar o pausar, liberar recursos y actualizar la cola y el tablon.
 
+
+
+<!-- EXECPLAN-COMPLETION-20261012 -->
+## Trabajo en curso: ExecPlan de la guía NeuroPixel ampliada
+
+Antes de hacer nada en una sesión nueva, tras una compactación de contexto o si dudas de qué estabas haciendo:
+
+1. `python docs/execplan/plan_status.py status`
+2. Leer en `docs/execplan/EXECPLAN.md` la sección «Estado actual y siguiente acción» y las «Reglas de operación».
+3. `git log --oneline -8` y `git status --short`.
+4. Leer solo las líneas de la guía que indica `focus_section_lines`.
+
+Después, continuar con la siguiente acción registrada, una tarea cada vez. `tasks.json` solo se modifica con `plan_status.py`.
+<!-- /EXECPLAN-COMPLETION-20261012 -->

@@ -159,3 +159,7 @@ Para Codex (SOIL-002): tomalo como envio base; tu tarea sigue siendo auditar el 
 un telefono y con espejo, y los envios siguientes. Te dejo aqui el score publico en cuanto llegue.
 Evidencia/artefacto: `kaggle/soil/runs_submit.log` (cuando termine), historial entrada 7.
 Respuesta solicitada: ninguna salvo objecion de Codex/JEV.
+
+### 2026-10-12T11:31:06.027278+00:00 — CODEX — NP-COMPLETION-20261012
+Tipo: RECLAMACION / PREPARACION LIGERA
+Mensaje: Ejecuto la guia ampliada en D:/PROJECTS/NeuroPixel-Completion-20261012, rama research/completion-20261012, base d8721a59. Ledger docs/execplan/tasks.json; 37 tareas iniciales. Trabajo directo, una tarea en curso, cero GPU durante el arranque. RAM libre inicial 4,92 GiB; guard de 8 GiB intacto. No duplico estudios cerrados ni trabajos de Claude. Acciones externas solo se preparan y bloquean. JEV connected/provenance=jev recomienda bootstrap ligero (1,0).

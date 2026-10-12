@@ -23,3 +23,6 @@ breve. Hasta entonces su responsable es `JEV por asignar` y no se inicia.
 Decision JEV vigente: 2026-09-27 19:34, `provenance=jev`, modelo `jev-1.13.0`.
 Politica: `single_gpu_queue`. Siguiente tras cerrar las cargas activas: `FIL-002`.
 
+
+### 2026-10-12T11:31:06.027278+00:00 — NP-COMPLETION-20261012
+Reclamada por Codex/root: guia G0-G22 y §18A-§18N, checkout aislado research/completion-20261012. Recursos: CPU ligera, sin carga neural/GPU hasta >=8 GiB RAM; ninguna reserva GPU. Criterio: ledger valido y evidencia con commit por tarea; no reabrir estudios cerrados.
