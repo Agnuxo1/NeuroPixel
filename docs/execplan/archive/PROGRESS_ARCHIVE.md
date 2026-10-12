@@ -65,3 +65,6 @@
 
 ## A18.2.D
 - [ ] (2026-10-12T21:38:11+00:00) A18.2.D, intento 1: hecho A18.2.H cerrada (commit d1b09d0a): 305/305, 33 afirmaciones, validador valido; A18.2.H.ext bloqueada externamente; falta Leer candidatos D (234: DEV04, GLOB05, OPT03, READ03, SCN06, VIS07), localizar recibos, clasificar con el mismo metodo. Siguiente: `python docs/execplan/plan_status.py start A18.2.D`.
+
+## A18.2.G
+- [ ] (2026-10-12T21:53:05+00:00) A18.2.G, intento 1: hecho A18.2.D cerrada (commit dd728c27): 234/234, 24 afirmaciones, validador valido; falta Leer 74 candidatos RENDER, localizar recibos RENDER08-11, separar energia de placa y de pared, clasificar. Siguiente: `python docs/execplan/plan_status.py start A18.2.G`.

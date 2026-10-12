@@ -524,7 +524,38 @@
       "depends_on": [
         "A18.2.D"
       ],
-      "status": "pending"
+      "status": "done",
+      "started": "2026-10-12T21:53Z",
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_G.json",
+          "sha256_lf": "9a8f68d36382f143fab36d8075537fa009b56657996a6bd4959f95b4f510933b"
+        },
+        {
+          "path": "docs/research/claims_ledger_parts/A18.2.G.json",
+          "sha256_lf": "583814f49e75b61f5c3902651da202e49c81124073b405d475f06d45b8ea23d9"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_audit_G.json",
+          "sha256_lf": "92480c7843eb81c04d63bc87cb56a32c68d9b229b03080c75c81779676586949"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/value_checks_G.json",
+          "sha256_lf": "ea9389bae48f1e2f7b7778f767c05f4f2f4df14c84fdb08a4af8a1412afd4c3b"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.G_review.txt",
+          "sha256_lf": "66b428dfad8cf1b5613c10e338b6cd2c38c164c3b60e381e2c48a0de8961f40f"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.G_validator.txt",
+          "sha256_lf": "37e84fcc04201bb558b3fcc78a8c85abd70073b3856c4bb13fda23e09900ec77"
+        }
+      ],
+      "commit": "f0609c064b2520b0ccde969e43130dab4f55613e",
+      "closed": "2026-10-12T21:55Z",
+      "note": "74/74 candidatos; 6 afirmaciones (4 L2, 2 L1); todas las celdas recontadas; energia de placa separada de pared; 2 discrepancias de redaccion."
     },
     {
       "id": "A18.2.P",
@@ -938,5 +969,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T21:52Z"
+  "updated": "2026-10-12T21:55Z"
 }
