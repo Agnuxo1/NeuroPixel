@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:04:59.428569+00:00",
+  "archived_originals": "docs/archive/completion_20261012/A18_sources",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256_before": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "sha256_after": "697de8f88006a67aa1a8f0e4a1a275406ace7c038d4320f14c2ef76241d5a637"
+    },
+    {
+      "path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "sha256_before": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "sha256_after": "b2af047ea0ed4ec4b3ad49cb83746155d998506315b05c1b6bd8285d8626e6e7"
+    },
+    {
+      "path": "docs/research/04_results.md",
+      "sha256_before": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "sha256_after": "4dea5495dbe0889b3023384ab3db5abf8af49de06bb5d156f3a8f3eeef476737"
+    },
+    {
+      "path": "docs/research/05_results.md",
+      "sha256_before": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "sha256_after": "524458d92e17e3b72d4f65cc8f61d4265b86ecb8db5fde28a7bbfed79f580104"
+    },
+    {
+      "path": "docs/research/06_A06_1_results.md",
+      "sha256_before": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "sha256_after": "3ae9404133665c48992de2cb3d57430a6adf40ad6f5cbb5c176d4698522d0a92"
+    },
+    {
+      "path": "docs/research/OPT03_ROLE_results.md",
+      "sha256_before": "e5a2053d19edaf96203b6466a7f08b31bdf35062ff6ef0284e302b0d5bcb503e",
+      "sha256_after": "563e20fee402fd9b9527f12744376d3e42dfdb56f9fba804a7cea918476df22c"
+    },
+    {
+      "path": "docs/research/RENDER08_results.md",
+      "sha256_before": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "sha256_after": "09291bb7b003bcfc6f176a2a17b34d192dfc234f6cad1f9125e8dff11ba80804"
+    },
+    {
+      "path": "docs/research/RENDER09_results.md",
+      "sha256_before": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "sha256_after": "2f020b8ffc5b50c35072fdb44b3a69cd508295ae696a7155697941373bda232b"
+    },
+    {
+      "path": "docs/research/REPRODUCE_20261009.md",
+      "sha256_before": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "sha256_after": "9244f3290e28341d247c6a7c99e6384190c63b959de65440b15296c7372630c6"
+    },
+    {
+      "path": "docs/research/RESULTS_INDEX_20261009.md",
+      "sha256_before": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "sha256_after": "952db6a808f730440376f3ce0a23c38a2c1bbc3d5c7b34fb1449fcfe5f0b7a32"
+    },
+    {
+      "path": "docs/research/VIS07_results.md",
+      "sha256_before": "15cdf687ba09e1accc30046a6f109bc7c631d5f46b374f6a9c9442ff745885b7",
+      "sha256_after": "0d6474d85d051d403f77a98e6cac2ba9387c17f6e2a348aa5953a5309a10c734"
+    }
+  ],
+  "corrections": [
+    {
+      "file": "docs/research/06_A06_1_results.md",
+      "line": 38,
+      "claim": "H06-04",
+      "before": "| +0,659 | [−0,272; +1,590] |",
+      "after": "| +0,659 | [−0,271; +1,590] |",
+      "reason": "Receipt audit_saved.json gives -0.27145 pp, which rounds to -0.271; no retained file supports -0.272."
+    },
+    {
+      "file": "docs/research/04_results.md",
+      "line": 78,
+      "claim": "H04-04",
+      "before": "- `results/research/04_verification.json`: independent artifact audit.",
+      "after": "- `results/research/04_verification.json`: independent artifact audit. Evidence-level note (A18.3, 2026-10-13): this file is not retained; the 60-file transfer bundle `results/research/04_experiment/item4_evidence.zip` was re-verified against its own manifest.",
+      "reason": "The cited verifier output is missing; the statement now names the evidence that exists."
+    },
+    {
+      "file": "docs/research/05_results.md",
+      "line": 5,
+      "claim": "H05-01..H05-09",
+      "before": "**Report status: 28 final evaluations and both artifact checks verified. H1: `not_supported`. Updated 2026-10-07.**",
+      "after": "**Report status: 28 final evaluations and both artifact checks verified. H1: `not_supported`. Updated 2026-10-07.**\n\n> Evidence-level note (A18.3, 2026-10-13): the analysis, independent recount, run tables, CSV, diagnostics, replication records and archive linked in this report are not present in this repository, on the project's local disks or on the remote branches. The executor archive (commit 0a56621) must be recovered by the owner; until then these claims are registered at level L0 (`blocked_external`) in `docs/research/claims_ledger.json`.",
+      "reason": "Verification statements refer to bytes that are not retained; level stated explicitly."
+    },
+    {
+      "file": "docs/research/VIS07_results.md",
+      "line": 25,
+      "claim": "D-VIS07-02",
+      "before": "T8 es el punto entrenado.",
+      "after": "> Evidence-level note (A18.3, 2026-10-13): the RMS column above is not reproducible from retained receipts; the retained 128-row depth diagnostic gives mean state RMS 0.543 (T0), 149.3 (T16) and 134,843 (T32). Accuracy values are reproduced exactly.\n\nT8 es el punto entrenado.",
+      "reason": "RMS source not retained; the retained diagnostic values are stated."
+    },
+    {
+      "file": "docs/research/OPT03_ROLE_results.md",
+      "line": 32,
+      "claim": "D-ROLE-02",
+      "before": "La admisión real del reanudador registró8,6749GiB",
+      "after": "La admisión real del reanudador registró8,6749GiB (Evidence-level note (A18.3, 2026-10-13): value not present in the retained review files)",
+      "reason": "Admission value not found in retained files."
+    },
+    {
+      "file": "docs/research/RENDER08_results.md",
+      "line": 3,
+      "claim": "G-R08-01",
+      "before": "| Workload | CUDA eager ms | CUDA Graph ms | Render vector ms | Mejor CUDA / render |",
+      "after": "| Workload | CUDA eager ms | CUDA Graph ms | Render escalar ms | Mejor CUDA / render |",
+      "reason": "RENDER08 has one (scalar) renderer method; the column label said 'vector'."
+    },
+    {
+      "file": "docs/research/RENDER09_results.md",
+      "line": 15,
+      "claim": "G-R09-01",
+      "before": "otras configuraciones no superanCUDA y las mejoras pequeñas pueden depender delruido.",
+      "after": "otras dos configuraciones superan CUDA solo marginalmente (1,039 en C16/grid8 y 1,072 en RGB8), las cuatro restantes no lo superan, y las mejoras pequeñas pueden depender del ruido.",
+      "reason": "Two other workloads have ratios above 1; the sentence said none did."
+    },
+    {
+      "file": "README.md",
+      "line": 57,
+      "claim": "G-R08-01",
+      "before": "3.14–12.25×",
+      "after": "3.14–12.24×",
+      "reason": "Receipt medians give 3.138-12.244x."
+    },
+    {
+      "file": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "line": 63,
+      "claim": "G-R08-01",
+      "before": "3.14–12.25×",
+      "after": "3.14–12.24×",
+      "reason": "Receipt medians give 3.138-12.244x."
+    },
+    {
+      "file": "docs/research/REPRODUCE_20261009.md",
+      "line": 17,
+      "claim": "G-R11-02",
+      "before": "RENDER11 retained100/105 original energy blocks after RAM8 stopped it; no complete comparative energy or wall-energy claim follows.",
+      "after": "RENDER11 originally retained 103/105 energy blocks after the RAM floor stopped it; its saved recovery is admitted below; no wall-energy claim follows.",
+      "reason": "Stale count: the original receipt stores 103 rows."
+    },
+    {
+      "file": "README.md",
+      "line": 96,
+      "claim": "P-AVAIL-01",
+      "before": "- Frozen plans, original checkpoints, datasets, raw predictions/states, failed attempts and hash manifests under `results/research/`.",
+      "after": "- Frozen plans, original checkpoints, datasets, raw predictions/states, failed attempts and hash manifests under `results/research/`, except the item-5 CPU archive and the historical reassessment outputs, which are unavailable; large recovery archives remain on local disks outside the Git tree. Evidence levels: [claims ledger](docs/research/claims_ledger.json).",
+      "reason": "Availability was overstated."
+    },
+    {
+      "file": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "line": 73,
+      "claim": "P-AVAIL-01",
+      "before": "Frozen plans, source commits, weights, datasets, predictions, raw states, receipts, Git object identities and SHA256 manifests are supplied.",
+      "after": "Frozen plans, source commits, weights, datasets, predictions, raw states, receipts, Git object identities and SHA256 manifests are supplied, except the item-5 CPU archive and the historical reassessment outputs, which are unavailable.",
+      "reason": "Availability was overstated."
+    },
+    {
+      "file": "docs/research/RESULTS_INDEX_20261009.md",
+      "line": 17,
+      "claim": "P-AVAIL-01",
+      "before": "All raw archives and their original Gitblobs are included/indexed by the publication manifest.",
+      "after": "All raw archives retained by the project and their original Gitblobs are included/indexed by the publication manifest; the item-5 CPU archive and historical reassessment outputs are unavailable.",
+      "reason": "Availability was overstated."
+    },
+    {
+      "file": "docs/research/REPRODUCE_20261009.md",
+      "line": 11,
+      "claim": "P-AVAIL-01",
+      "before": "The publication manifest maps all raw archives to their original Gitblobs",
+      "after": "The publication manifest maps all retained raw archives (not the unavailable item-5 CPU archive) to their original Gitblobs",
+      "reason": "Availability was overstated."
+    },
+    {
+      "file": "README.md",
+      "line": 21,
+      "claim": "P-ARCH-01",
+      "before": "## What is demonstrated",
+      "after": "## What has been measured (internal evidence, levels L1–L2)",
+      "reason": "The table reports internal L1-L2 measurements, not demonstrated general capabilities."
+    },
+    {
+      "file": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "line": 79,
+      "claim": "P-GPU-01",
+      "before": "The implemented neural field demonstrates bounded fidelity,",
+      "after": "Within internal evidence levels L1–L2, the implemented neural field shows bounded fidelity,",
+      "reason": "Wording aligned with the registered evidence level."
+    },
+    {
+      "file": "README.md",
+      "line": 37,
+      "claim": "P-ARCH-01",
+      "before": "*Capability figure from the pre-scientific README. Memory and rest-state behaviour are not established by the current evidence; see the manuscript for the bounded claims.*",
+      "after": "*Capability figure from the pre-scientific README (illustrative, level L0, not registered evidence). Memory, rest-state and growth behaviour are not established by the current evidence; see the manuscript and the claims ledger for the bounded claims.*",
+      "reason": "Pre-scientific figure labelled with its evidence level."
+    },
+    {
+      "file": "README.md",
+      "line": 43,
+      "claim": "H05-05",
+      "before": "*Scaling comparison. The original hypothesis H1 was not supported; see the results index.*",
+      "after": "*Historical retrospective scaling comparison (level L0: its reassessment outputs are not retained). The prospective test of the original hypothesis H1 was not supported (-37.0 pp versus the fixed Transformer); see the results index.*",
+      "reason": "Historical figure labelled with its evidence level and the prospective negative result."
+    }
+  ]
+}

@@ -12,6 +12,6 @@
 
 Milisegundos medianos dehost por16updates+scanner completo, inputsresidentes, unGPU RTX3090, FP32, todas las decisiones y gates pasados. Cociente>1 indica ventaja deeste renderer sobreel mejorCUDA medido; ≤1 no. Siete bloques técnicos no son siete réplicas científicas. Todos los casos se presentan, sin promedio que oculte los negativos.
 
-La vectorización mejora frente al escalar y obtiene un punto estimado1.536× enC16/grid128; otras configuraciones no superanCUDA y las mejoras pequeñas pueden depender delruido. No se establece ventaja general, entrenamientográfico ni eficiencia deenergía.
+La vectorización mejora frente al escalar y obtiene un punto estimado1.536× enC16/grid128; otras dos configuraciones superan CUDA solo marginalmente (1,039 en C16/grid8 y 1,072 en RGB8), las cuatro restantes no lo superan, y las mejoras pequeñas pueden depender del ruido. No se establece ventaja general, entrenamientográfico ni eficiencia deenergía.
 
 Los bytes de inputs, paridad, todas las filas y costes depreparación/compilación están conservados. Energía de cada inferencia corta **desconocida**: ceros/staleness del contador no equivalen a energía cero. FuenteNVML mide sóloGPU, no pared/CPU/RAM. Nuevas mediciones largas se registran separadas.

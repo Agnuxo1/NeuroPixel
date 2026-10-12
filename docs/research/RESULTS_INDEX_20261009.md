@@ -14,7 +14,7 @@
 | RENDER10 advanced graphics | [Report](RENDER10_results.md) |OpenGL 4.6/SSBO/shared tiles: 21 Torch-free output checks across seven workloads; 77 full benchmark gates passed; 245 registered timing rows complete; 143 original rows preserved without repeat. Interrupted sessions qualify interpretation. |
 | RENDER11 sustained board energy | [Report](RENDER11_results.md) | 105 admitted keys; 103 original rows unchanged, zero repeats; saved recovery 87c60227. Board energy only; wall energy unmeasured. |
 
-All raw archives and their original Gitblobs are included/indexed by the publication manifest. Separate recipes retain their own source commits, plans, run IDs, hashes and failed attempts. Early status notes and technical retries are not scientific replications. The original test264compositions stays excluded in new studies. Publication in main does not convert an internal check into external replication.
+All raw archives retained by the project and their original Gitblobs are included/indexed by the publication manifest; the item-5 CPU archive and historical reassessment outputs are unavailable. Separate recipes retain their own source commits, plans, run IDs, hashes and failed attempts. Early status notes and technical retries are not scientific replications. The original test264compositions stays excluded in new studies. Publication in main does not convert an internal check into external replication.
 
 ## Final engineering update — 9 October 2026
 

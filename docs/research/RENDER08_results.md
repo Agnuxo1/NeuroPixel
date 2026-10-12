@@ -1,6 +1,6 @@
 # RENDER08: todos los workloads y comparadores
 
-| Workload | CUDA eager ms | CUDA Graph ms | Render vector ms | Mejor CUDA / render |
+| Workload | CUDA eager ms | CUDA Graph ms | Render escalar ms | Mejor CUDA / render |
 |---|---:|---:|---:|---:|
 | C16_grid8 | 4.3157 | 2.3780 | 11.7644 | 0.2021 |
 | C16_grid32 | 3.7682 | 2.4694 | 12.7516 | 0.1937 |

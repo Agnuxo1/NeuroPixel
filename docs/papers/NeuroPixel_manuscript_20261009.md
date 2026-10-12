@@ -60,7 +60,7 @@ SCN06 shows that identical current scanner outputs can hide a state difference t
 
 Benchmarks use the same RTX 3090, driver 581.29, FP32 and disabled TF32. Comparators include deterministic native CUDA eager and CUDA Graph. Seven workloads cover C16/C48 at grids 8, 32 and 128, plus RGB retina at grid 8. Each performs sixteen updates and complete decoding from resident inputs. Seven blocks with three inner calls are technical repeats, not independent scientific replications.
 
-The scalar renderer is 3.14–12.25× slower than the best CUDA comparator. The vector renderer improves that implementation. In C16/grid128 its median is 6.6585 ms against the best CUDA median of 10.2256 ms, a 1.536× ratio. Four of seven vector ratios are at or below one; two positive ratios are small and may be sensitive to technical noise. All workloads are reported.
+The scalar renderer is 3.14–12.24× slower than the best CUDA comparator. The vector renderer improves that implementation. In C16/grid128 its median is 6.6585 ms against the best CUDA median of 10.2256 ms, a 1.536× ratio. Four of seven vector ratios are at or below one; two positive ratios are small and may be sensitive to technical noise. All workloads are reported.
 
 RENDER10 contains all 245 registered timing rows and 77 output gates. The original 143 rows remain unchanged and no completed timing key was repeated. Compute measures 2.084× relative to the best CUDA comparator for C16/grid128 and loses for C48/grid128. Historically, the original execution stopped at the unchanged 8 GiB RAM floor and a first recovery timed out in the GPU queue; those failed attempts remain archived. Recovery sessions are operational continuity, not additional scientific realizations.
 
@@ -70,13 +70,13 @@ Short NVML deltas do not resolve per-inference energy adequately. A zero reading
 
 ## 7. Reproduction and open requirements
 
-Frozen plans, source commits, weights, datasets, predictions, raw states, receipts, Git object identities and SHA256 manifests are supplied. Failed attempts and negative findings remain available. GIFs derive from actual GPU trajectories and numerical tables; playback speed and display mappings are declared. Publication to GitHub main is authorized by the project owner and does not constitute peer review.
+Frozen plans, source commits, weights, datasets, predictions, raw states, receipts, Git object identities and SHA256 manifests are supplied, except the item-5 CPU archive and the historical reassessment outputs, which are unavailable. Failed attempts and negative findings remain available. GIFs derive from actual GPU trajectories and numerical tables; playback speed and display mappings are declared. Publication to GitHub main is authorized by the project owner and does not constitute peer review.
 
 Runtime guards require at least 8 GiB available host RAM before heavy neural loading, two CPU threads and at most two scientific executors. Local GPU work follows the shared FIFO without interrupting other owners. Exact environments are recorded per study. Closed fits are not rerun to improve intervals; operational retries are not counted as scientific realizations.
 
 Code is MIT licensed; UCI optical digits is attributed under CC BY 4.0. See [the evidence index](../research/RESULTS_INDEX_20261009.md), [reproduction guide](../research/REPRODUCE_20261009.md) and [cost and limits](../research/COST_AND_LIMITS_20261009.md).
 
-The implemented neural field demonstrates bounded fidelity, competence on the specified visual task and workload-dependent acceleration after vectorization. Independent outside replication, complete energy accounting, robust continual memory and an exceptional original contribution confirmed by others remain unestablished.
+Within internal evidence levels L1–L2, the implemented neural field shows bounded fidelity, competence on the specified visual task and workload-dependent acceleration after vectorization. Independent outside replication, complete energy accounting, robust continual memory and an exceptional original contribution confirmed by others remain unestablished.
 
 ## Final engineering update — 9 October 2026
 
