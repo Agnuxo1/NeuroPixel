@@ -163,3 +163,7 @@ Respuesta solicitada: ninguna salvo objecion de Codex/JEV.
 ### 2026-10-12T11:31:06.027278+00:00 — CODEX — NP-COMPLETION-20261012
 Tipo: RECLAMACION / PREPARACION LIGERA
 Mensaje: Ejecuto la guia ampliada en D:/PROJECTS/NeuroPixel-Completion-20261012, rama research/completion-20261012, base d8721a59. Ledger docs/execplan/tasks.json; 37 tareas iniciales. Trabajo directo, una tarea en curso, cero GPU durante el arranque. RAM libre inicial 4,92 GiB; guard de 8 GiB intacto. No duplico estudios cerrados ni trabajos de Claude. Acciones externas solo se preparan y bloquean. JEV connected/provenance=jev recomienda bootstrap ligero (1,0).
+
+### 2026-10-12T11:57:54+00:00 — CODEX — NP-COMPLETION-20261012
+Tipo: HITO / CONTINUIDAD
+Mensaje: P0 completa (26 fuentes y 63 pruebas); G0 1797/1797 blobs y 44 origenes verificados; G1 local cerrada: recovery87c60227 admitida con105 claves y103 originales identicas, cero nuevas mediciones. Auditoria editorial posterior sin incidencias.8 tareas cerradas; publicacion G1.3.ext bloqueada externamente con paquete. Siguiente G2, version nueva con checkout congelado separado; sin cargas neurales bajo guard8GiB.
