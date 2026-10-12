@@ -16,7 +16,7 @@
 
 - [x] ~~G1.1 Inspección del recibo RENDER11 e inventario energético (CPU) (§6.2)~~ 2026-10-12T11:47Z `6344902cc8`
 - [x] ~~G1.2 Recuperación de las dos claves físicas pendientes (GPU, solo por gpuq) (§6.2)~~ 2026-10-12T11:50Z `ee7f886c5e`
-- [ ] G1.3 Reconciliación editorial y auditoría documental posterior (§6)
+- [ ] **IN PROGRESS** G1.3 Reconciliación editorial y auditoría documental posterior (§6) (attempt 1)
 
 ## G2 Contratos de software
 
