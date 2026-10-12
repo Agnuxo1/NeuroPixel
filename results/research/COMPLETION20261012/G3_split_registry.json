@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:28:25.344002+00:00",
+  "leakage_taxonomy": "Kapoor and Narayanan (2023), Patterns 4(9):100804: L1.1 no test set; L1.2 pre-processing on train and test; L1.3 feature selection on train and test; L1.4 duplicates; L2 illegitimate features; L3.1 temporal leakage; L3.2 non-independence between train and test; L3.3 sampling bias in the test distribution",
+  "checked": {
+    "vis07_all_ten_sealed_before_test": true,
+    "vis07_final_access_consumed_once": true,
+    "vis07_original264_not_scored": true,
+    "dev04_test_not_scored": true,
+    "glob05_original_test_not_scored": true,
+    "read03_test_not_accessed": true,
+    "newrel_train_dev_family_overlap_zero": true,
+    "kit_default_family_overlap_zero": true
+  },
+  "selector": {
+    "rule": "most DEV correct, then lowest DEV NLL, then earliest epoch; never TEST, never best seed",
+    "implementation": "scripts/completion_g3_splits.py:select_checkpoint",
+    "tests": "tests/test_completion_g3_splits.py"
+  },
+  "sealing": "All models of a cohort are digested (completion_kit.commitments digest) and the digest commitment is published before any new TEST is revealed; procedure and external timing are task G17.1",
+  "exposure_rule": "Every TEST access is logged here with its purpose; a revealed TEST is never used for selection or tuning (Dwork et al. 2015)",
+  "datasets": [
+    {
+      "name": "UCI optical digits (VIS07)",
+      "unit": "writer (per UCI metadata; individual writer ids not independently verified)",
+      "splits": "official TRAIN 3,823 -> 3,523 train + 300 DEV (balanced, TRAIN only); official TEST 1,797",
+      "custody": "public corpus; no blind custody",
+      "test_accesses": [
+        {
+          "purpose": "single registered scoring after all ten DEV-selected models were sealed",
+          "at_utc": "2026-10-09T09:12:01.955536+00:00",
+          "receipt": "results/research/VIS07MAIN_cloud/37908785698/raw.zip:final_access.json"
+        },
+        {
+          "purpose": "post-reveal depth diagnostic, no selection",
+          "subset": "first128 original official test rows, fixed before execution",
+          "receipt": "results/research/VIS07_depth_review/37913653666/receipt.json"
+        },
+        {
+          "purpose": "post-reveal GPU fidelity capture, no selection",
+          "subset": "first64 official TEST rows, every seed, fixed before execution",
+          "receipt": "results/research/VIS07_learned_gpu/receipt.json"
+        },
+        {
+          "purpose": "post-reveal functional replay of base and transformation conditions, no selection",
+          "receipt": "results/research/VIS07REPLAY_cloud/37911162172/receipt.json"
+        }
+      ],
+      "leakage": {
+        "L1_1": "no: official held-out TEST",
+        "L1_2": "no: fixed scaling by 16, no fitted statistics",
+        "L1_3": "no feature selection",
+        "L1_4": "exact-image uniqueness and disjointness are asserted by the manuscript; no retained receipt; re-verification needs the public UCI files (owner-approved download)",
+        "L2": "no: pixel counts only; labels and class tokens are not inserted as input",
+        "L3_1": "not applicable",
+        "L3_2": "writer separation documented by UCI metadata, not independently verified",
+        "L3_3": "TEST from the same collection: in-distribution only; no external-population claim"
+      },
+      "status": "historical exposed TEST; usable only as already-reported evidence; no new confirmatory claim"
+    },
+    {
+      "name": "RoleTask original split (items 4-5)",
+      "unit": "agent/verb/patient triple composition",
+      "splits": "1,320 triples: 924 train / 132 validation / 264 final (protocol NP-SCI-20261006-v1)",
+      "custody": "locally generated; no blind custody",
+      "test_accesses": [
+        {
+          "purpose": "item-4 pilot and item-5 final evaluations (historical)",
+          "receipt": "docs/research/05_results.md (raw evidence partly unavailable; see A18.2.H.ext)"
+        }
+      ],
+      "leakage": {
+        "L1_4": "triples disjoint within each split by construction; fillers and roles shared by design",
+        "L3_2": "compositional hold-out only; same generator",
+        "L3_3": "single synthetic generator"
+      },
+      "later_studies": "the 264 final compositions stay excluded: VIS07, DEV04, GLOB05 and READ03 receipts record no scoring",
+      "note": "Split disjointness was not re-executed here: it needs the Torch generator, deferred under the 8 GiB RAM guard"
+    },
+    {
+      "name": "Development pools of OPT03/READ03/DEV04/GLOB05",
+      "unit": "RoleTask partitions and seeds 77001/77002",
+      "custody": "exposed development data reused across studies",
+      "test_accesses": [],
+      "leakage": {
+        "L3_2": "reused, exposed pools: results are development-only and are registered as such"
+      },
+      "status": "never a TEST; no confirmatory use"
+    },
+    {
+      "name": "NEWREL20261013 (ordered relation composition)",
+      "unit": "structural family: class under entity renaming and relation-label permutation",
+      "splits": {
+        "dev": 24,
+        "dev_long": 24,
+        "train": 96
+      },
+      "manifest": "results/research/NEWREL20261013/manifest.json",
+      "custody": "train/DEV local; TEST to be generated by the designated evaluator with a committed seed (G17.1)",
+      "test_accesses": [],
+      "evaluator_spec": {
+        "generator": "scripts/completion_g3_splits.py (family_id, rename) with completion_kit.datasets.encode/oracle",
+        "entities": 12,
+        "relations": 3,
+        "grid": 8,
+        "depths": "2-3 base and 4 long, paired",
+        "must_exclude": {
+          "count": 120,
+          "path": "excluded_families.json",
+          "sha256": "dee28f3b99d3ed73456b3de4ff21983a0c483f702c21f9ef3bf1e9e762435617"
+        },
+        "seed": "chosen and committed by the evaluator"
+      },
+      "leakage": {
+        "L1_1": "TEST pending evaluator",
+        "L1_4": "family-level disjointness verified (0 overlaps)",
+        "L2": "no: answers computed by the symbolic oracle and decodable from the input alone; never encoded",
+        "L3_2": "structural-family unit removes renamed variants across splits",
+        "L3_3": "single synthetic generator; external validity requires other tasks (G5)"
+      }
+    },
+    {
+      "name": "Kit default relational dataset",
+      "unit": "Exact relation-map identities; not an isomorphism-class guarantee",
+      "family_audit": "results/research/COMPLETION20261012/G3_kit_generator_family_audit.json",
+      "note": "0 structural-family overlaps at the default seed; test_base and test_long share graphs by design"
+    }
+  ]
+}

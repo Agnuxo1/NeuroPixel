@@ -1,0 +1,50 @@
+UTC: 2026-10-12T22:27:10.678288+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g3_splits.py --output results/research/NEWREL20261013 --seed 20261013
+
+{
+  "schema": 1,
+  "task": "ordered_relation_composition",
+  "seed": 20261013,
+  "entities": 12,
+  "relations": 3,
+  "input_dtype": "uint8 (binary channels; cast to float before use)",
+  "families": {
+    "train": 96,
+    "dev": 24
+  },
+  "variants": 3,
+  "examples_per_variant": 8,
+  "panels": {
+    "train": {
+      "path": "train.npz",
+      "sha256": "a657d31f5a8fc29367ebf9e556d8e6c91f87410e4fba1a574ff402c2c1aadac6",
+      "examples": 2304,
+      "families": 96,
+      "exact_graphs": 288
+    },
+    "dev": {
+      "path": "dev.npz",
+      "sha256": "27fc0005441a67583e4efe33a4b7611b2bceb150994ae5a3c23e5a3675ccbe54",
+      "examples": 576,
+      "families": 24,
+      "exact_graphs": 72
+    },
+    "dev_long": {
+      "path": "dev_long.npz",
+      "sha256": "ddd65332d55f1ca9e05ad30c0ae85c91f6be0a840316da3257bf28b1cb6fb1b7",
+      "examples": 576,
+      "families": 24,
+      "exact_graphs": 72
+    }
+  },
+  "separation_unit": "structural family: class under entity renaming and relation-label permutation",
+  "excluded_families": {
+    "path": "excluded_families.json",
+    "count": 120,
+    "sha256": "dee28f3b99d3ed73456b3de4ff21983a0c483f702c21f9ef3bf1e9e762435617"
+  },
+  "dev_long_is_independent_replication": false,
+  "test": "Not generated here: the designated evaluator generates TEST excluding every listed family"
+}
+
+EXIT_CODE: 0

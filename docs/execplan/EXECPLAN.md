@@ -231,6 +231,7 @@ Acciones externas preparadas y no ejecutadas.
 - G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Version publicable anclada al commit ba9f3f84 y verificada en G1_owner_publication_locator.json; la rama actual contiene el parche T0 separado. No push ni publicacion ejecutados.
 - A18.2.H.ext: recuperar del ejecutor Linux (commit 0a56621; workspace /workspace/scratch/61d6e3e6e688) el archivo crudo del estudio 05: 05_experiment/ (215 archivos), 05_analysis.json (11fd91ee...), 05_independent_check.json (adef6b11...), salidas historicas 05_historical*. Paquete: results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json. Sin contacto ni accion externa.
 - Publicacion: los textos publicos corregidos en A18.3 (commits 51afbdea y 78ebf8cb; registro docs/research/claims_ledger.json) son posteriores al paquete G1.3.ext (ba9f3f84). Al publicar, usar la version mas reciente de la rama research/completion-20261012 tras su revision. Sin push ejecutado.
+- G3: aprobar la descarga de los archivos publicos UCI optdigits (optdigits.tra y optdigits.tes, ~0,6 MB, archive.ics.uci.edu, CC BY 4.0) para reverificar la unicidad y disjuncion de imagenes (fuga L1.4); hoy solo lo afirma el manuscrito.
 
 ## Resultados y retrospectiva
 
