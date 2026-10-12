@@ -19,3 +19,9 @@
 - Resultados: separacion por familias estructurales y NEWREL train/DEV; custodia commit-reveal ensayada 9/9; registro de programa con alfa online; ANT01 (Hopfield global domina a acoplamiento local; decodificador explicito domina todo); MATH119 sin violaciones en 27846 casos.
 - Registro de afirmaciones: 76 afirmaciones, max L2, validador valido.
 - Siguiente: esperar RAM>=8GiB (vigilante en segundo plano) y ejecutar G2.2 preparada; despues G2.3 por gpuq, G2 y G13 (apuesta central).
+
+## 2026-10-12T23:31:23+00:00 — Sesion 2 (Claude), cierre por contexto
+- 26/49 cerradas. G2.2 cerrada: contrato T0 y paridad bit a bit T>=1 frente al forward congelado (Torch 2.6.0+cu124, CPU), intentos 1-2 fallidos conservados.
+- G2.3 bloqueada por recurso: el guard RAM8 de los preflights RENDER08/09 rechazo tras importar Torch/ModernGL; reintento preparado (runner con argumento 2, carpeta nueva).
+- Bloqueos externos sin cambios: G1.3.ext, A18.2.H.ext, G17.1.ext, M3.ext (paquetes en Pendiente del propietario).
+- Siguiente sesion: aplicar Reanudacion; esperar RAM>=9 GiB, completar G2.3 y G2, despues G13 (apuesta central) usando ANT01, MATH119, G18 y la matriz de 18B.

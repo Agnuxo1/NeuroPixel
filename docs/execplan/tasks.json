@@ -356,17 +356,31 @@
       "depends_on": [
         "G2.1"
       ],
-      "status": "blocked_resource",
-      "started": "2026-10-12T12:00Z",
-      "attempts": 1,
-      "note": "Admision ejecutada rechaza RAM libre inferior a8GiB; sin importarTorch. Reabrir al disponer>=8GiB; despues preparar y ejecutar regresiones CPU y tres pruebas reales.",
+      "status": "done",
+      "started": "2026-10-12T23:27Z",
+      "attempts": 2,
+      "note": "Admision 8,25 GiB; Torch 2.6.0+cu124 CPU: 3/3 pruebas T0 originales, 7/7 contratos (paridad bit a bit T>=1 eval y mascaras, T0, PAD, clases, finitud, persistencia), test_core OK; intentos 1-2 fallidos conservados.",
       "blocked": "2026-10-12T12:02Z",
       "evidence": [
         {
-          "path": "docs/execplan/evidence/G2.2_admission_v2.json",
-          "sha256_lf": "e376af6724d1169db0c44cc33156b616e8a36c23e7aced460a9ccbcc180cfae0"
+          "path": "results/research/COMPLETION20261012/G2.2_runtime_receipt_attempt3.json",
+          "sha256_lf": "528e153b4e73488fb7c7e446ce336119e9bf724bd647960b7376a8e56df377ff"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G2.2_admission_runtime_attempt3.json",
+          "sha256_lf": "b72e3ccd88b005fe0be88f05820f972b9b28be5be433d056fb71d13f0a0e303d"
+        },
+        {
+          "path": "docs/execplan/evidence/G2.2_runtime_v3.txt",
+          "sha256_lf": "9cfef95c5405d33ef7e708f4873a5841b65679e6f7da3aa2271e82424a4b9bdf"
+        },
+        {
+          "path": "tests/test_g2_runtime_contracts.py",
+          "sha256_lf": "7284636d164065359077037457f24444e77d50c8a3e65505a539825d9de60008"
         }
-      ]
+      ],
+      "commit": "a0488649dd876f8fbeb8f11dc93b6a8cce70b1e7",
+      "closed": "2026-10-12T23:29Z"
     },
     {
       "id": "G2.3",
@@ -377,7 +391,17 @@
       "depends_on": [
         "G2.2"
       ],
-      "status": "pending"
+      "status": "blocked_resource",
+      "started": "2026-10-12T23:29Z",
+      "attempts": 1,
+      "note": "Intento1 por gpuq rechazado por el guard RAM8 de los preflights tras importar Torch/ModernGL (sin cambios de umbral). Reintentar: gpuq run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2 con RAM>=9 GiB.",
+      "blocked": "2026-10-12T23:31Z",
+      "evidence": [
+        {
+          "path": "results/research/G2.3_backend_controls_attempt1_refused/RENDER09_stdout.txt",
+          "sha256_lf": "d852630be0b7de49964e48cc1c1de5597b1bfbf127e17e466e17d899c3570805"
+        }
+      ]
     },
     {
       "id": "G2",
@@ -1455,5 +1479,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T22:45Z"
+  "updated": "2026-10-12T23:31Z"
 }

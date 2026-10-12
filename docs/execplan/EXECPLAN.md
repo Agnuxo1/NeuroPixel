@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T23:30:27+00:00
-- Tarea en curso o siguiente: G2.3, Repetir controles fisicos del backend afectado sin nuevas cohortes; intento 1; presupuesto 30 minutos.
+- Actualizado (UTC): 2026-10-12T23:31:23+00:00
+- Tarea en curso o siguiente: G2.3, Repetir controles fisicos del backend afectado sin nuevas cohortes; intento 1; presupuesto 15 minutos tras RAM.
 - Criterio de cierre: Controles del backend afectado en version nueva ejecutados por gpuq y guard8GiB con pesos e inputs fijados y tolerancias originales, versiones y discrepancias guardadas; ninguna cohorte cientifica reabierta.
-- Hecho en esta tarea: G2.2 cerrada (commit a0488649); ticket gpuq NeuroPixel:G2.3 lanzado en segundo plano: preflights RENDER08/09 con el modelo parcheado en results/research/G2.3_backend_controls/
-- Falta en esta tarea: Leer G2.3_backend_controls.json; cerrar G2.3 y G2; checkpoint de fase y chat nuevo antes de G13
-- Siguiente comando exacto: cat docs/execplan/evidence/G2.3_gpuq_run.txt && python docs/execplan/plan_status.py close G2.3 ...
+- Hecho en esta tarea: 26/49; G2.2 cerrada; G2.3 intento1 rechazado por guard RAM8 de los preflights (conservado); bloqueada por recurso
+- Falta en esta tarea: Con RAM>=9 GiB: reopen G2.3, start, gpuq run del runner con argumento 2, comparar estados con originales, cerrar G2.3 y G2; luego G13 (apuesta central, seccion 18B) con matriz, plan BET01 en ingles y compromiso
+- Siguiente comando exacto: C:/Python313/python.exe scripts/wait_for_ram.py 9 2 300 12  (en segundo plano); despues: python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: Si los estados difieren de los originales: registrar discrepancia, no ampliar tolerancias
+- Dudas o riesgos abiertos: RAM fluctuante por procesos ajenos; no rebajar el guard
 
 ## Propósito
 
@@ -174,9 +174,7 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [x] (2026-10-12T12:00:42+00:00) G2.1: done; commit 0183a4ee1221918630f57079d9f4d2e418a81dc7; Fuente T0 instalada con alcance AST verificado; runtime no probado; frozen exacto y limpio.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T12:00:42+00:00) G2.2, intento 1: hecho G2.1 cerrada; version nueva separada del frozen; RAM reciente2,58GiB<8.; falta Ejecutar admision real antes de importar Torch; bloquear si guard falla y seguir elegible.. Siguiente: `python docs/execplan/plan_status.py start G2.2`.
 
-- [ ] (2026-10-12T12:02:10+00:00) G2.2, intento 2: hecho Guard real rechazo2,039GiB; intento1 no guardo JSON porque el helper esperaba MemoryError. Cambio: capturar RuntimeError exacto del guard, sin modificar umbral.; falta Guardar rechazo estructurado, bloquear y continuar A18.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_admission_v2.txt -- python scripts/completion_resource_admission.py docs/execplan/evidence/G2.2_admission_v2.json`.
 
 
 
@@ -203,9 +201,11 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:38:34+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
 - [x] (2026-10-12T22:38:34+00:00) G20.2: done; commit 4a68e382c66c3bd398534f1eb7ca079020f8a5dc; ANT01: plan congelado antes de ejecutar; Hopfield global domina al local con mismo estado y el decodificador explicito domina todo; PR1 24/24, PR2 60/60; afirmacion ANT01-01 L2.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T22:47:16+00:00) G2.2, intento 1: hecho 25/49 cerradas; sin tareas elegibles: todo depende de G2.2 (RAM>=8GiB) o de bloqueos externos; G2.2 preparada (tests/test_g2_runtime_contracts.py, scripts/completion_g2_runtime.py); falta Cuando haya RAM: reopen G2.2, start, ejecutar runner, cerrar; luego G2.3 por gpuq y G2. Siguiente: `python docs/execplan/plan_status.py reopen G2.2 --note 'RAM disponible' && python docs/execplan/plan_status.py start G2.2 && python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_runtime.txt --timeout 2400 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g2_runtime.py`.
 
 - [ ] (2026-10-12T23:30:27+00:00) G2.3, intento 1: hecho G2.2 cerrada (commit a0488649); ticket gpuq NeuroPixel:G2.3 lanzado en segundo plano: preflights RENDER08/09 con el modelo parcheado en results/research/G2.3_backend_controls/; falta Leer G2.3_backend_controls.json; cerrar G2.3 y G2; checkpoint de fase y chat nuevo antes de G13. Siguiente: `cat docs/execplan/evidence/G2.3_gpuq_run.txt && python docs/execplan/plan_status.py close G2.3 ...`.
+- [x] (2026-10-12T23:31:22+00:00) G2.2: done; commit a0488649dd876f8fbeb8f11dc93b6a8cce70b1e7; Admision 8,25 GiB; Torch 2.6.0+cu124 CPU: 3/3 pruebas T0 originales, 7/7 contratos (paridad bit a bit T>=1 eval y mascaras, T0, PAD, clases, finitud, persistencia), test_core OK; intentos 1-2 fallidos conservados.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T23:31:23+00:00) G2.3, intento 1: hecho 26/49; G2.2 cerrada; G2.3 intento1 rechazado por guard RAM8 de los preflights (conservado); bloqueada por recurso; falta Con RAM>=9 GiB: reopen G2.3, start, gpuq run del runner con argumento 2, comparar estados con originales, cerrar G2.3 y G2; luego G13 (apuesta central, seccion 18B) con matriz, plan BET01 en ingles y compromiso. Siguiente: `C:/Python313/python.exe scripts/wait_for_ram.py 9 2 300 12  (en segundo plano); despues: python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2`.
 
 ## Sorpresas y hallazgos
 
