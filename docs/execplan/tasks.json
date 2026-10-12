@@ -322,9 +322,30 @@
       "depends_on": [
         "G1.2"
       ],
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:58Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/execplan/evidence/G2.1_patch_scope.json",
+          "sha256_lf": "6f881c1bb74453a24cead3e98099b31fd7d0076fc6b795b6f85149f6d81d63c2"
+        },
+        {
+          "path": "docs/execplan/evidence/G2.1_frozen_worktree.txt",
+          "sha256_lf": "51ff394262213b5694911e5610f56029a647fbf3bdd6c19a677f463fb92af9c8"
+        },
+        {
+          "path": "docs/execplan/evidence/G2.1_patch.txt",
+          "sha256_lf": "bcf77f35b55790f92731febabb0fca820fc9af13072a0a698450af2822c0942b"
+        },
+        {
+          "path": "docs/execplan/evidence/G2.1_scope.txt",
+          "sha256_lf": "6b24dc34454ca658d56f6a6f4ef70b1d78f58a9d2b923d8053afce881b85b111"
+        }
+      ],
+      "commit": "0183a4ee1221918630f57079d9f4d2e418a81dc7",
+      "closed": "2026-10-12T12:00Z",
+      "note": "Fuente T0 instalada con alcance AST verificado; runtime no probado; frozen exacto y limpio."
     },
     {
       "id": "G2.2",
@@ -711,5 +732,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T11:58Z"
+  "updated": "2026-10-12T12:00Z"
 }
