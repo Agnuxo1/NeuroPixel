@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:33:15.513123+00:00",
+  "error_control": {
+    "rule": "online_bonferroni (FWER, valid under arbitrary dependence)",
+    "total_alpha": 0.05,
+    "gamma": "6/(pi^2 j^2), j = position of the confirmatory hypothesis in this registry",
+    "first_thresholds": [
+      0.030396355092701333,
+      0.007599088773175333,
+      0.003377372788077926,
+      0.0018997721932938333,
+      0.0012158542037080534
+    ],
+    "kit_check": 0.030396355092701333,
+    "scope": "Applies to every confirmatory hypothesis registered after 2026-10-13; order fixed by registration time",
+    "references": [
+      "Ioannidis 2005",
+      "Javanmard and Montanari 2018"
+    ]
+  },
+  "equivalence_policy": {
+    "rule": "Any claim of equivalence or non-inferiority requires a margin in percentage points registered before the data and a TOST or non-inferiority test (tost_paired / noninferiority_paired); a non-significant difference never establishes equivalence (Schuirmann 1987; Lakens 2017)",
+    "current_equality_claims": 0,
+    "check": "No statement in docs/research/claims_ledger.json asserts equivalence; limits state the opposite where relevant"
+  },
+  "hypotheses": [
+    {
+      "position": 0,
+      "id": "H1",
+      "protocol": "NP-SCI-20261006-v1",
+      "registered": "2026-10-06 (before this registry)",
+      "decision_rule": "five primary pairs; mean NeuroPixel binding >= 0.90, mean paired advantage >= 0.05 and two-sided t95 lower bound > 0",
+      "alpha": 0.05,
+      "alpha_source": "own protocol; outside the online stream",
+      "status": "not_supported",
+      "evidence_level": "L0 blocked_external (raw archive unavailable; see A18.2.H.ext)"
+    }
+  ],
+  "exploratory_studies": [
+    "A06.1",
+    "OPT03 (D, MODE, ROLE, QTRAIN, QTRAIN-U16)",
+    "READ03",
+    "DEV04",
+    "GLOB05",
+    "SCN06",
+    "VIS07",
+    "RENDER08-11"
+  ],
+  "exploratory_note": "These studies used exploratory, unadjusted intervals; they spend no alpha and support no confirmatory claim",
+  "next_position": 1,
+  "sensitivity": "results/research/COMPLETION20261012/G18_sensitivity.json"
+}
