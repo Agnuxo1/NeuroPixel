@@ -203,6 +203,7 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
 - A18.2.H (2026-10-12, Claude): los recibos de 04, A06.1 y conciliacion no estaban en el arbol publicado pero si, intactos, en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; se importaron autenticados (seleccion 04 a62300cf, original.zip 61cbc148 y closure_receipt A06.1). El archivo crudo del estudio 05 no existe en ningun sitio local ni remoto. Discrepancia: informe A06.1 linea 38 da -0,272 pero el recibo da -0,27145 (redondea a -0,271).
 - A18.2.D (2026-10-12, Claude): varias cifras resumen de los informes (medias, IC, sumas) no se guardan en recibos; se recalculan desde los recibos por semilla (VIS07, MODE, U16, QTRAIN). Dos valores no se reproducen: columna RMS de VIS07 (recibo de 128 filas da 0,543...134.843) y admision 8,6749 GiB de ROLE (ausente).
+- A18.2.P (2026-10-13, Claude): el registro completo cubre 795/795 candidatos con 73 afirmaciones (L0:10, L1:33, L2:30). Textos publicos con discrepancias pendientes de correccion archivada en A18.3: disponibilidad sobredeclarada (README 96, manuscrito 73, indice 17, REPRODUCE 11), REPRODUCE 17 dice 100/105, README/manuscrito 12.25x (recibo 12.24), RENDER08 etiqueta, RENDER09 frase, A06.1 -0,272, VIS07 RMS, ROLE 8,6749, figuras precientificas del README.
 
 ## Registro de decisiones
 
@@ -240,3 +241,4 @@ Se escribe al cerrar cada fase.
 - 2026-10-12T12:11:47+00:00 · 37 tareas originales conservadas y criterios intactos; G2 separado por CPU/Torch/GPU y A18 por inventario, semantica y auditoria; publicacionG1 separada externamente.48 tareas totales; evidencia de integridad en session1_integrity_resources.json.
 
 Formato: fecha · qué cambió · por qué.
+- 2026-10-13 · plan_status rechazo cerrar A18.2.P porque regenerar D/G cambio evidencia cerrada; se restauraron los bytes de cierre y la biblioteca de revision es ahora idempotente · integridad del ledger.

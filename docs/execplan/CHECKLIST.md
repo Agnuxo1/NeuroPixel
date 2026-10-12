@@ -60,7 +60,7 @@
 
 ## 18A Verificacion final
 
-- [ ] A18.3 Auditar ledger y coherencia de afirmaciones publicas (§18A)
+- [ ] **IN PROGRESS** A18.3 Auditar ledger y coherencia de afirmaciones publicas (§18A) (attempt 1)
 
 ## 18A Registro de afirmaciones
 
