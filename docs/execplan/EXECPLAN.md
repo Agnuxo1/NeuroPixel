@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:37:29+00:00
-- Tarea en curso o siguiente: P0.3, Materializar el kit de la guía ampliada y su entorno; intento 1; presupuesto 15 minutos.
-- Criterio de cierre: Extractor: 26 archivos autenticados; entorno en E: con versiones registradas; 38 + 25 pruebas aprobadas con salida guardada como evidencia.
-- Hecho en esta tarea: 26 hashes verificados; 38+25 pruebas OK; entorno E: Python 3.13.7 y versiones guardadas.
-- Falta en esta tarea: Commit y close.
-- Siguiente comando exacto: git add completion_kit requirements-completion.txt requirements-graphics.txt extract_completion_kit.py docs/execplan
+- Actualizado (UTC): 2026-10-12T11:37:33+00:00
+- Tarea en curso o siguiente: P0.4, Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md); intento 1; presupuesto 15 minutos.
+- Criterio de cierre: docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.
+- Hecho en esta tarea: Plan instalado, 3 tareas cerradas, checklist generado y AGENTS operativo.
+- Falta en esta tarea: Validar sistema de reanudacion y guardar recibo; commit y close.
+- Siguiente comando exacto: python docs/execplan/plan_status.py section 1
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -145,6 +145,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:36:59+00:00) P0.2: done; commit 92d5f3ae283d8a6554e87d2c2e8868369482495a; Checkout y rama aislados; main remoto coincide con base fijada.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T11:37:29+00:00) P0.3, intento 1: hecho 26 hashes verificados; 38+25 pruebas OK; entorno E: Python 3.13.7 y versiones guardadas.; falta Commit y close.. Siguiente: `git add completion_kit requirements-completion.txt requirements-graphics.txt extract_completion_kit.py docs/execplan`.
+
+- [ ] (2026-10-12T11:37:33+00:00) P0.4, intento 1: hecho Plan instalado, 3 tareas cerradas, checklist generado y AGENTS operativo.; falta Validar sistema de reanudacion y guardar recibo; commit y close.. Siguiente: `python docs/execplan/plan_status.py section 1`.
 
 ## Sorpresas y hallazgos
 
