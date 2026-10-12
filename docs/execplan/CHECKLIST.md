@@ -36,7 +36,7 @@
 
 ## 18A Inventario documental
 
-- [ ] **IN PROGRESS** A18.1 Congelar inventario completo de textos y candidatos a afirmacion publica (§18A) (attempt 1)
+- [x] ~~A18.1 Congelar inventario completo de textos y candidatos a afirmacion publica (§18A)~~ 2026-10-12T12:05Z `887aff487f`
 
 ## 18A Registro cientifico
 
