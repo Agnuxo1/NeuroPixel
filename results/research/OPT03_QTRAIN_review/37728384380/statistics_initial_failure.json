@@ -1,0 +1,106 @@
+{
+  "status": "strict_analytic_interval_comparison_failed_preserved",
+  "generator_sha256": "ed4590640df31af3795a74e6c4fd700b4cc347b56dd55d4f3dc74879fd2d2890",
+  "scipy_version": "1.15.1",
+  "tolerance_original": 1e-12,
+  "analytic_df2_critical": 4.302652729749464,
+  "frozen_library_df2_critical": 4.302652729696142,
+  "critical_difference": 5.332179142669702e-11,
+  "library_critical_cdf": 0.9749999999994261,
+  "comparisons": [
+    {
+      "contrast": "paired_school0.0",
+      "analytic_t95": [
+        0.010546715093427292,
+        0.018017738031572708
+      ],
+      "frozen_t95": [
+        0.010546715093473585,
+        0.018017738031526415
+      ],
+      "max_absolute_difference_proportion": 4.6292830679917074e-14,
+      "strict_1e_12_passed": true
+    },
+    {
+      "contrast": "paired_school0.3",
+      "analytic_t95": [
+        -0.7190623739067628,
+        1.2835561890109293
+      ],
+      "frozen_t95": [
+        -0.7190623738943536,
+        1.28355618899852
+      ],
+      "max_absolute_difference_proportion": 1.24091847908403e-11,
+      "strict_1e_12_passed": false
+    },
+    {
+      "contrast": "repeated_school0.0",
+      "analytic_t95": [
+        -0.00023775723684757444,
+        0.003004684320180908
+      ],
+      "frozen_t95": [
+        -0.0002377572368274831,
+        0.0030046843201608168
+      ],
+      "max_absolute_difference_proportion": 2.0091350458328883e-14,
+      "strict_1e_12_passed": true
+    },
+    {
+      "contrast": "repeated_school0.3",
+      "analytic_t95": [
+        -0.005138685605300078,
+        0.009533216855300078
+      ],
+      "frozen_t95": [
+        -0.005138685605209165,
+        0.009533216855209165
+      ],
+      "max_absolute_difference_proportion": 9.09133879289925e-14,
+      "strict_1e_12_passed": true
+    },
+    {
+      "contrast": "paired_minus_repeated",
+      "analytic_t95": [
+        -0.3541578465970666,
+        0.6471062515449834
+      ],
+      "frozen_t95": [
+        -0.35415784659086247,
+        0.6471062515387792
+      ],
+      "max_absolute_difference_proportion": 6.2041483062103e-12,
+      "strict_1e_12_passed": false
+    },
+    {
+      "contrast": "school",
+      "analytic_t95": [
+        -0.36467499545741455,
+        0.6334534785303312
+      ],
+      "frozen_t95": [
+        -0.3646749954512297,
+        0.6334534785241465
+      ],
+      "max_absolute_difference_proportion": 6.184830425581822e-12,
+      "strict_1e_12_passed": false
+    },
+    {
+      "contrast": "interaction",
+      "analytic_t95": [
+        -0.7443734992740894,
+        1.2786752570865894
+      ],
+      "frozen_t95": [
+        -0.7443734992615536,
+        1.2786752570740536
+      ],
+      "max_absolute_difference_proportion": 1.2535750215647568e-11,
+      "strict_1e_12_passed": false
+    }
+  ],
+  "new_model_training": false,
+  "new_model_evaluation": false,
+  "experimental_recipe_changed": false
+}

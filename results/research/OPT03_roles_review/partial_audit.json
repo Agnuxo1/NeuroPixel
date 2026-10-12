@@ -1,0 +1,1202 @@
+{
+  "status": "verified_partial_recount_incomplete_cohort",
+  "checks": 1050,
+  "issues": [],
+  "complete_cohort": false,
+  "missing": [
+    "OPT03D_pad1_fire1.0_seed102"
+  ],
+  "new_predictions_recounted": 162816,
+  "raw_recounts": {
+    "OPT03D_pad0_fire0.5_seed100": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.611328125,
+          "binding": 0.259765625,
+          "per_role": [
+            0.2705078125,
+            0.94921875,
+            0.2490234375,
+            0.9765625
+          ],
+          "joint_binding": 0.001953125,
+          "query_prediction_change_rate": 0.0400390625,
+          "candidate_adherence": 0.5224609375,
+          "unchanged_prediction_rate": 0.9599609375,
+          "control_accuracy": 0.962890625,
+          "control_joint_accuracy": 0.962890625,
+          "mean_nll": 1.1401738277680897
+        },
+        "pair_relocate": {
+          "accuracy": 0.61572265625,
+          "binding": 0.2705078125,
+          "per_role": [
+            0.2373046875,
+            0.9404296875,
+            0.3037109375,
+            0.9814453125
+          ],
+          "joint_binding": 0.21728515625,
+          "query_prediction_change_rate": 0.2041015625,
+          "candidate_adherence": 0.50634765625,
+          "unchanged_prediction_rate": 0.7958984375,
+          "control_accuracy": 0.9609375,
+          "control_joint_accuracy": 0.9462890625,
+          "mean_nll": 1.143740267625424
+        },
+        "both": {
+          "accuracy": 0.601806640625,
+          "binding": 0.24267578125,
+          "per_role": [
+            0.23828125,
+            0.9404296875,
+            0.2470703125,
+            0.9814453125
+          ],
+          "joint_binding": 0.01904296875,
+          "query_prediction_change_rate": 0.2109375,
+          "candidate_adherence": 0.5126953125,
+          "unchanged_prediction_rate": 0.7890625,
+          "control_accuracy": 0.9609375,
+          "control_joint_accuracy": 0.9462890625,
+          "mean_nll": 1.1626003663930422
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.59375,
+          "binding": 0.22216796875,
+          "per_role": [
+            0.185546875,
+            0.962890625,
+            0.2587890625,
+            0.9677734375
+          ],
+          "joint_binding": 0.001953125,
+          "query_prediction_change_rate": 0.05859375,
+          "candidate_adherence": 0.42333984375,
+          "unchanged_prediction_rate": 0.94140625,
+          "control_accuracy": 0.96533203125,
+          "control_joint_accuracy": 0.96533203125,
+          "mean_nll": 1.1214921599837648
+        },
+        "pair_relocate": {
+          "accuracy": 0.59326171875,
+          "binding": 0.22021484375,
+          "per_role": [
+            0.2900390625,
+            0.958984375,
+            0.150390625,
+            0.9736328125
+          ],
+          "joint_binding": 0.1435546875,
+          "query_prediction_change_rate": 0.24169921875,
+          "candidate_adherence": 0.4287109375,
+          "unchanged_prediction_rate": 0.75830078125,
+          "control_accuracy": 0.96630859375,
+          "control_joint_accuracy": 0.955078125,
+          "mean_nll": 1.137866337062402
+        },
+        "both": {
+          "accuracy": 0.587158203125,
+          "binding": 0.2080078125,
+          "per_role": [
+            0.19921875,
+            0.958984375,
+            0.216796875,
+            0.9736328125
+          ],
+          "joint_binding": 0.02783203125,
+          "query_prediction_change_rate": 0.25,
+          "candidate_adherence": 0.427734375,
+          "unchanged_prediction_rate": 0.75,
+          "control_accuracy": 0.96630859375,
+          "control_joint_accuracy": 0.955078125,
+          "mean_nll": 1.1399773754810634
+        }
+      }
+    },
+    "OPT03D_pad0_fire1.0_seed100": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.54296875,
+          "binding": 0.1875,
+          "per_role": [
+            0.2265625,
+            0.84375,
+            0.1484375,
+            0.953125
+          ],
+          "joint_binding": 0.0,
+          "query_prediction_change_rate": 0.26171875,
+          "candidate_adherence": 0.33984375,
+          "unchanged_prediction_rate": 0.73828125,
+          "control_accuracy": 0.8984375,
+          "control_joint_accuracy": 0.8984375,
+          "mean_nll": 1.4157922519295394
+        },
+        "pair_relocate": {
+          "accuracy": 0.513671875,
+          "binding": 0.125,
+          "per_role": [
+            0.125,
+            0.84375,
+            0.125,
+            0.9609375
+          ],
+          "joint_binding": 0.08984375,
+          "query_prediction_change_rate": 0.25390625,
+          "candidate_adherence": 0.2890625,
+          "unchanged_prediction_rate": 0.74609375,
+          "control_accuracy": 0.90234375,
+          "control_joint_accuracy": 0.859375,
+          "mean_nll": 1.4043611585392946
+        },
+        "both": {
+          "accuracy": 0.5390625,
+          "binding": 0.17578125,
+          "per_role": [
+            0.203125,
+            0.84375,
+            0.1484375,
+            0.9609375
+          ],
+          "joint_binding": 0.0078125,
+          "query_prediction_change_rate": 0.3515625,
+          "candidate_adherence": 0.30859375,
+          "unchanged_prediction_rate": 0.6484375,
+          "control_accuracy": 0.90234375,
+          "control_joint_accuracy": 0.859375,
+          "mean_nll": 1.3838427949694314
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.548828125,
+          "binding": 0.203125,
+          "per_role": [
+            0.171875,
+            0.8828125,
+            0.234375,
+            0.90625
+          ],
+          "joint_binding": 0.0078125,
+          "query_prediction_change_rate": 0.30859375,
+          "candidate_adherence": 0.33203125,
+          "unchanged_prediction_rate": 0.69140625,
+          "control_accuracy": 0.89453125,
+          "control_joint_accuracy": 0.89453125,
+          "mean_nll": 1.4641549735834207
+        },
+        "pair_relocate": {
+          "accuracy": 0.521484375,
+          "binding": 0.15625,
+          "per_role": [
+            0.1484375,
+            0.859375,
+            0.1640625,
+            0.9140625
+          ],
+          "joint_binding": 0.12109375,
+          "query_prediction_change_rate": 0.29296875,
+          "candidate_adherence": 0.3359375,
+          "unchanged_prediction_rate": 0.70703125,
+          "control_accuracy": 0.88671875,
+          "control_joint_accuracy": 0.87109375,
+          "mean_nll": 1.492294415185236
+        },
+        "both": {
+          "accuracy": 0.529296875,
+          "binding": 0.171875,
+          "per_role": [
+            0.1640625,
+            0.859375,
+            0.1796875,
+            0.9140625
+          ],
+          "joint_binding": 0.015625,
+          "query_prediction_change_rate": 0.3828125,
+          "candidate_adherence": 0.31640625,
+          "unchanged_prediction_rate": 0.6171875,
+          "control_accuracy": 0.88671875,
+          "control_joint_accuracy": 0.87109375,
+          "mean_nll": 1.4779179190457878
+        }
+      }
+    },
+    "OPT03D_pad1_fire0.5_seed100": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.66064453125,
+          "binding": 0.37255859375,
+          "per_role": [
+            0.375,
+            0.9287109375,
+            0.3701171875,
+            0.96875
+          ],
+          "joint_binding": 0.0185546875,
+          "query_prediction_change_rate": 0.12353515625,
+          "candidate_adherence": 0.70361328125,
+          "unchanged_prediction_rate": 0.87646484375,
+          "control_accuracy": 0.94873046875,
+          "control_joint_accuracy": 0.94873046875,
+          "mean_nll": 0.9232485380578607
+        },
+        "pair_relocate": {
+          "accuracy": 0.652587890625,
+          "binding": 0.35888671875,
+          "per_role": [
+            0.3447265625,
+            0.919921875,
+            0.373046875,
+            0.97265625
+          ],
+          "joint_binding": 0.1845703125,
+          "query_prediction_change_rate": 0.5126953125,
+          "candidate_adherence": 0.71875,
+          "unchanged_prediction_rate": 0.4873046875,
+          "control_accuracy": 0.9462890625,
+          "control_joint_accuracy": 0.92626953125,
+          "mean_nll": 0.9268165695010975
+        },
+        "both": {
+          "accuracy": 0.657958984375,
+          "binding": 0.36962890625,
+          "per_role": [
+            0.3857421875,
+            0.919921875,
+            0.353515625,
+            0.97265625
+          ],
+          "joint_binding": 0.107421875,
+          "query_prediction_change_rate": 0.53564453125,
+          "candidate_adherence": 0.71728515625,
+          "unchanged_prediction_rate": 0.46435546875,
+          "control_accuracy": 0.9462890625,
+          "control_joint_accuracy": 0.92626953125,
+          "mean_nll": 0.9510838630339276
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.666748046875,
+          "binding": 0.36767578125,
+          "per_role": [
+            0.3359375,
+            0.962890625,
+            0.3994140625,
+            0.96875
+          ],
+          "joint_binding": 0.01708984375,
+          "query_prediction_change_rate": 0.13037109375,
+          "candidate_adherence": 0.71533203125,
+          "unchanged_prediction_rate": 0.86962890625,
+          "control_accuracy": 0.9658203125,
+          "control_joint_accuracy": 0.9658203125,
+          "mean_nll": 0.9335976259346863
+        },
+        "pair_relocate": {
+          "accuracy": 0.657470703125,
+          "binding": 0.34765625,
+          "per_role": [
+            0.3359375,
+            0.9658203125,
+            0.359375,
+            0.96875
+          ],
+          "joint_binding": 0.19384765625,
+          "query_prediction_change_rate": 0.4873046875,
+          "candidate_adherence": 0.7265625,
+          "unchanged_prediction_rate": 0.5126953125,
+          "control_accuracy": 0.96728515625,
+          "control_joint_accuracy": 0.95166015625,
+          "mean_nll": 0.9523889844893033
+        },
+        "both": {
+          "accuracy": 0.669677734375,
+          "binding": 0.3720703125,
+          "per_role": [
+            0.365234375,
+            0.9658203125,
+            0.37890625,
+            0.96875
+          ],
+          "joint_binding": 0.0966796875,
+          "query_prediction_change_rate": 0.49560546875,
+          "candidate_adherence": 0.72265625,
+          "unchanged_prediction_rate": 0.50439453125,
+          "control_accuracy": 0.96728515625,
+          "control_joint_accuracy": 0.95166015625,
+          "mean_nll": 0.9048035855164612
+        }
+      }
+    },
+    "OPT03D_pad1_fire1.0_seed100": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.552734375,
+          "binding": 0.125,
+          "per_role": [
+            0.125,
+            0.9609375,
+            0.125,
+            1.0
+          ],
+          "joint_binding": 0.00390625,
+          "query_prediction_change_rate": 0.91015625,
+          "candidate_adherence": 0.21875,
+          "unchanged_prediction_rate": 0.08984375,
+          "control_accuracy": 0.98046875,
+          "control_joint_accuracy": 0.98046875,
+          "mean_nll": 1.265415819901757
+        },
+        "pair_relocate": {
+          "accuracy": 0.5234375,
+          "binding": 0.0625,
+          "per_role": [
+            0.046875,
+            0.96875,
+            0.078125,
+            1.0
+          ],
+          "joint_binding": 0.03515625,
+          "query_prediction_change_rate": 0.0546875,
+          "candidate_adherence": 0.1328125,
+          "unchanged_prediction_rate": 0.9453125,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.9765625,
+          "mean_nll": 1.2632478226212278
+        },
+        "both": {
+          "accuracy": 0.5546875,
+          "binding": 0.125,
+          "per_role": [
+            0.1171875,
+            0.96875,
+            0.1328125,
+            1.0
+          ],
+          "joint_binding": 0.03125,
+          "query_prediction_change_rate": 0.96484375,
+          "candidate_adherence": 0.21875,
+          "unchanged_prediction_rate": 0.03515625,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.9765625,
+          "mean_nll": 1.2772691509806045
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.552734375,
+          "binding": 0.12890625,
+          "per_role": [
+            0.09375,
+            0.9609375,
+            0.1640625,
+            0.9921875
+          ],
+          "joint_binding": 0.0,
+          "query_prediction_change_rate": 0.87109375,
+          "candidate_adherence": 0.20703125,
+          "unchanged_prediction_rate": 0.12890625,
+          "control_accuracy": 0.9765625,
+          "control_joint_accuracy": 0.9765625,
+          "mean_nll": 1.2503659602651696
+        },
+        "pair_relocate": {
+          "accuracy": 0.546875,
+          "binding": 0.1171875,
+          "per_role": [
+            0.1484375,
+            0.9609375,
+            0.0859375,
+            0.9921875
+          ],
+          "joint_binding": 0.07421875,
+          "query_prediction_change_rate": 0.0703125,
+          "candidate_adherence": 0.203125,
+          "unchanged_prediction_rate": 0.9296875,
+          "control_accuracy": 0.9765625,
+          "control_joint_accuracy": 0.96484375,
+          "mean_nll": 1.282900174851473
+        },
+        "both": {
+          "accuracy": 0.544921875,
+          "binding": 0.11328125,
+          "per_role": [
+            0.1171875,
+            0.9609375,
+            0.109375,
+            0.9921875
+          ],
+          "joint_binding": 0.02734375,
+          "query_prediction_change_rate": 0.9375,
+          "candidate_adherence": 0.20703125,
+          "unchanged_prediction_rate": 0.0625,
+          "control_accuracy": 0.9765625,
+          "control_joint_accuracy": 0.96484375,
+          "mean_nll": 1.2921378629444535
+        }
+      }
+    },
+    "OPT03D_pad0_fire0.5_seed101": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.749755859375,
+          "binding": 0.57080078125,
+          "per_role": [
+            0.533203125,
+            0.9033203125,
+            0.6083984375,
+            0.9541015625
+          ],
+          "joint_binding": 0.23486328125,
+          "query_prediction_change_rate": 0.39990234375,
+          "candidate_adherence": 0.8515625,
+          "unchanged_prediction_rate": 0.60009765625,
+          "control_accuracy": 0.9287109375,
+          "control_joint_accuracy": 0.9287109375,
+          "mean_nll": 0.7347389930829296
+        },
+        "pair_relocate": {
+          "accuracy": 0.760498046875,
+          "binding": 0.58984375,
+          "per_role": [
+            0.548828125,
+            0.9052734375,
+            0.630859375,
+            0.95703125
+          ],
+          "joint_binding": 0.36328125,
+          "query_prediction_change_rate": 0.46533203125,
+          "candidate_adherence": 0.85107421875,
+          "unchanged_prediction_rate": 0.53466796875,
+          "control_accuracy": 0.93115234375,
+          "control_joint_accuracy": 0.9033203125,
+          "mean_nll": 0.7061341050532086
+        },
+        "both": {
+          "accuracy": 0.737548828125,
+          "binding": 0.5439453125,
+          "per_role": [
+            0.4814453125,
+            0.9052734375,
+            0.6064453125,
+            0.95703125
+          ],
+          "joint_binding": 0.30908203125,
+          "query_prediction_change_rate": 0.6279296875,
+          "candidate_adherence": 0.8447265625,
+          "unchanged_prediction_rate": 0.3720703125,
+          "control_accuracy": 0.93115234375,
+          "control_joint_accuracy": 0.9033203125,
+          "mean_nll": 0.7663554880529084
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.733154296875,
+          "binding": 0.51904296875,
+          "per_role": [
+            0.4609375,
+            0.9375,
+            0.5771484375,
+            0.95703125
+          ],
+          "joint_binding": 0.21142578125,
+          "query_prediction_change_rate": 0.37841796875,
+          "candidate_adherence": 0.83056640625,
+          "unchanged_prediction_rate": 0.62158203125,
+          "control_accuracy": 0.947265625,
+          "control_joint_accuracy": 0.947265625,
+          "mean_nll": 0.7786175821204053
+        },
+        "pair_relocate": {
+          "accuracy": 0.74853515625,
+          "binding": 0.5517578125,
+          "per_role": [
+            0.5244140625,
+            0.935546875,
+            0.5791015625,
+            0.955078125
+          ],
+          "joint_binding": 0.34814453125,
+          "query_prediction_change_rate": 0.47021484375,
+          "candidate_adherence": 0.845703125,
+          "unchanged_prediction_rate": 0.52978515625,
+          "control_accuracy": 0.9453125,
+          "control_joint_accuracy": 0.91748046875,
+          "mean_nll": 0.7669678966591097
+        },
+        "both": {
+          "accuracy": 0.732177734375,
+          "binding": 0.51904296875,
+          "per_role": [
+            0.4892578125,
+            0.935546875,
+            0.548828125,
+            0.955078125
+          ],
+          "joint_binding": 0.2998046875,
+          "query_prediction_change_rate": 0.611328125,
+          "candidate_adherence": 0.83251953125,
+          "unchanged_prediction_rate": 0.388671875,
+          "control_accuracy": 0.9453125,
+          "control_joint_accuracy": 0.91748046875,
+          "mean_nll": 0.7911874717339414
+        }
+      }
+    },
+    "OPT03D_pad0_fire1.0_seed101": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.55078125,
+          "binding": 0.1171875,
+          "per_role": [
+            0.1171875,
+            0.984375,
+            0.1171875,
+            0.984375
+          ],
+          "joint_binding": 0.01171875,
+          "query_prediction_change_rate": 0.9375,
+          "candidate_adherence": 0.2265625,
+          "unchanged_prediction_rate": 0.0625,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.984375,
+          "mean_nll": 1.2605647805093696
+        },
+        "pair_relocate": {
+          "accuracy": 0.5546875,
+          "binding": 0.125,
+          "per_role": [
+            0.1015625,
+            0.9765625,
+            0.1484375,
+            0.9921875
+          ],
+          "joint_binding": 0.09765625,
+          "query_prediction_change_rate": 0.05078125,
+          "candidate_adherence": 0.203125,
+          "unchanged_prediction_rate": 0.94921875,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.9765625,
+          "mean_nll": 1.2383259484519429
+        },
+        "both": {
+          "accuracy": 0.55078125,
+          "binding": 0.1171875,
+          "per_role": [
+            0.109375,
+            0.9765625,
+            0.125,
+            0.9921875
+          ],
+          "joint_binding": 0.0390625,
+          "query_prediction_change_rate": 0.97265625,
+          "candidate_adherence": 0.21484375,
+          "unchanged_prediction_rate": 0.02734375,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.9765625,
+          "mean_nll": 1.2601059343320729
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.552734375,
+          "binding": 0.1171875,
+          "per_role": [
+            0.0625,
+            0.9921875,
+            0.171875,
+            0.984375
+          ],
+          "joint_binding": 0.0,
+          "query_prediction_change_rate": 0.92578125,
+          "candidate_adherence": 0.21875,
+          "unchanged_prediction_rate": 0.07421875,
+          "control_accuracy": 0.98828125,
+          "control_joint_accuracy": 0.98828125,
+          "mean_nll": 1.2358211454559052
+        },
+        "pair_relocate": {
+          "accuracy": 0.5546875,
+          "binding": 0.12109375,
+          "per_role": [
+            0.109375,
+            0.9921875,
+            0.1328125,
+            0.984375
+          ],
+          "joint_binding": 0.078125,
+          "query_prediction_change_rate": 0.06640625,
+          "candidate_adherence": 0.1953125,
+          "unchanged_prediction_rate": 0.93359375,
+          "control_accuracy": 0.98828125,
+          "control_joint_accuracy": 0.98828125,
+          "mean_nll": 1.2473839543420993
+        },
+        "both": {
+          "accuracy": 0.544921875,
+          "binding": 0.1015625,
+          "per_role": [
+            0.0859375,
+            0.9921875,
+            0.1171875,
+            0.984375
+          ],
+          "joint_binding": 0.02734375,
+          "query_prediction_change_rate": 0.984375,
+          "candidate_adherence": 0.21484375,
+          "unchanged_prediction_rate": 0.015625,
+          "control_accuracy": 0.98828125,
+          "control_joint_accuracy": 0.98828125,
+          "mean_nll": 1.250522974984365
+        }
+      }
+    },
+    "OPT03D_pad1_fire0.5_seed101": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.69140625,
+          "binding": 0.42529296875,
+          "per_role": [
+            0.416015625,
+            0.939453125,
+            0.4345703125,
+            0.9755859375
+          ],
+          "joint_binding": 0.03955078125,
+          "query_prediction_change_rate": 0.14208984375,
+          "candidate_adherence": 0.8203125,
+          "unchanged_prediction_rate": 0.85791015625,
+          "control_accuracy": 0.95751953125,
+          "control_joint_accuracy": 0.95751953125,
+          "mean_nll": 0.8206109375619729
+        },
+        "pair_relocate": {
+          "accuracy": 0.69775390625,
+          "binding": 0.43798828125,
+          "per_role": [
+            0.4482421875,
+            0.9443359375,
+            0.427734375,
+            0.970703125
+          ],
+          "joint_binding": 0.2197265625,
+          "query_prediction_change_rate": 0.51318359375,
+          "candidate_adherence": 0.845703125,
+          "unchanged_prediction_rate": 0.48681640625,
+          "control_accuracy": 0.95751953125,
+          "control_joint_accuracy": 0.939453125,
+          "mean_nll": 0.8128629485101722
+        },
+        "both": {
+          "accuracy": 0.685546875,
+          "binding": 0.41357421875,
+          "per_role": [
+            0.396484375,
+            0.9443359375,
+            0.4306640625,
+            0.970703125
+          ],
+          "joint_binding": 0.16748046875,
+          "query_prediction_change_rate": 0.51953125,
+          "candidate_adherence": 0.83837890625,
+          "unchanged_prediction_rate": 0.48046875,
+          "control_accuracy": 0.95751953125,
+          "control_joint_accuracy": 0.939453125,
+          "mean_nll": 0.8412089561755631
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.711181640625,
+          "binding": 0.44775390625,
+          "per_role": [
+            0.3896484375,
+            0.9736328125,
+            0.505859375,
+            0.9755859375
+          ],
+          "joint_binding": 0.0322265625,
+          "query_prediction_change_rate": 0.13525390625,
+          "candidate_adherence": 0.84814453125,
+          "unchanged_prediction_rate": 0.86474609375,
+          "control_accuracy": 0.974609375,
+          "control_joint_accuracy": 0.974609375,
+          "mean_nll": 0.7670310833955695
+        },
+        "pair_relocate": {
+          "accuracy": 0.693359375,
+          "binding": 0.4169921875,
+          "per_role": [
+            0.4052734375,
+            0.97265625,
+            0.4287109375,
+            0.966796875
+          ],
+          "joint_binding": 0.197265625,
+          "query_prediction_change_rate": 0.52099609375,
+          "candidate_adherence": 0.830078125,
+          "unchanged_prediction_rate": 0.47900390625,
+          "control_accuracy": 0.9697265625,
+          "control_joint_accuracy": 0.95947265625,
+          "mean_nll": 0.8134797031552108
+        },
+        "both": {
+          "accuracy": 0.69189453125,
+          "binding": 0.4140625,
+          "per_role": [
+            0.4130859375,
+            0.97265625,
+            0.4150390625,
+            0.966796875
+          ],
+          "joint_binding": 0.1513671875,
+          "query_prediction_change_rate": 0.52783203125,
+          "candidate_adherence": 0.83837890625,
+          "unchanged_prediction_rate": 0.47216796875,
+          "control_accuracy": 0.9697265625,
+          "control_joint_accuracy": 0.95947265625,
+          "mean_nll": 0.8074329716932749
+        }
+      }
+    },
+    "OPT03D_pad1_fire1.0_seed101": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.37109375,
+          "binding": 0.25,
+          "per_role": [
+            0.2578125,
+            0.5703125,
+            0.2421875,
+            0.4140625
+          ],
+          "joint_binding": 0.0234375,
+          "query_prediction_change_rate": 0.60546875,
+          "candidate_adherence": 0.44921875,
+          "unchanged_prediction_rate": 0.39453125,
+          "control_accuracy": 0.4921875,
+          "control_joint_accuracy": 0.4921875,
+          "mean_nll": 1.9863099319475168
+        },
+        "pair_relocate": {
+          "accuracy": 0.37109375,
+          "binding": 0.2578125,
+          "per_role": [
+            0.265625,
+            0.5390625,
+            0.25,
+            0.4296875
+          ],
+          "joint_binding": 0.078125,
+          "query_prediction_change_rate": 0.59375,
+          "candidate_adherence": 0.44140625,
+          "unchanged_prediction_rate": 0.40625,
+          "control_accuracy": 0.484375,
+          "control_joint_accuracy": 0.421875,
+          "mean_nll": 2.0079478056234734
+        },
+        "both": {
+          "accuracy": 0.34375,
+          "binding": 0.203125,
+          "per_role": [
+            0.21875,
+            0.5390625,
+            0.1875,
+            0.4296875
+          ],
+          "joint_binding": 0.03515625,
+          "query_prediction_change_rate": 0.7421875,
+          "candidate_adherence": 0.4375,
+          "unchanged_prediction_rate": 0.2578125,
+          "control_accuracy": 0.484375,
+          "control_joint_accuracy": 0.421875,
+          "mean_nll": 2.0746497638122605
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.30859375,
+          "binding": 0.21484375,
+          "per_role": [
+            0.234375,
+            0.4375,
+            0.1953125,
+            0.3671875
+          ],
+          "joint_binding": 0.02734375,
+          "query_prediction_change_rate": 0.625,
+          "candidate_adherence": 0.38671875,
+          "unchanged_prediction_rate": 0.375,
+          "control_accuracy": 0.40234375,
+          "control_joint_accuracy": 0.40234375,
+          "mean_nll": 2.020602406535289
+        },
+        "pair_relocate": {
+          "accuracy": 0.3203125,
+          "binding": 0.234375,
+          "per_role": [
+            0.28125,
+            0.453125,
+            0.1875,
+            0.359375
+          ],
+          "joint_binding": 0.0859375,
+          "query_prediction_change_rate": 0.5546875,
+          "candidate_adherence": 0.42578125,
+          "unchanged_prediction_rate": 0.4453125,
+          "control_accuracy": 0.40625,
+          "control_joint_accuracy": 0.34375,
+          "mean_nll": 2.0296523721002195
+        },
+        "both": {
+          "accuracy": 0.322265625,
+          "binding": 0.23828125,
+          "per_role": [
+            0.2578125,
+            0.453125,
+            0.21875,
+            0.359375
+          ],
+          "joint_binding": 0.0703125,
+          "query_prediction_change_rate": 0.734375,
+          "candidate_adherence": 0.421875,
+          "unchanged_prediction_rate": 0.265625,
+          "control_accuracy": 0.40625,
+          "control_joint_accuracy": 0.34375,
+          "mean_nll": 2.108924731244162
+        }
+      }
+    },
+    "OPT03D_pad0_fire0.5_seed102": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.669189453125,
+          "binding": 0.40576171875,
+          "per_role": [
+            0.390625,
+            0.8896484375,
+            0.4208984375,
+            0.9755859375
+          ],
+          "joint_binding": 0.01513671875,
+          "query_prediction_change_rate": 0.1279296875,
+          "candidate_adherence": 0.77783203125,
+          "unchanged_prediction_rate": 0.8720703125,
+          "control_accuracy": 0.9326171875,
+          "control_joint_accuracy": 0.9326171875,
+          "mean_nll": 0.8913404840406963
+        },
+        "pair_relocate": {
+          "accuracy": 0.648193359375,
+          "binding": 0.36669921875,
+          "per_role": [
+            0.357421875,
+            0.8779296875,
+            0.3759765625,
+            0.9814453125
+          ],
+          "joint_binding": 0.22216796875,
+          "query_prediction_change_rate": 0.455078125,
+          "candidate_adherence": 0.74169921875,
+          "unchanged_prediction_rate": 0.544921875,
+          "control_accuracy": 0.9296875,
+          "control_joint_accuracy": 0.90771484375,
+          "mean_nll": 0.9177265720203174
+        },
+        "both": {
+          "accuracy": 0.654296875,
+          "binding": 0.37890625,
+          "per_role": [
+            0.3623046875,
+            0.8779296875,
+            0.3955078125,
+            0.9814453125
+          ],
+          "joint_binding": 0.0888671875,
+          "query_prediction_change_rate": 0.47119140625,
+          "candidate_adherence": 0.740234375,
+          "unchanged_prediction_rate": 0.52880859375,
+          "control_accuracy": 0.9296875,
+          "control_joint_accuracy": 0.90771484375,
+          "mean_nll": 0.9374777315364078
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.648193359375,
+          "binding": 0.34033203125,
+          "per_role": [
+            0.3291015625,
+            0.9306640625,
+            0.3515625,
+            0.9814453125
+          ],
+          "joint_binding": 0.01171875,
+          "query_prediction_change_rate": 0.1181640625,
+          "candidate_adherence": 0.6533203125,
+          "unchanged_prediction_rate": 0.8818359375,
+          "control_accuracy": 0.9560546875,
+          "control_joint_accuracy": 0.9560546875,
+          "mean_nll": 0.9408855653634438
+        },
+        "pair_relocate": {
+          "accuracy": 0.6298828125,
+          "binding": 0.30419921875,
+          "per_role": [
+            0.3046875,
+            0.9384765625,
+            0.3037109375,
+            0.97265625
+          ],
+          "joint_binding": 0.18310546875,
+          "query_prediction_change_rate": 0.48193359375,
+          "candidate_adherence": 0.66943359375,
+          "unchanged_prediction_rate": 0.51806640625,
+          "control_accuracy": 0.95556640625,
+          "control_joint_accuracy": 0.935546875,
+          "mean_nll": 0.9779276783029804
+        },
+        "both": {
+          "accuracy": 0.66064453125,
+          "binding": 0.36572265625,
+          "per_role": [
+            0.3515625,
+            0.9384765625,
+            0.3798828125,
+            0.97265625
+          ],
+          "joint_binding": 0.08349609375,
+          "query_prediction_change_rate": 0.484375,
+          "candidate_adherence": 0.6611328125,
+          "unchanged_prediction_rate": 0.515625,
+          "control_accuracy": 0.95556640625,
+          "control_joint_accuracy": 0.935546875,
+          "mean_nll": 0.9262989298496127
+        }
+      }
+    },
+    "OPT03D_pad0_fire1.0_seed102": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.615234375,
+          "binding": 0.24609375,
+          "per_role": [
+            0.28125,
+            0.984375,
+            0.2109375,
+            0.984375
+          ],
+          "joint_binding": 0.01953125,
+          "query_prediction_change_rate": 0.65625,
+          "candidate_adherence": 0.44140625,
+          "unchanged_prediction_rate": 0.34375,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.984375,
+          "mean_nll": 1.05528264056997
+        },
+        "pair_relocate": {
+          "accuracy": 0.6171875,
+          "binding": 0.234375,
+          "per_role": [
+            0.2109375,
+            1.0,
+            0.2578125,
+            1.0
+          ],
+          "joint_binding": 0.1875,
+          "query_prediction_change_rate": 0.17578125,
+          "candidate_adherence": 0.45703125,
+          "unchanged_prediction_rate": 0.82421875,
+          "control_accuracy": 1.0,
+          "control_joint_accuracy": 0.984375,
+          "mean_nll": 1.0538940019246912
+        },
+        "both": {
+          "accuracy": 0.62890625,
+          "binding": 0.2578125,
+          "per_role": [
+            0.2734375,
+            1.0,
+            0.2421875,
+            1.0
+          ],
+          "joint_binding": 0.04296875,
+          "query_prediction_change_rate": 0.7265625,
+          "candidate_adherence": 0.4375,
+          "unchanged_prediction_rate": 0.2734375,
+          "control_accuracy": 1.0,
+          "control_joint_accuracy": 0.984375,
+          "mean_nll": 0.9883351125095761
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.587890625,
+          "binding": 0.19140625,
+          "per_role": [
+            0.1875,
+            0.9921875,
+            0.1953125,
+            0.9765625
+          ],
+          "joint_binding": 0.0078125,
+          "query_prediction_change_rate": 0.67578125,
+          "candidate_adherence": 0.3359375,
+          "unchanged_prediction_rate": 0.32421875,
+          "control_accuracy": 0.984375,
+          "control_joint_accuracy": 0.984375,
+          "mean_nll": 1.0846234039732654
+        },
+        "pair_relocate": {
+          "accuracy": 0.587890625,
+          "binding": 0.1796875,
+          "per_role": [
+            0.2265625,
+            0.9921875,
+            0.1328125,
+            1.0
+          ],
+          "joint_binding": 0.140625,
+          "query_prediction_change_rate": 0.171875,
+          "candidate_adherence": 0.32421875,
+          "unchanged_prediction_rate": 0.828125,
+          "control_accuracy": 0.99609375,
+          "control_joint_accuracy": 0.98046875,
+          "mean_nll": 1.093121692635135
+        },
+        "both": {
+          "accuracy": 0.595703125,
+          "binding": 0.1953125,
+          "per_role": [
+            0.2265625,
+            0.9921875,
+            0.1640625,
+            1.0
+          ],
+          "joint_binding": 0.0234375,
+          "query_prediction_change_rate": 0.71875,
+          "candidate_adherence": 0.359375,
+          "unchanged_prediction_rate": 0.28125,
+          "control_accuracy": 0.99609375,
+          "control_joint_accuracy": 0.98046875,
+          "mean_nll": 1.070646199203578
+        }
+      }
+    },
+    "OPT03D_pad1_fire0.5_seed102": {
+      "probe": {
+        "query_flip": {
+          "accuracy": 0.718994140625,
+          "binding": 0.48876953125,
+          "per_role": [
+            0.453125,
+            0.9306640625,
+            0.5244140625,
+            0.9677734375
+          ],
+          "joint_binding": 0.052734375,
+          "query_prediction_change_rate": 0.14208984375,
+          "candidate_adherence": 0.92431640625,
+          "unchanged_prediction_rate": 0.85791015625,
+          "control_accuracy": 0.94921875,
+          "control_joint_accuracy": 0.94921875,
+          "mean_nll": 0.7435456422631154
+        },
+        "pair_relocate": {
+          "accuracy": 0.7080078125,
+          "binding": 0.46826171875,
+          "per_role": [
+            0.453125,
+            0.9248046875,
+            0.4833984375,
+            0.970703125
+          ],
+          "joint_binding": 0.27978515625,
+          "query_prediction_change_rate": 0.4140625,
+          "candidate_adherence": 0.9033203125,
+          "unchanged_prediction_rate": 0.5859375,
+          "control_accuracy": 0.94775390625,
+          "control_joint_accuracy": 0.9287109375,
+          "mean_nll": 0.747243249182852
+        },
+        "both": {
+          "accuracy": 0.695068359375,
+          "binding": 0.4423828125,
+          "per_role": [
+            0.42578125,
+            0.9248046875,
+            0.458984375,
+            0.970703125
+          ],
+          "joint_binding": 0.14501953125,
+          "query_prediction_change_rate": 0.431640625,
+          "candidate_adherence": 0.9052734375,
+          "unchanged_prediction_rate": 0.568359375,
+          "control_accuracy": 0.94775390625,
+          "control_joint_accuracy": 0.9287109375,
+          "mean_nll": 0.7712596531816096
+        }
+      },
+      "validation": {
+        "query_flip": {
+          "accuracy": 0.684814453125,
+          "binding": 0.41259765625,
+          "per_role": [
+            0.4248046875,
+            0.9609375,
+            0.400390625,
+            0.953125
+          ],
+          "joint_binding": 0.02783203125,
+          "query_prediction_change_rate": 0.130859375,
+          "candidate_adherence": 0.8515625,
+          "unchanged_prediction_rate": 0.869140625,
+          "control_accuracy": 0.95703125,
+          "control_joint_accuracy": 0.95703125,
+          "mean_nll": 0.8578294119144914
+        },
+        "pair_relocate": {
+          "accuracy": 0.703857421875,
+          "binding": 0.4580078125,
+          "per_role": [
+            0.466796875,
+            0.9521484375,
+            0.44921875,
+            0.947265625
+          ],
+          "joint_binding": 0.23828125,
+          "query_prediction_change_rate": 0.4951171875,
+          "candidate_adherence": 0.8701171875,
+          "unchanged_prediction_rate": 0.5048828125,
+          "control_accuracy": 0.94970703125,
+          "control_joint_accuracy": 0.9306640625,
+          "mean_nll": 0.8226432489234
+        },
+        "both": {
+          "accuracy": 0.678955078125,
+          "binding": 0.408203125,
+          "per_role": [
+            0.4453125,
+            0.9521484375,
+            0.37109375,
+            0.947265625
+          ],
+          "joint_binding": 0.1455078125,
+          "query_prediction_change_rate": 0.50244140625,
+          "candidate_adherence": 0.8642578125,
+          "unchanged_prediction_rate": 0.49755859375,
+          "control_accuracy": 0.94970703125,
+          "control_joint_accuracy": 0.9306640625,
+          "mean_nll": 0.8698959877453533
+        }
+      }
+    }
+  },
+  "scope": "Development-only counterfactuals; no new semantic composition or training; cached originals retained",
+  "complete_scientific_task3": false
+}

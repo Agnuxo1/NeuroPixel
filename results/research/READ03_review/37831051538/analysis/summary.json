@@ -1,0 +1,325 @@
+{
+  "plan_sha256": "d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0",
+  "scientific_run_id": 37831051538,
+  "verification_run_id": 37834470656,
+  "head_fits": 36,
+  "initializations_per_condition": 3,
+  "independent_splits": 1,
+  "primary": "query_attention_minus_local_query",
+  "effects": {
+    "query_attention_minus_local_query": {
+      "values_pp": [
+        48.2177734375,
+        53.0029296875,
+        61.45477294921875
+      ],
+      "mean_pp": 54.22515869140625,
+      "t95_pp": [
+        37.5749633550254,
+        70.8753540277871
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "query_attention_minus_uniform_global": {
+      "values_pp": [
+        49.73907470703125,
+        52.83050537109375,
+        62.640380859375
+      ],
+      "mean_pp": 55.069986979166664,
+      "t95_pp": [
+        38.33707736757604,
+        71.80289659075729
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "query_attention_minus_parent": {
+      "values_pp": [
+        53.79180908203125,
+        56.201171875,
+        65.399169921875
+      ],
+      "mean_pp": 58.46405029296875,
+      "t95_pp": [
+        43.24717676477698,
+        73.68092382116052
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "local_query_minus_parent": {
+      "values_pp": [
+        5.57403564453125,
+        3.1982421875,
+        3.94439697265625
+      ],
+      "mean_pp": 4.2388916015625,
+      "t95_pp": [
+        1.2207471361509348,
+        7.257036066974065
+      ],
+      "n": 3,
+      "df": 2
+    },
+    "uniform_global_minus_parent": {
+      "values_pp": [
+        4.052734375,
+        3.37066650390625,
+        2.7587890625
+      ],
+      "mean_pp": 3.3940633138020835,
+      "t95_pp": [
+        1.7861061370033904,
+        5.002020490600777
+      ],
+      "n": 3,
+      "df": 2
+    }
+  },
+  "groups": [
+    {
+      "condition": "paired0",
+      "mode": "query_attention",
+      "validation_joint": {
+        "values_pp": [
+          99.658203125,
+          92.0654296875,
+          91.729736328125
+        ],
+        "mean_pp": 94.48445638020833,
+        "t95_pp": [
+          83.3462316224757,
+          105.62268113794096
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "paired0",
+      "mode": "uniform_global",
+      "validation_joint": {
+        "values_pp": [
+          50.1220703125,
+          4.11376953125,
+          3.74755859375
+        ],
+        "mean_pp": 19.327799479166668,
+        "t95_pp": [
+          -46.92228875315489,
+          85.57788771148823
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "paired0",
+      "mode": "local_query",
+      "validation_joint": {
+        "values_pp": [
+          57.745361328125,
+          8.984375,
+          9.552001953125
+        ],
+        "mean_pp": 25.42724609375,
+        "t95_pp": [
+          -44.10314184275494,
+          94.95763403025494
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "paired0.3",
+      "mode": "query_attention",
+      "validation_joint": {
+        "values_pp": [
+          99.761962890625,
+          99.835205078125,
+          99.67041015625
+        ],
+        "mean_pp": 99.755859375,
+        "t95_pp": [
+          99.55075200141816,
+          99.96096674858184
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": true
+    },
+    {
+      "condition": "paired0.3",
+      "mode": "uniform_global",
+      "validation_joint": {
+        "values_pp": [
+          95.379638671875,
+          92.279052734375,
+          94.20166015625
+        ],
+        "mean_pp": 93.95345052083333,
+        "t95_pp": [
+          90.06546603968813,
+          97.84143500197852
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "paired0.3",
+      "mode": "local_query",
+      "validation_joint": {
+        "values_pp": [
+          91.314697265625,
+          84.55810546875,
+          89.056396484375
+        ],
+        "mean_pp": 88.30973307291667,
+        "t95_pp": [
+          79.76523352354816,
+          96.85423262228518
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "repeated0",
+      "mode": "query_attention",
+      "validation_joint": {
+        "values_pp": [
+          90.289306640625,
+          32.879638671875,
+          79.67529296875
+        ],
+        "mean_pp": 67.61474609375,
+        "t95_pp": [
+          -8.265804604390581,
+          143.49529679189058
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "repeated0",
+      "mode": "uniform_global",
+      "validation_joint": {
+        "values_pp": [
+          3.472900390625,
+          1.312255859375,
+          1.751708984375
+        ],
+        "mean_pp": 2.178955078125,
+        "t95_pp": [
+          -0.657752482491694,
+          5.015662638741694
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "repeated0",
+      "mode": "local_query",
+      "validation_joint": {
+        "values_pp": [
+          5.2734375,
+          0.50048828125,
+          3.64990234375
+        ],
+        "mean_pp": 3.1412760416666665,
+        "t95_pp": [
+          -2.8871926894641633,
+          9.169744772797497
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "repeated0.3",
+      "mode": "query_attention",
+      "validation_joint": {
+        "values_pp": [
+          71.112060546875,
+          87.09716796875,
+          82.476806640625
+        ],
+        "mean_pp": 80.22867838541667,
+        "t95_pp": [
+          59.79349731418982,
+          100.66385945664352
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "repeated0.3",
+      "mode": "uniform_global",
+      "validation_joint": {
+        "values_pp": [
+          12.890625,
+          2.850341796875,
+          3.289794921875
+        ],
+        "mean_pp": 6.343587239583333,
+        "t95_pp": [
+          -7.7518000760368695,
+          20.438974555203536
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    },
+    {
+      "condition": "repeated0.3",
+      "mode": "local_query",
+      "validation_joint": {
+        "values_pp": [
+          13.616943359375,
+          5.82275390625,
+          5.474853515625
+        ],
+        "mean_pp": 8.304850260416666,
+        "t95_pp": [
+          -3.1313623280039984,
+          19.74106284883733
+        ],
+        "n": 3,
+        "df": 2
+      },
+      "eligible": false
+    }
+  ],
+  "eligible": [
+    {
+      "condition": "paired0.3",
+      "mode": "query_attention"
+    }
+  ],
+  "t95_critical": 4.302652729696142,
+  "independent_cdf_residual": 5.738742814287434e-13,
+  "scipy_version": "1.15.1",
+  "interpretation": "Exploratory unadjusted/untruncated paired intervals; heads on shared frozen bodies are not independent replications. Parent contrasts combine added head capacity and supervision.",
+  "H1": "not_supported_under_original_recipe",
+  "test_accessed": false,
+  "independent_external_replication": false,
+  "scientific_task3_complete": false
+}

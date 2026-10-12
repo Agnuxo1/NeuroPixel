@@ -1,0 +1,41 @@
+{
+  "status": "verified_available_endpoint_replay",
+  "checks": 161,
+  "issues": [],
+  "cases": [
+    "QTRAIN_paired_school0.3_seed200"
+  ],
+  "individual_decisions_replayed": 135168,
+  "max_mean_nll_error": 0.0,
+  "elapsed_seconds": 127.09907650300005,
+  "environment": {
+    "python": "3.12.15",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "versions": {
+      "numpy": "2.2.6",
+      "torch": "2.6.0+cpu",
+      "psutil": "6.1.1",
+      "pytest": null,
+      "scipy": "1.15.1"
+    },
+    "device": "cpu",
+    "threads": 2,
+    "cuda_runtime": null,
+    "gpu_name": null,
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "policy": "exact decisions and meanNLL1e-4; checkpoint/datahashes from actual tensors",
+  "scope": "Within-project inference replay, no training/test; not external replication",
+  "complete_scientific_task3": false,
+  "scientific_run_id": 37728384380,
+  "scientific_source_commit": "6a5af5b68aaa9173edf46658dd8f9d16845fbad6",
+  "verification_source_commit": "6d8341a59dbe99475e0b747d8340de493273c6d6",
+  "verification_workflow_run_id": "37732670363",
+  "verification_returncode": 0,
+  "independent_external_scientific_replication": false
+}

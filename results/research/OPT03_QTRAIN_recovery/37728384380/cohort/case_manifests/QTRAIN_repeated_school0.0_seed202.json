@@ -1,0 +1,82 @@
+{
+  "source_commit": "6a5af5b68aaa9173edf46658dd8f9d16845fbad6",
+  "workflow_run_id": "37728384380",
+  "case_run_id": "QTRAIN_repeated_school0.0_seed202",
+  "plan_sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5",
+  "files": {
+    "QTRAIN_repeated_school0.0_seed202/checkpoint.pt": {
+      "sha256": "ab676dab62231a7060991a7123020cca3b2eda128d94b1180c0c7dcb5db39d2f",
+      "bytes": 410389
+    },
+    "QTRAIN_repeated_school0.0_seed202/checkpoint_u1024.pt": {
+      "sha256": "080a9aa610f4e6d7d4e5905d390a1a5aad373be8d56518b4b19e6aba24dcc0ea",
+      "bytes": 390293
+    },
+    "QTRAIN_repeated_school0.0_seed202/checkpoint_u4096.pt": {
+      "sha256": "1bd9a3e0acf776b3e3b3aeee972872fc668b2419ed6c1a628053fb89bd03595c",
+      "bytes": 398741
+    },
+    "QTRAIN_repeated_school0.0_seed202/checkpoint_u8192.pt": {
+      "sha256": "ab676dab62231a7060991a7123020cca3b2eda128d94b1180c0c7dcb5db39d2f",
+      "bytes": 410389
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u1024_probe_dense.npz": {
+      "sha256": "a0d6134c58e37f9305bf5988bef34b756fc8bfa438908a79c469276ff7a8a138",
+      "bytes": 20260
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u1024_validation_dense.npz": {
+      "sha256": "5d7d253a42db72f3b640215ed4bfca323a4f3bd5cd025c9bf1860a0e0b21669b",
+      "bytes": 37008
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u4096_probe_dense.npz": {
+      "sha256": "2e90de81f56f4c2e1c9def4eb05664274d2f2dd3777100695d050d8c8ba8bf0b",
+      "bytes": 24453
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u4096_validation_dense.npz": {
+      "sha256": "d7bb8f4aabca1fb07dce86e734c29cf5893ac24e82e31f84e34bfc56282d8e84",
+      "bytes": 45501
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u8192_probe_dense.npz": {
+      "sha256": "4e95acca69987f7bb8ed5767933de762a6a97106b083656028d1a3d726dbed74",
+      "bytes": 22268
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u8192_probe_matched.npz": {
+      "sha256": "1e6aa0f38de87c14a15b8f831182ba03eb54e8d51a0d52185ea63a5b50c80eac",
+      "bytes": 129302
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u8192_validation_dense.npz": {
+      "sha256": "54ca9ca08ac912d9cba95132c860a376f55a5a2c4e2d04cec57bcf4166cfe1a4",
+      "bytes": 40782
+    },
+    "QTRAIN_repeated_school0.0_seed202/decisions/u8192_validation_matched.npz": {
+      "sha256": "2960071b56b233939a5ab8aadb5795d6b59d39d5f9e78091eb607c1b914fcc64",
+      "bytes": 267150
+    },
+    "QTRAIN_repeated_school0.0_seed202/first_batch.npz": {
+      "sha256": "77703733c8cf346e1e4f89e433d8eafeca06770b401a7e4e9e3bba26d0972829",
+      "bytes": 2685
+    },
+    "QTRAIN_repeated_school0.0_seed202/progress.json": {
+      "sha256": "9540d813f345591722dcdeabc469e7ba3ed1b4d551ec6d745b0bce36841fdcf1",
+      "bytes": 36252
+    },
+    "QTRAIN_repeated_school0.0_seed202/result.json": {
+      "sha256": "68133e17390c76fd258871b2a2d7463ddc22fcbe70bbc2a9d81dd64fb3159cc7",
+      "bytes": 51839
+    },
+    "datasets/probe_n2048_seed77001.npz": {
+      "sha256": "86135d3706a96cda3be988b7188933628325dc3f7c7da19a3f6bb78dbc39ba05",
+      "bytes": 32532
+    },
+    "datasets/validation_n4096_seed77002.npz": {
+      "sha256": "8c4bb0e33e625b5df30ef7afd76513bde2a3844f1f9594323a6e06cfa6da642c",
+      "bytes": 63760
+    },
+    "execution_plan.json": {
+      "sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5",
+      "bytes": 5138
+    }
+  },
+  "scope": "Development only, no final test; one completed case and shared datasets",
+  "case_status": "completed"
+}
