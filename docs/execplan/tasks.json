@@ -571,15 +571,15 @@
       "attempts": 1,
       "evidence": [
         {
-          "path": "docs/research/claims_ledger.json",
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger.json",
           "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9"
         },
         {
-          "path": "results/research/COMPLETION20261012/claims_audit.json",
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_audit.json",
           "sha256_lf": "2497d43c059cff4b5217b8b5b726e993508d8b12ea1728300770e141f43e06f9"
         },
         {
-          "path": "results/research/COMPLETION20261012/claims_ledger_build.json",
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger_build.json",
           "sha256_lf": "afa3dadc407937d49b5adc9d3f906c7453509dbd8278dc8ce36342287da58c0b"
         },
         {
@@ -601,7 +601,30 @@
       ],
       "commit": "5324db225181a010b0ebb01915b409e3208b2ae4",
       "closed": "2026-10-12T22:02Z",
-      "note": "182/182 candidatos P; 10 afirmaciones nuevas incl. T0 pendiente explicito; 7 discrepancias de redaccion; registro integrado 795/795, 73 afirmaciones, validador valido."
+      "note": "182/182 candidatos P; 10 afirmaciones nuevas incl. T0 pendiente explicito; 7 discrepancias de redaccion; registro integrado 795/795, 73 afirmaciones, validador valido.",
+      "superseded": [
+        {
+          "original_path": "docs/research/claims_ledger.json",
+          "snapshot": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger.json",
+          "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9",
+          "at": "2026-10-12T22:16Z",
+          "note": "Registro canonico evoluciona en A18.3 (hallazgos del verificador independiente); bytes de cierre archivados"
+        },
+        {
+          "original_path": "results/research/COMPLETION20261012/claims_audit.json",
+          "snapshot": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_audit.json",
+          "sha256_lf": "2497d43c059cff4b5217b8b5b726e993508d8b12ea1728300770e141f43e06f9",
+          "at": "2026-10-12T22:16Z",
+          "note": "Registro canonico evoluciona en A18.3 (hallazgos del verificador independiente); bytes de cierre archivados"
+        },
+        {
+          "original_path": "results/research/COMPLETION20261012/claims_ledger_build.json",
+          "snapshot": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger_build.json",
+          "sha256_lf": "afa3dadc407937d49b5adc9d3f906c7453509dbd8278dc8ce36342287da58c0b",
+          "at": "2026-10-12T22:16Z",
+          "note": "Registro canonico evoluciona en A18.3 (hallazgos del verificador independiente); bytes de cierre archivados"
+        }
+      ]
     },
     {
       "id": "A18.2",
@@ -621,15 +644,15 @@
       "attempts": 1,
       "evidence": [
         {
-          "path": "docs/research/claims_ledger.json",
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger.json",
           "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9"
         },
         {
-          "path": "results/research/COMPLETION20261012/claims_audit.json",
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_audit.json",
           "sha256_lf": "2497d43c059cff4b5217b8b5b726e993508d8b12ea1728300770e141f43e06f9"
         },
         {
-          "path": "results/research/COMPLETION20261012/claims_ledger_build.json",
+          "path": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger_build.json",
           "sha256_lf": "afa3dadc407937d49b5adc9d3f906c7453509dbd8278dc8ce36342287da58c0b"
         },
         {
@@ -663,7 +686,30 @@
       ],
       "commit": "5324db225181a010b0ebb01915b409e3208b2ae4",
       "closed": "2026-10-12T22:02Z",
-      "note": "Registro completo: 73 afirmaciones vinculadas a artefactos (L0:10, L1:33, L2:30); 795 candidatos cubiertos; exclusiones editoriales justificadas; sin timestamps ni independencia inventados."
+      "note": "Registro completo: 73 afirmaciones vinculadas a artefactos (L0:10, L1:33, L2:30); 795 candidatos cubiertos; exclusiones editoriales justificadas; sin timestamps ni independencia inventados.",
+      "superseded": [
+        {
+          "original_path": "docs/research/claims_ledger.json",
+          "snapshot": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger.json",
+          "sha256_lf": "7c659b2261d6cde1081f881991e2d24274c71f53a836ffe847353f5fa73d6bd9",
+          "at": "2026-10-12T22:16Z",
+          "note": "Registro canonico evoluciona en A18.3 (hallazgos del verificador independiente); bytes de cierre archivados"
+        },
+        {
+          "original_path": "results/research/COMPLETION20261012/claims_audit.json",
+          "snapshot": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_audit.json",
+          "sha256_lf": "2497d43c059cff4b5217b8b5b726e993508d8b12ea1728300770e141f43e06f9",
+          "at": "2026-10-12T22:16Z",
+          "note": "Registro canonico evoluciona en A18.3 (hallazgos del verificador independiente); bytes de cierre archivados"
+        },
+        {
+          "original_path": "results/research/COMPLETION20261012/claims_ledger_build.json",
+          "snapshot": "docs/archive/completion_20261012/ledger_snapshots/A18.2/claims_ledger_build.json",
+          "sha256_lf": "afa3dadc407937d49b5adc9d3f906c7453509dbd8278dc8ce36342287da58c0b",
+          "at": "2026-10-12T22:16Z",
+          "note": "Registro canonico evoluciona en A18.3 (hallazgos del verificador independiente); bytes de cierre archivados"
+        }
+      ]
     },
     {
       "id": "A18.3",
@@ -1053,5 +1099,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T22:03Z"
+  "updated": "2026-10-12T22:16Z"
 }
