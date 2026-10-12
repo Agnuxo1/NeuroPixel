@@ -15,7 +15,7 @@ command=a.command[1:] if a.command[:1]==['--'] else a.command
 root=Path(__file__).resolve().parents[2]
 out=(root/a.out).resolve()
 assert out.is_relative_to(root) and not out.exists(), str(out)
-env=dict(os.environ,PYTHONIOENCODING='utf-8',PYTHONUTF8='1',OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',MKL_NUM_THREADS='2',TEMP='D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp',TMP='D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp')
+env=dict(os.environ,PYTHONIOENCODING='utf-8',PYTHONUTF8='1',OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',MKL_NUM_THREADS='2',TEMP='D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp',TMP='D:/PROJECTS/.cognition/neuropixel-completion-20261012/tmp',PIP_CACHE_DIR='E:/Proyecto-concursos/NeuroPixel-completion-cache/pip')
 Path(env['TEMP']).mkdir(parents=True,exist_ok=True)
 started=datetime.now(timezone.utc).isoformat()
 with out.open('w',encoding='utf-8') as f:

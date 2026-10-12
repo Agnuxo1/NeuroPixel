@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:33:40+00:00
+- Actualizado (UTC): 2026-10-12T11:34:25+00:00
 - Tarea en curso o siguiente: P0.3, Materializar el kit de la guía ampliada y su entorno; intento 1; presupuesto 25 minutos.
 - Criterio de cierre: Extractor: 26 archivos autenticados; entorno en E: con versiones registradas; 38 + 25 pruebas aprobadas con salida guardada como evidencia.
-- Hecho en esta tarea: P0.1 y P0.2 cerradas; §4.3 leida; se requieren 26 archivos y 63 pruebas.
-- Falta en esta tarea: Extraer kit autenticado; preparar entorno E:; ejecutar suites 38+25.
-- Siguiente comando exacto: python docs/execplan/plan_status.py section 20
+- Hecho en esta tarea: Extractor copiado desde lineas 1029-1084; 26 archivos autenticados y recibo guardado.
+- Falta en esta tarea: Crear entorno E:, instalar versiones fijadas y ejecutar 38+25 pruebas.
+- Siguiente comando exacto: python docs/execplan/run_evidence.py --out docs/execplan/evidence/P0.3_venv.txt -- python -m venv E:/Proyecto-concursos/NeuroPixel-env-completion
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -138,6 +138,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [ ] (2026-10-12T11:33:36+00:00) P0.2, intento 1: hecho HEAD, branch, worktrees y status guardados; main remoto coincide base.; falta Commit y close con recibos.. Siguiente: `git add docs/execplan`.
 
 - [ ] (2026-10-12T11:33:40+00:00) P0.3, intento 1: hecho P0.1 y P0.2 cerradas; §4.3 leida; se requieren 26 archivos y 63 pruebas.; falta Extraer kit autenticado; preparar entorno E:; ejecutar suites 38+25.. Siguiente: `python docs/execplan/plan_status.py section 20`.
+
+- [ ] (2026-10-12T11:34:25+00:00) P0.3, intento 1: hecho Extractor copiado desde lineas 1029-1084; 26 archivos autenticados y recibo guardado.; falta Crear entorno E:, instalar versiones fijadas y ejecutar 38+25 pruebas.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/P0.3_venv.txt -- python -m venv E:/Proyecto-concursos/NeuroPixel-env-completion`.
 
 ## Sorpresas y hallazgos
 
