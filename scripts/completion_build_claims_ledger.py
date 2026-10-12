@@ -28,22 +28,16 @@ for tag in BATCHES:
         seen.add(item["id"])
         claims.append(item)
 missing = [c["id"] for c in candidates if covered[c["id"]] != 1]
-# A18.3 and later amendments are applied on top of the closed batch fragments, never inside them.
-import completion_claims_amendments_A18_3 as A183
-claims, amendment_record = A183.apply(claims)
-if amendment_record["problems"]:
-    problems += amendment_record["problems"]
-(OUT / "claims_amendments_A18.3.json").write_text(json.dumps(amendment_record, indent=2, ensure_ascii=False) + "\n",
-                                                  encoding="utf-8", newline="\n")
-import completion_claims_amendments_G3 as AG3
-claims, g3_record = AG3.apply(claims)
-(OUT / "claims_amendments_G3.json").write_text(json.dumps(g3_record, indent=2, ensure_ascii=False) + "\n",
-                                               encoding="utf-8", newline="\n")
-import completion_claims_amendments_G20 as AG20
-claims, g20_record = AG20.apply(claims)
-problems += g20_record["problems"]
-(OUT / "claims_amendments_G20.json").write_text(json.dumps(g20_record, indent=2, ensure_ascii=False) + "\n",
-                                                encoding="utf-8", newline="\n")
+# A18.3 and later amendments are applied on top of the closed batch fragments, never inside them, in this order.
+import importlib
+
+AMENDMENTS = [("completion_claims_amendments_A18_3", "A18.3"), ("completion_claims_amendments_G3", "G3"),
+              ("completion_claims_amendments_G20", "G20"), ("completion_claims_amendments_M2", "M2")]
+for module_name, tag in AMENDMENTS:
+    claims, record = importlib.import_module(module_name).apply(claims)
+    problems += record.get("problems", [])
+    (OUT / f"claims_amendments_{tag}.json").write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n",
+                                                      encoding="utf-8", newline="\n")
 if missing:
     problems.append(f"{len(missing)} candidates not classified exactly once")
 assert not problems, problems
@@ -58,6 +52,6 @@ ledger = dict(schema=1, authors=["Francisco Angulo de Lafuente"],
 summary = dict(candidates=len(candidates), classified_exactly_once=len(candidates) - len(missing), claims=len(claims),
                by_level=dict(sorted(Counter(c["declared_level"] for c in claims).items())),
                by_status=dict(sorted(Counter(c["status"] for c in claims).items())),
-               max_declared_level=max(c["declared_level"] for c in claims), amendments=["A18.3", "G3", "G20"])
+               max_declared_level=max(c["declared_level"] for c in claims), amendments=[tag for _, tag in AMENDMENTS])
 (OUT / "claims_ledger_build.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8", newline="\n")
 print(json.dumps(summary, indent=1))

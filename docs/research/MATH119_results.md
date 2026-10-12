@@ -1,0 +1,7 @@
+# MATH119: one-bit Courtade-Kumar bound, exact finite checks (13 October 2026)
+
+**Protocol.** The plan `docs/research/MATH119_plan.json` (SHA-256 `2424396c…`) was frozen and committed before the executor existed. X is uniform on n = 3–8 bits; Y = X ⊕ Z under a binary symmetric channel with p ∈ {0.1, 0.3} (DEV) and {0.02, 0.05, 0.2, 0.45} (TEST); f is a deterministic one-bit function of X. I(f(X);Y) is computed exactly by enumeration. Results: `results/research/MATH119/results.json`, CPU only, 5.7 s.
+
+**Results.** Across 27,846 evaluated cases, which cover analytic controls and every elementary cellular-automaton rule read at cell 0 after one to three steps, no case exceeded 1 − h2(p). The dictator, anti-dictator, parity of two bits, parity of all bits and constant controls matched their closed forms within 1e-12. The joint distributions summed to 1 and Y was uniform within 1e-12. The vectorized evaluator agreed with `completion_kit.dynamics.boolean_noise_information` within 1e-12 on 300 registered random cases. Selection used the DEV noise levels only and excluded single-bit functions, which attain the bound trivially. It chose rule 77 after one step, a three-bit readout, which retained 95.4%, 91.1%, 80.0% and 75.1% of the ceiling at p = 0.02, 0.05, 0.2 and 0.45.
+
+**Scope.** These are exact checks of examples under the stated Boolean/BSC assumptions; they do not prove the general theorem, which is checked formally in task M3. The bound is not applied to ten-class labels, the UCI images, spatial dropout or dependent neural states.
