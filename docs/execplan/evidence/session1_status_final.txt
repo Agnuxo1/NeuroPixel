@@ -1,0 +1,27 @@
+UTC: 2026-10-12T12:10:10.892986+00:00
+COMMAND: python docs/execplan/plan_status.py status
+
+{
+  "counts": {
+    "blocked_external": 1,
+    "blocked_resource": 1,
+    "done": 10,
+    "in_progress": 0,
+    "negative": 0,
+    "pending": 36
+  },
+  "in_progress": [],
+  "next": "A18.2.H",
+  "blocked": [
+    "G2.2: blocked_resource: Admision ejecutada rechaza RAM libre inferior a8GiB; sin importarTorch. Reabrir al disponer>=8GiB; despues preparar y ejecutar regresiones CPU y tres pruebas reales.",
+    "G1.3.ext: blocked_external: Paquete78archivos verificado en commitba9f3f84 previo aT0; propietario debe revisar y publicar esa version. Ningun push ni publicacion ejecutados."
+  ],
+  "problems": [],
+  "focus_section_lines": [
+    530,
+    615
+  ],
+  "plan_complete": false
+}
+
+EXIT_CODE: 0
