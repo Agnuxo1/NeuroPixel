@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T21:38:11+00:00
-- Tarea en curso o siguiente: A18.2.D, Revisar afirmaciones de desarrollo, scanner y vision; intento 1; presupuesto 90 minutos.
-- Criterio de cierre: Todos los candidatos A18.2.D revisados, con negative e incertidumbre conservadas; niveles sustentados por evidencia real y sin inventar apoyo prospectivo, custodia ni replicacion externa.
-- Hecho en esta tarea: A18.2.H cerrada (commit d1b09d0a): 305/305, 33 afirmaciones, validador valido; A18.2.H.ext bloqueada externamente
-- Falta en esta tarea: Leer candidatos D (234: DEV04, GLOB05, OPT03, READ03, SCN06, VIS07), localizar recibos, clasificar con el mismo metodo
-- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.D
+- Actualizado (UTC): 2026-10-12T21:53:05+00:00
+- Tarea en curso o siguiente: A18.2.G, Revisar afirmaciones graficas y energia; intento 1; presupuesto 60 minutos.
+- Criterio de cierre: Todos los candidatos A18.2.G revisados con comparadores, precisiones y coste declarado; board energy separado de pared y repeticiones tecnicas de replicas; negativos y sesiones interrumpidas conservados.
+- Hecho en esta tarea: A18.2.D cerrada (commit dd728c27): 234/234, 24 afirmaciones, validador valido
+- Falta en esta tarea: Leer 74 candidatos RENDER, localizar recibos RENDER08-11, separar energia de placa y de pared, clasificar
+- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.G
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: RAM<8GiB bloquea G2.2; algunos estudios D con dependencias ausentes (OPT03_*, READ03)
+- Dudas o riesgos abiertos: RAM<8GiB bloquea G2.2
 
 ## Propósito
 
@@ -190,12 +190,15 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [x] (2026-10-12T21:38:11+00:00) A18.2.H: done; commit d1b09d0a75d1789301bcac90a1eb611795bf36b8; 305/305 candidatos clasificados; 33 afirmaciones (12 L2, 12 L1, 9 L0); validador valido; estudio05 L0 blocked_external por archivo crudo ausente; 1 discrepancia de redondeo A06.1.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T21:38:11+00:00) A18.2.D, intento 1: hecho A18.2.H cerrada (commit d1b09d0a): 305/305, 33 afirmaciones, validador valido; A18.2.H.ext bloqueada externamente; falta Leer candidatos D (234: DEV04, GLOB05, OPT03, READ03, SCN06, VIS07), localizar recibos, clasificar con el mismo metodo. Siguiente: `python docs/execplan/plan_status.py start A18.2.D`.
+- [x] (2026-10-12T21:53:05+00:00) A18.2.D: done; commit dd728c279cbaf2d28925d7ec6f553bbbd2a4e847; 234/234 candidatos; 24 afirmaciones (14 L2, 10 L1); validador valido; 2 discrepancias (RMS VIS07 y admision ROLE) registradas.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T21:53:05+00:00) A18.2.G, intento 1: hecho A18.2.D cerrada (commit dd728c27): 234/234, 24 afirmaciones, validador valido; falta Leer 74 candidatos RENDER, localizar recibos RENDER08-11, separar energia de placa y de pared, clasificar. Siguiente: `python docs/execplan/plan_status.py start A18.2.G`.
 
 ## Sorpresas y hallazgos
 
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
 - A18.2.H (2026-10-12, Claude): los recibos de 04, A06.1 y conciliacion no estaban en el arbol publicado pero si, intactos, en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; se importaron autenticados (seleccion 04 a62300cf, original.zip 61cbc148 y closure_receipt A06.1). El archivo crudo del estudio 05 no existe en ningun sitio local ni remoto. Discrepancia: informe A06.1 linea 38 da -0,272 pero el recibo da -0,27145 (redondea a -0,271).
+- A18.2.D (2026-10-12, Claude): varias cifras resumen de los informes (medias, IC, sumas) no se guardan en recibos; se recalculan desde los recibos por semilla (VIS07, MODE, U16, QTRAIN). Dos valores no se reproducen: columna RMS de VIS07 (recibo de 128 filas da 0,543...134.843) y admision 8,6749 GiB de ROLE (ausente).
 
 ## Registro de decisiones
 
