@@ -1,0 +1,107 @@
+{
+  "repo": "Agnuxo1/NeuroPixel",
+  "run_id": 37588312570,
+  "jobs": {
+    "jobs": [
+      {
+        "id": 112683516968,
+        "name": "item6",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37588312570,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Install fixed CPU dependencies",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Environment and RAM gate",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Regression suite",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Core causal ablations",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Growth and routing panel",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Frozen analysis",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Artifact manifest",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23
+          }
+        ]
+      }
+    ]
+  },
+  "selected_log_evidence": [
+    "2026-10-07T07:36:33.9449267Z \u001b[36;1m     \"ram_available_gib\":psutil.virtual_memory().available/2**30}\u001b[0m",
+    "2026-10-07T07:36:33.9449925Z \u001b[36;1massert row[\"ram_available_gib\"] >= 8.0\u001b[0m",
+    "2026-10-07T07:36:34.0080898Z {\"python\": \"3.12.15\", \"platform\": \"Linux-6.17.0-1022-azure-x86_64-with-glibc2.39\", \"cpu_count\": 4, \"ram_total_gib\": 15.614940643310547, \"ram_available_gib\": 14.49124526977539}"
+  ]
+}

@@ -1,0 +1,2962 @@
+{
+  "schema": 1,
+  "task": "A18.2.H",
+  "candidates": 305,
+  "classified": 305,
+  "classes": {
+    "claim": 46,
+    "limit": 22,
+    "method": 25,
+    "editorial": 83,
+    "data_row": 103,
+    "provenance": 24,
+    "governance": 2
+  },
+  "claims": 33,
+  "discrepancies": [
+    {
+      "source": "docs/research/06_A06_1_results.md",
+      "line": 38,
+      "claim": "H06-04",
+      "report_text": "[-0,272; +1,590]",
+      "receipt": "results/research/06_A06_1_recovery/audit_saved.json",
+      "receipt_field": "/core_contrasts/damage interaction/t95_df1[0]",
+      "receipt_value": -0.0027145054220029576,
+      "finding": "Lower interval endpoint rounds to -0.271 pp in the receipt; no retained file supports -0.272. The ledger uses the receipt value; the report text needs an archived correction in A18.3."
+    },
+    {
+      "source": "docs/research/05_results.md",
+      "line": 5,
+      "claim": "H05-07",
+      "report_text": "both artifact checks verified",
+      "receipt": null,
+      "receipt_field": null,
+      "receipt_value": null,
+      "finding": "The verified analysis and independent recount files are not in the repository or on local disks; the statement cannot be checked against retained bytes."
+    },
+    {
+      "source": "docs/research/04_results.md",
+      "line": 59,
+      "claim": "H04-04",
+      "report_text": "separate verifier ... zero discrepancies",
+      "receipt": null,
+      "receipt_field": null,
+      "receipt_value": null,
+      "finding": "results/research/04_verification.json is missing; only the 60-file transfer manifest was re-verified."
+    }
+  ],
+  "problems": [],
+  "scope": "Semantic review of batch A18.2.H. Claims are artifact-bound; study 05 and the historical reassessment remain L0 blocked_external because their raw evidence is unavailable.",
+  "decisions": [
+    {
+      "candidate_id": "S004-L0005",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 5,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "claim",
+      "claims": [
+        "H04-01",
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0007",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 7,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "limit",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0011",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 11,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "method",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0013",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 13,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S004-L0015",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 15,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0016",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 16,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0017",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 17,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0018",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 18,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0020",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 20,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "claim",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0024",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 24,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "method",
+      "claims": [
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0026",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 26,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S004-L0028",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 28,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0029",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 29,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0030",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 30,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0031",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 31,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0033",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 33,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "claim",
+      "claims": [
+        "H04-02"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0035",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 35,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "claim",
+      "claims": [
+        "H04-03"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0039",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 39,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S004-L0041",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 41,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0042",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 42,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0043",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 43,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0044",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 44,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0045",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 45,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0046",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 46,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0047",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 47,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0048",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 48,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "data_row",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0050",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 50,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "method",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0054",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 54,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0055",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 55,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0056",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 56,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0057",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 57,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0058",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 58,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0059",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 59,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0060",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 60,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "claim",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0061",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 61,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "provenance",
+      "claims": [
+        "H04-04"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0063",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 63,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "limit",
+      "claims": [
+        "H04-04",
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0067",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 67,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "limit",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0069",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 69,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "limit",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0071",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 71,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "claim",
+      "claims": [
+        "H04-01"
+      ]
+    },
+    {
+      "candidate_id": "S004-L0075",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 75,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S004-L0076",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 76,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S004-L0077",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 77,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S004-L0078",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 78,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S004-L0079",
+      "source_path": "docs/research/04_results.md",
+      "source_line": 79,
+      "source_sha256": "272cf986ddaf209d12588b2d8c9a4aec3fd46a0f2d54f16c7a0c94961cdbb7c5",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0001",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 1,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01",
+        "H05-02",
+        "H05-03",
+        "H05-04",
+        "H05-05",
+        "H05-07",
+        "H05-08",
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0005",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 5,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-01",
+        "H05-07"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0007",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 7,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-01",
+        "H05-07"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0009",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 9,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-04",
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0011",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 11,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0013",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 13,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0014",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 14,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-06"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0015",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 15,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0016",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 16,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0022",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 22,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0024",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 24,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0026",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 26,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0028",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 28,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0030",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 30,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0031",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 31,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0032",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 32,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0033",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 33,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0035",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 35,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0037",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 37,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0041",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 41,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0043",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 43,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01",
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0044",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 44,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01",
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0046",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 46,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01",
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0050",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 50,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01",
+        "H05-07"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0052",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 52,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0056",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 56,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-06"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0058",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 58,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "provenance",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0060",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 60,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0062",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 62,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0068",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 68,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "provenance",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0070",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 70,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "provenance",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0074",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 74,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0076",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 76,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0078",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 78,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0079",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 79,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0080",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 80,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0081",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 81,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0082",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 82,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0083",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 83,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0085",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 85,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0089",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 89,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0091",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 91,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0093",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 93,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0094",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 94,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0095",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 95,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0096",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 96,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0098",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 98,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0100",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 100,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0101",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 101,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0103",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 103,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0107",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 107,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0109",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 109,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0111",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 111,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0115",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 115,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0119",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 119,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-07"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0121",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 121,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-07"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0123",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 123,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-07"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0127",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 127,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0129",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 129,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0130",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 130,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0131",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 131,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0132",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 132,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0133",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 133,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0135",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 135,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0137",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 137,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0138",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 138,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0139",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 139,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0140",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 140,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0143",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 143,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0145",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 145,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0147",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 147,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0148",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 148,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0149",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 149,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0150",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 150,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0152",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 152,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0156",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 156,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0158",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 158,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0160",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 160,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0161",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 161,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0162",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 162,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0164",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 164,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0166",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 166,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0167",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 167,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0168",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 168,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0169",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 169,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0172",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 172,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0176",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 176,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0178",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 178,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0180",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 180,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0181",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 181,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0182",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 182,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0183",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 183,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0185",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 185,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0189",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 189,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0191",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 191,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0193",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 193,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0194",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 194,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0195",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 195,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0196",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 196,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0198",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 198,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0200",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 200,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-08"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0204",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 204,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S005-L0206",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 206,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S005-L0210",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 210,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0212",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 212,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0213",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 213,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0214",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 214,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0215",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 215,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0216",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 216,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0217",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 217,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0218",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 218,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0220",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 220,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-09"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0224",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 224,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0226",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 226,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "displayed formula: method notation bound to the H1 claim protocol"
+    },
+    {
+      "candidate_id": "S005-L0227",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 227,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "displayed formula: method notation bound to the H1 claim protocol"
+    },
+    {
+      "candidate_id": "S005-L0228",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 228,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "displayed formula: method notation bound to the H1 claim protocol"
+    },
+    {
+      "candidate_id": "S005-L0230",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 230,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0232",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 232,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0234",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 234,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0235",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 235,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0236",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 236,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0237",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 237,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0238",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 238,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0240",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 240,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0242",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 242,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S005-L0244",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 244,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0245",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 245,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0246",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 246,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0247",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 247,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0248",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 248,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0249",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 249,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "data_row",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0251",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 251,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0253",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 253,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "method",
+      "claims": [
+        "H05-03"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0255",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 255,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01",
+        "H05-02"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0259",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 259,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "claim",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0261",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 261,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01",
+        "H05-04"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0263",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 263,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "limit",
+      "claims": [
+        "H05-01",
+        "H05-05"
+      ]
+    },
+    {
+      "candidate_id": "S005-L0267",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 267,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0269",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 269,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0270",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 270,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0271",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 271,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0272",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 272,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0273",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 273,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0274",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 274,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0275",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 275,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0276",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 276,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0277",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 277,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0278",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 278,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0279",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 279,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0281",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 281,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0282",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 282,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0283",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 283,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0284",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 284,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0285",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 285,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0286",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 286,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0287",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 287,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0288",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 288,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0289",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 289,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0290",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 290,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0291",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 291,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0292",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 292,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0293",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 293,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0294",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 294,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0295",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 295,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0296",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 296,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0297",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 297,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0298",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 298,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0299",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 299,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0300",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 300,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0301",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 301,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0302",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 302,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0304",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 304,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0305",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 305,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0306",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 306,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0307",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 307,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0308",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 308,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0309",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 309,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0310",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 310,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0311",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 311,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0312",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 312,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0313",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 313,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0314",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 314,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0315",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 315,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S005-L0316",
+      "source_path": "docs/research/05_results.md",
+      "source_line": 316,
+      "source_sha256": "0e37264c453804020c1b728b56ddb04865f53d49e367d29c4591db7332935fbf",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S006-L0003",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 3,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0007",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 7,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "provenance",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0008",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 8,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "provenance",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0009",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 9,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "provenance",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0010",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 10,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "provenance",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0011",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 11,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "provenance",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0012",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 12,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0013",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 13,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-08"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0014",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 14,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-08"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0015",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 15,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "provenance",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0019",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 19,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "method",
+      "claims": [
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0021",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 21,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "limit",
+      "claims": [
+        "H06-02",
+        "H06-03",
+        "H06-04",
+        "H06-05",
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0025",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 25,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "method",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0027",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 27,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S006-L0029",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 29,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0030",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 30,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0031",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 31,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0032",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 32,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-03"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0033",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 33,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-03"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0034",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 34,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-03"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0035",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 35,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-03"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0036",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 36,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-04"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0037",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 37,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-04"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0038",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 38,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-04"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0039",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 39,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-05"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0040",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 40,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-05"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0041",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 41,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0042",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 42,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0043",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 43,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0044",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 44,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0045",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 45,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "data_row",
+      "claims": [
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0047",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 47,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-08"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0051",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 51,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0052",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 52,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0053",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 53,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-02"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0054",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 54,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-03"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0055",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 55,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-04"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0056",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 56,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0060",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 60,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-05"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0062",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 62,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-07"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0064",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 64,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "limit",
+      "claims": [
+        "H06-02",
+        "H06-03",
+        "H06-04",
+        "H06-05",
+        "H06-06"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0066",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 66,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H05-01",
+        "H06-01"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0070",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 70,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S006-L0072",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 72,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "limit",
+      "claims": [
+        "H06-09"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0074",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 74,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-09"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0076",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 76,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "claim",
+      "claims": [
+        "H06-08"
+      ]
+    },
+    {
+      "candidate_id": "S006-L0078",
+      "source_path": "docs/research/06_A06_1_results.md",
+      "source_line": 78,
+      "source_sha256": "1b3db0e12237b179961d5e90b67d56efceb72eb013f123186e65c489948852e7",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S008-L0003",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 3,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "limit",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0005",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 5,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S008-L0007",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 7,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0008",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 8,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0009",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 9,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0010",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 10,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0011",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 11,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0012",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 12,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0013",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 13,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0014",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 14,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "provenance",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0016",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 16,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "claim",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0018",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 18,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "claim",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0020",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 20,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "claim",
+      "claims": [
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S008-L0022",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 22,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "governance",
+      "exclusion_reason": "project-process statement (task ordering or closure governance), not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S008-L0024",
+      "source_path": "docs/research/CONTINUATIONS_RECONCILED_20261008.md",
+      "source_line": 24,
+      "source_sha256": "9ef29089338b2f8b9b9e482638566c32c57adda07ea0443734db46a23bc6f5b1",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S024-L0003",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 3,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "claim",
+      "claims": [
+        "HT-01"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0005",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 5,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "claim",
+      "claims": [
+        "HT-01"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0007",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 7,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S024-L0009",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 9,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-07"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0010",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 10,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-08"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0011",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 11,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-09"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0012",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 12,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-10"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0013",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 13,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-11"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0014",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 14,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-12"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0015",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 15,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-13"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0016",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 16,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-14"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0017",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 17,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "data_row",
+      "claims": [
+        "HT-15"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0019",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 19,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "limit",
+      "claims": [
+        "HT-09",
+        "HT-10",
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S024-L0021",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 21,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S024-L0023",
+      "source_path": "docs/research/TASK4_historical_capabilities_audit_20261009.md",
+      "source_line": 23,
+      "source_sha256": "8b5a88df7e945355a8e56dc74c6953d3c4483718b7a4c94c2976b0ba38e51640",
+      "classification": "governance",
+      "exclusion_reason": "project-process statement (task ordering or closure governance), not a scientific or technical claim"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "Exploratory post-audit diagnostic, preserving original tolerance failure; no training",
+  "results": [
+    {
+      "run": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192",
+      "mkldnn_enabled": true,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.00022125244140625,
+      "mean_nll_difference": -4.455781104084622e-07,
+      "maximum_abs_confidence_error": 5.233287811279297e-05
+    },
+    {
+      "run": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192",
+      "mkldnn_enabled": false,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.00022125244140625,
+      "mean_nll_difference": -4.455781104084622e-07,
+      "maximum_abs_confidence_error": 5.233287811279297e-05
+    },
+    {
+      "run": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192",
+      "mkldnn_enabled": true,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.0004138946533203125,
+      "mean_nll_difference": 7.160951387419345e-09,
+      "maximum_abs_confidence_error": 3.1113624572753906e-05
+    },
+    {
+      "run": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192",
+      "mkldnn_enabled": false,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.0004138946533203125,
+      "mean_nll_difference": 7.160951387419345e-09,
+      "maximum_abs_confidence_error": 3.1113624572753906e-05
+    },
+    {
+      "run": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192",
+      "mkldnn_enabled": true,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.0003380775451660156,
+      "mean_nll_difference": -5.1507178522314234e-08,
+      "maximum_abs_confidence_error": 0.00011831521987915039
+    },
+    {
+      "run": "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192",
+      "mkldnn_enabled": false,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.0003380775451660156,
+      "mean_nll_difference": -5.1507178522314234e-08,
+      "maximum_abs_confidence_error": 0.00011831521987915039
+    },
+    {
+      "run": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192",
+      "mkldnn_enabled": true,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.000274658203125,
+      "mean_nll_difference": -1.0287755936033705e-07,
+      "maximum_abs_confidence_error": 4.494190216064453e-05
+    },
+    {
+      "run": "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192",
+      "mkldnn_enabled": false,
+      "changed_predictions": 0,
+      "maximum_abs_nll_error": 0.000274658203125,
+      "mean_nll_difference": -1.0287755936033705e-07,
+      "maximum_abs_confidence_error": 4.494190216064453e-05
+    }
+  ],
+  "cause": "Kernel/platform rounding is a plausible explanation, not an isolated causal finding",
+  "primary_decision_replay": true,
+  "original_threshold": 0.0001,
+  "original_failed_receipt": "audit_replay.json",
+  "classification": "Exact decisions with non-bit-exact continuous outputs; no retrospective relaxation of tolerance"
+}

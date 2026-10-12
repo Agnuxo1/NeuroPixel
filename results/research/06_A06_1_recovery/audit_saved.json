@@ -1,0 +1,698 @@
+{
+  "status": "verified",
+  "checks": 4362,
+  "issues": [],
+  "manifest_files": 250,
+  "archive_sha256": "61cbc1484697b4004099e865a8fde1839a847d5bc40db1320fe475f44b57bf0f",
+  "final_core_predictions": 139264,
+  "validation_predictions": 53248,
+  "growth_router_predictions": 98304,
+  "core_factorial_cells": {
+    "20": {
+      "000": 0.10546875,
+      "001": 0.1181640625,
+      "010": 0.10302734375,
+      "011": 0.130859375,
+      "100": 0.21484375,
+      "101": 0.09228515625,
+      "110": 0.13232421875,
+      "111": 0.1376953125
+    },
+    "21": {
+      "000": 0.0654296875,
+      "001": 0.0595703125,
+      "010": 0.0888671875,
+      "011": 0.0830078125,
+      "100": 0.072265625,
+      "101": 0.08935546875,
+      "110": 0.09814453125,
+      "111": 0.07861328125
+    }
+  },
+  "core_contrasts": {
+    "tying": {
+      "values": [
+        0.0299072265625,
+        0.0103759765625
+      ],
+      "mean": 0.0201416015625,
+      "sample_sd": 0.013810679320049757,
+      "t95_df1": [
+        -0.10394242906420613,
+        0.14422563218920614
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "school": {
+      "values": [
+        -0.0067138671875,
+        0.0155029296875
+      ],
+      "mean": 0.00439453125,
+      "sample_sd": 0.015709647726556596,
+      "t95_df1": [
+        -0.1367510535878782,
+        0.1455401160878782
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "reinjection": {
+      "values": [
+        -0.0191650390625,
+        -0.0035400390625
+      ],
+      "mean": -0.0113525390625,
+      "sample_sd": 0.011048543456039806,
+      "t95_df1": [
+        -0.1106197635638649,
+        0.0879146854388649
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "tying x school": {
+      "values": [
+        -0.023681640625,
+        -0.015869140625
+      ],
+      "mean": -0.019775390625,
+      "sample_sd": 0.005524271728019903,
+      "t95_df1": [
+        -0.06940900287568244,
+        0.029858221625682448
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "tying x reinjection": {
+      "values": [
+        -0.078857421875,
+        0.004638671875
+      ],
+      "mean": -0.037109375,
+      "sample_sd": 0.059040654093212706,
+      "t95_df1": [
+        -0.5675686059291686,
+        0.4933498559291686
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "school x reinjection": {
+      "values": [
+        0.071533203125,
+        -0.018310546875
+      ],
+      "mean": 0.026611328125,
+      "sample_sd": 0.06352912487222888,
+      "t95_df1": [
+        -0.5441752127578481,
+        0.5973978690078481
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "tying x school x reinjection": {
+      "values": [
+        0.11279296875,
+        -0.03662109375
+      ],
+      "mean": 0.0380859375,
+      "sample_sd": 0.10565169679838064,
+      "t95_df1": [
+        -0.9111568967943018,
+        0.9873287717943018
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "damage train effect clean": {
+      "values": [
+        0.03857421875,
+        -0.02392578125
+      ],
+      "mean": 0.00732421875,
+      "sample_sd": 0.04419417382415922,
+      "t95_df1": [
+        -0.3897446792554596,
+        0.4043931167554596
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "damage train effect lesion": {
+      "values": [
+        0.04443359375,
+        -0.0166015625
+      ],
+      "mean": 0.013916015625,
+      "sample_sd": 0.04315837287515549,
+      "t95_df1": [
+        -0.37384658008345656,
+        0.40167861133345656
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "damage interaction": {
+      "values": [
+        0.005859375,
+        0.00732421875
+      ],
+      "mean": 0.006591796875,
+      "sample_sd": 0.0010358009490037316,
+      "t95_df1": [
+        -0.0027145054220029576,
+        0.01589809917200296
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "trained T1 minus T16": {
+      "values": [
+        0.0126953125,
+        -0.009765625
+      ],
+      "mean": 0.00146484375,
+      "sample_sd": 0.01588228121805722,
+      "t95_df1": [
+        -0.14123179147071202,
+        0.14416147897071202
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "same weights evalT1 minus T16": {
+      "values": [
+        0.02099609375,
+        -0.00634765625
+      ],
+      "mean": 0.00732421875,
+      "sample_sd": 0.01933495104806966,
+      "t95_df1": [
+        -0.16639342412738856,
+        0.18104186162738856
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "trained T4 minus T16": {
+      "values": [
+        0.02392578125,
+        0.03271484375
+      ],
+      "mean": 0.0283203125,
+      "sample_sd": 0.00621480569402239,
+      "t95_df1": [
+        -0.02751750128201775,
+        0.08415812628201774
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "same weights evalT4 minus T16": {
+      "values": [
+        0.01025390625,
+        -0.00439453125
+      ],
+      "mean": 0.0029296875,
+      "sample_sd": 0.010358009490037318,
+      "t95_df1": [
+        -0.0901333354700296,
+        0.0959927104700296
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "8192 minus 1024 school0.0": {
+      "values": [
+        0.18603515625,
+        0.16015625
+      ],
+      "mean": 0.173095703125,
+      "sample_sd": 0.018299150099065926,
+      "t95_df1": [
+        0.00868436254461441,
+        0.3375070437053856
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "8192 minus 1024 school0.3": {
+      "values": [
+        0.203125,
+        0.1025390625
+      ],
+      "mean": 0.15283203125,
+      "sample_sd": 0.07112499849825625,
+      "t95_df1": [
+        -0.48620072647753654,
+        0.7918647889775365
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    }
+  },
+  "growth_binding": {
+    "20": {
+      "fixed": {
+        "legacy": 0.232421875,
+        "random": 0.08528645833333333,
+        "uniform": 0.068359375,
+        "learned": 0.24153645833333331
+      },
+      "duplicate": {
+        "legacy": 0.1640625,
+        "random": 0.08854166666666667,
+        "uniform": 0.09244791666666666,
+        "learned": 0.16666666666666669
+      },
+      "novelty": {
+        "legacy": 0.22135416666666669,
+        "random": 0.07877604166666667,
+        "uniform": 0.07552083333333334,
+        "learned": 0.232421875
+      },
+      "resonance": {
+        "legacy": 0.07877604166666666,
+        "random": 0.07877604166666666,
+        "uniform": 0.07877604166666666,
+        "learned": 0.07877604166666666
+      }
+    },
+    "21": {
+      "fixed": {
+        "legacy": 0.28059895833333337,
+        "random": 0.10416666666666667,
+        "uniform": 0.09375,
+        "learned": 0.28515625
+      },
+      "duplicate": {
+        "legacy": 0.1953125,
+        "random": 0.11197916666666667,
+        "uniform": 0.10546875,
+        "learned": 0.19856770833333331
+      },
+      "novelty": {
+        "legacy": 0.28841145833333337,
+        "random": 0.10677083333333333,
+        "uniform": 0.095703125,
+        "learned": 0.29427083333333337
+      },
+      "resonance": {
+        "legacy": 0.19010416666666669,
+        "random": 0.09505208333333334,
+        "uniform": 0.09700520833333334,
+        "learned": 0.19205729166666669
+      }
+    }
+  },
+  "growth_contrasts": {
+    "fixed legacy minus random": {
+      "values": [
+        0.14713541666666669,
+        0.17643229166666669
+      ],
+      "mean": 0.16178385416666669,
+      "sample_sd": 0.020716018980074635,
+      "t95_df1": [
+        -0.024342191773392502,
+        0.34790990010672584
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "fixed legacy minus uniform": {
+      "values": [
+        0.1640625,
+        0.18684895833333337
+      ],
+      "mean": 0.17545572916666669,
+      "sample_sd": 0.01611245920672474,
+      "t95_df1": [
+        0.030691026768842666,
+        0.3202204315644907
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "fixed legacy minus learned": {
+      "values": [
+        -0.009114583333333315,
+        -0.00455729166666663
+      ],
+      "mean": -0.006835937499999972,
+      "sample_sd": 0.0032224918413449564,
+      "t95_df1": [
+        -0.03578887797956485,
+        0.022117002979564905
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate legacy minus random": {
+      "values": [
+        0.07552083333333333,
+        0.08333333333333333
+      ],
+      "mean": 0.07942708333333333,
+      "sample_sd": 0.005524271728019903,
+      "t95_df1": [
+        0.02979347108265088,
+        0.12906069558401578
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate legacy minus uniform": {
+      "values": [
+        0.07161458333333334,
+        0.08984375
+      ],
+      "mean": 0.08072916666666667,
+      "sample_sd": 0.012889967365379767,
+      "t95_df1": [
+        -0.03508259525159231,
+        0.19654092858492567
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate legacy minus learned": {
+      "values": [
+        -0.002604166666666685,
+        -0.003255208333333315
+      ],
+      "mean": -0.0029296875,
+      "sample_sd": 0.0004603559773349657,
+      "t95_df1": [
+        -0.007065821854223301,
+        0.0012064468542233014
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty legacy minus random": {
+      "values": [
+        0.142578125,
+        0.18164062500000006
+      ],
+      "mean": 0.16210937500000003,
+      "sample_sd": 0.027621358640099552,
+      "t95_df1": [
+        -0.08605868625341254,
+        0.4102774362534126
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty legacy minus uniform": {
+      "values": [
+        0.14583333333333334,
+        0.19270833333333337
+      ],
+      "mean": 0.16927083333333337,
+      "sample_sd": 0.03314563036811943,
+      "t95_df1": [
+        -0.12853084017076144,
+        0.4670725068374282
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty legacy minus learned": {
+      "values": [
+        -0.011067708333333315,
+        -0.005859375
+      ],
+      "mean": -0.008463541666666657,
+      "sample_sd": 0.003682847818679922,
+      "t95_df1": [
+        -0.04155261650045484,
+        0.024625533167121523
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance legacy minus random": {
+      "values": [
+        0.0,
+        0.09505208333333334
+      ],
+      "mean": 0.04752604166666667,
+      "sample_sd": 0.06721197269090882,
+      "t95_df1": [
+        -0.5563495740499699,
+        0.6514016573833031
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance legacy minus uniform": {
+      "values": [
+        0.0,
+        0.09309895833333334
+      ],
+      "mean": 0.04654947916666667,
+      "sample_sd": 0.06583090475890385,
+      "t95_df1": [
+        -0.5449177334872992,
+        0.6380166918206325
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance legacy minus learned": {
+      "values": [
+        0.0,
+        -0.001953125
+      ],
+      "mean": -0.0009765625,
+      "sample_sd": 0.0013810679320049757,
+      "t95_df1": [
+        -0.013384965562670612,
+        0.011431840562670612
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty minus fixed legacy": {
+      "values": [
+        -0.011067708333333315,
+        0.0078125
+      ],
+      "mean": -0.0016276041666666574,
+      "sample_sd": 0.013350323342714751,
+      "t95_df1": [
+        -0.12157550043914912,
+        0.11832029210581581
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty minus fixed random": {
+      "values": [
+        -0.006510416666666657,
+        0.0026041666666666574
+      ],
+      "mean": -0.001953125,
+      "sample_sd": 0.006444983682689873,
+      "t95_df1": [
+        -0.0598590059591294,
+        0.0559527559591294
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty minus fixed uniform": {
+      "values": [
+        0.007161458333333343,
+        0.001953125
+      ],
+      "mean": 0.004557291666666671,
+      "sample_sd": 0.0036828478186799415,
+      "t95_df1": [
+        -0.028531783167121683,
+        0.037646366500455025
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "novelty minus fixed learned": {
+      "values": [
+        -0.009114583333333315,
+        0.00911458333333337
+      ],
+      "mean": 2.7755575615628914e-17,
+      "sample_sd": 0.012889967365379786,
+      "t95_df1": [
+        -0.11581176191825913,
+        0.11581176191825919
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance minus fixed legacy": {
+      "values": [
+        -0.15364583333333334,
+        -0.09049479166666669
+      ],
+      "mean": -0.12207031250000001,
+      "sample_sd": 0.0446545298014942,
+      "t95_df1": [
+        -0.5232753448596831,
+        0.279134719859683
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance minus fixed random": {
+      "values": [
+        -0.006510416666666671,
+        -0.009114583333333329
+      ],
+      "mean": -0.0078125,
+      "sample_sd": 0.001841423909339961,
+      "t95_df1": [
+        -0.02435703741689409,
+        0.00873203741689409
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance minus fixed uniform": {
+      "values": [
+        0.010416666666666657,
+        0.0032552083333333426
+      ],
+      "mean": 0.0068359375,
+      "sample_sd": 0.0050639157506848975,
+      "t95_df1": [
+        -0.03866154039645879,
+        0.05233341539645879
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "resonance minus fixed learned": {
+      "values": [
+        -0.16276041666666666,
+        -0.09309895833333331
+      ],
+      "mean": -0.1279296875,
+      "sample_sd": 0.049258089574844136,
+      "t95_df1": [
+        -0.5704960634019185,
+        0.3146366884019185
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate minus fixed legacy": {
+      "values": [
+        -0.068359375,
+        -0.08528645833333337
+      ],
+      "mean": -0.07682291666666669,
+      "sample_sd": 0.011969255410709815,
+      "t95_df1": [
+        -0.1843624098764789,
+        0.03071657654314551
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate minus fixed random": {
+      "values": [
+        0.0032552083333333426,
+        0.0078125
+      ],
+      "mean": 0.005533854166666671,
+      "sample_sd": 0.0032224918413449365,
+      "t95_df1": [
+        -0.02341908631289803,
+        0.034486794646231375
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate minus fixed uniform": {
+      "values": [
+        0.024088541666666657,
+        0.01171875
+      ],
+      "mean": 0.01790364583333333,
+      "sample_sd": 0.00874676356936484,
+      "t95_df1": [
+        -0.060682906896913816,
+        0.09649019856358047
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    },
+    "duplicate minus fixed learned": {
+      "values": [
+        -0.07486979166666663,
+        -0.08658854166666669
+      ],
+      "mean": -0.08072916666666666,
+      "sample_sd": 0.008286407592029893,
+      "t95_df1": [
+        -0.1551795850426907,
+        -0.006278748290642636
+      ],
+      "unit": "fraction; multiply by 100 for percentage points",
+      "n_independent_initializations": 2,
+      "inference": "exploratory, unadjusted, normality not assessable at n=2"
+    }
+  },
+  "budget_limited_trainings": 26,
+  "minimum_recorded_training_ram_gib": 14.275474548339844,
+  "limits": [
+    "Independent arithmetic and archive checks, not external replication.",
+    "Checkpoint finite tensor/state audit and inference replay are separate.",
+    "Single-final-expert predictions and per-example oracle indicators absent from archive; replay needed for independent recount.",
+    "Example bootstrap intervals remain distinct from two-initialization uncertainty."
+  ]
+}

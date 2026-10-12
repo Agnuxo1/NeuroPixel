@@ -1,0 +1,227 @@
+{
+  "status": "issues_found",
+  "issues": [
+    "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i20_u8192__clean nll maxerr=0.00022125244140625",
+    "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i20_u8192__clean nll maxerr=0.0004138946533203125",
+    "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192__clean confidence maxerr=0.00011831521987915039",
+    "optimization_tie1_school0p0_reinj1_T16_damage0_s0_i21_u8192__clean nll maxerr=0.0003380775451660156",
+    "optimization_tie1_school0p3_reinj1_T16_damage0_s0_i21_u8192__clean nll maxerr=0.000274658203125"
+  ],
+  "core_cases": 34,
+  "growth_banks": 8,
+  "core_saved_predictions_equal": true,
+  "finite_checkpoint_files": 44,
+  "finite_checkpoint_tensors": 448,
+  "maximum_absolute_numeric_replay_error": {
+    "confidence": 0.00011831521987915039,
+    "nll": 0.0004138946533203125
+  },
+  "numeric_tolerance": 0.0001,
+  "elapsed_seconds": 323.8957856000052,
+  "derived": {
+    "20": {
+      "fixed": {
+        "oracle": {
+          "correct": 1514,
+          "n": 3072,
+          "accuracy": 0.4928385416666667,
+          "binding_accuracy": 0.24544270833333334
+        },
+        "checkpoint_states": [
+          "37a1c09a95bebcc448bbd023a6fe3293abee26d5445fffe773c5c5c1a729b85d",
+          "9777ab4419d97f08d0b0b08b9bee63ef6732f660ada6bdc0177abb8be38bdf10",
+          "f5f6ef7b297b29527e11fbc7814c90c935fff4a18c801555c9010f5ac814da97"
+        ]
+      },
+      "duplicate": {
+        "oracle": {
+          "correct": 798,
+          "n": 3072,
+          "accuracy": 0.259765625,
+          "binding_accuracy": 0.16666666666666666
+        },
+        "checkpoint_states": [
+          "37a1c09a95bebcc448bbd023a6fe3293abee26d5445fffe773c5c5c1a729b85d",
+          "9777ab4419d97f08d0b0b08b9bee63ef6732f660ada6bdc0177abb8be38bdf10",
+          "9777ab4419d97f08d0b0b08b9bee63ef6732f660ada6bdc0177abb8be38bdf10"
+        ]
+      },
+      "novelty": {
+        "oracle": {
+          "correct": 1142,
+          "n": 3072,
+          "accuracy": 0.3717447916666667,
+          "binding_accuracy": 0.232421875
+        },
+        "checkpoint_states": [
+          "37a1c09a95bebcc448bbd023a6fe3293abee26d5445fffe773c5c5c1a729b85d",
+          "9777ab4419d97f08d0b0b08b9bee63ef6732f660ada6bdc0177abb8be38bdf10",
+          "945f9d485164dc26fb1f22fd5b5d8b56e18680bf5b734a72e494d2c267e17c4a"
+        ]
+      },
+      "resonance": {
+        "oracle": {
+          "correct": 1118,
+          "n": 3072,
+          "accuracy": 0.3639322916666667,
+          "binding_accuracy": 0.07877604166666667
+        },
+        "checkpoint_states": [
+          "f5f6ef7b297b29527e11fbc7814c90c935fff4a18c801555c9010f5ac814da97"
+        ]
+      },
+      "single_final_expert": {
+        "correct": 1118,
+        "n": 3072,
+        "accuracy": 0.3639322916666667,
+        "macro_all_roles": 0.36393229166666663,
+        "macro_agent_patient_accuracy": 0.07877604166666666,
+        "per_role": {
+          "AGENTE": {
+            "correct": 82,
+            "n": 768,
+            "accuracy": 0.10677083333333333,
+            "wilson_95": [
+              0.08685349248654209,
+              0.13060238125874896
+            ]
+          },
+          "ACCION": {
+            "correct": 497,
+            "n": 768,
+            "accuracy": 0.6471354166666666,
+            "wilson_95": [
+              0.612683081870697,
+              0.6801231640458001
+            ]
+          },
+          "PACIENTE": {
+            "correct": 39,
+            "n": 768,
+            "accuracy": 0.05078125,
+            "wilson_95": [
+              0.037367643437408976,
+              0.06866638451664869
+            ]
+          },
+          "LUGAR": {
+            "correct": 500,
+            "n": 768,
+            "accuracy": 0.6510416666666666,
+            "wilson_95": [
+              0.6166555289820551,
+              0.6839243340826674
+            ]
+          }
+        },
+        "cross_entropy": 7.283962706169237
+      }
+    },
+    "21": {
+      "fixed": {
+        "oracle": {
+          "correct": 1551,
+          "n": 3072,
+          "accuracy": 0.5048828125,
+          "binding_accuracy": 0.28515625
+        },
+        "checkpoint_states": [
+          "64aa6e9b2be5af2ca12762e32370e38826541a63712c4b994ce1e8469c979cf1",
+          "eb9af6386e4b07716e6cc80069f046eed64971dcd5edb41b17f04c0be2a52460",
+          "a34e87dc11ce0bc4f1e53304033f8690e438639c1b25f6c478de9fb1f5efe981"
+        ]
+      },
+      "duplicate": {
+        "oracle": {
+          "correct": 1102,
+          "n": 3072,
+          "accuracy": 0.3587239583333333,
+          "binding_accuracy": 0.19856770833333334
+        },
+        "checkpoint_states": [
+          "64aa6e9b2be5af2ca12762e32370e38826541a63712c4b994ce1e8469c979cf1",
+          "eb9af6386e4b07716e6cc80069f046eed64971dcd5edb41b17f04c0be2a52460",
+          "eb9af6386e4b07716e6cc80069f046eed64971dcd5edb41b17f04c0be2a52460"
+        ]
+      },
+      "novelty": {
+        "oracle": {
+          "correct": 1459,
+          "n": 3072,
+          "accuracy": 0.4749348958333333,
+          "binding_accuracy": 0.2942708333333333
+        },
+        "checkpoint_states": [
+          "64aa6e9b2be5af2ca12762e32370e38826541a63712c4b994ce1e8469c979cf1",
+          "eb9af6386e4b07716e6cc80069f046eed64971dcd5edb41b17f04c0be2a52460",
+          "e07102326e3245d2b55f5f709e286755312b7e3121830dd36a1bc9964f74dc45"
+        ]
+      },
+      "resonance": {
+        "oracle": {
+          "correct": 1336,
+          "n": 3072,
+          "accuracy": 0.4348958333333333,
+          "binding_accuracy": 0.19205729166666666
+        },
+        "checkpoint_states": [
+          "eb9af6386e4b07716e6cc80069f046eed64971dcd5edb41b17f04c0be2a52460",
+          "a34e87dc11ce0bc4f1e53304033f8690e438639c1b25f6c478de9fb1f5efe981"
+        ]
+      },
+      "single_final_expert": {
+        "correct": 997,
+        "n": 3072,
+        "accuracy": 0.3245442708333333,
+        "macro_all_roles": 0.3245442708333333,
+        "macro_agent_patient_accuracy": 0.08658854166666667,
+        "per_role": {
+          "AGENTE": {
+            "correct": 92,
+            "n": 768,
+            "accuracy": 0.11979166666666667,
+            "wilson_95": [
+              0.0986977895259683,
+              0.14467014138007472
+            ]
+          },
+          "ACCION": {
+            "correct": 277,
+            "n": 768,
+            "accuracy": 0.3606770833333333,
+            "wilson_95": [
+              0.3274865149018026,
+              0.39525447347815157
+            ]
+          },
+          "PACIENTE": {
+            "correct": 41,
+            "n": 768,
+            "accuracy": 0.053385416666666664,
+            "wilson_95": [
+              0.03959398032336786,
+              0.07162245906284019
+            ]
+          },
+          "LUGAR": {
+            "correct": 587,
+            "n": 768,
+            "accuracy": 0.7643229166666666,
+            "wilson_95": [
+              0.7330364700800184,
+              0.7929782902832462
+            ]
+          }
+        },
+        "cross_entropy": 6.245860325935773
+      }
+    }
+  },
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "numpy": "2.2.6",
+    "device": "cpu",
+    "threads": 2
+  },
+  "scope": "CPU inference replay, no training; same frozen implementation, not external architectural replication"
+}

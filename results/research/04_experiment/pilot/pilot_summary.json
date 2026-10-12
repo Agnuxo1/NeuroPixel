@@ -1,0 +1,765 @@
+{
+  "environment": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda_runtime": "12.4",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_tf32": false,
+    "deterministic_algorithms": true,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 3090",
+    "matmul_tf32": false,
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.13.7",
+    "threads": 4,
+    "versions": {
+      "numpy": "2.2.6",
+      "psutil": "6.1.1",
+      "pytest": "9.1.1",
+      "scipy": "1.15.1",
+      "torch": "2.6.0+cu124"
+    }
+  },
+  "events": [
+    {
+      "at_utc": "2026-10-06T22:25:59.534312+00:00",
+      "event": "pilot_started"
+    },
+    {
+      "at_utc": "2026-10-06T22:26:28.161975+00:00",
+      "event": "training_completed",
+      "run": "neuropixel_s0_i7_lr0.001"
+    },
+    {
+      "at_utc": "2026-10-06T22:26:54.190284+00:00",
+      "event": "training_completed",
+      "run": "neuropixel_s0_i7_lr0.003"
+    },
+    {
+      "at_utc": "2026-10-06T22:27:19.808609+00:00",
+      "event": "training_completed",
+      "run": "standard_nca_s0_i7_lr0.001"
+    },
+    {
+      "at_utc": "2026-10-06T22:27:45.421312+00:00",
+      "event": "training_completed",
+      "run": "standard_nca_s0_i7_lr0.003"
+    },
+    {
+      "at_utc": "2026-10-06T22:28:10.708789+00:00",
+      "event": "training_completed",
+      "run": "convgru_s0_i7_lr0.001"
+    },
+    {
+      "at_utc": "2026-10-06T22:28:34.721036+00:00",
+      "event": "training_completed",
+      "run": "convgru_s0_i7_lr0.003"
+    },
+    {
+      "at_utc": "2026-10-06T22:28:46.712198+00:00",
+      "event": "training_completed",
+      "run": "relative_transformer_s0_i7_lr0.001"
+    },
+    {
+      "at_utc": "2026-10-06T22:28:58.408761+00:00",
+      "event": "training_completed",
+      "run": "relative_transformer_s0_i7_lr0.003"
+    },
+    {
+      "at_utc": "2026-10-06T22:28:58.539148+00:00",
+      "event": "selection_frozen",
+      "sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b"
+    },
+    {
+      "at_utc": "2026-10-06T22:28:58.653985+00:00",
+      "dataset_sha256": "23bca94c224b195da94ab1794801fdae131007a77bd594c2167a085227e7dba2",
+      "event": "final_evaluation_opened"
+    },
+    {
+      "at_utc": "2026-10-06T22:29:00.201754+00:00",
+      "event": "pilot_completed"
+    }
+  ],
+  "final_dataset": {
+    "bytes": 63862,
+    "content_sha256": "23bca94c224b195da94ab1794801fdae131007a77bd594c2167a085227e7dba2",
+    "n": 4096,
+    "path": "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\runs\\item4_pilot_retry1\\datasets\\split0_test_n4096_seed61002.npz",
+    "sampling_seed": 61002,
+    "sha256": "95d6a017f12f3451a168488e2ee59747c6e893c5b7c8a5f18c06cd8e76ab727a",
+    "split": "test",
+    "split_seed": 0
+  },
+  "inference_latency_seconds": null,
+  "item": 4,
+  "limitations": [
+    "A two-rate, 1024-update pilot is not exhaustive architecture optimization.",
+    "Equal examples/updates do not equalize FLOPs or elapsed time.",
+    "One initialization does not decide H1; item5 replication is still required.",
+    "All primary runs use answer supervision only; school is evaluated separately.",
+    "These tasks have exact elementary solutions demonstrated in item3."
+  ],
+  "physical_energy_joules": null,
+  "protocol_id": "NP-SCI-20261006-v1",
+  "results": {
+    "convgru": {
+      "config": {
+        "batch_size": 64,
+        "family": "convgru",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.003,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "evaluated_at_utc": "2026-10-06T22:28:59.788251+00:00",
+      "family": "convgru",
+      "metrics": {
+        "accuracy": 0.13623046875,
+        "binding_interval_95": [
+          0.1220703125,
+          0.150390625
+        ],
+        "correct": 558,
+        "cross_entropy": 2.138793611811707,
+        "interval_scope": "stratified example bootstrap conditional on this checkpoint; not training-run uncertainty",
+        "macro_agent_patient_accuracy": 0.1357421875,
+        "macro_all_roles": 0.13623046875,
+        "macro_all_roles_interval_95": [
+          0.126214599609375,
+          0.146728515625
+        ],
+        "n": 4096,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 0.1083984375,
+            "correct": 111,
+            "n": 1024,
+            "wilson_95": [
+              0.09080012521608274,
+              0.12892389630744674
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.177734375,
+            "correct": 182,
+            "n": 1024,
+            "wilson_95": [
+              0.15553682295334068,
+              0.202340800744327
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 0.1650390625,
+            "correct": 169,
+            "n": 1024,
+            "wilson_95": [
+              0.14356242149676485,
+              0.18901947222535642
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.09375,
+            "correct": 96,
+            "n": 1024,
+            "wilson_95": [
+              0.07738428706913725,
+              0.11315235371337715
+            ]
+          }
+        }
+      },
+      "optimization_budget_limited": true,
+      "parameter_count": 27835,
+      "predictions": {
+        "bytes": 34073,
+        "path": "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\runs\\item4_pilot_retry1\\convgru_s0_i7_lr0.003\\final_predictions.npz",
+        "sha256": "ac8a0b1a82e74b06f4a1dcc08a76ed3f1d37bfb158bc8576bbc435916fb253ef"
+      },
+      "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+      "training_seconds": 23.611624099954497,
+      "weights_sha256": "55d7929ef70c0dda26cae83869071f6725b4f91948ee880f8a2b8fbfc376e66c"
+    },
+    "neuropixel": {
+      "config": {
+        "batch_size": 64,
+        "family": "neuropixel",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.003,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "evaluated_at_utc": "2026-10-06T22:28:59.002969+00:00",
+      "family": "neuropixel",
+      "metrics": {
+        "accuracy": 0.188720703125,
+        "binding_interval_95": [
+          0.0810546875,
+          0.10595703125
+        ],
+        "correct": 773,
+        "cross_entropy": 2.401638275030109,
+        "interval_scope": "stratified example bootstrap conditional on this checkpoint; not training-run uncertainty",
+        "macro_agent_patient_accuracy": 0.09326171875,
+        "macro_all_roles": 0.188720703125,
+        "macro_all_roles_interval_95": [
+          0.176995849609375,
+          0.199951171875
+        ],
+        "n": 4096,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 0.30859375,
+            "correct": 316,
+            "n": 1024,
+            "wilson_95": [
+              0.28106131786115374,
+              0.33755690712291564
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.087890625,
+            "correct": 90,
+            "n": 1024,
+            "wilson_95": [
+              0.07205314313781386,
+              0.10680854534829448
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 0.259765625,
+            "correct": 266,
+            "n": 1024,
+            "wilson_95": [
+              0.2338406888458096,
+              0.28748626700154273
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.0986328125,
+            "correct": 101,
+            "n": 1024,
+            "wilson_95": [
+              0.08184294655950852,
+              0.11842282113667757
+            ]
+          }
+        }
+      },
+      "optimization_budget_limited": true,
+      "parameter_count": 29824,
+      "predictions": {
+        "bytes": 36195,
+        "path": "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\runs\\item4_pilot_retry1\\neuropixel_s0_i7_lr0.003\\final_predictions.npz",
+        "sha256": "8ed88e2a50c1ed39ebff39f61645c5c16a99a9c4e4e38793e35412e800d66790"
+      },
+      "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+      "training_seconds": 25.460184700030368,
+      "weights_sha256": "7b52ed036ee889324a89a57611ea8b2ae9b40671bac6920eb46742a46f1ed86d"
+    },
+    "relative_transformer": {
+      "config": {
+        "batch_size": 64,
+        "family": "relative_transformer",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.001,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "evaluated_at_utc": "2026-10-06T22:29:00.091062+00:00",
+      "family": "relative_transformer",
+      "metrics": {
+        "accuracy": 0.741943359375,
+        "binding_interval_95": [
+          0.46240234375,
+          0.505859375
+        ],
+        "correct": 3039,
+        "cross_entropy": 0.42239813062190024,
+        "interval_scope": "stratified example bootstrap conditional on this checkpoint; not training-run uncertainty",
+        "macro_agent_patient_accuracy": 0.48388671875,
+        "macro_all_roles": 0.741943359375,
+        "macro_all_roles_interval_95": [
+          0.731201171875,
+          0.7529296875
+        ],
+        "n": 4096,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 1.0,
+            "correct": 1024,
+            "n": 1024,
+            "wilson_95": [
+              0.9962625959599825,
+              1.0
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.5390625,
+            "correct": 552,
+            "n": 1024,
+            "wilson_95": [
+              0.5084424285417667,
+              0.5693905867676069
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 1.0,
+            "correct": 1024,
+            "n": 1024,
+            "wilson_95": [
+              0.9962625959599825,
+              1.0
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.4287109375,
+            "correct": 439,
+            "n": 1024,
+            "wilson_95": [
+              0.3987213324250938,
+              0.45923341463529943
+            ]
+          }
+        }
+      },
+      "optimization_budget_limited": true,
+      "parameter_count": 29547,
+      "predictions": {
+        "bytes": 35885,
+        "path": "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\runs\\item4_pilot_retry1\\relative_transformer_s0_i7_lr0.001\\final_predictions.npz",
+        "sha256": "2dbd3a3126a126a263769052e9bbf68af613d1c6be744c5f1f10931c253612fd"
+      },
+      "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+      "training_seconds": 11.518258000025526,
+      "weights_sha256": "41c66b52739a55c43b3df15944f3a983c722fc837879399090e93a68f4e14cf9"
+    },
+    "standard_nca": {
+      "config": {
+        "batch_size": 64,
+        "family": "standard_nca",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.001,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "evaluated_at_utc": "2026-10-06T22:28:59.409915+00:00",
+      "family": "standard_nca",
+      "metrics": {
+        "accuracy": 0.14990234375,
+        "binding_interval_95": [
+          0.10546875,
+          0.13330078125
+        ],
+        "correct": 614,
+        "cross_entropy": 2.6937439959274503,
+        "interval_scope": "stratified example bootstrap conditional on this checkpoint; not training-run uncertainty",
+        "macro_agent_patient_accuracy": 0.119140625,
+        "macro_all_roles": 0.14990234375,
+        "macro_all_roles_interval_95": [
+          0.139154052734375,
+          0.160888671875
+        ],
+        "n": 4096,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 0.185546875,
+            "correct": 190,
+            "n": 1024,
+            "wilson_95": [
+              0.16292768516401615,
+              0.21051654159552627
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.12109375,
+            "correct": 124,
+            "n": 1024,
+            "wilson_95": [
+              0.10251543840168892,
+              0.142504313097387
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 0.17578125,
+            "correct": 180,
+            "n": 1024,
+            "wilson_95": [
+              0.15369166390922512,
+              0.2002943090229739
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.1171875,
+            "correct": 120,
+            "n": 1024,
+            "wilson_95": [
+              0.09890278494281118,
+              0.13833366502532737
+            ]
+          }
+        }
+      },
+      "optimization_budget_limited": true,
+      "parameter_count": 30384,
+      "predictions": {
+        "bytes": 35538,
+        "path": "D:\\PROJECTS\\NeuroPixel-Validation-20261006\\runs\\item4_pilot_retry1\\standard_nca_s0_i7_lr0.001\\final_predictions.npz",
+        "sha256": "3399e89d155a9b7795018954c189cebf352b1f8b91bab399dc0c1e59717bae67"
+      },
+      "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+      "training_seconds": 25.0796607999946,
+      "weights_sha256": "382e427e0a5092480b30ccc6c3888872875c9f0a98257ef7b67a7605d7d095d9"
+    }
+  },
+  "schema_version": 1,
+  "selection": {
+    "frozen_at_utc": "2026-10-06T22:28:58.528405+00:00",
+    "primary_reference_family": "relative_transformer",
+    "selected_configs": {
+      "convgru": {
+        "batch_size": 64,
+        "family": "convgru",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.003,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "neuropixel": {
+        "batch_size": 64,
+        "family": "neuropixel",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.003,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "relative_transformer": {
+        "batch_size": 64,
+        "family": "relative_transformer",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.001,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      },
+      "standard_nca": {
+        "batch_size": 64,
+        "family": "standard_nca",
+        "gradient_clip": 1.0,
+        "height": 8,
+        "init_seed": 7,
+        "learning_rate": 0.001,
+        "phase": "item4_pilot",
+        "protocol_id": "NP-SCI-20261006-v1",
+        "school_weight": 0.0,
+        "split_seed": 0,
+        "steps": 16,
+        "train_sample_seed": 9002,
+        "update_random_seed": 9001,
+        "updates": 1024,
+        "variant": {},
+        "vocab": 35,
+        "weight_decay": 0.0001,
+        "width": 8
+      }
+    },
+    "selected_validation": {
+      "convgru": {
+        "accuracy": 0.126953125,
+        "correct": 260,
+        "cross_entropy": 2.134307033062214,
+        "macro_agent_patient_accuracy": 0.123046875,
+        "macro_all_roles": 0.126953125,
+        "n": 2048,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 0.103515625,
+            "correct": 53,
+            "n": 512,
+            "wilson_95": [
+              0.08001453353690521,
+              0.13292193549334946
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.125,
+            "correct": 64,
+            "n": 512,
+            "wilson_95": [
+              0.0991166386113686,
+              0.15646859318079348
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 0.158203125,
+            "correct": 81,
+            "n": 512,
+            "wilson_95": [
+              0.12915371515338725,
+              0.19234324090717714
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.12109375,
+            "correct": 62,
+            "n": 512,
+            "wilson_95": [
+              0.0956215685151347,
+              0.15220934277486237
+            ]
+          }
+        }
+      },
+      "neuropixel": {
+        "accuracy": 0.18896484375,
+        "correct": 387,
+        "cross_entropy": 2.4594267441189004,
+        "macro_agent_patient_accuracy": 0.0927734375,
+        "macro_all_roles": 0.18896484375,
+        "n": 2048,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 0.32421875,
+            "correct": 166,
+            "n": 512,
+            "wilson_95": [
+              0.28511302588086085,
+              0.36594255152171506
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.08984375,
+            "correct": 46,
+            "n": 512,
+            "wilson_95": [
+              0.0680328867914439,
+              0.11776346048123335
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 0.24609375,
+            "correct": 126,
+            "n": 512,
+            "wilson_95": [
+              0.21076597685786014,
+              0.28520319050141624
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.095703125,
+            "correct": 49,
+            "n": 512,
+            "wilson_95": [
+              0.07314916891397412,
+              0.12427865911195062
+            ]
+          }
+        }
+      },
+      "relative_transformer": {
+        "accuracy": 0.73974609375,
+        "correct": 1515,
+        "cross_entropy": 0.43386730962083675,
+        "macro_agent_patient_accuracy": 0.4794921875,
+        "macro_all_roles": 0.73974609375,
+        "n": 2048,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 1.0,
+            "correct": 512,
+            "n": 512,
+            "wilson_95": [
+              0.9925530242771171,
+              0.9999999999999999
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.474609375,
+            "correct": 243,
+            "n": 512,
+            "wilson_95": [
+              0.43170578221120814,
+              0.5178911345247195
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 1.0,
+            "correct": 512,
+            "n": 512,
+            "wilson_95": [
+              0.9925530242771171,
+              0.9999999999999999
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.484375,
+            "correct": 248,
+            "n": 512,
+            "wilson_95": [
+              0.4413643447142569,
+              0.5276183732770832
+            ]
+          }
+        }
+      },
+      "standard_nca": {
+        "accuracy": 0.1259765625,
+        "correct": 258,
+        "cross_entropy": 2.676159874261728,
+        "macro_agent_patient_accuracy": 0.0986328125,
+        "macro_all_roles": 0.1259765625,
+        "n": 2048,
+        "per_role": {
+          "ACCION": {
+            "accuracy": 0.1328125,
+            "correct": 68,
+            "n": 512,
+            "wilson_95": [
+              0.10613316057541458,
+              0.16496071222107742
+            ]
+          },
+          "AGENTE": {
+            "accuracy": 0.091796875,
+            "correct": 47,
+            "n": 512,
+            "wilson_95": [
+              0.06973502506867789,
+              0.11993848245508186
+            ]
+          },
+          "LUGAR": {
+            "accuracy": 0.173828125,
+            "correct": 89,
+            "n": 512,
+            "wilson_95": [
+              0.1434642173010417,
+              0.20905002076818258
+            ]
+          },
+          "PACIENTE": {
+            "accuracy": 0.10546875,
+            "correct": 54,
+            "n": 512,
+            "wilson_95": [
+              0.0817381468957351,
+              0.13507548238560207
+            ]
+          }
+        }
+      }
+    },
+    "selection_inputs": "validation only; no final test metrics",
+    "source": {
+      "git_commit": "5ab415ec825e931b69fc22571c47cdb74a4fc592",
+      "sha256": {
+        "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+        "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+        "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+        "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+        "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+        "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+        "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73",
+        "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+      }
+    }
+  },
+  "selection_sha256": "a62300cfccc8d01f9d2777042c20a2620ba0ebfbd24d1b2b0fe4a7ea3463673b",
+  "source": {
+    "git_commit": "5ab415ec825e931b69fc22571c47cdb74a4fc592",
+    "sha256": {
+      "docs/research/protocol.json": "41eea054d2be595469a8ffaa32ae4290ac26ebb1c27a20c9a3586dd4c0630290",
+      "neuropixel/model.py": "564045fff799185e15b921873225d344014a4d4bcae6df6deacaf42f6e4bd701",
+      "neuropixel/research/data.py": "44cdf2b9ff492fe9eab115c8092c61c6d38bda5388babaf148380b89f2a7f94b",
+      "neuropixel/research/experiment.py": "0a95e445e0654eb3666b3efc12a7bc594a237142dc8a7a2dc9527fac274f41ad",
+      "neuropixel/research/models.py": "646810a33a8ee97a8e66cafb61b418b3fee544394ef71123229e6ab0342c54ee",
+      "neuropixel/task.py": "e088d35937040f9924264b227e70e0ba9aaf23ede1b1c6bc9f8d6c78821a156f",
+      "scripts/research_queue_worker.py": "73759c106c56775462c19c1cba9dfd82b0acac3c38467edf2e4c0af868c7be73",
+      "scripts/research_train.py": "e3a8955a8561cf913a99310c4af3916d738b7f2a8290dc756c47df3d6872c92a"
+    }
+  },
+  "status": "completed",
+  "total_training_seconds": 173.4615162999835
+}
