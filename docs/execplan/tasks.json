@@ -94,9 +94,42 @@
         "P0.2"
       ],
       "acceptance": "Extractor: 26 archivos autenticados; entorno en E: con versiones registradas; 38 + 25 pruebas aprobadas con salida guardada como evidencia.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:34Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/execplan/evidence/P0.3_extract.txt",
+          "sha256_lf": "2e179f8ca08987b897dfc5ea691751c847979b08c5b2396aa4ab2184957d990f"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_environment.txt",
+          "sha256_lf": "a39ecb8063b29b2da573daa77c4278691551d3c190df759844700c0bf9355e1b"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_validation.json",
+          "sha256_lf": "67fd962e81ade5b79190c2429d9cb2aca414e3e9ddb5cc912ba373bc61f686ab"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_contracts.txt",
+          "sha256_lf": "aa5e25615b249d87339be32a4dfbdb434c488ec64add0a961f33a8ed83814f89"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_extensions.txt",
+          "sha256_lf": "b859b70cef8dea1376374aedff6f17f8de095cef61c72b68d449f419233c44ed"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_install.txt",
+          "sha256_lf": "6094063d2e0daba743d145f7d10bd21f804fcee48099751a816edf3f92dacb5e"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.3_venv.txt",
+          "sha256_lf": "80484224474485da7dc531facb55abb68238aef85a6043c17e101ae8b03b72ac"
+        }
+      ],
+      "commit": "2a6199cb8558bb5dd6eabaee07b90eae95ff2533",
+      "closed": "2026-10-12T11:38Z",
+      "note": "26 archivos autenticados; entorno E:; 38+25 pruebas aprobadas."
     },
     {
       "id": "P0.4",
@@ -494,5 +527,5 @@
       "status": "pending"
     }
   ],
-  "updated": "2026-10-12T11:34Z"
+  "updated": "2026-10-12T11:38Z"
 }
