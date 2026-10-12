@@ -3027,6 +3027,33 @@
           "line": 7
         }
       ]
+    },
+    {
+      "id": "MATH119-01",
+      "study": "MATH119",
+      "review_batch": "M2",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "statement": "In exact finite enumeration over 3-8 uniform bits and BSC noise p in {0.02, 0.05, 0.1, 0.2, 0.3, 0.45}, none of 27,846 evaluated one-bit functions (analytic controls and all elementary cellular-automaton readouts after one to three steps) exceeded I(f(X);Y) <= 1 - h2(p); dictator, parity and constant controls matched their closed forms within 1e-12; the DEV-selected non-trivial local readout (rule 77, one step) retained 0.751-0.954 of the ceiling at the TEST noise levels.",
+      "population": "Uniform independent bits (n = 3-8) under a binary symmetric channel; one-bit deterministic readouts",
+      "limits": [
+        "Finite numerical checks of examples; not a proof of the general theorem",
+        "Not applicable to ten-class labels, UCI images, spatial dropout or dependent neural states",
+        "The formal proof is checked separately (task M3)",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "protocol": {
+        "path": "docs/research/MATH119_plan.json",
+        "sha256": "2424396c0ccf022b0cec7b8bdfb4eea74dd5257134057b21557213acb5fa8d2a"
+      },
+      "receipts": [
+        {
+          "path": "results/research/MATH119/results.json",
+          "sha256": "99195913d3c229d78cdb7a118b57e4aa6e75e7e2b3760b63173944023170723b"
+        }
+      ],
+      "stop_reason": null,
+      "source_units": []
     }
   ]
 }
