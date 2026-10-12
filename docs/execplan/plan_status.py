@@ -220,6 +220,11 @@ def main() -> None:
     reopen = commands.add_parser("reopen")
     reopen.add_argument("id")
     reopen.add_argument("--note", required=True)
+    supersede = commands.add_parser("supersede", help="repoint closed evidence to a byte-identical archived snapshot")
+    supersede.add_argument("id")
+    supersede.add_argument("--path", required=True, help="evidence path recorded at closure")
+    supersede.add_argument("--snapshot", required=True, help="archived copy whose sha256_lf equals the closure hash")
+    supersede.add_argument("--note", required=True)
     pause = commands.add_parser("pause")
     pause.add_argument("id")
     pause.add_argument("--note", required=True)
@@ -237,7 +242,7 @@ def main() -> None:
     data = load(ledger)
     command = args.command or "status"
     tasks = index(data)
-    if command in {"start", "close", "block", "reopen", "pause"} and args.id not in tasks:
+    if command in {"start", "close", "block", "reopen", "pause", "supersede"} and args.id not in tasks:
         raise SystemExit("Unknown task " + args.id)
     if command == "status":
         report = summary(data, ledger)
@@ -281,6 +286,26 @@ def main() -> None:
         if not task["status"].startswith("blocked"):
             raise SystemExit("Only blocked tasks can be reopened")
         task.update(status="pending", note=(task.get("note", "") + " | reopened: " + args.note).strip(" |"))
+    elif command == "supersede":
+        # Closed evidence stays verifiable: the snapshot must reproduce the hash recorded at closure.
+        task = tasks[args.id]
+        if task["status"] not in CLOSED:
+            raise SystemExit("Only closed tasks can have evidence superseded")
+        item = next((e for e in task.get("evidence", []) if e.get("path") == args.path), None)
+        if item is None:
+            raise SystemExit("Path is not recorded evidence of this task: " + args.path)
+        root = workdir(data, ledger)
+        snapshot = (root / args.snapshot).resolve()
+        if not snapshot.is_relative_to(root) or not snapshot.is_file():
+            raise SystemExit("Snapshot must be an existing file inside the workdir")
+        if sha256(snapshot) != item.get("sha256_lf"):
+            raise SystemExit("Snapshot bytes differ from the closure hash; refusing")
+        relative = snapshot.relative_to(root).as_posix()
+        if any(e.get("path") == relative for e in task["evidence"]):
+            raise SystemExit("Snapshot already recorded as evidence")
+        item["path"] = relative
+        task.setdefault("superseded", []).append(dict(original_path=args.path, snapshot=relative,
+                                                      sha256_lf=item["sha256_lf"], at=now(), note=args.note))
     elif command == "pause":
         task = tasks[args.id]
         if task["status"] != "in_progress":
