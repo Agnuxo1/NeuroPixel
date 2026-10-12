@@ -16,4 +16,4 @@ Compute is faster in six point comparisons and slower for C48/grid128. C16/grid1
 
 FP32, TF32 off, resident seeding, sixteen updates and full decoding are held fixed. CUDA eager and CUDA Graph remain strong comparators. Setup, compilation, transfers, training and complete system energy are outside this primary timing. Short counter deltas remain inadequate energy evidence.
 
-The separate sustained RENDER11 energy endpoint preserves 100/105 original blocks after a RAM-floor interruption; do not infer its complete comparative effect without all registered rows. Original failures and queue timeouts remain archived.
+The separate sustained RENDER11 energy endpoint preserved 103/105 original blocks. Its previously completed recovery is now admitted with 105 unique keys, 103 unchanged original rows and zero repeated closed measurements. It measures GPU-board energy across interrupted sessions; whole-system wall energy and universal efficiency remain unestablished. Original failures and queue timeouts remain archived.

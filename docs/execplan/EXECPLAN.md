@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:50:14+00:00
+- Actualizado (UTC): 2026-10-12T11:55:29+00:00
 - Tarea en curso o siguiente: G1.3, Reconciliación editorial y auditoría documental posterior; intento 1; presupuesto 15 minutos.
 - Criterio de cierre: 105 claves únicas admitidas, 103 originales conservadas byte a byte, cero mediciones cerradas repetidas, fuentes y entradas coincidentes, y ningún texto que declare más evidencia de la disponible. [guía §6]
-- Hecho en esta tarea: Recovery completa admitida; discrepancias editoriales anteriores preservadas.
-- Falta en esta tarea: Archivar versiones anteriores, alinear documentacion inglesa, regenerar informe y auditoria.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start G1.3
+- Hecho en esta tarea: Auditoria posterior sin incidencias; revision manual tambien corrigio la descripcion vigente de RENDER10 en instrucciones de reproduccion.
+- Falta en esta tarea: Preparar paquete externo completo y commit; cierre local con dependencia de publicacion separada.
+- Siguiente comando exacto: python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.3_owner_package.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_prepare_G1_packet.py
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -162,6 +162,14 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:50:14+00:00) G1.2: done; commit ee7f886c5e80c957ea17cb4e654ec4f752c69ef3; Recovery original commit87c60227 admitida segun §6.2:105 claves,103 originales identicas,cero nuevas mediciones.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T11:50:14+00:00) G1.3, intento 1: hecho Recovery completa admitida; discrepancias editoriales anteriores preservadas.; falta Archivar versiones anteriores, alinear documentacion inglesa, regenerar informe y auditoria.. Siguiente: `python docs/execplan/plan_status.py start G1.3`.
+
+- [ ] (2026-10-12T11:53:42+00:00) G1.3, intento 1: hecho §6 completa leida; recovery admitida; documentos afectados identificados; JEV reconcile_locally (1,0).; falta Archivar bytes previos y corregir 7 documentos; generar informe; auditoria posterior y paquete externo.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.3_reconcile.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_reconcile_G1.py`.
+
+- [ ] (2026-10-12T11:53:45+00:00) G1.3, intento 1: hecho 7 documentos alineados y versiones previas archivadas con SHA256; fuentes/inputs congelados siguen coincidiendo.; falta Generar base inglesa y ejecutar auditoria posterior; preparar publicacion sin ejecutarla.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.3_report.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.write_report --root . --recovery results/research/RENDER11_energy/recovered_20261009B/receipt.json --output docs/papers/NeuroPixel_evidence_reconciled_20261012.md`.
+
+- [ ] (2026-10-12T11:53:49+00:00) G1.3, intento 1: hecho Informe ingles generado con tablas completas y limites; no sustituye manuscrito final G12.; falta Auditoria documental posterior y paquete externo con hashes; cerrar parte local.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.3_audit_after.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.audit_release --root . --output results/research/COMPLETION20261012/release_audit_after.json`.
+
+- [ ] (2026-10-12T11:55:29+00:00) G1.3, intento 1: hecho Auditoria posterior sin incidencias; revision manual tambien corrigio la descripcion vigente de RENDER10 en instrucciones de reproduccion.; falta Preparar paquete externo completo y commit; cierre local con dependencia de publicacion separada.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.3_owner_package.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_prepare_G1_packet.py`.
 
 ## Sorpresas y hallazgos
 
