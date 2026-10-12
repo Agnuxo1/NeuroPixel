@@ -38,6 +38,22 @@
 
 - [x] ~~A18.1 Congelar inventario completo de textos y candidatos a afirmacion publica (§18A)~~ 2026-10-12T12:05Z `887aff487f`
 
+## 18A Afirmaciones historicas
+
+- [ ] A18.2.H Revisar afirmaciones historicas y sus discrepancias (§18A)
+
+## 18A Desarrollo y vision
+
+- [ ] A18.2.D Revisar afirmaciones de desarrollo, scanner y vision (§18A)
+
+## 18A Graficos y energia
+
+- [ ] A18.2.G Revisar afirmaciones graficas y energia (§18A)
+
+## 18A Registro publico
+
+- [ ] A18.2.P Revisar README, manuscritos y documentos nuevos e integrar registro (§18A)
+
 ## 18A Registro cientifico
 
 - [ ] A18.2 Vincular todas las afirmaciones a artefactos y nivel justificable (§18A)
@@ -154,4 +170,4 @@
 
 ## G1 Dependencia externa
 
-- [ ] BLOCKED (external) G1.3.ext Publicacion por el propietario del paquete G1 reconciliado (§6.3): Paquete preparado; el propietario debe revisar y publicar. Ningun push ni publicacion ejecutados.
+- [ ] BLOCKED (external) G1.3.ext Publicacion por el propietario del paquete G1 reconciliado (§6.3): Paquete78archivos verificado en commitba9f3f84 previo aT0; propietario debe revisar y publicar esa version. Ningun push ni publicacion ejecutados.

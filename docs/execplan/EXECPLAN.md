@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T12:05:41+00:00
-- Tarea en curso o siguiente: A18.2, Vincular todas las afirmaciones a artefactos y nivel justificable; intento 1; presupuesto 15 minutos.
-- Criterio de cierre: docs/research/claims_ledger.json contiene todas las afirmaciones candidatas cientificas y tecnicas, poblacion, limites, status y nivel sustentado por artefactos reales; cada exclusion editorial justificada; ningun timestamp o independencia inventados.
-- Hecho en esta tarea: Inventario A18.1 cerrado; guard Torch rechazado y publicacion externa retenida.
-- Falta en esta tarea: Clasificar todas las unidades, separar afirmaciones y exclusions editoriales; vincular protocolo, recibos, poblacion y limites; dividir por grupos antes de empezar.
-- Siguiente comando exacto: python docs/execplan/plan_status.py next
+- Actualizado (UTC): 2026-10-12T12:09:13+00:00
+- Tarea en curso o siguiente: A18.2.H, Revisar afirmaciones historicas y sus discrepancias; intento 1; presupuesto 45 minutos.
+- Criterio de cierre: Cada candidato del grupo A18.2.H se divide semanticamente o se excluye con razon editorial; afirmaciones inglesas vinculadas a poblacion, limites, protocolos y recibos existentes, sin sustituir faltantes por resumen ni reabrir estudios.
+- Hecho en esta tarea: 795 candidatos particionados sin omisiones; revision H/D/G/P separada antes de iniciar; G1 paquete anclado al commit inmutable previo aT0.
+- Falta en esta tarea: Leer solo candidatos del grupoH y verificar artefactos de cada afirmacion; clasificar semanticamente en ingles; cerrar con evidencia.
+- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.H
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -185,6 +185,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T12:05:40+00:00) A18.1: done; commit 887aff487fb010e13ae0aeaeefc637fb45b11002; Fuentes actuales congeladas por hash, cobertura completa de lineas; clasificacion y niveles aun pendientes.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T12:05:41+00:00) A18.2, intento 1: hecho Inventario A18.1 cerrado; guard Torch rechazado y publicacion externa retenida.; falta Clasificar todas las unidades, separar afirmaciones y exclusions editoriales; vincular protocolo, recibos, poblacion y limites; dividir por grupos antes de empezar.. Siguiente: `python docs/execplan/plan_status.py next`.
+
+- [ ] (2026-10-12T12:09:13+00:00) A18.2.H, intento 1: hecho 795 candidatos particionados sin omisiones; revision H/D/G/P separada antes de iniciar; G1 paquete anclado al commit inmutable previo aT0.; falta Leer solo candidatos del grupoH y verificar artefactos de cada afirmacion; clasificar semanticamente en ingles; cerrar con evidencia.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
 
 ## Sorpresas y hallazgos
 
