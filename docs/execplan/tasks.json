@@ -242,9 +242,34 @@
         "G1.1"
       ],
       "acceptance": "Recuperación en carpeta nueva con entorno GPU histórico y ticket gpuq; 105 claves únicas, 103 originales byte a byte, recibo y resumen guardados. Si la cola o la RAM no lo permiten: blocked_resource con ticket y hora.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:49Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/energy_recovery_admission.json",
+          "sha256_lf": "bc5bb4fc5d28b1a6bf1dfcf4001f0cd64b5b6472b0f321b4bb22482d87af397d"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/energy_complete_summary.json",
+          "sha256_lf": "03800d34605defe6c7aaa9e74c9131207bc764ebc8e752b3c534e40d22ae4a65"
+        },
+        {
+          "path": "results/research/RENDER11_energy/recovered_20261009B/receipt.json",
+          "sha256_lf": "71276354881489c117951ef6faf8ad3caad514c71894e6010943d34dc744778e"
+        },
+        {
+          "path": "docs/execplan/evidence/G1.2_admission.txt",
+          "sha256_lf": "5c74cb092ac211cf69c759abffdf263e9249534a24b67b36f2b3622e5439dc98"
+        },
+        {
+          "path": "docs/execplan/evidence/G1.2_summary.txt",
+          "sha256_lf": "c518d044d9c30448c131211408198a58fbe9ee9ba5bedbcaa6ad8ef8ef68230d"
+        }
+      ],
+      "commit": "ee7f886c5e80c957ea17cb4e654ec4f752c69ef3",
+      "closed": "2026-10-12T11:50Z",
+      "note": "Recovery original commit87c60227 admitida segun §6.2:105 claves,103 originales identicas,cero nuevas mediciones."
     },
     {
       "id": "G1.3",
@@ -598,5 +623,5 @@
       "status": "pending"
     }
   ],
-  "updated": "2026-10-12T11:49Z"
+  "updated": "2026-10-12T11:50Z"
 }
