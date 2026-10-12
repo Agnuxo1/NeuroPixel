@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T12:00:42+00:00
-- Tarea en curso o siguiente: G2.2, Ejecutar Torch historico y regresiones CPU relevantes; intento 1; presupuesto 15 minutos.
-- Criterio de cierre: Tres pruebas Torch en entorno real y regresiones PAD, denominadores, routing, clases, mascaras, logits completos, finitud y persistencia ejecutadas. Paridad positiva original/nuevo con mismos pesos, entradas y RNG; evidencia y versiones guardadas; guard8GiB.
-- Hecho en esta tarea: G2.1 cerrada; version nueva separada del frozen; RAM reciente2,58GiB<8.
-- Falta en esta tarea: Ejecutar admision real antes de importar Torch; bloquear si guard falla y seguir elegible.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start G2.2
+- Actualizado (UTC): 2026-10-12T12:02:12+00:00
+- Tarea en curso o siguiente: A18, Crear el registro de afirmaciones con todo lo público actual; intento 1; presupuesto 30 minutos.
+- Criterio de cierre: registro creado con todas las afirmaciones públicas, cada una en el nivel que justifican sus artefactos; ningún texto público por encima de su nivel. [guía §18A]
+- Hecho en esta tarea: G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.
+- Falta en esta tarea: Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.
+- Siguiente comando exacto: python docs/execplan/plan_status.py section 18A
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -175,6 +175,10 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T12:00:42+00:00) G2.1: done; commit 0183a4ee1221918630f57079d9f4d2e418a81dc7; Fuente T0 instalada con alcance AST verificado; runtime no probado; frozen exacto y limpio.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T12:00:42+00:00) G2.2, intento 1: hecho G2.1 cerrada; version nueva separada del frozen; RAM reciente2,58GiB<8.; falta Ejecutar admision real antes de importar Torch; bloquear si guard falla y seguir elegible.. Siguiente: `python docs/execplan/plan_status.py start G2.2`.
+
+- [ ] (2026-10-12T12:02:10+00:00) G2.2, intento 2: hecho Guard real rechazo2,039GiB; intento1 no guardo JSON porque el helper esperaba MemoryError. Cambio: capturar RuntimeError exacto del guard, sin modificar umbral.; falta Guardar rechazo estructurado, bloquear y continuar A18.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_admission_v2.txt -- python scripts/completion_resource_admission.py docs/execplan/evidence/G2.2_admission_v2.json`.
+
+- [ ] (2026-10-12T12:02:12+00:00) A18, intento 1: hecho G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.; falta Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.. Siguiente: `python docs/execplan/plan_status.py section 18A`.
 
 ## Sorpresas y hallazgos
 

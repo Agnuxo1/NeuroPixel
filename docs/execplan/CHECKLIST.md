@@ -24,7 +24,7 @@
 
 ## G2 Contrato T0: Torch real
 
-- [ ] G2.2 Ejecutar Torch historico y regresiones CPU relevantes (§7)
+- [ ] BLOCKED (resource) G2.2 Ejecutar Torch historico y regresiones CPU relevantes (§7): Admision ejecutada rechaza RAM libre inferior a8GiB; sin importarTorch. Reabrir al disponer>=8GiB; despues preparar y ejecutar regresiones CPU y tres pruebas reales.
 
 ## G2 Contrato T0: GPU
 
