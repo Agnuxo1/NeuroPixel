@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:37:33+00:00
-- Tarea en curso o siguiente: P0.4, Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md); intento 1; presupuesto 15 minutos.
-- Criterio de cierre: docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.
-- Hecho en esta tarea: Plan instalado, 3 tareas cerradas, checklist generado y AGENTS operativo.
-- Falta en esta tarea: Validar sistema de reanudacion y guardar recibo; commit y close.
-- Siguiente comando exacto: python docs/execplan/plan_status.py section 1
+- Actualizado (UTC): 2026-10-12T11:38:38+00:00
+- Tarea en curso o siguiente: P0.3, Materializar el kit de la guía ampliada y su entorno; intento 1; presupuesto 15 minutos.
+- Criterio de cierre: Extractor: 26 archivos autenticados; entorno en E: con versiones registradas; 38 + 25 pruebas aprobadas con salida guardada como evidencia.
+- Hecho en esta tarea: Reanudacion: ledger mantiene P0.3 en curso; 38+25 pruebas OK. Fallo de quoting impidio recibo y el ledger rechazo cierre; se cambia a verificador en archivo.
+- Falta en esta tarea: Ejecutar verificador de hashes y recibos; commit y cierre real.
+- Siguiente comando exacto: python docs/execplan/verify_bootstrap.py kit
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -117,7 +117,7 @@ Rellenar en P0 y mantener al día:
 - Checkout: D:/PROJECTS/NeuroPixel-Completion-20261012; fuente viva D:/PROJECTS/196_NeuroPixel.
 - Rama: research/completion-20261012.
 - Commit base: d8721a59d36d127642a5664c0c41e6091296ba21.
-- Python del kit (`$Python`): pendiente §4.3, entorno en E:.
+- Python del kit: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe (Python 3.13.7); NumPy 2.2.6, SciPy 1.15.1, ModernGL 5.12.0, glcontext 3.1.0.
 - Python GPU histórico (`$GpuPython`): pendiente inventario §4.3.
 - Recursos medidos: RAM libre 4.92 GiB, CPU 20 hilos / 10 núcleos (34,2 %); disco D: 347,29 / E: 215,64 GiB libres; gpuq con trabajo compartido y cola ajenos.
 - Rutas de resultados: results/completion/; evidencia del plan docs/execplan/evidence/.
@@ -147,6 +147,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [ ] (2026-10-12T11:37:29+00:00) P0.3, intento 1: hecho 26 hashes verificados; 38+25 pruebas OK; entorno E: Python 3.13.7 y versiones guardadas.; falta Commit y close.. Siguiente: `git add completion_kit requirements-completion.txt requirements-graphics.txt extract_completion_kit.py docs/execplan`.
 
 - [ ] (2026-10-12T11:37:33+00:00) P0.4, intento 1: hecho Plan instalado, 3 tareas cerradas, checklist generado y AGENTS operativo.; falta Validar sistema de reanudacion y guardar recibo; commit y close.. Siguiente: `python docs/execplan/plan_status.py section 1`.
+
+- [ ] (2026-10-12T11:38:38+00:00) P0.3, intento 1: hecho Reanudacion: ledger mantiene P0.3 en curso; 38+25 pruebas OK. Fallo de quoting impidio recibo y el ledger rechazo cierre; se cambia a verificador en archivo.; falta Ejecutar verificador de hashes y recibos; commit y cierre real.. Siguiente: `python docs/execplan/verify_bootstrap.py kit`.
 
 ## Sorpresas y hallazgos
 
