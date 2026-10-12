@@ -17,7 +17,9 @@
         "Descriptive pilot with one initialization; the H1 decision was reserved for item 5",
         "Limited optimization budget: 1,024 updates of 64 examples and two learning rates per family",
         "Similar parameter counts and equal sample exposure do not equalize capacity, receptive field, FLOPs or optimization difficulty",
-        "The independent verifier output results/research/04_verification.json cited by the report is not available; the transferred artifacts were re-verified here only by their transfer-manifest hashes"
+        "The independent verifier output results/research/04_verification.json cited by the report is not available; the transferred artifacts were re-verified here only by their transfer-manifest hashes",
+        "An unfavorable result is not proof of architectural incapacity; adapted NCA (11.914%) and ConvGRU (13.574%) also scored low",
+        "The NCA models use random firing in training and synchronous updates in evaluation; the causal contribution of that difference is not isolated"
       ],
       "receipts": [
         {
@@ -62,7 +64,10 @@
       "protocol": {
         "path": "docs/research/04_execution_plan.json",
         "sha256": "ba355d5c1803b661c7992c0f99a582a8cab54dbaf176cb0aca5b173d2ca02cfc"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "H04-02",
@@ -106,8 +111,8 @@
       "id": "H04-03",
       "statement": "In a post hoc inspection of saved item-4 validation predictions, the selected relative Transformer chose a visible filler of the queried category in all 2,048 validation examples while answering 491 of 1,024 nominal (AGENT/PATIENT) queries correctly.",
       "population": "Item-4 matched pilot on the synthetic RoleTask (8x8 grid, 35 tokens, split 0, initialization 7); NeuroPixel, adapted NCA, spatial ConvGRU and relative-position Transformer at 27,835-30,384 parameters; 2,048 validation and 4,096 final examples per selected checkpoint",
-      "status": "experiment_complete",
-      "declared_level": 2,
+      "status": "engineering_complete",
+      "declared_level": 1,
       "limits": [
         "Synthetic RoleTask generator only; no independently designed or external task",
         "No independent laboratory replication and no externally dated public preregistration",
@@ -116,7 +121,8 @@
         "Similar parameter counts and equal sample exposure do not equalize capacity, receptive field, FLOPs or optimization difficulty",
         "The independent verifier output results/research/04_verification.json cited by the report is not available; the transferred artifacts were re-verified here only by their transfer-manifest hashes",
         "Post hoc descriptive diagnostic, not a frozen endpoint; it does not establish the internal computation or positional invariance",
-        "Recounted here from the retained validation predictions and dataset; the report's separate diagnostic file is not in the repository"
+        "Recounted here from the retained validation predictions and dataset; the report's separate diagnostic file is not in the repository",
+        "Recount of retained predictions performed in the completion phase; level lowered to L1 by the A18.3 review"
       ],
       "receipts": [
         {
@@ -137,7 +143,10 @@
       "protocol": {
         "path": "docs/research/04_execution_plan.json",
         "sha256": "ba355d5c1803b661c7992c0f99a582a8cab54dbaf176cb0aca5b173d2ca02cfc"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "H04-04",
@@ -405,7 +414,10 @@
         "Retrospective; historical recipe differs (80/20 split, school loss 0.3, different optimizer, batch and Transformer); no causal attribution to one component",
         "Historical example hashes and package versions unavailable",
         "Synthetic RoleTask generator only; no independently designed or external task",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Three coupled seeds cannot isolate the variances; no historical significance decision was made",
+        "Describes these trained models, not Transformers as an architectural family",
+        "Seed-2 scores are normalized JSON snapshots from the owner's existing project"
       ],
       "receipts": [],
       "stop_reason": null,
@@ -437,6 +449,9 @@
         "S005-L0109",
         "S005-L0111",
         "S005-L0263"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -650,7 +665,7 @@
     },
     {
       "id": "H06-03",
-      "statement": "In A06.1, recurrent depth effects were not established: training at T4 versus T16 +2.832 pp (paired 95% CI -2.752 to +8.416, df=1), T1 versus T16 +0.146 pp; truncating the same T16 weights to T1 or T4 changed binding by +0.732 and +0.293 pp with intervals including zero.",
+      "statement": "In A06.1, recurrent depth effects were not established: training at T4 versus T16 +2.832 pp (paired 95% CI -2.752 to +8.416, df=1), T1 versus T16 +0.146 pp (-14.123 to +14.416); truncating the same T16 weights to T1 or T4 changed binding by +0.732 and +0.293 pp with intervals including zero.",
       "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
       "status": "experiment_complete",
       "declared_level": 2,
@@ -683,7 +698,10 @@
       "protocol": {
         "path": "docs/research/06_execution_plan.json",
         "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "H06-04",
@@ -758,7 +776,7 @@
     },
     {
       "id": "H06-06",
-      "statement": "In A06.1 growth and routing, the fixed bank with the historical router reached 25.651% mean binding (23.242% and 28.060%) and the learned gate 26.335%; the historical router exceeded a uniform mixture by +17.546 pp (paired 95% CI +3.069 to +32.022, unadjusted) and a random router by +16.178 pp, but not the learned gate (-0.684 pp); novelty (-0.163 pp) and resonance (-12.207 pp) did not improve on the fixed bank; no competent adaptive growth or general routing superiority was established.",
+      "statement": "In A06.1 growth and routing, the fixed bank with the historical router reached 25.651% mean binding (23.242% and 28.060%) and the learned gate 26.335%; the historical router exceeded a uniform mixture by +17.546 pp (paired 95% CI +3.069 to +32.022, unadjusted) and a random router by +16.178 pp (interval -2.434 to +34.791, including zero), but not the learned gate (-0.684 pp); novelty (-0.163 pp) and resonance (-12.207 pp) did not improve on the fixed bank; no competent adaptive growth or general routing superiority was established.",
       "population": "Exact frozen local A06.1 ablation recipe (commit a009f2a9) on the synthetic RoleTask; two initializations (seeds 20/21), one split; NeuroPixel variants only",
       "status": "experiment_complete",
       "declared_level": 2,
@@ -769,7 +787,8 @@
         "Exploratory: test and scientific context had prior exposure; no confirmatory family was preregistered",
         "Equal updates, not equal FLOPs or total cost; low competence of every variant (all 26 probes budget_limited)",
         "Gates learn with additional labels over frozen experts; topics carry lexical signals",
-        "Resonance and novelty banks differ in retained capacity and update policy"
+        "Resonance and novelty banks differ in retained capacity and update policy",
+        "Retrospective Holm sensitivity over 40 contrasts: none survives; the uniform-mixture contrast has unadjusted p = 0.0413 and Holm p = 1.0"
       ],
       "receipts": [
         {
@@ -793,7 +812,10 @@
       "protocol": {
         "path": "docs/research/06_execution_plan.json",
         "sha256": "4bc25ed4acce0c95f41d0a595289f854e0330fe237aee1210a8787378cdf6b01"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "H06-07",
@@ -996,6 +1018,10 @@
         {
           "path": "results/research/TASK4_review/saved_evidence_audit.json",
           "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        },
+        {
+          "path": "results/research/08_cloud_runs/37584119610-1/execution_plan.json",
+          "sha256": "46b7f19063325b78e593ea53fbbc9bf4372a3f81e7d503a8ac58ee301c15455b"
         }
       ],
       "stop_reason": null,
@@ -1062,6 +1088,14 @@
         {
           "path": "results/research/TASK4_review/saved_evidence_audit.json",
           "sha256": "f88e0be939530398f0fca84ed6419fc007cf07d5793b44beeeabe13f15bb39e6"
+        },
+        {
+          "path": "results/research/10_cloud_runs/37615277149-1-study/source.zip",
+          "sha256": "0adfdfc43403da4c976bb83027a71e37972c6f975f646782ff8391af4e0c5e5d"
+        },
+        {
+          "path": "results/research/10_cloud_runs/37618268225-1-audit/analysis/scientific_audit.json",
+          "sha256": "4eeb8937fbc37a585d9102f23e6d4062aef5b29f674137d646ef59df4f24f5c7"
         }
       ],
       "stop_reason": null,
@@ -1226,6 +1260,26 @@
         {
           "path": "results/research/DEV04_review/37845945011/final_receipts_verification.json",
           "sha256": "d74a3e02e54c2d5df76502f923d9bae4cb9aa04472da32a77c2f0ee292934fbc"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/analysis/report_recount.json",
+          "sha256": "1bac6b095af918d96d6e77c25730874c9c064f12331092c429ab17788a24683b"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/analysis/summary.json",
+          "sha256": "0c468ab374f3c47edceda162a38c5bef2b1387835336522e44c60b040b718fad"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/analysis/policies.csv",
+          "sha256": "dd502ec9e29e1bc3d4dd1b67d7388597bab3cd29b90700ca6b3dd7b885934a72"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/analysis/pairs.csv",
+          "sha256": "2ba82621fbc195378d94461391b7e21ec37281dcc504d5904765104e00b95384"
+        },
+        {
+          "path": "results/research/DEV04_review/37845945011/analysis/heads.csv",
+          "sha256": "b12eee20953281b65bc4b5932c50b7028cdd9d72b73c77d2643c017b2b69251b"
         }
       ],
       "stop_reason": null,
@@ -1312,6 +1366,14 @@
         {
           "path": "results/research/GLOB05_review/37887762153/final_receipts_verification.json",
           "sha256": "3fdba2ca57105c8d7aecfd93ff0892154ffd8a12f234343dd85ba768c79f10e9"
+        },
+        {
+          "path": "results/research/GLOB05_review/37887762153/analysis/summary.json",
+          "sha256": "0d536d8a35e251aaecb88cf535dc229d21e6eeaf05622a53d7e44261a99ebbe1"
+        },
+        {
+          "path": "results/research/GLOB05_review/37887762153/analysis/cases.csv",
+          "sha256": "44fd56af81cc213bb732d9a7300ac62ef829cdc8d8f317f991e8dfbdb017e764"
         }
       ],
       "stop_reason": null,
@@ -1383,7 +1445,8 @@
         "A redundant dispatch (run 37896335193) trained nothing and produced identical NPZ bytes: one experiment, not two replications",
         "PAD -10000 is finite suppression, not absolute exclusion",
         "Not a biological brain scan or complete causal explanation",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "A single constructed (assigned-state) experiment; there are no statistical units"
       ],
       "receipts": [
         {
@@ -1406,18 +1469,22 @@
       "protocol": {
         "path": "docs/research/SCN06_execution_plan.json",
         "sha256": "ec9b7e3e3d232adaf716378364378ce5b2c9b3685572bea5b6d9a5cabaad1917"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-SCN06-02",
-      "statement": "A separately frozen matrix census of five authenticated old learned models passed 75 checks: all read/non-PAD decoder matrices had rank 16 and ambient nullity 32 at the declared float64 threshold.",
+      "statement": "A separately frozen retrospective matrix census of five authenticated old learned models passed 75 checks: all read/non-PAD decoder matrices had rank 16 and ambient nullity 32 at the declared float64 threshold.",
       "population": "Five authenticated historical learned NeuroPixel models; decoder matrices",
-      "status": "experiment_complete",
-      "declared_level": 2,
+      "status": "engineering_complete",
+      "declared_level": 1,
       "limits": [
         "Measures ambient instantaneous projections, not reached-state dimensionality or learned semantic directions",
         "Multi-time observability is a different question",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Deterministic retrospective census; level lowered to L1 by the A18.3 review"
       ],
       "receipts": [
         {
@@ -1435,11 +1502,14 @@
       "protocol": {
         "path": "docs/research/SCN06_rank_execution_plan.json",
         "sha256": "0df3469ce888da19fc49d7ed72c2fcedd53ef1713705ec204a4a8206dee1335e"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-VIS07-01",
-      "statement": "On the public UCI optical handwritten-digits test set (1,797 images, writer-separated; selection on DEV300 only before TEST), five NeuroPixel NCA realizations averaged 94.357% accuracy versus 90.840% for a CNN of close nominal size (5,056 versus 5,039 parameters): paired difference +3.517 pp, exploratory t95 interval 1.930 to 5.103 pp; all five NCA realizations exceeded 90%.",
+      "statement": "On the public UCI optical handwritten-digits test set (1,797 images, writer-separated according to the UCI metadata, individual writer identifiers not independently verified; selection on DEV300 only before TEST), five NeuroPixel NCA realizations averaged 94.357% accuracy versus 90.840% for a CNN of close nominal size (5,056 versus 5,039 parameters): paired difference +3.517 pp, exploratory t95 interval 1.930 to 5.103 pp; all five NCA realizations exceeded 90%.",
       "population": "UCI optdigits public data, writer-separated test set of 1,797 images; five paired training seeds 240-244",
       "status": "experiment_complete",
       "declared_level": 2,
@@ -1449,18 +1519,30 @@
         "Depth, geometry and FLOPs differ despite close nominal parameter counts",
         "Not universal superiority over CNNs",
         "Does not rescue the binding H1",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Robustness to a one-column shift was far worse than the CNN (55.826% versus 85.120%; D-VIS07-05)"
       ],
       "receipts": [
         {
           "path": "results/research/VIS07MAIN_cloud/37908785698/receipt.json",
           "sha256": "4599d1a9feeff28c2aaf8aa23bf6081fd500b855dfd1ea6653a0eda068adb71f"
+        },
+        {
+          "path": "results/research/VIS07MAIN_cloud/37908785698/raw.zip",
+          "sha256": "6677eb3c5d8e04fad5d6ed2947c707bc5ab0761a12f654b4b5972cf9bd648ca3"
+        },
+        {
+          "path": "results/research/SPRINT_review/VIS07_summary.json",
+          "sha256": "4b1ffb9e7dac915eeb037f8c1d8867347142c8d3630ed2ddf78d9aa237a967ea"
         }
       ],
       "stop_reason": null,
       "review_batch": "A18.2.D",
       "study": "VIS07",
       "source_units": [
+        "S001-L0063",
+        "S003-L0037",
+        "S003-L0039",
         "S025-L0003",
         "S025-L0007",
         "S025-L0008",
@@ -1473,7 +1555,10 @@
       "protocol": {
         "path": "docs/research/VIS07_execution_plan.json",
         "sha256": "acb20b8edfeea6c287531ee14924a19b258de6377ed93c24da49667263f3bd3e"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-VIS07-02",
@@ -1524,6 +1609,10 @@
         {
           "path": "results/research/VIS07REPLAY_cloud/37911162172/receipt.json",
           "sha256": "da53f8b4c944589f443f16d214acdb77b5f9580fc526b8bcad65b115c60871cb"
+        },
+        {
+          "path": "results/research/VIS07REPLAY_cloud/37911162172/raw.zip",
+          "sha256": "e474c9ba8519ad231f8f856439c16b51a3dc6bb0338e31edb7fd919cbaba3684"
         }
       ],
       "stop_reason": null,
@@ -1531,6 +1620,9 @@
       "study": "VIS07",
       "source_units": [
         "S025-L0027"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -1547,6 +1639,14 @@
         {
           "path": "results/research/VIS07MAIN_cloud/37908785698/receipt.json",
           "sha256": "4599d1a9feeff28c2aaf8aa23bf6081fd500b855dfd1ea6653a0eda068adb71f"
+        },
+        {
+          "path": "results/research/VIS07MAIN_cloud/37908785698/raw.zip",
+          "sha256": "6677eb3c5d8e04fad5d6ed2947c707bc5ab0761a12f654b4b5972cf9bd648ca3"
+        },
+        {
+          "path": "results/research/SPRINT_review/VIS07_summary.json",
+          "sha256": "4b1ffb9e7dac915eeb037f8c1d8867347142c8d3630ed2ddf78d9aa237a967ea"
         }
       ],
       "stop_reason": null,
@@ -1554,6 +1654,9 @@
       "study": "VIS07",
       "source_units": [
         "S025-L0029"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -1567,7 +1670,8 @@
         "Original H1 remains not supported under its recipe; this result does not reinterpret it",
         "No independent laboratory replication and no externally dated public preregistration",
         "Negative development result: neither PAD projection nor higher firing resolved low competence",
-        "PAD also removes 16 effective degrees of freedom; firing changes randomness and expected dose"
+        "PAD also removes 16 effective degrees of freedom; firing changes randomness and expected dose",
+        "The bound protocol is the local CRLF copy (sha256 bf54be3c...); the executed LF plan (f1caada1...) is byte-identical after CRLF-to-LF conversion (D-OPT03D-02)"
       ],
       "receipts": [
         {
@@ -1605,7 +1709,10 @@
       "protocol": {
         "path": "docs/research/OPT03_execution_plan.json",
         "sha256": "bf54be3c4c8e30885b330e67e92195622e28c85a49e317358d106699d40008df"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-OPT03D-02",
@@ -1626,6 +1733,10 @@
         {
           "path": "results/research/OPT03_root_review/37696760073/checkpoint_audit_executed_plan.json",
           "sha256": "9db562e62dfa87f8971197626e540f9a556d27786cf067e7735547a9e1c8d89a"
+        },
+        {
+          "path": "results/research/OPT03_cloud_recovery/37696760073/original.zip",
+          "sha256": "ce0ab91443fc36575d9c7b71f835a4b31dae3df59f4df73f7de10887d42fbcff"
         }
       ],
       "stop_reason": null,
@@ -1637,6 +1748,9 @@
         "S011-L0015",
         "S011-L0040",
         "S011-L0042"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -1655,6 +1769,10 @@
         {
           "path": "results/research/OPT03_modes_review/audit.json",
           "sha256": "cd5bfc41b24e99249c25828c185e6db31d3f6de78fb5c9a985ff454a4a163cfc"
+        },
+        {
+          "path": "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed101.json",
+          "sha256": "511472b6dd5615e52df7a597252da7d61166bcff65058bba48d5af68ce5cd2eb"
         }
       ],
       "stop_reason": null,
@@ -1758,6 +1876,10 @@
         {
           "path": "results/research/OPT03_roles_review/audit.json",
           "sha256": "61fc0a0708f5d5b41cab70f1dde21fd80da35d5c506c13546ce1231ec5112575"
+        },
+        {
+          "path": "results/research/OPT03_roles_review/partial_audit.json",
+          "sha256": "590c31cea6ae9c02ee1b0ef6e75f491616f1a72d9c213c217151d4c2436b4a61"
         }
       ],
       "stop_reason": null,
@@ -1767,6 +1889,9 @@
         "S015-L0030",
         "S015-L0032",
         "S015-L0034"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -1794,6 +1919,22 @@
         {
           "path": "results/research/OPT03_QTRAIN_review/37728384380/closure_receipt.json",
           "sha256": "4bfce4dcb991b4f4b176719e3b7d9173cce1eaf27ebd75323ef558d26658de61"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/groups.csv",
+          "sha256": "010a40cf7229ac103c967eeadf35934b9a1f97d59bb96e0ac3df987b46104140"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/analysis_manifest.json",
+          "sha256": "82534529dacaadc110967eb5af2a410bba9c8cfdd278c24f14bcdf829e149bc2"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/cases.csv",
+          "sha256": "6e2e9767d1120a585c9f45c2a3e97cf97206cb7e7f65b1d1a51902da9adb6d20"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/effects.csv",
+          "sha256": "a8819b733745022e5f381519d989c97999a33875c9196abe6b0e6fd2a5f7527a"
         }
       ],
       "stop_reason": null,
@@ -1846,6 +1987,14 @@
         {
           "path": "results/research/OPT03_QTRAIN_review/37728384380/statistics_initial_failure.json",
           "sha256": "216210e94573076a77fb1432882a56017bd39479b2fd1102f7f54ecdc33f52c9"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/summary.json",
+          "sha256": "d750292e7b3f88862d4a5566e35dbaa94702a552b30e4c9b426a0bdbb4f9389c"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_review/37728384380/closure_receipt.json",
+          "sha256": "4bfce4dcb991b4f4b176719e3b7d9173cce1eaf27ebd75323ef558d26658de61"
         }
       ],
       "stop_reason": null,
@@ -1861,6 +2010,9 @@
         "S014-L0057",
         "S014-L0058",
         "S014-L0059"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -1871,7 +2023,8 @@
       "declared_level": 2,
       "limits": [
         "Curves do not demonstrate convergence, a single cause or architectural incapacity; dense and matched modes kept separate",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Descriptive curve values from one seed; no statistical inference"
       ],
       "receipts": [
         {
@@ -1893,7 +2046,10 @@
       "protocol": {
         "path": "docs/research/OPT03_QTRAIN_plan.json",
         "sha256": "20610e354288b48eeb7316367f61da5173fb2a124a01effa93e7d40e61bf3fb5"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-U16-01",
@@ -1906,7 +2062,8 @@
         "Budget jointly changes updates, example exposure and compute; not a pure optimizer improvement",
         "The favorable cell's 92.069% single-query accuracy is not compared as a win over the historical Transformer",
         "Original H1 remains not supported under its recipe; this result does not reinterpret it",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Values are in the training-matched firing-0.5 mode; dense-mode joint accuracy for the same cell is lower (80.176/79.785/63.184%)"
       ],
       "receipts": [
         {
@@ -1920,6 +2077,26 @@
         {
           "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/closure_receipt.json",
           "sha256": "346f7b3c48edacbb351998ce858da91cbc192729fec7be0a1721661e2815b4f3"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/effects.csv",
+          "sha256": "fc25ebda23109afc901dd8d3483af4236be648d099c4b11d0eaf41ea90d681fa"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/groups.csv",
+          "sha256": "eaad9a09b6191e6731b91afaffea6a11d4558d7415cdaafee888de5db738cdf5"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/cases.csv",
+          "sha256": "06e78d43f93dccac1cb34ec7f8eb909c77e28f4da0c1fc53217539c24d6f7636"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/answer_loss_continuation.svg",
+          "sha256": "3dbb002735c1068b15bb42787326d5c7482f7b8608b7497a7dba49b7bc6e9f45"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/descriptive_diagnostics.json",
+          "sha256": "1434487514d82e1e208b337f49e5f0bbea8e3b78cf8e497d2c4d9d15ad8d776a"
         }
       ],
       "stop_reason": null,
@@ -1944,7 +2121,10 @@
       "protocol": {
         "path": "docs/research/OPT03_QTRAIN_U16_plan.json",
         "sha256": "a4093bb8d559404b9f68587b753f8cea180a1e75d33363a04c1f2c7ebcb22dc0"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-U16-02",
@@ -1962,6 +2142,10 @@
         {
           "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/summary.json",
           "sha256": "45c78687cf654daa037420693f2a5d398660109190d0d0e437de9d80499fb7ec"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/effects.csv",
+          "sha256": "fc25ebda23109afc901dd8d3483af4236be648d099c4b11d0eaf41ea90d681fa"
         }
       ],
       "stop_reason": null,
@@ -2006,6 +2190,14 @@
         {
           "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/closure_receipt.json",
           "sha256": "346f7b3c48edacbb351998ce858da91cbc192729fec7be0a1721661e2815b4f3"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/summary.json",
+          "sha256": "45c78687cf654daa037420693f2a5d398660109190d0d0e437de9d80499fb7ec"
+        },
+        {
+          "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/descriptive_diagnostics.json",
+          "sha256": "1434487514d82e1e208b337f49e5f0bbea8e3b78cf8e497d2c4d9d15ad8d776a"
         }
       ],
       "stop_reason": null,
@@ -2023,7 +2215,7 @@
     },
     {
       "id": "D-READ03-01",
-      "statement": "READ03 fitted 36 new heads on 12 frozen U16 states: query attention minus the query-conditioned local control gave +54.225 pp (exploratory t95 37.575 to 70.875 pp), minus uniform global aggregation +55.070 pp and minus the parent readout +58.464 pp, while local minus parent was +4.239 pp and uniform minus parent +3.394 pp; only four-queries/school-0.3 attention passed the joint gate in all three seeds.",
+      "statement": "READ03 fitted 36 new heads on 12 frozen U16 states: query attention minus the query-conditioned local control gave +54.225 pp averaged over the four original conditions (exploratory t95 37.575 to 70.875 pp), minus uniform global aggregation +55.070 pp and minus the parent readout +58.464 pp, while local minus parent was +4.239 pp and uniform minus parent +3.394 pp; only four-queries/school-0.3 attention passed the joint gate in all three seeds; attention failed it in the other three conditions.",
       "population": "Historical NeuroPixel backbone (29,824 parameters, T16) on exposed RoleTask development pools (probe 2,048 / validation 4,096 examples); three initializations per condition, one split; 12 frozen U16 states, bodies/dictionaries/decoder frozen",
       "status": "experiment_complete",
       "declared_level": 2,
@@ -2043,6 +2235,14 @@
         {
           "path": "results/research/READ03_review/37831051538/closure_receipt.json",
           "sha256": "c295d415b1eaeb9d997ff72f23cdf0adbe4cad45a1e601f897a35712aa258b8b"
+        },
+        {
+          "path": "results/research/READ03_review/37831051538/analysis/effects.csv",
+          "sha256": "c64c65193bc0fe9f6a1389a7d5bce323c9286ed6c7e86363ee1e384ad51bdb9b"
+        },
+        {
+          "path": "results/research/READ03_review/37831051538/analysis/cases.csv",
+          "sha256": "9ddb61c3496bab8819f1080d950e63b36bb489e00faf736d4b132425dc8458ae"
         }
       ],
       "stop_reason": null,
@@ -2076,7 +2276,10 @@
       "protocol": {
         "path": "docs/research/READ03_execution_plan.json",
         "sha256": "d273b8284d9a387b49266dc4ec62cfad76aefaa11c5f82c7ab6a97ba0e431ea0"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "D-READ03-02",
@@ -2271,7 +2474,8 @@
         "Three technical blocks across interrupted sessions are not independent scientific replicates",
         "Idle-adjusted estimates, including negative values, are kept unclipped in the receipt; baselines are descriptive",
         "Does not establish universal efficiency or energy savings",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Technical min-max ranges of the best render and best CUDA methods overlap in 4 of 7 workloads; the C48 grid8/grid32 differences are about 1%"
       ],
       "receipts": [
         {
@@ -2332,7 +2536,10 @@
       "protocol": {
         "path": "docs/research/RENDER11_energy_plan.json",
         "sha256": "321d6b7e191653197f79a4bf3fc74bfa24c1f81fcf56c0150e795c3c357a2391"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "G-R11-02",
@@ -2541,7 +2748,8 @@
       "declared_level": 2,
       "limits": [
         "Excludes installation, scheduling, compilation, transfers, storage and verification; no energy measurement",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Sums of recorded timers; no statistical units"
       ],
       "receipts": [
         {
@@ -2558,7 +2766,10 @@
       "protocol": {
         "path": "docs/research/VIS07_execution_plan.json",
         "sha256": "acb20b8edfeea6c287531ee14924a19b258de6377ed93c24da49667263f3bd3e"
-      }
+      },
+      "amendments": [
+        "A18.3"
+      ]
     },
     {
       "id": "P-AVAIL-01",
@@ -2605,7 +2816,7 @@
     },
     {
       "id": "P-MATH-01",
-      "statement": "The completion kit implements nonnormal-Jacobian diagnostics motivated by the Crouzeix result (openai/math family 325), exact finite Boolean-noise controls (family 119) and a leaky-tanh reference field with an exact-weight contraction certificate; its 38 contract and 25 extension tests passed in the pinned environment.",
+      "statement": "The completion kit implements nonnormal-Jacobian diagnostics motivated by the Crouzeix result (openai/math family 325), exact finite Boolean-noise controls (family 119) and a leaky-tanh reference field with an exact-weight contraction certificate; the kit test suites (38 contract and 25 extension tests), which include tests of these modules, passed in the pinned environment.",
       "population": "completion_kit modules in this repository",
       "status": "engineering_complete",
       "declared_level": 1,
@@ -2639,6 +2850,9 @@
       "study": "COMPLETION_KIT",
       "source_units": [
         "S002-L0085"
+      ],
+      "amendments": [
+        "A18.3"
       ]
     },
     {
@@ -2710,7 +2924,8 @@
       "limits": [
         "Runtime pending: implementation receipts only",
         "The frozen original checkout is preserved separately",
-        "No independent laboratory replication and no externally dated public preregistration"
+        "No independent laboratory replication and no externally dated public preregistration",
+        "New-phase claim created after the A18.1 source freeze; not yet stated in the public texts"
       ],
       "receipts": [
         {
@@ -2725,7 +2940,37 @@
       "stop_reason": null,
       "review_batch": "A18.2.P",
       "study": "T0",
-      "source_units": []
+      "source_units": [],
+      "amendments": [
+        "A18.3"
+      ]
+    },
+    {
+      "id": "D-VIS07-05",
+      "study": "VIS07",
+      "review_batch": "A18.3",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "statement": "In the same frozen VIS07 protocol, two registered test-time transformation conditions were scored on the official 1,797-image test: at half input intensity NeuroPixel averaged 88.737% versus 67.056% for the CNN (paired difference +21.681 pp, exploratory t95 8.440 to 34.921), whereas with a one-column right shift and crop NeuroPixel averaged 55.826% versus 85.120% (paired difference -29.293 pp, t95 -45.696 to -12.890; NeuroPixel seeds ranging 42.7-70.2%): the NCA was far less robust than the CNN to the shift and more robust to the intensity change.",
+      "population": "UCI optdigits public data, writer-separated test set of 1,797 images; five paired training seeds 240-244",
+      "limits": [
+        "Two registered transformation conditions only; descriptive five-pair results without blind custody",
+        "Not reported in the public texts until the A18.3 correction (omitted, not withheld by selection)",
+        "Depth, geometry and FLOPs differ between the models",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "protocol": {
+        "path": "docs/research/VIS07_execution_plan.json",
+        "sha256": "acb20b8edfeea6c287531ee14924a19b258de6377ed93c24da49667263f3bd3e"
+      },
+      "receipts": [
+        {
+          "path": "results/research/VIS07MAIN_cloud/37908785698/raw.zip",
+          "sha256": "6677eb3c5d8e04fad5d6ed2947c707bc5ab0761a12f654b4b5972cf9bd648ca3"
+        }
+      ],
+      "source_units": [],
+      "stop_reason": null
     }
   ]
 }

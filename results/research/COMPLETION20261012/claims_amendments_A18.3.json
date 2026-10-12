@@ -1,0 +1,630 @@
+{
+  "schema": 1,
+  "task": "A18.3",
+  "review": "docs/execplan/evidence/A18.3_independent_review.json",
+  "review_sha256": "89531350ccecab6cb78afe652a84a766b451489a8ec2fe5dba04873d8eabb996",
+  "recounts": {
+    "half_intensity|nca|mean": 88.73678352810239,
+    "half_intensity|nca|min": 76.79465776293823,
+    "half_intensity|nca|max": 93.87868670005565,
+    "half_intensity|cnn|mean": 67.05620478575403,
+    "half_intensity|cnn|min": 59.821925431274344,
+    "half_intensity|cnn|max": 75.40345019476906,
+    "half_intensity|diff|mean": 21.680578742348363,
+    "half_intensity|diff|lo": 8.44029492080962,
+    "half_intensity|diff|hi": 34.920862563887106,
+    "shift_right_crop|nca|mean": 55.826377295492485,
+    "shift_right_crop|nca|min": 42.68224819143016,
+    "shift_right_crop|nca|max": 70.17250973845297,
+    "shift_right_crop|cnn|mean": 85.11964385086254,
+    "shift_right_crop|cnn|min": 80.18920422927101,
+    "shift_right_crop|cnn|max": 90.70673344462993,
+    "shift_right_crop|diff|mean": -29.29326655537006,
+    "shift_right_crop|diff|lo": -45.696489007962015,
+    "shift_right_crop|diff|hi": -12.89004410277811,
+    "R11|overlapping_workloads": 4
+  },
+  "edits": [
+    {
+      "claim": "HT-08",
+      "edit": "receipt_located",
+      "path": "results/research/08_cloud_runs/37584119610-1/execution_plan.json"
+    },
+    {
+      "claim": "HT-10",
+      "edit": "receipt_located",
+      "path": "results/research/10_cloud_runs/37615277149-1-study/source.zip"
+    },
+    {
+      "claim": "HT-10",
+      "edit": "receipt_located",
+      "path": "results/research/10_cloud_runs/37618268225-1-audit/analysis/scientific_audit.json"
+    },
+    {
+      "claim": "D-DEV04-01",
+      "edit": "receipt_located",
+      "path": "results/research/DEV04_review/37845945011/analysis/report_recount.json"
+    },
+    {
+      "claim": "D-DEV04-01",
+      "edit": "receipt_located",
+      "path": "results/research/DEV04_review/37845945011/analysis/summary.json"
+    },
+    {
+      "claim": "D-DEV04-01",
+      "edit": "receipt_located",
+      "path": "results/research/DEV04_review/37845945011/analysis/policies.csv"
+    },
+    {
+      "claim": "D-DEV04-01",
+      "edit": "receipt_located",
+      "path": "results/research/DEV04_review/37845945011/analysis/pairs.csv"
+    },
+    {
+      "claim": "D-DEV04-01",
+      "edit": "receipt_located",
+      "path": "results/research/DEV04_review/37845945011/analysis/heads.csv"
+    },
+    {
+      "claim": "D-GLOB05-01",
+      "edit": "receipt_located",
+      "path": "results/research/GLOB05_review/37887762153/analysis/summary.json"
+    },
+    {
+      "claim": "D-GLOB05-01",
+      "edit": "receipt_located",
+      "path": "results/research/GLOB05_review/37887762153/analysis/cases.csv"
+    },
+    {
+      "claim": "D-VIS07-01",
+      "edit": "receipt_located",
+      "path": "results/research/VIS07MAIN_cloud/37908785698/raw.zip"
+    },
+    {
+      "claim": "D-VIS07-03",
+      "edit": "receipt_located",
+      "path": "results/research/VIS07REPLAY_cloud/37911162172/raw.zip"
+    },
+    {
+      "claim": "D-VIS07-04",
+      "edit": "receipt_located",
+      "path": "results/research/VIS07MAIN_cloud/37908785698/raw.zip"
+    },
+    {
+      "claim": "D-MODE-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_modes/OPT03D_pad0_fire0.5_seed101.json"
+    },
+    {
+      "claim": "D-ROLE-02",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_roles_review/partial_audit.json"
+    },
+    {
+      "claim": "D-QT-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/groups.csv"
+    },
+    {
+      "claim": "D-QT-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/analysis_manifest.json"
+    },
+    {
+      "claim": "D-QT-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/cases.csv"
+    },
+    {
+      "claim": "D-QT-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/effects.csv"
+    },
+    {
+      "claim": "D-QT-02",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_review/37728384380/analysis/summary.json"
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/effects.csv"
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/groups.csv"
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/cases.csv"
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/answer_loss_continuation.svg"
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/descriptive_diagnostics.json"
+    },
+    {
+      "claim": "D-U16-02",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/effects.csv"
+    },
+    {
+      "claim": "D-U16-03",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/analysis/summary.json"
+    },
+    {
+      "claim": "D-U16-03",
+      "edit": "receipt_located",
+      "path": "results/research/OPT03_QTRAIN_U16_review/37771588722/descriptive_diagnostics.json"
+    },
+    {
+      "claim": "D-READ03-01",
+      "edit": "receipt_located",
+      "path": "results/research/READ03_review/37831051538/analysis/effects.csv"
+    },
+    {
+      "claim": "D-READ03-01",
+      "edit": "receipt_located",
+      "path": "results/research/READ03_review/37831051538/analysis/cases.csv"
+    },
+    {
+      "claim": "D-VIS07-01",
+      "edit": "replace",
+      "detail": [
+        "(1,797 images, writer-separated;",
+        "(1,797 images, writer-separated according to the UCI metadata, individual writer identifiers not independently verified;"
+      ]
+    },
+    {
+      "claim": "D-VIS07-01",
+      "edit": "limit",
+      "detail": [
+        "Robustness to a one-column shift was far worse than the CNN (55.826% versus 85.120%; D-VIS07-05)"
+      ]
+    },
+    {
+      "claim": "D-VIS07-01",
+      "edit": "receipt",
+      "detail": [
+        "results/research/VIS07MAIN_cloud/37908785698/raw.zip"
+      ]
+    },
+    {
+      "claim": "D-VIS07-01",
+      "edit": "receipt",
+      "detail": [
+        "results/research/SPRINT_review/VIS07_summary.json"
+      ]
+    },
+    {
+      "claim": "D-VIS07-01",
+      "edit": "units",
+      "detail": [
+        "['S001-L0063', 'S003-L0037', 'S003-L0039']"
+      ]
+    },
+    {
+      "claim": "D-VIS07-03",
+      "edit": "receipt",
+      "detail": [
+        "results/research/VIS07REPLAY_cloud/37911162172/raw.zip"
+      ]
+    },
+    {
+      "claim": "D-VIS07-04",
+      "edit": "receipt",
+      "detail": [
+        "results/research/VIS07MAIN_cloud/37908785698/raw.zip"
+      ]
+    },
+    {
+      "claim": "D-VIS07-04",
+      "edit": "receipt",
+      "detail": [
+        "results/research/SPRINT_review/VIS07_summary.json"
+      ]
+    },
+    {
+      "claim": "D-SCN06-01",
+      "edit": "receipt",
+      "detail": [
+        "results/research/SCN06_review/recovery_receipt.json"
+      ]
+    },
+    {
+      "claim": "D-SCN06-01",
+      "edit": "limit",
+      "detail": [
+        "A single constructed (assigned-state) experiment; there are no statistical units"
+      ]
+    },
+    {
+      "claim": "D-SCN06-02",
+      "edit": "replace",
+      "detail": [
+        "A separately frozen matrix census",
+        "A separately frozen retrospective matrix census"
+      ]
+    },
+    {
+      "claim": "D-SCN06-02",
+      "edit": "level",
+      "detail": [
+        "engineering_complete",
+        "1"
+      ]
+    },
+    {
+      "claim": "D-SCN06-02",
+      "edit": "limit",
+      "detail": [
+        "Deterministic retrospective census; level lowered to L1 by the A18.3 review"
+      ]
+    },
+    {
+      "claim": "H06-06",
+      "edit": "replace",
+      "detail": [
+        "and a random router by +16.178 pp,",
+        "and a random router by +16.178 pp (interval -2.434 to +34.791, including zero),"
+      ]
+    },
+    {
+      "claim": "H06-06",
+      "edit": "limit",
+      "detail": [
+        "Retrospective Holm sensitivity over 40 contrasts: none survives; the uniform-mixture contrast has unadjusted p = 0.0413 and Holm p = 1.0"
+      ]
+    },
+    {
+      "claim": "H06-06",
+      "edit": "check",
+      "detail": [
+        "-2.434",
+        "results/research/06_A06_1_recovery/audit_saved.json"
+      ]
+    },
+    {
+      "claim": "H06-06",
+      "edit": "check",
+      "detail": [
+        "34.791",
+        "results/research/06_A06_1_recovery/audit_saved.json"
+      ]
+    },
+    {
+      "claim": "H06-06",
+      "edit": "check",
+      "detail": [
+        "0.0413",
+        "results/research/06_A06_1_recovery/multiplicity_sensitivity.json"
+      ]
+    },
+    {
+      "claim": "H06-03",
+      "edit": "replace",
+      "detail": [
+        "T1 versus T16 +0.146 pp;",
+        "T1 versus T16 +0.146 pp (-14.123 to +14.416);"
+      ]
+    },
+    {
+      "claim": "H06-03",
+      "edit": "check",
+      "detail": [
+        "-14.123",
+        "results/research/06_A06_1_recovery/audit_saved.json"
+      ]
+    },
+    {
+      "claim": "H06-03",
+      "edit": "check",
+      "detail": [
+        "14.416",
+        "results/research/06_A06_1_recovery/audit_saved.json"
+      ]
+    },
+    {
+      "claim": "H04-03",
+      "edit": "level",
+      "detail": [
+        "engineering_complete",
+        "1"
+      ]
+    },
+    {
+      "claim": "H04-03",
+      "edit": "limit",
+      "detail": [
+        "Recount of retained predictions performed in the completion phase; level lowered to L1 by the A18.3 review"
+      ]
+    },
+    {
+      "claim": "D-QT-02",
+      "edit": "receipt",
+      "detail": [
+        "results/research/OPT03_QTRAIN_review/37728384380/closure_receipt.json"
+      ]
+    },
+    {
+      "claim": "D-QT-03",
+      "edit": "limit",
+      "detail": [
+        "Descriptive curve values from one seed; no statistical inference"
+      ]
+    },
+    {
+      "claim": "P-COST-01",
+      "edit": "limit",
+      "detail": [
+        "Sums of recorded timers; no statistical units"
+      ]
+    },
+    {
+      "claim": "D-OPT03D-02",
+      "edit": "receipt",
+      "detail": [
+        "results/research/OPT03_cloud_recovery/37696760073/original.zip"
+      ]
+    },
+    {
+      "claim": "D-ROLE-02",
+      "edit": "receipt",
+      "detail": [
+        "results/research/OPT03_roles_review/partial_audit.json"
+      ]
+    },
+    {
+      "claim": "D-READ03-01",
+      "edit": "replace",
+      "detail": [
+        "gave +54.225 pp (exploratory",
+        "gave +54.225 pp averaged over the four original conditions (exploratory"
+      ]
+    },
+    {
+      "claim": "D-READ03-01",
+      "edit": "replace",
+      "detail": [
+        "only four-queries/school-0.3 attention passed the joint gate in all three seeds.",
+        "only four-queries/school-0.3 attention passed the joint gate in all three seeds; attention failed it in the other three conditions."
+      ]
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "limit",
+      "detail": [
+        "Values are in the training-matched firing-0.5 mode; dense-mode joint accuracy for the same cell is lower (80.176/79.785/63.184%)"
+      ]
+    },
+    {
+      "claim": "D-U16-01",
+      "edit": "check",
+      "detail": [
+        "79.785",
+        "results/research/OPT03_QTRAIN_U16_review/37771588722/"
+      ]
+    },
+    {
+      "claim": "G-R11-01",
+      "edit": "limit",
+      "detail": [
+        "Technical min-max ranges of the best render and best CUDA methods overlap in 4 of 7 workloads; the C48 grid8/grid32 differences are about 1%"
+      ]
+    },
+    {
+      "claim": "G-R11-01",
+      "edit": "check",
+      "detail": [
+        "recount:R11|overlapping_workloads",
+        "4"
+      ]
+    },
+    {
+      "claim": "H05-05",
+      "edit": "limit",
+      "detail": [
+        "Three coupled seeds cannot isolate the variances; no historical significance decision was made"
+      ]
+    },
+    {
+      "claim": "H05-05",
+      "edit": "limit",
+      "detail": [
+        "Describes these trained models, not Transformers as an architectural family"
+      ]
+    },
+    {
+      "claim": "H05-05",
+      "edit": "limit",
+      "detail": [
+        "Seed-2 scores are normalized JSON snapshots from the owner's existing project"
+      ]
+    },
+    {
+      "claim": "H04-01",
+      "edit": "limit",
+      "detail": [
+        "An unfavorable result is not proof of architectural incapacity; adapted NCA (11.914%) and ConvGRU (13.574%) also scored low"
+      ]
+    },
+    {
+      "claim": "H04-01",
+      "edit": "limit",
+      "detail": [
+        "The NCA models use random firing in training and synchronous updates in evaluation; the causal contribution of that difference is not isolated"
+      ]
+    },
+    {
+      "claim": "D-OPT03D-01",
+      "edit": "limit",
+      "detail": [
+        "The bound protocol is the local CRLF copy (sha256 bf54be3c...); the executed LF plan (f1caada1...) is byte-identical after CRLF-to-LF conversion (D-OPT03D-02)"
+      ]
+    },
+    {
+      "claim": "P-MATH-01",
+      "edit": "replace",
+      "detail": [
+        "its 38 contract and 25 extension tests passed in the pinned environment.",
+        "the kit test suites (38 contract and 25 extension tests), which include tests of these modules, passed in the pinned environment."
+      ]
+    },
+    {
+      "claim": "P-T0-01",
+      "edit": "limit",
+      "detail": [
+        "New-phase claim created after the A18.1 source freeze; not yet stated in the public texts"
+      ]
+    },
+    {
+      "claim": "D-VIS07-05",
+      "edit": "new_claim"
+    }
+  ],
+  "checks": [
+    {
+      "claim": "H06-06",
+      "check": "-2.434",
+      "source": "results/research/06_A06_1_recovery/audit_saved.json",
+      "ok": true
+    },
+    {
+      "claim": "H06-06",
+      "check": "34.791",
+      "source": "results/research/06_A06_1_recovery/audit_saved.json",
+      "ok": true
+    },
+    {
+      "claim": "H06-06",
+      "check": "0.0413",
+      "source": "results/research/06_A06_1_recovery/multiplicity_sensitivity.json",
+      "ok": true
+    },
+    {
+      "claim": "H06-03",
+      "check": "-14.123",
+      "source": "results/research/06_A06_1_recovery/audit_saved.json",
+      "ok": true
+    },
+    {
+      "claim": "H06-03",
+      "check": "14.416",
+      "source": "results/research/06_A06_1_recovery/audit_saved.json",
+      "ok": true
+    },
+    {
+      "claim": "D-U16-01",
+      "check": "79.785",
+      "source": "results/research/OPT03_QTRAIN_U16_review/37771588722/",
+      "ok": true
+    },
+    {
+      "claim": "G-R11-01",
+      "check": "recount:R11|overlapping_workloads",
+      "expected": "4",
+      "observed": 4,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:half_intensity|nca|mean",
+      "expected": "88.737",
+      "observed": 88.73678352810239,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:half_intensity|cnn|mean",
+      "expected": "67.056",
+      "observed": 67.05620478575403,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:half_intensity|diff|mean",
+      "expected": "21.681",
+      "observed": 21.680578742348363,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|nca|mean",
+      "expected": "55.826",
+      "observed": 55.826377295492485,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|cnn|mean",
+      "expected": "85.120",
+      "observed": 85.11964385086254,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|diff|mean",
+      "expected": "-29.293",
+      "observed": -29.29326655537006,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|diff|lo",
+      "expected": "-45.696",
+      "observed": -45.696489007962015,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|diff|hi",
+      "expected": "-12.890",
+      "observed": -12.89004410277811,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:half_intensity|diff|lo",
+      "expected": "8.440",
+      "observed": 8.44029492080962,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:half_intensity|diff|hi",
+      "expected": "34.921",
+      "observed": 34.920862563887106,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|nca|min",
+      "expected": "42.7",
+      "observed": 42.68224819143016,
+      "ok": true
+    },
+    {
+      "claim": "D-VIS07-05",
+      "check": "recount:shift_right_crop|nca|max",
+      "expected": "70.2",
+      "observed": 70.17250973845297,
+      "ok": true
+    }
+  ],
+  "coverage_notes": [
+    {
+      "candidate": "S003-L0075",
+      "decision": "kept as governance",
+      "reason": "Restates the operational rule that closed fits are not rerun; process statement, not a result"
+    }
+  ],
+  "problems": []
+}

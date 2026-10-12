@@ -24,3 +24,13 @@ The A18.2 review compared every public sentence with retained receipts. The corr
 | `README.md` | 43 | H05-05 | Historical figure labelled with its evidence level and the prospective negative result. |
 
 Evidence levels for every public claim are in `docs/research/claims_ledger.json` (73 claims; maximum declared level L2). Claims at L0 `blocked_external` depend on the owner recovering the item-5 executor archive.
+
+## Round 2 (after the independent verifier)
+
+| File | Line | Claim | Reason |
+|---|---:|---|---|
+| `docs/research/VIS07_results.md` | 15 | D-VIS07-05 | Registered transformation conditions were executed but not reported. |
+| `README.md` | 26 | D-VIS07-05 | The headline row omitted the registered robustness conditions, one of them strongly negative. |
+| `docs/papers/NeuroPixel_manuscript_20261009.md` | 49 | D-VIS07-05 | Registered transformation conditions were executed but not reported. |
+
+Pre-round bytes are archived in `docs/archive/completion_20261012/A18_round2/`; the log with hashes is `results/research/COMPLETION20261012/A18_text_corrections_round2.json`. The verifier report (`docs/execplan/evidence/A18.3_independent_review.json`) also led to registry amendments recorded in `results/research/COMPLETION20261012/claims_amendments_A18.3.json`.
