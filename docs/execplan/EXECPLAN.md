@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T22:36:47+00:00
-- Tarea en curso o siguiente: G20.2, Comparacion directa con Hopfield: memoria y reparacion con el mismo estado; intento 1; presupuesto 90 minutos.
-- Criterio de cierre: Plan congelado y fijado por hash antes de ejecutar; Hopfield global, Hopfield local y decodificador explicito evaluados en toda la rejilla registrada; resultados con negativos e informe en ingles.
-- Hecho en esta tarea: Plan ANT01 congelado (commit d2700793, sha 38436579); ejecutor escrito
-- Falta en esta tarea: Ejecutar ANT01 (CPU numpy), informe en ingles, afirmacion en registro, cierre
-- Siguiente comando exacto: python docs/execplan/run_evidence.py --out docs/execplan/evidence/G20.2_run.txt -- <kit python> scripts/run_ANT01.py
+- Actualizado (UTC): 2026-10-12T22:47:16+00:00
+- Tarea en curso o siguiente: G2.2, Ejecutar Torch historico y regresiones CPU relevantes; intento 1; presupuesto 30 minutos tras admision.
+- Criterio de cierre: Tres pruebas Torch en entorno real y regresiones PAD, denominadores, routing, clases, mascaras, logits completos, finitud y persistencia ejecutadas. Paridad positiva original/nuevo con mismos pesos, entradas y RNG; evidencia y versiones guardadas; guard8GiB.
+- Hecho en esta tarea: 25/49 cerradas; sin tareas elegibles: todo depende de G2.2 (RAM>=8GiB) o de bloqueos externos; G2.2 preparada (tests/test_g2_runtime_contracts.py, scripts/completion_g2_runtime.py)
+- Falta en esta tarea: Cuando haya RAM: reopen G2.2, start, ejecutar runner, cerrar; luego G2.3 por gpuq y G2
+- Siguiente comando exacto: python docs/execplan/plan_status.py reopen G2.2 --note 'RAM disponible' && python docs/execplan/plan_status.py start G2.2 && python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_runtime.txt --timeout 2400 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g2_runtime.py
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: Sin GPU ni Torch; resultados exploratorios
+- Dudas o riesgos abiertos: RAM libre 3-6 GiB por procesos ajenos (no se detienen); GPU ocupada por la cola villa
 
 ## Propósito
 
@@ -202,6 +202,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [x] (2026-10-12T22:38:34+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
 - [x] (2026-10-12T22:38:34+00:00) G20.2: done; commit 4a68e382c66c3bd398534f1eb7ca079020f8a5dc; ANT01: plan congelado antes de ejecutar; Hopfield global domina al local con mismo estado y el decodificador explicito domina todo; PR1 24/24, PR2 60/60; afirmacion ANT01-01 L2.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T22:47:16+00:00) G2.2, intento 1: hecho 25/49 cerradas; sin tareas elegibles: todo depende de G2.2 (RAM>=8GiB) o de bloqueos externos; G2.2 preparada (tests/test_g2_runtime_contracts.py, scripts/completion_g2_runtime.py); falta Cuando haya RAM: reopen G2.2, start, ejecutar runner, cerrar; luego G2.3 por gpuq y G2. Siguiente: `python docs/execplan/plan_status.py reopen G2.2 --note 'RAM disponible' && python docs/execplan/plan_status.py start G2.2 && python docs/execplan/run_evidence.py --out docs/execplan/evidence/G2.2_runtime.txt --timeout 2400 -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g2_runtime.py`.
 
 ## Sorpresas y hallazgos
 

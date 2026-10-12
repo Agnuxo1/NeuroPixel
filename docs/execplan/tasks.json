@@ -1218,9 +1218,26 @@
         "P0.4"
       ],
       "acceptance": "Comparator ejecutado para DirectCrouzeix y CourtadeKumar con stdout/stderr, código de salida, versiones y axiomas guardados, o estado formalization_rebuild_pending documentado.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T22:44Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/M3_formalization_status.json",
+          "sha256_lf": "0c017d783ae21f9736fccacca510c917aabf0da8ebf377491bca2015f0145f04"
+        },
+        {
+          "path": "scripts/formal/m3_comparator_rebuild.sh",
+          "sha256_lf": "23f97e01b21eaaea995a075cdeb0e38c8e52ae14d3c5a0895069da750d96f429"
+        },
+        {
+          "path": "docs/execplan/evidence/M3_wsl_environment.txt",
+          "sha256_lf": "619968e66f180b5bb10075bbe3a8539a1a78a13ac396b7104571f14353185f5c"
+        }
+      ],
+      "commit": "54773a837e51b91d0b96db96bab923381fbee1e4",
+      "closed": "2026-10-12T22:45Z",
+      "note": "Estado formalization_rebuild_pending documentado: WSL con Landlock activo pero sin toolchain ni Comparator; descargas y ubicacion en E: pendientes de aprobacion (M3.ext)."
     },
     {
       "id": "G9",
@@ -1427,8 +1444,16 @@
       "depends_on": [
         "M3"
       ],
-      "status": "pending"
+      "status": "blocked_external",
+      "note": "Propietario: aprobar descargas (toolchain, openai/math, cache Mathlib, comparator, landrun, lean4export) en E:.",
+      "blocked": "2026-10-12T22:45Z",
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/M3_formalization_status.json",
+          "sha256_lf": "0c017d783ae21f9736fccacca510c917aabf0da8ebf377491bca2015f0145f04"
+        }
+      ]
     }
   ],
-  "updated": "2026-10-12T22:44Z"
+  "updated": "2026-10-12T22:45Z"
 }

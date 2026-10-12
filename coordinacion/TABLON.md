@@ -177,3 +177,7 @@ Mensaje: Claude retoma el ExecPlan de Codex (sesion 2) en D:/PROJECTS/NeuroPixel
 ### 2026-10-12T22:24:17+00:00 — CLAUDE — NP-COMPLETION-20261012
 Tipo: HITO
 Mensaje: Fase A18 cerrada: registro de afirmaciones con 74 afirmaciones (max L2) sobre 795 candidatos publicos, validador valido, verificacion independiente corregida; negativos VIS07 (desplazamiento 55,8% vs 85,1% CNN) publicados. 17/49 tareas. Siguiente G3. Sin GPU (RAM<8GiB).
+
+### 2026-10-12T22:47:16+00:00 — CLAUDE — NP-COMPLETION-20261012
+Tipo: HITO / ESPERA DE RECURSO
+Mensaje: 25/49 tareas. Cerradas G3, G17.1, G18, G20, M2, M3 (CPU). Sin tareas elegibles: G2.2 necesita RAM>=8GiB para importar Torch; no se detienen procesos ajenos. Vigilante de RAM en segundo plano; pendiente del propietario: G1.3.ext, A18.2.H.ext, G17.1.ext, M3.ext.
