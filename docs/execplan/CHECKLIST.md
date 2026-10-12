@@ -10,7 +10,7 @@
 
 ## G0 Inventario
 
-- [ ] **IN PROGRESS** G0 Congelar inventario y restaurar trazabilidad (§5) (attempt 1)
+- [x] ~~G0 Congelar inventario y restaurar trazabilidad (§5)~~ 2026-10-12T11:45Z `9bb4645443`
 
 ## G1 Energía y publicación
 
