@@ -40,7 +40,7 @@
 
 ## 18A Afirmaciones historicas
 
-- [ ] **IN PROGRESS** A18.2.H Revisar afirmaciones historicas y sus discrepancias (§18A) (attempt 1)
+- [x] ~~A18.2.H Revisar afirmaciones historicas y sus discrepancias (§18A)~~ 2026-10-12T21:37Z `d1b09d0a75`
 
 ## 18A Desarrollo y vision
 
@@ -171,3 +171,7 @@
 ## G1 Dependencia externa
 
 - [ ] BLOCKED (external) G1.3.ext Publicacion por el propietario del paquete G1 reconciliado (§6.3): Paquete78archivos verificado en commitba9f3f84 previo aT0; propietario debe revisar y publicar esa version. Ningun push ni publicacion ejecutados.
+
+## 18A Afirmaciones historicas
+
+- [ ] BLOCKED (external) A18.2.H.ext Recuperacion por el propietario del archivo crudo del estudio 05 (§18A): Propietario debe recuperar del ejecutor Linux (commit 0a56621) el archivo crudo del estudio 05; ninguna accion externa ejecutada.

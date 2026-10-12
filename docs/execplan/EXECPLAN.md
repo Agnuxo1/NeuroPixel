@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T21:26:05+00:00
-- Tarea en curso o siguiente: A18.2.H, Revisar afirmaciones historicas y sus discrepancias; intento 1; presupuesto 90 minutos.
-- Criterio de cierre: Cada candidato del grupo A18.2.H se divide semanticamente o se excluye con razon editorial; afirmaciones inglesas vinculadas a poblacion, limites, protocolos y recibos existentes, sin sustituir faltantes por resumen ni reabrir estudios.
-- Hecho en esta tarea: JEV provenance=jev: importar recibos historicos autenticados (0,98), estudio05 L0 blocked_external (0,96), auditorias L1 (1,0); recibos 04/06/continuaciones localizados en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; seleccion 04 SHA a62300cf coincide
-- Falta en esta tarea: 1 importar con manifiesto; 2 verificar transfer_manifest 04; 3 tabla de revision 305 candidatos y reclamaciones; 4 comprobar valores contra recibos; 5 validador parcial; 6 evidencia y cierre
-- Siguiente comando exacto: python scripts/completion_import_historical_receipts.py
+- Actualizado (UTC): 2026-10-12T21:38:11+00:00
+- Tarea en curso o siguiente: A18.2.D, Revisar afirmaciones de desarrollo, scanner y vision; intento 1; presupuesto 90 minutos.
+- Criterio de cierre: Todos los candidatos A18.2.D revisados, con negative e incertidumbre conservadas; niveles sustentados por evidencia real y sin inventar apoyo prospectivo, custodia ni replicacion externa.
+- Hecho en esta tarea: A18.2.H cerrada (commit d1b09d0a): 305/305, 33 afirmaciones, validador valido; A18.2.H.ext bloqueada externamente
+- Falta en esta tarea: Leer candidatos D (234: DEV04, GLOB05, OPT03, READ03, SCN06, VIS07), localizar recibos, clasificar con el mismo metodo
+- Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.D
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: 05 sin archivo crudo (paquete propietario); RAM<8GiB bloquea G2.2
+- Dudas o riesgos abiertos: RAM<8GiB bloquea G2.2; algunos estudios D con dependencias ausentes (OPT03_*, READ03)
 
 ## Propósito
 
@@ -186,15 +186,16 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [ ] (2026-10-12T12:05:41+00:00) A18.2, intento 1: hecho Inventario A18.1 cerrado; guard Torch rechazado y publicacion externa retenida.; falta Clasificar todas las unidades, separar afirmaciones y exclusions editoriales; vincular protocolo, recibos, poblacion y limites; dividir por grupos antes de empezar.. Siguiente: `python docs/execplan/plan_status.py next`.
 
-- [ ] (2026-10-12T12:09:13+00:00) A18.2.H, intento 1: hecho 795 candidatos particionados sin omisiones; revision H/D/G/P separada antes de iniciar; G1 paquete anclado al commit inmutable previo aT0.; falta Leer solo candidatos del grupoH y verificar artefactos de cada afirmacion; clasificar semanticamente en ingles; cerrar con evidencia.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
 
-- [ ] (2026-10-12T12:11:47+00:00) A18.2.H, intento 1: hecho Sesion1 registrada:10/48 cerradas; 37 originales y criterios intactos; 25 fuentes/795 unidades congeladas; sin tareas activas propias.; falta Iniciar revision de305 unidades historicas y vincular evidencia real; no asignar L3 sin compromiso publico externo.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
 
-- [ ] (2026-10-12T21:26:05+00:00) A18.2.H, intento 1: hecho JEV provenance=jev: importar recibos historicos autenticados (0,98), estudio05 L0 blocked_external (0,96), auditorias L1 (1,0); recibos 04/06/continuaciones localizados en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; seleccion 04 SHA a62300cf coincide; falta 1 importar con manifiesto; 2 verificar transfer_manifest 04; 3 tabla de revision 305 candidatos y reclamaciones; 4 comprobar valores contra recibos; 5 validador parcial; 6 evidencia y cierre. Siguiente: `python scripts/completion_import_historical_receipts.py`.
+- [x] (2026-10-12T21:38:11+00:00) A18.2.H: done; commit d1b09d0a75d1789301bcac90a1eb611795bf36b8; 305/305 candidatos clasificados; 33 afirmaciones (12 L2, 12 L1, 9 L0); validador valido; estudio05 L0 blocked_external por archivo crudo ausente; 1 discrepancia de redondeo A06.1.; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T21:38:11+00:00) A18.2.D, intento 1: hecho A18.2.H cerrada (commit d1b09d0a): 305/305, 33 afirmaciones, validador valido; A18.2.H.ext bloqueada externamente; falta Leer candidatos D (234: DEV04, GLOB05, OPT03, READ03, SCN06, VIS07), localizar recibos, clasificar con el mismo metodo. Siguiente: `python docs/execplan/plan_status.py start A18.2.D`.
 
 ## Sorpresas y hallazgos
 
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
+- A18.2.H (2026-10-12, Claude): los recibos de 04, A06.1 y conciliacion no estaban en el arbol publicado pero si, intactos, en D:/PROJECTS/NeuroPixel-Validation-20261006 y -20261007-continuation; se importaron autenticados (seleccion 04 a62300cf, original.zip 61cbc148 y closure_receipt A06.1). El archivo crudo del estudio 05 no existe en ningun sitio local ni remoto. Discrepancia: informe A06.1 linea 38 da -0,272 pero el recibo da -0,27145 (redondea a -0,271).
 
 ## Registro de decisiones
 
@@ -208,12 +209,14 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia o regla de la guía).
 
 - 2026-10-12T11:31:06.027278+00:00 · bootstrap ligero sin carga neural · RAM <8 GiB · JEV connected/provenance=jev, route lightweight_isolated_bootstrap, confianza 1,0; evidence/P0.1_jev.json.
+- 2026-10-12 · A18.2.H: importar recibos historicos autenticados a rutas documentadas (0,98), estudio05 en L0 blocked_external sin sustituir por resumen (0,96), auditorias sin protocolo congelado en L1 (1,0) · JEV provenance=jev · docs/execplan/evidence/A18.2.H_jev.txt.
 
 ## Pendiente del propietario
 
 Acciones externas preparadas y no ejecutadas.
 
 - G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Version publicable anclada al commit ba9f3f84 y verificada en G1_owner_publication_locator.json; la rama actual contiene el parche T0 separado. No push ni publicacion ejecutados.
+- A18.2.H.ext: recuperar del ejecutor Linux (commit 0a56621; workspace /workspace/scratch/61d6e3e6e688) el archivo crudo del estudio 05: 05_experiment/ (215 archivos), 05_analysis.json (11fd91ee...), 05_independent_check.json (adef6b11...), salidas historicas 05_historical*. Paquete: results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json. Sin contacto ni accion externa.
 
 ## Resultados y retrospectiva
 

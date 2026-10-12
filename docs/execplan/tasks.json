@@ -436,9 +436,42 @@
       "depends_on": [
         "A18.1"
       ],
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T21:15Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/claim_review_H.json",
+          "sha256_lf": "f23e2ffe95688293fa527632e30ffcb0ced9415dbd95e0cae58db50c4932ce33"
+        },
+        {
+          "path": "docs/research/claims_ledger_parts/A18.2.H.json",
+          "sha256_lf": "1110d783733d610f2269e5809657a067649774d90ca919a8b37c07714883e9c1"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/claims_audit_H.json",
+          "sha256_lf": "14473e19d42d4143b9e4ccb42b25b1c9e77f305e5498c6546ff028b927c293fe"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/historical_value_checks_H.json",
+          "sha256_lf": "ec0815ccf6a26cdbbf1aad6e1cd15d62da25eb4b5940d06d6512651de7de91e7"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/historical_receipt_import.json",
+          "sha256_lf": "5ff6f2c7a97c3f49fbfab8dfd024ee41089253a9c0a535449b62bd3f6dd31927"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.H_review.txt",
+          "sha256_lf": "7fb03b85b2991b268e19f3cf1fad3b555a5af3fc991f32eb43b290cf01c3bb57"
+        },
+        {
+          "path": "docs/execplan/evidence/A18.2.H_validator.txt",
+          "sha256_lf": "87c01185339d20fbcdfb19f4f69b27f90a8f8aebd48f41b5054675c5251ebe33"
+        }
+      ],
+      "commit": "d1b09d0a75d1789301bcac90a1eb611795bf36b8",
+      "closed": "2026-10-12T21:37Z",
+      "note": "305/305 candidatos clasificados; 33 afirmaciones (12 L2, 12 L1, 9 L0); validador valido; estudio05 L0 blocked_external por archivo crudo ausente; 1 discrepancia de redondeo A06.1."
     },
     {
       "id": "A18.2.D",
@@ -853,7 +886,26 @@
           "sha256_lf": "53fbda4b9b95e0749bb28ae7a11048bc99b1ed6c3f747215ba4c1d0c49bb4cae"
         }
       ]
+    },
+    {
+      "id": "A18.2.H.ext",
+      "title": "Recuperacion por el propietario del archivo crudo del estudio 05",
+      "phase": "18A Afirmaciones historicas",
+      "section": "18A",
+      "acceptance": "Archivo de 215 archivos, 05_analysis.json (11fd91ee...) y 05_independent_check.json (adef6b11...) recuperados con hashes coincidentes; H05-* revinculadas y validador aceptando el nivel resultante.",
+      "depends_on": [
+        "A18.2.H"
+      ],
+      "status": "blocked_external",
+      "note": "Propietario debe recuperar del ejecutor Linux (commit 0a56621) el archivo crudo del estudio 05; ninguna accion externa ejecutada.",
+      "blocked": "2026-10-12T21:37Z",
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json",
+          "sha256_lf": "e11cb8a0f53263d71cddb7c6bd8622fd772320d6e05ff5a540899c3d3e0ccade"
+        }
+      ]
     }
   ],
-  "updated": "2026-10-12T21:15Z"
+  "updated": "2026-10-12T21:37Z"
 }
