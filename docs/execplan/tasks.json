@@ -212,9 +212,26 @@
         "G0"
       ],
       "acceptance": "energy_inventory.json generado con las dos claves ausentes derivadas del plan y del recibo, sin medir nada nuevo.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:47Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "results/research/COMPLETION20261012/energy_inventory.json",
+          "sha256_lf": "fda7e01bac7b0f503857d730061798f596c327be9a6a6b290ccd06045da968f0"
+        },
+        {
+          "path": "docs/execplan/evidence/G1.1_inspect.txt",
+          "sha256_lf": "eb03c4fd89ba19dc6fc2425884900408ce5f09a214a69ce1de457941e6cc9c69"
+        },
+        {
+          "path": "docs/execplan/evidence/G1_jev.txt",
+          "sha256_lf": "d5caeceda2fb23630d15b1cc1900f3525756bbe5b837a704325e01699ad4f3ed"
+        }
+      ],
+      "commit": "6344902cc82f000025c8aadf31c86002a4e727c5",
+      "closed": "2026-10-12T11:47Z",
+      "note": "103 de 105 filas; dos claves derivadas del plan y recibo sin nuevas mediciones."
     },
     {
       "id": "G1.2",

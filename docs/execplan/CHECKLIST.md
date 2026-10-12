@@ -14,7 +14,7 @@
 
 ## G1 Energía y publicación
 
-- [ ] **IN PROGRESS** G1.1 Inspección del recibo RENDER11 e inventario energético (CPU) (§6.2) (attempt 1)
+- [x] ~~G1.1 Inspección del recibo RENDER11 e inventario energético (CPU) (§6.2)~~ 2026-10-12T11:47Z `6344902cc8`
 - [ ] G1.2 Recuperación de las dos claves físicas pendientes (GPU, solo por gpuq) (§6.2)
 - [ ] G1.3 Reconciliación editorial y auditoría documental posterior (§6)
 
