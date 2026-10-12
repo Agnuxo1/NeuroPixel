@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:45:42+00:00
+- Actualizado (UTC): 2026-10-12T11:47:39+00:00
 - Tarea en curso o siguiente: G1.1, Inspección del recibo RENDER11 e inventario energético (CPU); intento 1; presupuesto 15 minutos.
 - Criterio de cierre: energy_inventory.json generado con las dos claves ausentes derivadas del plan y del recibo, sin medir nada nuevo.
-- Hecho en esta tarea: G0 cerrada; §6.2 consultada; recovery autentica existe en checkout de integracion, por verificar.
-- Falta en esta tarea: Inspeccionar recibo original y derivar dos claves pendientes sin medir.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start G1.1
+- Hecho en esta tarea: Inventario CPU: 103 de 105 filas; faltan RGB8_retina_C16/block2/render y vector_render; ninguna medicion.
+- Falta en esta tarea: Commit y close.
+- Siguiente comando exacto: git add docs/execplan results/research/COMPLETION20261012/energy_inventory.json
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -154,6 +154,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:45:41+00:00) G0: done; commit 9bb4645443129a3987b036cb86199a3736a6e9b2; 1797 originales y 44 arboles sin discrepancias; 417 extras y 19 informes mapeados; dependencias explicitas.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T11:45:42+00:00) G1.1, intento 1: hecho G0 cerrada; §6.2 consultada; recovery autentica existe en checkout de integracion, por verificar.; falta Inspeccionar recibo original y derivar dos claves pendientes sin medir.. Siguiente: `python docs/execplan/plan_status.py start G1.1`.
+
+- [ ] (2026-10-12T11:47:39+00:00) G1.1, intento 1: hecho Inventario CPU: 103 de 105 filas; faltan RGB8_retina_C16/block2/render y vector_render; ninguna medicion.; falta Commit y close.. Siguiente: `git add docs/execplan results/research/COMPLETION20261012/energy_inventory.json`.
 
 ## Sorpresas y hallazgos
 

@@ -1,0 +1,23 @@
+UTC: 2026-10-12T11:47:37.543200+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.energy inspect --root . --original results/research/RENDER11_energy/original_20261009A/receipt.json --output results/research/COMPLETION20261012/energy_inventory.json
+
+{
+  "original_rows": 103,
+  "unique_rows": 103,
+  "expected_rows": 105,
+  "missing": [
+    [
+      "RGB8_retina_C16",
+      2,
+      "render"
+    ],
+    [
+      "RGB8_retina_C16",
+      2,
+      "vector_render"
+    ]
+  ],
+  "complete": false
+}
+
+EXIT_CODE: 0
