@@ -81,3 +81,12 @@
 
 ## A18
 - [ ] (2026-10-12T12:02:12+00:00) A18, intento 1: hecho G2.2 bloqueada por admision real; JEV indica continuar metadatos; G2 global no cerrado.; falta Leer §18A y schema claims_ledger; dividir inventario y validacion antes de empezar.. Siguiente: `python docs/execplan/plan_status.py section 18A`.
+
+## G3
+- [ ] (2026-10-12T22:24:17+00:00) G3, intento 1: hecho A18 cerrada; checkpoint de sesion escrito; falta Leer seccion 8 (lineas 218-232); disenar unidad de separacion (familia canonica de grafos), generador por familias, selector DEV, registro de exposicion de TEST, auditoria de fugas Kapoor-Narayanan. Siguiente: `python docs/execplan/plan_status.py start G3`.
+
+## G3
+- [x] (2026-10-12T22:29:52+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
+
+## G20.2
+- [ ] (2026-10-12T22:36:47+00:00) G20.2, intento 1: hecho Plan ANT01 congelado (commit d2700793, sha 38436579); ejecutor escrito; falta Ejecutar ANT01 (CPU numpy), informe en ingles, afirmacion en registro, cierre. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G20.2_run.txt -- <kit python> scripts/run_ANT01.py`.

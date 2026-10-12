@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:50:00+00:00",
+  "status": "formalization_rebuild_pending",
+  "targets": [
+    "ComparatorChallenges/DirectCrouzeix.json",
+    "ComparatorChallenges/CourtadeKumar.json"
+  ],
+  "pinned": {
+    "openai_math": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "toolchain": "leanprover/lean4:v4.34.1"
+  },
+  "environment": {
+    "wsl_distribution": "Ubuntu-22.04, kernel 6.18.40.1-microsoft-standard-WSL2",
+    "landlock_active": true,
+    "systemd_pid1": true,
+    "lean_toolchain": "absent",
+    "comparator": "absent",
+    "landrun": "absent",
+    "lean4export": "absent",
+    "wsl_disk_location": "C:/Users/Windows-500GB/AppData/Local/wsl/{1ffd1a73-cd28-4ba1-817c-2eaf2650cfb0} (on C:, which must not hold heavy work)",
+    "evidence": "docs/execplan/evidence/M3_wsl_environment.txt"
+  },
+  "reason": "Rebuilding needs downloads (elan and the pinned toolchain, the openai/math repository, a Mathlib cache of several GB, Comparator, landrun and lean4export) that require owner approval, and the heavy files must be placed on E:",
+  "prepared_script": "scripts/formal/m3_comparator_rebuild.sh",
+  "script_sha256": "23f97e01b21eaaea995a075cdeb0e38c8e52ae14d3c5a0895069da750d96f429",
+  "not_claimed": [
+    "No formal verification of family 325 or 119 is claimed",
+    "Compiling a challenge template with sorry would not certify a solution"
+  ],
+  "after_rebuild": "Review that the formal statements match the hypotheses used by NeuroPixel (norm, domain, dimensions) before any claim"
+}

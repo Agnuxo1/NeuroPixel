@@ -199,9 +199,9 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:24:17+00:00) A18.3: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Validador valido sobre 74 afirmaciones (max L2); verificacion independiente pass_with_fixes con 16 hallazgos corregidos (incl. negativos VIS07 omitidos); 22 correcciones de texto archivadas en 3 rondas.; detalle en archive/PROGRESS_ARCHIVE.md.
 - [x] (2026-10-12T22:24:17+00:00) A18: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Registro docs/research/claims_ledger.json: 795 candidatos publicos cubiertos, 74 afirmaciones (L0:10, L1:35, L2:29), validador valido; textos corregidos para no superar su nivel; L0 del estudio 05 pendiente del propietario.; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [x] (2026-10-12T22:29:52+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
 
-- [ ] (2026-10-12T22:36:47+00:00) G20.2, intento 1: hecho Plan ANT01 congelado (commit d2700793, sha 38436579); ejecutor escrito; falta Ejecutar ANT01 (CPU numpy), informe en ingles, afirmacion en registro, cierre. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G20.2_run.txt -- <kit python> scripts/run_ANT01.py`.
+- [x] (2026-10-12T22:38:34+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
+- [x] (2026-10-12T22:38:34+00:00) G20.2: done; commit 4a68e382c66c3bd398534f1eb7ca079020f8a5dc; ANT01: plan congelado antes de ejecutar; Hopfield global domina al local con mismo estado y el decodificador explicito domina todo; PR1 24/24, PR2 60/60; afirmacion ANT01-01 L2.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 ## Sorpresas y hallazgos
 
@@ -235,6 +235,7 @@ Acciones externas preparadas y no ejecutadas.
 - Publicacion: los textos publicos corregidos en A18.3 (commits 51afbdea y 78ebf8cb; registro docs/research/claims_ledger.json) son posteriores al paquete G1.3.ext (ba9f3f84). Al publicar, usar la version mas reciente de la rama research/completion-20261012 tras su revision. Sin push ejecutado.
 - G3: aprobar la descarga de los archivos publicos UCI optdigits (optdigits.tra y optdigits.tes, ~0,6 MB, archive.ics.uci.edu, CC BY 4.0) para reverificar la unicidad y disjuncion de imagenes (fuga L1.4); hoy solo lo afirma el manuscrito.
 - G17.1.ext: designar un evaluador independiente (no autor) y aprobar la ruta de sellado de tiempo externo (p. ej. OpenTimestamps o deposito publico fechado) para cualquier TEST nuevo. Paquete: results/research/COMPLETION20261012/G17_evaluator_package.json. Nadie contactado.
+- M3.ext: aprobar descargas e instalacion para reconstruir Lean/Comparator (elan + lean4 v4.34.1 ~0,3 GB, openai/math fd4aeeb2, cache Mathlib de varios GB, comparator, landrun, lean4export) en E:/Proyecto-concursos/NeuroPixel-lean; script preparado scripts/formal/m3_comparator_rebuild.sh. La distro WSL Ubuntu vive en C: (no apta para carga pesada).
 
 ## Resultados y retrospectiva
 

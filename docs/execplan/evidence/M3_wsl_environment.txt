@@ -1,0 +1,30 @@
+kernel: 6.18.40.1-microsoft-standard-WSL2
+user: root
+lean: absent
+lake: absent
+elan: absent
+comparator: absent
+landrun: absent
+lean4export: absent
+systemd-run: /usr/bin/systemd-run
+git: /usr/bin/git
+curl: /usr/bin/curl
+lsm: unreadable
+landlock_abi: none
+systemd_pid1: systemd
+/dev/sdd       1007G   12G  945G   2% /
+total 28
+drwx------  5 root root 4096 Oct 12 10:06 .
+drwxr-xr-x 60 root root 4096 Oct 13 00:42 ..
+lrwxrwxrwx  1 root root   31 Apr 15 10:31 .aws -> /mnt/c/Users/Windows-500GB/.aws
+lrwxrwxrwx  1 root root   33 Apr 15 10:31 .azure -> /mnt/c/Users/Windows-500GB/.azure
+-rw-r--r--  1 root root 3106 Oct 15  2021 .bashrc
+drwx------  2 root root 4096 Apr 13 18:43 .cache
+drwxr-xr-x  5 root root 4096 Apr 15 10:31 .docker
+drwx------  3 root root 4096 Oct 12 10:06 .local
+-rw-r--r--  1 root root  161 Jul  9  2019 .profile
+lsm: capability,landlock,yama,safesetid,selinux,ima
+landlock_abi: none
+no lsm= on kernel cmdline
+CONFIG_SECURITY_LANDLOCK=y
+CONFIG_LSM="landlock,lockdown,yama,loadpin,safesetid,integrity,selinux,apparmor,tomoyo"
