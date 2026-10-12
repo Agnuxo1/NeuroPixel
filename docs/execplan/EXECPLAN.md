@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T12:09:13+00:00
+- Actualizado (UTC): 2026-10-12T12:11:47+00:00
 - Tarea en curso o siguiente: A18.2.H, Revisar afirmaciones historicas y sus discrepancias; intento 1; presupuesto 45 minutos.
 - Criterio de cierre: Cada candidato del grupo A18.2.H se divide semanticamente o se excluye con razon editorial; afirmaciones inglesas vinculadas a poblacion, limites, protocolos y recibos existentes, sin sustituir faltantes por resumen ni reabrir estudios.
-- Hecho en esta tarea: 795 candidatos particionados sin omisiones; revision H/D/G/P separada antes de iniciar; G1 paquete anclado al commit inmutable previo aT0.
-- Falta en esta tarea: Leer solo candidatos del grupoH y verificar artefactos de cada afirmacion; clasificar semanticamente en ingles; cerrar con evidencia.
+- Hecho en esta tarea: Sesion1 registrada:10/48 cerradas; 37 originales y criterios intactos; 25 fuentes/795 unidades congeladas; sin tareas activas propias.
+- Falta en esta tarea: Iniciar revision de305 unidades historicas y vincular evidencia real; no asignar L3 sin compromiso publico externo.
 - Siguiente comando exacto: python docs/execplan/plan_status.py start A18.2.H
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
+- Dudas o riesgos abiertos: G2.2 RAM<8GiB; G1.3.ext requiere publicacion del propietario del commitba9f3f84; G2 runtime y ledger de afirmaciones aun pendientes.
 
 ## Propósito
 
@@ -188,11 +188,16 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [ ] (2026-10-12T12:09:13+00:00) A18.2.H, intento 1: hecho 795 candidatos particionados sin omisiones; revision H/D/G/P separada antes de iniciar; G1 paquete anclado al commit inmutable previo aT0.; falta Leer solo candidatos del grupoH y verificar artefactos de cada afirmacion; clasificar semanticamente en ingles; cerrar con evidencia.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
 
+- [ ] (2026-10-12T12:11:47+00:00) A18.2.H, intento 1: hecho Sesion1 registrada:10/48 cerradas; 37 originales y criterios intactos; 25 fuentes/795 unidades congeladas; sin tareas activas propias.; falta Iniciar revision de305 unidades historicas y vincular evidencia real; no asignar L3 sin compromiso publico externo.. Siguiente: `python docs/execplan/plan_status.py start A18.2.H`.
+
 ## Sorpresas y hallazgos
 
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
 
 ## Registro de decisiones
+
+- G2: JEV connected/provenance=jev, preservar frozen y parche acotado (1,0), bloquear carga bajo8GiB y continuar metadatos (0,98); G2_jev.txt.
+- A18: JEV connected/provenance=jev, congelar fuentes completas y clasificar por artefactos reales (1,0 en ambas); A18_jev.txt.
 
 - G0: JEV connected/provenance=jev, bounded_readonly_audit (1,0); evidencia G0_jev.txt.
 - G1: JEV connected/provenance=jev: inspect CPU (0,98), admitir recovery exacta (0,92), reconciliar localmente (1,0); G1_jev.txt.
@@ -206,12 +211,20 @@ Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia
 
 Acciones externas preparadas y no ejecutadas.
 
-- G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Rama local research/completion-20261012; no push ni publicacion ejecutados.
+- G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Version publicable anclada al commit ba9f3f84 y verificada en G1_owner_publication_locator.json; la rama actual contiene el parche T0 separado. No push ni publicacion ejecutados.
 
 ## Resultados y retrospectiva
+
+- Sesion1: P0, G0 y G1 local cerradas; subpasos G2.1 y A18.1 cerrados.10 tareas cerradas de48 (37 originales preservadas,11 divisiones/dependencias agregadas).
+- Verificacion:63 pruebas;1797 blobs y44 arboles de origen; recovery105/103 sin nuevas mediciones; auditoria editorial posterior sin incidencias.
+- G2 no cerrado: solo parche AST, Torch y backend pendientes. Guard ejecutado rechaza RAM; ultima medida 1.43GiB.
+- A18 no cerrado:25 fuentes y795 unidades conservadas; niveles aun no asignados. Siguiente grupoH305 unidades; despuesD234/G74/P182.
+- Sin cargas propias activas, sin procesos ajenos detenidos, sin acciones externas ni push. plan_complete:false; §19 final pendiente.
 
 Se escribe al cerrar cada fase.
 
 ## Cambios a este plan
+
+- 2026-10-12T12:11:47+00:00 · 37 tareas originales conservadas y criterios intactos; G2 separado por CPU/Torch/GPU y A18 por inventario, semantica y auditoria; publicacionG1 separada externamente.48 tareas totales; evidencia de integridad en session1_integrity_resources.json.
 
 Formato: fecha · qué cambió · por qué.
