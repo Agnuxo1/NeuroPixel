@@ -17,7 +17,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 GPU_PYTHON = "C:/Python313/python.exe"
-NEW = ROOT / "results/research/G2.3_backend_controls"
+NEW = ROOT / f"results/research/G2.3_backend_controls_attempt{sys.argv[1] if len(sys.argv) > 1 else 2}"
 CASES = {"RENDER08": ("scripts/preflight_RENDER08.py", ROOT / "results/research/RENDER08_preflight/local_gpu_20261009B"),
          "RENDER09": ("scripts/preflight_RENDER09.py", ROOT / "results/research/RENDER09_preflight/original_20261009A")}
 
