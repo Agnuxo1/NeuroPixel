@@ -135,6 +135,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 ## Sorpresas y hallazgos
 
+- Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
+
 ## Registro de decisiones
 
 Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia o regla de la guía).
