@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:47:45+00:00
+- Actualizado (UTC): 2026-10-12T11:50:12+00:00
 - Tarea en curso o siguiente: G1.2, Recuperación de las dos claves físicas pendientes (GPU, solo por gpuq); intento 1; presupuesto 15 minutos.
 - Criterio de cierre: Recuperación en carpeta nueva con entorno GPU histórico y ticket gpuq; 105 claves únicas, 103 originales byte a byte, recibo y resumen guardados. Si la cola o la RAM no lo permiten: blocked_resource con ticket y hora.
-- Hecho en esta tarea: G1.1 cerrada; recovery completa en integracion; §6.2 permite admitir sin repetir.
-- Falta en esta tarea: Verificar origen, plan/fuentes/entradas y 103 filas originales; copiar carpeta nueva y resumir.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start G1.2
+- Hecho en esta tarea: 105 claves y 103 originales admitidas; resumen del kit ejecutado; cero mediciones nuevas o repetidas.
+- Falta en esta tarea: Commit y cierre con evidencia completa.
+- Siguiente comando exacto: git add scripts/completion_admit_RENDER11.py docs/execplan results/research/COMPLETION20261012 results/research/RENDER11_energy/recovered_20261009B
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -157,6 +157,12 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:47:45+00:00) G1.1: done; commit 6344902cc82f000025c8aadf31c86002a4e727c5; 103 de 105 filas; dos claves derivadas del plan y recibo sin nuevas mediciones.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T11:47:45+00:00) G1.2, intento 1: hecho G1.1 cerrada; recovery completa en integracion; §6.2 permite admitir sin repetir.; falta Verificar origen, plan/fuentes/entradas y 103 filas originales; copiar carpeta nueva y resumir.. Siguiente: `python docs/execplan/plan_status.py start G1.2`.
+
+- [ ] (2026-10-12T11:49:06+00:00) G1.2, intento 1: hecho §6.2 permite recovery guardada; commit de origen 87c60227 identificado y no se relanza.; falta Admitir bytes, filas y gobernantes; copiar originales a carpeta ausente y resumir.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.2_admission.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_admit_RENDER11.py`.
+
+- [ ] (2026-10-12T11:49:09+00:00) G1.2, intento 1: hecho Recovery autentica admitida: 105 claves, 103 filas byte-identicas, fuentes/entradas verificadas y commit87c60227.; falta Resumen independiente del kit; commit y close.. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G1.2_summary.txt -- E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m completion_kit.energy summarize --root . --original results/research/RENDER11_energy/original_20261009A/receipt.json --recovery results/research/RENDER11_energy/recovered_20261009B/receipt.json --output results/research/COMPLETION20261012/energy_complete_summary.json`.
+
+- [ ] (2026-10-12T11:50:12+00:00) G1.2, intento 1: hecho 105 claves y 103 originales admitidas; resumen del kit ejecutado; cero mediciones nuevas o repetidas.; falta Commit y cierre con evidencia completa.. Siguiente: `git add scripts/completion_admit_RENDER11.py docs/execplan results/research/COMPLETION20261012 results/research/RENDER11_energy/recovered_20261009B`.
 
 ## Sorpresas y hallazgos
 
