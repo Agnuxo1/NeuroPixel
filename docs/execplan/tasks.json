@@ -428,13 +428,61 @@
       "note": "Fuentes actuales congeladas por hash, cobertura completa de lineas; clasificacion y niveles aun pendientes."
     },
     {
+      "id": "A18.2.H",
+      "title": "Revisar afirmaciones historicas y sus discrepancias",
+      "phase": "18A Afirmaciones historicas",
+      "section": "18A",
+      "acceptance": "Cada candidato del grupo A18.2.H se divide semanticamente o se excluye con razon editorial; afirmaciones inglesas vinculadas a poblacion, limites, protocolos y recibos existentes, sin sustituir faltantes por resumen ni reabrir estudios.",
+      "depends_on": [
+        "A18.1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "A18.2.D",
+      "title": "Revisar afirmaciones de desarrollo, scanner y vision",
+      "phase": "18A Desarrollo y vision",
+      "section": "18A",
+      "acceptance": "Todos los candidatos A18.2.D revisados, con negative e incertidumbre conservadas; niveles sustentados por evidencia real y sin inventar apoyo prospectivo, custodia ni replicacion externa.",
+      "depends_on": [
+        "A18.2.H"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "A18.2.G",
+      "title": "Revisar afirmaciones graficas y energia",
+      "phase": "18A Graficos y energia",
+      "section": "18A",
+      "acceptance": "Todos los candidatos A18.2.G revisados con comparadores, precisiones y coste declarado; board energy separado de pared y repeticiones tecnicas de replicas; negativos y sesiones interrumpidas conservados.",
+      "depends_on": [
+        "A18.2.D"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "A18.2.P",
+      "title": "Revisar README, manuscritos y documentos nuevos e integrar registro",
+      "phase": "18A Registro publico",
+      "section": "18A",
+      "acceptance": "Todos los candidatos A18.2.P revisados y grupos H/D/G integrados; docs/research/claims_ledger.json completo, afirmaciones inglesas, limites y niveles artifact-bound; ninguna unidad omitida y T0 runtime pendiente explicito.",
+      "depends_on": [
+        "A18.2.G"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "A18.2",
       "title": "Vincular todas las afirmaciones a artefactos y nivel justificable",
       "phase": "18A Registro cientifico",
       "section": "18A",
       "acceptance": "docs/research/claims_ledger.json contiene todas las afirmaciones candidatas cientificas y tecnicas, poblacion, limites, status y nivel sustentado por artefactos reales; cada exclusion editorial justificada; ningun timestamp o independencia inventados.",
       "depends_on": [
-        "A18.1"
+        "A18.1",
+        "A18.2.H",
+        "A18.2.D",
+        "A18.2.G",
+        "A18.2.P"
       ],
       "status": "pending"
     },
@@ -791,15 +839,19 @@
         "G1.3"
       ],
       "status": "blocked_external",
-      "note": "Paquete preparado; el propietario debe revisar y publicar. Ningun push ni publicacion ejecutados.",
-      "blocked": "2026-10-12T11:55Z",
+      "note": "Paquete78archivos verificado en commitba9f3f84 previo aT0; propietario debe revisar y publicar esa version. Ningun push ni publicacion ejecutados.",
+      "blocked": "2026-10-12T12:09Z",
       "evidence": [
         {
           "path": "results/research/COMPLETION20261012/G1_owner_publication_package.json",
           "sha256_lf": "63b1f0009a34760f83e03a88ad5a8cfa0f287bcc8e678ede4e792b15999b9295"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G1_owner_publication_locator.json",
+          "sha256_lf": "53fbda4b9b95e0749bb28ae7a11048bc99b1ed6c3f747215ba4c1d0c49bb4cae"
         }
       ]
     }
   ],
-  "updated": "2026-10-12T12:05Z"
+  "updated": "2026-10-12T12:09Z"
 }
