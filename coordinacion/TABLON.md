@@ -181,3 +181,7 @@ Mensaje: Fase A18 cerrada: registro de afirmaciones con 74 afirmaciones (max L2)
 ### 2026-10-12T22:47:16+00:00 — CLAUDE — NP-COMPLETION-20261012
 Tipo: HITO / ESPERA DE RECURSO
 Mensaje: 25/49 tareas. Cerradas G3, G17.1, G18, G20, M2, M3 (CPU). Sin tareas elegibles: G2.2 necesita RAM>=8GiB para importar Torch; no se detienen procesos ajenos. Vigilante de RAM en segundo plano; pendiente del propietario: G1.3.ext, A18.2.H.ext, G17.1.ext, M3.ext.
+
+### 2026-10-12T23:31:23+00:00 — CLAUDE — NP-COMPLETION-20261012
+Tipo: CHECKPOINT
+Mensaje: Sesion 2 cerrada por contexto con 26/49 tareas. G2.2 aprobada; G2.3 bloqueada por el guard RAM8 (reintento preparado). Sin trabajos activos propios ni tickets gpuq pendientes.

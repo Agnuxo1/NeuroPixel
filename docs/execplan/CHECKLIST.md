@@ -24,11 +24,11 @@
 
 ## G2 Contrato T0: Torch real
 
-- [ ] BLOCKED (resource) G2.2 Ejecutar Torch historico y regresiones CPU relevantes (§7): Admision ejecutada rechaza RAM libre inferior a8GiB; sin importarTorch. Reabrir al disponer>=8GiB; despues preparar y ejecutar regresiones CPU y tres pruebas reales.
+- [x] ~~G2.2 Ejecutar Torch historico y regresiones CPU relevantes (§7)~~ 2026-10-12T23:29Z `a0488649dd`
 
 ## G2 Contrato T0: GPU
 
-- [ ] G2.3 Repetir controles fisicos del backend afectado sin nuevas cohortes (§7)
+- [ ] BLOCKED (resource) G2.3 Repetir controles fisicos del backend afectado sin nuevas cohortes (§7): Intento1 por gpuq rechazado por el guard RAM8 de los preflights tras importar Torch/ModernGL (sin cambios de umbral). Reintentar: gpuq run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2 con RAM>=9 GiB.
 
 ## G2 Contratos de software
 
