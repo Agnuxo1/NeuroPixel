@@ -1,0 +1,268 @@
+{
+  "schema": 1,
+  "authors": [
+    "Francisco Angulo de Lafuente"
+  ],
+  "claims": [
+    {
+      "id": "G-R08-01",
+      "statement": "On one RTX 3090 (FP32, 16 updates plus full scanner, resident inputs), the RENDER08 fragment renderer was slower than the best measured CUDA comparator (eager or CUDA Graph) in all seven registered workloads, with best-CUDA/render ratios of 0.082-0.319 (median host milliseconds over seven technical blocks).",
+      "population": "One NVIDIA RTX 3090, FP32 with TF32 off, resident seeding, sixteen updates plus full decoding/scanner; seven registered workloads (C16/C48 channels on 8, 32 and 128 grids, RGB8 retina C16)",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Technical blocks on one GPU are not scientific replicas; descriptive point comparisons without confidence intervals",
+        "Median host milliseconds per call; setup, compilation, transfers and training are outside the primary timing",
+        "Per-inference energy of short calls is unknown: counter zeros or staleness are not zero energy; NVML measures the GPU only, not wall, CPU or RAM",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "The report column labelled 'Render vector ms' holds the single (scalar) RENDER08 renderer"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER08_benchmark/original_20261009A/receipt.json",
+          "sha256": "6393fb4e618faf5235054cae466819808df0da19c12024b6581c7b1da81f7c3f"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.G",
+      "study": "RENDER08",
+      "source_units": [
+        "S017-L0005",
+        "S017-L0006",
+        "S017-L0007",
+        "S017-L0008",
+        "S017-L0009",
+        "S017-L0010",
+        "S017-L0011",
+        "S017-L0013",
+        "S017-L0015",
+        "S017-L0017"
+      ],
+      "protocol": {
+        "path": "docs/research/RENDER08_benchmark_plan.json",
+        "sha256": "374045885c03946c5c025c5381b890476ffb588a1b2fbb00065e21624512378f"
+      }
+    },
+    {
+      "id": "G-R09-01",
+      "statement": "In RENDER09 the vectorized fragment renderer was faster than the scalar renderer in all seven workloads; against the best CUDA comparator its point ratio was 1.536 on C16/grid128, 1.039 on C16/grid8 and 1.072 on the RGB8 retina (small and possibly noise-sensitive), and below 1 in the other four workloads.",
+      "population": "One NVIDIA RTX 3090, FP32 with TF32 off, resident seeding, sixteen updates plus full decoding/scanner; seven registered workloads (C16/C48 channels on 8, 32 and 128 grids, RGB8 retina C16)",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Technical blocks on one GPU are not scientific replicas; descriptive point comparisons without confidence intervals",
+        "Median host milliseconds per call; setup, compilation, transfers and training are outside the primary timing",
+        "Per-inference energy of short calls is unknown: counter zeros or staleness are not zero energy; NVML measures the GPU only, not wall, CPU or RAM",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "No general advantage, graphics training or energy efficiency is established"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER09_benchmark/original_20261009A/receipt.json",
+          "sha256": "281d37c83f541f3fd2fbcf89b6453ddb441bf82770112512780ef75812dd98b6"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.G",
+      "study": "RENDER09",
+      "source_units": [
+        "S018-L0005",
+        "S018-L0006",
+        "S018-L0007",
+        "S018-L0008",
+        "S018-L0009",
+        "S018-L0010",
+        "S018-L0011",
+        "S018-L0013",
+        "S018-L0015",
+        "S018-L0017"
+      ],
+      "protocol": {
+        "path": "docs/research/RENDER09_benchmark_plan.json",
+        "sha256": "14cc8566ca830da96e5fc3fbbf0af90e89c8a0ff2c33c5feba950ffef3680c91"
+      }
+    },
+    {
+      "id": "G-R10-01",
+      "statement": "In RENDER10 (OpenGL 4.6), all 245 registered rows and 77 output gates are complete; the compute path was faster than the best CUDA comparator in six of seven point comparisons (1.062-2.084x, largest on C16/grid128) and slower on C48/grid128 (0.524x).",
+      "population": "One NVIDIA RTX 3090, FP32 with TF32 off, resident seeding, sixteen updates plus full decoding/scanner; seven registered workloads (C16/C48 channels on 8, 32 and 128 grids, RGB8 retina C16)",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "Technical blocks on one GPU are not scientific replicas; descriptive point comparisons without confidence intervals",
+        "Median host milliseconds per call; setup, compilation, transfers and training are outside the primary timing",
+        "No independent laboratory replication and no externally dated public preregistration",
+        "Measurement sessions were interrupted and resumed; descriptive technical measurements, not independent replications",
+        "CUDA eager and CUDA Graph remain strong comparators; no universal advantage is claimed"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER10_benchmark/recovered_20261009B/receipt.json",
+          "sha256": "11f7ab1ede7383517aa41bbf017807f60df433583aec7eef908730aac2055fc9"
+        },
+        {
+          "path": "results/research/RENDER10_benchmark/recovered_20261009B/independent_summary.json",
+          "sha256": "734566a154520f7fb0ce196a23d43ea0acb5094c1848e62b2f15ee25b23a71ab"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.G",
+      "study": "RENDER10",
+      "source_units": [
+        "S019-L0003",
+        "S019-L0007",
+        "S019-L0008",
+        "S019-L0009",
+        "S019-L0010",
+        "S019-L0011",
+        "S019-L0012",
+        "S019-L0013",
+        "S019-L0015",
+        "S019-L0017"
+      ],
+      "protocol": {
+        "path": "docs/research/RENDER10_benchmark_plan.json",
+        "sha256": "30cd0cdc69df919e780f45539b1e60106a6adc14743f795d9ef570f50ee9ebd4"
+      }
+    },
+    {
+      "id": "G-R10-02",
+      "statement": "The RENDER10 recovery preserved the original 143 rows exactly and measured only the missing keys, with identical registered input arrays and unchanged source, completing 245 rows.",
+      "population": "One NVIDIA RTX 3090, FP32 with TF32 off, resident seeding, sixteen updates plus full decoding/scanner; seven registered workloads (C16/C48 channels on 8, 32 and 128 grids, RGB8 retina C16)",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "The interruption separates measurement sessions and qualifies interpretation",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER10_benchmark/original_20261009A/receipt.json",
+          "sha256": "75cecc60383a2be1c911d030a98950c514998d5fab65e9100d058b6e28d50b67"
+        },
+        {
+          "path": "results/research/RENDER10_benchmark/recovered_20261009B/receipt.json",
+          "sha256": "11f7ab1ede7383517aa41bbf017807f60df433583aec7eef908730aac2055fc9"
+        },
+        {
+          "path": "results/research/RENDER10_benchmark/recovered_20261009B/independent_summary.json",
+          "sha256": "734566a154520f7fb0ce196a23d43ea0acb5094c1848e62b2f15ee25b23a71ab"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.G",
+      "study": "RENDER10",
+      "source_units": [
+        "S019-L0003"
+      ]
+    },
+    {
+      "id": "G-R11-01",
+      "statement": "Sustained GPU-board energy (whole-board NVML counters, gross joules per call, median of three technical blocks; complete 105-row registered cohort): the best render-family method used less board energy per call than the best CUDA method in four of seven workloads (C16 grid8/32/128 and the RGB8 retina) and more in three (C48 grid8/32/128); for example 0.485 J (vector render) versus 0.641 J (CUDA eager) on C16/grid128, and 2.554 J (vector render) versus 1.818 J (CUDA eager) on C48/grid128.",
+      "population": "One NVIDIA RTX 3090, FP32 with TF32 off, resident seeding, sixteen updates plus full decoding/scanner; seven registered workloads (C16/C48 channels on 8, 32 and 128 grids, RGB8 retina C16); blocks of at least three active seconds with idle observations before and after",
+      "status": "experiment_complete",
+      "declared_level": 2,
+      "limits": [
+        "GPU board energy only, including background consumption; CPU, RAM, PSU and whole-system wall energy unmeasured",
+        "Three technical blocks across interrupted sessions are not independent scientific replicates",
+        "Idle-adjusted estimates, including negative values, are kept unclipped in the receipt; baselines are descriptive",
+        "Does not establish universal efficiency or energy savings",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER11_energy/recovered_20261009B/receipt.json",
+          "sha256": "bc19c7b3bff67b3fc8fe8544188f63aaf342a7cfaa435f3ef3e89e397ff1039f"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/energy_complete_summary.json",
+          "sha256": "03800d34605defe6c7aaa9e74c9131207bc764ebc8e752b3c534e40d22ae4a65"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/energy_recovery_admission.json",
+          "sha256": "bc5bb4fc5d28b1a6bf1dfcf4001f0cd64b5b6472b0f321b4bb22482d87af397d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.G",
+      "study": "RENDER11",
+      "source_units": [
+        "S019-L0019",
+        "S020-L0011",
+        "S020-L0012",
+        "S020-L0013",
+        "S020-L0014",
+        "S020-L0015",
+        "S020-L0016",
+        "S020-L0017",
+        "S020-L0018",
+        "S020-L0019",
+        "S020-L0020",
+        "S020-L0021",
+        "S020-L0022",
+        "S020-L0023",
+        "S020-L0024",
+        "S020-L0025",
+        "S020-L0026",
+        "S020-L0027",
+        "S020-L0028",
+        "S020-L0029",
+        "S020-L0030",
+        "S020-L0031",
+        "S020-L0032",
+        "S020-L0033",
+        "S020-L0034",
+        "S020-L0035",
+        "S020-L0036",
+        "S020-L0037",
+        "S020-L0038",
+        "S020-L0039",
+        "S020-L0040",
+        "S020-L0041",
+        "S020-L0042",
+        "S020-L0043",
+        "S020-L0044",
+        "S020-L0045",
+        "S020-L0047"
+      ],
+      "protocol": {
+        "path": "docs/research/RENDER11_energy_plan.json",
+        "sha256": "321d6b7e191653197f79a4bf3fc74bfa24c1f81fcf56c0150e795c3c357a2391"
+      }
+    },
+    {
+      "id": "G-R11-02",
+      "statement": "The original RENDER11 execution (receipt sha256 883fc6be...) preserved 103 of 105 registered rows and all 77 output gates before the unchanged 8 GiB RAM floor stopped it; the earlier recovery (receipt sha256 bc19c7b3..., Git archive 87c60227) was admitted with 105 unique keys, the 103 original rows identical and zero repeated closed measurements, and no physical measurement occurred during admission.",
+      "population": "One NVIDIA RTX 3090, FP32 with TF32 off, resident seeding, sixteen updates plus full decoding/scanner; seven registered workloads (C16/C48 channels on 8, 32 and 128 grids, RGB8 retina C16)",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "limits": [
+        "Admission proves byte and key consistency only",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "receipts": [
+        {
+          "path": "results/research/RENDER11_energy/original_20261009A/receipt.json",
+          "sha256": "883fc6be14663f112d6fdf36f4ef112e35215bddfa7f9699d3c37a85559719a2"
+        },
+        {
+          "path": "results/research/RENDER11_energy/recovered_20261009B/receipt.json",
+          "sha256": "bc19c7b3bff67b3fc8fe8544188f63aaf342a7cfaa435f3ef3e89e397ff1039f"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/energy_recovery_admission.json",
+          "sha256": "bc5bb4fc5d28b1a6bf1dfcf4001f0cd64b5b6472b0f321b4bb22482d87af397d"
+        }
+      ],
+      "stop_reason": null,
+      "review_batch": "A18.2.G",
+      "study": "RENDER11",
+      "source_units": [
+        "S019-L0019",
+        "S020-L0003",
+        "S020-L0005",
+        "S020-L0007"
+      ]
+    }
+  ]
+}
