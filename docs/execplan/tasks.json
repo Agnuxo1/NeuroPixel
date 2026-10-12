@@ -14,9 +14,38 @@
       "title": "Lecturas obligatorias, recursos reales y reclamación de la tarea en coordinación",
       "depends_on": [],
       "acceptance": "Leídos AGENTS.md, coordinacion/TABLON.md, RECURSOS.md, COLA-DE-TRABAJO.md, DECISIONES.md y el programa; RAM, CPU, disco, gpuq status y procesos ajenos registrados en EXECPLAN; tarea reclamada en TABLON sin interrumpir a nadie.",
-      "status": "in_progress",
+      "status": "done",
       "started": "2026-10-12T11:31Z",
-      "attempts": 1
+      "attempts": 1,
+      "evidence": [
+        {
+          "path": "docs/execplan/evidence/P0.1_reading_notes.md",
+          "sha256_lf": "a6646f7163bc3edafa0f41995e78e0c9b5f24537bfa2bfa88d20a87e8a0b5d8c"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.1_reading_manifest.json",
+          "sha256_lf": "cafb9d1cf9f053ee56f889518f05cf7ce95708ed5360d32645b1d076b7e078cb"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.1_resources_initial.json",
+          "sha256_lf": "ee472812e89263e97fdc33f22a5803891d3e951fb88479bea86f13cb8b8339c0"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.1_gpuq_status.txt",
+          "sha256_lf": "0ddcee14e95a7c7cb58c92fc4e9f7b64552a7a6cb99e3ee460cc0c882c38e61b"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.1_claim.md",
+          "sha256_lf": "8e7011495267afb06a42712f732e5f2ce9a98f22b96f6b1c2a07a11a9ae29418"
+        },
+        {
+          "path": "docs/execplan/evidence/P0.1_jev.json",
+          "sha256_lf": "3052a1f7e6c19df6180e4ce61b824a0fddcd9e86a2b7a246357e215f0ba9b057"
+        }
+      ],
+      "commit": "f59c41a8b67c19395b87c48659384c6e467f8dd6",
+      "closed": "2026-10-12T11:33Z",
+      "note": "Lecturas, recursos reales y reclamacion verificados; sin carga neural."
     },
     {
       "id": "P0.2",
@@ -436,5 +465,5 @@
       "status": "pending"
     }
   ],
-  "updated": "2026-10-12T11:31Z"
+  "updated": "2026-10-12T11:33Z"
 }
