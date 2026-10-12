@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T22:24:17+00:00
-- Tarea en curso o siguiente: G3, Separar desarrollo, validación y evaluación final; intento 1; presupuesto 120 minutos.
-- Criterio de cierre: splits y derivados sin contaminación según la unidad declarada; selector y cohortes fijados; exposición final registrada; afirmaciones de custodia acordes a la operación real. [guía §8]
-- Hecho en esta tarea: A18 cerrada; checkpoint de sesion escrito
-- Falta en esta tarea: Leer seccion 8 (lineas 218-232); disenar unidad de separacion (familia canonica de grafos), generador por familias, selector DEV, registro de exposicion de TEST, auditoria de fugas Kapoor-Narayanan
-- Siguiente comando exacto: python docs/execplan/plan_status.py start G3
+- Actualizado (UTC): 2026-10-12T22:36:47+00:00
+- Tarea en curso o siguiente: G20.2, Comparacion directa con Hopfield: memoria y reparacion con el mismo estado; intento 1; presupuesto 90 minutos.
+- Criterio de cierre: Plan congelado y fijado por hash antes de ejecutar; Hopfield global, Hopfield local y decodificador explicito evaluados en toda la rejilla registrada; resultados con negativos e informe en ingles.
+- Hecho en esta tarea: Plan ANT01 congelado (commit d2700793, sha 38436579); ejecutor escrito
+- Falta en esta tarea: Ejecutar ANT01 (CPU numpy), informe en ingles, afirmacion en registro, cierre
+- Siguiente comando exacto: python docs/execplan/run_evidence.py --out docs/execplan/evidence/G20.2_run.txt -- <kit python> scripts/run_ANT01.py
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: Sin evaluador designado: la custodia ciega de TEST queda para G17.1 como dependencia externa
+- Dudas o riesgos abiertos: Sin GPU ni Torch; resultados exploratorios
 
 ## Propósito
 
@@ -200,6 +200,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T22:24:17+00:00) A18: done; commit 3e808a44012ebd9caac8112f550750457e6d18a7; Registro docs/research/claims_ledger.json: 795 candidatos publicos cubiertos, 74 afirmaciones (L0:10, L1:35, L2:29), validador valido; textos corregidos para no superar su nivel; L0 del estudio 05 pendiente del propietario.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [x] (2026-10-12T22:29:52+00:00) G3: done; commit 70f937dd61344e746108df5775f32e510b31cf5a; Unidad: familia estructural (renombrado de entidades y relaciones); NEWREL train/DEV sin fugas; selector DEV fijo; registro de exposicion con 8 comprobaciones; sin custodia ciega; TEST para el evaluador (G17.1).; detalle en archive/PROGRESS_ARCHIVE.md.
+
+- [ ] (2026-10-12T22:36:47+00:00) G20.2, intento 1: hecho Plan ANT01 congelado (commit d2700793, sha 38436579); ejecutor escrito; falta Ejecutar ANT01 (CPU numpy), informe en ingles, afirmacion en registro, cierre. Siguiente: `python docs/execplan/run_evidence.py --out docs/execplan/evidence/G20.2_run.txt -- <kit python> scripts/run_ANT01.py`.
 
 ## Sorpresas y hallazgos
 
