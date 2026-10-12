@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "seed": 20261013,
+  "central_results": {
+    "VIS07": {
+      "base": {
+        "specifications": 4,
+        "curve": [
+          {
+            "specification": "median paired difference with observed range",
+            "effect": 3.171953255425708,
+            "low": 2.5041736227044975,
+            "high": 5.620478575403453
+          },
+          {
+            "specification": "paired t95 over five seeds (registered primary for base)",
+            "effect": 3.51697273233166,
+            "low": 1.9304594487954752,
+            "high": 5.103486015867845
+          },
+          {
+            "specification": "seed bootstrap percentile, 20000 resamples",
+            "effect": 3.5169727323316606,
+            "low": 2.659988870339449,
+            "high": 4.619087367835255
+          },
+          {
+            "specification": "pooled binomial over examples (ignores training variance; anti-conservative)",
+            "effect": 3.516972732331669,
+            "low": 2.7531643025056542,
+            "high": 4.280781162157684
+          }
+        ],
+        "median_effect": 3.51697273233166,
+        "share_positive": 1.0,
+        "share_interval_above_zero": 1.0,
+        "share_interval_below_zero": 0.0,
+        "scope": "Descriptive robustness across registered choices; not a joint significance test",
+        "paired_differences_pp": [
+          5.620478575403453,
+          2.5041736227044975,
+          3.7284362826933704,
+          2.5598219254312715,
+          3.171953255425708
+        ],
+        "exact_sign_test_two_sided_p": 0.0625
+      },
+      "half_intensity": {
+        "specifications": 4,
+        "curve": [
+          {
+            "specification": "seed bootstrap percentile, 20000 resamples",
+            "effect": 21.680578742348352,
+            "low": 12.276015581524765,
+            "high": 29.293266555370053
+          },
+          {
+            "specification": "paired t95 over five seeds (registered primary for base)",
+            "effect": 21.680578742348356,
+            "low": 8.44029492080962,
+            "high": 34.92086256388709
+          },
+          {
+            "specification": "pooled binomial over examples (ignores training variance; anti-conservative)",
+            "effect": 21.680578742348356,
+            "low": 20.509324260280533,
+            "high": 22.85183322441618
+          },
+          {
+            "specification": "median paired difference with observed range",
+            "effect": 25.932109070673338,
+            "low": 5.564830272676691,
+            "high": 32.22036727879799
+          }
+        ],
+        "median_effect": 21.680578742348356,
+        "share_positive": 1.0,
+        "share_interval_above_zero": 1.0,
+        "share_interval_below_zero": 0.0,
+        "scope": "Descriptive robustness across registered choices; not a joint significance test",
+        "paired_differences_pp": [
+          5.564830272676691,
+          28.046744574290482,
+          25.932109070673338,
+          16.638842515303274,
+          32.22036727879799
+        ],
+        "exact_sign_test_two_sided_p": 0.0625
+      },
+      "shift_right_crop": {
+        "specifications": 4,
+        "curve": [
+          {
+            "specification": "paired t95 over five seeds (registered primary for base)",
+            "effect": -29.29326655537006,
+            "low": -45.696489007962015,
+            "high": -12.890044102778102
+          },
+          {
+            "specification": "seed bootstrap percentile, 20000 resamples",
+            "effect": -29.29326655537006,
+            "low": -39.55481357818586,
+            "high": -19.031719532554256
+          },
+          {
+            "specification": "pooled binomial over examples (ignores training variance; anti-conservative)",
+            "effect": -29.293266555370057,
+            "low": -30.55656649803077,
+            "high": -28.029966612709345
+          },
+          {
+            "specification": "median paired difference with observed range",
+            "effect": -25.26432943795214,
+            "low": -44.4629938786867,
+            "high": -14.635503617139678
+          }
+        ],
+        "median_effect": -29.29326655537006,
+        "share_positive": 0.0,
+        "share_interval_above_zero": 0.0,
+        "share_interval_below_zero": 1.0,
+        "scope": "Descriptive robustness across registered choices; not a joint significance test",
+        "paired_differences_pp": [
+          -14.635503617139678,
+          -41.79187534780189,
+          -20.311630495269895,
+          -44.4629938786867,
+          -25.26432943795214
+        ],
+        "exact_sign_test_two_sided_p": 0.0625
+      }
+    }
+  },
+  "nested_designs": {
+    "DEV04 attention minus local": {
+      "design": "initializations nested in three partition policies",
+      "hierarchical_bootstrap": {
+        "clusters": 3,
+        "units": 12,
+        "estimate": 16.243998209635418,
+        "interval": [
+          11.152636210123697,
+          21.561190287272133
+        ],
+        "confidence": 0.95,
+        "replicates": 20000,
+        "seed": 20261013,
+        "scope": "Percentile interval of the mean of cluster means",
+        "warning": "Fewer than ten clusters: bootstrap coverage is unreliable; report it as descriptive"
+      },
+      "registered_primary": {
+        "mean_pp": 16.243998209635418,
+        "t95_pp": [
+          10.586384586513063,
+          21.901611832757773
+        ],
+        "df": 2
+      },
+      "note": "Descriptive sensitivity; the registered df=2 analysis of policy means stays primary"
+    },
+    "GLOB05 attention minus active global": {
+      "design": "initializations nested in three partition policies",
+      "hierarchical_bootstrap": {
+        "clusters": 3,
+        "units": 12,
+        "estimate": 6.278483072916667,
+        "interval": [
+          4.443359375,
+          8.151283264160153
+        ],
+        "confidence": 0.95,
+        "replicates": 20000,
+        "seed": 20261013,
+        "scope": "Percentile interval of the mean of cluster means",
+        "warning": "Fewer than ten clusters: bootstrap coverage is unreliable; report it as descriptive"
+      },
+      "registered_primary": {
+        "mean_pp": 6.278483072916667,
+        "t95_pp": [
+          4.10792222928584,
+          8.449043916547494
+        ],
+        "df": 2
+      },
+      "note": "Descriptive sensitivity; the registered df=2 analysis of policy means stays primary"
+    }
+  },
+  "budget_note": "Search budgets: VIS07 used no hyperparameter search (fixed recipe, five seeds); DEV04/GLOB05/READ03 selected one recipe after earlier development phases on exposed pools (Dodge et al. 2019)"
+}

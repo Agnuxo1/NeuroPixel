@@ -1,0 +1,49 @@
+UTC: 2026-10-12T22:33:14.349331+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe scripts/completion_g18_program_statistics.py
+
+{
+ "vis07": {
+  "base": {
+   "median": 3.517,
+   "sign_p": 0.0625,
+   "range": [
+    1.93,
+    5.62
+   ]
+  },
+  "half_intensity": {
+   "median": 21.681,
+   "sign_p": 0.0625,
+   "range": [
+    5.565,
+    34.921
+   ]
+  },
+  "shift_right_crop": {
+   "median": -29.293,
+   "sign_p": 0.0625,
+   "range": [
+    -45.696,
+    -12.89
+   ]
+  }
+ },
+ "nested": {
+  "DEV04 attention minus local": {
+   "estimate": 16.244,
+   "interval": [
+    11.153,
+    21.561
+   ]
+  },
+  "GLOB05 attention minus active global": {
+   "estimate": 6.278,
+   "interval": [
+    4.443,
+    8.151
+   ]
+  }
+ }
+}
+
+EXIT_CODE: 0

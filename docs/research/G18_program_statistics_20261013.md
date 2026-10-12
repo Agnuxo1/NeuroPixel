@@ -1,0 +1,9 @@
+# G18: programme statistics (13 October 2026)
+
+**Programme registry.** `docs/research/program_registry.json` lists confirmatory hypotheses in registration order with their alpha and status. Only H1 (protocol NP-SCI-20261006-v1) is confirmatory so far; it used its own alpha of 0.05, outside the new stream, and is not supported (evidence level L0 until the item-5 archive is recovered). Every later confirmatory hypothesis enters an online Bonferroni stream (familywise alpha 0.05, gamma = 6/(pi^2 j^2)): the first thresholds are 0.0304, 0.0076, 0.0034, 0.0019 and 0.0012. All other studies to date were exploratory and spend no alpha.
+
+**Equivalence.** No public claim asserts equivalence or non-inferiority. Any future one needs a margin in percentage points registered before the data and a TOST or non-inferiority test; a non-significant difference is never read as equivalence.
+
+**Nested designs.** DEV04 and GLOB05 nest four initializations in three partition policies. A hierarchical bootstrap (clusters weighted equally, descriptive because there are fewer than ten clusters) gives 16.24 pp [11.15, 21.56] and 6.28 pp [4.44, 8.15], close to the registered df=2 intervals [10.59, 21.90] and [4.11, 8.45], which remain primary.
+
+**Specification curves (VIS07).** Four reasonable analyses (paired t over seeds, seed bootstrap, pooled binomial ignoring training variance, median with range) agree in sign for each registered condition: base +3.52 pp (all intervals above zero), half intensity +21.68 pp, one-column shift -29.29 pp. With five pairs the exact two-sided sign test cannot fall below p = 0.0625, so a future confirmatory design needs more independent training realizations, or a pre-registered parametric test with its assumptions stated. Details: `results/research/COMPLETION20261012/G18_sensitivity.json`.
