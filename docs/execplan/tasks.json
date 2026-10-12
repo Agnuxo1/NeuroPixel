@@ -394,12 +394,50 @@
       "status": "pending"
     },
     {
+      "id": "A18.1",
+      "title": "Congelar inventario completo de textos y candidatos a afirmacion publica",
+      "phase": "18A Inventario documental",
+      "section": "18A",
+      "acceptance": "Fuentes actuales README/manuscritos/informes indexados y fases nuevas congeladas por SHA256; candidatos narrativos, bullets y tablas con lineas y cobertura registrados, incluyendo negativos; no se asignan niveles por inventario.",
+      "depends_on": [
+        "G0"
+      ],
+      "status": "in_progress",
+      "started": "2026-10-12T12:04Z",
+      "attempts": 1
+    },
+    {
+      "id": "A18.2",
+      "title": "Vincular todas las afirmaciones a artefactos y nivel justificable",
+      "phase": "18A Registro cientifico",
+      "section": "18A",
+      "acceptance": "docs/research/claims_ledger.json contiene todas las afirmaciones candidatas cientificas y tecnicas, poblacion, limites, status y nivel sustentado por artefactos reales; cada exclusion editorial justificada; ningun timestamp o independencia inventados.",
+      "depends_on": [
+        "A18.1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "A18.3",
+      "title": "Auditar ledger y coherencia de afirmaciones publicas",
+      "phase": "18A Verificacion final",
+      "section": "18A",
+      "acceptance": "claims_ledger ejecutado sobre registro completo sin violaciones; revision de cobertura y textos actuales sin sobreafirmaciones, cambios archivados; clasificacion revisada mas alla de los checks sintacticos del validador.",
+      "depends_on": [
+        "A18.2"
+      ],
+      "status": "pending"
+    },
+    {
       "id": "A18",
       "phase": "18A Registro de afirmaciones",
       "section": "18A",
       "title": "Crear el registro de afirmaciones con todo lo público actual",
       "depends_on": [
-        "G0"
+        "G0",
+        "A18.1",
+        "A18.2",
+        "A18.3"
       ],
       "acceptance": "registro creado con todas las afirmaciones públicas, cada una en el nivel que justifican sus artefactos; ningún texto público por encima de su nivel. [guía §18A]",
       "status": "pending"
@@ -742,5 +780,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T12:02Z"
+  "updated": "2026-10-12T12:04Z"
 }
