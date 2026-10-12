@@ -6,12 +6,12 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T11:38:41+00:00
+- Actualizado (UTC): 2026-10-12T11:38:43+00:00
 - Tarea en curso o siguiente: P0.4, Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md); intento 1; presupuesto 15 minutos.
 - Criterio de cierre: docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.
-- Hecho en esta tarea: P0.3 realmente cerrada; plan y checklist operativos; correccion previa preservada en progreso.
-- Falta en esta tarea: Validar sistema de reanudacion y cerrar.
-- Siguiente comando exacto: python docs/execplan/plan_status.py start P0.4
+- Hecho en esta tarea: Plan validado, problems vacio, backup excluido y bloque AGENTS presente; checklist regenerado.
+- Falta en esta tarea: Commit y cierre.
+- Siguiente comando exacto: git add docs/execplan
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
 - Dudas o riesgos abiertos: RAM >=8 GiB antes de carga neural; procesos ajenos intactos.
 
@@ -145,6 +145,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T11:38:41+00:00) P0.3: done; commit 2a6199cb8558bb5dd6eabaee07b90eae95ff2533; 26 archivos autenticados; entorno E:; 38+25 pruebas aprobadas.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T11:38:41+00:00) P0.4, intento 1: hecho P0.3 realmente cerrada; plan y checklist operativos; correccion previa preservada en progreso.; falta Validar sistema de reanudacion y cerrar.. Siguiente: `python docs/execplan/plan_status.py start P0.4`.
+
+- [ ] (2026-10-12T11:38:43+00:00) P0.4, intento 1: hecho Plan validado, problems vacio, backup excluido y bloque AGENTS presente; checklist regenerado.; falta Commit y cierre.. Siguiente: `git add docs/execplan`.
 
 ## Sorpresas y hallazgos
 
