@@ -34,5 +34,5 @@ text=text[:start]+state+text[end:]
 heading='\n## Sorpresas y hallazgos'
 entry=f'- [ ] ({utc}) {a.task}, intento {a.attempt}: hecho {a.done}; falta {a.remaining}. Siguiente: `{a.next}`.\n'
 text=text.replace(heading,'\n'+entry+heading,1)
-plan_path.write_text(text,encoding='utf-8')
+plan_path.write_text(text,encoding='utf-8',newline='\n')
 print(f'Checkpoint {a.task} {utc}')

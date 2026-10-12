@@ -1,0 +1,35 @@
+UTC: 2026-10-12T11:36:40.507620+00:00
+COMMAND: E:/Proyecto-concursos/NeuroPixel-env-completion/Scripts/python.exe -m unittest completion_kit.test_extensions -v
+
+test_directory_digest_refuses_junctions (completion_kit.test_extensions.CommitmentContracts.test_directory_digest_refuses_junctions) ... ok
+test_directory_digest_tracks_bytes (completion_kit.test_extensions.CommitmentContracts.test_directory_digest_tracks_bytes) ... ok
+test_opening_round_trip_and_tampering (completion_kit.test_extensions.CommitmentContracts.test_opening_round_trip_and_tampering) ... ok
+test_random_salt_hides_equal_values (completion_kit.test_extensions.CommitmentContracts.test_random_salt_hides_equal_values) ... ok
+test_salt_bytes_cannot_be_reread_as_value_bytes (completion_kit.test_extensions.CommitmentContracts.test_salt_bytes_cannot_be_reread_as_value_bytes) ... ok
+test_short_salt_and_empty_purpose_refused (completion_kit.test_extensions.CommitmentContracts.test_short_salt_and_empty_purpose_refused) ... ok
+test_hierarchical_bootstrap_weights_clusters (completion_kit.test_extensions.InferenceContracts.test_hierarchical_bootstrap_weights_clusters) ... ok
+test_lond_fdr_simulation_under_independence (completion_kit.test_extensions.InferenceContracts.test_lond_fdr_simulation_under_independence) ... ok
+test_noninferiority_and_degenerate_variance (completion_kit.test_extensions.InferenceContracts.test_noninferiority_and_degenerate_variance) ... ok
+test_online_procedures (completion_kit.test_extensions.InferenceContracts.test_online_procedures) ... ok
+test_sequential_plan_controls_error_under_correlated_looks (completion_kit.test_extensions.InferenceContracts.test_sequential_plan_controls_error_under_correlated_looks) ... ok
+test_specification_curve (completion_kit.test_extensions.InferenceContracts.test_specification_curve) ... ok
+test_spending_functions (completion_kit.test_extensions.InferenceContracts.test_spending_functions) ... ok
+test_tost_decision_equals_interval_inclusion (completion_kit.test_extensions.InferenceContracts.test_tost_decision_equals_interval_inclusion) ... ok
+test_tost_matches_manual_statistics (completion_kit.test_extensions.InferenceContracts.test_tost_matches_manual_statistics) ... ok
+test_capacity_and_fano (completion_kit.test_extensions.LawContracts.test_capacity_and_fano) ... ok
+test_exact_equality_step_is_admitted (completion_kit.test_extensions.LawContracts.test_exact_equality_step_is_admitted) ... ok
+test_forgetting_and_repair_follow_the_certificate (completion_kit.test_extensions.LawContracts.test_forgetting_and_repair_follow_the_certificate) ... ok
+test_landauer_reference (completion_kit.test_extensions.LawContracts.test_landauer_reference) ... ok
+test_power_law_extrapolation (completion_kit.test_extensions.LawContracts.test_power_law_extrapolation) ... ok
+test_simulated_noisy_erased_store_respects_the_ceiling (completion_kit.test_extensions.LawContracts.test_simulated_noisy_erased_store_respects_the_ceiling) ... ok
+test_external_replication_needs_independence_and_blinding (completion_kit.test_extensions.LedgerContracts.test_external_replication_needs_independence_and_blinding) ... ok
+test_malformed_claims_are_reported_not_raised (completion_kit.test_extensions.LedgerContracts.test_malformed_claims_are_reported_not_raised) ... ok
+test_overstated_and_tampered_claims_are_refused (completion_kit.test_extensions.LedgerContracts.test_overstated_and_tampered_claims_are_refused) ... ok
+test_supported_level_three_passes (completion_kit.test_extensions.LedgerContracts.test_supported_level_three_passes) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 4.003s
+
+OK
+
+EXIT_CODE: 0
