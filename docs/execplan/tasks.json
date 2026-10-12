@@ -1,0 +1,440 @@
+{
+  "schema": 1,
+  "workdir": "../..",
+  "guide": {
+    "path": "D:/PROJECTS/NeuroPixel_Guia_Completa_20261012_ampliada.md",
+    "sha256_lf": "0620cfd8eb3543613848c6b75f52ffe3aa7c8534eb3fc62f54bbb80157412ba0"
+  },
+  "rules": "Modify only through plan_status.py; one task in_progress; evidence and commit before closing.",
+  "tasks": [
+    {
+      "id": "P0.1",
+      "phase": "P0 Preparación",
+      "section": "4.1",
+      "title": "Lecturas obligatorias, recursos reales y reclamación de la tarea en coordinación",
+      "depends_on": [],
+      "acceptance": "Leídos AGENTS.md, coordinacion/TABLON.md, RECURSOS.md, COLA-DE-TRABAJO.md, DECISIONES.md y el programa; RAM, CPU, disco, gpuq status y procesos ajenos registrados en EXECPLAN; tarea reclamada en TABLON sin interrumpir a nadie.",
+      "status": "in_progress",
+      "started": "2026-10-12T11:31Z",
+      "attempts": 1
+    },
+    {
+      "id": "P0.2",
+      "phase": "P0 Preparación",
+      "section": "4.2",
+      "title": "Checkout aislado en rama propia",
+      "depends_on": [
+        "P0.1"
+      ],
+      "acceptance": "Checkout en D:\\PROJECTS\\NeuroPixel-Completion-20261012, rama research/completion-20261012; git rev-parse HEAD registrado; si main cambió respecto de d8721a59, diferencias inventariadas sin aplicar parches por hashes antiguos.",
+      "status": "pending"
+    },
+    {
+      "id": "P0.3",
+      "phase": "P0 Preparación",
+      "section": "4.3",
+      "title": "Materializar el kit de la guía ampliada y su entorno",
+      "depends_on": [
+        "P0.2"
+      ],
+      "acceptance": "Extractor: 26 archivos autenticados; entorno en E: con versiones registradas; 38 + 25 pruebas aprobadas con salida guardada como evidencia.",
+      "status": "pending"
+    },
+    {
+      "id": "P0.4",
+      "phase": "P0 Preparación",
+      "section": "1",
+      "title": "Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md)",
+      "depends_on": [
+        "P0.3"
+      ],
+      "acceptance": "docs/execplan con EXECPLAN.md, tasks.json validado por plan_status.py status sin problemas, CHECKLIST.md generado, SESSION_LOG.md y bloque añadido a AGENTS.md; commit hecho.",
+      "status": "pending"
+    },
+    {
+      "id": "G0",
+      "phase": "G0 Inventario",
+      "section": "5",
+      "title": "Congelar inventario y restaurar trazabilidad",
+      "depends_on": [
+        "P0.4"
+      ],
+      "acceptance": "cero discrepancias no explicadas en los originales y un mapa de afirmación → protocolo → fuente → ejecución → datos → recuento. Las dependencias faltantes se identifican, sin inventar archivos ni valores. [guía §5]",
+      "status": "pending"
+    },
+    {
+      "id": "G1.1",
+      "phase": "G1 Energía y publicación",
+      "section": "6.2",
+      "title": "Inspección del recibo RENDER11 e inventario energético (CPU)",
+      "depends_on": [
+        "G0"
+      ],
+      "acceptance": "energy_inventory.json generado con las dos claves ausentes derivadas del plan y del recibo, sin medir nada nuevo.",
+      "status": "pending"
+    },
+    {
+      "id": "G1.2",
+      "phase": "G1 Energía y publicación",
+      "section": "6.2",
+      "title": "Recuperación de las dos claves físicas pendientes (GPU, solo por gpuq)",
+      "depends_on": [
+        "G1.1"
+      ],
+      "acceptance": "Recuperación en carpeta nueva con entorno GPU histórico y ticket gpuq; 105 claves únicas, 103 originales byte a byte, recibo y resumen guardados. Si la cola o la RAM no lo permiten: blocked_resource con ticket y hora.",
+      "status": "pending"
+    },
+    {
+      "id": "G1.3",
+      "phase": "G1 Energía y publicación",
+      "section": "6",
+      "title": "Reconciliación editorial y auditoría documental posterior",
+      "depends_on": [
+        "G1.2"
+      ],
+      "acceptance": "105 claves únicas admitidas, 103 originales conservadas byte a byte, cero mediciones cerradas repetidas, fuentes y entradas coincidentes, y ningún texto que declare más evidencia de la disponible. [guía §6]",
+      "status": "pending"
+    },
+    {
+      "id": "G2",
+      "phase": "G2 Contratos de software",
+      "section": "7",
+      "title": "Corregir el contrato T0 y repetir la reproducción pertinente",
+      "depends_on": [
+        "G1.2"
+      ],
+      "acceptance": "contrato T0 correcto; comparaciones positivas preservadas; regresiones pertinentes aprobadas; versiones y discrepancias documentadas. Las tres pruebas Torch incluidas deben ejecutarse en el entorno real: no se ejecutaron al escribir esta guía. [guía §7]",
+      "status": "pending"
+    },
+    {
+      "id": "A18",
+      "phase": "18A Registro de afirmaciones",
+      "section": "18A",
+      "title": "Crear el registro de afirmaciones con todo lo público actual",
+      "depends_on": [
+        "G0"
+      ],
+      "acceptance": "registro creado con todas las afirmaciones públicas, cada una en el nivel que justifican sus artefactos; ningún texto público por encima de su nivel. [guía §18A]",
+      "status": "pending"
+    },
+    {
+      "id": "G3",
+      "phase": "G3 Separación de datos",
+      "section": "8",
+      "title": "Separar desarrollo, validación y evaluación final",
+      "depends_on": [
+        "G0"
+      ],
+      "acceptance": "splits y derivados sin contaminación según la unidad declarada; selector y cohortes fijados; exposición final registrada; afirmaciones de custodia acordes a la operación real. [guía §8]",
+      "status": "pending"
+    },
+    {
+      "id": "G17.1",
+      "phase": "G17 Custodia ciega",
+      "section": "18F",
+      "title": "Custodia commit-reveal operativa antes de abrir cualquier TEST nuevo",
+      "depends_on": [
+        "G3"
+      ],
+      "acceptance": "Procedimiento de custodia probado de punta a punta en un ensayo sin datos reales (commit, digest, verify) y documentado; evaluador designado o bloqueo externo explícito para la custodia por terceros.",
+      "status": "pending"
+    },
+    {
+      "id": "G18",
+      "phase": "G18 Estadística de programa",
+      "section": "18G",
+      "title": "Registro de programa: hipótesis, alfa, márgenes y análisis",
+      "depends_on": [
+        "A18"
+      ],
+      "acceptance": "registro de programa con el α de cada hipótesis, márgenes de equivalencia para toda afirmación de igualdad, análisis jerárquico cuando corresponda y curva de especificaciones para cada resultado central. [guía §18G]",
+      "status": "pending"
+    },
+    {
+      "id": "G20",
+      "phase": "G20 Antecedentes",
+      "section": "18I",
+      "title": "Tabla de antecedentes que pueden anular la novedad",
+      "depends_on": [
+        "A18"
+      ],
+      "acceptance": "tabla completa en el manuscrito y al menos un experimento de comparación directa con el antecedente más cercano de la afirmación central. [guía §18I]",
+      "status": "pending"
+    },
+    {
+      "id": "G13",
+      "phase": "G13 Apuesta central",
+      "section": "18B",
+      "title": "Elegir con la matriz y registrar la apuesta central y sus criterios de abandono",
+      "depends_on": [
+        "G1.3",
+        "G2",
+        "A18",
+        "G18",
+        "G17.1",
+        "G20"
+      ],
+      "acceptance": "apuesta elegida con la matriz completa; hipótesis, predicciones y criterios de abandono registrados con compromiso fechado externamente; líneas no elegidas reclasificadas sin borrar su historia. [guía §18B]",
+      "status": "pending"
+    },
+    {
+      "id": "G4",
+      "phase": "G4 Competencia y atribución",
+      "section": "9",
+      "title": "Candidato competente y protocolo nuevo de ablaciones",
+      "depends_on": [
+        "G13",
+        "G3"
+      ],
+      "acceptance": "todas las celdas y controles ejecutados, competencia evaluada, incertidumbre y multiplicidad declaradas, contrastes auditados. Un resultado no significativo no prueba equivalencia ni ausencia de efecto. [guía §9]",
+      "status": "pending"
+    },
+    {
+      "id": "G5",
+      "phase": "G5 Tareas relacionales",
+      "section": "10",
+      "title": "Tareas relacionales difíciles y comparación externa",
+      "depends_on": [
+        "G4"
+      ],
+      "acceptance": "oráculos correctos, atajos medidos, competencia suficiente de los comparadores, cohorte completa y resultados de dificultad/OOD, incluidos negativos. La tarea sintética no demuestra lenguaje general. [guía §10]",
+      "status": "pending"
+    },
+    {
+      "id": "G6",
+      "phase": "G6 Estabilidad y memoria",
+      "section": "11",
+      "title": "Estabilidad, memoria y persistencia",
+      "depends_on": [
+        "G13",
+        "G3"
+      ],
+      "acceptance": "alcance matemático explícito; controles prolongados aprobados dentro del horizonte registrado; memoria útil demostrada en episodios sin reinyección informativa si se pretende esa capacidad. [guía §11]",
+      "status": "pending"
+    },
+    {
+      "id": "G14",
+      "phase": "G14 Ley reparación-memoria",
+      "section": "18C",
+      "title": "Protocolo HRM01: P1 a P4",
+      "depends_on": [
+        "G6"
+      ],
+      "acceptance": "P1 verificada en todos los modelos certificados; P2 y P4 evaluadas con protocolo congelado y TEST custodiado; cada mecanismo de memoria clasificado (cuencas, direcciones neutrales o transitorio lento) con su evidencia; negativos publicados. [guía §18C]",
+      "status": "pending"
+    },
+    {
+      "id": "G15",
+      "phase": "G15 Capacidad",
+      "section": "18D",
+      "title": "Protocolo CAP01: eficiencia frente al techo informacional",
+      "depends_on": [
+        "G14"
+      ],
+      "acceptance": "η por condición con su intervalo; comparadores con el mismo presupuesto de estado; ninguna medida por encima del techo, o la fuga identificada y corregida. [guía §18D]",
+      "status": "pending"
+    },
+    {
+      "id": "G16",
+      "phase": "G16 Leyes de escala",
+      "section": "18E",
+      "title": "Ley de escala con predicción sellada de extrapolación",
+      "depends_on": [
+        "G15"
+      ],
+      "acceptance": "forma, escalas, predicción y tolerancia selladas antes de medir; resultado publicado tanto si acierta como si falla. [guía §18E]",
+      "status": "pending"
+    },
+    {
+      "id": "G7",
+      "phase": "G7 Reparación y crecimiento",
+      "section": "12",
+      "title": "Reparación y crecimiento realmente útiles",
+      "depends_on": [
+        "G6"
+      ],
+      "acceptance": "endpoints de reparación/adquisición/routing completos, mecanismos alternativos controlados y costes incluidos. Si se requiere otro módulo de memoria, incorporarlo a la descripción y a la prueba del sistema. [guía §12]",
+      "status": "pending"
+    },
+    {
+      "id": "G8",
+      "phase": "G8 Scanner y causalidad",
+      "section": "13",
+      "title": "Scanner, observabilidad e interpretación causal",
+      "depends_on": [
+        "G6"
+      ],
+      "acceptance": "una predicción causal preregistrada, su intervención, controles y resultado reproducido; límites de identificación explícitos. Un visor operativo es un resultado de ingeniería independiente de esa conclusión. [guía §13]",
+      "status": "pending"
+    },
+    {
+      "id": "M1",
+      "phase": "Matemáticas openai/math",
+      "section": "14.1",
+      "title": "Experimento MATH325 (Crouzeix)",
+      "depends_on": [
+        "G6"
+      ],
+      "acceptance": "MATH325 registrado y ejecutado con referencia clásica 1+√2 y propuesta nueva; endpoint fijado antes; resultado publicado aunque la cota sea demasiado conservadora.",
+      "status": "pending"
+    },
+    {
+      "id": "M2",
+      "phase": "Matemáticas openai/math",
+      "section": "14.2",
+      "title": "Experimento MATH119 (Courtade-Kumar)",
+      "depends_on": [
+        "G3"
+      ],
+      "acceptance": "MATH119 registrado y ejecutado con controles analíticos; sin aplicar la desigualdad fuera de sus hipótesis.",
+      "status": "pending"
+    },
+    {
+      "id": "M3",
+      "phase": "Matemáticas openai/math",
+      "section": "14.3",
+      "title": "Comprobar formalizaciones con Comparator (Linux/WSL)",
+      "depends_on": [
+        "P0.4"
+      ],
+      "acceptance": "Comparator ejecutado para DirectCrouzeix y CourtadeKumar con stdout/stderr, código de salida, versiones y axiomas guardados, o estado formalization_rebuild_pending documentado.",
+      "status": "pending"
+    },
+    {
+      "id": "G9",
+      "phase": "G9 Backend gráfico y coste",
+      "section": "15",
+      "title": "Backend gráfico, coste total, energía y escalado",
+      "depends_on": [
+        "G5",
+        "G1.3"
+      ],
+      "acceptance": "paridad completa en los dominios declarados, comparadores suficientemente competentes, tabla de todos los casos y alcance temporal/energético preciso. Las filas técnicas no aumentan el número de realizaciones científicas. [guía §15]",
+      "status": "pending"
+    },
+    {
+      "id": "G19",
+      "phase": "G19 Física del cómputo",
+      "section": "18H",
+      "title": "Energía frente a Landauer y ley de coste",
+      "depends_on": [
+        "G9",
+        "G16"
+      ],
+      "acceptance": "tabla de energía con fronteras declaradas, cociente frente a Landauer con su convención y ley de coste con predicción sellada. [guía §18H]",
+      "status": "pending"
+    },
+    {
+      "id": "G10",
+      "phase": "G10 Novedad",
+      "section": "16",
+      "title": "Novedad y predicciones nuevas",
+      "depends_on": [
+        "G20",
+        "G16"
+      ],
+      "acceptance": "antecedente más cercano identificado, diferencia verificable, alcance delimitado y una predicción nueva evaluada. Una revisión de literatura completa tampoco constituye por sí sola utilidad excepcional. [guía §16]",
+      "status": "pending"
+    },
+    {
+      "id": "G21",
+      "phase": "G21 Biología y neurociencia",
+      "section": "18J",
+      "title": "Predicciones biológicas registradas o conclusión explícita",
+      "depends_on": [
+        "G14"
+      ],
+      "acceptance": "al menos una predicción biológica registrada con prueba externa de fecha, el dato que la evaluaría y su propietario, o la conclusión explícita de que la analogía no produce predicciones evaluables. [guía §18J]",
+      "status": "pending"
+    },
+    {
+      "id": "G22",
+      "phase": "G22 Universalidad",
+      "section": "18K",
+      "title": "Universalidad entre sustratos",
+      "depends_on": [
+        "G16"
+      ],
+      "acceptance": "dominios registrados, resultados por dominio, metaanálisis registrado y lista de los dominios donde el principio no se cumple. [guía §18K]",
+      "status": "pending"
+    },
+    {
+      "id": "G17.2",
+      "phase": "G17 Custodia ciega",
+      "section": "18F",
+      "title": "Paquete de desafío externo tipo CASP",
+      "depends_on": [
+        "G15",
+        "G5"
+      ],
+      "acceptance": "custodia verificable por terceros, con el orden temporal probado externamente; desafío preparado y documentado, o bloqueo externo explícito. [guía §18F]",
+      "status": "pending"
+    },
+    {
+      "id": "G11",
+      "phase": "G11 Reproducción independiente",
+      "section": "17",
+      "title": "Paquete de reproducción independiente",
+      "depends_on": [
+        "G17.2",
+        "G9"
+      ],
+      "acceptance": "recibo verificable de terceros y comparación completa, o paquete terminado con dependencia externa explícita. No inventar identidad institucional, aceptación, cita o réplica. [guía §17]",
+      "status": "pending"
+    },
+    {
+      "id": "G23",
+      "phase": "18L Equipo rojo",
+      "section": "18L",
+      "title": "Equipo rojo final sobre todas las afirmaciones L3 o superiores",
+      "depends_on": [
+        "G10",
+        "G11",
+        "G19",
+        "G21",
+        "G22",
+        "G7",
+        "G8",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "acceptance": "informe del equipo rojo y respuesta para cada afirmación L3 o superior; tabla de riesgos actualizada. [guía §18L]",
+      "status": "pending"
+    },
+    {
+      "id": "G12",
+      "phase": "G12 Manuscrito",
+      "section": "18",
+      "title": "Manuscrito completo y presentación final",
+      "depends_on": [
+        "G23"
+      ],
+      "acceptance": "Manuscrito íntegro en inglés con todos los métodos y resultados nuevos, figuras regenerables desde archivos autenticados, coherencia abstract/tablas/texto/README revisada y versión/tag local preparada.",
+      "status": "pending"
+    },
+    {
+      "id": "G24",
+      "phase": "18M Comunicación",
+      "section": "18M",
+      "title": "Paquete de envío, autoría y archivo",
+      "depends_on": [
+        "G12"
+      ],
+      "acceptance": "paquete de envío completo y coherente con el registro de afirmaciones; acciones externas aprobadas o registradas como pendientes. [guía §18M]",
+      "status": "pending"
+    },
+    {
+      "id": "FINAL",
+      "phase": "Entrega",
+      "section": "19",
+      "title": "Entrega final al propietario y puerta alcanzada",
+      "depends_on": [
+        "G24"
+      ],
+      "acceptance": "claims_ledger válido; entrega con la lista del §19 más puerta (§18N), nivel L de cada afirmación, apuesta y criterios activados; plan_status.py status sin tareas pending ni in_progress.",
+      "status": "pending"
+    }
+  ],
+  "updated": "2026-10-12T11:31Z"
+}
