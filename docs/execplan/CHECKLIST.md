@@ -20,7 +20,7 @@
 
 ## G2 Contrato T0: CPU ligera
 
-- [ ] **IN PROGRESS** G2.1 Conservar checkout congelado y aplicar parche T0 en version nueva (§7) (attempt 1)
+- [x] ~~G2.1 Conservar checkout congelado y aplicar parche T0 en version nueva (§7)~~ 2026-10-12T12:00Z `0183a4ee12`
 
 ## G2 Contrato T0: Torch real
 
