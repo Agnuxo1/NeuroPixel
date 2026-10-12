@@ -12,6 +12,8 @@ NeuroPixel obtuvo **94.357%** frente a **90.840%** del CNN, diferencia **+3.517p
 
 El intervalo describe variación de cinco entrenamientos sobre la misma población, sin custodia ciega ni replicación independiente. Datos públicos UCI con separación de escritores documentada; grupos de imagen exacta disjuntos; selección exclusivamenteDEV300 antes deTEST. NCA5056/CNN5039parámetros cerca en cuenta nominal, con profundidad, geometría yFLOPs diferentes. No demuestra superioridad universal ni rescataH1 de binding.
 
+> Evidence-level note (A18.3, 2026-10-13): the same frozen protocol also scored two registered test-time transformations: at half input intensity NeuroPixel averaged 88.737% versus 67.056% for the CNN (+21.681 pp), but with a one-column right shift and crop it averaged 55.826% versus 85.120% (-29.293 pp). NeuroPixel was far less robust to the shift (claim D-VIS07-05 in docs/research/claims_ledger.json).
+
 ## Profundidad y reproducción
 
 | Updates retenidos | Exactitud media | RMS medio de estado |

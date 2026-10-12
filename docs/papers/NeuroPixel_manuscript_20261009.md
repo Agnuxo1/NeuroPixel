@@ -46,7 +46,7 @@ Five paired seeds, 240–244, start fresh. NeuroPixel uses retina width 8, ident
 | 243 | 1,688 | 1,642 |
 | 244 | 1,697 | 1,640 |
 
-Mean accuracy is 94.3573% versus 90.8403%. The mean paired difference is 3.51697 points; exploratory Student t95, df=4, gives [1.93046, 5.10349]. This describes variation across training realizations on a shared fixed test population, not uncertainty across arbitrary writers, datasets or devices. All five NeuroPixel models exceed 90%. Nominal parameter proximity does not establish architectural causality or state-of-the-art rank. The public corpus is not a blind custody evaluation.
+Mean accuracy is 94.3573% versus 90.8403%. The mean paired difference is 3.51697 points; exploratory Student t95, df=4, gives [1.93046, 5.10349]. This describes variation across training realizations on a shared fixed test population, not uncertainty across arbitrary writers, datasets or devices. All five NeuroPixel models exceed 90%. Nominal parameter proximity does not establish architectural causality or state-of-the-art rank. The public corpus is not a blind custody evaluation. Two registered test-time transformations were also scored: at half input intensity NeuroPixel averaged 88.737% versus 67.056% for the CNN, but with a one-column right shift and crop it averaged 55.826% versus 85.120%; NeuroPixel was far less robust to the shift.
 
 ## 5. Dynamics and scanner limits
 

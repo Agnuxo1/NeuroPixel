@@ -28,6 +28,13 @@ for tag in BATCHES:
         seen.add(item["id"])
         claims.append(item)
 missing = [c["id"] for c in candidates if covered[c["id"]] != 1]
+# A18.3 and later amendments are applied on top of the closed batch fragments, never inside them.
+import completion_claims_amendments_A18_3 as A183
+claims, amendment_record = A183.apply(claims)
+if amendment_record["problems"]:
+    problems += amendment_record["problems"]
+(OUT / "claims_amendments_A18.3.json").write_text(json.dumps(amendment_record, indent=2, ensure_ascii=False) + "\n",
+                                                  encoding="utf-8", newline="\n")
 if missing:
     problems.append(f"{len(missing)} candidates not classified exactly once")
 assert not problems, problems
@@ -42,6 +49,6 @@ ledger = dict(schema=1, authors=["Francisco Angulo de Lafuente"],
 summary = dict(candidates=len(candidates), classified_exactly_once=len(candidates) - len(missing), claims=len(claims),
                by_level=dict(sorted(Counter(c["declared_level"] for c in claims).items())),
                by_status=dict(sorted(Counter(c["status"] for c in claims).items())),
-               max_declared_level=max(c["declared_level"] for c in claims))
+               max_declared_level=max(c["declared_level"] for c in claims), amendments=["A18.3"])
 (OUT / "claims_ledger_build.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8", newline="\n")
 print(json.dumps(summary, indent=1))

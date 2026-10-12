@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-12T22:19:50.972186+00:00",
+  "archived_pre_round_bytes": "docs/archive/completion_20261012/A18_round2",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256_before": "697de8f88006a67aa1a8f0e4a1a275406ace7c038d4320f14c2ef76241d5a637",
+      "sha256_after": "4f2daa6a5e78c9e4d9d4af01f6a010e9436297003edfb76152578b288a41e2af"
+    },
+    {
+      "path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "sha256_before": "b2af047ea0ed4ec4b3ad49cb83746155d998506315b05c1b6bd8285d8626e6e7",
+      "sha256_after": "e479a1160908b171fe06a9826549fe1f5c40f752c6070c15edabae64cbd63dba"
+    },
+    {
+      "path": "docs/research/VIS07_results.md",
+      "sha256_before": "0d6474d85d051d403f77a98e6cac2ba9387c17f6e2a348aa5953a5309a10c734",
+      "sha256_after": "67d86af66edc9c9ea49a805ebb6592ccc6b74ded0822f7b353b339aad6284244"
+    }
+  ],
+  "corrections": [
+    {
+      "file": "docs/research/VIS07_results.md",
+      "line": 15,
+      "claim": "D-VIS07-05",
+      "before": "## Profundidad y reproducción",
+      "after": "> Evidence-level note (A18.3, 2026-10-13): the same frozen protocol also scored two registered test-time transformations: at half input intensity NeuroPixel averaged 88.737% versus 67.056% for the CNN (+21.681 pp), but with a one-column right shift and crop it averaged 55.826% versus 85.120% (-29.293 pp). NeuroPixel was far less robust to the shift (claim D-VIS07-05 in docs/research/claims_ledger.json).\n\n## Profundidad y reproducción",
+      "reason": "Registered transformation conditions were executed but not reported."
+    },
+    {
+      "file": "README.md",
+      "line": 26,
+      "claim": "D-VIS07-05",
+      "before": "near nominal parameter counts, differing functions/costs. |",
+      "after": "near nominal parameter counts, differing functions/costs. Under a one-column shift NeuroPixel fell to **55.83%** versus **85.12%** for the CNN; at half intensity it kept **88.74%** versus **67.06%** ([claims ledger](docs/research/claims_ledger.json), D-VIS07-05). |",
+      "reason": "The headline row omitted the registered robustness conditions, one of them strongly negative."
+    },
+    {
+      "file": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "line": 49,
+      "claim": "D-VIS07-05",
+      "before": "The public corpus is not a blind custody evaluation.",
+      "after": "The public corpus is not a blind custody evaluation. Two registered test-time transformations were also scored: at half input intensity NeuroPixel averaged 88.737% versus 67.056% for the CNN, but with a one-column right shift and crop it averaged 55.826% versus 85.120%; NeuroPixel was far less robust to the shift.",
+      "reason": "Registered transformation conditions were executed but not reported."
+    }
+  ]
+}
