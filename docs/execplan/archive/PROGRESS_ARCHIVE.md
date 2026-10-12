@@ -68,3 +68,9 @@
 
 ## A18.2.G
 - [ ] (2026-10-12T21:53:05+00:00) A18.2.G, intento 1: hecho A18.2.D cerrada (commit dd728c27): 234/234, 24 afirmaciones, validador valido; falta Leer 74 candidatos RENDER, localizar recibos RENDER08-11, separar energia de placa y de pared, clasificar. Siguiente: `python docs/execplan/plan_status.py start A18.2.G`.
+
+## A18.2.P
+- [ ] (2026-10-12T21:55:53+00:00) A18.2.P, intento 1: hecho A18.2.G cerrada: 74/74, 6 afirmaciones, 222 comprobaciones; falta Revisar 182 candidatos P (README, manuscritos, documentos nuevos); integrar H/D/G/P en docs/research/claims_ledger.json; T0 runtime pendiente explicito. Siguiente: `python docs/execplan/plan_status.py start A18.2.P`.
+
+## A18.2
+- [ ] (2026-10-12T12:05:41+00:00) A18.2, intento 1: hecho Inventario A18.1 cerrado; guard Torch rechazado y publicacion externa retenida.; falta Clasificar todas las unidades, separar afirmaciones y exclusions editoriales; vincular protocolo, recibos, poblacion y limites; dividir por grupos antes de empezar.. Siguiente: `python docs/execplan/plan_status.py next`.
