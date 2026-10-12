@@ -1,0 +1,773 @@
+{
+  "schema": 1,
+  "task": "A18.2.G",
+  "candidates": 74,
+  "classified": 74,
+  "classes": {
+    "editorial": 4,
+    "data_row": 56,
+    "method": 2,
+    "claim": 6,
+    "limit": 4,
+    "provenance": 2
+  },
+  "claims": 6,
+  "discrepancies": [
+    {
+      "source": "docs/research/RENDER08_results.md",
+      "line": 3,
+      "claim": "G-R08-01",
+      "report_text": "column 'Render vector ms'",
+      "receipt": "results/research/RENDER08_benchmark/original_20261009A/receipt.json",
+      "receipt_field": "rows[*].method == 'render'",
+      "finding": "RENDER08 has a single renderer method whose medians (11.76-44.17 ms) match the RENDER09 scalar renderer; line 15 calls it the scalar renderer. The column label needs an archived correction in A18.3."
+    },
+    {
+      "source": "docs/research/RENDER09_results.md",
+      "line": 15,
+      "claim": "G-R09-01",
+      "report_text": "otras configuraciones no superan CUDA",
+      "receipt": "results/research/RENDER09_benchmark/original_20261009A/receipt.json",
+      "receipt_field": "median host ms ratios",
+      "finding": "Two other workloads have point ratios above 1 (C16/grid8 1.0389, RGB8 retina 1.0720); the sentence should say they exceed CUDA only marginally and may reflect noise. The ledger states the ratios."
+    }
+  ],
+  "problems": [],
+  "scope": "Semantic review of batch A18.2.G; every table cell recounted from receipt rows; board energy kept separate from wall energy and technical repeats separate from replicas.",
+  "decisions": [
+    {
+      "candidate_id": "S017-L0003",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 3,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S017-L0005",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 5,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0006",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 6,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0007",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 7,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0008",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 8,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0009",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 9,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0010",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 10,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0011",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 11,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "data_row",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0013",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 13,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "method",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0015",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 15,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "claim",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S017-L0017",
+      "source_path": "docs/research/RENDER08_results.md",
+      "source_line": 17,
+      "source_sha256": "a7e89a511a3a1252aa5c47270eb4477405412e2b0d1941488a15da52ea373fc4",
+      "classification": "limit",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0003",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 3,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S018-L0005",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 5,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0006",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 6,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0007",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 7,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0008",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 8,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0009",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 9,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0010",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 10,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0011",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 11,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "data_row",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0013",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 13,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "method",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0015",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 15,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "claim",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S018-L0017",
+      "source_path": "docs/research/RENDER09_results.md",
+      "source_line": 17,
+      "source_sha256": "b64ebdf6339480b58d3d1e1b36cedb10d7a01ff3c0058412b5c51f1396feec10",
+      "classification": "limit",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0003",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 3,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "claim",
+      "claims": [
+        "G-R10-01",
+        "G-R10-02"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0005",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 5,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S019-L0007",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 7,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0008",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 8,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0009",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 9,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0010",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 10,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0011",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 11,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0012",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 12,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0013",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 13,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "data_row",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0015",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 15,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "claim",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0017",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 17,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "limit",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S019-L0019",
+      "source_path": "docs/research/RENDER10_results.md",
+      "source_line": 19,
+      "source_sha256": "c3e4430f3f7ace8cb465bb9ec74bf390edc6d7a2ffa2fe77d43b26eefc51d474",
+      "classification": "claim",
+      "claims": [
+        "G-R11-02",
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0003",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 3,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "claim",
+      "claims": [
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0005",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 5,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "provenance",
+      "claims": [
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0007",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 7,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "provenance",
+      "claims": [
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0009",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 9,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S020-L0011",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 11,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0012",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 12,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0013",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 13,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0014",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 14,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0015",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 15,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0016",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 16,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0017",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 17,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0018",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 18,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0019",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 19,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0020",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 20,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0021",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 21,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0022",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 22,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0023",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 23,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0024",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 24,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0025",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 25,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0026",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 26,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0027",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 27,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0028",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 28,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0029",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 29,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0030",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 30,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0031",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 31,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0032",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 32,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0033",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 33,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0034",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 34,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0035",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 35,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0036",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 36,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0037",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 37,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0038",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 38,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0039",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 39,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0040",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 40,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0041",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 41,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0042",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 42,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0043",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 43,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0044",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 44,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0045",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 45,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "data_row",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S020-L0047",
+      "source_path": "docs/research/RENDER11_results.md",
+      "source_line": 47,
+      "source_sha256": "5b660df8bef56b08d5069b057496bd15757062afefb73d9c14cda448d69a2585",
+      "classification": "limit",
+      "claims": [
+        "G-R11-01"
+      ]
+    }
+  ]
+}
