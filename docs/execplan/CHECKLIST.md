@@ -4,7 +4,7 @@
 ## P0 Preparación
 
 - [x] ~~P0.1 Lecturas obligatorias, recursos reales y reclamación de la tarea en coordinación (§4.1)~~ 2026-10-12T11:33Z `f59c41a8b6`
-- [ ] **IN PROGRESS** P0.2 Checkout aislado en rama propia (§4.2) (attempt 1)
+- [x] ~~P0.2 Checkout aislado en rama propia (§4.2)~~ 2026-10-12T11:33Z `92d5f3ae28`
 - [ ] P0.3 Materializar el kit de la guía ampliada y su entorno (§4.3)
 - [ ] P0.4 Sistema de plan operativo (ExecPlan, ledger, checklist, bloque AGENTS.md) (§1)
 
