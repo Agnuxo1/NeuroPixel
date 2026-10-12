@@ -244,7 +244,7 @@ def run_review(task: str, claims: list[dict], decisions: Decisions, discrepancie
             problems.append(f"restatement {label}: check failed {spec} in {rel}")
     tag = task.split(".")[-1]
     (OUT / f"value_checks_{tag}.json").write_text(
-        json.dumps(dict(schema=1, task=task, recounts=recounts, claims=checks_out, restatements=restated), indent=2) + "\n",
+        json.dumps(dict(schema=1, task=task, recounts=recounts, claims=checks_out, **({"restatements": restated} if restated else {})), indent=2) + "\n",
         encoding="utf-8", newline="\n")
 
     ledger_claims = []
