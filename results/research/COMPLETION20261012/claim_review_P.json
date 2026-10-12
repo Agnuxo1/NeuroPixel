@@ -1,0 +1,1858 @@
+{
+  "schema": 1,
+  "task": "A18.2.P",
+  "candidates": 182,
+  "classified": 182,
+  "classes": {
+    "editorial": 38,
+    "claim": 25,
+    "data_row": 1,
+    "restatement": 91,
+    "limit": 11,
+    "method": 10,
+    "provenance": 2,
+    "governance": 4
+  },
+  "claims": 10,
+  "discrepancies": [
+    {
+      "source": "README.md",
+      "line": 96,
+      "claim": "P-AVAIL-01",
+      "report_text": "Frozen plans, original checkpoints, datasets, raw predictions/states ... under results/research/",
+      "finding": "Availability is overstated: the item-5 CPU archive, 05_analysis.json, 05_independent_check.json and the historical reassessment outputs are unavailable, and several dependencies existed only outside the tree until A18.2.H/D imports."
+    },
+    {
+      "source": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "line": 73,
+      "claim": "P-AVAIL-01",
+      "report_text": "Frozen plans, source commits, weights, datasets ... are supplied",
+      "finding": "Availability is overstated: the item-5 CPU archive, 05_analysis.json, 05_independent_check.json and the historical reassessment outputs are unavailable, and several dependencies existed only outside the tree until A18.2.H/D imports."
+    },
+    {
+      "source": "docs/research/RESULTS_INDEX_20261009.md",
+      "line": 17,
+      "claim": "P-AVAIL-01",
+      "report_text": "All raw archives and their original Git blobs are included/indexed",
+      "finding": "Availability is overstated: the item-5 CPU archive, 05_analysis.json, 05_independent_check.json and the historical reassessment outputs are unavailable, and several dependencies existed only outside the tree until A18.2.H/D imports."
+    },
+    {
+      "source": "docs/research/REPRODUCE_20261009.md",
+      "line": 11,
+      "claim": "P-AVAIL-01",
+      "report_text": "The publication manifest maps all raw archives",
+      "finding": "Availability is overstated: the item-5 CPU archive, 05_analysis.json, 05_independent_check.json and the historical reassessment outputs are unavailable, and several dependencies existed only outside the tree until A18.2.H/D imports."
+    },
+    {
+      "source": "README.md",
+      "line": 57,
+      "claim": "G-R08-01",
+      "report_text": "3.14-12.25x slower",
+      "finding": "Receipt medians give 3.138-12.244x (C48/grid8: 35.0129/2.8595 ms); 12.25 should read 12.24. Same in the manuscript line 63."
+    },
+    {
+      "source": "docs/research/REPRODUCE_20261009.md",
+      "line": 17,
+      "claim": "G-R11-02",
+      "report_text": "RENDER11 retained100/105 original energy blocks",
+      "finding": "Stale: the original receipt stores 103 of 105 rows (G-R11-02; same document line 21 says 103)."
+    },
+    {
+      "source": "README.md",
+      "line": 37,
+      "claim": "P-ARCH-01",
+      "report_text": "pre-scientific capability figure",
+      "finding": "README still embeds pre-scientific capability (memory, rest-state, growing canvases) and scaling figures; captions qualify them, but A18.3 must decide whether the figures exceed the evidence level."
+    }
+  ],
+  "problems": [],
+  "scope": "Semantic review of batch A18.2.P (README, manuscripts, new-phase documents); restatements are linked to claims registered in batches H, D and G and re-checked.",
+  "decisions": [
+    {
+      "candidate_id": "S001-L0001",
+      "source_path": "README.md",
+      "source_line": 1,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0002",
+      "source_path": "README.md",
+      "source_line": 2,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0003",
+      "source_path": "README.md",
+      "source_line": 3,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0009",
+      "source_path": "README.md",
+      "source_line": 9,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ARCH-01",
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0011",
+      "source_path": "README.md",
+      "source_line": 11,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0012",
+      "source_path": "README.md",
+      "source_line": 12,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0013",
+      "source_path": "README.md",
+      "source_line": 13,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0015",
+      "source_path": "README.md",
+      "source_line": 15,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0017",
+      "source_path": "README.md",
+      "source_line": 17,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0019",
+      "source_path": "README.md",
+      "source_line": 19,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0023",
+      "source_path": "README.md",
+      "source_line": 23,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S001-L0025",
+      "source_path": "README.md",
+      "source_line": 25,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "data_row",
+      "claims": [
+        "P-GPU-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0026",
+      "source_path": "README.md",
+      "source_line": 26,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0027",
+      "source_path": "README.md",
+      "source_line": 27,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0028",
+      "source_path": "README.md",
+      "source_line": 28,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "D-GLOB05-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0029",
+      "source_path": "README.md",
+      "source_line": 29,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "H05-01",
+        "D-DEV04-01",
+        "D-VIS07-02"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0031",
+      "source_path": "README.md",
+      "source_line": 31,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "limit",
+      "claims": [
+        "P-ARCH-01",
+        "D-VIS07-01",
+        "G-R09-01",
+        "D-GLOB05-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0033",
+      "source_path": "README.md",
+      "source_line": 33,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0034",
+      "source_path": "README.md",
+      "source_line": 34,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0035",
+      "source_path": "README.md",
+      "source_line": 35,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0037",
+      "source_path": "README.md",
+      "source_line": 37,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "limit",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0039",
+      "source_path": "README.md",
+      "source_line": 39,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0040",
+      "source_path": "README.md",
+      "source_line": 40,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0041",
+      "source_path": "README.md",
+      "source_line": 41,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0043",
+      "source_path": "README.md",
+      "source_line": 43,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "limit",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0047",
+      "source_path": "README.md",
+      "source_line": 47,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ARCH-01",
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0049",
+      "source_path": "README.md",
+      "source_line": 49,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0051",
+      "source_path": "README.md",
+      "source_line": 51,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0053",
+      "source_path": "README.md",
+      "source_line": 53,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0055",
+      "source_path": "README.md",
+      "source_line": 55,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0057",
+      "source_path": "README.md",
+      "source_line": 57,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "G-R08-01",
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0059",
+      "source_path": "README.md",
+      "source_line": 59,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "limit",
+      "claims": [
+        "G-R08-01",
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0063",
+      "source_path": "README.md",
+      "source_line": 63,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "method",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0065",
+      "source_path": "README.md",
+      "source_line": 65,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0067",
+      "source_path": "README.md",
+      "source_line": 67,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0069",
+      "source_path": "README.md",
+      "source_line": 69,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "limit",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0073",
+      "source_path": "README.md",
+      "source_line": 73,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0075",
+      "source_path": "README.md",
+      "source_line": 75,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0077",
+      "source_path": "README.md",
+      "source_line": 77,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-02",
+        "D-VIS07-03"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0079",
+      "source_path": "README.md",
+      "source_line": 79,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0080",
+      "source_path": "README.md",
+      "source_line": 80,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0081",
+      "source_path": "README.md",
+      "source_line": 81,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "figure embed or caption: visual restatement of bound data rows"
+    },
+    {
+      "candidate_id": "S001-L0083",
+      "source_path": "README.md",
+      "source_line": 83,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0085",
+      "source_path": "README.md",
+      "source_line": 85,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "D-SCN06-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0089",
+      "source_path": "README.md",
+      "source_line": 89,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-VIEW-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0091",
+      "source_path": "README.md",
+      "source_line": 91,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-02",
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0093",
+      "source_path": "README.md",
+      "source_line": 93,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S001-L0094",
+      "source_path": "README.md",
+      "source_line": 94,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S001-L0095",
+      "source_path": "README.md",
+      "source_line": 95,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "link list or reference definition: navigation only; linked artifacts are bound in the claims"
+    },
+    {
+      "candidate_id": "S001-L0096",
+      "source_path": "README.md",
+      "source_line": 96,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-AVAIL-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0097",
+      "source_path": "README.md",
+      "source_line": 97,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0098",
+      "source_path": "README.md",
+      "source_line": 98,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "provenance",
+      "claims": [
+        "P-AVAIL-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0100",
+      "source_path": "README.md",
+      "source_line": 100,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "provenance",
+      "claims": [
+        "P-GPU-01"
+      ]
+    },
+    {
+      "candidate_id": "S001-L0104",
+      "source_path": "README.md",
+      "source_line": 104,
+      "source_sha256": "c0e54f74de9ab7583d32538ea1aa04f22a373af681817baa4d45aa85a0914578",
+      "classification": "editorial",
+      "exclusion_reason": "license and data attribution: legal notice, not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S002-L0003",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 3,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "author byline and document date"
+    },
+    {
+      "candidate_id": "S002-L0007",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 7,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01",
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0011",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 11,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "method",
+      "claims": [
+        "D-VIS07-01",
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0015",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 15,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S002-L0017",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 17,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0018",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 18,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0019",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 19,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0020",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 20,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0021",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 21,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0025",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 25,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S002-L0027",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 27,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0028",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 28,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0029",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 29,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0030",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 30,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0031",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 31,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0032",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 32,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0033",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 33,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0037",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 37,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-02",
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0039",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 39,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S002-L0041",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 41,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0042",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 42,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0043",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 43,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0044",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 44,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0045",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 45,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0046",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 46,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0047",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 47,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0048",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 48,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0049",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 49,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0050",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 50,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0051",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 51,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0052",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 52,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0053",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 53,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0054",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 54,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0055",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 55,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0056",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 56,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0057",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 57,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0058",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 58,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0059",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 59,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0060",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 60,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0061",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 61,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0062",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 62,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0063",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 63,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0064",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 64,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0065",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 65,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0066",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 66,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0067",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 67,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0068",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 68,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0069",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 69,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0070",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 70,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0071",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 71,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0072",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 72,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0073",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 73,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0074",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 74,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0075",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 75,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0077",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 77,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "limit",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0081",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 81,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "restatement",
+      "claims": [
+        "H05-01",
+        "H06-01",
+        "D-DEV04-01",
+        "D-VIS07-02",
+        "HT-12",
+        "HT-14",
+        "D-SCN06-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0085",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 85,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "claim",
+      "claims": [
+        "P-MATH-01"
+      ]
+    },
+    {
+      "candidate_id": "S002-L0089",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 89,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "governance",
+      "exclusion_reason": "project-process statement (next step, task ordering or closure governance), not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S002-L0093",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 93,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer or reproduction command: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S002-L0094",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 94,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer or reproduction command: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S002-L0095",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 95,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer or reproduction command: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S002-L0096",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 96,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer or reproduction command: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S002-L0098",
+      "source_path": "docs/papers/NeuroPixel_evidence_reconciled_20261012.md",
+      "source_line": 98,
+      "source_sha256": "e5a92e6b5ee2a325954b53f82735a93e92a5bb43cea153a0f5cb111534f70b94",
+      "classification": "governance",
+      "exclusion_reason": "project-process statement (next step, task ordering or closure governance), not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S003-L0003",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 3,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "limit",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0007",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 7,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "P-GPU-01",
+        "D-VIS07-01",
+        "G-R09-01",
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0011",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 11,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "limit",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0013",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 13,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "limit",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0017",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 17,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "method",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0019",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 19,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "method",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0021",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 21,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "method",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0023",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 23,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "claim",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0025",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 25,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "claim",
+      "claims": [
+        "P-GPU-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0029",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 29,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "H05-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0031",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 31,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-DEV04-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0033",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 33,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-GLOB05-01",
+        "D-GLOB05-02"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0037",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 37,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "method",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0039",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 39,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "method",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0041",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 41,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S003-L0043",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 43,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0044",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 44,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0045",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 45,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0046",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 46,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0047",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 47,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0049",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 49,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0053",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 53,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-02"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0055",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 55,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-03"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0057",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 57,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "D-SCN06-01",
+        "D-SCN06-02"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0061",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 61,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "method",
+      "claims": [
+        "G-R08-01",
+        "G-R09-01",
+        "G-R10-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0063",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 63,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "G-R08-01",
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0065",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 65,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01",
+        "G-R10-02"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0067",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 67,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "claim",
+      "claims": [
+        "P-COST-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0069",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 69,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "limit",
+      "claims": [
+        "G-R11-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0073",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 73,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "claim",
+      "claims": [
+        "P-AVAIL-01",
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0075",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 75,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "governance",
+      "exclusion_reason": "project-process statement (next step, task ordering or closure governance), not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S003-L0077",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 77,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "editorial",
+      "exclusion_reason": "license and data attribution: legal notice, not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S003-L0079",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 79,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "P-GPU-01",
+        "D-VIS07-01",
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S003-L0083",
+      "source_path": "docs/papers/NeuroPixel_manuscript_20261009.md",
+      "source_line": 83,
+      "source_sha256": "fd03ed122b7dcb4130d996c771da2cf03dbd90043c827d23893a561e8ace23ad",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01",
+        "G-R10-02",
+        "P-VIEW-01",
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S007-L0003",
+      "source_path": "docs/research/COMPLETION_G0_inventory_20261012.md",
+      "source_line": 3,
+      "source_sha256": "0d8e28b944f2450e38f6719ab32cdef2977f9437321e3e8fac7ddfbb1c1021fc",
+      "classification": "claim",
+      "claims": [
+        "P-G0-01"
+      ]
+    },
+    {
+      "candidate_id": "S007-L0005",
+      "source_path": "docs/research/COMPLETION_G0_inventory_20261012.md",
+      "source_line": 5,
+      "source_sha256": "0d8e28b944f2450e38f6719ab32cdef2977f9437321e3e8fac7ddfbb1c1021fc",
+      "classification": "claim",
+      "claims": [
+        "P-G0-01"
+      ]
+    },
+    {
+      "candidate_id": "S007-L0007",
+      "source_path": "docs/research/COMPLETION_G0_inventory_20261012.md",
+      "source_line": 7,
+      "source_sha256": "0d8e28b944f2450e38f6719ab32cdef2977f9437321e3e8fac7ddfbb1c1021fc",
+      "classification": "claim",
+      "claims": [
+        "P-G0-02"
+      ]
+    },
+    {
+      "candidate_id": "S007-L0009",
+      "source_path": "docs/research/COMPLETION_G0_inventory_20261012.md",
+      "source_line": 9,
+      "source_sha256": "0d8e28b944f2450e38f6719ab32cdef2977f9437321e3e8fac7ddfbb1c1021fc",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01",
+        "D-VIS07-03",
+        "HC-01"
+      ]
+    },
+    {
+      "candidate_id": "S007-L0011",
+      "source_path": "docs/research/COMPLETION_G0_inventory_20261012.md",
+      "source_line": 11,
+      "source_sha256": "0d8e28b944f2450e38f6719ab32cdef2977f9437321e3e8fac7ddfbb1c1021fc",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer or reproduction command: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S021-L0003",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 3,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "method",
+      "claims": [
+        "P-AVAIL-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0004",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 4,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "governance",
+      "exclusion_reason": "project-process statement (next step, task ordering or closure governance), not a scientific or technical claim"
+    },
+    {
+      "candidate_id": "S021-L0005",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 5,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "method",
+      "claims": [
+        "D-VIS07-03",
+        "P-AVAIL-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0006",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 6,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "claim",
+      "claims": [
+        "P-ARCH-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0007",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 7,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0009",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 9,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01",
+        "G-R10-02",
+        "P-GPU-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0011",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 11,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "claim",
+      "claims": [
+        "P-AVAIL-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0013",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 13,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "limit",
+      "claims": [
+        "P-AVAIL-01",
+        "D-VIS07-01"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0017",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 17,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01",
+        "P-VIEW-01",
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0021",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 21,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S021-L0024",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 24,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "editorial",
+      "exclusion_reason": "evidence-file pointer or reproduction command: navigation to artifacts bound in the claims"
+    },
+    {
+      "candidate_id": "S021-L0027",
+      "source_path": "docs/research/REPRODUCE_20261009.md",
+      "source_line": 27,
+      "source_sha256": "f8d420374c2ca5c507a30eb06b92b44b6b69233cf282bff65c141a636e3c0941",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0003",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 3,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "editorial",
+      "exclusion_reason": "table header row: column labels, not an assertion"
+    },
+    {
+      "candidate_id": "S022-L0005",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 5,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "HT-01"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0006",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 6,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "D-READ03-01",
+        "D-READ03-02"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0007",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 7,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "D-DEV04-02"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0008",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 8,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "D-GLOB05-02"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0009",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 9,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "D-SCN06-01",
+        "D-SCN06-02"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0010",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 10,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "D-VIS07-01",
+        "D-VIS07-03"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0011",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 11,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "claim",
+      "claims": [
+        "P-ANIM-01"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0012",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 12,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "G-R08-01"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0013",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 13,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "G-R09-01"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0014",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 14,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01",
+        "G-R10-02",
+        "P-GPU-01"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0015",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 15,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "G-R11-02"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0017",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 17,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "claim",
+      "claims": [
+        "P-AVAIL-01"
+      ]
+    },
+    {
+      "candidate_id": "S022-L0021",
+      "source_path": "docs/research/RESULTS_INDEX_20261009.md",
+      "source_line": 21,
+      "source_sha256": "f42abbadd8a19bc58bfa76a2e3a90929fa7c95492eff2c3454a4fed0cfba20a9",
+      "classification": "restatement",
+      "claims": [
+        "G-R10-01",
+        "P-VIEW-01",
+        "G-R11-02"
+      ]
+    }
+  ]
+}
