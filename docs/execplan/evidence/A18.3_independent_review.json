@@ -1,0 +1,174 @@
+{
+ "reviewer": "cog-verifier",
+ "claims_reviewed": 73,
+ "lines_sampled": 314,
+ "receipts_checked": 55,
+ "findings": [
+  {
+   "claim_or_candidate": "D-VIS07-01 (and README L26/L29, VIS07_results.md, manuscript)",
+   "severity": "high",
+   "issue": "Registered prospective diagnostics of the same VIS07 experiment are executed and scored but absent from the ledger and from every public report. Mean over 5 seeds on the 1,797-image TEST: shifted-crop condition NeuroPixel 55.826% vs CNN 85.120% (NeuroPixel 29.3 pp worse); half-intensity NeuroPixel 88.737% vs CNN 67.056% (NeuroPixel better). The base 94.357% vs 90.840% is reported; the shift negative is not. VIS07_protocol.md says 'Preservar negativos' and README.md:29 answers 'Are the negative results preserved? Yes.' A grep of README, docs/papers/*.md, VIS07_results.md and RESULTS_INDEX finds no mention of the shift or half-intensity results.",
+   "evidence": "results/research/VIS07MAIN_cloud/37908785698/raw.zip:result.json scores[condition in {base, half_intensity, shift_right_crop}] (5 seeds x 2 families each); docs/research/VIS07_protocol.md:11; docs/research/VIS07_results.md (no mention); README.md:29",
+   "suggested_fix": "Register a new L2 claim (VIS07 prospective diagnostics, both conditions, both directions) bound to raw.zip; add to D-VIS07-01 limits that robustness to a 1-column shift was far worse than the CNN (55.8% vs 85.1%); amend VIS07_results.md and README; keep the +3.517 pp claim scoped to the base TEST condition."
+  },
+  {
+   "claim_or_candidate": "D-VIS07-01",
+   "severity": "medium",
+   "issue": "Statement says the test set is 'writer-separated' without qualifier. Manuscript line 37 says the UCI metadata documents different writers for TRAIN/TEST and that individual writer identifiers were NOT independently verified; README says 'metadata documents separate writers'.",
+   "evidence": "claim_candidates S003-L0037 (docs/papers/NeuroPixel_manuscript_20261009.md:37); ledger D-VIS07-01.statement and limits (no writer-verification limit)",
+   "suggested_fix": "Reword to 'writer-separated according to UCI metadata (writer ids not independently verified)' and add the limit."
+  },
+  {
+   "claim_or_candidate": "S001-L0063, S003-L0037, S003-L0039, S003-L0075",
+   "severity": "low",
+   "issue": "Coverage: four lines classified 'method' are public protocol assertions not registered in any claim: 'No target label or class token is inserted as image input', 'Ten DEV-selected models were sealed before official test scoring', 'exact images unique and disjoint within and across official splits', 'closed fits are not rerun to improve intervals'. None appears in any claim's source_units.",
+   "evidence": "results/research/COMPLETION20261012/claim_review_P.json decisions S001-L0063, S003-L0037, S003-L0039, S003-L0075 (classification method); ledger source_units",
+   "suggested_fix": "Add them to source_units of a VIS07 engineering/method claim bound to raw.zip final_access.json and gate/selection_gate.json, or record why they only restate D-VIS07-01."
+  },
+  {
+   "claim_or_candidate": "H06-06",
+   "severity": "medium",
+   "issue": "Statement says the historical router exceeded a uniform mixture (+17.546, CI +3.069 to +32.022) and a random router (+16.178) but omits that the random-router interval (-2.434 to +34.791) includes zero, and the limits omit the retrospective Holm result: the uniform contrast has unadjusted p=0.0413 and Holm p=1.0; none of 40 contrasts survives. Only the word 'unadjusted' is present. H06-05 carries the Holm limit; H06-06 does not. H06-03 also omits the T1-vs-T16 interval [-14.123; +14.416].",
+   "evidence": "docs/research/06_A06_1_results.md:32,41-42; results/research/06_A06_1_recovery/multiplicity_sensitivity.json contrasts['fixed legacy minus uniform'] holm_p=1.0, 'fixed legacy minus random' unadjusted_p=0.0575; survive_holm_005=[]",
+   "suggested_fix": "Add the random-router CI (includes zero) to the statement and the Holm sensitivity to the limits of H06-06; add the T1-vs-T16 CI to H06-03."
+  },
+  {
+   "claim_or_candidate": "H04-03",
+   "severity": "medium",
+   "issue": "Declared L2 / experiment_complete for a diagnostic that the statement itself calls post hoc, whose limit says it is 'not a frozen endpoint', and which was recounted by the completion phase because the report's diagnostic file is absent. That does not meet 'frozen protocol and all units executed'; L1 (recount of retained predictions) is the supportable level.",
+   "evidence": "ledger H04-03.status=experiment_complete, declared_level=2, limits[6..7]; docs/research/04_results.md:35",
+   "suggested_fix": "Lower to engineering_complete / L1, or keep L2 only with an explicit statement that it is exploratory and outside the frozen endpoint list."
+  },
+  {
+   "claim_or_candidate": "D-SCN06-02, D-SCN06-01, D-QT-03, P-COST-01",
+   "severity": "low",
+   "issue": "Arguably over-levelled L2: D-SCN06-02 is a deterministic rank census of 5 old matrices whose receipt status is 'verified_retrospective_SCN06_ambient_matrix_census' (the word retrospective is missing from the statement); D-SCN06-01 is a hand-assigned counterexample (one constructed experiment, 0.009 s wall); D-QT-03 is descriptive curve reading; P-COST-01 is a derived timing sum. All have a frozen plan so the rule is formally met, but none has statistical units.",
+   "evidence": "results/research/SCN06_rank_census/receipt.json status; results/research/SCN06_review/recovery_receipt.json constructed_experiments=1; ledger levels",
+   "suggested_fix": "Add 'retrospective' to D-SCN06-02; consider L1 for the census and the timing sum, or add a limit saying there are no statistical units."
+  },
+  {
+   "claim_or_candidate": "D-VIS07-01, D-VIS07-03, D-VIS07-04, D-SCN06-01",
+   "severity": "medium",
+   "issue": "Receipts are archive-custody records that do not contain the figures they are meant to support: VIS07MAIN/37908785698/receipt.json and VIS07REPLAY/37911162172/receipt.json hold only workflow id, commit, zip hash and file count; SCN06_cloud/37896280187/receipt.json likewise. Accuracies (result.json), timings and replay counts (98,835 decisions) live in raw.zip, and the 110 checks of D-VIS07-04 live in results/research/SPRINT_review/VIS07_summary.json, which no claim cites. The values are correct (verified by opening raw.zip and VIS07_summary.json) but are reachable only indirectly via zip_sha256.",
+   "evidence": "results/research/VIS07MAIN_cloud/37908785698/receipt.json (keys registration, workflow_run_id, files, zip_sha256); raw.zip:result.json; results/research/SPRINT_review/VIS07_summary.json; results/research/VIS07REPLAY_cloud/37911162172/raw.zip:receipt.json individual_decisions=98835",
+   "suggested_fix": "Bind raw.zip (and SPRINT_review/VIS07_summary.json for D-VIS07-04) as receipts of these claims."
+  },
+  {
+   "claim_or_candidate": "D-QT-02, D-OPT03D-02, D-ROLE-02, HT-09, HT-10",
+   "severity": "low",
+   "issue": "Statement numbers not present in the cited receipts: D-QT-02 replay '1,932 checks' is in closure_receipt.json/pinned_replay_receipts, not in audit_full.json (status checkpoint_replay_pending) or final_receipts_verification.json; D-OPT03D-02 min RAM 14.2327 GiB and 14,763.44 s are not in the two cited files (they derive from original.zip result.json); D-ROLE-02 partial audit 1,050 checks/162,816 predictions is in partial_audit.json, not the cited audit.json; HT-09 cites 09 final_summary.json and HT-10 cites pre_final_archive_receipt.json, neither of which contains the binding/accuracy results (saved_evidence_audit.json, which does, is cited).",
+   "evidence": "results/research/OPT03_QTRAIN_review/37728384380/audit_full.json status; results/research/OPT03_root_review/37696760073/checkpoint_audit_executed_plan.json; results/research/10_cloud_runs/37615277149-1-study/pre_final_archive_receipt.json (keys claim, run_key, training_manifest_sha256)",
+   "suggested_fix": "Add closure_receipt.json (D-QT-02), original.zip (D-OPT03D-02), partial_audit.json (D-ROLE-02) and final_metrics.json (HT-10)."
+  },
+  {
+   "claim_or_candidate": "D-READ03-01",
+   "severity": "low",
+   "issue": "Headline +54.225 pp is the mean over the four original conditions (source: 'Promedio de las cuatro condiciones originales'), but the statement does not say so; attention fails the joint gate in 3 of 4 conditions (it passes only four-queries/school-0.3) and comparators collapse to 1-15% in several. The gate sentence is present but the averaging is not.",
+   "evidence": "docs/research/READ03_results.md:17 and table lines 23-34; ledger D-READ03-01.statement",
+   "suggested_fix": "Add 'averaged over the four original conditions' to the statement."
+  },
+  {
+   "claim_or_candidate": "D-U16-01",
+   "severity": "low",
+   "issue": "Reports the training-matched-mode joint values (88.593/80.621/84.808%) without the dense-mode values 80.176/79.785/63.184% for the same cell; the report says both are kept and not chosen by score. Neither statement nor limits mention the mode distinction (D-QT-03 does).",
+   "evidence": "docs/research/OPT03_QTRAIN_U16_results.md:52",
+   "suggested_fix": "Add the dense-mode values or a limit stating the matched firing-0.5 mode and that dense mode is lower (63.2-80.2%)."
+  },
+  {
+   "claim_or_candidate": "G-R11-01",
+   "severity": "low",
+   "issue": "'Used less board energy in four of seven workloads' compares medians of three technical blocks; technical min-max ranges overlap in C16/grid8 (render 0.282-0.374 vs graph 0.277-1.228 J) and RGB8 (render 0.180-0.336 vs graph 0.315-0.317 J), and the 'more' cases C48/grid8 and grid32 differ by about 1% (0.3325 vs 0.3282; 0.3844 vs 0.3796). Only C16/grid32 and C16/grid128 are separated by non-overlapping ranges. The same remark applies to G-R10-01: RENDER10 range_ms spans cuda_graph 0.52-4.19 ms at C16/grid8 where the compute win is 1.06x.",
+   "evidence": "docs/research/RENDER11_results.md:11-45; results/research/COMPLETION20261012/energy_complete_summary.json; results/research/RENDER10_benchmark/recovered_20261009B/independent_summary.json range_ms",
+   "suggested_fix": "Add 'technical ranges overlap in 5 of 7 workloads' to the statement or limits."
+  },
+  {
+   "claim_or_candidate": "H05-05",
+   "severity": "low",
+   "issue": "Positive historical NeuroPixel result (96.131% vs 7.320% binding) drops source qualifiers: n=3 coupled seeds cannot isolate variances and no historical significance decision was made; the result describes these trained models, not Transformers as a family; seed-2 scores are normalized snapshots from the user's own project. L0 is correct (raw evidence absent).",
+   "evidence": "docs/research/05_results.md:84-103,109-111",
+   "suggested_fix": "Add the qualifiers to H05-05 limits."
+  },
+  {
+   "claim_or_candidate": "H04-01",
+   "severity": "low",
+   "issue": "Fidelity gaps (not errors): statement and limits omit that the other two non-Transformer families also scored low (NCA 11.914%, ConvGRU 13.574%), that an unfavorable result is not proof of architectural incapacity, and the NCA train/eval mask-difference caveat.",
+   "evidence": "docs/research/04_results.md:5,7,15-18,64",
+   "suggested_fix": "Add the sentence 'not proof of architectural incapacity' and the NCA mask caveat to limits."
+  },
+  {
+   "claim_or_candidate": "D-OPT03D-01",
+   "severity": "low",
+   "issue": "Bound protocol file docs/research/OPT03_execution_plan.json has sha256 bf54be3c... (local CRLF copy) but the plan actually executed has sha256 f1caada1... (LF). The equivalence is documented only in D-OPT03D-02; D-OPT03D-01 limits do not mention it.",
+   "evidence": "sha256sum docs/research/OPT03_execution_plan.json = bf54be3c...; results/research/OPT03_root_review/37696760073/plan_byte_provenance_check.json exact_equal_after_CRLF_to_LF=true",
+   "suggested_fix": "Add a limit pointing to D-OPT03D-02, or bind the executed LF plan as protocol."
+  },
+  {
+   "claim_or_candidate": "P-T0-01, P-MATH-01",
+   "severity": "low",
+   "issue": "P-T0-01 has no source_units (empty list), so its fidelity cannot be checked against any public line; P-MATH-01 attributes to the math modules the full 38-test contract suite and 25-test extension suite, whose logs list non-math tests (test_vis07_integer_recount, LedgerContracts.test_supported_level_three_passes). The counts are correct (Ran 38 / Ran 25, OK).",
+   "evidence": "docs/research/claims_ledger.json P-T0-01.source_units=[]; docs/execplan/evidence/P0.3_contracts.txt and P0.3_extensions.txt tails",
+   "suggested_fix": "Cite the completion-plan line that makes the T=0 claim public; reword P-MATH-01 as 'the kit test suites (38 contract, 25 extension), which include tests of these modules, passed'."
+  },
+  {
+   "claim_or_candidate": "H05-01..H05-09 (levels)",
+   "severity": "low",
+   "issue": "Level check, no defect: L0 blocked_external is justified. results/research/05_experiment contains only item5_gpu_interrupted.zip, item5_queue_exit.json and the recovery receipt; 05_analysis.json (11fd91ee...), 05_independent_check.json (adef6b11...), 05_historical/ and the 215-file archive are absent; a bounded find over NeuroPixel-* worktrees, 196_NeuroPixel*, NP-* and E:/Proyecto-concursos found none. Statements reproduce a recovery copy of 05_results.md; spot checks against that text match (12.393/49.395, -34.375, 2.676 interval, 10.547-18.750 and 47.656-58.984 ranges, 43.750-47.559, 2,876.993 s). 05_execution_plan.json (the protocol) is retained.",
+   "evidence": "results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json; docs/research/05_results.md:3-9,174-214",
+   "suggested_fix": "No change; keep L0 until the owner restores the bytes."
+  }
+ ],
+ "no_issue_claims": [
+  "H04-02",
+  "H04-04",
+  "H05-02",
+  "H05-03",
+  "H05-04",
+  "H05-06",
+  "H05-07",
+  "H05-08",
+  "H05-09",
+  "H06-01",
+  "H06-02",
+  "H06-04",
+  "H06-05",
+  "H06-07",
+  "H06-08",
+  "H06-09",
+  "HC-01",
+  "HT-01",
+  "HT-07",
+  "HT-08",
+  "HT-11",
+  "HT-12",
+  "HT-13",
+  "HT-14",
+  "HT-15",
+  "D-DEV04-01",
+  "D-DEV04-02",
+  "D-GLOB05-01",
+  "D-GLOB05-02",
+  "D-MODE-01",
+  "D-MODE-02",
+  "D-ROLE-01",
+  "D-QT-01",
+  "D-U16-02",
+  "D-U16-03",
+  "D-READ03-02",
+  "D-VIS07-02",
+  "G-R08-01",
+  "G-R09-01",
+  "G-R10-02",
+  "G-R11-02",
+  "P-GPU-01",
+  "P-G0-01",
+  "P-G0-02",
+  "P-AVAIL-01"
+ ],
+ "notes": {
+  "method": "Read all 73 statements and limits against current and archived source reports (docs/archive/completion_20261012/A18_sources for the 11 files edited in A18.3); read all 223 editorial/method/governance lines plus all 91 restatement lines of the four claim_review files; opened 55 receipt files (JSON fields, zip members) and compared sha256 of 16 protocol files with report-stated hashes.",
+  "not_verified": "Raw item-5 evidence unavailable. P-ARCH-01, P-ANIM-01 and P-VIEW-01 were checked mainly against receipts (viewer counts 50/52/27 and preflight 136/21 confirmed), not line by line against all their source lines. No experiments were re-run.",
+  "level_summary": "No L3+ anywhere. L0 uses (8 blocked_external, 2 programme_stopped) are justified. HT-12..HT-15 are L1 although execution_plan.json exists for the item 12-15 probes (conservative; reason not stated in the ledger).",
+  "confirmed_numeric_matches": "H04 (9.326/48.389/-39.0625, 491/1024), H06 contrasts vs audit_saved.json, HT-09/HT-10, DEV04 16.244/5.658, GLOB05 6.278 and 8/12 gate failures, READ03 54.225, OPT03-D means, MODE +16.3, ROLE ranges, QTRAIN, U16 +19.554/84.674, VIS07 94.357/90.840/+3.517 and timings 413.318/34.237 s, RENDER08 0.082-0.319, RENDER09 1.536/1.039/1.072, RENDER10 1.062-2.084/0.524, RENDER11 best-vs-best 4 of 7."
+ },
+ "verdict": "pass_with_fixes"
+}
