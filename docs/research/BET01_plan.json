@@ -3,7 +3,14 @@
   "id": "BET01",
   "title": "Central bet: repair and memory in locally coupled cellular fields, and storage efficiency against the information ceiling",
   "status": "draft_until_committed",
-  "guide_sections": ["18B", "18C", "18D", "18E", "18L", "18N"],
+  "guide_sections": [
+    "18B",
+    "18C",
+    "18D",
+    "18E",
+    "18L",
+    "18N"
+  ],
   "registered_before": "Any training, damage trial or capacity measurement of the BET01 population. ANT01 (Hebbian Hopfield variants) and MATH119 (Boolean channels) were run earlier and are context only; no BET01 population model exists at registration.",
   "choice": {
     "matrix": "docs/research/BET01_decision_matrix.json",
@@ -29,41 +36,71 @@
       "timeline": "input carries the item for T_in = 4 steps; zero input for W1 = 16 steps; damage at step T_in + W1; zero input for W2 steps; readout at the end",
       "readout": "local linear decoder applied to every cell, logits averaged over cells, softmax over K",
       "W2_primary": 64,
-      "W2_retention": [16, 64, 256],
-      "no_reinjection": "No input after step T_in carries the item; any measured information above the ceiling is treated as a leak (guide 18D)"
+      "W2_retention": [
+        16,
+        64,
+        256,
+        4096
+      ],
+      "no_reinjection": "No input after step T_in carries the item; any measured information above the ceiling is treated as a leak (guide 18D)",
+      "distractors": "Not part of BET01 (declared deviation from guide 11.2); G14 may add a descriptive distractor panel without changing BET01 endpoints"
     },
     "damage": {
-      "erasure": "e = round(f N) cells chosen uniformly without regard to the item; all C channels of an erased cell set to 0",
+      "erasure": "e = round(f N) cells chosen uniformly without regard to the item; all C channels of an erased cell set to 0; for comparators without a cell grid (GRU, Hopfield, code_ML) 8e uniformly chosen state values are erased (same number of values)",
       "noise": "independent Gaussian N(0, sigma^2) added to every surviving value at the damage step",
-      "repair_grid": {"f": [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6], "sigma": 0.0, "K": 8},
-      "noise_only_grid": {"f": 0.0, "sigma": [0.1, 0.2, 0.4, 0.8, 1.6], "K": 8, "role": "descriptive"},
-      "adversarial": {"role": "exploratory only", "rule": "equal-norm perturbation along the decoder's most sensitive direction"}
+      "repair_grid": {
+        "erased_cells": "every e = 1 ... 38 (f = e/64, up to 0.594)",
+        "sigma": 0.0,
+        "K": 8,
+        "masks_per_item": 64
+      },
+      "noise_only_grid": {
+        "f": 0.0,
+        "sigma": [
+          0.1,
+          0.2,
+          0.4,
+          0.8,
+          1.6
+        ],
+        "K": 8,
+        "role": "descriptive"
+      },
+      "adversarial": {
+        "role": "exploratory only",
+        "rule": "equal-norm perturbation along the decoder's most sensitive direction"
+      }
     },
     "candidates_DEV": {
-      "SF-free": "completion_kit.stable_field.StableField(state_channels=8, constrained=False)",
+      "SF-free": "StableField(input_channels=2, state_channels=8, classes=K, constrained=False) with the MEMREP timeline and the all-cell averaged decoder; both are declared modifications of the kit field (whose forward reads the centre cell under fixed input)",
       "NP-clip": "NeuroPixel residual rule (claim P-ARCH-01) with an explicit per-step clip of the state to [-1, 1]; the clip is a declared modification required by the bounded-state assumption",
       "selection": "One primary candidate chosen on DEV only: highest mean faithful recall at f = 0.3, sigma = 0, W2 = 64, K = 8 over 4 DEV seeds; tie broken by fewer parameters. All DEV results are reported."
     },
-    "certified_controls": "StableField(constrained=True) instances, used for P1 only",
+    "certified_controls": "StableField(input_channels=2, state_channels=8, classes=K, constrained=True) with the same declared modifications; used for P1 and as the P2 validity control",
     "comparators": {
       "GRU": "512 hidden units (same number of state values), same input and readout protocol, trained on the same budget",
-      "Hopfield": "continuous global Hopfield network with 512 tanh units, item patterns stored by Hebbian or learned weights, same damage and readout",
-      "code_ML": "repetition code of the item over the 512 values with maximum-likelihood (nearest-codeword) decoder on surviving values; the 'erasure code with explicit decoder' of guide 18B"
+      "Hopfield": "continuous global Hopfield network with 512 tanh units, item patterns stored by Hebbian or learned weights, same damage and readout; Hebbian or learned weights chosen on DEV and fixed in the DEV freeze",
+      "code_ML": "repetition code of the item over the 512 values with maximum-likelihood (nearest-codeword) decoder on surviving values; the 'erasure code with explicit decoder' of guide 18B",
+      "margin": "GRU and Hopfield use the same averaged softmax readout and margin; code_ML margin = gap between the two highest posterior probabilities of the nearest-codeword decoder under the registered noise"
     },
     "units": "Independently trained instances (training seeds) are the units; items, masks and noise draws within an instance are not independent units",
     "DEV": "4 training seeds per candidate and comparator, DEV item codes and masks; free exploration of training recipes within a budget of 20,000 updates per instance",
-    "TEST": "8 new training seeds of the primary candidate and of each comparator, new item codes, masks and noise draws, all derived from a 256-bit salt sealed with completion_kit.commitments (purpose BET01-TEST) after the DEV freeze is committed; 32 masks or draws per item and condition"
+    "TEST": "16 new training seeds of the primary candidate, of each comparator and of the certified control; new item codes, masks and noise draws, all derived from a 256-bit salt sealed with completion_kit.commitments (purpose BET01-TEST) after the DEV freeze is committed; 64 masks or draws per item and condition",
+    "DEV_freeze": "Committed with completion_kit.commitments before the TEST salt is generated: recipes, primary candidate, Hopfield variant, r_hat, P3 coefficients a and b, the DEV estimate of the separation-point SD and the estimator pre-validation"
   },
   "fixed_constants": {
     "margin_m": "probability gap between the top and second item >= 0.5",
     "attractor_tolerance": "RMS distance <= 0.1 to a stored attractor state",
     "convergence": "sup-norm step change < 1e-6 within 4,096 zero-input steps",
-    "competence": "faithful recall >= 0.95 at f = 0, sigma = 0, W2 = 64, K = 8",
+    "competence": "faithful recall >= 0.95 at f = 0, sigma = 0, W2 = 64, K = 8 in every DEV seed",
     "separation_threshold": "corruption rate 0.10",
-    "P4_tolerance": "+/- 0.05 in erasure fraction",
+    "P4_tolerance": "+/- 0.08 in erasure fraction",
     "P3_constancy_factor": 2.0,
-    "P3_form_tolerance": "+/- 0.05 absolute eta",
-    "eta_floor": 0.01
+    "P3_form_tolerance": "+/- 25% relative eta",
+    "eta_floor": 0.01,
+    "margin_logit": "ln 3 (implied by the probability gap >= 0.5 between the top two classes) for contraction_horizons, with the aggregated K x 512 decoder (per-cell rows divided by 64)",
+    "censoring_limit": "more than 2 of 16 TEST instances censored -> P4 not supported",
+    "neutral_eigenvalue": "|lambda| >= 1 - 1e-4"
   },
   "endpoints": {
     "trial_outcomes": {
@@ -74,58 +111,73 @@
     },
     "basin_switch": "a corruption trial whose final state lies within the attractor tolerance of another item's attractor",
     "multistability": "from each item's clean post-presentation state, iterate with zero input to convergence; count distinct stable fixed points or cycles (Jacobian spectral radius < 1 by completion_kit.dynamics.finite_difference_jacobian); an instance is multistable if it has at least K distinct stable attractors that the decoder reads as the K items",
-    "neutral_directions": "an instance without K stable attractors counts as using neutral directions if its Jacobian at the retained state has at least one eigenvalue with |lambda| >= 0.999 and recall at W2 = 256 is >= 0.9 of recall at W2 = 16",
-    "retention_ratio": "(recall_W2=256 - 1/K) / (recall_W2=16 - 1/K) at f = 0, sigma = 0",
-    "separation_point": "per instance, the erasure fraction at which the corruption rate first reaches 0.10, by linear interpolation on the repair grid; instances never reaching it are recorded at 0.6 and flagged",
-    "basin_radius_DEV": "per DEV instance and item, the erasure fraction at which 10% of random masks leave the item's basin (classified by the nearest attractor), found by bisection to 0.005; r_hat is the median over DEV instances and items",
+    "neutral_directions": "an instance without K stable attractors counts as using neutral directions if its Jacobian at the retained state has at least one eigenvalue with |lambda| >= 1 - 1e-4 and recall at W2 = 4096 is >= 0.9 of recall at W2 = 16; items that do not converge within 4,096 steps count as not multistable",
+    "retention_ratio": "(recall_W2=4096 - 1/K) / (recall_W2=16 - 1/K) at f = 0, sigma = 0; undefined and counted as not retaining if recall_W2=16 < 1/K + 0.05",
+    "separation_point": "per instance, the erasure fraction e/64 at which the basin-switch rate (64 masks per item, all K items) first reaches 0.10, by linear interpolation over e = 1 ... 38; instances never reaching it are censored at 38/64",
+    "basin_radius_DEV": "per DEV multistable instance and item, the L2 norm rho at which 10% of 256 isotropic random-direction perturbations of the clean attractor, iterated 64 zero-input steps, end nearest (RMS) to another item's attractor, on the grid rho = 0.25 k; rho_hat = median over DEV instances and items; r_hat = smallest e/64 whose median erasure-displacement L2 norm on DEV attractor states is >= rho_hat. Erasure masks never enter r_hat.",
     "eta": "Fano lower bound (completion_kit.laws.fano_information_lower_bound, one-sided Clopper-Pearson 95%) divided by completion_kit.laws.capacity_ceiling_bits(64, 8, e, sigma, 1.0)",
-    "cost": "trained parameters, multiply-accumulates per update step, training wall time"
+    "cost": "trained parameters, multiply-accumulates per update step, training wall time; physical energy is not measured in BET01 (declared deviation)",
+    "state_classification": "a failed trial whose final state is within attractor_tolerance of another item's attractor is a basin switch; any other failed trial is drift",
+    "repair_time": "steps until the state returns within attractor_tolerance of the clean attractor (descriptive, faithful trials only)"
   },
   "capacity_grid": {
     "rule": "Cells (f, sigma, K) from f in {0.1, 0.3, 0.5, 0.7}, sigma in {1, 2, 4}, K in {8, 64}; a cell is eligible only if log2(K) / ceiling >= 0.05, so that eta >= 0.05 is attainable and the eta floor of 0.01 cannot fire by construction",
     "eligible_cells": "computed by scripts/completion_g13_bet01.py and stored in results/research/G13_BET01/bet01_checks.json; the committed plan digest covers this rule, and the check file is committed alongside",
-    "trials": "K x 32 trials per instance and cell, balanced over items"
+    "trials": "K x 32 trials per instance and cell, balanced over items",
+    "leak_controls": "Leak-control cells where log2(K) exceeds the ceiling: (f = 0.9, sigma = 4, K = 8; e = 58, ceiling 2.099 bits < 3 bits) and the input-only control (f = 1.0: every cell erased, ceiling 0); a Fano lower bound above the ceiling in these cells is a leak",
+    "specification": "W2 = 64 on TEST instances; K = 8 cells use the TEST instances; K = 64 cells use 16 separately trained TEST seeds of the frozen recipe, evaluated only if competent (recall >= 0.95 at f = 0), otherwise S2 and P3 use the K = 8 cells only; Fano correct = argmax equals the stored item, per instance; cell eta = median over instances",
+    "estimator_prevalidation": "the kit test test_simulated_noisy_erased_store_respects_the_ceiling must pass before any measurement"
   },
   "predictions": {
     "P1": {
       "role": "deductive implementation control; spends no alpha; a failure indicates an implementation or certificate error and does not refute H*",
-      "statement": "In every certified instance (q < 1), no pair of histories is read as distinct classes with margin m after max_separable_step, and every damaged trajectory returns within epsilon = 1e-3 of the clean one within repair_steps_bound (completion_kit.laws.contraction_horizons with the certificate q, the decoder and m). Empirical forgetting and repair rates (slopes of ln||s_t - r_t||_inf) are reported next to the bounds, never as guarantees.",
+      "statement": "In every certified instance (q < 1), no pair of histories is read as distinct classes with margin m after max_separable_step, and every damaged trajectory returns within epsilon = 1e-3 of the clean one within repair_steps_bound (completion_kit.laws.contraction_horizons with the certificate q, the aggregated decoder and the logit margin ln 3). Empirical forgetting and repair rates (slopes of ln||s_t - r_t||_inf) are reported next to the bounds, never as guarantees.",
       "pass": "zero violations"
     },
     "P2": {
       "role": "confirmatory",
       "statement": "In trained memory fields without reinjection, faithful and structural repair coincide below a damage radius and separate above it: failures beyond the radius are predominantly corruption (basin change), not drift (gradual fading).",
-      "primary_statistic": "per TEST instance of the primary candidate, the corruption share among failed trials pooled over repair-grid levels f > r_hat at W2 = 64",
-      "test": "one-sided one-sample t over the 8 TEST instances, H0: mean share <= 0.5",
+      "primary_statistic": "per TEST instance of the primary candidate, basin-switch trials / failed trials pooled over repair levels e/64 > r_hat at W2 = 64; instances without K item attractors score 0; instances with no failed trial beyond r_hat score 0.5; if r_hat >= 38/64, P2 is not evaluable and counts as not supported",
+      "test": "one-sided one-sample t over the 16 TEST instances (scipy.stats.ttest_1samp(shares, 0.5, alternative='greater')), H0: mean share <= 0.5; with zero variance P2 is supported only if every share > 0.5",
       "alpha": 0.015198,
-      "secondary_descriptive": ["faithful recall for f < r_hat", "basin-switch fraction among corruption trials", "the same statistics at W2 = 16 and 256"]
+      "secondary_descriptive": [
+        "faithful recall for f < r_hat",
+        "basin-switch fraction among corruption trials",
+        "the same statistics at W2 = 16 and 256"
+      ],
+      "validity_control": "the certified control trained on MEMREP must yield a mean share <= 0.5; otherwise the P2 statistic is declared invalid and P2 counts as not supported"
     },
     "P3": {
       "role": "registered functional form; scored by tolerance, spends no alpha",
-      "statement": "Over the eligible capacity cells, eta of the primary candidate is approximately constant (F0: max/min of point eta <= 2) or follows F1: eta = a + b log2(ceiling), with a and b fitted on DEV cells and DEV instances only.",
-      "pass": "F0 holds on TEST, or F1 predicts every TEST cell within +/- 0.05; otherwise P3 fails and is reported",
+      "statement": "Over the eligible capacity cells, eta of the primary candidate is approximately constant (F0: max/min of cell eta <= 2) or follows F1: eta = a + b log2(ceiling), with a and b fitted on DEV cells and DEV instances only and committed in the DEV freeze.",
+      "pass": "F0 holds on TEST, or F1 predicts every eligible TEST cell within +/- 25% relative; otherwise P3 fails and is reported. Extrapolation to a held-out scale (guide 18E) belongs to G16.",
       "leak_rule": "any eta point estimate above 1 is a leak, invalidates the cell until the leak is found and fixed, and is reported"
     },
     "P4": {
       "role": "confirmatory",
-      "statement": "The damage radius r_hat estimated from basin geometry on DEV instances predicts the TEST separation point of P2 within +/- 0.05 erasure fraction.",
-      "test": "TOST (completion_kit.inference_plus.tost_paired) on the 8 TEST differences separation_point - r_hat with bounds [-0.05, +0.05]",
+      "statement": "The damage radius r_hat estimated from isotropic basin geometry on DEV instances predicts the TEST erasure separation point of P2 within +/- 0.08 erasure fraction.",
+      "test": "TOST (completion_kit.inference_plus.tost_paired) on the 16 TEST differences separation_point - r_hat with bounds [-0.08, +0.08]; more than 2 censored instances -> not supported",
       "alpha": 0.015198,
-      "note": "r_hat is computed and committed (digest) before any TEST unit is trained"
+      "note": "r_hat is computed and committed (digest) before any TEST unit is trained",
+      "power_note": "Red-team simulation: with n = 16 and margin 0.08, power 0.96-1.0 for SD <= 0.07 and 0.84 for SD 0.07 with bias 0.02; the DEV SD estimate is committed in the DEV freeze"
     }
   },
   "error_control": {
     "programme_registry_position": 1,
     "stream_threshold": 0.030396355092701333,
-    "split": {"P2": 0.015198, "P4": 0.015198},
+    "split": {
+      "P2": 0.015198,
+      "P4": 0.015198
+    },
     "rule": "online Bonferroni stream of docs/research/program_registry.json (G18); P1 and P3 spend no alpha; all secondary and exploratory results are labelled as such",
-    "equivalence_policy": "P4 is the only equivalence-type claim and uses its registered margin; no other non-significant result is read as equivalence"
+    "equivalence_policy": "P4 is the only equivalence-type claim and uses its registered margin; no other non-significant result is read as equivalence",
+    "registry_time": "BET01 enters the stream after the registry creation (2026-10-12T22:33:15Z) at position 1"
   },
   "stop_rules": {
-    "S0_gate_P2": "If no candidate reaches competence in DEV within 20,000 updates per instance, BET01 is not tested; the pilot closes as limited (guide 18N, gate P2) and the result is published.",
-    "S1_no_multistability": "If fewer than half of the competent TEST instances of the primary candidate are multistable or use neutral directions, and their median retention ratio is < 0.5 (memory is a slow transient that decays with waiting), H* is claim_not_supported in its current form.",
-    "S2_eta_floor": "If the Fano-lower-bound eta of the primary candidate is < 0.01 in every eligible capacity cell with no cell at or above 0.01, the line becomes engineering and C4 is chosen next.",
-    "S3_comparator_dominance": "If a comparator (GRU, Hopfield or code_ML) matches or exceeds the primary candidate's faithful recall at every repair-grid level within 0.02 and its eta in every eligible cell, at lower cost (lower in at least two of the three cost measures and not more than twice as high in the third), and without qualitative difference (its failure-mode shares, faithful/corruption/drift, within 0.10 of the candidate's at every level, and it restores the stored state rather than only decoding it), the line becomes engineering and C4 is chosen next.",
+    "S0_gate_P2": "If no candidate reaches competence in every DEV seed within 20,000 updates per instance, or any comparator fails competence within the same budget, BET01 is not tested; the pilot closes as limited (guide 18N, gate P2) and the result is published.",
+    "S1_no_multistability": "If fewer than half of the competent TEST instances of the primary candidate are multistable or use neutral directions (as defined), H* is claim_not_supported in its current form (memory is a slow transient).",
+    "S2_eta_floor": "If the cell eta of the primary candidate is < 0.01 in every eligible capacity cell (no cell at or above 0.01, so no trend), the line becomes engineering and C4 is chosen next.",
+    "S3_comparator_dominance": "If a comparator (GRU, Hopfield or code_ML) matches or exceeds the primary candidate's faithful recall at every repair level within 0.02 and its eta in every eligible cell, at lower cost (lower in at least two of the three cost measures and not more than twice as high in the third), the line becomes engineering and C4 is chosen next, unless the candidate's final state is within attractor_tolerance of the clean attractor in >= 0.5 of faithful trials at every e/64 <= r_hat and the comparator's is not (code_ML counts as not restoring). Failure-mode shares are reported only.",
     "application": "Stop rules are evaluated on TEST with the registered constants and are not renegotiated (guide 18L)."
   },
   "red_team": "Before any L3 claim, an agent that did not design BET01 attempts to refute it from the artifacts (leaks, shortcuts, residual input, unit errors, selection); report and response are archived (guide 18L).",
@@ -135,5 +187,19 @@
     "Analogies to planarian regeneration (Durant et al. 2017; Pezzulo et al. 2021) generate predictions only and are not biological evidence"
   ],
   "resources": "CPU first; Torch comparators only under the unchanged 8 GiB RAM guard; any GPU work through gpuq with small tickets; outputs in results/research/BET01/",
-  "analysis_code": ["completion_kit/laws.py", "completion_kit/dynamics.py", "completion_kit/inference_plus.py", "completion_kit/commitments.py", "scripts/completion_g13_bet01.py"]
+  "analysis_code": [
+    "completion_kit/laws.py",
+    "completion_kit/dynamics.py",
+    "completion_kit/inference_plus.py",
+    "completion_kit/commitments.py",
+    "scripts/completion_g13_bet01.py"
+  ],
+  "review": "Red-team review before commitment (docs/execplan/evidence/G13_redteam_review.md): 4 high, 6 medium and 3 low findings applied.",
+  "declared_deviations": [
+    "No distractor panel (guide 11.2) in BET01",
+    "Physical energy not measured",
+    "Explicit buffer comparator realised as code_ML (repetition code with maximum-likelihood decoder)",
+    "Kit StableField modified for MEMREP (input timeline, all-cell decoder)",
+    "NP-clip state clipping"
+  ]
 }
