@@ -81,6 +81,17 @@ def capacity_grid() -> list[dict]:
     return cells
 
 
+def leak_controls() -> list[dict]:
+    """Cells where log2(K) exceeds the ceiling, so a Fano bound above the ceiling can expose a leak."""
+    cells = []
+    for f, sigma, k in ((0.9, 4.0, 8), (1.0, 4.0, 8)):
+        erased = round(f * 64)
+        ceiling = capacity_ceiling_bits(64, 8, erased, sigma, 1.0)["ceiling_bits"]
+        cells.append(dict(f=f, sigma=sigma, K=k, erased_cells=erased, ceiling_bits=round(ceiling, 6),
+                          can_expose_leak=math.log2(k) > ceiling))
+    return cells
+
+
 def check_plan(plan: dict, registry: dict) -> list[str]:
     problems = []
     for key in ("hypothesis", "population", "endpoints", "predictions", "error_control", "stop_rules",
@@ -113,7 +124,12 @@ def main() -> int:
     eligible = [c for c in grid if c["eligible"]]
     if len(eligible) < 4:
         problems.append("fewer than four eligible capacity cells")
-    report = dict(schema=1, task="G13", matrix=matrix_report, capacity_grid=grid,
+    leaks = leak_controls()
+    if not all(c["can_expose_leak"] for c in leaks):
+        problems.append("a leak-control cell cannot expose a leak")
+    if "16 new training seeds" not in plan["population"]["TEST"] or "0.08" not in plan["fixed_constants"]["P4_tolerance"]:
+        problems.append("TEST size or P4 tolerance differs from the reviewed design")
+    report = dict(schema=1, task="G13", matrix=matrix_report, capacity_grid=grid, leak_controls=leaks,
                   eligible_capacity_cells=len(eligible), problems=problems, valid=not problems)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")

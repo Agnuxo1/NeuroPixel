@@ -271,6 +271,24 @@
       "eligible": true
     }
   ],
+  "leak_controls": [
+    {
+      "f": 0.9,
+      "sigma": 4.0,
+      "K": 8,
+      "erased_cells": 58,
+      "ceiling_bits": 2.099108,
+      "can_expose_leak": true
+    },
+    {
+      "f": 1.0,
+      "sigma": 4.0,
+      "K": 8,
+      "erased_cells": 64,
+      "ceiling_bits": 0.0,
+      "can_expose_leak": true
+    }
+  ],
   "eligible_capacity_cells": 16,
   "problems": [],
   "valid": true
