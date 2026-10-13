@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-13T02:22:58+00:00
+- Actualizado (UTC): 2026-10-13T06:40:56+00:00
 - Tarea en curso o siguiente: G2.3, Repetir controles fisicos del backend afectado sin nuevas cohortes; intento 1; presupuesto 15 minutos tras RAM.
 - Criterio de cierre: Controles del backend afectado en version nueva ejecutados por gpuq y guard8GiB con pesos e inputs fijados y tolerancias originales, versiones y discrepancias guardadas; ninguna cohorte cientifica reabierta.
-- Hecho en esta tarea: Sesion 3: G2.3 bloqueada por RAM (2,8-9,0 GiB fluctuante); vigilante wait_for_ram 9 GiB x2 en segundo plano. Borrador G13 listo y revisado: matriz (C1 17, C4 14, C3 11 no elegible, C2 10), plan BET01 con 13 correcciones de revision adversarial (commit e88a0b44; evidence/G13_redteam_review.md), checks validos; JEV provenance=jev
-- Falta en esta tarea: Con RAM>=9 GiB: reopen/start G2.3, gpuq run, cerrar G2.3 y G2; despues start G13, commitments commit del plan (privado en E:/Proyecto-concursos/NeuroPixel-sealed), registro de programa posicion 1, cerrar G13 local y anadir G13.ext (sello externo, propietario)
+- Hecho en esta tarea: Sesion 3: README de GitHub actualizado con el programa de completado (enmienda R1013 del registro: 78 afirmaciones, validador 0 violaciones, auditoria sin incidencias) y publicado en main por orden del propietario (9c55ee99); G1.3.ext cerrada (27/49). Borrador G13 revisado (e88a0b44). G2.3 sigue esperando RAM>=9 GiB
+- Falta en esta tarea: Con RAM>=9 GiB: reopen/start G2.3, gpuq run, cerrar G2.3 y G2; despues start G13, commitments commit del plan, registro de programa posicion 1, cerrar G13 local y anadir G13.ext
 - Siguiente comando exacto: python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: RAM fluctuante por procesos ajenos; no rebajar el guard; G13 no se compromete antes de cerrar G2
+- Dudas o riesgos abiertos: RAM fluctuante; no rebajar el guard; pushes a main solo con orden del propietario
 
 ## Propósito
 
@@ -211,6 +211,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 
 - [ ] (2026-10-13T02:22:58+00:00) G2.3, intento 1: hecho Sesion 3: G2.3 bloqueada por RAM (2,8-9,0 GiB fluctuante); vigilante wait_for_ram 9 GiB x2 en segundo plano. Borrador G13 listo y revisado: matriz (C1 17, C4 14, C3 11 no elegible, C2 10), plan BET01 con 13 correcciones de revision adversarial (commit e88a0b44; evidence/G13_redteam_review.md), checks validos; JEV provenance=jev; falta Con RAM>=9 GiB: reopen/start G2.3, gpuq run, cerrar G2.3 y G2; despues start G13, commitments commit del plan (privado en E:/Proyecto-concursos/NeuroPixel-sealed), registro de programa posicion 1, cerrar G13 local y anadir G13.ext (sello externo, propietario). Siguiente: `python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2`.
 
+- [ ] (2026-10-13T06:40:56+00:00) G2.3, intento 1: hecho Sesion 3: README de GitHub actualizado con el programa de completado (enmienda R1013 del registro: 78 afirmaciones, validador 0 violaciones, auditoria sin incidencias) y publicado en main por orden del propietario (9c55ee99); G1.3.ext cerrada (27/49). Borrador G13 revisado (e88a0b44). G2.3 sigue esperando RAM>=9 GiB; falta Con RAM>=9 GiB: reopen/start G2.3, gpuq run, cerrar G2.3 y G2; despues start G13, commitments commit del plan, registro de programa posicion 1, cerrar G13 local y anadir G13.ext. Siguiente: `python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2`.
+
 ## Sorpresas y hallazgos
 
 - Arranque: consola Python cp1252 fallo al imprimir simbolos; se fija PYTHONIOENCODING=utf-8. Git interpreto CRLF como whitespace; usar comprobacion con cr-at-eol y corregir linea vacia final del log.
@@ -238,9 +240,9 @@ Formato: fecha · decisión · motivo · fuente (JEV con `provenance`, evidencia
 
 Acciones externas preparadas y no ejecutadas.
 
-- G1.3.ext: revisar y publicar el paquete completo results/research/COMPLETION20261012/G1_owner_publication_package.json (78 archivos; recuento del manifiesto). Version publicable anclada al commit ba9f3f84 y verificada en G1_owner_publication_locator.json; la rama actual contiene el parche T0 separado. No push ni publicacion ejecutados.
+- G1.3.ext: HECHO 2026-10-13. El propietario ordeno fusionar en main; main avanzo de d8721a59 a 9c55ee99 (incluye ba9f3f84, los textos de A18.3 y el README del programa de completado). Evidencia: evidence/G1.3.ext_publication.json.
 - A18.2.H.ext: recuperar del ejecutor Linux (commit 0a56621; workspace /workspace/scratch/61d6e3e6e688) el archivo crudo del estudio 05: 05_experiment/ (215 archivos), 05_analysis.json (11fd91ee...), 05_independent_check.json (adef6b11...), salidas historicas 05_historical*. Paquete: results/research/COMPLETION20261012/study05_raw_evidence_recovery_package.json. Sin contacto ni accion externa.
-- Publicacion: los textos publicos corregidos en A18.3 (commits 51afbdea y 78ebf8cb; registro docs/research/claims_ledger.json) son posteriores al paquete G1.3.ext (ba9f3f84). Al publicar, usar la version mas reciente de la rama research/completion-20261012 tras su revision. Sin push ejecutado.
+- Publicacion futura: cada push posterior a main es una accion externa nueva y requiere orden del propietario; la contabilidad del plan se sube solo a la rama research/completion-20261012.
 - G3: aprobar la descarga de los archivos publicos UCI optdigits (optdigits.tra y optdigits.tes, ~0,6 MB, archive.ics.uci.edu, CC BY 4.0) para reverificar la unicidad y disjuncion de imagenes (fuga L1.4); hoy solo lo afirma el manuscrito.
 - G17.1.ext: designar un evaluador independiente (no autor) y aprobar la ruta de sellado de tiempo externo (p. ej. OpenTimestamps o deposito publico fechado) para cualquier TEST nuevo. Paquete: results/research/COMPLETION20261012/G17_evaluator_package.json. Nadie contactado.
 - M3.ext: aprobar descargas e instalacion para reconstruir Lean/Comparator (elan + lean4 v4.34.1 ~0,3 GB, openai/math fd4aeeb2, cache Mathlib de varios GB, comparator, landrun, lean4export) en E:/Proyecto-concursos/NeuroPixel-lean; script preparado scripts/formal/m3_comparator_rebuild.sh. La distro WSL Ubuntu vive en C: (no apta para carga pesada).

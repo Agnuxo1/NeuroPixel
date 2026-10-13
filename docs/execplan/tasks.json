@@ -1407,19 +1407,19 @@
       "depends_on": [
         "G1.3"
       ],
-      "status": "blocked_external",
-      "note": "Paquete78archivos verificado en commitba9f3f84 previo aT0; propietario debe revisar y publicar esa version. Ningun push ni publicacion ejecutados.",
+      "status": "done",
+      "note": "Publicado en main por avance rapido d8721a59..9c55ee99 por orden explicita del propietario en el chat (ejecutado por Claude, desviacion declarada); incluye ba9f3f84 y los textos corregidos de A18.3; enlaces HTTP 200.",
       "blocked": "2026-10-12T12:09Z",
       "evidence": [
         {
-          "path": "results/research/COMPLETION20261012/G1_owner_publication_package.json",
-          "sha256_lf": "63b1f0009a34760f83e03a88ad5a8cfa0f287bcc8e678ede4e792b15999b9295"
-        },
-        {
-          "path": "results/research/COMPLETION20261012/G1_owner_publication_locator.json",
-          "sha256_lf": "53fbda4b9b95e0749bb28ae7a11048bc99b1ed6c3f747215ba4c1d0c49bb4cae"
+          "path": "docs/execplan/evidence/G1.3.ext_publication.json",
+          "sha256_lf": "e903a5a97b3b727a59f985f809b3ac1c0abd72458e8a8db95ea66dc3d29b0118"
         }
-      ]
+      ],
+      "started": "2026-10-13T06:40Z",
+      "attempts": 1,
+      "commit": "63f771897defd54ae9ef0f1387840ef98dd94bc7",
+      "closed": "2026-10-13T06:40Z"
     },
     {
       "id": "A18.2.H.ext",
@@ -1479,5 +1479,5 @@
       ]
     }
   ],
-  "updated": "2026-10-12T23:31Z"
+  "updated": "2026-10-13T06:40Z"
 }

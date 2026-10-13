@@ -175,7 +175,7 @@
 
 ## G1 Dependencia externa
 
-- [ ] BLOCKED (external) G1.3.ext Publicacion por el propietario del paquete G1 reconciliado (§6.3): Paquete78archivos verificado en commitba9f3f84 previo aT0; propietario debe revisar y publicar esa version. Ningun push ni publicacion ejecutados.
+- [x] ~~G1.3.ext Publicacion por el propietario del paquete G1 reconciliado (§6.3)~~ 2026-10-13T06:40Z `63f771897d`
 
 ## 18A Afirmaciones historicas
 
