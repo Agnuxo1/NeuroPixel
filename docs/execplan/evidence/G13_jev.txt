@@ -1,0 +1,35 @@
+{
+ "mode": "v2-query",
+ "exit_code": 0,
+ "provenance": "jev",
+ "status": "connected",
+ "connected": null,
+ "configured": null,
+ "model": "jev-1.13.0",
+ "decision_source": null,
+ "error_type": null,
+ "decisions": {
+  "central_bet": {
+   "value": "C1_repair_memory",
+   "confidence": 0.98
+  },
+  "sequencing": {
+   "value": "draft_now_commit_after_G2",
+   "confidence": 0.97
+  },
+  "external_timestamp": {
+   "value": "split_G13_ext",
+   "confidence": 0.84
+  },
+  "alpha_split": {
+   "value": "P2_P4_confirmatory_equal",
+   "confidence": 0.55
+  }
+ },
+ "usage": {
+  "input_tokens": 1282,
+  "output_tokens": 205,
+  "cached_tokens": 0
+ },
+ "remote_decision": true
+}

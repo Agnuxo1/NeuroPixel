@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "id": "BET01-MATRIX",
+  "title": "Decision matrix for the central bet (guide section 18B)",
+  "drafted_utc": "2026-10-13",
+  "scale": "0 = absent or contrary, 1 = weak, 2 = adequate, 3 = strong; every score cites the evidence it rests on",
+  "criteria": {
+    "fundamentality": "Does it state a principle that applies beyond NeuroPixel?",
+    "current_evidence": "Which audited results make it plausible?",
+    "falsifiability": "Is there a concrete result, reachable within budget, that refutes it?",
+    "distance_to_antecedent": "What do Hopfield, NCA, reservoirs or DEQ not already contain (section 18I)?",
+    "cost": "Does it fit the shared RTX 3090, the queue and the available CPU?",
+    "external_dependency": "Does it need a laboratory, data or evaluator from outside? (3 = none beyond the TEST custodian every candidate needs)",
+    "project_direction": "Does it measure something CNNs and LLMs lack or pay dearly for: persistent memory, self-repair, continual learning?"
+  },
+  "candidates": {
+    "C1": {
+      "name": "Repair-memory law and capacity against the information ceiling (sections 18C-18D)",
+      "eligible": true,
+      "scores": {
+        "fundamentality": {"score": 3, "evidence": "Statement concerns any locally coupled cellular field with one shared rule; the contraction corollary (guide 18C) and the ceiling (18D) are substrate independent; G22 can test other substrates."},
+        "current_evidence": {"score": 1, "evidence": "Deductive core only (18C; Boyd and Chua 1985; Jaeger 2001). Empirically weak or contrary: HT-11 (NeuroPixel 38/48 vs GRU 48/48, admission false), D-VIS07-02 (accuracy 94.357% at T8, 16.661% at T32; RMS 0.543 to 134,843), HT-14 (repair is assisted, not autonomous), H06-04 (damage training effects uncertain). ANT01-01 (equal state: global Hopfield repairs 85-95.5%, 3x3 local coupling fails from 4 patterns). MATH119-01 validates the information-ceiling machinery, not the hypothesis."},
+        "falsifiability": {"score": 3, "evidence": "Registered stop rules (no measurable multistability; eta < 1% in all eligible cells; a comparator matching memory and repair at lower cost without qualitative difference) are each reachable with small fields and CPU (guide 18B)."},
+        "distance_to_antecedent": {"score": 1, "evidence": "Multistable memory is Hopfield (1982); fading memory is Boyd-Chua/Jaeger; neutral directions are Seung (1996). ANT01-01 shows locality adds no storage at equal state in the Hebbian case. Remaining distance: a learned local rule with hidden channels, and the prediction of the damage radius from basin geometry (P4)."},
+        "cost": {"score": 3, "evidence": "8x8 fields, <= 8 state channels, CPU training of the reference field (completion_kit.stable_field, train_reference); ANT01 and MATH119 ran on CPU in minutes."},
+        "external_dependency": {"score": 3, "evidence": "No laboratory or third-party data for P1-P4; external TEST custody (G17.1.ext) is common to all candidates; biological links (G21) are optional extensions."},
+        "project_direction": {"score": 3, "evidence": "Persistent memory and self-repair are the capacities the guide prioritises (18B); Transformers do not offer them natively."}
+      }
+    },
+    "C2": {
+      "name": "Cost and energy law of local fields against competent comparators (sections 15, 18H)",
+      "eligible": true,
+      "scores": {
+        "fundamentality": {"score": 1, "evidence": "Results are tied to one RTX 3090, its drivers and OpenGL/CUDA paths (G-R10-01, G-R11-01); a Landauer reference (18H) is general but the measured energies are many orders above it."},
+        "current_evidence": {"score": 2, "evidence": "G-R10-01: compute path faster than best CUDA in 6/7 point comparisons (1.062-2.084x); G-R11-01: less board energy in 4/7 workloads, more in 3/7, overlapping ranges in 4/7; G-R08-01 slower in all seven."},
+        "falsifiability": {"score": 2, "evidence": "Can fail, but outcomes depend on implementation tuning of both sides, so a refutation is easy to contest."},
+        "distance_to_antecedent": {"score": 1, "evidence": "Cellular automata as convolutional networks (Gilpin 2019); shader-based execution of neural computation is established engineering."},
+        "cost": {"score": 2, "evidence": "Needs repeated GPU-queue tickets; RENDER11 was stopped once by the 8 GiB RAM floor (G-R11-02)."},
+        "external_dependency": {"score": 1, "evidence": "Whole-system energy needs a wall meter or PSU instrumentation not present (G-R11-01 limits: CPU, RAM, PSU and wall energy unmeasured)."},
+        "project_direction": {"score": 1, "evidence": "Measures cost of computation CNNs already perform cheaply; not memory, repair or continual learning."}
+      }
+    },
+    "C3": {
+      "name": "Relational composition on hard tasks (section 10)",
+      "eligible": false,
+      "eligibility_note": "The guide admits this candidate only if G5 surpasses competence; G5 has not run and every external comparison so far is strongly negative.",
+      "scores": {
+        "fundamentality": {"score": 2, "evidence": "Compositional binding is a general question."},
+        "current_evidence": {"score": 0, "evidence": "H04-01 (-39.06 pp), H05-02 (-34.375 pp), HT-09 (-39.73 pp), HT-10 (-38.26 pp) against the relative Transformer; D-ROLE-01 joint flipped-query accuracy 0.5-7.5%; DEV04/GLOB05/READ03 gains are internal to NeuroPixel readouts."},
+        "falsifiability": {"score": 2, "evidence": "Oracles and comparators exist (section 10)."},
+        "distance_to_antecedent": {"score": 1, "evidence": "The positive internal effect is query attention (D-DEV04-01, D-GLOB05-01), the Transformer mechanism itself."},
+        "cost": {"score": 2, "evidence": "8,192-16,384 update trainings per unit (D-QT-01, D-U16-01) through the GPU queue."},
+        "external_dependency": {"score": 3, "evidence": "Synthetic tasks; no laboratory."},
+        "project_direction": {"score": 1, "evidence": "Transformers already provide it."}
+      }
+    },
+    "C4": {
+      "name": "Growth and continual learning (section 12)",
+      "eligible": true,
+      "scores": {
+        "fundamentality": {"score": 2, "evidence": "Continual-learning scenarios are general (van de Ven et al. 2022)."},
+        "current_evidence": {"score": 1, "evidence": "HT-12 preserves old tensors exactly by construction (native copies); H06-06 growth/routing reaches 25.651-26.335% binding; A06.1 growth trajectories establish no benefit (H06-01, H06-07)."},
+        "falsifiability": {"score": 2, "evidence": "Scenario-classified tests exist (van de Ven et al. 2022) but 'useful growth' needs an operational definition still missing."},
+        "distance_to_antecedent": {"score": 1, "evidence": "Parameter isolation and expert growth are known (Kirkpatrick et al. 2017 and successors)."},
+        "cost": {"score": 2, "evidence": "Repeated trainings per stage; GPU queue."},
+        "external_dependency": {"score": 3, "evidence": "No laboratory or third-party data."},
+        "project_direction": {"score": 3, "evidence": "Continual learning is named in the project direction."}
+      }
+    }
+  },
+  "decision_rule": "Highest total among eligible candidates; a tie or a lead that a single one-point change can overturn is resolved by project_direction then falsifiability, and reported as fragile.",
+  "jev": "docs/execplan/evidence/G13_jev.txt (provenance=jev): C1 0.98"
+}
