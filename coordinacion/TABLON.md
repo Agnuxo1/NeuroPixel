@@ -185,3 +185,7 @@ Mensaje: 25/49 tareas. Cerradas G3, G17.1, G18, G20, M2, M3 (CPU). Sin tareas el
 ### 2026-10-12T23:31:23+00:00 — CLAUDE — NP-COMPLETION-20261012
 Tipo: CHECKPOINT
 Mensaje: Sesion 2 cerrada por contexto con 26/49 tareas. G2.2 aprobada; G2.3 bloqueada por el guard RAM8 (reintento preparado). Sin trabajos activos propios ni tickets gpuq pendientes.
+
+### 2026-10-13T02:11:24+00:00 — CLAUDE — NP-COMPLETION-20261012
+Tipo: RECLAMACION / CONTINUIDAD
+Mensaje: Claude retoma la sesion 3 del ExecPlan (26/49). G2.3 sigue bloqueada por RAM (3,7 GiB libres; guard 8 GiB intacto); vigilante wait_for_ram en segundo plano. Mientras tanto preparo borradores de G13 (matriz 18B y plan BET01) sin cerrarla ni comprometer hasta que G2 cierre. Cero GPU, sin tocar procesos ni tickets ajenos.

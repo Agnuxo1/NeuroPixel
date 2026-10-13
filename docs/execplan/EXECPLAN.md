@@ -6,14 +6,14 @@ Documento vivo y autosuficiente. Un agente sin memoria previa debe poder continu
 
 Máximo 12 líneas. Reescribir en cada parada, antes de cualquier comando largo y antes de terminar la sesión.
 
-- Actualizado (UTC): 2026-10-12T23:31:23+00:00
+- Actualizado (UTC): 2026-10-13T02:14:23+00:00
 - Tarea en curso o siguiente: G2.3, Repetir controles fisicos del backend afectado sin nuevas cohortes; intento 1; presupuesto 15 minutos tras RAM.
 - Criterio de cierre: Controles del backend afectado en version nueva ejecutados por gpuq y guard8GiB con pesos e inputs fijados y tolerancias originales, versiones y discrepancias guardadas; ninguna cohorte cientifica reabierta.
-- Hecho en esta tarea: 26/49; G2.2 cerrada; G2.3 intento1 rechazado por guard RAM8 de los preflights (conservado); bloqueada por recurso
-- Falta en esta tarea: Con RAM>=9 GiB: reopen G2.3, start, gpuq run del runner con argumento 2, comparar estados con originales, cerrar G2.3 y G2; luego G13 (apuesta central, seccion 18B) con matriz, plan BET01 en ingles y compromiso
-- Siguiente comando exacto: C:/Python313/python.exe scripts/wait_for_ram.py 9 2 300 12  (en segundo plano); despues: python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2
+- Hecho en esta tarea: Sesion 3: G2.3 sigue bloqueada (RAM 2,8-6,3 GiB); vigilante wait_for_ram 9 GiB en segundo plano (evidence/G2.3_wait_ram_session3.log). Borradores G13 sin cerrar: matriz docs/research/BET01_decision_matrix.json (C1 17, C4 14, C3 11 no elegible, C2 10; ningun cambio de 1 punto invierte), plan docs/research/BET01_plan.json, checks scripts/completion_g13_bet01.py validos (16 celdas de capacidad elegibles); JEV provenance=jev (G13_jev.txt); revision adversarial en curso
+- Falta en esta tarea: Aplicar la revision adversarial al plan; con RAM>=9 GiB: reopen/start G2.3, gpuq run, cerrar G2.3 y G2; despues start G13, commitments commit del plan, registro de programa posicion 1, cerrar G13 local y anadir G13.ext (sello externo, propietario)
+- Siguiente comando exacto: python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2
 - Trabajos en segundo plano: ninguno propio salvo lo anotado en Progreso.
-- Dudas o riesgos abiertos: RAM fluctuante por procesos ajenos; no rebajar el guard
+- Dudas o riesgos abiertos: RAM fluctuante por procesos ajenos; no rebajar el guard; G13 no se compromete antes de cerrar G2
 
 ## Propósito
 
@@ -206,6 +206,8 @@ Obligatorio. Un hito por parada, con hora UTC. Las tareas a medias se dividen en
 - [x] (2026-10-12T23:31:22+00:00) G2.2: done; commit a0488649dd876f8fbeb8f11dc93b6a8cce70b1e7; Admision 8,25 GiB; Torch 2.6.0+cu124 CPU: 3/3 pruebas T0 originales, 7/7 contratos (paridad bit a bit T>=1 eval y mascaras, T0, PAD, clases, finitud, persistencia), test_core OK; intentos 1-2 fallidos conservados.; detalle en archive/PROGRESS_ARCHIVE.md.
 
 - [ ] (2026-10-12T23:31:23+00:00) G2.3, intento 1: hecho 26/49; G2.2 cerrada; G2.3 intento1 rechazado por guard RAM8 de los preflights (conservado); bloqueada por recurso; falta Con RAM>=9 GiB: reopen G2.3, start, gpuq run del runner con argumento 2, comparar estados con originales, cerrar G2.3 y G2; luego G13 (apuesta central, seccion 18B) con matriz, plan BET01 en ingles y compromiso. Siguiente: `C:/Python313/python.exe scripts/wait_for_ram.py 9 2 300 12  (en segundo plano); despues: python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2`.
+
+- [ ] (2026-10-13T02:14:23+00:00) G2.3, intento 1: hecho Sesion 3: G2.3 sigue bloqueada (RAM 2,8-6,3 GiB); vigilante wait_for_ram 9 GiB en segundo plano (evidence/G2.3_wait_ram_session3.log). Borradores G13 sin cerrar: matriz docs/research/BET01_decision_matrix.json (C1 17, C4 14, C3 11 no elegible, C2 10; ningun cambio de 1 punto invierte), plan docs/research/BET01_plan.json, checks scripts/completion_g13_bet01.py validos (16 celdas de capacidad elegibles); JEV provenance=jev (G13_jev.txt); revision adversarial en curso; falta Aplicar la revision adversarial al plan; con RAM>=9 GiB: reopen/start G2.3, gpuq run, cerrar G2.3 y G2; despues start G13, commitments commit del plan, registro de programa posicion 1, cerrar G13 local y anadir G13.ext (sello externo, propietario). Siguiente: `python docs/execplan/plan_status.py reopen G2.3 --note RAM && python docs/execplan/plan_status.py start G2.3 && python D:/PROJECTS/.cognition/gpu_queue/gpuq.py run --name NeuroPixel:G2.3 --vram 3 --ram 2 -- C:/Python313/python.exe scripts/completion_g23_backend_controls.py 2`.
 
 ## Sorpresas y hallazgos
 
