@@ -32,7 +32,8 @@ missing = [c["id"] for c in candidates if covered[c["id"]] != 1]
 import importlib
 
 AMENDMENTS = [("completion_claims_amendments_A18_3", "A18.3"), ("completion_claims_amendments_G3", "G3"),
-              ("completion_claims_amendments_G20", "G20"), ("completion_claims_amendments_M2", "M2")]
+              ("completion_claims_amendments_G20", "G20"), ("completion_claims_amendments_M2", "M2"),
+              ("completion_claims_amendments_R1013", "R1013")]
 for module_name, tag in AMENDMENTS:
     claims, record = importlib.import_module(module_name).apply(claims)
     problems += record.get("problems", [])

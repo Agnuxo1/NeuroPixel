@@ -2922,15 +2922,14 @@
     },
     {
       "id": "P-T0-01",
-      "statement": "A scoped zero-depth (T=0) forward contract is installed in a new model version with its AST scope verified; its runtime behaviour in the historical Torch environment and the related CPU regressions have not been executed (task G2.2, blocked by the unchanged 8 GiB RAM guard), so no behavioural claim is made.",
+      "statement": "A scoped zero-depth (T=0) forward contract is installed in a new model version with its AST scope verified, and its runtime was checked on CPU with Torch 2.6.0 under the unchanged 8 GiB guard: the 3 original T0 tests and 7 new contracts passed, including bit-identical outputs of the patched and frozen forward passes at positive depth (evaluation and training masks with the same random state), PAD handling, class indices, finiteness and persistence; the original core suite also passed.",
       "population": "NeuroPixel model forward pass at T=0 in the completion branch",
       "status": "engineering_complete",
       "declared_level": 1,
       "limits": [
-        "Runtime pending: implementation receipts only",
+        "CPU runtime only; the affected graphics backend controls (task G2.3) are pending",
         "The frozen original checkout is preserved separately",
-        "No independent laboratory replication and no externally dated public preregistration",
-        "New-phase claim created after the A18.1 source freeze; not yet stated in the public texts"
+        "No independent laboratory replication and no externally dated public preregistration"
       ],
       "receipts": [
         {
@@ -2940,6 +2939,10 @@
         {
           "path": "docs/execplan/evidence/G2.1_patch_scope.json",
           "sha256": "6f881c1bb74453a24cead3e98099b31fd7d0076fc6b795b6f85149f6d81d63c2"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G2.2_runtime_receipt_attempt3.json",
+          "sha256": "528e153b4e73488fb7c7e446ce336119e9bf724bd647960b7376a8e56df377ff"
         }
       ],
       "stop_reason": null,
@@ -2947,7 +2950,8 @@
       "study": "T0",
       "source_units": [],
       "amendments": [
-        "A18.3"
+        "A18.3",
+        "R1013"
       ]
     },
     {
@@ -3050,6 +3054,62 @@
         {
           "path": "results/research/MATH119/results.json",
           "sha256": "99195913d3c229d78cdb7a118b57e4aa6e75e7e2b3760b63173944023170723b"
+        }
+      ],
+      "stop_reason": null,
+      "source_units": []
+    },
+    {
+      "id": "P-CUST-01",
+      "study": "G17",
+      "review_batch": "R1013",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "statement": "A commit-reveal custody procedure for future TEST sets was documented and rehearsed with dummy material: commitment, cohort digest and verification passed in all 9 rehearsal steps and tampered openings were rejected; no real TEST set has yet been placed in third-party custody.",
+      "population": "Procedure rehearsal with dummy material only",
+      "limits": [
+        "Rehearsal only; independent evaluator and external timestamp pending owner approval (G17.1.ext)",
+        "A claimed commitment time is not proof of time",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "protocol": {
+        "path": "docs/research/G17_custody_procedure_20261013.md",
+        "sha256": "d9eeba5f4565f9fbbede0e84500f028654a3b514b837b37be153a6cb5eac86b7"
+      },
+      "receipts": [
+        {
+          "path": "results/research/G17_REHEARSAL_20261013/rehearsal_receipt.json",
+          "sha256": "ffab7368c822dc3df8f3959c54e35ff3e5dd423c9e541dc9524e40277662f737"
+        }
+      ],
+      "stop_reason": null,
+      "source_units": []
+    },
+    {
+      "id": "P-PROG-01",
+      "study": "G18",
+      "review_batch": "R1013",
+      "status": "engineering_complete",
+      "declared_level": 1,
+      "statement": "A programme registry fixes familywise error control for every future confirmatory hypothesis (online Bonferroni, total alpha 0.05, first threshold 0.0304) and forbids equivalence claims without a pre-registered margin; descriptive robustness analyses (hierarchical bootstrap for DEV04/GLOB05, four-specification curves for VIS07) agree in sign with the registered intervals.",
+      "population": "Programme-level statistics over the existing exploratory studies",
+      "limits": [
+        "All earlier studies remain exploratory and spend no alpha",
+        "Fewer than ten clusters: the hierarchical bootstrap is descriptive",
+        "No independent laboratory replication and no externally dated public preregistration"
+      ],
+      "protocol": {
+        "path": "docs/research/G18_program_statistics_20261013.md",
+        "sha256": "bb955479f84530ba2f138e85426aaa067168d3362fb6fef36e94d4e6b51a9933"
+      },
+      "receipts": [
+        {
+          "path": "docs/research/program_registry.json",
+          "sha256": "92d199c922e8d6d36c83e7971ce2abea47125214a69f7b1805c6e247ad13a6eb"
+        },
+        {
+          "path": "results/research/COMPLETION20261012/G18_sensitivity.json",
+          "sha256": "25398ec865a7780b1d184cc5adbb3c5a98c615eaa66fa86314d23cc14f4bca2a"
         }
       ],
       "stop_reason": null,

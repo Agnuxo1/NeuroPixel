@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "task": "R1013",
+  "checks": [
+    {
+      "check": "G2.2 admitted at >= 8 GiB",
+      "ok": true
+    },
+    {
+      "check": "G2.2 all steps passed",
+      "ok": true
+    },
+    {
+      "check": "G2.2 3 original T0 tests",
+      "ok": true
+    },
+    {
+      "check": "G2.2 7 runtime contracts",
+      "ok": true
+    },
+    {
+      "check": "G2.2 Torch 2.6.0 CPU",
+      "ok": true
+    },
+    {
+      "check": "G17.1 rehearsal steps ok",
+      "ok": true
+    },
+    {
+      "check": "G18 online Bonferroni 0.05",
+      "ok": true
+    },
+    {
+      "check": "G18 no equality claims",
+      "ok": true
+    }
+  ],
+  "edited_claims": [
+    "P-T0-01"
+  ],
+  "new_claims": [
+    "P-CUST-01",
+    "P-PROG-01"
+  ],
+  "problems": []
+}
