@@ -1,0 +1,246 @@
+{
+  "title": "NeuroPixel · Digit Recognizer",
+  "subtitle": "Canvas dynamics and source lineage",
+  "figures": [
+    {
+      "kind": "flow",
+      "id": "digit-flow",
+      "title": "From an input digit to an evolving state",
+      "subtitle": "The published source describes a recurrent canvas baseline",
+      "nodes": [
+        [
+          0.11,
+          0.42,
+          "28 × 28 input"
+        ],
+        [
+          0.4,
+          0.42,
+          "Canvas update"
+        ],
+        [
+          0.7,
+          0.42,
+          "Readout"
+        ],
+        [
+          0.9,
+          0.42,
+          "Digit class"
+        ],
+        [
+          0.4,
+          0.82,
+          "Next step",
+          "above"
+        ]
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "basis": "Technical schematic",
+      "source": "Source: kaggle/digits/train_digits.py; conceptual graph",
+      "alt": "From an input digit to an evolving state. 28 × 28 input; Canvas update; Readout; Digit class; Next step"
+    },
+    {
+      "kind": "xy",
+      "id": "digit-response",
+      "title": "An illustrative canvas response",
+      "subtitle": "Synthetic traces; time step is an iteration, not a hardware clock",
+      "xlim": [
+        0,
+        32
+      ],
+      "ylim": [
+        0,
+        1
+      ],
+      "xlabel": "Canvas update step",
+      "ylabel": "Normalised response",
+      "series": [
+        {
+          "label": "Early response",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0.19686730306644967
+            ],
+            [
+              4,
+              0.3501877128557563
+            ],
+            [
+              6,
+              0.4695937680604969
+            ],
+            [
+              8,
+              0.5625872973574163
+            ],
+            [
+              10,
+              0.6350107307944308
+            ],
+            [
+              12,
+              0.6914141574678975
+            ],
+            [
+              14,
+              0.7353411903291038
+            ],
+            [
+              16,
+              0.7695515979194147
+            ],
+            [
+              18,
+              0.7961946901399407
+            ],
+            [
+              20,
+              0.8169443512247301
+            ],
+            [
+              22,
+              0.8331042035260303
+            ],
+            [
+              24,
+              0.8456895091526011
+            ],
+            [
+              26,
+              0.8554909550297674
+            ],
+            [
+              28,
+              0.8631243287541366
+            ],
+            [
+              30,
+              0.869069206188152
+            ],
+            [
+              32,
+              0.8736990813890265
+            ]
+          ]
+        },
+        {
+          "label": "Alternate response",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0.1074627925765701
+            ],
+            [
+              4,
+              0.1984280825983475
+            ],
+            [
+              6,
+              0.2754285382011566
+            ],
+            [
+              8,
+              0.34060801667718554
+            ],
+            [
+              10,
+              0.3957812540450452
+            ],
+            [
+              12,
+              0.44248439117999033
+            ],
+            [
+              14,
+              0.48201774325978164
+            ],
+            [
+              16,
+              0.5154820033189913
+            ],
+            [
+              18,
+              0.5438088878960992
+            ],
+            [
+              20,
+              0.5677870780137068
+            ],
+            [
+              22,
+              0.5880841777442142
+            ],
+            [
+              24,
+              0.6052653017343711
+            ],
+            [
+              26,
+              0.6198088092051186
+            ],
+            [
+              28,
+              0.6321196224949164
+            ],
+            [
+              30,
+              0.6425405009632708
+            ],
+            [
+              32,
+              0.6513615841440389
+            ]
+          ]
+        }
+      ],
+      "source": "Source: synthetic response; no measured classification accuracy",
+      "basis": "Illustrative simulation",
+      "alt": "An illustrative canvas response. Synthetic traces; time step is an iteration, not a hardware clock",
+      "xticks": [
+        0,
+        8,
+        16,
+        24,
+        32
+      ],
+      "yticks": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ]
+    }
+  ]
+}
