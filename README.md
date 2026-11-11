@@ -38,6 +38,10 @@ NeuroPixel represents a recurrent neural state on a spatial canvas. Local learne
 
 
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> NeuroPixel makes recurrent neural states inspectable through graphics execution. Its <a href="docs/research/RENDER11_results.md">documented RTX 3090 energy study</a> reports lower whole-board energy per call for the best graphics method than the best CUDA comparator in four of seven workloads, with higher use in three. The measurements support workload-specific optimization; they do not include CPU, RAM, training or whole-system wall energy.</sub>
+<!-- impact-note:end -->
+
 ## What has been measured (internal evidence, levels L1–L2)
 
 
